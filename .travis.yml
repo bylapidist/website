@@ -24,6 +24,7 @@ jobs:
             - yarn lint
             - yarn build
             - yarn export
+            - echo "lapidist.net" >> out/CNAME
             - yarn semantic-release
 
 notifications:
