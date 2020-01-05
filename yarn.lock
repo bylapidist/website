@@ -906,10 +906,10 @@
   resolved "https://registry.npmjs.org/@lapidist/design-tokens/-/design-tokens-1.12.0.tgz#02abb93c486edbceac70a42772eaf2dced39369e"
   integrity sha512-qdLLt5sy55tSnOhTlvke6BME4Uahq64Xe1bN7qm8zlxWE4G7UHcGKr9zydqFlB7U4hTUjOpe3/tNibK1MhTLuA==
 
-"@lapidist/link@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.0.tgz#17955a092c5fed44b5b309122cd729f331c43a07"
-  integrity sha512-as3BXWWjViXI3jPWneXWqR318GAb7yzX/+2s3ILXmhijY0RVSmSTBIrcm3x3mO/oF8zLsp2mnRKfS0+FCutNrg==
+"@lapidist/link@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.1.tgz#e07702502fd21c3e487249b3c55e6177748a21a3"
+  integrity sha512-SU8VSYw+8o28Z/x4OlxhDzpRAdRX4J4riTp3mO+MRuabFeRrNtxrxKjnbkgvxkX/a8stKiX0NslT5ZSzKt+5EA==
 
 "@lapidist/linting@^1.14.0":
   version "1.14.0"
