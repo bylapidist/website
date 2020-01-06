@@ -51,6 +51,10 @@ export default class HomePage extends React.Component {
                     </Paragraph>
                     <LinkWrapper>
                         <Link
+                            title="CV"
+                            href="brett-dorrans-cv-2020.pdf"
+                        />
+                        <Link
                             title="GitHub"
                             href="https://github.com/brettdorrans"
                         />
