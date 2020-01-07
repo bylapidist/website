@@ -911,10 +911,10 @@
   resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.1.tgz#e07702502fd21c3e487249b3c55e6177748a21a3"
   integrity sha512-SU8VSYw+8o28Z/x4OlxhDzpRAdRX4J4riTp3mO+MRuabFeRrNtxrxKjnbkgvxkX/a8stKiX0NslT5ZSzKt+5EA==
 
-"@lapidist/linting@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.npmjs.org/@lapidist/linting/-/linting-1.14.0.tgz#aac00e4685adb45e40a07f250253e8f15cbaa985"
-  integrity sha512-7Ew6zvw/WEBLg1TIIEtPEf8hjWjpUY+t11LVJUQ8MQItZ/VZAaYwLTzBD/3Pq21b/IxhDmBRFhcLrczTDLuuPg==
+"@lapidist/linting@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.15.0.tgz#c5d827fbb8d4236044102e6e951308b994b9dbf4"
+  integrity sha512-MNovg5xhM4suhvyDceGp+n1j1AEfg8b47JoQPkrodp7ygqsov62rfjf2aMniJzkNOcZctLBPPnDSQaWuh2V/jw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.9.0"
     "@typescript-eslint/parser" "^2.9.0"
