@@ -911,17 +911,17 @@
   resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.1.tgz#e07702502fd21c3e487249b3c55e6177748a21a3"
   integrity sha512-SU8VSYw+8o28Z/x4OlxhDzpRAdRX4J4riTp3mO+MRuabFeRrNtxrxKjnbkgvxkX/a8stKiX0NslT5ZSzKt+5EA==
 
-"@lapidist/linting@^1.16.0":
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.16.0.tgz#ea73cdd8bac69cad4c02f267bcfe9858c07e3b1e"
-  integrity sha512-+g+44rkeUV5t83FSPf53dZasoKZYfnFupqKZdm2cjGRvSUqCMigKr7KV2AdO/LIWgwatC8QEGLVGE6+LUAfSEQ==
+"@lapidist/linting@^1.18.0":
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.18.0.tgz#35ae62cbaeaea697682189bafb348bb69df9a6dc"
+  integrity sha512-O56bKKSiw0ha+oIryGesfUSgUGsTowdXAHCqkr/yhQhMcUqpgQ4O97Dn5vtHes1p5Fy5Gj/cYz+yc8F7s4HqBw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.9.0"
     "@typescript-eslint/parser" "^2.9.0"
     eslint "6.8.0"
     eslint-config-prettier "^6.7.0"
     eslint-config-react "^1.1.7"
-    eslint-plugin-import "2.19.1"
+    eslint-plugin-import "2.20.0"
     eslint-plugin-jest "^23.0.5"
     eslint-plugin-node "11.0.0"
     eslint-plugin-prettier "^3.1.1"
@@ -2594,10 +2594,10 @@ eslint-plugin-eslint-plugin@^2.1.0:
   resolved "https://registry.npmjs.org/eslint-plugin-eslint-plugin/-/eslint-plugin-eslint-plugin-2.1.0.tgz#a7a00f15a886957d855feacaafee264f039e62d5"
   integrity sha512-kT3A/ZJftt28gbl/Cv04qezb/NQ1dwYIbi8lyf806XMxkus7DvOVCLIfTXMrorp322Pnoez7+zabXH29tADIDg==
 
-eslint-plugin-import@2.19.1:
-  version "2.19.1"
-  resolved "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.19.1.tgz#5654e10b7839d064dd0d46cd1b88ec2133a11448"
-  integrity sha512-x68131aKoCZlCae7rDXKSAQmbT5DQuManyXo2sK6fJJ0aK5CWAkv6A6HJZGgqC8IhjQxYPgo6/IY4Oz8AFsbBw==
+eslint-plugin-import@2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.20.0.tgz#d749a7263fb6c29980def8e960d380a6aa6aecaa"
+  integrity sha512-NK42oA0mUc8Ngn4kONOPsPB1XhbUvNHqF+g307dPV28aknPoiNnKLFd9em4nkswwepdF5ouieqv5Th/63U7YJQ==
   dependencies:
     array-includes "^3.0.3"
     array.prototype.flat "^1.2.1"
