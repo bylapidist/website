@@ -20,7 +20,7 @@
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.2",
     "next": "^9.2.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "@lapidist/container": "^1.0.0",
