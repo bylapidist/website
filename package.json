@@ -14,7 +14,7 @@
     "semantic-release": "npm i --no-save semantic-release && semantic-release"
   },
   "devDependencies": {
-    "@lapidist/linting": "^1.20.0",
+    "@lapidist/linting": "^1.21.0",
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
