@@ -934,10 +934,10 @@
   resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.1.tgz#e07702502fd21c3e487249b3c55e6177748a21a3"
   integrity sha512-SU8VSYw+8o28Z/x4OlxhDzpRAdRX4J4riTp3mO+MRuabFeRrNtxrxKjnbkgvxkX/a8stKiX0NslT5ZSzKt+5EA==
 
-"@lapidist/linting@^1.23.0":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.23.0.tgz#3cf3c93e31c9fa3b075f47e8d99f8bb3ba463fb3"
-  integrity sha512-TuyBuJI5aDleXPCf+zA0H1LhjoDSkHW6KuaHA1I0ESn5uLh8jwuZeaonvj3gRhX/60Z+x/4lxSN0M6UzmLDCdw==
+"@lapidist/linting@^1.25.0":
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.25.0.tgz#d219267c654c5c8b513b1a7ce7a14399472b5d4c"
+  integrity sha512-Us8/Xxt1lUvNOLEh5XlIWBqlQRm9zKk7WVeFZPJicUFlMq7oYDe5flH3oqBBp6XTn1Bb480TWVDc7LXte+3FVg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.9.0"
     "@typescript-eslint/parser" "^2.9.0"
