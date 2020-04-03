@@ -958,10 +958,10 @@
   resolved "https://registry.npmjs.org/@lapidist/link/-/link-1.0.1.tgz#e07702502fd21c3e487249b3c55e6177748a21a3"
   integrity sha512-SU8VSYw+8o28Z/x4OlxhDzpRAdRX4J4riTp3mO+MRuabFeRrNtxrxKjnbkgvxkX/a8stKiX0NslT5ZSzKt+5EA==
 
-"@lapidist/linting@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.27.0.tgz#64f8a4665aeef86fe63a376bb98a430cb0ae3d2b"
-  integrity sha512-9O59AKXi0uA958eu2IjKlm8e1IoitR3Rzig6gfTMsmaQ0Caq6tAwOx5wu9+R6fikm3ggLer27PktMI+2S/+ksw==
+"@lapidist/linting@^1.28.0":
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/@lapidist/linting/-/linting-1.28.0.tgz#c25641a6abe6ae2558c3b33a6b9f48153e269be4"
+  integrity sha512-12T/7y55LITHJovGr+8igpQg+3EFQATm185EPUNKuSsGzc8mq8UFeWLf1KegPK45JPfVpuE7Xasg/f0mxwp3/w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.9.0"
     "@typescript-eslint/parser" "^2.9.0"
@@ -974,7 +974,7 @@
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.19.0"
-    eslint-plugin-react-hooks "^2.3.0"
+    eslint-plugin-react-hooks "^3.0.0"
     prettier "^2.0.2"
 
 "@lapidist/logo@^1.5.0":
@@ -2829,10 +2829,10 @@ eslint-plugin-promise@4.2.1:
   resolved "https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
   integrity sha512-VoM09vT7bfA7D+upt+FjeBO5eHIJQBUWki1aPvB+vbNiHS3+oGIJGIeyBtKQTME6UPXXy3vV07OL1tHd3ANuDw==
 
-eslint-plugin-react-hooks@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.3.0.tgz#53e073961f1f5ccf8dd19558036c1fac8c29d99a"
-  integrity sha512-gLKCa52G4ee7uXzdLiorca7JIQZPPXRAQDXV83J4bUEeUuc5pIEyZYAZ45Xnxe5IuupxEqHS+hUhSLIimK1EMw==
+eslint-plugin-react-hooks@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
+  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
 
 eslint-plugin-react@7.19.0:
   version "7.19.0"
