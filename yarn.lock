@@ -1036,10 +1036,10 @@
     eslint-plugin-react-hooks "^4.0.0"
     prettier "^2.0.5"
 
-"@lapidist/logo@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.npmjs.org/@lapidist/logo/-/logo-1.5.0.tgz#776dd3e1531f54dc01be9a6e4d8ba1af5e038c9b"
-  integrity sha512-Y4H24hN9CI1iI1WQ308lV6JcWWM1hVhtgKLPHILorgsSRYdYPTAYaPwi7pVJSBD8n/xk146cgQF7sZLk8rtHMg==
+"@lapidist/logo@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@lapidist/logo/-/logo-1.5.1.tgz#b4f6d01f0cf592b6c373e851972d1f0dac70cbb7"
+  integrity sha512-wUxRv8I34nWQ+3e6NKKy1YMMoYxYCqrUNvWTcdvG9//Q0j2OcoDbAOhtZo31rnTS2Z56PG2eS3ddwb5YAaTMyg==
 
 "@lapidist/paragraph@^1.0.0":
   version "1.0.0"
