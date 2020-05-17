@@ -10,8 +10,7 @@
     "build": "next build",
     "export": "next export",
     "lint": "eslint . --ext js,ts,tsx",
-    "fix": "eslint --fix . --ext js,ts,tsx",
-    "semantic-release": "npm i --no-save semantic-release && semantic-release"
+    "fix": "eslint --fix . --ext js,ts,tsx"
   },
   "devDependencies": {
     "@lapidist/linting": "^1.35.0",
