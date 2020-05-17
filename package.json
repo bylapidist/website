@@ -22,13 +22,7 @@
     "typescript": "^3.9.2"
   },
   "dependencies": {
-    "@lapidist/container": "^1.0.0",
-    "@lapidist/design-tokens": "^1.12.0",
-    "@lapidist/link": "^1.0.1",
-    "@lapidist/logo": "^1.5.1",
-    "@lapidist/paragraph": "^1.0.0",
-    "@lapidist/theme-provider": "^1.19.0",
-    "@lapidist/title": "^1.3.0",
+    "@lapidist/components": "^2.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0"

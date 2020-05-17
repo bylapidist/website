@@ -1,10 +1,14 @@
 import React from 'react';
-import BaseLogo, { LogoProps } from '@lapidist/logo';
-import Paragraph from '@lapidist/paragraph';
-import Title, { TitleProps } from '@lapidist/title';
-import { breakpoint } from '@lapidist/design-tokens';
-import Link from '@lapidist/link';
 import styled from 'styled-components';
+import {
+    Link,
+    Title,
+    TitleProps,
+    Paragraph,
+    Logo as BaseLogo,
+    LogoProps,
+    breakpoint
+} from '@lapidist/components';
 
 const Main: React.FC = styled.main`
     width: 100%;
