@@ -14,13 +14,13 @@
     "semantic-release": "npm i --no-save semantic-release && semantic-release"
   },
   "devDependencies": {
-    "@lapidist/linting": "^1.31.0",
-    "@types/node": "^13.13.5",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.7",
+    "@lapidist/linting": "^1.35.0",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
-    "next": "^9.3.6",
-    "typescript": "^3.8.3"
+    "next": "^9.4.1",
+    "typescript": "^3.9.2"
   },
   "dependencies": {
     "@lapidist/container": "^1.0.0",
