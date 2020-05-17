@@ -1,8 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import ThemeProvider from '@lapidist/theme-provider';
-import Container from '@lapidist/container';
+import { ThemeProvider, Container } from '@lapidist/components';
 
 export default class MyApp extends App {
     render(): JSX.Element {
