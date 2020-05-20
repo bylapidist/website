@@ -19,7 +19,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "next": "^9.4.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "@lapidist/components": "^2.0.2",
