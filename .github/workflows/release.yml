@@ -18,12 +18,12 @@ jobs:
               run: npm ci
             - name: Lint files
               run: npm run lint
-            - name: Next.js export
-              run: npm run build && npm run export
+            - name: Build
+              run: npm run build
             - name: Set domain CNAME
               run: echo "lapidist.net" >> out/CNAME
             - name: Touch .nojekyll
-              run: touch out/.nojekyll
+              run: touch public/.nojekyll
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -34,4 +34,4 @@ jobs:
               with:
                   ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
                   BRANCH: gh-pages
-                  FOLDER: out
+                  FOLDER: public
