@@ -33,7 +33,7 @@
     "dependencies": {
         "@lapidist/components": "^2.2.2",
         "babel-plugin-styled-components": "^1.10.7",
-        "gatsby": "^2.22.20",
+        "gatsby": "^2.23.0",
         "gatsby-image": "^2.4.6",
         "gatsby-plugin-canonical-urls": "^2.3.3",
         "gatsby-plugin-google-analytics": "^2.3.3",
