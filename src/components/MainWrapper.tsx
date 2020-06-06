@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint } from '@lapidist/components';
 
 const MainWrapper: React.FC = styled.main`
     width: 100%;
 
-    @media ${breakpoint('laptop-small')} {
+    @media (min-width: 1024px) {
         width: 50%;
     }
 `;

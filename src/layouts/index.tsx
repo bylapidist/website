@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider, Container } from '@lapidist/components';
+import styled from 'styled-components';
 
 interface StaticQueryProps {
     site: {
@@ -11,6 +12,11 @@ interface StaticQueryProps {
         };
     };
 }
+
+const IndexWrapper: React.FC = styled.div`
+    max-width: 1440px;
+    margin: 0 auto;
+`;
 
 const IndexLayout: React.FC = ({ children }): JSX.Element => (
     <StaticQuery
@@ -57,7 +63,9 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                     />
                 </Helmet>
                 <ThemeProvider>
-                    <Container padding="40px">{children}</Container>
+                    <IndexWrapper>
+                        <Container padding={10}>{children}</Container>
+                    </IndexWrapper>
                 </ThemeProvider>
             </>
         )}
