@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link, Logo } from '@lapidist/components';
+import { Container, Link, Logo } from '@lapidist/components';
 import IndexLayout from '../layouts';
-import MainWrapper from '../components/MainWrapper';
 import LinkWrapper from '../components/LinkWrapper';
 import PageTitle from '../components/PageTitle';
 import TextWrapper from '../components/TextWrapper';
@@ -18,7 +17,16 @@ const IndexPage = (): JSX.Element => (
                 Brett Dorrans
             </PageTitle>
         </header>
-        <MainWrapper>
+        <Container
+            styles={{
+                width: 'full',
+                breakpoints: {
+                    md: {
+                        width: '1/2'
+                    }
+                }
+            }}
+        >
             <TextWrapper textColor={{ colorGroup: 'grey', colorShade: 'base' }}>
                 I&apos;m a Senior Software Engineer based in Glasgow, Scotland.
                 Scotland. I have been building software and strong client
@@ -33,7 +41,7 @@ const IndexPage = (): JSX.Element => (
                 </Link>
                 <Link href="mailto:hello@lapidist.net">Email</Link>
             </LinkWrapper>
-        </MainWrapper>
+        </Container>
     </IndexLayout>
 );
 

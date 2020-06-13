@@ -1,7 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import { ThemeProvider, Container } from '@lapidist/components';
+import {
+    ThemeProvider,
+    Container as BaseContainer
+} from '@lapidist/components';
 import styled from 'styled-components';
 
 interface StaticQueryProps {
@@ -13,9 +16,8 @@ interface StaticQueryProps {
     };
 }
 
-const IndexWrapper: React.FC = styled.div`
+const Container: React.FC = styled(BaseContainer)`
     max-width: 1440px;
-    margin: 0 auto;
 `;
 
 const IndexLayout: React.FC = ({ children }): JSX.Element => (
@@ -63,9 +65,18 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                     />
                 </Helmet>
                 <ThemeProvider>
-                    <IndexWrapper>
-                        <Container padding={10}>{children}</Container>
-                    </IndexWrapper>
+                    <Container
+                        styles={{
+                            padding: 6,
+                            breakpoints: {
+                                md: {
+                                    padding: 12
+                                }
+                            }
+                        }}
+                    >
+                        {children}
+                    </Container>
                 </ThemeProvider>
             </>
         )}
