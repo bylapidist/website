@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import { ThemeProvider, Container } from '@lapidist/components';
+import { ThemeProvider, Box } from '@lapidist/components';
 
 interface StaticQueryProps {
     site: {
@@ -57,9 +57,10 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                     />
                 </Helmet>
                 <ThemeProvider>
-                    <Container
+                    <Box
                         styles={{
                             padding: 6,
+                            marginX: 'auto',
                             containerWidth: 'xxl',
                             breakpoints: {
                                 md: {
@@ -69,7 +70,7 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                         }}
                     >
                         {children}
-                    </Container>
+                    </Box>
                 </ThemeProvider>
             </>
         )}
