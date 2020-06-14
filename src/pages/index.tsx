@@ -8,7 +8,7 @@ import TextWrapper from '../components/TextWrapper';
 const IndexPage = (): JSX.Element => (
     <IndexLayout>
         <header>
-            <Logo animated />
+            <Logo size="60px" animated />
             <PageTitle
                 fontWeight="black"
                 fontSize={8}
