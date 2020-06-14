@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Link, Logo } from '@lapidist/components';
+import { Box, Link, Logo } from '@lapidist/components';
 import IndexLayout from '../layouts';
 import LinkWrapper from '../components/LinkWrapper';
 import PageTitle from '../components/PageTitle';
@@ -17,7 +17,7 @@ const IndexPage = (): JSX.Element => (
                 Brett Dorrans
             </PageTitle>
         </header>
-        <Container
+        <Box
             styles={{
                 width: 'full',
                 breakpoints: {
@@ -41,7 +41,7 @@ const IndexPage = (): JSX.Element => (
                 </Link>
                 <Link href="mailto:hello@lapidist.net">Email</Link>
             </LinkWrapper>
-        </Container>
+        </Box>
     </IndexLayout>
 );
 
