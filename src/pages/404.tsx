@@ -1,13 +1,25 @@
 import React from 'react';
-import { Box, Link } from '@lapidist/components';
+import { Box, Heading, Link } from '@lapidist/components';
 import IndexLayout from '../layouts';
-import LinkWrapper from '../components/LinkWrapper';
-import PageTitle from '../components/PageTitle';
 
 const NotFoundPage = (): JSX.Element => (
     <IndexLayout>
         <header>
-            <PageTitle>Page Not Found</PageTitle>
+            <Heading
+                size={1}
+                styles={{
+                    fontSize: 8,
+                    fontWeight: 'black',
+                    marginBottom: 12,
+                    breakpoints: {
+                        lg: {
+                            fontSize: 8
+                        }
+                    }
+                }}
+            >
+                Page not found
+            </Heading>
         </header>
         <Box
             styles={{
@@ -19,9 +31,7 @@ const NotFoundPage = (): JSX.Element => (
                 }
             }}
         >
-            <LinkWrapper>
-                <Link href="/">Return Home</Link>
-            </LinkWrapper>
+            <Link href="/">Return home</Link>
         </Box>
     </IndexLayout>
 );
