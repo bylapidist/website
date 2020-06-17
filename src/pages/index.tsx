@@ -5,7 +5,7 @@ import IndexLayout from '../layouts';
 const IndexPage = (): JSX.Element => (
     <IndexLayout>
         <header>
-            <Logo size="60px" animated />
+            <Logo styles={{ sizeWidth: 16 }} animated />
             <Heading
                 size={1}
                 styles={{
