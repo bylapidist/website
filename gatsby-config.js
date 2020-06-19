@@ -71,6 +71,12 @@ module.exports = {
                 anonymize: true
             }
         },
+        {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+                pixelId: '719344185482492'
+            }
+        },
         'gatsby-transformer-json',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-typescript',
