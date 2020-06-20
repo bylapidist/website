@@ -61,7 +61,7 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                         styles={{
                             padding: 6,
                             marginX: 'auto',
-                            containerWidth: 'xxl',
+                            containerMaxWidth: 'xxl',
                             breakpoints: {
                                 md: {
                                     padding: 12
