@@ -37,28 +37,33 @@ const IndexPage = (): JSX.Element => (
                 Scotland. I have been building software and strong client
                 relationships for over a decade.
             </Text>
-            <Link styles={{ marginRight: 4 }} href="/brett-dorrans-cv-2020.pdf">
-                CV
-            </Link>
-            <Link
-                styles={{ marginRight: 4 }}
-                href="https://github.com/brettdorrans"
-            >
-                GitHub
-            </Link>
-            <Link
-                styles={{ marginRight: 4 }}
-                href="https://github.com/bylapidist"
-            >
-                OSS GitHub
-            </Link>
-            <Link
-                styles={{ marginRight: 4 }}
-                href="https://www.linkedin.com/pub/brett-dorrans/28/378/714"
-            >
-                LinkedIn
-            </Link>
-            <Link href="mailto:hello@lapidist.net">Email</Link>
+            <Text>
+                <Link
+                    styles={{ marginRight: 4 }}
+                    href="/brett-dorrans-cv-2020.pdf"
+                >
+                    CV
+                </Link>
+                <Link
+                    styles={{ marginRight: 4 }}
+                    href="https://github.com/brettdorrans"
+                >
+                    GitHub
+                </Link>
+                <Link
+                    styles={{ marginRight: 4 }}
+                    href="https://github.com/bylapidist"
+                >
+                    OSS GitHub
+                </Link>
+                <Link
+                    styles={{ marginRight: 4 }}
+                    href="https://www.linkedin.com/pub/brett-dorrans/28/378/714"
+                >
+                    LinkedIn
+                </Link>
+                <Link href="mailto:hello@lapidist.net">Email</Link>
+            </Text>
         </Box>
     </IndexLayout>
 );
