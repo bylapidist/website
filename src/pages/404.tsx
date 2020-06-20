@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Link } from '@lapidist/components';
+import { Text, Heading, Link } from '@lapidist/components';
 import IndexLayout from '../layouts';
 
 const NotFoundPage = (): JSX.Element => (
@@ -21,7 +21,7 @@ const NotFoundPage = (): JSX.Element => (
                 Page not found
             </Heading>
         </header>
-        <Box
+        <Text
             styles={{
                 width: 'full',
                 breakpoints: {
@@ -32,7 +32,7 @@ const NotFoundPage = (): JSX.Element => (
             }}
         >
             <Link href="/">Return home</Link>
-        </Box>
+        </Text>
     </IndexLayout>
 );
 
