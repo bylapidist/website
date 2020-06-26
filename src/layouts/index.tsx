@@ -55,6 +55,21 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                         property="og:image"
                         content="https://lapidist.net/oglogo.png"
                     />
+                    <script type="application/ld+json">
+                        {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            "url": "https://lapidist.net",
+                            "name": "Brett Dorrans",
+                            "sameAs": [
+                                "https://www.linkedin.com/pub/brett-dorrans/28/378/714",
+                                "https://github.com/brettdorrans",
+                                "https://github.com/bylapidist"
+                            ]
+                        }
+                        `}
+                    </script>
                 </Helmet>
                 <ThemeProvider>
                     <Box

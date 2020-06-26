@@ -37,7 +37,7 @@ const IndexPage = (): JSX.Element => (
                 Scotland. I have been building software and strong client
                 relationships for over a decade.
             </Text>
-            <Text>
+            <Text data-nosnippet>
                 <Link
                     styles={{ marginRight: 4 }}
                     href="/brett-dorrans-cv-2020.pdf"
