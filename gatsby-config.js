@@ -60,7 +60,8 @@ module.exports = {
                 background_color: '#ffffff',
                 theme_color: '#ffffff',
                 display: 'standalone',
-                icon: 'src/images/favicon-512x512.png'
+                icon: 'src/images/favicon-512x512.png',
+                cache_busting_mode: 'none'
             }
         },
         {
@@ -69,6 +70,14 @@ module.exports = {
                 trackingId: 'UA-48222807-1',
                 respectDNT: true,
                 anonymize: true
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-offline',
+            options: {
+                workboxConfig: {
+                    globPatterns: ['**/*']
+                }
             }
         },
         'gatsby-transformer-json',
