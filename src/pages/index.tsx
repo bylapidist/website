@@ -34,8 +34,8 @@ const IndexPage = (): JSX.Element => (
                 }}
             >
                 I&apos;m a Senior Software Engineer based in Glasgow, Scotland.
-                I have been building software and strong client
-                relationships for over a decade.
+                I have been building software and strong client relationships
+                for over a decade.
             </Text>
             <Text data-nosnippet>
                 <Link
