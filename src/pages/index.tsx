@@ -10,7 +10,7 @@ const IndexPage = (): JSX.Element => (
                 size={1}
                 styles={{
                     fontSize: 8,
-                    fontWeight: 'black',
+                    fontWeight: 'bold',
                     marginBottom: 12
                 }}
             >
