@@ -28,25 +28,25 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "01b394a348470bd250f1e7442d395dfe"
+    "revision": "5d62624bbea04478ce26ab48740c4f30"
   },
   {
     "url": "404/index.html",
-    "revision": "ae124eeccc239f1aad21e7a4fc5f78c3"
+    "revision": "5d02b32d79d48a041869bef4e5fb8485"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-da7470aad0bc70907d62.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-bf263efa2bd3abfe143f.js"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-da7470aad0bc70907d62.js.map",
-    "revision": "0c49d804d205aee854b4ad5a1592ae71"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-bf263efa2bd3abfe143f.js.map",
+    "revision": "0fbf5ab2deb5b3f117f78ec75c9ed4de"
   },
   {
-    "url": "app-c6739b5c489960d0b748.js"
+    "url": "app-8264633eb5e649e7c111.js"
   },
   {
-    "url": "app-c6739b5c489960d0b748.js.map",
-    "revision": "d4713a2c4aba67afeb4b0401bd8099b1"
+    "url": "app-8264633eb5e649e7c111.js.map",
+    "revision": "ad7b5e14a73ceacdfc61e11e332c03df"
   },
   {
     "url": "brett-dorrans-cv-2020.pdf",
@@ -54,7 +54,7 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "a4b910507863fd05bdaa0398ad751d14"
+    "revision": "e3972f1c6a2b74d06805f5650a5d1693"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-ecabcc836d91400d00c0.js"
@@ -125,7 +125,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b6085e397e14c6c94158948cf910da19"
+    "revision": "f34f445605035b35600e2ab612d8a8c8"
   },
   {
     "url": "logo.svg",
@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e3f9ce08ebab186adc85ea99379eb37b"
+    "revision": "d018a2e623bed7c3bc6c3b5f7781b8cf"
   },
   {
     "url": "oglogo.png",
@@ -153,7 +153,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f9403cb6084a28808b9dd569e32a1ba1"
+    "revision": "8323b96df512cb0c414429d0ea5b581f"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -174,15 +174,15 @@ self.__precacheManifest = [
     "url": "static/d/1963140206.json"
   },
   {
-    "url": "webpack-runtime-aef4bf44f3b6f97da711.js"
+    "url": "webpack-runtime-c7fa448149b98522d218.js"
   },
   {
-    "url": "webpack-runtime-aef4bf44f3b6f97da711.js.map",
-    "revision": "6278382d90c2785cd04630e2d29dc2c2"
+    "url": "webpack-runtime-c7fa448149b98522d218.js.map",
+    "revision": "c59b2ad232c2baba86f6bdd7f8269df3"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "ac7ad1e4c42e5a436472394a667ff7e1"
+    "revision": "b4628c2810b879080ad2e382c7fb6bd4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -275,7 +275,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-c6739b5c489960d0b748.js`))) {
+  if (!resources || !(await caches.match(`/app-8264633eb5e649e7c111.js`))) {
     return await fetch(event.request)
   }
 
