@@ -28,25 +28,33 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "8e823e019eeb329f484a47d3ce3d63ee"
+    "revision": "f1812dbd2e6db14afd529417ab90cf6a"
   },
   {
     "url": "404/index.html",
-    "revision": "2792ec81b8b6e612d59b3f9ce48e0b64"
+    "revision": "8491c8b03b74799b17b2556ddf7f7631"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-e0ae73c3500d493f5c03.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-2452a050be949b5b7c1d.js"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-e0ae73c3500d493f5c03.js.map",
-    "revision": "c00e6064e59b28ca2c788c4ab248ea32"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-2452a050be949b5b7c1d.js.LICENSE.txt",
+    "revision": "6fce53c7c7713ebf61712cc2929746fa"
   },
   {
-    "url": "app-b5ade33780ee4f94e49f.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-2452a050be949b5b7c1d.js.map",
+    "revision": "9573930c4b387ef5c558d9d9c9da4bf3"
   },
   {
-    "url": "app-b5ade33780ee4f94e49f.js.map",
-    "revision": "88760e53bc17fd849e4d6793481c36fa"
+    "url": "app-efd01610dc452371f80c.js"
+  },
+  {
+    "url": "app-efd01610dc452371f80c.js.LICENSE.txt",
+    "revision": "a132a411173507cc7e308c078456c62f"
+  },
+  {
+    "url": "app-efd01610dc452371f80c.js.map",
+    "revision": "ab54e2be2ecb5bbc844a24c0524c0988"
   },
   {
     "url": "brett-dorrans-cv-2020.pdf",
@@ -54,39 +62,43 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "c009da618d915865e5561e6ef78ea0bf"
+    "revision": "8e1c96feb5f7c61ded76a74165bcf230"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-ecabcc836d91400d00c0.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-82c63c4c056f62a6fe2f.js"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-ecabcc836d91400d00c0.js.map",
-    "revision": "d2726dd38de5b37c5324d0e4cec5c115"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-82c63c4c056f62a6fe2f.js.map",
+    "revision": "ab2e22d9d7cb6c6ed0f8bcbc7b8fc2a7"
   },
   {
-    "url": "component---src-pages-404-tsx-7c0d1e87faa692e7d016.js"
+    "url": "component---src-pages-404-tsx-9c108d7069f7f1cb4bd8.js"
   },
   {
-    "url": "component---src-pages-404-tsx-7c0d1e87faa692e7d016.js.map",
-    "revision": "f7417105e8ff3ee26eff8bb9c401bc5f"
+    "url": "component---src-pages-404-tsx-9c108d7069f7f1cb4bd8.js.map",
+    "revision": "0bdaccdc1695f5f6ff7af37f822b771b"
   },
   {
-    "url": "component---src-pages-index-tsx-5254cd6280dc2aca4283.js"
+    "url": "component---src-pages-index-tsx-0d0c8adc1c3f7e103e4c.js"
   },
   {
-    "url": "component---src-pages-index-tsx-5254cd6280dc2aca4283.js.map",
-    "revision": "fa8b97f7a22cc366defb73eb847ea4b0"
+    "url": "component---src-pages-index-tsx-0d0c8adc1c3f7e103e4c.js.map",
+    "revision": "9612a455af20ed17f6d37b3d298330c5"
   },
   {
     "url": "favicon-32x32.png",
     "revision": "2c40e192765243c0924c538d180473f9"
   },
   {
-    "url": "framework-d1906d2676adc9398d9a.js"
+    "url": "framework-4f6f4628cf10d856b9b4.js"
   },
   {
-    "url": "framework-d1906d2676adc9398d9a.js.map",
-    "revision": "edaf8156dc6f6665ceb6ce6a1fe9ac8a"
+    "url": "framework-4f6f4628cf10d856b9b4.js.LICENSE.txt",
+    "revision": "c7c771c7a9ea0b2f7e6b82ef94cc9f76"
+  },
+  {
+    "url": "framework-4f6f4628cf10d856b9b4.js.map",
+    "revision": "9459064816b1c34ee9f8f316a31c416a"
   },
   {
     "url": "icons/icon-144x144.png",
@@ -125,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "615f19e84416609001e9a2d2c145f238"
+    "revision": "bdd0e5acc0c6368d03c3850effbf42f7"
   },
   {
     "url": "logo.svg",
@@ -137,7 +149,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4c9bf651199d2a5f95d725e82a5c79c3"
+    "revision": "8cae7405858721ebbf40bfe5b4bc34e7"
   },
   {
     "url": "oglogo.png",
@@ -153,7 +165,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "d6f0a70f5c1a80dd1294fac380bda13d"
+    "revision": "ea3d890893e7688fac9beb56f89e2197"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -168,22 +180,22 @@ self.__precacheManifest = [
     "revision": "7af8c8984909cf1c8c0a80d61105ce9f"
   },
   {
-    "url": "polyfill-7132f116014d44faf99e.js"
+    "url": "polyfill-34a3fb6c3b1436d7207b.js"
   },
   {
-    "url": "polyfill-7132f116014d44faf99e.js.map",
-    "revision": "e5ddb0232d872a776d3878a852d9319b"
+    "url": "polyfill-34a3fb6c3b1436d7207b.js.map",
+    "revision": "ca1b8fc7901da7f9b70a197d0d2acbbe"
   },
   {
-    "url": "webpack-runtime-5baff6d48cf53459b999.js"
+    "url": "webpack-runtime-a2a58695eb99fd933ff5.js"
   },
   {
-    "url": "webpack-runtime-5baff6d48cf53459b999.js.map",
-    "revision": "7ba21c82ef9eb8abbbf93e580bde1523"
+    "url": "webpack-runtime-a2a58695eb99fd933ff5.js.map",
+    "revision": "ad3c3e4299aaba570fcacf34ae2b4101"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "d43e9b9c46f4899b7ba8596369ee6a3b"
+    "revision": "27f392c7dcf11e208d0a93e9958e012d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -275,7 +287,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-b5ade33780ee4f94e49f.js`))) {
+  if (!resources || !(await caches.match(`/app-efd01610dc452371f80c.js`))) {
     return await fetch(event.request)
   }
 
