@@ -28,33 +28,33 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "10ede143d76c7e303e4c7399effba6e2"
+    "revision": "d04d06264631333d9deaf77c2424b559"
   },
   {
     "url": "404/index.html",
-    "revision": "0b2d216694f45b77330dcb9ea24db893"
+    "revision": "a00060893f57d4cdbede385370b02112"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-47586f7fe5d1dfb18ec1.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-357d3edf2aa2616c4f64.js"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-47586f7fe5d1dfb18ec1.js.LICENSE.txt",
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-357d3edf2aa2616c4f64.js.LICENSE.txt",
     "revision": "6fce53c7c7713ebf61712cc2929746fa"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-47586f7fe5d1dfb18ec1.js.map",
-    "revision": "6c091564dfaf0b3dfca404655d827826"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-357d3edf2aa2616c4f64.js.map",
+    "revision": "c53d4f287fcfde2d8764364b75abd8b9"
   },
   {
-    "url": "app-0734c4aad3ddd4e3089e.js"
+    "url": "app-01d0873f53f5eff9e8dc.js"
   },
   {
-    "url": "app-0734c4aad3ddd4e3089e.js.LICENSE.txt",
+    "url": "app-01d0873f53f5eff9e8dc.js.LICENSE.txt",
     "revision": "a132a411173507cc7e308c078456c62f"
   },
   {
-    "url": "app-0734c4aad3ddd4e3089e.js.map",
-    "revision": "df0874ccfc5ad0fd85654a8e4ce0eca3"
+    "url": "app-01d0873f53f5eff9e8dc.js.map",
+    "revision": "88fd5a48d833f6e8feaf42b1c7fc4e7f"
   },
   {
     "url": "brett-dorrans-cv-2020.pdf",
@@ -62,7 +62,7 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "cbd88ad3adcfb79b70c75d8cd1192fdb"
+    "revision": "c1810cd15b6c6dac8b11bab88f1a6363"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-82c63c4c056f62a6fe2f.js"
@@ -72,18 +72,18 @@ self.__precacheManifest = [
     "revision": "ab2e22d9d7cb6c6ed0f8bcbc7b8fc2a7"
   },
   {
-    "url": "component---src-pages-404-tsx-122dbe2ea7ed10e3ff67.js"
+    "url": "component---src-pages-404-tsx-c75c79281a801563fedf.js"
   },
   {
-    "url": "component---src-pages-404-tsx-122dbe2ea7ed10e3ff67.js.map",
-    "revision": "eff371321fb3a0b377fb60297d3f6e15"
+    "url": "component---src-pages-404-tsx-c75c79281a801563fedf.js.map",
+    "revision": "283ab8103264f149adf5681f02a1cef5"
   },
   {
-    "url": "component---src-pages-index-tsx-df512b09de0607907af6.js"
+    "url": "component---src-pages-index-tsx-1bd110d0ee76489a647f.js"
   },
   {
-    "url": "component---src-pages-index-tsx-df512b09de0607907af6.js.map",
-    "revision": "420f99abc41b0f284a1d08f9d3d75dee"
+    "url": "component---src-pages-index-tsx-1bd110d0ee76489a647f.js.map",
+    "revision": "2163ffdfd0ef62cc1bf5ccf2e9e2f196"
   },
   {
     "url": "favicon-32x32.png",
@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e5bb1e379a04ff09629a6608c14f2a20"
+    "revision": "514a0cabdc8b0e00a8d7a27640fd5a0d"
   },
   {
     "url": "logo.svg",
@@ -149,7 +149,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7eb9cf0f94739153eeb2eedac1c8f0fd"
+    "revision": "756b2a0c25d04722e62ea25c47a01cde"
   },
   {
     "url": "oglogo.png",
@@ -165,7 +165,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "03aa6d796a925e0ffd2847667a7cfb87"
+    "revision": "aa2bf27f2074e1c83a7065e9d75329e6"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -187,15 +187,15 @@ self.__precacheManifest = [
     "revision": "db1e8ad32258fe5a486f99a01e6ffd2b"
   },
   {
-    "url": "webpack-runtime-55eb1f4bcf0327531fb5.js"
+    "url": "webpack-runtime-42c0db06f5ce525b725e.js"
   },
   {
-    "url": "webpack-runtime-55eb1f4bcf0327531fb5.js.map",
-    "revision": "09eedb060815bbfe530ae19049d64e9d"
+    "url": "webpack-runtime-42c0db06f5ce525b725e.js.map",
+    "revision": "d8a2d1f8a55a072124a16865e7247c4b"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "3cb5886cec105cb56aaaf90d4cb6eeb1"
+    "revision": "e5c88ea132518df760ddecf5b0d6705a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -287,7 +287,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-0734c4aad3ddd4e3089e.js`))) {
+  if (!resources || !(await caches.match(`/app-01d0873f53f5eff9e8dc.js`))) {
     return await fetch(event.request)
   }
 
