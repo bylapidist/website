@@ -102,11 +102,11 @@ self.__precacheManifest = [
   },
   {
     "url": "icons/icon-144x144.png",
-    "revision": "d0fbfdeb07f97fb75966c64f7960c220"
+    "revision": "5bdc707971c1b8dec43c386d6637f995"
   },
   {
     "url": "icons/icon-192x192.png",
-    "revision": "eede2c62849244780d4b95ba930dfe30"
+    "revision": "19e75669c5d2e4cffb9d2924204a139a"
   },
   {
     "url": "icons/icon-256x256.png",
@@ -114,11 +114,11 @@ self.__precacheManifest = [
   },
   {
     "url": "icons/icon-384x384.png",
-    "revision": "74b62dced7d6f84fea3d2a044fccd355"
+    "revision": "b7ea015ad1450274926398902e994839"
   },
   {
     "url": "icons/icon-48x48.png",
-    "revision": "4c89c74f42ee2f35c7a91c540df92268"
+    "revision": "d319b292a4b4d1e9a9aaa930708cefb8"
   },
   {
     "url": "icons/icon-512x512.png",
@@ -126,11 +126,11 @@ self.__precacheManifest = [
   },
   {
     "url": "icons/icon-72x72.png",
-    "revision": "141f67c08bc275dac85a5de01ed9de9c"
+    "revision": "e6b34628ac3f3df3dfb4e7fc124044e3"
   },
   {
     "url": "icons/icon-96x96.png",
-    "revision": "5da23531d01ea0d5182bf87e786fce42"
+    "revision": "9d0429a1eda8e845697a31860d12ea1b"
   },
   {
     "url": "idb-keyval-3.2.0-iife.min.js"
