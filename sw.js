@@ -28,11 +28,11 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "210cf68e995c2b86dfca25f3f965d46f"
+    "revision": "eed1590aa72699e2f4ec75cf831fda84"
   },
   {
     "url": "404/index.html",
-    "revision": "800b357e4bdd78f15d0450c1a5ccf853"
+    "revision": "b25ced262957e3a51f13f4127f4bda5a"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-68de93023ebe95f39bd9.js"
@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8a24b837eb1241ac90362c5d6f2fe981"
+    "revision": "5e81e7ba3a35c334468aaa568f82b8ac"
   },
   {
     "url": "logo.svg",
@@ -149,7 +149,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "174c98da0c33e71d31c894b203dc82ca"
+    "revision": "336bab4a8c484140cc5cb3936191ecb3"
   },
   {
     "url": "oglogo.png",
