@@ -58,63 +58,30 @@ export const cardStyles: Styles = {
     marginBottom: '4',
     breakpoints: {
         md: {
-            width: '3/4'
+            width: '2/3'
         }
     }
-};
-
-const cardWrapperStyles: Styles = {
-    borderWidth: '1',
-    borderStyle: 'solid',
-    boxShadow: '1',
-    breakpoints: {
-        md: {
-            marginRight: '4'
-        }
-    }
-};
-
-export const cardPrimaryWrapperStyles: Styles = {
-    ...cardWrapperStyles,
-    textColor: { group: 'primary', shade: 'dark' }
-};
-
-export const cardSecondaryWrapperStyles: Styles = {
-    ...cardWrapperStyles,
-    textColor: { group: 'secondary', shade: 'dark' }
-};
-
-export const cardTertiaryWrapperStyles: Styles = {
-    ...cardWrapperStyles,
-    textColor: { group: 'tertiary', shade: 'dark' }
-};
-
-export const cardInnerStyles: Styles = {
-    paddingX: '4',
-    paddingY: '2'
 };
 
 const cardHeadingStyles: Styles = {
     textColor: { group: 'base', shade: 'light' },
     fontSize: '3',
-    paddingTop: '4',
+    paddingTop: '2',
+    paddingBottom: '4',
     fontWeight: 'bold'
 };
 
 export const cardPrimaryHeadingStyles: Styles = {
-    ...cardInnerStyles,
     ...cardHeadingStyles,
     textColor: { group: 'primary', shade: 'dark' }
 };
 
 export const cardSecondaryHeadingStyles: Styles = {
-    ...cardInnerStyles,
     ...cardHeadingStyles,
     textColor: { group: 'secondary', shade: 'dark' }
 };
 
 export const cardTertiaryHeadingStyles: Styles = {
-    ...cardInnerStyles,
     ...cardHeadingStyles,
     textColor: { group: 'tertiary', shade: 'dark' }
 };
