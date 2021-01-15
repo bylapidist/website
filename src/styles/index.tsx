@@ -63,29 +63,6 @@ export const cardStyles: Styles = {
     }
 };
 
-const cardHeadingStyles: Styles = {
-    textColor: { group: 'base', shade: 'light' },
-    fontSize: '3',
-    paddingTop: '2',
-    paddingBottom: '4',
-    fontWeight: 'bold'
-};
-
-export const cardPrimaryHeadingStyles: Styles = {
-    ...cardHeadingStyles,
-    textColor: { group: 'primary', shade: 'dark' }
-};
-
-export const cardSecondaryHeadingStyles: Styles = {
-    ...cardHeadingStyles,
-    textColor: { group: 'secondary', shade: 'dark' }
-};
-
-export const cardTertiaryHeadingStyles: Styles = {
-    ...cardHeadingStyles,
-    textColor: { group: 'tertiary', shade: 'dark' }
-};
-
 export const cardDescriptionStyles: Styles = {
     fontSize: '2',
     marginBottom: '2',
