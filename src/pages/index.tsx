@@ -58,7 +58,7 @@ const IndexPage = (): JSX.Element => (
             <Flex styles={cardContainerStyles}>
                 <Box styles={cardStyles}>
                     <Box styles={cardTertiaryWrapperStyles}>
-                        <Heading size={3} styles={cardTertiaryHeadingStyles}>
+                        <Heading size={2} styles={cardTertiaryHeadingStyles}>
                             components
                         </Heading>
                         <Box styles={cardInnerStyles}>
@@ -91,7 +91,7 @@ const IndexPage = (): JSX.Element => (
                             </Text>
                             <Flex styles={{ paddingY: '4' }}>
                                 <Box styles={{ marginRight: '2' }}>
-                                    <a
+                                    <Link
                                         href="https://www.npmjs.com/package/@lapidist/components"
                                         rel="nofollow noopener"
                                     >
@@ -99,18 +99,18 @@ const IndexPage = (): JSX.Element => (
                                             src="https://img.shields.io/npm/v/@lapidist/components"
                                             alt="@lapidist/components npm version"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                                 <Box>
-                                    <a
-                                        href="https://github.com/bylapidist/components/actions?query=workflow%3ARelease"
+                                    <Link
+                                        href="https://github.com/bylapidist/components"
                                         rel="nofollow noopener"
                                     >
                                         <img
                                             src="https://github.com/bylapidist/components/workflows/Release/badge.svg"
                                             alt="@lapidist/components build status"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                             </Flex>
                         </Box>
@@ -118,7 +118,7 @@ const IndexPage = (): JSX.Element => (
                 </Box>
                 <Box styles={cardStyles}>
                     <Box styles={cardSecondaryWrapperStyles}>
-                        <Heading size={3} styles={cardSecondaryHeadingStyles}>
+                        <Heading size={2} styles={cardSecondaryHeadingStyles}>
                             styles
                         </Heading>
                         <Box styles={cardInnerStyles}>
@@ -151,7 +151,7 @@ const IndexPage = (): JSX.Element => (
                             </Text>
                             <Flex styles={{ paddingY: '4' }}>
                                 <Box styles={{ marginRight: '2' }}>
-                                    <a
+                                    <Link
                                         href="https://www.npmjs.com/package/@lapidist/styles"
                                         rel="nofollow noopener"
                                     >
@@ -159,18 +159,18 @@ const IndexPage = (): JSX.Element => (
                                             src="https://img.shields.io/npm/v/@lapidist/styles"
                                             alt="@lapidist/styles npm version"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                                 <Box>
-                                    <a
-                                        href="https://github.com/bylapidist/styles/actions?query=workflow%3ARelease"
+                                    <Link
+                                        href="https://github.com/bylapidist/styles"
                                         rel="nofollow noopener"
                                     >
                                         <img
                                             src="https://github.com/bylapidist/styles/workflows/Release/badge.svg"
                                             alt="@lapidist/styles build status"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                             </Flex>
                         </Box>
@@ -178,7 +178,7 @@ const IndexPage = (): JSX.Element => (
                 </Box>
                 <Box styles={cardStyles}>
                     <Box styles={cardPrimaryWrapperStyles}>
-                        <Heading size={3} styles={cardPrimaryHeadingStyles}>
+                        <Heading size={2} styles={cardPrimaryHeadingStyles}>
                             linting
                         </Heading>
                         <Box styles={cardInnerStyles}>
@@ -203,7 +203,7 @@ const IndexPage = (): JSX.Element => (
                             </Text>
                             <Flex styles={{ paddingY: '4' }}>
                                 <Box styles={{ marginRight: '2' }}>
-                                    <a
+                                    <Link
                                         href="https://www.npmjs.com/package/@lapidist/linting"
                                         rel="nofollow noopener"
                                     >
@@ -211,18 +211,18 @@ const IndexPage = (): JSX.Element => (
                                             src="https://img.shields.io/npm/v/@lapidist/linting"
                                             alt="@lapidist/linting npm version"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                                 <Box>
-                                    <a
-                                        href="https://github.com/bylapidist/linting/actions?query=workflow%3ARelease"
+                                    <Link
+                                        href="https://github.com/bylapidist/linting"
                                         rel="nofollow noopener"
                                     >
                                         <img
                                             src="https://github.com/bylapidist/linting/workflows/Release/badge.svg"
                                             alt="@lapidist/linting build status"
                                         />
-                                    </a>
+                                    </Link>
                                 </Box>
                             </Flex>
                         </Box>
