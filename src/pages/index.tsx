@@ -57,7 +57,7 @@ const IndexPage = (): JSX.Element => (
                 </Link>
                 <Link href="mailto:hello@lapidist.net">Email</Link>
             </Text>
-            <Flex styles={cardContainerStyles}>
+            <Flex styles={cardContainerStyles} data-nosnippet>
                 <Panel kind="tertiary" styles={cardStyles}>
                     <PanelHeading kind="tertiary" size={3}>
                         components
