@@ -59,7 +59,7 @@ const IndexPage = (): JSX.Element => (
             </Text>
             <Flex styles={cardContainerStyles} data-nosnippet>
                 <Panel kind="tertiary" styles={cardStyles}>
-                    <PanelHeading kind="tertiary" size={3}>
+                    <PanelHeading kind="tertiary" size={2}>
                         components
                     </PanelHeading>
                     <Text styles={cardDescriptionStyles}>
@@ -98,6 +98,8 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://img.shields.io/npm/v/@lapidist/components"
                                     alt="@lapidist/components npm version"
+                                    width={80}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
@@ -109,13 +111,15 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://github.com/bylapidist/components/workflows/Release/badge.svg"
                                     alt="@lapidist/components build status"
+                                    width={120}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
                     </Flex>
                 </Panel>
                 <Panel kind="secondary" styles={cardStyles}>
-                    <PanelHeading kind="secondary" size={3}>
+                    <PanelHeading kind="secondary" size={2}>
                         styles
                     </PanelHeading>
                     <Text styles={cardDescriptionStyles}>
@@ -154,6 +158,8 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://img.shields.io/npm/v/@lapidist/styles"
                                     alt="@lapidist/styles npm version"
+                                    width={80}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
@@ -165,13 +171,15 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://github.com/bylapidist/styles/workflows/Release/badge.svg"
                                     alt="@lapidist/styles build status"
+                                    width={120}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
                     </Flex>
                 </Panel>
                 <Panel kind="primary" styles={cardStyles}>
-                    <PanelHeading kind="primary" size={3}>
+                    <PanelHeading kind="primary" size={2}>
                         linting
                     </PanelHeading>
                     <Text styles={cardDescriptionStyles}>
@@ -202,6 +210,8 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://img.shields.io/npm/v/@lapidist/linting"
                                     alt="@lapidist/linting npm version"
+                                    width={88}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
@@ -213,6 +223,8 @@ const IndexPage = (): JSX.Element => (
                                 <img
                                     src="https://github.com/bylapidist/linting/workflows/Release/badge.svg"
                                     alt="@lapidist/linting build status"
+                                    width={120}
+                                    height={20}
                                 />
                             </Link>
                         </Box>
