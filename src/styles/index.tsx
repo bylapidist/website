@@ -1,4 +1,4 @@
-import { Styles } from '@lapidist/components';
+import { Styles } from '@lapidist/styles';
 
 export const wrapperStyles: Styles = {
     padding: '6',
