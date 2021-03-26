@@ -23,7 +23,7 @@
     },
     "devDependencies": {
         "@lapidist/linting": "^2.87.0",
-        "@types/node": "^14.14.35",
+        "@types/node": "^14.14.36",
         "@types/react": "^17.0.3",
         "@types/react-dom": "^17.0.3",
         "@types/react-helmet": "^6.1.0",
