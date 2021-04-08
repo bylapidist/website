@@ -29,7 +29,7 @@
         "@types/react-helmet": "^6.1.0",
         "@types/styled-components": "^5.1.9",
         "babel-plugin-styled-components": "^1.12.0",
-        "typescript": "^4.2.3"
+        "typescript": "^4.2.4"
     },
     "dependencies": {
         "@lapidist/components": "^5.6.1",
