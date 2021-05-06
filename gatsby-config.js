@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 module.exports = {
     siteMetadata: {
         title: 'Brett Dorrans: Senior Software Engineer in Glasgow, Scotland',
