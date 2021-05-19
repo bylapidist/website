@@ -51,8 +51,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name:
-                    'Brett Dorrans: Senior Software Engineer in Glasgow, Scotland',
+                name: 'Brett Dorrans: Senior Software Engineer in Glasgow, Scotland',
                 short_name: 'Brett Dorrans',
                 start_url: '/',
                 background_color: '#ffffff',
