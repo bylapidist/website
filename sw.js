@@ -28,11 +28,11 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "0b1473dd6da498ab9ffc5103185f9780"
+    "revision": "31e8ffee558a7c20f136bef9aa3499e1"
   },
   {
     "url": "404/index.html",
-    "revision": "b97ae25a6ae6bc240266f9abaee6209a"
+    "revision": "8200daa1f45d6c51e8b16e18892bb228"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -53,11 +53,11 @@ self.__precacheManifest = [
     "revision": "b1ba6a9d8ae32f6057b66ae1cadf775e"
   },
   {
-    "url": "app-c8dc103e76bf83cf1bf9.js"
+    "url": "app-9507cb2d8dd31cab8726.js"
   },
   {
-    "url": "app-c8dc103e76bf83cf1bf9.js.map",
-    "revision": "2f05d325b32db69ecf873c2047f551df"
+    "url": "app-9507cb2d8dd31cab8726.js.map",
+    "revision": "80b78f309c6679e738ff48814f6d2d50"
   },
   {
     "url": "brett-dorrans-cv-2021.pdf",
@@ -65,7 +65,7 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "255eaf170b58a313e669f156351725b5"
+    "revision": "b6d2a257a437be2ab5b222512a490e2c"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-f5edb12af93ec1eb4b18.js"
@@ -140,7 +140,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "7dd3fde9097025b49eeeb0ade0018859"
+    "revision": "d1fc3360d3b8ee4ca0be8b7b5f62e515"
   },
   {
     "url": "logo.svg",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "38b246a10fe307a3a9a9de27aec8c548"
+    "revision": "73f9b2fd771a8dca89252d20170084b5"
   },
   {
     "url": "oglogo.png",
@@ -160,34 +160,34 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "6d0fefea1712a899406671fa439484c1"
+    "revision": "fdedd3f8f10db804fb30f2c6897c96f2"
   },
   {
     "url": "page-data/404/page-data.json",
-    "revision": "b67ada0f919b325b0d6293bb5c99f93f"
+    "revision": "1e7c99ae4fec9fda403e831bd611e414"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c907924b72d10cacac5616469587fce6"
+    "revision": "60676bfc6dd27268bae7dc1cb51038a2"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "f032a81c182cd3a4b8fa96acf672f2f6"
+    "revision": "f0acb2060bcec8fccc9d246994b05187"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
+    "revision": "f2c002077289a7e1ac538802bc7f5314"
   },
   {
     "url": "page-data/sq/d/1963140206.json",
     "revision": "7af8c8984909cf1c8c0a80d61105ce9f"
   },
   {
-    "url": "polyfill-639099eb66123e0f56d4.js"
+    "url": "polyfill-fc00740fa323bca2107d.js"
   },
   {
-    "url": "polyfill-639099eb66123e0f56d4.js.map",
-    "revision": "50e9f766092681e15291665dd806ed78"
+    "url": "polyfill-fc00740fa323bca2107d.js.map",
+    "revision": "6cbfd17acbcc245a496e239dd045a6d8"
   },
   {
     "url": "webpack-runtime-3ec5bf498f8a821cba29.js"
@@ -198,7 +198,7 @@ self.__precacheManifest = [
   },
   {
     "url": "webpack.stats.json",
-    "revision": "9aee314f780e08ee6629c4f649328553"
+    "revision": "0682c3d6f0ea95cb2ad2ceaba0a5c418"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -290,7 +290,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-c8dc103e76bf83cf1bf9.js`))) {
+  if (!resources || !(await caches.match(`/app-9507cb2d8dd31cab8726.js`))) {
     return await fetch(event.request)
   }
 
