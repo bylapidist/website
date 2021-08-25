@@ -22,7 +22,7 @@
         "fix": "eslint --fix . --ext js,ts,tsx"
     },
     "devDependencies": {
-        "@lapidist/linting": "2.115.1",
+        "@lapidist/linting": "2.115.2",
         "@types/node": "15.3.1",
         "@types/react": "17.0.19",
         "@types/react-dom": "17.0.9",
