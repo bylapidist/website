@@ -16,7 +16,7 @@ export const wrapperStyles: Styles = {
 
 export const headingStyles: Styles = {
     fontSize: '8',
-    fontWeight: 700,
+    fontWeight: 'bold',
     marginBottom: '12'
 };
 
