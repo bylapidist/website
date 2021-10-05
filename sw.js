@@ -28,11 +28,11 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "c88779ee00bb6a2922eb2695dd9bf2f9"
+    "revision": "3b3f2a6e9c4c16170f7d5ca35de09124"
   },
   {
     "url": "404/index.html",
-    "revision": "e259efbf1534e3b64d34c863b3b3983a"
+    "revision": "cd80694e65daf796a30fd675d915bf2f"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -140,7 +140,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "13276651310a1fdcbb9997d874e6ed09"
+    "revision": "2f3c527e8b33f5802a6da4bfa797d69a"
   },
   {
     "url": "logo.svg",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b8aa8120324e2ee1b36369716806e13e"
+    "revision": "06d49120913150476f08f9950125f674"
   },
   {
     "url": "oglogo.png",
@@ -168,7 +168,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "6e8200e07abacd73d760b9acc549af05"
+    "revision": "0746bb9c3745a0d88664331583dff344"
   },
   {
     "url": "page-data/index/page-data.json",
