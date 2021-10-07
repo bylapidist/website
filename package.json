@@ -33,7 +33,7 @@
         "typescript": "4.4.3"
     },
     "dependencies": {
-        "@lapidist/components": "6.6.1",
+        "@lapidist/components": "6.6.2",
         "gatsby": "3.14.2",
         "gatsby-image": "3.11.0",
         "gatsby-plugin-canonical-urls": "3.14.0",
