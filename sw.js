@@ -64,6 +64,10 @@ self.__precacheManifest = [
     "revision": "50b360fb44a75ffce191d459fce34ab1"
   },
   {
+    "url": "brett-dorrans-cv.pdf",
+    "revision": "a7c3be43ef07f9475d1309cb26a0fc79"
+  },
+  {
     "url": "chunk-map.json",
     "revision": "e29b0e65142b09e46c06668c38f515ec"
   },
