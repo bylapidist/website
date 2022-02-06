@@ -16,12 +16,15 @@
     "scripts": {
         "start": "gatsby develop --port 3000",
         "serve": "gatsby serve",
-        "build": "gatsby build --prefix-paths",
+        "build": "npm run build:gatsby && npm run build:cv",
+        "build:gatsby": "gatsby build --prefix-paths",
+        "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5 && mv brett-dorrans-cv.pdf /public",
         "clean": "gatsby clean",
         "lint": "eslint . --ext js,ts,tsx",
         "fix": "eslint --fix . --ext js,ts,tsx"
     },
     "devDependencies": {
+        "@lapidist/cv-generator": "^1.0.0",
         "@lapidist/linting": "2.123.1",
         "@types/node": "16.11.22",
         "@types/react": "17.0.39",
