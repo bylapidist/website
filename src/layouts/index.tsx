@@ -80,6 +80,7 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                             "url": "https://lapidist.net",
                             "name": "Brett Dorrans",
                             "sameAs": [
+                                "https://www.linkedin.com/in/brettdorrans",
                                 "https://www.linkedin.com/pub/brett-dorrans/28/378/714",
                                 "https://github.com/brettdorrans",
                                 "https://github.com/bylapidist"
