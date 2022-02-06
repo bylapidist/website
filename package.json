@@ -18,7 +18,7 @@
         "serve": "gatsby serve",
         "build": "npm run build:gatsby && npm run build:cv",
         "build:gatsby": "gatsby build --prefix-paths",
-        "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5 && mv brett-dorrans-cv.pdf /public",
+        "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5 && mv brett-dorrans-cv.pdf public/",
         "clean": "gatsby clean",
         "lint": "eslint . --ext js,ts,tsx",
         "fix": "eslint --fix . --ext js,ts,tsx"
