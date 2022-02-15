@@ -37,7 +37,7 @@
     },
     "dependencies": {
         "@lapidist/components": "6.6.4",
-        "gatsby": "4.7.1",
+        "gatsby": "4.7.2",
         "gatsby-image": "3.11.0",
         "gatsby-plugin-canonical-urls": "4.7.0",
         "gatsby-plugin-google-analytics": "4.7.0",
