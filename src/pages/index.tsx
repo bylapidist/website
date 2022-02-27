@@ -37,7 +37,7 @@ const IndexPage = (): JSX.Element => (
                 for over a decade.
             </Text>
             <Text styles={linkContainerStyles} data-nosnippet>
-                <Link styles={linkStyles} href="/brett-dorrans-cv-2021.pdf">
+                <Link styles={linkStyles} href="/brett-dorrans-cv.pdf">
                     CV
                 </Link>
                 <Link
