@@ -33,7 +33,9 @@ jobs:
             - name: Set up env tokens
               env:
                   GATSBY_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-              run: echo "GATSBY_GITHUB_TOKEN=$GATSBY_GITHUB_TOKEN" > .env
+              run: |
+                  echo "GATSBY_GITHUB_TOKEN=$GATSBY_GITHUB_TOKEN" > .env
+                  cat .env
 
             - name: Run build
               run: npm run build
