@@ -31,12 +31,12 @@ jobs:
               run: npm run lint
 
             - name: Set up env tokens
-              env:
-                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
               run: |
                   touch .env
                   echo "GATSBY_GITHUB_TOKEN=${{ GH_TOKEN }}" > .env
                   cat .env
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
             - name: Run build
               run: npm run build
