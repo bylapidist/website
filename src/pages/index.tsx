@@ -25,21 +25,23 @@ import {
 
 const IndexPage = (): JSX.Element => {
     const repoData = useStaticQuery(graphql`
-        github {
-            organization(login: "bylapidist") {
-                repositories(first: 100) {
-                    edges {
-                        node {
-                            id,
-                            name,
-                            description,
-                            url,
-                            updatedAt,
-                            homepageUrl,
-                            isPrivate,
-                            latestRelease {
-                                tagName
-                            },
+        query {
+            github {
+                organization(login: "bylapidist") {
+                    repositories(first: 100) {
+                        edges {
+                            node {
+                                id,
+                                name,
+                                description,
+                                url,
+                                updatedAt,
+                                homepageUrl,
+                                isPrivate,
+                                latestRelease {
+                                    tagName
+                                },
+                            }
                         }
                     }
                 }
