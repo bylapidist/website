@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require('dotenv').config({ path: '.env' });
+
 module.exports = {
     siteMetadata: {
         title: 'Brett Dorrans: Senior Software Engineer in Glasgow, Scotland',
