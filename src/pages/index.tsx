@@ -31,16 +31,16 @@ const IndexPage = (): JSX.Element => {
                     repositories(first: 100) {
                         edges {
                             node {
-                                id,
-                                name,
-                                description,
-                                url,
-                                updatedAt,
-                                homepageUrl,
-                                isPrivate,
+                                id
+                                name
+                                description
+                                url
+                                updatedAt
+                                homepageUrl
+                                isPrivate
                                 latestRelease {
                                     tagName
-                                },
+                                }
                             }
                         }
                     }
