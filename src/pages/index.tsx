@@ -28,7 +28,7 @@ const IndexPage = (): JSX.Element => {
         query {
             github {
                 organization(login: "bylapidist") {
-                    repositories(first: 100) {
+                    repositories(first: 100, privacy: PUBLIC) {
                         edges {
                             node {
                                 id
@@ -37,7 +37,6 @@ const IndexPage = (): JSX.Element => {
                                 url
                                 updatedAt
                                 homepageUrl
-                                isPrivate
                                 latestRelease {
                                     tagName
                                 }
