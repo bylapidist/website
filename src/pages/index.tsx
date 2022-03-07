@@ -153,7 +153,6 @@ const IndexPage = (): JSX.Element => {
                             </Flex>
                         </Panel>
                     ))}
-                    ;
                 </Flex>
 
                 {/*<Flex styles={cardContainerStyles} data-nosnippet>*/}
