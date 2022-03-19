@@ -28,11 +28,11 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "5903ec0c3116ca0d9e15e393e5e8d44f"
+    "revision": "f9c9cb0e3c68284348d88381c1d1dac4"
   },
   {
     "url": "404/index.html",
-    "revision": "4f3cab8c4bd09eb5b006ff10e595324b"
+    "revision": "5168f8e983f487db4ea3cde0a5a019aa"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -61,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "635b2f598a372a722a9932764a254837"
+    "revision": "a6beaa89c52f68679d261b9ee70c6940"
   },
   {
     "url": "chunk-map.json",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b20c2af072fda7731b72897cf3461bd0"
+    "revision": "bee369ddb6917e04b1779e0c1475805b"
   },
   {
     "url": "logo.svg",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c9412b88cda0d5415d8b4ae0a5bdac35"
+    "revision": "d551adca0004d8b220c50eaa1be54f7e"
   },
   {
     "url": "oglogo.png",
@@ -184,7 +184,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3471301276.json",
-    "revision": "1cfca65c47e7f5c02306853325e67d9c"
+    "revision": "7aad6bdac6d290a62d4493f3b0e25008"
   },
   {
     "url": "polyfill-12b284c879b4c2eee8ed.js"
