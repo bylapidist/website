@@ -36,7 +36,7 @@
         "typescript": "4.6.4"
     },
     "dependencies": {
-        "@lapidist/components": "6.7.1",
+        "@lapidist/components": "6.8.4",
         "dotenv": "16.0.1",
         "gatsby": "4.14.1",
         "gatsby-image": "3.11.0",
@@ -63,8 +63,8 @@
         "postcss-loader": "6.2.1",
         "prism-themes": "1.9.0",
         "prismjs": "1.28.0",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
         "react-helmet": "6.1.0",
         "styled-components": "5.3.5"
     }
