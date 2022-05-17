@@ -122,18 +122,18 @@ const IndexPage = (): JSX.Element => {
                     {repos.map((repo) => (
                         <Panel
                             key={repo.node.id}
-                            kind="tertiary"
+                            kind="primary"
                             styles={cardStyles}
                         >
-                            <PanelHeading kind="tertiary" size={2}>
-                                {repo.node.name}
+                            <PanelHeading kind="primary" size={2}>
+                                @lapidist/{repo.node.name}
                             </PanelHeading>
                             <Text styles={cardDescriptionStyles}>
                                 {repo.node.description}
                             </Text>
                             <Flex styles={{ paddingY: '4' }}>
                                 <Box styles={{ marginRight: '2' }}>
-                                    <Tag kind="primary">
+                                    <Tag kind="tertiary">
                                         {repo.node.latestRelease.tagName}
                                     </Tag>
                                 </Box>
