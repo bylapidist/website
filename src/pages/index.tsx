@@ -125,30 +125,22 @@ const IndexPage = (): JSX.Element => {
                             kind="primary"
                             styles={cardStyles}
                         >
-                            <PanelHeading kind="primary" size={2}>
-                                @lapidist/{repo.node.name}
-                            </PanelHeading>
+                            <Link
+                                href={repo.node.url}
+                                rel="nofollow noopener"
+                            >
+                                <PanelHeading kind="grey">
+                                    @lapidist/{repo.node.name}
+                                </PanelHeading>
+                            </Link>
                             <Text styles={cardDescriptionStyles}>
                                 {repo.node.description}
                             </Text>
                             <Flex styles={{ paddingY: '4' }}>
-                                <Box styles={{ marginRight: '2' }}>
-                                    <Tag kind="tertiary">
+                                <Box>
+                                    <Tag namespace="npm" kind="primary">
                                         {repo.node.latestRelease.tagName}
                                     </Tag>
-                                </Box>
-                                <Box>
-                                    <Link
-                                        href={repo.node.url}
-                                        rel="nofollow noopener"
-                                    >
-                                        <img
-                                            src={`https://github.com/bylapidist/${repo.node.name}/workflows/Release/badge.svg`}
-                                            alt={`@lapidist/${repo.node.name} build status`}
-                                            width={120}
-                                            height={20}
-                                        />
-                                    </Link>
                                 </Box>
                             </Flex>
                         </Panel>
