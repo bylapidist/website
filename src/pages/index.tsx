@@ -125,10 +125,7 @@ const IndexPage = (): JSX.Element => {
                             kind="primary"
                             styles={cardStyles}
                         >
-                            <Link
-                                href={repo.node.url}
-                                rel="nofollow noopener"
-                            >
+                            <Link href={repo.node.url} rel="nofollow noopener">
                                 <PanelHeading kind="grey">
                                     @lapidist/{repo.node.name}
                                 </PanelHeading>
