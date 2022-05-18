@@ -61,7 +61,7 @@
         "gatsby-transformer-sharp": "4.14.0",
         "postcss": "8.4.14",
         "postcss-flexbugs-fixes": "5.0.2",
-        "postcss-loader": "6.2.1",
+        "postcss-loader": "7.0.0",
         "prism-themes": "1.9.0",
         "prismjs": "1.28.0",
         "react": "18.1.0",
