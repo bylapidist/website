@@ -131,6 +131,7 @@ const IndexPage = (): JSX.Element => {
                                     kind="grey"
                                     href={repo.node.url}
                                     rel="nofollow noopener"
+                                    target="_blank"
                                 >
                                     @lapidist/{repo.node.name}
                                 </PanelHeading>
