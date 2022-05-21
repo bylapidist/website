@@ -59,7 +59,7 @@
         "gatsby-transformer-json": "4.14.0",
         "gatsby-transformer-remark": "5.14.0",
         "gatsby-transformer-sharp": "4.14.0",
-        "lodash": "^4.17.21",
+        "lodash": "4.17.21",
         "postcss": "8.4.14",
         "postcss-flexbugs-fixes": "5.0.2",
         "postcss-loader": "7.0.0",
