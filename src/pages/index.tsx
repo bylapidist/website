@@ -1,4 +1,5 @@
 import React from 'react';
+import { orderBy } from 'lodash';
 import {
     Box,
     Flex,
@@ -119,7 +120,7 @@ const IndexPage = (): JSX.Element => {
                 </Text>
 
                 <Flex styles={cardContainerStyles} data-nosnippet>
-                    {repos.map((repo) => (
+                    {repos && orderBy(repos, ['node.name'], 'asc').map((repo) => (
                         <Panel
                             key={repo.node.id}
                             kind="primary"
