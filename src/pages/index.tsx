@@ -127,18 +127,17 @@ const IndexPage = (): JSX.Element => {
                                 kind="primary"
                                 styles={cardStyles}
                             >
-                                <Link
+                                <PanelHeading
+                                    kind="grey"
                                     href={repo.node.url}
                                     rel="nofollow noopener"
                                 >
-                                    <PanelHeading kind="grey">
-                                        @lapidist/{repo.node.name}
-                                    </PanelHeading>
-                                </Link>
+                                    @lapidist/{repo.node.name}
+                                </PanelHeading>
                                 <Text styles={cardDescriptionStyles}>
                                     {repo.node.description}
                                 </Text>
-                                <Flex styles={{ paddingY: '4' }}>
+                                <Flex styles={{ paddingTop: '4' }}>
                                     <Box>
                                         <Tag namespace="npm" kind="primary">
                                             {repo.node.latestRelease.tagName}
