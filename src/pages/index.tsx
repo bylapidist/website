@@ -1,4 +1,5 @@
 import React from 'react';
+import { orderBy } from 'lodash';
 import {
     Box,
     Flex,
@@ -119,29 +120,33 @@ const IndexPage = (): JSX.Element => {
                 </Text>
 
                 <Flex styles={cardContainerStyles} data-nosnippet>
-                    {repos.map((repo) => (
-                        <Panel
-                            key={repo.node.id}
-                            kind="primary"
-                            styles={cardStyles}
-                        >
-                            <Link href={repo.node.url} rel="nofollow noopener">
-                                <PanelHeading kind="grey">
-                                    @lapidist/{repo.node.name}
-                                </PanelHeading>
-                            </Link>
-                            <Text styles={cardDescriptionStyles}>
-                                {repo.node.description}
-                            </Text>
-                            <Flex styles={{ paddingY: '4' }}>
-                                <Box>
-                                    <Tag namespace="npm" kind="primary">
-                                        {repo.node.latestRelease.tagName}
-                                    </Tag>
-                                </Box>
-                            </Flex>
-                        </Panel>
-                    ))}
+                    {repos &&
+                        orderBy(repos, ['node.name'], 'asc').map((repo) => (
+                            <Panel
+                                key={repo.node.id}
+                                kind="primary"
+                                styles={cardStyles}
+                            >
+                                <Link
+                                    href={repo.node.url}
+                                    rel="nofollow noopener"
+                                >
+                                    <PanelHeading kind="grey">
+                                        @lapidist/{repo.node.name}
+                                    </PanelHeading>
+                                </Link>
+                                <Text styles={cardDescriptionStyles}>
+                                    {repo.node.description}
+                                </Text>
+                                <Flex styles={{ paddingY: '4' }}>
+                                    <Box>
+                                        <Tag namespace="npm" kind="primary">
+                                            {repo.node.latestRelease.tagName}
+                                        </Tag>
+                                    </Box>
+                                </Flex>
+                            </Panel>
+                        ))}
                 </Flex>
             </Box>
         </IndexLayout>
