@@ -25,7 +25,7 @@
     },
     "devDependencies": {
         "@lapidist/cv-generator": "1.5.2",
-        "@lapidist/linting": "2.131.4",
+        "@lapidist/linting": "2.131.5",
         "@types/node": "16.11.36",
         "@types/react": "18.0.9",
         "@types/react-dom": "18.0.4",
