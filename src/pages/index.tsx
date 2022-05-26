@@ -1,6 +1,7 @@
 import React from 'react';
 import { orderBy } from 'lodash';
 import {
+    Button,
     Box,
     Flex,
     Heading,
@@ -124,25 +125,68 @@ const IndexPage = (): JSX.Element => {
                         orderBy(repos, ['node.name'], 'asc').map((repo) => (
                             <Panel
                                 key={repo.node.id}
-                                kind="primary"
+                                kind="grey"
                                 styles={cardStyles}
                             >
-                                <PanelHeading
-                                    kind="grey"
-                                    href={repo.node.url}
-                                    rel="nofollow noopener"
-                                    target="_blank"
-                                >
+                                <PanelHeading kind="grey">
                                     @lapidist/{repo.node.name}
                                 </PanelHeading>
                                 <Text styles={cardDescriptionStyles}>
                                     {repo.node.description}
                                 </Text>
                                 <Flex styles={{ paddingTop: '4' }}>
-                                    <Box>
-                                        <Tag namespace="npm" kind="primary">
+                                    <Box styles={{ flex: '1 1 auto' }}>
+                                        <Tag kind="tertiary">
                                             {repo.node.latestRelease.tagName}
                                         </Tag>
+                                    </Box>
+                                    <Box>
+                                        <Button
+                                            styles={{ marginRight: '1' }}
+                                            kind="primary"
+                                            variant="small"
+                                            ghost
+                                            onClick={() =>
+                                                window.open(
+                                                    repo.node.url,
+                                                    '_blank',
+                                                    'noopener=true'
+                                                )
+                                            }
+                                        >
+                                            GitHub
+                                        </Button>
+                                        <Button
+                                            styles={{ marginRight: '1' }}
+                                            kind="secondary"
+                                            variant="small"
+                                            ghost
+                                            onClick={() =>
+                                                window.open(
+                                                    `https://www.npmjs.com/package/@lapidist/${repo.node.name}`,
+                                                    '_blank',
+                                                    'noopener=true'
+                                                )
+                                            }
+                                        >
+                                            npm
+                                        </Button>
+                                        {repo.node.homepageUrl && (
+                                            <Button
+                                                kind="tertiary"
+                                                variant="small"
+                                                ghost
+                                                onClick={() =>
+                                                    window.open(
+                                                        repo.node.homepageUrl,
+                                                        '_blank',
+                                                        'noopener=true'
+                                                    )
+                                                }
+                                            >
+                                                Docs
+                                            </Button>
+                                        )}
                                     </Box>
                                 </Flex>
                             </Panel>
