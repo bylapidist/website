@@ -36,7 +36,7 @@
         "typescript": "4.7.2"
     },
     "dependencies": {
-        "@lapidist/components": "6.13.0",
+        "@lapidist/components": "6.13.1",
         "dayjs": "1.11.2",
         "dotenv": "16.0.1",
         "gatsby": "4.15.1",
