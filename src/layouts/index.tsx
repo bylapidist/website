@@ -1,14 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import {
-    ThemeProvider,
-    Box,
-    mergeThemes,
-    darkTheme,
-    defaultTheme
-} from '@lapidist/components';
-import { wrapperStyles } from '../styles';
+import { Box } from '@lapidist/components';
+import { bodyStyles, wrapperStyles } from '../styles';
 
 interface StaticQueryProps {
     site: {
@@ -19,7 +13,9 @@ interface StaticQueryProps {
     };
 }
 
-const IndexLayout: React.FC = ({ children }): JSX.Element => (
+const IndexLayout: React.FC<PropsWithChildren<unknown>> = ({
+    children
+}): JSX.Element => (
     <StaticQuery
         query={graphql`
             query IndexLayoutQuery {
@@ -31,47 +27,35 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                 }
             }
         `}
-        render={(data: StaticQueryProps): JSX.Element => {
-            const prefersDarkTheme =
-                (typeof window !== 'undefined' &&
-                    window?.matchMedia &&
-                    window.matchMedia('(prefers-color-scheme: dark)')
-                        .matches) ||
-                (typeof localStorage !== 'undefined' &&
-                    localStorage.getItem('isDarkMode') === 'true');
-
-            return (
-                <>
-                    <Helmet htmlAttributes={{ lang: 'en' }}>
-                        <meta charSet="utf-8" />
-                        <title>{data.site.siteMetadata.title}</title>
-                        <meta
-                            name="description"
-                            content={data.site.siteMetadata.description}
-                        />
-                        <meta
-                            name="viewport"
-                            content="width=device-width, initial-scale=1"
-                        />
-                        <meta
-                            property="og:title"
-                            content={data.site.siteMetadata.title}
-                        />
-                        <meta
-                            property="og:description"
-                            content={data.site.siteMetadata.description}
-                        />
-                        <meta property="og:type" content="website" />
-                        <meta
-                            property="og:url"
-                            content="https://lapidist.net/"
-                        />
-                        <meta
-                            property="og:image"
-                            content="https://lapidist.net/oglogo.png"
-                        />
-                        <style>
-                            {`
+        render={(data: StaticQueryProps): JSX.Element => (
+            <>
+                <Helmet htmlAttributes={{ lang: 'en' }}>
+                    <meta charSet="utf-8" />
+                    <title>{data.site.siteMetadata.title}</title>
+                    <meta
+                        name="description"
+                        content={data.site.siteMetadata.description}
+                    />
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1"
+                    />
+                    <meta
+                        property="og:title"
+                        content={data.site.siteMetadata.title}
+                    />
+                    <meta
+                        property="og:description"
+                        content={data.site.siteMetadata.description}
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:url" content="https://lapidist.net/" />
+                    <meta
+                        property="og:image"
+                        content="https://lapidist.net/oglogo.png"
+                    />
+                    <style>
+                        {`
                             @font-face {
                                 font-family: 'Montserrat';
                                 font-style: normal;
@@ -89,9 +73,9 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                                 unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
                             }
                         `}
-                        </style>
-                        <script type="application/ld+json">
-                            {`
+                    </style>
+                    <script type="application/ld+json">
+                        {`
                             {
                                 "@context": "https://schema.org",
                                 "@type": "Person",
@@ -105,20 +89,13 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
                                 ]
                             }
                             `}
-                        </script>
-                    </Helmet>
-                    <ThemeProvider
-                        theme={
-                            prefersDarkTheme
-                                ? mergeThemes(defaultTheme, darkTheme)
-                                : defaultTheme
-                        }
-                    >
-                        <Box styles={wrapperStyles}>{children}</Box>
-                    </ThemeProvider>
-                </>
-            );
-        }}
+                    </script>
+                </Helmet>
+                <Box styles={bodyStyles}>
+                    <Box styles={wrapperStyles}>{children}</Box>
+                </Box>
+            </>
+        )}
     />
 );
 

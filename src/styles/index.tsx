@@ -1,5 +1,9 @@
 import { Styles } from '@lapidist/styles';
 
+export const bodyStyles: Styles = {
+    backgroundColor: { group: 'base', shade: 'light' }
+};
+
 export const wrapperStyles: Styles = {
     padding: '6',
     marginX: 'auto',
