@@ -33,10 +33,12 @@ const IndexLayout: React.FC = ({ children }): JSX.Element => (
         `}
         render={(data: StaticQueryProps): JSX.Element => {
             const prefersDarkTheme =
-                (window.matchMedia &&
+                (typeof window !== 'undefined' &&
+                    window?.matchMedia &&
                     window.matchMedia('(prefers-color-scheme: dark)')
                         .matches) ||
-                localStorage.getItem('isDarkMode') === 'true';
+                (typeof localStorage !== 'undefined' &&
+                    localStorage.getItem('isDarkMode') === 'true');
 
             return (
                 <>
