@@ -26,7 +26,7 @@
     "devDependencies": {
         "@lapidist/cv-generator": "1.5.2",
         "@lapidist/linting": "2.132.0",
-        "@types/node": "16.11.36",
+        "@types/node": "16.11.38",
         "@types/react": "18.0.9",
         "@types/react-dom": "18.0.5",
         "@types/react-helmet": "6.1.5",
