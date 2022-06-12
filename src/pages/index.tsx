@@ -103,7 +103,7 @@ const IndexPage = (): JSX.Element => {
                         styles={linkStyles}
                         href="https://github.com/bylapidist"
                     >
-                        Open Source
+                        OSS GitHub
                     </Link>
                     <Link
                         styles={linkStyles}
