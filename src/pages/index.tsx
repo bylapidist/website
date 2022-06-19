@@ -101,15 +101,15 @@ const IndexPage = (): JSX.Element => {
                     </Link>
                     <Link
                         styles={linkStyles}
-                        href="https://github.com/bylapidist"
-                    >
-                        OSS GitHub
-                    </Link>
-                    <Link
-                        styles={linkStyles}
                         href="https://github.com/brettdorrans"
                     >
                         GitHub
+                    </Link>
+                    <Link
+                        styles={linkStyles}
+                        href="https://github.com/bylapidist"
+                    >
+                        OSS GitHub
                     </Link>
                     <Link
                         styles={linkStyles}
