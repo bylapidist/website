@@ -3,7 +3,6 @@ import { orderBy } from 'lodash';
 import {
     Button,
     Box,
-    Flex,
     Heading,
     Link,
     Logo,
@@ -120,7 +119,7 @@ const IndexPage = (): JSX.Element => {
                     <Link href="mailto:hello@lapidist.net">Email</Link>
                 </Text>
 
-                <Flex styles={cardContainerStyles} data-nosnippet>
+                <Box styles={cardContainerStyles} data-nosnippet>
                     {repos &&
                         orderBy(repos, ['node.name'], 'asc').map((repo) => (
                             <Panel
@@ -134,7 +133,12 @@ const IndexPage = (): JSX.Element => {
                                 <Text styles={cardDescriptionStyles}>
                                     {repo.node.description}
                                 </Text>
-                                <Flex styles={{ paddingTop: '4' }}>
+                                <Box
+                                    styles={{
+                                        display: 'flex',
+                                        paddingTop: '4'
+                                    }}
+                                >
                                     <Box styles={{ flex: '1 1 auto' }}>
                                         <Tag kind="tertiary">
                                             {repo.node.latestRelease.tagName}
@@ -188,10 +192,10 @@ const IndexPage = (): JSX.Element => {
                                             </Button>
                                         )}
                                     </Box>
-                                </Flex>
+                                </Box>
                             </Panel>
                         ))}
-                </Flex>
+                </Box>
             </Box>
         </IndexLayout>
     );
