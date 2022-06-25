@@ -61,11 +61,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "0e73b913b458db17d446683c9ebddbe1"
+    "revision": "2459535500e2a2f9b021c6a576cd7f45"
   },
   {
     "url": "404/index.html",
-    "revision": "a3deacc1d2f6ba4a7c4c69bdf00c6c0a"
+    "revision": "55bd432b7a6e37edfc36e92504a544c9"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -82,23 +82,23 @@ self.__precacheManifest = [
     "revision": "5e34e77c5451bfc5c100e026f401a366"
   },
   {
-    "url": "app-b45dcb4d7febf10a0499.js"
+    "url": "app-57a45968b14ab8b75dbc.js"
   },
   {
-    "url": "app-b45dcb4d7febf10a0499.js.LICENSE.txt",
+    "url": "app-57a45968b14ab8b75dbc.js.LICENSE.txt",
     "revision": "8227ea2bc1cba9969cff1f4d53879aa6"
   },
   {
-    "url": "app-b45dcb4d7febf10a0499.js.map",
-    "revision": "024793a072385b91dc889e8b0098bbe8"
+    "url": "app-57a45968b14ab8b75dbc.js.map",
+    "revision": "a6f3d34fb89a0806709c901491ba0d07"
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "8329bde5c4db668c1ec0975eca841b36"
+    "revision": "4227605b78f24a64335aaf4a1cc91571"
   },
   {
     "url": "chunk-map.json",
-    "revision": "6265902886821c865cb843e4e5e8b8a7"
+    "revision": "d99f9dc757a7fa96b0c7ef01eaf40c6a"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5fe9f2f3125252a9fb1b.js"
@@ -115,11 +115,11 @@ self.__precacheManifest = [
     "revision": "dbbd6954bb0eae8c0e4ea472d73ffc24"
   },
   {
-    "url": "component---src-pages-index-tsx-c860f4fdfb660bf1a6d7.js"
+    "url": "component---src-pages-index-tsx-aa72ef4d75ce03af4b45.js"
   },
   {
-    "url": "component---src-pages-index-tsx-c860f4fdfb660bf1a6d7.js.map",
-    "revision": "2440dd8797199e8915cd06ca0fe04168"
+    "url": "component---src-pages-index-tsx-aa72ef4d75ce03af4b45.js.map",
+    "revision": "cb8866966c3e29e36fbe50655340fa8c"
   },
   {
     "url": "favicon-32x32.png",
@@ -173,7 +173,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e173eb1a3b264899561f753da3ec3aa1"
+    "revision": "ab14d3aa0435e3c8f6053155a753b738"
   },
   {
     "url": "logo.svg",
@@ -185,7 +185,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "724c2f54d7bc939d64eb1104aadeaeda"
+    "revision": "80eec392171393af1d472a3a263c4d2e"
   },
   {
     "url": "oglogo.png",
@@ -201,7 +201,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "0debe86ce60af74f911246c636c94bda"
+    "revision": "83c05e4aeb066946a234aa48d91507f3"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -217,7 +217,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3471301276.json",
-    "revision": "6ef5213dff8145fa2d6de7c90d82e1d3"
+    "revision": "b95555e0dc088d60557f9ba3f64997bf"
   },
   {
     "url": "polyfill-12b284c879b4c2eee8ed.js"
@@ -227,15 +227,15 @@ self.__precacheManifest = [
     "revision": "f0e4d0e1c21c0beb38528ddd73e883a7"
   },
   {
-    "url": "webpack-runtime-3b3bea9606acaf67e1bc.js"
+    "url": "webpack-runtime-71d54321197a2ec7db26.js"
   },
   {
-    "url": "webpack-runtime-3b3bea9606acaf67e1bc.js.map",
-    "revision": "acacfc291f998e6b9be412ffba01acb3"
+    "url": "webpack-runtime-71d54321197a2ec7db26.js.map",
+    "revision": "2187d92fb3707d7dbd64738d5d802c4b"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "7748b158006281f8719bda7cc1a11e60"
+    "revision": "800b39949a43fe0ae1a3be54951847d8"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -345,7 +345,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-b45dcb4d7febf10a0499.js`))) {
+  if (!resources || !(await caches.match(`/app-57a45968b14ab8b75dbc.js`))) {
     return await fetch(event.request)
   }
 
