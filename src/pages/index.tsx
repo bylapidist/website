@@ -133,7 +133,12 @@ const IndexPage = (): JSX.Element => {
                                 <Text styles={cardDescriptionStyles}>
                                     {repo.node.description}
                                 </Text>
-                                <Box styles={{ display: 'flex', paddingTop: '4' }}>
+                                <Box
+                                    styles={{
+                                        display: 'flex',
+                                        paddingTop: '4'
+                                    }}
+                                >
                                     <Box styles={{ flex: '1 1 auto' }}>
                                         <Tag kind="tertiary">
                                             {repo.node.latestRelease.tagName}
