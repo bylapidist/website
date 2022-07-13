@@ -39,7 +39,7 @@
         "@lapidist/components": "6.17.2",
         "dayjs": "1.11.3",
         "dotenv": "16.0.1",
-        "gatsby": "4.18.1",
+        "gatsby": "4.18.2",
         "gatsby-image": "3.11.0",
         "gatsby-plugin-canonical-urls": "4.18.0",
         "gatsby-plugin-google-analytics": "4.18.0",
