@@ -8,7 +8,6 @@ import {
     Logo,
     Text,
     Panel,
-    PanelHeading,
     Tag
 } from '@lapidist/components';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -16,7 +15,7 @@ import IndexLayout from '../layouts';
 import {
     cardContainerStyles,
     cardDescriptionStyles,
-    cardStyles,
+    panelStyles,
     containerStyles,
     headingStyles,
     introStyles,
@@ -124,12 +123,10 @@ const IndexPage = (): JSX.Element => {
                         orderBy(repos, ['node.name'], 'asc').map((repo) => (
                             <Panel
                                 key={repo.node.id}
-                                kind="grey"
-                                styles={cardStyles}
+                                heading={`@lapidist/${repo.node.name}`}
+                                headingSize={4}
+                                styles={panelStyles}
                             >
-                                <PanelHeading kind="grey">
-                                    @lapidist/{repo.node.name}
-                                </PanelHeading>
                                 <Text styles={cardDescriptionStyles}>
                                     {repo.node.description}
                                 </Text>

@@ -57,7 +57,7 @@ export const cardContainerStyles: Styles = {
     }
 };
 
-export const cardStyles: Styles = {
+export const panelStyles: Styles = {
     width: 'full',
     marginBottom: '4',
     breakpoints: {
