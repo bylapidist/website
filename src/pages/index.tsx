@@ -148,47 +148,35 @@ const IndexPage = (): JSX.Element => {
                                     </Box>
                                     <Box>
                                         <Button
+                                            as="a"
                                             styles={{ marginRight: '1' }}
                                             kind="primary"
                                             variant="small"
-                                            ghost
-                                            onClick={() =>
-                                                window.open(
-                                                    repo.node.url,
-                                                    '_blank',
-                                                    'noopener=true'
-                                                )
-                                            }
+                                            href={repo.node.url}
+                                            target="_blank"
+                                            rel="noopener"
                                         >
                                             GitHub
                                         </Button>
                                         <Button
+                                            as="a"
                                             styles={{ marginRight: '1' }}
-                                            kind="secondary"
+                                            kind="tertiary"
                                             variant="small"
-                                            ghost
-                                            onClick={() =>
-                                                window.open(
-                                                    `https://www.npmjs.com/package/@lapidist/${repo.node.name}`,
-                                                    '_blank',
-                                                    'noopener=true'
-                                                )
-                                            }
+                                            href={`https://www.npmjs.com/package/@lapidist/${repo.node.name}`}
+                                            target="_blank"
+                                            rel="noopener"
                                         >
                                             npm
                                         </Button>
                                         {repo.node.homepageUrl && (
                                             <Button
+                                                as="a"
                                                 kind="tertiary"
                                                 variant="small"
-                                                ghost
-                                                onClick={() =>
-                                                    window.open(
-                                                        repo.node.homepageUrl,
-                                                        '_blank',
-                                                        'noopener=true'
-                                                    )
-                                                }
+                                                href={repo.node.homepageUrl}
+                                                target="_blank"
+                                                rel="noopener"
                                             >
                                                 Docs
                                             </Button>
