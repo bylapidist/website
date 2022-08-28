@@ -61,11 +61,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "244c372846058c87dce1afcb36743355"
+    "revision": "d4547cc6df6edd9e8e27eb03f443e4a0"
   },
   {
     "url": "404/index.html",
-    "revision": "b0aaee1fb50c8e2a0681f0b5af20b97c"
+    "revision": "52b422234b7a37df365657f1afa509a6"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -82,19 +82,19 @@ self.__precacheManifest = [
     "revision": "5113d711924c29441d6da9b0b475f180"
   },
   {
-    "url": "app-35c46c6daacd2a3216a6.js"
+    "url": "app-4a7aea8c0ae6d2a62211.js"
   },
   {
-    "url": "app-35c46c6daacd2a3216a6.js.LICENSE.txt",
+    "url": "app-4a7aea8c0ae6d2a62211.js.LICENSE.txt",
     "revision": "e6a0b24e1ecbd99a306ae5be49e36bd5"
   },
   {
-    "url": "app-35c46c6daacd2a3216a6.js.map",
-    "revision": "975e6df4e83d04ed12460bfca7296e46"
+    "url": "app-4a7aea8c0ae6d2a62211.js.map",
+    "revision": "816f58a701aef3e461992597efda3a0b"
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "a652793b50902b4c57fba31436adecc7"
+    "revision": "c838e7cee5c6884e46127d17309416f9"
   },
   {
     "url": "cb1608f2-a44eca6396177470032c.js"
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "f213415148eecab628ba43bdca6503f6"
+    "revision": "979bbac0b231ab809c89c99bd8b3a7f5"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5fe9f2f3125252a9fb1b.js"
@@ -126,11 +126,11 @@ self.__precacheManifest = [
     "revision": "4a48249505e8de6cf2d0efed8321165a"
   },
   {
-    "url": "component---src-pages-index-tsx-11a6177c20ddf4853ab4.js"
+    "url": "component---src-pages-index-tsx-f0519b234c244f64faa5.js"
   },
   {
-    "url": "component---src-pages-index-tsx-11a6177c20ddf4853ab4.js.map",
-    "revision": "a852678d5fb9b78654b253240e714610"
+    "url": "component---src-pages-index-tsx-f0519b234c244f64faa5.js.map",
+    "revision": "666da22cf092406e6664657d65318eaa"
   },
   {
     "url": "favicon-32x32.png",
@@ -184,7 +184,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "30f28aa39e381a7b85c57545afc07997"
+    "revision": "e7a8502d172a9d3d7ad2fdf9d487b18b"
   },
   {
     "url": "logo.svg",
@@ -196,7 +196,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1766b77bf1ddf210e1895892b7e7c88f"
+    "revision": "2c2b8d7fd91ae0cf189152cdbf967d50"
   },
   {
     "url": "oglogo.png",
@@ -212,7 +212,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "58cbb9aa28a92a1805c42904e5bddc63"
+    "revision": "84a40820526e1336ab35901fb0e528c3"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -228,7 +228,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3471301276.json",
-    "revision": "23548eafd251d1db91453ca6951edc53"
+    "revision": "7daf93f3d0135c55b1ffadbee227a49a"
   },
   {
     "url": "polyfill-d68f8bc27602cbd4a299.js"
@@ -238,15 +238,15 @@ self.__precacheManifest = [
     "revision": "94ff852e8a29de37c0783379355ecd50"
   },
   {
-    "url": "webpack-runtime-e3f5e4dde721b2a66784.js"
+    "url": "webpack-runtime-9274c03db09b78192358.js"
   },
   {
-    "url": "webpack-runtime-e3f5e4dde721b2a66784.js.map",
-    "revision": "d85f6b7ca36d152af2221639e4ff0bb0"
+    "url": "webpack-runtime-9274c03db09b78192358.js.map",
+    "revision": "402685a9b7de522a5d1f3b57900d38ac"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "9a73c43b49bdbf15891632779f1c8885"
+    "revision": "d26300acdf57d6dcb54cec93154c2a89"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -356,7 +356,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-35c46c6daacd2a3216a6.js`))) {
+  if (!resources || !(await caches.match(`/app-4a7aea8c0ae6d2a62211.js`))) {
     return await fetch(event.request)
   }
 
