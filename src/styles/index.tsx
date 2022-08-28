@@ -1,7 +1,7 @@
 import { Styles } from '@lapidist/styles';
 
 export const bodyStyles: Styles = {
-    backgroundColor: { group: 'base', shade: 'light' }
+    backgroundColor: { group: 'grey', shade: 'lightest' }
 };
 
 export const wrapperStyles: Styles = {
@@ -43,7 +43,7 @@ export const linkContainerStyles: Styles = {
 };
 
 export const introStyles: Styles = {
-    textColor: { group: 'grey', shade: 'base' },
+    textColor: { group: 'base', shade: 'dark' },
     marginBottom: '4'
 };
 

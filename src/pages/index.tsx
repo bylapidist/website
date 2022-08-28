@@ -123,8 +123,13 @@ const IndexPage = (): JSX.Element => {
                         orderBy(repos, ['node.name'], 'asc').map((repo) => (
                             <Panel
                                 key={repo.node.id}
-                                heading={`@lapidist/${repo.node.name}`}
-                                headingSize={4}
+                                heading={{
+                                    title: `@lapidist/${repo.node.name}`,
+                                    props: {
+                                        as: 'h2',
+                                        size: '4'
+                                    }
+                                }}
                                 styles={panelStyles}
                             >
                                 <Text styles={cardDescriptionStyles}>
