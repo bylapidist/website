@@ -138,7 +138,8 @@ const IndexPage = (): JSX.Element => {
                                 <Box
                                     styles={{
                                         display: 'flex',
-                                        paddingTop: '4'
+                                        paddingTop: '4',
+                                        alignItems: 'flex-end'
                                     }}
                                 >
                                     <Box styles={{ flex: '1 1 auto' }}>
