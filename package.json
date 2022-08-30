@@ -38,7 +38,7 @@
     "dependencies": {
         "@lapidist/components": "8.0.1",
         "dayjs": "1.11.5",
-        "dotenv": "16.0.1",
+        "dotenv": "16.0.2",
         "gatsby": "4.21.1",
         "gatsby-image": "3.11.0",
         "gatsby-plugin-canonical-urls": "4.21.0",
