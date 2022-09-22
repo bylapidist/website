@@ -27,7 +27,7 @@
         "@lapidist/cv-generator": "1.6.1",
         "@lapidist/linting": "2.136.2",
         "@types/node": "18.7.13",
-        "@types/react": "18.0.20",
+        "@types/react": "18.0.21",
         "@types/react-dom": "18.0.6",
         "@types/react-helmet": "6.1.5",
         "@types/styled-components": "5.1.26",
