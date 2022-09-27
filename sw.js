@@ -61,11 +61,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "94c6c7ec26e1a88565b1ee7c54d72076"
+    "revision": "70b3cc4eea7c44dd6f64673b3afe004e"
   },
   {
     "url": "404/index.html",
-    "revision": "b0a7e017cf76e34cef4d72b9cf75226b"
+    "revision": "07a7478fe3086472dd4a8b3857db6cdd"
   },
   {
     "url": "589-482945ce75a2ce7c1c56.js"
@@ -75,26 +75,26 @@ self.__precacheManifest = [
     "revision": "b4fe894c870939295c505f68bfa5f4a7"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-d5b798d5c7c38d237268.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-01b2cf5b48bb29f8d871.js"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-d5b798d5c7c38d237268.js.map",
-    "revision": "5113d711924c29441d6da9b0b475f180"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-01b2cf5b48bb29f8d871.js.map",
+    "revision": "37e93baada11d3f5a5a67cc47be336f9"
   },
   {
-    "url": "app-2d758762ef0e567dfa69.js"
+    "url": "app-a891ff5d7761d84e0dc4.js"
   },
   {
-    "url": "app-2d758762ef0e567dfa69.js.LICENSE.txt",
+    "url": "app-a891ff5d7761d84e0dc4.js.LICENSE.txt",
     "revision": "e6a0b24e1ecbd99a306ae5be49e36bd5"
   },
   {
-    "url": "app-2d758762ef0e567dfa69.js.map",
-    "revision": "3c3b5207131139146e9074adf70a83e3"
+    "url": "app-a891ff5d7761d84e0dc4.js.map",
+    "revision": "8e9b4d8c177078b7827b949b05577dae"
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "db9bebf06549539399e3fd1230c4d330"
+    "revision": "e339354938baa637751b09f241f84018"
   },
   {
     "url": "cb1608f2-a44eca6396177470032c.js"
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "chunk-map.json",
-    "revision": "897a3ee380f1ff205e1b1b6b03e6c04b"
+    "revision": "16f580513efa5e97a1aaebf9393a7e6f"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-f85acf759a28d2a61a0f.js"
@@ -126,11 +126,11 @@ self.__precacheManifest = [
     "revision": "4a48249505e8de6cf2d0efed8321165a"
   },
   {
-    "url": "component---src-pages-index-tsx-3b68678404d0ca8ce511.js"
+    "url": "component---src-pages-index-tsx-9b927b6549100bfe9179.js"
   },
   {
-    "url": "component---src-pages-index-tsx-3b68678404d0ca8ce511.js.map",
-    "revision": "51d8db28ef15b72f2e027c15725e8e01"
+    "url": "component---src-pages-index-tsx-9b927b6549100bfe9179.js.map",
+    "revision": "7dc03194f37c3fb0f12b3a3e648f693f"
   },
   {
     "url": "favicon-32x32.png",
@@ -184,7 +184,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "6d609514eba45fda23b2f94cef53f47a"
+    "revision": "5cb33f8593b4ef30fc1417741f89508e"
   },
   {
     "url": "logo.svg",
@@ -196,7 +196,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "042d3d5c9ea36dbf729e43399dc7f789"
+    "revision": "0b3c374512b8c45b0a7a7f029c44e61e"
   },
   {
     "url": "oglogo.png",
@@ -212,7 +212,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "3a8e7e9141bf5d44ad1a1367b4c6bec7"
+    "revision": "bd3afeff6930108c6bf4e8838bb8f572"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -238,15 +238,15 @@ self.__precacheManifest = [
     "revision": "94ff852e8a29de37c0783379355ecd50"
   },
   {
-    "url": "webpack-runtime-1ab49659efd4ccc2a578.js"
+    "url": "webpack-runtime-c6e6ca3b4035e1788cd5.js"
   },
   {
-    "url": "webpack-runtime-1ab49659efd4ccc2a578.js.map",
-    "revision": "dfdd7f8d1c3194d50a520f41d3280b56"
+    "url": "webpack-runtime-c6e6ca3b4035e1788cd5.js.map",
+    "revision": "9e05fa8417f62dafd076c8637ceb8f8f"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "0f8e2b4d293d2a0fd49b32de43a33194"
+    "revision": "596bde962f39098f0a0d4b44c5f4960f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -356,7 +356,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-2d758762ef0e567dfa69.js`))) {
+  if (!resources || !(await caches.match(`/app-a891ff5d7761d84e0dc4.js`))) {
     return await fetch(event.request)
   }
 
