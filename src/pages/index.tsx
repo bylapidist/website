@@ -1,20 +1,10 @@
 import React from 'react';
 import { orderBy } from 'lodash';
-import {
-    Button,
-    Box,
-    Heading,
-    Link,
-    Logo,
-    Text,
-    Panel,
-    Tag
-} from '@lapidist/components';
+import { Box, Heading, Link, Logo, Text, Panel } from '@lapidist/components';
 import { graphql, useStaticQuery } from 'gatsby';
 import IndexLayout from '../layouts';
 import {
     cardContainerStyles,
-    cardDescriptionStyles,
     panelStyles,
     containerStyles,
     headingStyles,
@@ -123,67 +113,54 @@ const IndexPage = (): JSX.Element => {
                         orderBy(repos, ['node.name'], 'asc').map((repo) => (
                             <Panel
                                 key={repo.node.id}
+                                styles={panelStyles}
                                 heading={{
                                     title: `@lapidist/${repo.node.name}`,
                                     props: {
                                         as: 'h2',
-                                        size: '4'
+                                        size: 4
                                     }
                                 }}
-                                styles={panelStyles}
+                                tag={{
+                                    title: repo.node.latestRelease.tagName
+                                }}
+                                buttons={[
+                                    {
+                                        title: 'GitHub',
+                                        props: {
+                                            as: 'a',
+                                            kind: 'primary',
+                                            variant: 'small',
+                                            href: repo.node.url,
+                                            target: '_blank',
+                                            rel: 'noopener'
+                                        }
+                                    },
+                                    {
+                                        title: 'npm',
+                                        props: {
+                                            as: 'a',
+                                            kind: 'secondary',
+                                            variant: 'small',
+                                            href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`,
+                                            target: '_blank',
+                                            rel: 'noopener'
+                                        }
+                                    },
+                                    {
+                                        title: 'Docs',
+                                        props: {
+                                            as: 'a',
+                                            kind: 'secondary',
+                                            variant: 'small',
+                                            href: repo.node.homepageUrl,
+                                            target: '_blank',
+                                            rel: 'noopener'
+                                        }
+                                    }
+                                ]}
                             >
-                                <Text styles={cardDescriptionStyles}>
-                                    {repo.node.description}
-                                </Text>
-                                <Box
-                                    styles={{
-                                        display: 'flex',
-                                        paddingTop: '4',
-                                        alignItems: 'flex-end'
-                                    }}
-                                >
-                                    <Box styles={{ flex: '1 1 auto' }}>
-                                        <Tag kind="tertiary">
-                                            {repo.node.latestRelease.tagName}
-                                        </Tag>
-                                    </Box>
-                                    <Box>
-                                        <Button
-                                            as="a"
-                                            styles={{ marginRight: '1' }}
-                                            kind="primary"
-                                            variant="small"
-                                            href={repo.node.url}
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            GitHub
-                                        </Button>
-                                        <Button
-                                            as="a"
-                                            styles={{ marginRight: '1' }}
-                                            kind="tertiary"
-                                            variant="small"
-                                            href={`https://www.npmjs.com/package/@lapidist/${repo.node.name}`}
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            npm
-                                        </Button>
-                                        {repo.node.homepageUrl && (
-                                            <Button
-                                                as="a"
-                                                kind="tertiary"
-                                                variant="small"
-                                                href={repo.node.homepageUrl}
-                                                target="_blank"
-                                                rel="noopener"
-                                            >
-                                                Docs
-                                            </Button>
-                                        )}
-                                    </Box>
-                                </Box>
+                                {repo.node.description}
                             </Panel>
                         ))}
                 </Box>

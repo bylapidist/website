@@ -62,15 +62,9 @@ export const panelStyles: Styles = {
     marginBottom: '4',
     breakpoints: {
         md: {
-            width: '2/3'
+            width: '3/4'
         }
     }
-};
-
-export const cardDescriptionStyles: Styles = {
-    fontSize: '2',
-    marginBottom: '2',
-    textColor: { group: 'grey', shade: 'base' }
 };
 
 export const linkStyles: Styles = { marginRight: '4' };
