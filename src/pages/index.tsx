@@ -13,6 +13,7 @@ import {
     linkStyles,
     logoStyles
 } from '../styles';
+import { PanelButtonProp } from '@lapidist/components/dist/es6/components/panel';
 
 interface IRepository {
     node: {
@@ -110,59 +111,64 @@ const IndexPage = (): JSX.Element => {
 
                 <Box styles={cardContainerStyles} data-nosnippet>
                     {repos &&
-                        orderBy(repos, ['node.name'], 'asc').map((repo) => (
-                            <Panel
-                                key={repo.node.id}
-                                styles={panelStyles}
-                                heading={{
-                                    title: `@lapidist/${repo.node.name}`,
+                        orderBy(repos, ['node.name'], 'asc').map((repo) => {
+                            const buttons: PanelButtonProp[] = [
+                                {
+                                    title: 'GitHub',
                                     props: {
-                                        as: 'h2',
-                                        size: 4
+                                        as: 'a',
+                                        kind: 'primary',
+                                        variant: 'small',
+                                        target: '_blank',
+                                        rel: 'noopener',
+                                        href: repo.node.url
                                     }
-                                }}
-                                tag={{
-                                    title: repo.node.latestRelease.tagName
-                                }}
-                                buttons={[
-                                    {
-                                        title: 'GitHub',
-                                        props: {
-                                            as: 'a',
-                                            kind: 'primary',
-                                            variant: 'small',
-                                            href: repo.node.url,
-                                            target: '_blank',
-                                            rel: 'noopener'
-                                        }
-                                    },
-                                    {
-                                        title: 'npm',
-                                        props: {
-                                            as: 'a',
-                                            kind: 'secondary',
-                                            variant: 'small',
-                                            href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`,
-                                            target: '_blank',
-                                            rel: 'noopener'
-                                        }
-                                    },
-                                    {
-                                        title: 'Docs',
-                                        props: {
-                                            as: 'a',
-                                            kind: 'secondary',
-                                            variant: 'small',
-                                            href: repo.node.homepageUrl,
-                                            target: '_blank',
-                                            rel: 'noopener'
-                                        }
+                                },
+                                {
+                                    title: 'npm',
+                                    props: {
+                                        as: 'a',
+                                        kind: 'secondary',
+                                        variant: 'small',
+                                        target: '_blank',
+                                        rel: 'noopener',
+                                        href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`
                                     }
-                                ]}
-                            >
-                                {repo.node.description}
-                            </Panel>
-                        ))}
+                                }
+                            ];
+                            if (repo.node.homepageUrl) {
+                                buttons.push({
+                                    title: 'Docs',
+                                    props: {
+                                        as: 'a',
+                                        kind: 'secondary',
+                                        variant: 'small',
+                                        target: '_blank',
+                                        rel: 'noopener',
+                                        href: repo.node.homepageUrl
+                                    }
+                                });
+                            }
+                            return (
+                                <Panel
+                                    key={repo.node.id}
+                                    styles={panelStyles}
+                                    heading={{
+                                        title: `@lapidist/${repo.node.name}`,
+                                        props: {
+                                            as: 'h2',
+                                            size: 4
+                                        }
+                                    }}
+                                    tag={{
+                                        title: repo.node.latestRelease.tagName
+                                    }}
+                                    buttons={buttons}
+                                >
+                                    {repo.node.description}
+                                </Panel>
+                            );
+                        })}
                 </Box>
             </Box>
         </IndexLayout>
