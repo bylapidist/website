@@ -1,18 +1,9 @@
 import React from 'react';
 import { orderBy } from 'lodash';
-import { Box, Heading, Link, Logo, Text, Panel } from '@lapidist/components';
+import { Box, Elevated, Panel, Toggle } from '@lapidist/components';
 import { graphql, useStaticQuery } from 'gatsby';
 import IndexLayout from '../layouts';
-import {
-    cardContainerStyles,
-    panelStyles,
-    containerStyles,
-    headingStyles,
-    introStyles,
-    linkContainerStyles,
-    linkStyles,
-    logoStyles
-} from '../styles';
+import { panelStyles } from '../styles';
 import { PanelButtonProp } from '@lapidist/components/dist/es6/components/panel';
 
 interface IRepository {
@@ -70,107 +61,108 @@ const IndexPage = (): JSX.Element => {
         }
     `);
 
+    const [showProjects, setShowProjects] = React.useState(true);
+    const [showArticles, setShowArticles] = React.useState(false);
+
     return (
         <IndexLayout>
-            <header>
-                <Logo styles={logoStyles} animated />
-                <Heading size={1} styles={headingStyles}>
-                    Brett Dorrans
-                </Heading>
-            </header>
-            <Box styles={containerStyles}>
-                <Text styles={introStyles}>
-                    I&apos;m a Senior Software Engineer based in Glasgow,
-                    Scotland. I have been building software and strong client
-                    relationships for over a decade.
-                </Text>
-                <Text styles={linkContainerStyles} data-nosnippet>
-                    <Link styles={linkStyles} href="/brett-dorrans-cv.pdf">
-                        CV
-                    </Link>
-                    <Link
-                        styles={linkStyles}
-                        href="https://github.com/brettdorrans"
-                    >
-                        GitHub
-                    </Link>
-                    <Link
-                        styles={linkStyles}
-                        href="https://github.com/bylapidist"
-                    >
-                        OSS GitHub
-                    </Link>
-                    <Link
-                        styles={linkStyles}
-                        href="https://www.linkedin.com/in/brettdorrans"
-                    >
-                        LinkedIn
-                    </Link>
-                    <Link href="mailto:hello@lapidist.net">Email</Link>
-                </Text>
-
-                <Box styles={cardContainerStyles} data-nosnippet>
-                    {repos &&
-                        orderBy(repos, ['node.name'], 'asc').map((repo) => {
-                            const buttons: PanelButtonProp[] = [
-                                {
-                                    title: 'GitHub',
-                                    props: {
-                                        as: 'a',
-                                        kind: 'primary',
-                                        variant: 'small',
-                                        target: '_blank',
-                                        rel: 'noopener',
-                                        href: repo.node.url
-                                    }
-                                },
-                                {
-                                    title: 'npm',
-                                    props: {
-                                        as: 'a',
-                                        kind: 'secondary',
-                                        variant: 'small',
-                                        target: '_blank',
-                                        rel: 'noopener',
-                                        href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`
-                                    }
+            <Elevated
+                elevation="2"
+                styles={{
+                    width: 'full',
+                    borderRadius: 'rounded',
+                    padding: '2',
+                    display: 'flex',
+                    sizeGap: '3',
+                    marginBottom: '4'
+                }}
+            >
+                <Toggle
+                    kind="secondary"
+                    variant="medium"
+                    checked={showProjects}
+                    onClick={() => {
+                        setShowProjects(true);
+                        setShowArticles(false);
+                    }}
+                >
+                    Projects
+                </Toggle>
+                <Toggle
+                    kind="secondary"
+                    variant="medium"
+                    checked={showArticles}
+                    onClick={() => {
+                        setShowProjects(false);
+                        setShowArticles(true);
+                    }}
+                >
+                    Articles
+                </Toggle>
+            </Elevated>
+            {repos && showProjects && (
+                <Box styles={panelStyles}>
+                    {orderBy(repos, ['node.name'], 'asc').map((repo) => {
+                        const buttons: PanelButtonProp[] = [
+                            {
+                                title: 'GitHub',
+                                props: {
+                                    as: 'a',
+                                    kind: 'primary',
+                                    variant: 'small',
+                                    target: '_blank',
+                                    rel: 'noopener',
+                                    href: repo.node.url
                                 }
-                            ];
-                            if (repo.node.homepageUrl) {
-                                buttons.push({
-                                    title: 'Docs',
-                                    props: {
-                                        as: 'a',
-                                        kind: 'secondary',
-                                        variant: 'small',
-                                        target: '_blank',
-                                        rel: 'noopener',
-                                        href: repo.node.homepageUrl
-                                    }
-                                });
+                            },
+                            {
+                                title: 'npm',
+                                props: {
+                                    as: 'a',
+                                    kind: 'secondary',
+                                    variant: 'small',
+                                    target: '_blank',
+                                    rel: 'noopener',
+                                    href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`
+                                }
                             }
-                            return (
-                                <Panel
-                                    key={repo.node.id}
-                                    styles={panelStyles}
-                                    heading={{
-                                        title: `@lapidist/${repo.node.name}`,
-                                        props: {
-                                            as: 'h2',
-                                            size: 4
-                                        }
-                                    }}
-                                    tag={{
-                                        title: repo.node.latestRelease.tagName
-                                    }}
-                                    buttons={buttons}
-                                >
-                                    {repo.node.description}
-                                </Panel>
-                            );
-                        })}
+                        ];
+                        if (repo.node.homepageUrl) {
+                            buttons.push({
+                                title: 'Docs',
+                                props: {
+                                    as: 'a',
+                                    kind: 'secondary',
+                                    variant: 'small',
+                                    target: '_blank',
+                                    rel: 'noopener',
+                                    href: repo.node.homepageUrl
+                                }
+                            });
+                        }
+                        return (
+                            <Panel
+                                elevation="1"
+                                key={repo.node.id}
+                                styles={panelStyles}
+                                heading={{
+                                    title: `@lapidist/${repo.node.name}`,
+                                    props: {
+                                        as: 'h2',
+                                        size: 4
+                                    }
+                                }}
+                                tag={{
+                                    title: repo.node.latestRelease.tagName
+                                }}
+                                buttons={buttons}
+                            >
+                                {repo.node.description}
+                            </Panel>
+                        );
+                    })}
                 </Box>
-            </Box>
+            )}
         </IndexLayout>
     );
 };

@@ -1,7 +1,9 @@
 import { Styles } from '@lapidist/styles';
 
 export const bodyStyles: Styles = {
-    backgroundColor: { group: 'grey', shade: 'lightest' }
+    backgroundColor: { group: 'grey', shade: 'lightest' },
+    minHeight: '100vh',
+    minWidth: '100vw'
 };
 
 export const wrapperStyles: Styles = {
@@ -58,13 +60,11 @@ export const cardContainerStyles: Styles = {
 };
 
 export const panelStyles: Styles = {
-    width: 'full',
-    marginBottom: '4',
-    breakpoints: {
-        md: {
-            width: '3/4'
-        }
-    }
+    // width: 'full',
+    // marginBottom: '4'
+    display: 'flex',
+    flexDirection: 'column',
+    sizeGap: '4'
 };
 
 export const linkStyles: Styles = { marginRight: '4' };

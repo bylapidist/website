@@ -1,18 +1,13 @@
 import React from 'react';
-import { Text, Heading, Link } from '@lapidist/components';
+import { Heading, Link, Box } from '@lapidist/components';
 import IndexLayout from '../layouts';
-import { containerStyles, headingStyles } from '../styles';
 
 const NotFoundPage = (): JSX.Element => (
     <IndexLayout>
-        <header>
-            <Heading size={1} styles={headingStyles}>
-                Page not found
-            </Heading>
-        </header>
-        <Text styles={containerStyles}>
+        <Box>
+            <Heading size={2}>Page not found</Heading>
             <Link href="/">Return home</Link>
-        </Text>
+        </Box>
     </IndexLayout>
 );
 

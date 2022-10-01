@@ -1,8 +1,18 @@
 import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import { Box } from '@lapidist/components';
-import { bodyStyles, wrapperStyles } from '../styles';
+import { Box, Heading, Link, Logo, Text } from '@lapidist/components';
+import {
+    bodyStyles,
+    cardContainerStyles,
+    containerStyles,
+    headingStyles,
+    introStyles,
+    linkContainerStyles,
+    linkStyles,
+    logoStyles,
+    wrapperStyles
+} from '../styles';
 
 interface StaticQueryProps {
     site: {
@@ -100,7 +110,58 @@ const IndexLayout: React.FC<PropsWithChildren<unknown>> = ({
                     </script>
                 </Helmet>
                 <Box styles={bodyStyles}>
-                    <Box styles={wrapperStyles}>{children}</Box>
+                    <Box styles={wrapperStyles}>
+                        <header>
+                            <Logo styles={logoStyles} animated />
+                            <Heading size={1} styles={headingStyles}>
+                                Brett Dorrans
+                            </Heading>
+                        </header>
+                        <Box styles={containerStyles}>
+                            <Text styles={introStyles}>
+                                I&apos;m a Senior Software Engineer based in
+                                Glasgow, Scotland. I have been building software
+                                and strong client relationships for over a
+                                decade.
+                            </Text>
+                            <Text
+                                as="div"
+                                styles={linkContainerStyles}
+                                data-nosnippet
+                            >
+                                <Link
+                                    styles={linkStyles}
+                                    href="/brett-dorrans-cv.pdf"
+                                >
+                                    CV
+                                </Link>
+                                <Link
+                                    styles={linkStyles}
+                                    href="https://github.com/brettdorrans"
+                                >
+                                    GitHub
+                                </Link>
+                                <Link
+                                    styles={linkStyles}
+                                    href="https://github.com/bylapidist"
+                                >
+                                    OSS GitHub
+                                </Link>
+                                <Link
+                                    styles={linkStyles}
+                                    href="https://www.linkedin.com/in/brettdorrans"
+                                >
+                                    LinkedIn
+                                </Link>
+                                <Link href="mailto:hello@lapidist.net">
+                                    Email
+                                </Link>
+                            </Text>
+                            <Box styles={cardContainerStyles} data-nosnippet>
+                                {children}
+                            </Box>
+                        </Box>
+                    </Box>
                 </Box>
             </>
         )}
