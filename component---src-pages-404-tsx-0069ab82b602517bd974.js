@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_lapidist_website=self.webpackChunk_lapidist_website||[]).push([[218],{2513:function(e,t,l){l.r(t);var n=l(7294),a=l(4355),s=l(9575),i=l(8296);t.default=()=>n.createElement(s.Z,null,n.createElement("header",null,n.createElement(a.Heading,{size:1,styles:i.$B},"Page not found")),n.createElement(a.Text,{styles:i.Fc},n.createElement(a.Link,{href:"/"},"Return home")))}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-0069ab82b602517bd974.js.map
