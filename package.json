@@ -24,7 +24,7 @@
         "fix": "eslint --fix . --ext js,ts,tsx"
     },
     "devDependencies": {
-        "@lapidist/cv-generator": "1.6.10",
+        "@lapidist/cv-generator": "1.6.11",
         "@lapidist/linting": "3.3.1",
         "@types/node": "18.15.3",
         "@types/react": "18.0.28",
