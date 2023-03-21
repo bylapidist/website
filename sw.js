@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "b5ac7e53e204a1d5bcb3bb53e0fdcfaa"
+    "revision": "8969286b8ca7655f25c32e5029d8860d"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "4c4b63c088c96341a63a476e6dd888af"
+    "revision": "2ccbca07b5c23f7adf482d888520f17e"
   },
   {
     "url": "404/index.html",
-    "revision": "9d66a9db964609a81048a645c0fb5a92"
+    "revision": "df2ee3b78bf0f53c7e40d3fce844bed1"
   },
   {
     "url": "954-24f7744eb7fb3822657e.js"
@@ -94,11 +94,11 @@ self.__precacheManifest = [
   },
   {
     "url": "app-0ecad5ffff18c73e70df.js.map",
-    "revision": "5730993fb5c7b4636224b7b824d7d76c"
+    "revision": "73e57d70515396a7cbc1be14456065d7"
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "7b5f68096bfd9a2837f997e8ef6e682c"
+    "revision": "ace360f874cacde5b3989184ede0d773"
   },
   {
     "url": "c16184b3-d6c7dc9facbb16320102.js"
@@ -184,7 +184,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1be85329b735513e4ffb94839f6ce873"
+    "revision": "c8e1b6d9341348e51ee8215f8e6016a1"
   },
   {
     "url": "logo.svg",
@@ -196,7 +196,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cace3f811cefe99e9e51a2bd185ff8a4"
+    "revision": "ea16e80797a990cdd2b1b7786295926c"
   },
   {
     "url": "oglogo.png",
@@ -212,7 +212,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a24099af4463acc38de8f5307573d51b"
+    "revision": "7a9e0ded4938005dbb511737fb9d089c"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -239,7 +239,7 @@ self.__precacheManifest = [
   },
   {
     "url": "webpack.stats.json",
-    "revision": "ee77741e643ca02d1eca3495d23c230a"
+    "revision": "e852c0b79fd1ecf230873c04b560fc58"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
