@@ -92,7 +92,6 @@ module.exports = {
             }
         },
         'gatsby-transformer-json',
-        'gatsby-plugin-styled-components',
         'gatsby-plugin-typescript',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
