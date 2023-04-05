@@ -36,8 +36,9 @@ build/Release
 node_modules/
 jspm_packages/
 
-# Typescript v1 declaration files
+# TypeScript
 typings/
+*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -54,10 +55,13 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
-.cache/
-public
-static/brett-dorrans-cv.pdf
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Generated output
+public/brett-dorrans-cv.pdf
 
 # Mac files
 .DS_Store
