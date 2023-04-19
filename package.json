@@ -60,7 +60,7 @@
         "gatsby-transformer-remark": "6.9.0",
         "gatsby-transformer-sharp": "5.9.0",
         "lodash": "4.17.21",
-        "postcss": "8.4.22",
+        "postcss": "8.4.23",
         "postcss-flexbugs-fixes": "5.0.2",
         "postcss-loader": "7.2.4",
         "prism-themes": "1.9.0",
