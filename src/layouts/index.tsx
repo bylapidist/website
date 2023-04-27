@@ -2,7 +2,6 @@ import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { Box } from '@lapidist/components';
-import { bodyStyles, wrapperStyles } from '../styles';
 
 interface StaticQueryProps {
     site: {
@@ -99,8 +98,8 @@ const IndexLayout: React.FC<PropsWithChildren<unknown>> = ({
                             `}
                     </script>
                 </Helmet>
-                <Box styles={bodyStyles}>
-                    <Box styles={wrapperStyles}>{children}</Box>
+                <Box>
+                    <Box>{children}</Box>
                 </Box>
             </>
         )}
