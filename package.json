@@ -33,7 +33,7 @@
         "@types/styled-components": "5.1.26",
         "babel-plugin-styled-components": "2.1.1",
         "browserslist": "4.21.5",
-        "typescript": "4.9.5"
+        "typescript": "5.0.4"
     },
     "dependencies": {
         "@lapidist/components": "8.5.2",
