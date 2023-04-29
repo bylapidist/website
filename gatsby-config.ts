@@ -28,7 +28,7 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-google-gtag',
             options: {
-                trackingIds: ['UA-48222807-1'],
+                trackingIds: ['G-LYKNFMMRX9'],
                 gtagConfig: {
                     anonymize_ip: true,
                     cookie_expires: 0
