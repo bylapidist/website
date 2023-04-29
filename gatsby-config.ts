@@ -20,12 +20,24 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         'gatsby-plugin-sass',
-        // 'gatsby-plugin-google-gtag',
         'gatsby-plugin-image',
         'gatsby-plugin-sitemap',
         'gatsby-plugin-mdx',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
+        {
+            resolve: 'gatsby-plugin-google-gtag',
+            options: {
+                trackingIds: ['UA-48222807-1'],
+                gtagConfig: {
+                    anonymize_ip: true,
+                    cookie_expires: 0
+                },
+                pluginConfig: {
+                    respectDNT: true
+                }
+            }
+        },
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
