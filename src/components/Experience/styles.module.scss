@@ -1,0 +1,21 @@
+.grid, .meta {
+    display: grid;
+    align-items: center;
+}
+
+.grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+
+    @media screen and (min-width: 800px) {
+        grid-template-columns: .5fr 1fr;
+    }
+}
+
+.meta {
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 800px) {
+        grid-template-columns: .8fr 1.2fr;
+    }
+}

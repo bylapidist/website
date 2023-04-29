@@ -1,0 +1,6 @@
+.sections {
+    display: flex;
+    margin: calc(var(--gutter__large) * 4) 0;
+    flex-direction: column;
+    grid-gap: var(--gutter__large);
+}

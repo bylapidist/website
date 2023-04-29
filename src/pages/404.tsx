@@ -1,19 +1,20 @@
 import React from 'react';
-import { Text, Heading, Link } from '@lapidist/components';
-import IndexLayout from '../layouts';
-import { containerStyles, headingStyles } from '../styles';
+import { Heading, Link, Box, Logo } from '@lapidist/components';
+import PageLayout from '../layouts/PageLayout';
 
 const NotFoundPage = (): JSX.Element => (
-    <IndexLayout>
-        <header>
-            <Heading size={1} styles={headingStyles}>
-                Page not found
+    <PageLayout>
+        <Box as="header">
+            <Logo animation="slide" />
+            <Heading as="h1" size="large" weight="bold">
+                Not found
             </Heading>
-        </header>
-        <Text styles={containerStyles}>
+        </Box>
+        <Box as="main" gutterY="large">
             <Link href="/">Return home</Link>
-        </Text>
-    </IndexLayout>
+        </Box>
+    </PageLayout>
 );
 
 export default NotFoundPage;
+export { default as Head } from '../components/Head';
