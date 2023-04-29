@@ -1,73 +1,56 @@
 {
-    "name": "@lapidist/website",
-    "version": "0.0.0",
-    "description": "The Lapidist website living at lapidist.net",
-    "author": "Brett Dorrans <hello@lapidist.net>",
-    "license": "MIT",
-    "private": true,
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bylapidist/website.git"
-    },
-    "bugs": {
-        "url": "https://github.com/bylapidist/website/issues"
-    },
-    "homepage": "https://github.com/bylapidist/website#readme",
-    "scripts": {
-        "start": "gatsby develop --port 3000",
-        "serve": "gatsby serve",
-        "build": "npm run build:cv && npm run build:gatsby",
-        "build:gatsby": "gatsby build --prefix-paths",
-        "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5 && mv brett-dorrans-cv.pdf static/",
-        "clean": "gatsby clean",
-        "lint": "eslint . --ext js,ts,tsx",
-        "fix": "eslint --fix . --ext js,ts,tsx"
-    },
-    "devDependencies": {
-        "@lapidist/cv-generator": "1.6.12",
-        "@lapidist/linting": "3.5.0",
-        "@types/node": "18.16.1",
-        "@types/react": "18.2.0",
-        "@types/react-dom": "18.2.1",
-        "@types/react-helmet": "6.1.6",
-        "@types/styled-components": "5.1.26",
-        "babel-plugin-styled-components": "2.1.1",
-        "browserslist": "4.21.5",
-        "typescript": "5.0.4"
-    },
-    "dependencies": {
-        "@lapidist/components": "9.1.2",
-        "dayjs": "1.11.7",
-        "dotenv": "16.0.3",
-        "gatsby": "5.9.0",
-        "gatsby-image": "3.11.0",
-        "gatsby-plugin-canonical-urls": "5.9.0",
-        "gatsby-plugin-google-analytics": "5.9.0",
-        "gatsby-plugin-manifest": "5.9.0",
-        "gatsby-plugin-offline": "6.9.0",
-        "gatsby-plugin-react-helmet": "6.9.0",
-        "gatsby-plugin-sharp": "5.9.0",
-        "gatsby-plugin-styled-components": "6.9.0",
-        "gatsby-plugin-typescript": "5.9.0",
-        "gatsby-remark-copy-linked-files": "6.9.0",
-        "gatsby-remark-images": "7.9.0",
-        "gatsby-remark-prismjs": "7.9.0",
-        "gatsby-remark-responsive-iframe": "6.9.0",
-        "gatsby-remark-smartypants": "6.9.0",
-        "gatsby-source-filesystem": "5.9.0",
-        "gatsby-source-graphql": "5.9.0",
-        "gatsby-transformer-json": "5.9.0",
-        "gatsby-transformer-remark": "6.9.0",
-        "gatsby-transformer-sharp": "5.9.0",
-        "lodash": "4.17.21",
-        "postcss": "8.4.23",
-        "postcss-flexbugs-fixes": "5.0.2",
-        "postcss-loader": "7.2.4",
-        "prism-themes": "1.9.0",
-        "prismjs": "1.29.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-helmet": "6.1.0",
-        "styled-components": "5.3.10"
-    }
+  "name": "@lapidist/website",
+  "version": "0.0.0",
+  "description": "The Lapidist website living at lapidist.net",
+  "author": "Brett Dorrans <hello@lapidist.net>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bylapidist/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bylapidist/website/issues"
+  },
+  "homepage": "https://github.com/bylapidist/website#readme",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "build": "npm run build:cv && npm run build:gatsby",
+    "build:gatsby": "gatsby build --prefix-paths",
+    "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf static/",
+    "lint": "eslint . --ext js,ts,tsx",
+    "fix": "eslint --fix . --ext js,ts,tsx"
+  },
+  "dependencies": {
+    "@lapidist/components": "9.1.2",
+    "@lapidist/cv-generator": "^1.7.1",
+    "@mdx-js/react": "^2.3.0",
+    "classnames": "^2.3.2",
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-canonical-urls": "^5.9.0",
+    "gatsby-plugin-google-gtag": "^5.9.0",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-mdx": "^5.9.0",
+    "gatsby-plugin-offline": "^6.9.0",
+    "gatsby-plugin-sass": "^6.9.0",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-sitemap": "^6.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-source-graphql": "^5.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.62.1"
+  },
+  "devDependencies": {
+    "@lapidist/linting": "3.5.0",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "typescript": "^5.0.4"
+  }
 }

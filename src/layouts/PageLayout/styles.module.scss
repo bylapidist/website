@@ -1,0 +1,22 @@
+.body {
+    background-color: var(--color-core__light);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: var(--fraction__full);
+
+    @media screen and (min-width: 800px) {
+        max-width: var(--fraction__2-3);
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: var(--fraction__1-3);
+    }
+}
+
+.toggleTheme {
+    position: fixed;
+    bottom: calc(var(--gutter__large) * 2);
+    right: calc(var(--gutter__large) * 2);
+}

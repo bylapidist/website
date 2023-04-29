@@ -1,171 +1,32 @@
 import React from 'react';
-import { orderBy } from 'lodash';
-import { Box, Heading, Link, Logo, Text } from '@lapidist/components';
-import { graphql, useStaticQuery } from 'gatsby';
-import IndexLayout from '../layouts';
-
-interface IRepository {
-    node: {
-        description: string;
-        homepageUrl: string;
-        id: string;
-        latestRelease: {
-            tagName: string;
-        };
-        name: string;
-        updatedAt: string;
-        url: string;
-    };
-}
-
-interface IResponse {
-    github: {
-        organization: {
-            repositories: {
-                edges: IRepository[];
-            };
-        };
-    };
-}
+import { Box, Heading, Logo } from '@lapidist/components';
+import * as styles from './styles.module.scss';
+import Experience from '../components/Experience';
+import Intro from '../components/Intro';
+import Links from '../components/Links';
+import OpenSource from '../components/OpenSource';
+import PageLayout from '../layouts/PageLayout';
 
 const IndexPage = (): JSX.Element => {
-    const {
-        github: {
-            organization: {
-                repositories: { edges: repos }
-            }
-        }
-    }: IResponse = useStaticQuery(graphql`
-        query {
-            github {
-                organization(login: "bylapidist") {
-                    repositories(first: 100, privacy: PUBLIC) {
-                        edges {
-                            node {
-                                id
-                                name
-                                description
-                                url
-                                updatedAt
-                                homepageUrl
-                                latestRelease {
-                                    tagName
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    `);
-
     return (
-        <IndexLayout>
-            <header>
-                <Logo animated />
-                <Heading>
+        <PageLayout>
+            <Box as="header">
+                <Logo animation="slide" />
+                <Heading as="h1" size="large" weight="bold">
                     Brett Dorrans
                 </Heading>
-            </header>
-            <Box>
-                <Heading>
-                    I&apos;m a Senior Frontend Engineer from Glasgow with a
-                    decade of experience building software and relationships.
-                </Heading>
-                <br />
-                <br />
-                <Text>
-                    I&apos;m all about inclusive, accessible engineering that puts
-                    users first. With a focus on collaboration and empathy, I
-                    work closely with teams to create exceptional user
-                    experiences.
-                </Text>
-                <Text data-nosnippet>
-                    <Link href="/brett-dorrans-cv.pdf">
-                        CV
-                    </Link>
-                    <Link
-                        href="https://github.com/brettdorrans"
-                    >
-                        GitHub
-                    </Link>
-                    <Link
-                        href="https://github.com/bylapidist"
-                    >
-                        OSS GitHub
-                    </Link>
-                    <Link
-                        href="https://www.linkedin.com/in/brettdorrans"
-                    >
-                        LinkedIn
-                    </Link>
-                    <Link href="mailto:hello@lapidist.net">Email</Link>
-                </Text>
-
-                {/*<Box data-nosnippet>*/}
-                {/*    {repos &&*/}
-                {/*        orderBy(repos, ['node.name'], 'asc').map((repo) => {*/}
-                {/*            const buttons: PanelButtonProp[] = [*/}
-                {/*                {*/}
-                {/*                    title: 'GitHub',*/}
-                {/*                    props: {*/}
-                {/*                        as: 'a',*/}
-                {/*                        kind: 'primary',*/}
-                {/*                        variant: 'small',*/}
-                {/*                        target: '_blank',*/}
-                {/*                        rel: 'noopener',*/}
-                {/*                        href: repo.node.url*/}
-                {/*                    }*/}
-                {/*                },*/}
-                {/*                {*/}
-                {/*                    title: 'npm',*/}
-                {/*                    props: {*/}
-                {/*                        as: 'a',*/}
-                {/*                        kind: 'secondary',*/}
-                {/*                        variant: 'small',*/}
-                {/*                        target: '_blank',*/}
-                {/*                        rel: 'noopener',*/}
-                {/*                        href: `https://www.npmjs.com/package/@lapidist/${repo.node.name}`*/}
-                {/*                    }*/}
-                {/*                }*/}
-                {/*            ];*/}
-                {/*            if (repo.node.homepageUrl) {*/}
-                {/*                buttons.push({*/}
-                {/*                    title: 'Docs',*/}
-                {/*                    props: {*/}
-                {/*                        as: 'a',*/}
-                {/*                        kind: 'secondary',*/}
-                {/*                        variant: 'small',*/}
-                {/*                        target: '_blank',*/}
-                {/*                        rel: 'noopener',*/}
-                {/*                        href: repo.node.homepageUrl*/}
-                {/*                    }*/}
-                {/*                });*/}
-                {/*            }*/}
-                {/*            return (*/}
-                {/*                <Panel*/}
-                {/*                    key={repo.node.id}*/}
-                {/*                    styles={panelStyles}*/}
-                {/*                    heading={{*/}
-                {/*                        title: `@lapidist/${repo.node.name}`,*/}
-                {/*                        props: {*/}
-                {/*                            as: 'h2',*/}
-                {/*                            size: 4*/}
-                {/*                        }*/}
-                {/*                    }}*/}
-                {/*                    tag={{*/}
-                {/*                        title: repo.node.latestRelease.tagName*/}
-                {/*                    }}*/}
-                {/*                    buttons={buttons}*/}
-                {/*                >*/}
-                {/*                    {repo.node.description}*/}
-                {/*                </Panel>*/}
-                {/*            );*/}
-                {/*        })}*/}
-                {/*</Box>*/}
             </Box>
-        </IndexLayout>
+            <Box as="main" gutterY="large">
+                <Intro />
+                <Links />
+                <Box className={styles.sections}>
+                    <Experience />
+                    <OpenSource />
+                </Box>
+            </Box>
+        </PageLayout>
     );
 };
 
 export default IndexPage;
+export { default as Head } from '../components/Head';
