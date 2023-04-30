@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Logo } from '@lapidist/components';
+import { Box } from '@lapidist/components';
 import * as styles from './styles.module.scss';
 import Experience from '../components/Experience';
 import Intro from '../components/Intro';
@@ -10,12 +10,6 @@ import PageLayout from '../layouts/PageLayout';
 const IndexPage = (): JSX.Element => {
     return (
         <PageLayout>
-            <Box as="header">
-                <Logo animation="slide" />
-                <Heading as="h1" size="large" weight="bold">
-                    Brett Dorrans
-                </Heading>
-            </Box>
             <Box as="main" gutterY="large">
                 <Intro />
                 <Links />

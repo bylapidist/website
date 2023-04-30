@@ -1,7 +1,12 @@
 import React, { PropsWithChildren, useState } from 'react';
-import { Box, ThemeProvider, Toggle } from '@lapidist/components';
+import {
+    Box,
+    Heading,
+    Logo,
+    ThemeProvider,
+    Toggle
+} from '@lapidist/components';
 import { Themes } from '@lapidist/styles';
-import '@lapidist/components/style.css';
 import * as styles from './styles.module.scss';
 
 const PageLayout: React.FC<PropsWithChildren<unknown>> = ({
@@ -28,6 +33,17 @@ const PageLayout: React.FC<PropsWithChildren<unknown>> = ({
                     >
                         🌛
                     </Toggle>
+                </Box>
+                <Box as="header" gutter="large">
+                    <Logo animation="slide" />
+                    <Heading
+                        className={styles.name}
+                        as="h1"
+                        size="large"
+                        weight="bold"
+                    >
+                        Brett Dorrans
+                    </Heading>
                 </Box>
                 <Box className={styles.container} gutter="large">
                     {children}
