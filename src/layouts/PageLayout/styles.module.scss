@@ -16,11 +16,11 @@
 }
 
 .name {
-    animation: fadeIn 2.8s;
+    animation: fadeIn 1.2s;
 }
 
 .container {
-    animation: fadeIn 3.2s;
+    animation: fadeIn 1.4s;
     max-width: var(--fraction__full);
 
     @media screen and (min-width: 800px) {
