@@ -54,8 +54,8 @@ jobs:
               run: npx semantic-release
 
             - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@releases/v3
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
-                  BRANCH: gh-pages
-                  FOLDER: public
+                  token: ${{ secrets.GH_TOKEN }}
+                  branch: gh-pages
+                  folder: public
