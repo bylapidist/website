@@ -9,9 +9,9 @@ const Intro = () => (
         </Heading>
         <Box gutterY="large">
             <Text>
-                I&apos;m all about inclusive, accessible design that puts users
-                first. With a focus on collaboration and empathy, I work closely
-                with teams to create exceptional user experiences.
+                My current focus is on engineering inclusivity and
+                accessibility, enabling the creation of user-centric design
+                systems that foster empathy and exceptional user experiences.
             </Text>
         </Box>
     </>

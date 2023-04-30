@@ -14,16 +14,9 @@ const Experience = () => {
         },
         {
             company: 'Golden Charter',
-            title: 'Software Developer',
-            from: 'Jun 2020',
-            to: 'Apr 2021',
-            href: 'https://www.goldencharter.co.uk/'
-        },
-        {
-            company: 'Golden Charter',
-            title: 'Software Consultant (contract)',
+            title: 'Frontend Software Developer',
             from: 'Feb 2020',
-            to: 'Jun 2020',
+            to: 'Apr 2021',
             href: 'https://www.goldencharter.co.uk/'
         },
         {

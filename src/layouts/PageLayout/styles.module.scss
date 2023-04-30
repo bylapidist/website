@@ -3,7 +3,24 @@
     min-height: 100vh;
 }
 
+.logo {
+    margin-left: var(--size__3);
+    margin-top: var(--size__3);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9) translateY(var(--size__1)); }
+    50% { opacity: 0 }
+    75% { opacity: 0.9; transform: scale(1) translateY(var(--size__0)); }
+    100% { opacity: 1 }
+}
+
+.name {
+    animation: fadeIn 2.8s;
+}
+
 .container {
+    animation: fadeIn 3.2s;
     max-width: var(--fraction__full);
 
     @media screen and (min-width: 800px) {
