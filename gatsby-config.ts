@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: 'Brett Dorrans: Senior Frontend Software Engineer in Glasgow, Scotland',
         description:
-            'Brett Dorrans: Senior Frontend Software Engineer in Glasgow, Scotland',
+            'A Senior Frontend Engineer from Glasgow with a over a decade of experience building software and relationships.',
         siteUrl: 'https://lapidist.net',
         author: {
             name: 'Brett Dorrans',
