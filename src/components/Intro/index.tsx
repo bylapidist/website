@@ -4,7 +4,7 @@ import { Box, Heading, Text } from '@lapidist/components';
 const Intro = () => (
     <>
         <Heading as="h2" size="medium" weight="regular">
-            A Senior Frontend Engineer from Glasgow with a over a decade of
+            A Senior Frontend Engineer from Glasgow with over a decade of
             experience building software and relationships.
         </Heading>
         <Box gutterY="large">
