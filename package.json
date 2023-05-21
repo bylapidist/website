@@ -25,7 +25,7 @@
     "fix": "eslint --fix . --ext js,ts,tsx"
   },
   "dependencies": {
-    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/montserrat": "^5.0.0",
     "@lapidist/components": "9.1.2",
     "@lapidist/cv-generator": "^1.7.1",
     "@mdx-js/react": "^2.3.0",
