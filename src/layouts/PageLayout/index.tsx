@@ -6,13 +6,12 @@ import {
     ThemeProvider,
     Toggle
 } from '@lapidist/components';
-import { Themes } from '@lapidist/styles';
 import * as styles from './styles.module.scss';
 
 const PageLayout: React.FC<PropsWithChildren<unknown>> = ({
     children
 }): JSX.Element => {
-    const [theme, setTheme] = useState<Themes>('light');
+    const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
     const handleToggleTheme = () => {
         if (theme === 'light') {

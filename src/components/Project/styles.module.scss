@@ -1,25 +1,25 @@
 .project {
-    background-color: var(--color-core__lightest);
-    border-radius: var(--border-radius__squarer);
-    transition: box-shadow var(--transition__ease-in-slow);
-    width: var(--fraction__full);
+    background-color: var(--color-core-lightest);
+    border-radius: var(--border-radius-squarer);
+    transition: box-shadow var(--transition-ease-in-slow);
+    width: var(--fraction-full);
 
     @media screen and (min-width: 800px) {
-        width: var(--fraction__2-3);
+        width: var(--fraction-2-3);
     }
 
     @media screen and (min-width: 1440px) {
-        width: var(--fraction__3-4);
+        width: var(--fraction-3-4);
     }
 
     &:focus-within {
-        transition: box-shadow var(--transition__ease-out-slow);
-        box-shadow: var(--elevation__highest);
+        transition: box-shadow var(--transition-ease-out-slow);
+        box-shadow: var(--elevation-highest);
     }
 }
 
 .separator {
-    border: var(--size__0);
+    border: var(--size-0);
 }
 
 .meta {
@@ -29,6 +29,6 @@
 
 .links {
     display: flex;
-    width: var(--fraction__full);
+    width: var(--fraction-full);
     justify-content: flex-end;
 }

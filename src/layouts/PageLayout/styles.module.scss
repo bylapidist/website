@@ -1,17 +1,17 @@
 .body {
-    background-color: var(--color-core__light);
+    background-color: var(--color-core-light);
     min-height: 100vh;
 }
 
 .logo {
-    margin-left: var(--size__3);
-    margin-top: var(--size__3);
+    margin-left: var(--size-3);
+    margin-top: var(--size-3);
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9) translateY(var(--size__1)); }
+    0% { opacity: 0; transform: scale(0.9) translateY(var(--size-1)); }
     50% { opacity: 0 }
-    75% { opacity: 0.9; transform: scale(1) translateY(var(--size__0)); }
+    75% { opacity: 0.9; transform: scale(1) translateY(var(--size-0)); }
     100% { opacity: 1 }
 }
 
@@ -21,19 +21,19 @@
 
 .container {
     animation: fadeIn 1.4s;
-    max-width: var(--fraction__full);
+    max-width: var(--fraction-full);
 
     @media screen and (min-width: 800px) {
-        max-width: var(--fraction__2-3);
+        max-width: var(--fraction-2-3);
     }
 
     @media screen and (min-width: 1440px) {
-        max-width: var(--fraction__1-3);
+        max-width: var(--fraction-1-3);
     }
 }
 
 .toggleTheme {
     position: fixed;
-    bottom: calc(var(--gutter__large) * 2);
-    right: calc(var(--gutter__large) * 2);
+    bottom: calc(var(--gutter-large) * 2);
+    right: calc(var(--gutter-large) * 2);
 }
