@@ -1,6 +1,6 @@
 .list {
     display: flex;
-    grid-gap: var(--gutter__large);
+    grid-gap: var(--gutter-large);
     flex-direction: column;
 
     @media screen and (min-width: 480px) {
