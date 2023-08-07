@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "e5d84f099eb8fe2e5f15f5b2d5022d93"
+    "revision": "69e55f3ddb52c459f71d611a779f022f"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,22 +65,22 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "6e5c379db6be7933a182ce642fea6136"
+    "revision": "185ea2250b7067a4dd4945e9afd42a2f"
   },
   {
     "url": "404/index.html",
-    "revision": "92aa9fe1722430e5667d32260dc54c1d"
+    "revision": "852c9970ea8e50a14d9df0c44ece1bc3"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-d7838cfe87c0fa19f566.js"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-d7838cfe87c0fa19f566.js.LICENSE.txt",
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js.LICENSE.txt",
     "revision": "b37d6def533386fa714fa24b2a9c288b"
   },
   {
-    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-d7838cfe87c0fa19f566.js.map",
-    "revision": "fa0a6c6f2de5ecd0cff6cfbcb3923e49"
+    "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js.map",
+    "revision": "c28da28c280533ec8fe0ebee12188672"
   },
   {
     "url": "app-25a8d827c3bb40b226a7.js"
@@ -95,11 +95,11 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "8614ad37c7a28317142baed01801bea7"
+    "revision": "a67fc78dce03409863e3c11ec6982a39"
   },
   {
     "url": "chunk-map.json",
-    "revision": "bab4eaa553cba9ff20f19029940f6726"
+    "revision": "1e28b50cb5fc9742aeb8970288c877e0"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-f85acf759a28d2a61a0f.js"
@@ -116,11 +116,11 @@ self.__precacheManifest = [
     "revision": "b2d7545b6db41a0e9b025f1fb05257f5"
   },
   {
-    "url": "component---src-pages-index-tsx-79b2dc44a0da0697eddd.js"
+    "url": "component---src-pages-index-tsx-870f21623c074733b2b0.js"
   },
   {
-    "url": "component---src-pages-index-tsx-79b2dc44a0da0697eddd.js.map",
-    "revision": "66055779572bf584988feb6b0cccea88"
+    "url": "component---src-pages-index-tsx-870f21623c074733b2b0.js.map",
+    "revision": "e99e6c8df04cd51d0bc0bd67e67938c4"
   },
   {
     "url": "favicon-32x32.png",
@@ -174,7 +174,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9685086fbea66f8c981fedf0f229cef8"
+    "revision": "eaf256f5bc4bb889fe6f78019fe787f7"
   },
   {
     "url": "logo.svg",
@@ -186,7 +186,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0d3905e63df649a78e22ed87d02a1fc4"
+    "revision": "e765043a0b682973b4390128945fe1c2"
   },
   {
     "url": "oglogo.png",
@@ -202,7 +202,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "af346624ba263dd6b2f56a85f0c75726"
+    "revision": "7d5362ac2b2ad3df500d0791aae8c2fb"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -218,7 +218,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "189d6c9f8cf41102dcac8f9472b8795a"
+    "revision": "c330699c8f93cc566c175e32cb3936d0"
   },
   {
     "url": "sitemap-0.xml",
@@ -227,6 +227,21 @@ self.__precacheManifest = [
   {
     "url": "sitemap-index.xml",
     "revision": "c02a0d2108e450f065869b9b606f3616"
+  },
+  {
+    "url": "static/albert-sans-latin-400-normal-bd8b14c373d43fb7dd92867285e97a84.woff"
+  },
+  {
+    "url": "static/albert-sans-latin-500-normal-ac7f6b9bcc90c360bbddfc85d8c8cdf7.woff2"
+  },
+  {
+    "url": "static/albert-sans-latin-500-normal-db782d2be49acf7e323f3bb4a9853fba.woff"
+  },
+  {
+    "url": "static/albert-sans-latin-700-normal-48f891cacb11bf9e6d7440797025e311.woff2"
+  },
+  {
+    "url": "static/albert-sans-latin-700-normal-8da5783c27080a3a9b1c872854e7c42d.woff"
   },
   {
     "url": "static/montserrat-latin-400-normal-0f1794a79a689a577c2ac5f4af6b235e.woff"
@@ -247,18 +262,18 @@ self.__precacheManifest = [
     "url": "static/montserrat-latin-700-normal-e8155b435ce17d7f08f95d58880258bd.woff"
   },
   {
-    "url": "styles.3de15095ed140b8dbf1d.css"
+    "url": "styles.2dabf29f0a43713c9e3c.css"
   },
   {
-    "url": "webpack-runtime-37991b9ea61ea4d304d0.js"
+    "url": "webpack-runtime-719e785a340b0118caec.js"
   },
   {
-    "url": "webpack-runtime-37991b9ea61ea4d304d0.js.map",
-    "revision": "64e15823f45ce29bc4056c7820d02aee"
+    "url": "webpack-runtime-719e785a340b0118caec.js.map",
+    "revision": "7a6ec568d584b1d6d62041af3a09ba2a"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "c9a537e73dfc55ff8864bb15fb6a619e"
+    "revision": "33586954443492ad7b8d851ccddbcf5c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
