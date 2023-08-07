@@ -40,6 +40,7 @@ const PageLayout: React.FC<PropsWithChildren<unknown>> = ({
                         as="h1"
                         size="large"
                         weight="bold"
+                        family="body"
                     >
                         Brett Dorrans
                     </Heading>

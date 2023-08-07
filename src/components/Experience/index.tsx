@@ -59,7 +59,7 @@ const Experience = () => {
                         gutterY="medium"
                     >
                         <Box>
-                            {experience.from}&mdash;{experience.to}
+                            {experience.from} &ndash; {experience.to}
                         </Box>
                         <Box className={styles.meta}>
                             <Box>
