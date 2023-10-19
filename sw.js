@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "5ef443c57aec98fb8b0732cb007c359a"
+    "revision": "a96663acefbd8a10a8dd8bcc70d89bd5"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "295611c2edb297dce747fa0d08cd1c86"
+    "revision": "97e0e0c83b85846bb6cdb2af3b8531d7"
   },
   {
     "url": "404/index.html",
-    "revision": "0135f1e64fa0957b66a143d9bc4329da"
+    "revision": "9c9a56a466394a7568ef58c8b097caee"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js"
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "b37cd82bb9cde8e551ee8688ca55d40b"
+    "revision": "56cf2d416b9ac7ad0a230ed05b9d6d77"
   },
   {
     "url": "chunk-map.json",
@@ -174,7 +174,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "464dfc3e2dac89db8007a3f77d724aba"
+    "revision": "dba5a59d2f09c73469ebba1eec8aebe0"
   },
   {
     "url": "logo.svg",
@@ -186,7 +186,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6ec912b5981f65650c9eb834cfea9d91"
+    "revision": "d5cb3615dfdf64fecf78adc4ca95394b"
   },
   {
     "url": "oglogo.png",
@@ -202,7 +202,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a9e66e8a8ac66fb0927939aaff5e0604"
+    "revision": "9a288c717905eefc00a951322bfc2018"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -244,36 +244,36 @@ self.__precacheManifest = [
     "url": "static/albert-sans-latin-700-normal-8da5783c27080a3a9b1c872854e7c42d.woff"
   },
   {
-    "url": "static/montserrat-latin-400-normal-0f1794a79a689a577c2ac5f4af6b235e.woff"
+    "url": "static/montserrat-latin-400-normal-9ef09180105730e3cb92149072fb90b8.woff2"
   },
   {
-    "url": "static/montserrat-latin-400-normal-acb6629fe45c43ad5d8ba47a1c95c9fd.woff2"
+    "url": "static/montserrat-latin-400-normal-b48c3d9a8c0a49c1c7b4227697f00c48.woff"
   },
   {
-    "url": "static/montserrat-latin-500-normal-38a674fae449557fef97f120c301ff8d.woff2"
+    "url": "static/montserrat-latin-500-normal-63b09632586acfb651b601c34e2355c6.woff2"
   },
   {
-    "url": "static/montserrat-latin-500-normal-7050af035dd7341a04f9e016579aec3b.woff"
+    "url": "static/montserrat-latin-500-normal-dc9466031ec251207907d2a101925a59.woff"
   },
   {
-    "url": "static/montserrat-latin-700-normal-56c09b9a46af6a54eeb30e554f833d13.woff2"
+    "url": "static/montserrat-latin-700-normal-8ee112252f6bd5f0d5bd6de1932b4713.woff2"
   },
   {
-    "url": "static/montserrat-latin-700-normal-e8155b435ce17d7f08f95d58880258bd.woff"
+    "url": "static/montserrat-latin-700-normal-f1715a34ee999e9315e6cf06dc9da9f4.woff"
   },
   {
-    "url": "styles.2dabf29f0a43713c9e3c.css"
+    "url": "styles.6ac7540c0517d7d18271.css"
   },
   {
-    "url": "webpack-runtime-719e785a340b0118caec.js"
+    "url": "webpack-runtime-7782e1845a9d3518be1a.js"
   },
   {
-    "url": "webpack-runtime-719e785a340b0118caec.js.map",
-    "revision": "7a6ec568d584b1d6d62041af3a09ba2a"
+    "url": "webpack-runtime-7782e1845a9d3518be1a.js.map",
+    "revision": "a29edcc2f790245d9a574584ac6269b3"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "3d8729e4660b5aea1c1fdd8a907ebd75"
+    "revision": "56a67a6639b2cd08683871b0dcd4e6dc"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
