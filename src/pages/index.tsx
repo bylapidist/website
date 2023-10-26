@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@lapidist/components';
 import * as styles from './styles.module.scss';
+import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Intro from '../components/Intro';
 import Links from '../components/Links';
@@ -15,6 +16,7 @@ const IndexPage = (): JSX.Element => {
                 <Links />
                 <Box className={styles.sections}>
                     <Experience />
+                    <Education />
                     <OpenSource />
                 </Box>
             </Box>

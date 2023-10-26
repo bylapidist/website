@@ -1,49 +1,54 @@
 import React from 'react';
-import { Link } from '@lapidist/components';
+import { Box, Link } from '@lapidist/components';
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import * as styles from './styles.module.scss';
 
 const Links = () => {
     return (
         <ul className={styles.list} data-nosnippet>
-            <li>
+            <Box as="li" gutterY="small">
                 <Link
+                    icon={faFileArrowDown}
                     href="/brett-dorrans-cv.pdf"
                     target="_blank"
                     rel="noreferrer noopener"
                 >
                     CV
                 </Link>
-            </li>
-            <li>
+            </Box>
+            <Box as="li" gutterY="small">
                 <Link
+                    // icon={faGithub}
                     href="https://github.com/brettdorrans"
                     target="_blank"
                     rel="noreferrer noopener"
                 >
                     GitHub
                 </Link>
-            </li>
-            <li>
+            </Box>
+            <Box as="li" gutterY="small">
                 <Link
+                    // icon={faGift}
                     href="https://github.com/bylapidist"
                     target="_blank"
                     rel="noreferrer noopener"
                 >
                     Open Source
                 </Link>
-            </li>
-            <li>
+            </Box>
+            <Box as="li" gutterY="small">
                 <Link
+                    // icon={faLinkedin}
                     href="https://www.linkedin.com/in/brettdorrans"
                     target="_blank"
                     rel="noreferrer noopener"
                 >
                     LinkedIn
                 </Link>
-            </li>
-            <li>
+            </Box>
+            <Box as="li" gutterY="small">
                 <Link href="mailto:hello@lapidist.net">Email</Link>
-            </li>
+            </Box>
         </ul>
     );
 };

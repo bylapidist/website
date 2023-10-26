@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Heading, Link, Tag, Text } from '@lapidist/components';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import * as styles from './styles.module.scss';
 
 type ProjectProps = {
@@ -33,6 +34,7 @@ const Project = ({ title, description, version, url }: ProjectProps) => {
                 <Tag level="secondary">{version}</Tag>
                 <Box className={styles.links}>
                     <Link
+                        icon={faArrowUpRightFromSquare}
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
