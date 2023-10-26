@@ -1,7 +1,7 @@
 .list {
     display: flex;
     grid-gap: var(--gutter-large);
-    flex-direction: row;
+    flex-direction: column;
 
     @media screen and (min-width: 480px) {
         flex-direction: row;
