@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Link } from '@lapidist/components';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import * as styles from './styles.module.scss';
 
 const Links = () => {
@@ -8,7 +7,6 @@ const Links = () => {
         <ul className={styles.list} data-nosnippet>
             <Box as="li" gutterY="small">
                 <Link
-                    icon={faFileArrowDown}
                     href="/brett-dorrans-cv.pdf"
                     target="_blank"
                     rel="noreferrer noopener"
