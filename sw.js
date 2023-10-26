@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "5ef443c57aec98fb8b0732cb007c359a"
+    "revision": "5710f46cc63979162275ab869143ed57"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "e5807d9f22de56721ec3c7d9777aa820"
+    "revision": "7f41967c81f357e4b0a358e4dc2eaa76"
   },
   {
     "url": "404/index.html",
-    "revision": "5862ff53359519eb3c04acab3403ebc9"
+    "revision": "1b1e93477a15bb37e12c2a166a766e4a"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-ebc08afd713a5bbc4328.js.map",
-    "revision": "c28da28c280533ec8fe0ebee12188672"
+    "revision": "de0642bc23409d61467c06c7d5aed56e"
   },
   {
     "url": "app-df4437209b12138c7903.js"
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "1866abadbe82cc1c6c3ba1867c263fa3"
+    "revision": "32af0fa9431ebcae704a7ab2f1fadd5d"
   },
   {
     "url": "chunk-map.json",
@@ -174,7 +174,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "18fc62768cd1f5075817676d710615ec"
+    "revision": "fd2a32cf4a58363e4d1bc1a05a8fe943"
   },
   {
     "url": "logo.svg",
@@ -186,7 +186,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d5aa98d9ec453526db456dcd8b392541"
+    "revision": "d96dc63741277ef1051e1034af0aaf13"
   },
   {
     "url": "oglogo.png",
@@ -202,7 +202,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a9e66e8a8ac66fb0927939aaff5e0604"
+    "revision": "f17db4dfe401ed31ad9454fe20b9d698"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -218,7 +218,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "f32bfbb958e0c913a5b6e71852df6ae9"
+    "revision": "dbf64dd7193edf8ab92ba60eb9adf5a9"
   },
   {
     "url": "sitemap-0.xml",
@@ -262,18 +262,18 @@ self.__precacheManifest = [
     "url": "static/montserrat-latin-700-normal-e8155b435ce17d7f08f95d58880258bd.woff"
   },
   {
-    "url": "styles.2dabf29f0a43713c9e3c.css"
+    "url": "styles.2fc688a0b37911f1c019.css"
   },
   {
-    "url": "webpack-runtime-719e785a340b0118caec.js"
+    "url": "webpack-runtime-da18bf89cb286f835734.js"
   },
   {
-    "url": "webpack-runtime-719e785a340b0118caec.js.map",
-    "revision": "7a6ec568d584b1d6d62041af3a09ba2a"
+    "url": "webpack-runtime-da18bf89cb286f835734.js.map",
+    "revision": "15d5f3905d985c53edd020bbe72278fa"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "3d8729e4660b5aea1c1fdd8a907ebd75"
+    "revision": "7bc5a85a6c60c8071ec26e0ceb71a0d3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
