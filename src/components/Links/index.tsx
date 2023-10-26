@@ -29,7 +29,7 @@ const Links = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                 >
-                    OSS GitHub
+                    Open Source
                 </Link>
             </li>
             <li>
