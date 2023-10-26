@@ -27,7 +27,7 @@
   "dependencies": {
     "@fontsource/albert-sans": "5.0.8",
     "@fontsource/montserrat": "5.0.15",
-    "@lapidist/components": "9.6.0",
+    "@lapidist/components": "9.7.0",
     "@lapidist/cv-generator": "1.8.0",
     "classnames": "2.3.2",
     "gatsby": "5.12.9",
