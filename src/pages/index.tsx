@@ -1,19 +1,49 @@
 import React from 'react';
-import { Box } from '@lapidist/components';
+import { Box, Tabs } from '@lapidist/components';
 import * as styles from './styles.module.scss';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Intro from '../components/Intro';
-import Links from '../components/Links';
 import OpenSource from '../components/OpenSource';
 import PageLayout from '../layouts/PageLayout';
 
 const IndexPage = (): JSX.Element => {
+    const links = [
+        {
+            href: '/brett-dorrans-cv.pdf',
+            target: '_blank',
+            rel: 'noreferrer noopener',
+            children: 'CV'
+        },
+        {
+            href: 'https://github.com/brettdorrans',
+            target: '_blank',
+            rel: 'noreferrer noopener',
+            children: 'GitHub'
+        },
+        {
+            href: 'https://github.com/bylapidist',
+            target: '_blank',
+            rel: 'noreferrer noopener',
+            children: 'Open Source'
+        },
+        {
+            href: 'https://www.linkedin.com/in/brettdorrans',
+            target: '_blank',
+            rel: 'noreferrer noopener',
+            children: 'LinkedIn'
+        },
+        {
+            href: 'mailto:hello@lapidist.net',
+            children: 'Email'
+        }
+    ];
+
     return (
         <PageLayout>
             <Box as="main" gutterY="large">
                 <Intro />
-                <Links />
+                <Tabs links={links} size="small" data-nosnippet />
                 <Box className={styles.sections}>
                     <Experience />
                     <Education />
