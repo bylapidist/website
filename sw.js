@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "1d3807fd0d8d38a3b3e1304ce4e89623"
+    "revision": "3ad848b8b0998a092bb52521f4fa6b6a"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "9655d615f63816fc053b4eb896520b43"
+    "revision": "e8ed55fa6876246dec1338d273f68da9"
   },
   {
     "url": "404/index.html",
-    "revision": "f13b6063aa079db98203b49cb3a06a34"
+    "revision": "96ebac94071600dda7b6be1c071c8851"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-1df160efceb6ed63b1b5.js"
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "fd4807dbdc81b59746c9641e5546f495"
+    "revision": "0f862e801926514c2e88b9e5d3eea43b"
   },
   {
     "url": "c16184b3-11c01f0473a8e0afcadf.js"
@@ -181,7 +181,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "12acdccaccbec7d973498d6e867113b5"
+    "revision": "e6affae3a2a543b927a631b5f7a04ffb"
   },
   {
     "url": "logo.svg",
@@ -193,7 +193,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "91c6d0416648393482a9eae185278496"
+    "revision": "f824f5a04ea7004f92ce91df9a7cfa2d"
   },
   {
     "url": "oglogo.png",
@@ -209,7 +209,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "ec27c386318f8f543cb796a6fccc6c4d"
+    "revision": "cbf7f160090054965aa2d3962d487d2e"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -225,7 +225,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "f6b68b6c056669eae4112377e81f5bba"
+    "revision": "a36abc3798698eb8e0045470305cb058"
   },
   {
     "url": "sitemap-0.xml",
