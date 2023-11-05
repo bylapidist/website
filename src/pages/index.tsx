@@ -43,7 +43,9 @@ const IndexPage = (): JSX.Element => {
         <PageLayout>
             <Box as="main" gutterY="large">
                 <Intro />
-                <Tabs links={links} size="small" data-nosnippet />
+                <Box gutterY="large">
+                    <Tabs links={links} size="small" data-nosnippet />
+                </Box>
                 <Box className={styles.sections}>
                     <Experience />
                     <Education />
