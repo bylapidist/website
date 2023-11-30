@@ -7,7 +7,7 @@ const Experience = () => {
         {
             title: 'Senior Software Engineer',
             from: 'Apr 2021',
-            to: 'Present',
+            to: 'Nov 2023',
             urlTitle: 'LendInvest',
             url: 'https://www.lendinvest.com'
         },
