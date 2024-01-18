@@ -30,7 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@lapidist/components": "9.9.7",
-    "@lapidist/cv-generator": "1.9.1",
+    "@lapidist/cv-generator": "1.9.3",
     "classnames": "2.5.1",
     "gatsby": "5.13.1",
     "gatsby-plugin-canonical-urls": "5.13.0",
