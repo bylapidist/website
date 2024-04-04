@@ -6,7 +6,7 @@
 
 /**
  * @license React
- * react-jsx-runtime.development.js
+ * react-jsx-runtime.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -14,9 +14,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
- * @license React
- * react-jsx-runtime.production.min.js
+/** @license React v16.13.1
+ * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
