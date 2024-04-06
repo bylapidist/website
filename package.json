@@ -29,7 +29,7 @@
     "@fontsource/montserrat": "5.0.17",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@lapidist/components": "9.9.8",
+    "@lapidist/components": "9.9.9",
     "@lapidist/cv-generator": "2.2.0",
     "classnames": "2.5.1",
     "gatsby": "5.13.3",
