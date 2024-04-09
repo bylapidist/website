@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "2fbad8fd9f80c9dedf5a01b21569137d"
+    "revision": "6fab629036f83a85123e67043ecd7322"
   },
   {
     "url": "c16184b3-11c01f0473a8e0afcadf.js"
