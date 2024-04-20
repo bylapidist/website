@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "5927d20233298a22b524e8560fecb843"
+    "revision": "328a87ec9b88860a5f868ae36e25106a"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "815c30a0abf3a4659191d9e7ee1e748d"
+    "revision": "b1086640a460b55333c0e3dd71eff768"
   },
   {
     "url": "404/index.html",
-    "revision": "30c4cf55f8763ea8caa47a2661d94654"
+    "revision": "2b8a6928e2bc3b2fad0627f1100ce710"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-3fb4003ae860d2d13874.js"
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "f2c946377238d434307cfa3c856a2ed6"
+    "revision": "486a714895c4fe10fec82752daf997eb"
   },
   {
     "url": "c16184b3-11c01f0473a8e0afcadf.js"
@@ -181,7 +181,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8805ecc1be68a9fa511db0f87b21448e"
+    "revision": "a34acc38e1eaa00ce785ee4a6b624eb9"
   },
   {
     "url": "logo.svg",
@@ -193,7 +193,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ef0f4287e58234afe5b5895259adae4f"
+    "revision": "35b4eb79b34071e9d05749519e6c02bf"
   },
   {
     "url": "oglogo.png",
@@ -209,7 +209,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "07e8e31250d5a92cb5ba1103a70ea129"
+    "revision": "fb21600fdbf190ffaa40a6aa9dcc65c7"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -225,7 +225,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "a6714a1dc5799e22da8b64c72adbc116"
+    "revision": "63263c437c595c28c5c03820e8fd3d9f"
   },
   {
     "url": "sitemap-0.xml",
@@ -239,10 +239,10 @@ self.__precacheManifest = [
     "url": "static/albert-sans-latin-400-normal-bd8b14c373d43fb7dd92867285e97a84.woff"
   },
   {
-    "url": "static/albert-sans-latin-500-normal-5b83f84e257bcea77a7a1c7efcd0280e.woff"
+    "url": "static/albert-sans-latin-500-normal-ac7f6b9bcc90c360bbddfc85d8c8cdf7.woff2"
   },
   {
-    "url": "static/albert-sans-latin-500-normal-ac7f6b9bcc90c360bbddfc85d8c8cdf7.woff2"
+    "url": "static/albert-sans-latin-500-normal-db782d2be49acf7e323f3bb4a9853fba.woff"
   },
   {
     "url": "static/albert-sans-latin-700-normal-48f891cacb11bf9e6d7440797025e311.woff2"
@@ -269,18 +269,18 @@ self.__precacheManifest = [
     "url": "static/montserrat-latin-700-normal-f1715a34ee999e9315e6cf06dc9da9f4.woff"
   },
   {
-    "url": "styles.9015c061a5adff95b4f2.css"
+    "url": "styles.89cc9ac40ed9a9e5034a.css"
   },
   {
-    "url": "webpack-runtime-d5c3c0898df20d03ef77.js"
+    "url": "webpack-runtime-96ca3289a386de64ad05.js"
   },
   {
-    "url": "webpack-runtime-d5c3c0898df20d03ef77.js.map",
-    "revision": "02ecd9699eb99d1329be9c50b0f59e28"
+    "url": "webpack-runtime-96ca3289a386de64ad05.js.map",
+    "revision": "5617123a4df720a1b2104bc552dfee17"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "22ad04f834f2edebbd478c2771efb197"
+    "revision": "a10d098f3076cc85d64dfaf53db72d51"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
