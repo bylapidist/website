@@ -1,0 +1,13 @@
+.project {
+    background-color: var(--colour-core-lightest);
+    border-radius: var(--border-radius-squarer);
+    width: var(--fraction-full);
+
+    @media screen and (min-width: 800px) {
+        width: var(--fraction-2-3);
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: var(--fraction-3-4);
+    }
+}
