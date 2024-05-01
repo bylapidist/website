@@ -5,6 +5,7 @@ import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Intro from '../components/Intro';
 import OpenSource from '../components/OpenSource';
+import Illustration from '../components/Illustration';
 import PageLayout from '../layouts/PageLayout';
 
 const IndexPage = (): JSX.Element => {
@@ -50,6 +51,7 @@ const IndexPage = (): JSX.Element => {
                     <Experience />
                     <Education />
                     <OpenSource />
+                    <Illustration />
                 </Box>
             </Box>
         </PageLayout>
