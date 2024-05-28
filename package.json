@@ -50,7 +50,7 @@
     "sass": "1.77.2"
   },
   "devDependencies": {
-    "@lapidist/linting": "3.20.23",
+    "@lapidist/linting": "3.20.24",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
