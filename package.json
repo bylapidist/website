@@ -47,7 +47,7 @@
     "gatsby-transformer-sharp": "5.14.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "sass": "1.82.0"
+    "sass": "1.83.0"
   },
   "devDependencies": {
     "@lapidist/linting": "3.25.7",
