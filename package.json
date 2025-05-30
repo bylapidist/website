@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@lapidist/linting": "3.25.7",
-    "@types/node": "20.17.54",
+    "@types/node": "20.17.55",
     "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
     "typescript": "5.8.3"
