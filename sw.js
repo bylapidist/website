@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "_gatsby/slices/_gatsby-scripts-1.html",
-    "revision": "aa0ff107fb5e1f2fd6a472bc91c929c0"
+    "revision": "53f577ddc066206606b5a3d8a4dc6128"
   },
   {
     "url": "~partytown/debug/partytown-atomics.js"
@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "20c31cb20e5254765f267458d29365dd"
+    "revision": "539cd0e5e093c6f0b9ee11399ee1c503"
   },
   {
     "url": "404/index.html",
-    "revision": "6525d992fa83b023991159a14a6ad9b0"
+    "revision": "dd1fd5de8b111be373462a5bfea4c3b5"
   },
   {
     "url": "a3336d3c033a5ec9d59a088cb032c68b95c64a61-bd74fbaaccab28f53bf2.js"
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "0815d68c4773a3deb53cbd949b0a28ff"
+    "revision": "4838c24148dbe45efcb188810e0b0115"
   },
   {
     "url": "c16184b3-ca7b7ec54e06b74d6bb4.js"
@@ -193,7 +193,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "66ecf53353d333fee5dd3527cca04565"
+    "revision": "79b2a43dd9f9d6bfc192e7ec139e44d1"
   },
   {
     "url": "logo.svg",
@@ -205,7 +205,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "98eaa9d154013384acb44f4480a1856a"
+    "revision": "61f552071e63d4e34dc24686008d841b"
   },
   {
     "url": "oglogo.png",
@@ -221,7 +221,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "175781d45899248e47c7ae518e8a5240"
+    "revision": "8dd344104b321d41fe0d041c411d723a"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -237,7 +237,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "1c704aa6f4314d8ef600d6619e8eabb2"
+    "revision": "af224899d9f08b01991d341ee367822c"
   },
   {
     "url": "sitemap-0.xml",
@@ -248,51 +248,54 @@ self.__precacheManifest = [
     "revision": "c02a0d2108e450f065869b9b606f3616"
   },
   {
-    "url": "static/albert-sans-latin-400-normal-bd8b14c373d43fb7dd92867285e97a84.woff"
+    "url": "static/albert-sans-latin-400-normal-888d12cf35571cc0b5b9b2a44d99ea2f.woff"
   },
   {
-    "url": "static/albert-sans-latin-500-normal-ac7f6b9bcc90c360bbddfc85d8c8cdf7.woff2"
+    "url": "static/albert-sans-latin-400-normal-90c74757f3a31237a41d10cf78a6968d.woff2"
   },
   {
-    "url": "static/albert-sans-latin-500-normal-db782d2be49acf7e323f3bb4a9853fba.woff"
+    "url": "static/albert-sans-latin-500-normal-15eae5767e140620e2ec715e822808aa.woff"
   },
   {
-    "url": "static/albert-sans-latin-700-normal-48f891cacb11bf9e6d7440797025e311.woff2"
+    "url": "static/albert-sans-latin-500-normal-76d7976595e567cc319c5c8421fd4a0d.woff2"
   },
   {
-    "url": "static/albert-sans-latin-700-normal-8da5783c27080a3a9b1c872854e7c42d.woff"
+    "url": "static/albert-sans-latin-700-normal-37429febc3c5790d86fa5b4542d5dd57.woff"
   },
   {
-    "url": "static/montserrat-latin-400-normal-30be1f65d8fd296bdbbe740427639aaf.woff"
+    "url": "static/albert-sans-latin-700-normal-edbdb58d88b3420ff3020813fae5521c.woff2"
+  },
+  {
+    "url": "static/montserrat-latin-400-normal-218f0eedf6c57456ddb75cf77cb426ce.woff"
   },
   {
     "url": "static/montserrat-latin-400-normal-4bc3bc9536f24ed8076d0baac5ec13f2.woff2"
   },
   {
-    "url": "static/montserrat-latin-500-normal-2f4a3db6e1ac2d366123dc4bad4d8cb4.woff"
+    "url": "static/montserrat-latin-500-normal-2a2498519b279bd43f7644945f6a46b5.woff"
   },
   {
-    "url": "static/montserrat-latin-500-normal-f03befcb0404b9b1747ff7869c98316f.woff2"
+    "url": "static/montserrat-latin-500-normal-bb986b84deeb9c476de21def1be8eeb6.woff2"
   },
   {
-    "url": "static/montserrat-latin-700-normal-8ee8b516892b1fa0a70bc062f5325563.woff"
+    "url": "static/montserrat-latin-700-normal-ea220d1e8d9e154d4daa3655963ed81a.woff"
   },
   {
     "url": "static/montserrat-latin-700-normal-f26608f1996828b9e0d43367fa906b76.woff2"
   },
   {
-    "url": "styles.7be4d818861b575611bb.css"
+    "url": "styles.963e9d739f35a95096c4.css"
   },
   {
-    "url": "webpack-runtime-ed0e4d81dd9b4b304c1e.js"
+    "url": "webpack-runtime-552b407392a6c86fbaa0.js"
   },
   {
-    "url": "webpack-runtime-ed0e4d81dd9b4b304c1e.js.map",
-    "revision": "b4162492051334280ba652f4ee83d5b8"
+    "url": "webpack-runtime-552b407392a6c86fbaa0.js.map",
+    "revision": "66dfcfa24a5e20f64159b983fe7f0afd"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "138d9a9ee61c09acefc77b63d4cb6444"
+    "revision": "d51756bf2c1d04377fecfb60459fe5d4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
