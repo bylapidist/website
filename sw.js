@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "brett-dorrans-cv.pdf",
-    "revision": "4838c24148dbe45efcb188810e0b0115"
+    "revision": "efc18bd562b9c4d630dd6c70a6b6846b"
   },
   {
     "url": "c16184b3-ca7b7ec54e06b74d6bb4.js"
@@ -193,7 +193,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "79b2a43dd9f9d6bfc192e7ec139e44d1"
+    "revision": "885d985222ee5b66c85160f7e9d5ce1e"
   },
   {
     "url": "logo.svg",
@@ -237,7 +237,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3530040381.json",
-    "revision": "af224899d9f08b01991d341ee367822c"
+    "revision": "9bf83d2e06569ca77749279eb27a7c42"
   },
   {
     "url": "sitemap-0.xml",
