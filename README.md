@@ -7,4 +7,5 @@
 This repository lives at [lapidist.net](https://lapidist.net)
 
 ## License
+
 `@lapidist/website` is licensed under the MIT license. See LICENSE for the full text.

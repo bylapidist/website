@@ -1,59 +1,43 @@
 {
-  "name": "@lapidist/website",
-  "version": "0.0.0",
-  "description": "The Lapidist website living at lapidist.net",
-  "author": "Brett Dorrans <hello@lapidist.net>",
-  "license": "MIT",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bylapidist/website.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bylapidist/website/issues"
-  },
-  "homepage": "https://github.com/bylapidist/website#readme",
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "build": "npm run build:cv && npm run build:gatsby",
-    "build:gatsby": "gatsby build --prefix-paths",
-    "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf static/",
-    "lint": "eslint . --ext js,ts,tsx",
-    "fix": "eslint --fix . --ext js,ts,tsx"
-  },
-  "dependencies": {
-    "@fontsource/albert-sans": "5.2.6",
-    "@fontsource/montserrat": "5.2.6",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@lapidist/components": "9.9.12",
-    "@lapidist/cv-generator": "2.4.0",
-    "classnames": "2.5.1",
-    "gatsby": "5.14.6",
-    "gatsby-plugin-canonical-urls": "5.14.0",
-    "gatsby-plugin-google-gtag": "5.14.0",
-    "gatsby-plugin-image": "3.14.0",
-    "gatsby-plugin-manifest": "5.14.0",
-    "gatsby-plugin-mdx": "5.14.1",
-    "gatsby-plugin-offline": "6.14.0",
-    "gatsby-plugin-sass": "6.14.0",
-    "gatsby-plugin-sharp": "5.14.0",
-    "gatsby-plugin-sitemap": "6.14.0",
-    "gatsby-source-filesystem": "5.14.0",
-    "gatsby-source-graphql": "5.14.0",
-    "gatsby-transformer-sharp": "5.14.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "sass": "1.90.0"
-  },
-  "devDependencies": {
-    "@lapidist/linting": "3.25.7",
-    "@types/node": "20.19.10",
-    "@types/react": "18.3.23",
-    "@types/react-dom": "18.3.7",
-    "typescript": "5.9.2"
-  }
+    "name": "@lapidist/website",
+    "version": "0.0.0",
+    "description": "The Lapidist website living at lapidist.net",
+    "author": "Brett Dorrans <hello@lapidist.net>",
+    "license": "MIT",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bylapidist/website.git"
+    },
+    "bugs": {
+        "url": "https://github.com/bylapidist/website/issues"
+    },
+    "homepage": "https://github.com/bylapidist/website#readme",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "start": "next start",
+        "lint": "next lint && npx prettier . --check",
+        "fix": "npm run lint -- --fix && npx prettier . --write",
+        "build": "npm run build:cv && npm run build:next",
+        "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
+        "build:next": "next build"
+    },
+    "dependencies": {
+        "@lapidist/cv-generator": "2.4.0",
+        "next": "15.4.6",
+        "prettier": "3.6.2",
+        "react": "19.1.1",
+        "react-dom": "19.1.1"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "3.3.1",
+        "@eslint/js": "9.33.0",
+        "@types/node": "24.2.1",
+        "@types/react": "19.1.9",
+        "@types/react-dom": "19.1.7",
+        "eslint": "9.33.0",
+        "eslint-config-next": "15.4.6",
+        "typescript": "5.9.2",
+        "typescript-eslint": "8.39.0"
+    }
 }
