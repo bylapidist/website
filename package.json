@@ -16,8 +16,8 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "start": "next start",
-        "lint": "next lint && npx prettier . --check",
-        "fix": "npm run lint -- --fix && npx prettier . --write",
+        "lint": "next lint && stylelint \"**/*.css\" --ignore-path .gitignore && npx prettier . --check",
+        "fix": "next lint --fix && stylelint \"**/*.css\" --fix --ignore-path .gitignore && npx prettier . --write",
         "build": "npm run build:cv && npm run build:next",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
         "build:next": "next build"
@@ -38,6 +38,9 @@
         "eslint": "9.33.0",
         "eslint-config-next": "15.4.6",
         "typescript": "5.9.2",
-        "typescript-eslint": "8.39.0"
+        "typescript-eslint": "8.39.0",
+        "stylelint": "16.23.1",
+        "stylelint-config-css-modules": "4.5.1",
+        "stylelint-config-standard": "39.0.0"
     }
 }
