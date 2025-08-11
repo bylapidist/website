@@ -5,7 +5,7 @@ jobs:
         name: Test
         runs-on: ubuntu-latest
         env:
-            PLAYWRIGHT_BROWSERS_PATH: ${{ env.HOME }}/.cache/ms-playwright
+            PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
         steps:
             - name: Checkout
               uses: actions/checkout@v5
