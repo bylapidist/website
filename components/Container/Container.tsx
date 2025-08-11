@@ -1,4 +1,5 @@
 import type { ReactNode, ElementType } from "react";
+import styles from "./Container.module.scss";
 
 interface Props {
     as?: ElementType;
@@ -15,9 +16,10 @@ export default function Container({
     className,
     children,
 }: Props) {
+    const classes = [styles.container, className].filter(Boolean).join(" ");
     return (
         <Component
-            className={className}
+            className={classes}
             data-size={size}
             style={{ containerType: "inline-size", containerName: cq }}
         >

@@ -1,5 +1,10 @@
 .stat {
     text-align: center;
+    border-radius: var(--radius-l);
+    padding: var(--space-l);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
 }
 
 .stat[data-size="lg"] .value {

@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: clamp(var(--space-s), 5vw, var(--space-l));
+    container-type: inline-size;
+}
+
+.container[data-size="s"] {
+    max-width: var(--max-w-s);
+}
+
+.container[data-size="m"] {
+    max-width: var(--max-w-m);
+}
+
+.container[data-size="l"] {
+    max-width: var(--max-w-l);
+}

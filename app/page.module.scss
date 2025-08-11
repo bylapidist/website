@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     gap: var(--space-s);
     justify-content: center;
-    margin-block-start: var(--space-l);
+    margin-block-start: var(--space-2xl);
 }
 
 .cta {
@@ -30,9 +30,14 @@
     justify-content: space-between;
 }
 
+.caseExample {
+    margin-top: var(--space-l);
+}
+
 .cards {
     display: grid;
     gap: var(--space-xl);
+    margin-top: var(--space-l);
 }
 
 @container (min-width:50rem) {
@@ -65,22 +70,26 @@
 .checklist {
     margin: 0;
     display: grid;
-    gap: var(--space-xs);
+    gap: var(--space-s);
 }
 
 .checklist div {
     display: flex;
-    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+    gap: var(--space-s);
 }
 
 .checklist dt {
     font-weight: 600;
+    margin-inline-end: var(--space-xs);
+    font-family: var(--font-header), sans-serif;
 }
 
 .checklist dt::before {
     content: "\2713";
     color: var(--success);
-    margin-inline-end: var(--space-xs);
+    margin-inline-end: var(--space-m);
+    margin-inline-start: var(--space-s);
 }
 
 .checklist dd {

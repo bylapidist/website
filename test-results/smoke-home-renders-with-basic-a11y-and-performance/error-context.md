@@ -1,0 +1,98 @@
+# Page snapshot
+
+```yaml
+- link "Skip to content":
+  - /url: "#main"
+- main:
+  - heading "Ship design systems teams trust." [level=1]
+  - paragraph: I help product orgs ship consistent UI faster — governance, performance, accessibility baked in.
+  - link "Book a 20-min discovery call":
+    - /url: "#contact"
+  - paragraph: No slides. Real outcomes. 20 minutes.
+  - link "Download capabilities deck":
+    - /url: /deck.pdf
+  - paragraph: PDF (4 pages). No email gate.
+  - text: 10+ years engineering expertise Enterprise scalable fintech apps Remote UK & beyond
+  - heading "From problem to solution" [level=2]
+  - list:
+    - listitem: Tame design drift with scalable tokens.
+    - listitem: Cut PR nitpicks via shared components.
+    - listitem: Speed handoff through automated docs.
+    - listitem: Bake in accessibility from the start.
+  - heading "Signature services" [level=2]
+  - article:
+    - heading "Design System Bootstrap" [level=3]
+    - paragraph: For product teams needing momentum.
+    - paragraph: From audit to adoptable components in weeks.
+    - paragraph: "Timeline: 2-3 sprints"
+  - article:
+    - heading "System Audit & Roadmap" [level=3]
+    - paragraph: For orgs with assets but no strategy.
+    - paragraph: Build a pragmatic plan to evolve what exists.
+    - paragraph: "Timeline: 2-3 sprints"
+  - article:
+    - heading "Hands-on Build" [level=3]
+    - paragraph: For teams lacking capacity.
+    - paragraph: Patterns, tools, processes that endure and scale.
+    - paragraph: "Timeline: 4–8 sprints"
+  - article:
+    - heading "Advisory & Team Uplift" [level=3]
+    - paragraph: For growing teams.
+    - paragraph: Standards, coaching and reviews that raise the bar.
+    - paragraph: "Timeline: ongoing"
+  - heading "Approach" [level=2]
+  - list:
+    - listitem:
+      - strong: Audit
+      - text: → baseline current UI workflows.
+    - listitem:
+      - strong: Prototype
+      - text: → prove value with tokens, components, culture.
+    - listitem:
+      - strong: Rollout
+      - text: → ship, track adoption, close gaps.
+  - heading "Case slice" [level=2]
+  - article:
+    - heading "Global fintech" [level=3]
+    - paragraph: "Before: fragmented widgets, duplicated effort, inaccessible flows."
+    - paragraph: "After: unified tokens, audited patterns—CI checks keep regressions out."
+    - paragraph: "Mechanism: refactored tokens; CI enforces them."
+    - paragraph: "After: –38% UI bugs per release · +24% velocity on UI tickets · 95th pctl route paint < 1.2s"
+  - heading "Accessibility & Performance pledge" [level=2]
+  - group:
+    - text: View pledge▸
+    - term: ✓Keyboard-first
+    - definition: Every control works without a mouse.
+    - term: ✓Contrast
+    - definition: Minimum 4.5:1 text contrast.
+    - term: ✓Fast paint
+    - definition: 95th percentile route paint <1.2s.
+    - term: ✓Motion aware
+    - definition: Animations off when you prefer less.
+  - heading "Ready to ship?" [level=2]
+  - link "Book a 20-min discovery call":
+    - /url: mailto:hello@lapidist.net
+  - link "Download capabilities deck":
+    - /url: /deck.pdf
+  - paragraph: "Availability: booking for next intake"
+  - navigation "Footer":
+    - list:
+      - listitem:
+        - link "Home":
+          - /url: "#"
+      - listitem:
+        - link "Services":
+          - /url: "#services"
+      - listitem:
+        - link "Contact":
+          - /url: "#contact"
+  - paragraph: © 2025 Brett Dorrans.
+  - list:
+    - listitem:
+      - link "Twitter":
+        - /url: "#"
+    - listitem:
+      - link "LinkedIn":
+        - /url: "#"
+- alert
+```

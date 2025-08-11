@@ -60,25 +60,6 @@ section {
     padding-block: var(--space-2xl);
 }
 
-.container {
-    width: 100%;
-    margin-inline: auto;
-    padding-inline: clamp(var(--space-s), 5vw, var(--space-l));
-    container-type: inline-size;
-}
-
-.container[data-size="s"] {
-    max-width: var(--max-w-s);
-}
-
-.container[data-size="m"] {
-    max-width: var(--max-w-m);
-}
-
-.container[data-size="l"] {
-    max-width: var(--max-w-l);
-}
-
 :focus-visible {
     outline: var(--focus-ring);
     outline-offset: var(--focus-ring-offset);
@@ -116,6 +97,7 @@ summary {
     padding-inline: var(--space-s);
     min-block-size: 44px;
     border-radius: var(--radius-s);
+    font-family: var(--font-header), sans-serif;
 }
 
 summary::-webkit-details-marker {

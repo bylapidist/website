@@ -23,33 +23,33 @@ export default function Page() {
             />
             <section className={styles.hero}>
                 <Container size="l">
-                    <h1
-                        style={{
-                            maxInlineSize: "25ch",
-                            textWrap: "balance",
-                            hyphens: "auto",
-                        }}
-                    >
-                        Ship design systems teams trust.
-                    </h1>
-                    <p
-                        style={{
-                            maxInlineSize: "45ch",
-                            textWrap: "balance",
-                            hyphens: "auto",
-                        }}
-                    >
-                        I help product orgs ship consistent UI faster —
-                        governance, performance, accessibility baked in.
-                    </p>
+                    <div className={styles.ctaGroup}>
+                        <h1
+                            style={{
+                                maxInlineSize: "25ch",
+                                textWrap: "balance",
+                                hyphens: "auto",
+                            }}
+                        >
+                            Ship design systems teams trust.
+                        </h1>
+                        <p
+                            style={{
+                                maxInlineSize: "45ch",
+                                textWrap: "balance",
+                                hyphens: "auto",
+                            }}
+                        >
+                            I help product orgs ship consistent UI faster —
+                            governance, performance, accessibility baked in.
+                        </p>
+                    </div>
                     <div className={styles.ctaGroup}>
                         <div className={styles.cta}>
                             <Button href="#contact" size="lg">
                                 Book a 20-min discovery call
                             </Button>
-                            <p className={styles.note}>
-                                No slides. Real outcomes. 20 minutes.
-                            </p>
+                            <p className={styles.note}>Let&apos;s chat.</p>
                         </div>
                         <div className={styles.cta}>
                             <Button
@@ -59,27 +59,16 @@ export default function Page() {
                             >
                                 Download capabilities deck
                             </Button>
-                            <p className={styles.note}>
-                                PDF (4 pages). No email gate.
-                            </p>
+                            <p className={styles.note}>No email gate.</p>
                         </div>
                     </div>
-                    <Image
-                        src={abstract1 as StaticImageData}
-                        alt=""
-                        priority
-                        width={400}
-                        height={300}
-                        decoding="async"
-                        sizes="(max-width: 600px) 100vw, 400px"
-                    />
                 </Container>
             </section>
 
             <section style={{ contentVisibility: "auto" }}>
                 <Container>
                     <div className={styles.stats}>
-                        <Stat value="10+ years" label="engineering expertise" />
+                        <Stat value="15+ years" label="engineering expertise" />
                         <Stat
                             value="Enterprise"
                             label="scalable fintech apps"
@@ -146,7 +135,7 @@ export default function Page() {
 
             <section style={{ contentVisibility: "auto" }}>
                 <Container>
-                    <h2>Approach</h2>
+                    <h2>My Approach</h2>
                     <ol className={styles.steps}>
                         <li>
                             <strong>Audit</strong> &rarr; baseline current UI
@@ -166,8 +155,37 @@ export default function Page() {
 
             <section style={{ contentVisibility: "auto" }}>
                 <Container>
-                    <h2>Case slice</h2>
+                    <details>
+                        <summary>
+                            View my Accessibility &amp; Performance pledge
+                        </summary>
+                        <dl className={styles.checklist}>
+                            <div>
+                                <dt>Keyboard-first:</dt>
+                                <dd>Every control works without a mouse.</dd>
+                            </div>
+                            <div>
+                                <dt>Contrast:</dt>
+                                <dd>Minimum 4.5:1 text contrast.</dd>
+                            </div>
+                            <div>
+                                <dt>Fast paint:</dt>
+                                <dd>95th percentile route paint &lt;1.2s.</dd>
+                            </div>
+                            <div>
+                                <dt>Motion aware:</dt>
+                                <dd>Animations off when you prefer less.</dd>
+                            </div>
+                        </dl>
+                    </details>
+                </Container>
+            </section>
+
+            <section style={{ contentVisibility: "auto" }}>
+                <Container>
+                    <h2>Case example</h2>
                     <Card
+                        className={styles.caseExample}
                         title="Global fintech"
                         footer={
                             <p>
@@ -197,33 +215,6 @@ export default function Page() {
                 </Container>
             </section>
 
-            <section style={{ contentVisibility: "auto" }}>
-                <Container>
-                    <h2>Accessibility &amp; Performance pledge</h2>
-                    <details open>
-                        <summary>View pledge</summary>
-                        <dl className={styles.checklist}>
-                            <div>
-                                <dt>Keyboard-first</dt>
-                                <dd>Every control works without a mouse.</dd>
-                            </div>
-                            <div>
-                                <dt>Contrast</dt>
-                                <dd>Minimum 4.5:1 text contrast.</dd>
-                            </div>
-                            <div>
-                                <dt>Fast paint</dt>
-                                <dd>95th percentile route paint &lt;1.2s.</dd>
-                            </div>
-                            <div>
-                                <dt>Motion aware</dt>
-                                <dd>Animations off when you prefer less.</dd>
-                            </div>
-                        </dl>
-                    </details>
-                </Container>
-            </section>
-
             <section id="contact" style={{ contentVisibility: "auto" }}>
                 <Container>
                     <h2>Ready to ship?</h2>
@@ -240,7 +231,6 @@ export default function Page() {
 
             <footer>
                 <Container>
-                    <p>Availability: booking for next intake</p>
                     <nav aria-label="Footer">
                         <ul className={styles.footerNav}>
                             <li>
