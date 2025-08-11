@@ -1,6 +1,6 @@
 import Card from "@/components/Card/Card";
 import Container from "@/components/Container/Container";
-import styles from "@/app/page.module.scss";
+import styles from "./Services.module.scss";
 
 export default function Services() {
     return (

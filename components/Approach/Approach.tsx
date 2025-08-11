@@ -1,5 +1,5 @@
 import Container from "@/components/Container/Container";
-import styles from "@/app/page.module.scss";
+import styles from "./Approach.module.scss";
 
 export default function Approach() {
     return (

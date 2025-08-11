@@ -1,6 +1,6 @@
 import Button from "@/components/Button/Button";
 import Container from "@/components/Container/Container";
-import styles from "@/app/page.module.scss";
+import styles from "./Contact.module.scss";
 
 export default function Contact() {
     return (

@@ -1,5 +1,5 @@
 import Container from "@/components/Container/Container";
-import styles from "@/app/page.module.scss";
+import styles from "./ProblemToSolution.module.scss";
 
 export default function ProblemToSolution() {
     return (

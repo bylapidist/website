@@ -1,6 +1,6 @@
 import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
-import styles from "@/app/page.module.scss";
+import styles from "./Hero.module.scss";
 
 export default function Hero() {
     return (
