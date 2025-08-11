@@ -3,7 +3,7 @@ import type { ReactNode, ElementType } from "react";
 interface Props {
     as?: ElementType;
     size?: "s" | "m" | "l";
-    cq?: string;
+    cq?: "page" | "section";
     className?: string;
     children: ReactNode;
 }
@@ -11,14 +11,13 @@ interface Props {
 export default function Container({
     as: Component = "div",
     size = "m",
-    cq,
+    cq = "section",
     className,
     children,
 }: Props) {
-    const classes = ["container", className].filter(Boolean).join(" ");
     return (
         <Component
-            className={classes}
+            className={className}
             data-size={size}
             style={{ containerType: "inline-size", containerName: cq }}
         >

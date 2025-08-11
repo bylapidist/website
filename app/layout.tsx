@@ -22,7 +22,7 @@ export const viewport: Viewport = {
     initialScale: 1,
     themeColor: [
         { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#000000" },
+        { media: "(prefers-color-scheme: dark)", color: "#090909" },
     ],
 };
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     description:
         "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
-    icons: { icon: "/favicon.svg" },
+    icons: { icon: "/favicon.ico" },
     openGraph: {
         title: "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
         description:
@@ -75,6 +75,18 @@ export default function RootLayout({
         <html lang="en-GB">
             <head>
                 <meta name="apple-mobile-web-app-title" content="Lapidist" />
+                <meta name="color-scheme" content="light dark" />
+                <meta
+                    name="theme-color"
+                    media="(prefers-color-scheme: light)"
+                    content="#ffffff"
+                />
+                <meta
+                    name="theme-color"
+                    media="(prefers-color-scheme: dark)"
+                    content="#090909"
+                />
+                <link rel="mask-icon" href="/mask-icon.svg" color="#6847ff" />
             </head>
             <body className={`${header.variable} ${body.variable}`}>
                 <a href="#main" className="skip-link">

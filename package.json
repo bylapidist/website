@@ -16,13 +16,22 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "start": "next start",
-        "lint": "next lint && stylelint \"**/*.css\" --ignore-path .gitignore && npx prettier . --check",
-        "fix": "next lint --fix && stylelint \"**/*.css\" --fix --ignore-path .gitignore && npx prettier . --write",
         "build": "npm run build:cv && npm run build:next",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
         "build:next": "next build",
+        "lint": "npm run lint:eslint && npm run lint:css && npm run format:check",
+        "lint:eslint": "next lint",
+        "lint:css": "stylelint \"**/*.css\" --ignore-path .gitignore",
+        "format:check": "prettier . --check",
+        "format:write": "prettier . --write",
+        "fix": "npm run lint:eslint -- --fix && npm run lint:css -- --fix && npm run format:write",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "storybook:build": "storybook build",
+        "test": "playwright test",
+        "test:install-browsers": "playwright install --with-deps",
+        "lh:ci": "lighthouse http://localhost:3000 --quiet --chrome-flags='--headless' --config-path=.lighthouserc.json --budget-path=budget.lighthouse.json",
+        "preqa": "npm run build",
+        "qa": "start-server-and-test start http://localhost:3000 lh:ci"
     },
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
@@ -32,8 +41,10 @@
         "react-dom": "19.1.1"
     },
     "devDependencies": {
+        "@axe-core/playwright": "4.10.2",
         "@eslint/eslintrc": "3.3.1",
         "@eslint/js": "9.33.0",
+        "@playwright/test": "1.54.2",
         "@storybook/nextjs": "^9.1.1",
         "@types/node": "24.2.1",
         "@types/react": "19.1.9",

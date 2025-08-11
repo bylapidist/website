@@ -8,6 +8,8 @@ interface Props {
     children: ReactNode;
     footer?: ReactNode;
     headingLevel?: "h3" | "h4";
+    size?: "md" | "lg";
+    className?: string;
 }
 
 export default function Card({
@@ -17,12 +19,16 @@ export default function Card({
     children,
     footer,
     headingLevel = "h3",
+    size = "md",
+    className,
 }: Props) {
     const Heading = headingLevel as ElementType;
+    const classes = [styles.card, className].filter(Boolean).join(" ");
     return (
         <Component
-            className={styles.card}
+            className={classes}
             data-highlight={highlight || undefined}
+            data-size={size}
         >
             <header className={styles.head}>
                 <Heading>{title}</Heading>

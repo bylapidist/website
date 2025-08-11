@@ -23,10 +23,24 @@ export default function Page() {
             />
             <section className={styles.hero}>
                 <Container size="l">
-                    <h1>Ship design systems teams love.</h1>
-                    <p>
-                        I help product orgs ship consistent UI faster — with
-                        governance, performance and accessibility built in.
+                    <h1
+                        style={{
+                            maxInlineSize: "25ch",
+                            textWrap: "balance",
+                            hyphens: "auto",
+                        }}
+                    >
+                        Ship design systems teams trust.
+                    </h1>
+                    <p
+                        style={{
+                            maxInlineSize: "45ch",
+                            textWrap: "balance",
+                            hyphens: "auto",
+                        }}
+                    >
+                        I help product orgs ship consistent UI faster —
+                        governance, performance, accessibility baked in.
                     </p>
                     <div className={styles.ctaGroup}>
                         <div className={styles.cta}>
@@ -62,12 +76,15 @@ export default function Page() {
                 </Container>
             </section>
 
-            <section>
+            <section style={{ contentVisibility: "auto" }}>
                 <Container>
                     <div className={styles.stats}>
-                        <Stat value="15+" suffix=" yrs" label="engineering" />
-                        <Stat value="Fintech" label="enterprise apps" />
-                        <Stat value="Remote" label="Glasgow & beyond" />
+                        <Stat value="10+ years" label="engineering expertise" />
+                        <Stat
+                            value="Enterprise"
+                            label="scalable fintech apps"
+                        />
+                        <Stat value="Remote" label="UK & beyond" />
                     </div>
                 </Container>
             </section>
@@ -101,10 +118,7 @@ export default function Page() {
                             footer={<p>Timeline: 2-3 sprints</p>}
                         >
                             <p>For orgs with assets but no strategy.</p>
-                            <p>
-                                Build a pragmatic plan to evolve what already
-                                exists.
-                            </p>
+                            <p>Build a pragmatic plan to evolve what exists.</p>
                         </Card>
                         <Card
                             title="Hands-on Build"
@@ -112,7 +126,7 @@ export default function Page() {
                         >
                             <p>For teams lacking capacity.</p>
                             <p>
-                                Patterns, tools and processes that endure and
+                                Patterns, tools, processes that endure and
                                 scale.
                             </p>
                         </Card>
@@ -136,15 +150,15 @@ export default function Page() {
                     <ol className={styles.steps}>
                         <li>
                             <strong>Audit</strong> &rarr; baseline current UI
-                            and workflows.
+                            workflows.
                         </li>
                         <li>
                             <strong>Prototype</strong> &rarr; prove value with
-                            tokens and components.
+                            tokens, components, culture.
                         </li>
                         <li>
-                            <strong>Rollout</strong> &rarr; ship, track adoption
-                            and close gaps.
+                            <strong>Rollout</strong> &rarr; ship, track
+                            adoption, close gaps.
                         </li>
                     </ol>
                 </Container>
@@ -167,13 +181,10 @@ export default function Page() {
                             inaccessible flows.
                         </p>
                         <p>
-                            After: unified tokens, audited patterns and CI
-                            checks keep regressions out.
+                            After: unified tokens, audited patterns—CI checks
+                            keep regressions out.
                         </p>
-                        <p>
-                            Mechanism: refactored tokens and wired CI to enforce
-                            them.
-                        </p>
+                        <p>Mechanism: refactored tokens; CI enforces them.</p>
                         <Image
                             src={abstract2 as StaticImageData}
                             alt=""
@@ -190,7 +201,7 @@ export default function Page() {
                 <Container>
                     <h2>Accessibility &amp; Performance pledge</h2>
                     <details open>
-                        <summary>View details</summary>
+                        <summary>View pledge</summary>
                         <dl className={styles.checklist}>
                             <div>
                                 <dt>Keyboard-first</dt>

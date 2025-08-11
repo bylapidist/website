@@ -12,6 +12,7 @@
     padding-inline: var(--space-m);
     border-radius: var(--radius-m);
     min-block-size: 44px;
+    box-shadow: var(--shadow-1);
 }
 
 .button[data-size="lg"] {
@@ -41,25 +42,46 @@
     opacity: 0.6;
 }
 
-.button:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
+.button[aria-busy="true"] {
+    cursor: wait;
 }
 
 @media (hover: hover) and (pointer: fine) {
+    .button:not(:disabled) {
+        transition:
+            background var(--dur-2) var(--ease-standard),
+            box-shadow var(--dur-2) var(--ease-standard),
+            transform var(--dur-1) var(--ease-emph);
+    }
+
     .button:not(:disabled)[data-variant="primary"]:hover {
         background: color-mix(
-                in srgb,
+                in oklch,
                 var(--primary) 90%,
                 var(--primary-contrast)
         );
+        box-shadow: var(--shadow-2);
     }
 
     .button:not(:disabled)[data-variant="secondary"]:hover {
-        background: color-mix(in srgb, var(--primary) 15%, transparent);
+        background: color-mix(in oklch, var(--primary) 15%, transparent);
+        box-shadow: var(--shadow-2);
     }
 
     .button:not(:disabled)[data-variant="ghost"]:hover {
         background: var(--muted);
+        box-shadow: var(--shadow-2);
+    }
+
+    .button:not(:disabled):active {
+        box-shadow: var(--shadow-3);
+        transform: translateY(1px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+        transform: none;
     }
 }

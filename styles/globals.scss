@@ -15,6 +15,7 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
+    font-variant-numeric: tabular-nums;
     font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
@@ -33,13 +34,19 @@ svg {
     max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:where(h1, h2, h3, h4, h5, h6) {
     font-family: var(--font-header), sans-serif;
+    text-wrap: balance;
+    hyphens: auto;
+    margin-block: 0;
+}
+
+:where(p, ul, ol, dl) {
+    margin-block: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl) + :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl) {
+    margin-block-start: var(--space-m);
 }
 
 a {
@@ -73,8 +80,8 @@ section {
 }
 
 :focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
 }
 
 .skip-link {
@@ -96,8 +103,39 @@ section {
     margin-block-start: var(--space-xs);
 }
 
-p + p {
-    margin-block-start: var(--space-s);
+:target {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+    background: color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+summary {
+    cursor: pointer;
+    list-style: none;
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-s);
+    min-block-size: 44px;
+    border-radius: var(--radius-s);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "▸";
+    margin-inline-start: var(--space-xs);
+    transition: transform var(--dur-2) var(--ease-standard);
+}
+
+details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    summary:hover {
+        background: var(--muted);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
