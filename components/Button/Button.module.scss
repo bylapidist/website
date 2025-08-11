@@ -55,22 +55,30 @@
     }
 
     .button:not(:disabled)[data-variant="primary"]:hover {
-        background: color-mix(
-            in oklch,
-            var(--primary) 90%,
-            var(--primary-contrast)
-        );
+        background: var(--primary-hover);
         box-shadow: var(--shadow-2);
     }
 
     .button:not(:disabled)[data-variant="secondary"]:hover {
-        background: color-mix(in oklch, var(--primary) 15%, transparent);
+        background: var(--primary-hover);
         box-shadow: var(--shadow-2);
     }
 
     .button:not(:disabled)[data-variant="ghost"]:hover {
-        background: var(--muted);
+        background: var(--surface-hover);
         box-shadow: var(--shadow-2);
+    }
+
+    .button:not(:disabled)[data-variant="primary"]:active {
+        background: var(--primary-active);
+    }
+
+    .button:not(:disabled)[data-variant="secondary"]:active {
+        background: var(--primary-active);
+    }
+
+    .button:not(:disabled)[data-variant="ghost"]:active {
+        background: var(--surface-active);
     }
 
     .button:not(:disabled):active {
