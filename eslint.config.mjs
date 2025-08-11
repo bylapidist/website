@@ -4,6 +4,8 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import storybook from "eslint-plugin-storybook";
+import reactCompiler from "eslint-plugin-react-compiler";
+import eslintPluginImport from "eslint-plugin-import";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,12 +15,26 @@ const compat = new FlatCompat({
 });
 
 export default [
+    {
+        ignores: ["eslint.config.mjs", "stylelint.config.mjs", ".storybook/**"],
+    },
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...storybook.configs["flat/recommended"],
     ...compat.extends("next/core-web-vitals", "next/typescript"),
+    reactCompiler.configs.recommended,
     {
-        files: ["**/*.{ts,tsx}"],
+        plugins: {
+            import: eslintPluginImport,
+        },
+        settings: {
+            "import/resolver": {
+                typescript: {
+                    project: ["./tsconfig.json"],
+                },
+            },
+        },
+        files: ["**/*.{ts,tsx,js,jsx}"],
         languageOptions: {
             parserOptions: {
                 project: ["./tsconfig.json"],
