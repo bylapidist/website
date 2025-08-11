@@ -232,6 +232,10 @@ export default function Page() {
                             </li>
                         </ul>
                     </nav>
+                    <p>
+                        Lapidist Ltd, registered in Scotland. Company number
+                        SC549211.
+                    </p>
                     <p>© {new Date().getFullYear()} Brett Dorrans.</p>
                     <ul className={styles.social}>
                         <li>
