@@ -141,8 +141,8 @@ details[open] summary::after {
     }
 
     body {
-        background: #ffffff;
-        color: #000000;
+        background: var(--bg);
+        color: var(--text);
     }
 
     a::after {

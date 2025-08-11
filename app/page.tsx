@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
 
 import abstract2 from "@/app/(assets)/images/abstract-2.svg";
 import styles from "@/app/page.module.scss";
@@ -23,22 +24,10 @@ export default function Page() {
             <section className={styles.hero}>
                 <Container size="l">
                     <div className={styles.ctaGroup}>
-                        <h1
-                            style={{
-                                maxInlineSize: "25ch",
-                                textWrap: "balance",
-                                hyphens: "auto",
-                            }}
-                        >
+                        <h1 className={styles.heroTitle}>
                             Ship design systems teams trust.
                         </h1>
-                        <p
-                            style={{
-                                maxInlineSize: "45ch",
-                                textWrap: "balance",
-                                hyphens: "auto",
-                            }}
-                        >
+                        <p className={styles.heroIntro}>
                             I help product orgs ship consistent UI faster —
                             governance, performance, accessibility baked in.
                         </p>
@@ -89,7 +78,7 @@ export default function Page() {
                 </Container>
             </section>
 
-            <section style={{ contentVisibility: "auto" }}>
+            <section id="services" style={{ contentVisibility: "auto" }}>
                 <Container>
                     <h2>Signature services</h2>
                     <div className={styles.cards}>
@@ -233,7 +222,7 @@ export default function Page() {
                     <nav aria-label="Footer">
                         <ul className={styles.footerNav}>
                             <li>
-                                <a href="#">Home</a>
+                                <Link href="/">Home</Link>
                             </li>
                             <li>
                                 <a href="#services">Services</a>
@@ -246,12 +235,18 @@ export default function Page() {
                     <p>© {new Date().getFullYear()} Brett Dorrans.</p>
                     <ul className={styles.social}>
                         <li>
-                            <a href="#" rel="noopener noreferrer">
+                            <a
+                                href="https://twitter.com/bylapidist"
+                                rel="noopener noreferrer"
+                            >
                                 Twitter
                             </a>
                         </li>
                         <li>
-                            <a href="#" rel="noopener noreferrer">
+                            <a
+                                href="https://linkedin.com/in/brettdorrans"
+                                rel="noopener noreferrer"
+                            >
                                 LinkedIn
                             </a>
                         </li>

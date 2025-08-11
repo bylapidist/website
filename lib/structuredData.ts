@@ -28,6 +28,20 @@ export function buildStructuredData() {
                 ],
             },
             {
+                "@type": "Organization",
+                "@id": `${base}#org`,
+                name: "Lapidist",
+                url: `${base}/`,
+                founder: { "@id": `${base}#person` },
+            },
+            {
+                "@type": "WebSite",
+                "@id": `${base}#website`,
+                url: `${base}/`,
+                name: "Lapidist",
+                publisher: { "@id": `${base}#org` },
+            },
+            {
                 "@type": "Service",
                 serviceType: "Design System Consulting",
                 provider: { "@id": `${base}#person` },
