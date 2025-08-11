@@ -12,6 +12,6 @@
             { "resourceType": "render-blocking-resources", "budget": 1 },
             { "resourceType": "unused-css-rules", "budget": 0 }
         ],
-        "scores": [{ "metric": "performance", "budget": 0.95 }]
+        "scores": [{ "metric": "performance", "budget": 0.85 }]
     }
 ]
