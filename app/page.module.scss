@@ -120,11 +120,16 @@
     flex-wrap: wrap;
 }
 
-.footerNav a {
-    text-decoration: none;
-    padding: var(--space-xs) var(--space-s);
-}
-
+.footerNav a,
 .social a {
     padding: var(--space-xs) var(--space-s);
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerNav a {
+    text-decoration: none;
 }
