@@ -1,0 +1,101 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .button {
+        @include inline-center;
+
+        border: 1px solid transparent;
+        cursor: pointer;
+        font: inherit;
+        font-family: var(--font-header), sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        padding-block: var(--space-s);
+        padding-inline: var(--space-m);
+        border-radius: var(--radius-m);
+        min-block-size: var(--size-tap-min);
+        box-shadow: var(--shadow-1);
+    }
+
+    .button[data-size="lg"] {
+        padding-block: var(--space-m);
+        padding-inline: var(--space-l);
+        font-size: var(--step-0);
+    }
+
+    .button[data-variant="primary"] {
+        background: var(--primary);
+        color: var(--primary-contrast);
+    }
+
+    .button[data-variant="secondary"] {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .button[data-variant="ghost"] {
+        background: transparent;
+        color: var(--text);
+    }
+
+    .button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .button[aria-busy="true"] {
+        cursor: wait;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .button:not(:disabled) {
+            transition:
+                background var(--dur-2) var(--ease-standard),
+                box-shadow var(--dur-2) var(--ease-standard),
+                transform var(--dur-1) var(--ease-emph);
+        }
+
+        .button:not(:disabled)[data-variant="primary"]:hover {
+            background: var(--primary-hover);
+            box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
+        }
+
+        .button:not(:disabled)[data-variant="secondary"]:hover {
+            background: var(--primary-hover);
+            box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
+        }
+
+        .button:not(:disabled)[data-variant="ghost"]:hover {
+            background: var(--surface-hover);
+            box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
+        }
+
+        .button:not(:disabled)[data-variant="primary"]:active {
+            background: var(--primary-active);
+        }
+
+        .button:not(:disabled)[data-variant="secondary"]:active {
+            background: var(--primary-active);
+        }
+
+        .button:not(:disabled)[data-variant="ghost"]:active {
+            background: var(--surface-active);
+        }
+
+        .button:not(:disabled):active {
+            box-shadow: var(--shadow-3);
+            transform: translateY(1px);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .button {
+            transition: none;
+            transform: none;
+        }
+    }
+}

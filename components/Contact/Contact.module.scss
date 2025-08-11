@@ -1,0 +1,18 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .heading {
+        text-align: center;
+        font-size: var(--step-3);
+    }
+
+    @container (min-width:40rem) {
+        .heading {
+            font-size: var(--step-4);
+        }
+    }
+
+    .ctaGroup {
+        @include cta-group;
+    }
+}

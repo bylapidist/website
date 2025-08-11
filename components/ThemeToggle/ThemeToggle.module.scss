@@ -1,0 +1,21 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .toggle {
+        @include inline-center;
+
+        min-block-size: var(--size-tap-min);
+        min-inline-size: var(--size-tap-min);
+        padding: var(--space-xs);
+        background: none;
+        border: none;
+        color: var(--text);
+        cursor: pointer;
+    }
+
+    .icon {
+        inline-size: var(--size-icon-m);
+        block-size: var(--size-icon-m);
+        fill: currentcolor;
+    }
+}

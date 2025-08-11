@@ -1,0 +1,21 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .trustedBy > div {
+        @include centered-column;
+    }
+
+    .tagline {
+        margin: 0;
+        color: var(--text-subtle);
+    }
+
+    .logos {
+        @include centered-list(var(--space-l), true);
+    }
+
+    .logo {
+        width: 12ch;
+        height: 5ch;
+    }
+}

@@ -1,0 +1,50 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .hero {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .heroTitle {
+        max-inline-size: 25ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--step-3);
+    }
+
+    .heroIntro {
+        max-inline-size: 45ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--step-1);
+    }
+
+    .ctaGroup {
+        @include cta-group;
+    }
+
+    .cta {
+        @include centered-column;
+
+        gap: var(--space-2xs);
+        margin-bottom: var(--space-2xl);
+    }
+
+    .note {
+        font-size: var(--step-negative-1);
+        max-inline-size: 14ch;
+        text-align: center;
+    }
+
+    @container (min-width:50rem) {
+        .heroTitle {
+            font-size: var(--step-4);
+        }
+
+        .heroIntro {
+            font-size: var(--step-2);
+        }
+    }
+}

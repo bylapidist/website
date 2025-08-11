@@ -1,0 +1,41 @@
+@layer components {
+    .card {
+        background: var(--surface);
+        border-radius: var(--radius-l);
+        padding: var(--space-l);
+        box-shadow: var(--shadow-1);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    .card[data-size="lg"] {
+        padding: var(--space-xl);
+    }
+
+    .card[data-highlight] {
+        border: 2px solid var(--primary);
+    }
+
+    .head h3,
+    .head h4 {
+        margin: 0;
+        font-size: var(--step-1);
+    }
+
+    .body {
+        flex-grow: 1;
+        font-size: var(--step-0);
+    }
+
+    @container section (max-width: 40rem) {
+        .card {
+            padding: var(--space-m);
+        }
+
+        .head h3,
+        .head h4 {
+            font-size: var(--step-0);
+        }
+    }
+}

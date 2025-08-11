@@ -1,0 +1,54 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .caseStudies {
+        background: var(--surface);
+        text-align: center;
+    }
+
+    .caseStudies > div {
+        @include centered-column;
+    }
+
+    .tagline {
+        margin: 0;
+        color: var(--text);
+    }
+
+    .cards {
+        @include card-grid(var(--space-l));
+
+        text-align: initial;
+    }
+
+    .visual {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: thin solid var(--text-subtle);
+        border-radius: var(--radius-m);
+        margin-block-end: var(--space-xl);
+        fill: var(--surface);
+    }
+
+    .panel,
+    .block {
+        fill: var(--surface);
+        stroke: var(--text-subtle);
+        stroke-width: 0.5;
+    }
+
+    .block {
+        stroke-width: 0.7;
+    }
+
+    .cta {
+        @include cta-group;
+        @include centered-column;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
