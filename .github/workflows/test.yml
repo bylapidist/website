@@ -38,6 +38,9 @@ jobs:
 
             - name: Run lighthouse
               run: npm run qa
+              env:
+                  NODE_ENV: production
+                  LHCI_CHROMIUM_FLAGS: "--headless=new --no-sandbox --disable-dev-shm-usage"
 
             - name: Run build storybook
               run: npm run build-storybook
