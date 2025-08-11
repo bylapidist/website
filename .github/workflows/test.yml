@@ -20,7 +20,7 @@ jobs:
             - name: Install deps (no browsers)
               run: npm ci
               env:
-                  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+                  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
             # Resolve the Playwright package version to make cache keys stable and bust on upgrades
             - name: Resolve Playwright version
