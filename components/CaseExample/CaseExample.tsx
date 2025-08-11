@@ -1,7 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 import Card from "@/components/Card/Card";
 import Container from "@/components/Container/Container";
-import styles from "@/app/page.module.scss";
+import styles from "./CaseExample.module.scss";
 import abstract2 from "@/app/(assets)/images/abstract-2.svg";
 
 export default function CaseExample() {

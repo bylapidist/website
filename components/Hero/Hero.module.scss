@@ -1,0 +1,36 @@
+.hero {
+    text-align: center;
+}
+
+.heroTitle {
+    max-inline-size: 25ch;
+    text-wrap: balance;
+    hyphens: auto;
+}
+
+.heroIntro {
+    max-inline-size: 45ch;
+    text-wrap: balance;
+    hyphens: auto;
+}
+
+.ctaGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: center;
+    margin-block-start: var(--space-2xl);
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xs);
+}
+
+.note {
+    font-size: var(--step-negative-1);
+    max-inline-size: 14ch;
+    text-align: center;
+}

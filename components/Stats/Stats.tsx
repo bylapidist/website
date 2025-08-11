@@ -1,6 +1,6 @@
 import Container from "@/components/Container/Container";
 import Stat from "@/components/Stat/Stat";
-import styles from "@/app/page.module.scss";
+import styles from "./Stats.module.scss";
 
 export default function Stats() {
     return (

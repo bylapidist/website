@@ -1,0 +1,23 @@
+.footerNav,
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
+}
+
+.footerNav {
+    flex-wrap: wrap;
+}
+
+.footerNav a,
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-s);
+}
