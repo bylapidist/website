@@ -14,7 +14,7 @@ const CaseExample = dynamic(
 const Contact = dynamic(() => import("@/components/Contact/Contact"));
 import Footer from "@/components/Footer/Footer";
 
-import { buildStructuredData } from "@/lib/structuredData";
+import { buildStructuredData } from "./structuredData";
 
 export default function Page() {
     const structuredData = buildStructuredData();

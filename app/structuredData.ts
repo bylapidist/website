@@ -1,5 +1,7 @@
 export function buildStructuredData() {
     const base = "https://lapidist.net";
+    const datePublished = "2020-01-05";
+    const dateModified = new Date().toISOString().split("T")[0];
     return {
         "@context": "https://schema.org",
         "@graph": [
@@ -40,10 +42,43 @@ export function buildStructuredData() {
                 url: `${base}/`,
                 name: "Lapidist",
                 publisher: { "@id": `${base}#org` },
+                potentialAction: { "@id": `${base}#search` },
+            },
+            {
+                "@type": "SearchAction",
+                "@id": `${base}#search`,
+                target: `${base}/?s={search_term_string}`,
+                "query-input": "required name=search_term_string",
+            },
+            {
+                "@type": "WebPage",
+                "@id": `${base}/#webpage`,
+                url: `${base}/`,
+                name: "Lapidist",
+                isPartOf: { "@id": `${base}#website` },
+                inLanguage: "en-GB",
+                datePublished,
+                dateModified,
+                breadcrumb: { "@id": `${base}/#breadcrumb` },
+                potentialAction: { "@id": `${base}#search` },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `${base}/#breadcrumb`,
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        item: { "@id": `${base}/`, name: "Home" },
+                    },
+                ],
             },
             {
                 "@type": "Service",
-                serviceType: "Design System Consulting",
+                "@id": `${base}#design-system-consulting`,
+                name: "Design System Consulting",
+                description:
+                    "Strategy and implementation support for design systems.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -54,7 +89,9 @@ export function buildStructuredData() {
             },
             {
                 "@type": "Service",
-                serviceType: "Accessibility Auditing",
+                "@id": `${base}#accessibility-auditing`,
+                name: "Accessibility Auditing",
+                description: "WCAG reviews and inclusive design guidance.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -65,7 +102,9 @@ export function buildStructuredData() {
             },
             {
                 "@type": "Service",
-                serviceType: "Frontend Engineering",
+                "@id": `${base}#frontend-engineering`,
+                name: "Frontend Engineering",
+                description: "Accessible and performant user interfaces.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
