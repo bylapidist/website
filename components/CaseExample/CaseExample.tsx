@@ -14,15 +14,18 @@ export default function CaseExample() {
                     title="Global fintech"
                     footer={
                         <p>
-                            After: –38% UI bugs per release · +24% velocity on UI tickets · 95th pctl route paint &lt; 1.2s
+                            After: –38% UI bugs per release · +24% velocity on
+                            UI tickets · 95th pctl route paint &lt; 1.2s
                         </p>
                     }
                 >
                     <p>
-                        Before: fragmented widgets, duplicated effort, inaccessible flows.
+                        Before: fragmented widgets, duplicated effort,
+                        inaccessible flows.
                     </p>
                     <p>
-                        After: unified tokens, audited patterns—CI checks keep regressions out.
+                        After: unified tokens, audited patterns—CI checks keep
+                        regressions out.
                     </p>
                     <p>Mechanism: refactored tokens; CI enforces them.</p>
                     <Image

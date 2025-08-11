@@ -28,10 +28,7 @@ export default function Services() {
                         footer={<p>Timeline: 4–8 sprints</p>}
                     >
                         <p>For teams lacking capacity.</p>
-                        <p>
-                            Patterns, tools, processes that endure and
-                            scale.
-                        </p>
+                        <p>Patterns, tools, processes that endure and scale.</p>
                     </Card>
                     <Card
                         title="Advisory & Team Uplift"
@@ -39,8 +36,7 @@ export default function Services() {
                     >
                         <p>For growing teams.</p>
                         <p>
-                            Standards, coaching and reviews that raise the
-                            bar.
+                            Standards, coaching and reviews that raise the bar.
                         </p>
                     </Card>
                 </div>

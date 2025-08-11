@@ -23,11 +23,7 @@ export default function Hero() {
                         <p className={styles.note}>Let&apos;s chat.</p>
                     </div>
                     <div className={styles.cta}>
-                        <Button
-                            href="/deck.pdf"
-                            variant="secondary"
-                            size="lg"
-                        >
+                        <Button href="/deck.pdf" variant="secondary" size="lg">
                             Download capabilities deck
                         </Button>
                         <p className={styles.note}>No email gate.</p>

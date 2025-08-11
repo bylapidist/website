@@ -8,13 +8,16 @@ export default function Approach() {
                 <h2>My Approach</h2>
                 <ol className={styles.steps}>
                     <li>
-                        <strong>Audit</strong> &rarr; baseline current UI workflows.
+                        <strong>Audit</strong> &rarr; baseline current UI
+                        workflows.
                     </li>
                     <li>
-                        <strong>Prototype</strong> &rarr; prove value with tokens, components, culture.
+                        <strong>Prototype</strong> &rarr; prove value with
+                        tokens, components, culture.
                     </li>
                     <li>
-                        <strong>Rollout</strong> &rarr; ship, track adoption, close gaps.
+                        <strong>Rollout</strong> &rarr; ship, track adoption,
+                        close gaps.
                     </li>
                 </ol>
             </Container>

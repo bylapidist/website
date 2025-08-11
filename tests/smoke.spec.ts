@@ -7,9 +7,7 @@ test("home renders with basic a11y and performance", async ({ page }) => {
     await expect(
         page.getByRole("heading", { level: 2, name: "Signature services" }),
     ).toBeVisible();
-    await expect(page.locator("body")).toContainText(
-        "Company number SC549211",
-    );
+    await expect(page.locator("body")).toContainText("Company number SC549211");
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
     const nav = await page.evaluate(
