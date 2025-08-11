@@ -30,6 +30,15 @@ jobs:
             - name: Lint files
               run: npm run lint
 
+            - name: Install Playwright browsers
+              run: npm run test:install-browsers
+
+            - name: Run tests
+              run: npm test
+
+            - name: Run lighthouse
+              run: npm run qa
+
             - name: Run build storybook
               run: npm run build-storybook
 

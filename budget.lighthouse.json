@@ -1,0 +1,17 @@
+[
+    {
+        "path": "/",
+        "timings": [
+            { "metric": "first-contentful-paint", "budget": 1800 },
+            { "metric": "largest-contentful-paint", "budget": 2000 }
+        ],
+        "resourceSizes": [
+            { "resourceType": "total-byte-weight", "budget": 300000 }
+        ],
+        "resourceCounts": [
+            { "resourceType": "render-blocking-resources", "budget": 1 },
+            { "resourceType": "unused-css-rules", "budget": 0 }
+        ],
+        "scores": [{ "metric": "performance", "budget": 0.75 }]
+    }
+]

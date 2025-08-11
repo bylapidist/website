@@ -1,0 +1,144 @@
+:root {
+    color-scheme: light dark;
+
+    /* neutral palette */
+    --bg: #ffffff;
+    --surface: #f5f5f5;
+    --surface-elevated: #ffffff;
+    --text: #111111;
+    --text-subtle: #555555;
+    --border: #d0d0d0;
+    --muted: #e5e5e5;
+
+    /* brand */
+    --primary: #4b6be8;
+    --primary-contrast: #ffffff;
+
+    /* semantic */
+    --success: #1b9a59;
+    --warning: #ffb700;
+    --danger: #d93025;
+
+    /* motion */
+    --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-emph: cubic-bezier(0.2, 0.9, 0.1, 1);
+    --dur-1: 120ms;
+    --dur-2: 200ms;
+    --dur-3: 320ms;
+
+    /* spacing */
+    --space-2xs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);
+    --space-xs: clamp(0.25rem, 0.2rem + 0.3vw, 0.5rem);
+    --space-s: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+    --space-m: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+    --space-l: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    --space-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    --space-2xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+    --space-3xl: clamp(3rem, 2.5rem + 2vw, 4rem);
+
+    /* radius */
+    --radius-xs: 2px;
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --radius-xxl: 24px;
+
+    /* shadows */
+    --shadow-1: 0 1px 2px hsl(0deg 0% 0% / 5%);
+    --shadow-2: 0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
+    --shadow-3: 0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
+
+    /* typography */
+    --step-negative-1: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
+    --step-0: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
+    --step-1: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
+    --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --step-3: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+
+    /* layout */
+    --max-w-s: 40rem;
+    --max-w-m: 60rem;
+    --max-w-l: 72rem;
+
+    /* focus */
+    --focus-ring: 2px solid var(--primary);
+    --focus-ring-offset: 2px;
+}
+
+@supports (color: oklch(0 0 0)) {
+    :root {
+        --bg: oklch(100% 0 0deg);
+        --surface: oklch(97% 0.01 95deg);
+        --surface-elevated: oklch(100% 0 0deg);
+        --text: oklch(17% 0 0deg);
+        --text-subtle: oklch(55% 0 0deg);
+        --border: oklch(86% 0.02 95deg);
+        --muted: oklch(93% 0.01 95deg);
+        --primary: oklch(57% 0.19 269deg);
+        --primary-contrast: oklch(100% 0 0deg);
+        --success: oklch(67% 0.15 154deg);
+        --warning: oklch(83% 0.16 83deg);
+        --danger: oklch(62% 0.22 27deg);
+        --shadow-1: 0 1px 2px oklch(0% 0 0deg / 5%);
+        --shadow-2:
+            0 2px 4px oklch(0% 0 0deg / 8%), 0 1px 2px oklch(0% 0 0deg / 5%);
+        --shadow-3:
+            0 4px 8px oklch(0% 0 0deg / 12%), 0 2px 4px oklch(0% 0 0deg / 8%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #090909;
+        --surface: #1a1a1a;
+        --surface-elevated: #222222;
+        --text: #f5f5f5;
+        --text-subtle: #b3b3b3;
+        --border: #333333;
+        --muted: #2a2a2a;
+        --primary: #b0a3ff;
+        --primary-contrast: #000000;
+        --success: #2fdd88;
+        --warning: #ffcb33;
+        --danger: #ff6b6b;
+    }
+
+    @supports (color: oklch(0 0 0)) {
+        :root {
+            --bg: oklch(12% 0 0deg);
+            --surface: oklch(30% 0 0deg);
+            --surface-elevated: oklch(35% 0 0deg);
+            --text: oklch(97% 0 0deg);
+            --text-subtle: oklch(75% 0 0deg);
+            --border: oklch(42% 0 0deg);
+            --muted: oklch(32% 0 0deg);
+            --primary: oklch(75% 0.15 269deg);
+            --primary-contrast: oklch(0% 0 0deg);
+            --success: oklch(82% 0.12 154deg);
+            --warning: oklch(88% 0.14 90deg);
+            --danger: oklch(72% 0.14 27deg);
+        }
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --border: #000000;
+        --text-subtle: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --border: #ffffff;
+            --text-subtle: #ffffff;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --dur-1: 0ms;
+        --dur-2: 0ms;
+        --dur-3: 0ms;
+    }
+}
