@@ -4,6 +4,8 @@ jobs:
     release:
         name: Test
         runs-on: ubuntu-latest
+        env:
+            PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
         steps:
             - name: Checkout
               uses: actions/checkout@v5
@@ -29,6 +31,14 @@ jobs:
 
             - name: Lint files
               run: npm run lint
+
+            - name: Cache Playwright browsers
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/ms-playwright
+                  key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-playwright-
 
             - name: Install Playwright browsers
               run: npm run test:install-browsers
