@@ -1,0 +1,104 @@
+.hero {
+    text-align: center;
+}
+
+.ctaGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: center;
+    margin-block-start: var(--space-l);
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xs);
+}
+
+.note {
+    font-size: var(--step--1);
+    max-inline-size: 14ch;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    justify-content: space-around;
+}
+
+.cards {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+@container (min-width:50rem) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    counter-reset: step;
+}
+
+.steps li {
+    list-style-type: none;
+    counter-increment: step;
+    padding-inline-start: var(--space-m);
+    position: relative;
+}
+
+.steps li::before {
+    content: counter(step) ".";
+    position: absolute;
+    inset-inline-start: calc(var(--space-l) * -1);
+    font-weight: 600;
+}
+
+.checklist {
+    margin: 0;
+    display: grid;
+    gap: var(--space-xs);
+}
+
+.checklist div {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.checklist dt {
+    font-weight: 600;
+}
+
+.checklist dt::before {
+    content: "\2713";
+    color: var(--success);
+    margin-inline-end: var(--space-xs);
+}
+
+.checklist dd {
+    margin: 0;
+}
+
+.footerNav,
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--space-s);
+}
+
+.footerNav {
+    flex-wrap: wrap;
+}
+
+.footerNav a {
+    text-decoration: none;
+}

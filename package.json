@@ -41,6 +41,7 @@
         "eslint": "9.33.0",
         "eslint-config-next": "15.4.6",
         "eslint-plugin-storybook": "9.1.1",
+        "sass": "1.90.0",
         "storybook": "9.1.1",
         "stylelint": "16.23.1",
         "stylelint-config-css-modules": "4.5.1",

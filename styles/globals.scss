@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body), sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+    body {
+        font-size: var(--step-1);
+    }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-header), sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+section {
+    padding-block: var(--space-2xl);
+}
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: clamp(var(--space-s), 5vw, var(--space-l));
+    container-type: inline-size;
+}
+
+.container[data-size="s"] {
+    max-width: var(--max-w-s);
+}
+
+.container[data-size="m"] {
+    max-width: var(--max-w-m);
+}
+
+.container[data-size="l"] {
+    max-width: var(--max-w-l);
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    padding: var(--space-xs);
+    background: var(--primary);
+    color: var(--primary-contrast);
+    transform: translateY(-100%);
+    z-index: 100;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+:where(h1, h2, h3) + p {
+    margin-block-start: var(--space-xs);
+}
+
+p + p {
+    margin-block-start: var(--space-s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media print {
+    nav,
+    .ctaGroup,
+    button,
+    a[href^="mailto"],
+    .skip-link {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+}
