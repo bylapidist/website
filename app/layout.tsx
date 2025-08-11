@@ -28,10 +28,7 @@ export const viewport: Viewport = {
     colorScheme: "light dark",
     width: "device-width",
     initialScale: 1,
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#090909" },
-    ],
+    themeColor: "var(--bg)",
 };
 
 export const metadata: Metadata = {
@@ -87,14 +84,18 @@ export default function RootLayout({
                 <meta
                     name="theme-color"
                     media="(prefers-color-scheme: light)"
-                    content="#ffffff"
+                    content="var(--bg)"
                 />
                 <meta
                     name="theme-color"
                     media="(prefers-color-scheme: dark)"
-                    content="#090909"
+                    content="var(--bg)"
                 />
-                <link rel="mask-icon" href="/mask-icon.svg" color="#6847ff" />
+                <link
+                    rel="mask-icon"
+                    href="/mask-icon.svg"
+                    color="var(--mask-icon)"
+                />
             </head>
             <body className={`${header.variable} ${body.variable}`}>
                 <a href="#main" className="skip-link">

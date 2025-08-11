@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { tokens } from "@/lib/tokens";
 
 export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
@@ -14,8 +15,8 @@ export default function OGImage() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    background: "#000",
-                    color: "#fff",
+                    background: tokens.black,
+                    color: tokens.white,
                     padding: "80px",
                     fontFamily: "sans-serif",
                     backgroundImage:

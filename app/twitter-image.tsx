@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { tokens } from "@/lib/tokens";
 
 export const dynamic = "force-static";
 export const size = { width: 1600, height: 900 };
@@ -14,8 +15,8 @@ export default function TwitterImage() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    background: "#000",
-                    color: "#fff",
+                    background: tokens.black,
+                    color: tokens.white,
                     padding: "96px",
                     fontFamily: "sans-serif",
                     backgroundImage:

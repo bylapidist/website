@@ -10,9 +10,13 @@
     --border: #d0d0d0;
     --muted: #e5e5e5;
 
+    --white: #ffffff;
+    --black: #000000;
+
     /* brand */
     --primary: #4b6be8;
     --primary-contrast: #ffffff;
+    --mask-icon: #6847ff;
 
     /* semantic */
     --success: #1b9a59;
@@ -74,8 +78,11 @@
         --text-subtle: oklch(55% 0 0deg);
         --border: oklch(86% 0.02 95deg);
         --muted: oklch(93% 0.01 95deg);
+        --white: oklch(100% 0 0deg);
+        --black: oklch(0% 0 0deg);
         --primary: oklch(57% 0.19 269deg);
         --primary-contrast: oklch(100% 0 0deg);
+        --mask-icon: oklch(55% 0.25 282deg);
         --success: oklch(67% 0.15 154deg);
         --warning: oklch(83% 0.16 83deg);
         --danger: oklch(62% 0.22 27deg);
