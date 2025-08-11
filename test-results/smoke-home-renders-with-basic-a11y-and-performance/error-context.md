@@ -8,11 +8,11 @@
   - paragraph: I help product orgs ship consistent UI faster — governance, performance, accessibility baked in.
   - link "Book a 20-min discovery call":
     - /url: "#contact"
-  - paragraph: No slides. Real outcomes. 20 minutes.
+  - paragraph: Let's chat.
   - link "Download capabilities deck":
     - /url: /deck.pdf
-  - paragraph: PDF (4 pages). No email gate.
-  - text: 10+ years engineering expertise Enterprise scalable fintech apps Remote UK & beyond
+  - paragraph: No email gate.
+  - text: 15+ years engineering expertise Enterprise scalable fintech apps Remote UK & beyond
   - heading "From problem to solution" [level=2]
   - list:
     - listitem: Tame design drift with scalable tokens.
@@ -40,7 +40,7 @@
     - paragraph: For growing teams.
     - paragraph: Standards, coaching and reviews that raise the bar.
     - paragraph: "Timeline: ongoing"
-  - heading "Approach" [level=2]
+  - heading "My Approach" [level=2]
   - list:
     - listitem:
       - strong: Audit
@@ -51,30 +51,19 @@
     - listitem:
       - strong: Rollout
       - text: → ship, track adoption, close gaps.
-  - heading "Case slice" [level=2]
+  - group: View my Accessibility & Performance pledge▸
+  - heading "Case example" [level=2]
   - article:
     - heading "Global fintech" [level=3]
     - paragraph: "Before: fragmented widgets, duplicated effort, inaccessible flows."
     - paragraph: "After: unified tokens, audited patterns—CI checks keep regressions out."
     - paragraph: "Mechanism: refactored tokens; CI enforces them."
     - paragraph: "After: –38% UI bugs per release · +24% velocity on UI tickets · 95th pctl route paint < 1.2s"
-  - heading "Accessibility & Performance pledge" [level=2]
-  - group:
-    - text: View pledge▸
-    - term: ✓Keyboard-first
-    - definition: Every control works without a mouse.
-    - term: ✓Contrast
-    - definition: Minimum 4.5:1 text contrast.
-    - term: ✓Fast paint
-    - definition: 95th percentile route paint <1.2s.
-    - term: ✓Motion aware
-    - definition: Animations off when you prefer less.
   - heading "Ready to ship?" [level=2]
   - link "Book a 20-min discovery call":
     - /url: mailto:hello@lapidist.net
   - link "Download capabilities deck":
     - /url: /deck.pdf
-  - paragraph: "Availability: booking for next intake"
   - navigation "Footer":
     - list:
       - listitem:

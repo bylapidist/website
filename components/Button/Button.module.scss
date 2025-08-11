@@ -56,9 +56,9 @@
 
     .button:not(:disabled)[data-variant="primary"]:hover {
         background: color-mix(
-                in oklch,
-                var(--primary) 90%,
-                var(--primary-contrast)
+            in oklch,
+            var(--primary) 90%,
+            var(--primary-contrast)
         );
         box-shadow: var(--shadow-2);
     }
