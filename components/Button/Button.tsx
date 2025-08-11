@@ -13,7 +13,8 @@ type BaseProps = {
     children: ReactNode;
 };
 
-type ButtonProps = BaseProps & ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = BaseProps &
+    ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined };
 type AnchorProps = BaseProps &
     AnchorHTMLAttributes<HTMLAnchorElement> & {
         href: string;
@@ -21,15 +22,15 @@ type AnchorProps = BaseProps &
 
 type Props = ButtonProps | AnchorProps;
 
-export default function Button(props: Props) {
-    const {
-        variant = "primary",
-        size = "md",
-        loading = false,
-        className,
-        children,
-        ...rest
-    } = props as BaseProps & Record<string, unknown>;
+export default function Button({
+    variant = "primary",
+    size = "md",
+    loading = false,
+    className,
+    children,
+    href,
+    ...rest
+}: Props) {
     const classes = [styles.button, className].filter(Boolean).join(" ");
     const data = {
         "data-variant": variant,
@@ -37,11 +38,12 @@ export default function Button(props: Props) {
         "data-loading": loading,
     } as const;
 
-    if ("href" in props) {
+    if (href) {
         return (
             <a
                 {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
                 {...data}
+                href={href}
                 className={classes}
                 aria-busy={loading || undefined}
             >
@@ -50,16 +52,15 @@ export default function Button(props: Props) {
         );
     }
 
+    const buttonRest = rest as ButtonHTMLAttributes<HTMLButtonElement>;
+
     return (
         <button
-            {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
+            {...buttonRest}
             {...data}
             className={classes}
             aria-busy={loading || undefined}
-            disabled={
-                loading ||
-                (rest as ButtonHTMLAttributes<HTMLButtonElement>).disabled
-            }
+            disabled={loading || buttonRest.disabled}
         >
             {children}
         </button>

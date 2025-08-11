@@ -123,12 +123,20 @@
 
 @media (prefers-contrast: more) {
     :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --primary: #0000ff;
+        --primary-contrast: #ffffff;
         --border: #000000;
         --text-subtle: #000000;
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
+            --bg: #000000;
+            --surface: #000000;
+            --primary: #ffff00;
+            --primary-contrast: #000000;
             --border: #ffffff;
             --text-subtle: #ffffff;
         }

@@ -2,6 +2,18 @@
     text-align: center;
 }
 
+.heroTitle {
+    max-inline-size: 25ch;
+    text-wrap: balance;
+    hyphens: auto;
+}
+
+.heroIntro {
+    max-inline-size: 45ch;
+    text-wrap: balance;
+    hyphens: auto;
+}
+
 .ctaGroup {
     display: flex;
     flex-wrap: wrap;
@@ -110,4 +122,9 @@
 
 .footerNav a {
     text-decoration: none;
+    padding: var(--space-xs) var(--space-s);
+}
+
+.social a {
+    padding: var(--space-xs) var(--space-s);
 }
