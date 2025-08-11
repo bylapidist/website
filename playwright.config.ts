@@ -3,6 +3,16 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
     testDir: "./tests",
     use: { baseURL: "http://localhost:3000" },
+    projects: [
+        {
+            name: "light",
+            use: { colorScheme: "light" },
+        },
+        {
+            name: "dark",
+            use: { colorScheme: "dark" },
+        },
+    ],
     webServer: {
         command: "npm run build:next && npm run start",
         url: "http://localhost:3000",
