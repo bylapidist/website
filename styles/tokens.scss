@@ -1,6 +1,9 @@
 :root {
     color-scheme: light dark;
 
+    /* Colors target WCAG 2.2 AA contrast.  `prefers-contrast: more`
+       overrides below raise this to AAA. */
+
     /* neutral palette */
     --bg: #ffffff;
     --surface: #f5f5f5;
@@ -9,10 +12,22 @@
     --text-subtle: #555555;
     --border: #d0d0d0;
     --muted: #e5e5e5;
+    --surface-hover: color-mix(in srgb, var(--surface) 90%, var(--text) 10%);
+    --surface-active: color-mix(in srgb, var(--surface) 80%, var(--text) 20%);
 
     /* brand */
     --primary: #4b6be8;
     --primary-contrast: #ffffff;
+    --primary-hover: color-mix(
+        in srgb,
+        var(--primary) 90%,
+        var(--primary-contrast) 10%
+    );
+    --primary-active: color-mix(
+        in srgb,
+        var(--primary) 80%,
+        var(--primary-contrast) 20%
+    );
 
     /* semantic */
     --success: #1b9a59;
@@ -60,6 +75,11 @@
     --max-w-m: 60rem;
     --max-w-l: 72rem;
 
+    /* z-index scale */
+    --z-1: 10; /* base content */
+    --z-2: 100; /* sticky elements */
+    --z-3: 1000; /* overlays */
+
     /* focus */
     --focus-ring: 2px solid var(--primary);
     --focus-ring-offset: 2px;
@@ -74,8 +94,28 @@
         --text-subtle: oklch(55% 0 0deg);
         --border: oklch(86% 0.02 95deg);
         --muted: oklch(93% 0.01 95deg);
+        --surface-hover: color-mix(
+            in oklch,
+            var(--surface) 90%,
+            var(--text) 10%
+        );
+        --surface-active: color-mix(
+            in oklch,
+            var(--surface) 80%,
+            var(--text) 20%
+        );
         --primary: oklch(57% 0.19 269deg);
         --primary-contrast: oklch(100% 0 0deg);
+        --primary-hover: color-mix(
+            in oklch,
+            var(--primary) 90%,
+            var(--primary-contrast) 10%
+        );
+        --primary-active: color-mix(
+            in oklch,
+            var(--primary) 80%,
+            var(--primary-contrast) 20%
+        );
         --success: oklch(67% 0.15 154deg);
         --warning: oklch(83% 0.16 83deg);
         --danger: oklch(62% 0.22 27deg);
@@ -96,8 +136,28 @@
         --text-subtle: #b3b3b3;
         --border: #333333;
         --muted: #2a2a2a;
+        --surface-hover: color-mix(
+            in srgb,
+            var(--surface) 90%,
+            var(--text) 10%
+        );
+        --surface-active: color-mix(
+            in srgb,
+            var(--surface) 80%,
+            var(--text) 20%
+        );
         --primary: #b0a3ff;
         --primary-contrast: #000000;
+        --primary-hover: color-mix(
+            in srgb,
+            var(--primary) 90%,
+            var(--primary-contrast) 10%
+        );
+        --primary-active: color-mix(
+            in srgb,
+            var(--primary) 80%,
+            var(--primary-contrast) 20%
+        );
         --success: #2fdd88;
         --warning: #ffcb33;
         --danger: #ff6b6b;
@@ -112,8 +172,28 @@
             --text-subtle: oklch(75% 0 0deg);
             --border: oklch(42% 0 0deg);
             --muted: oklch(32% 0 0deg);
+            --surface-hover: color-mix(
+                in oklch,
+                var(--surface) 90%,
+                var(--text) 10%
+            );
+            --surface-active: color-mix(
+                in oklch,
+                var(--surface) 80%,
+                var(--text) 20%
+            );
             --primary: oklch(75% 0.15 269deg);
             --primary-contrast: oklch(0% 0 0deg);
+            --primary-hover: color-mix(
+                in oklch,
+                var(--primary) 90%,
+                var(--primary-contrast) 10%
+            );
+            --primary-active: color-mix(
+                in oklch,
+                var(--primary) 80%,
+                var(--primary-contrast) 20%
+            );
             --success: oklch(82% 0.12 154deg);
             --warning: oklch(88% 0.14 90deg);
             --danger: oklch(72% 0.14 27deg);
@@ -121,6 +201,7 @@
     }
 }
 
+/* High contrast mode for WCAG 2.2 AAA */
 @media (prefers-contrast: more) {
     :root {
         --bg: #ffffff;
@@ -129,6 +210,10 @@
         --primary-contrast: #ffffff;
         --border: #000000;
         --text-subtle: #000000;
+        --surface-hover: #e5e5e5;
+        --surface-active: #d0d0d0;
+        --primary-hover: #0000ee;
+        --primary-active: #0000cc;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -139,6 +224,10 @@
             --primary-contrast: #000000;
             --border: #ffffff;
             --text-subtle: #ffffff;
+            --surface-hover: #1a1a1a;
+            --surface-active: #333333;
+            --primary-hover: #ffff66;
+            --primary-active: #ffff00;
         }
     }
 }

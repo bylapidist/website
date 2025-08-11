@@ -74,7 +74,7 @@ section {
     background: var(--primary);
     color: var(--primary-contrast);
     transform: translateY(-100%);
-    z-index: 100;
+    z-index: var(--z-3);
 }
 
 .skip-link:focus {
@@ -88,7 +88,7 @@ section {
 :target {
     outline: var(--focus-ring);
     outline-offset: var(--focus-ring-offset);
-    background: color-mix(in srgb, var(--primary) 15%, transparent);
+    background: var(--primary-hover);
 }
 
 summary {
@@ -117,7 +117,11 @@ details[open] summary::after {
 
 @media (hover: hover) and (pointer: fine) {
     summary:hover {
-        background: var(--muted);
+        background: var(--surface-hover);
+    }
+
+    summary:active {
+        background: var(--surface-active);
     }
 }
 
