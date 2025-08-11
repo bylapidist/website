@@ -7,5 +7,14 @@ export default {
         "custom-property-empty-line-before": null,
         "declaration-block-no-redundant-longhand-properties": null,
         "media-feature-range-notation": null,
+        "selector-class-pattern": null,
     },
+    overrides: [
+        {
+            files: ["**/*.module.scss"],
+            rules: {
+                "selector-class-pattern": "^[a-z][a-zA-Z0-9]*$",
+            },
+        },
+    ],
 };

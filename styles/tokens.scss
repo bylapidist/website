@@ -20,8 +20,8 @@
     --danger: #d93025;
 
     /* motion */
-    --ease-standard: cubic-bezier(.2, .8, .2, 1);
-    --ease-emph: cubic-bezier(.2, .9, .1, 1);
+    --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-emph: cubic-bezier(0.2, 0.9, 0.1, 1);
     --dur-1: 120ms;
     --dur-2: 200ms;
     --dur-3: 320ms;
@@ -49,7 +49,7 @@
     --shadow-3: 0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
 
     /* typography */
-    --step--1: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
+    --step-negative-1: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
     --step-0: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
     --step-1: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
     --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);

@@ -1,6 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
 
-import abstract1 from "@/app/(assets)/images/abstract-1.svg";
 import abstract2 from "@/app/(assets)/images/abstract-2.svg";
 import styles from "@/app/page.module.scss";
 
