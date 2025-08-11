@@ -98,7 +98,7 @@ export function buildStructuredData() {
                         name: "Are you taking on new projects?",
                         acceptedAnswer: {
                             "@type": "Answer",
-                            text: "Yes, I available for new roles or contract projects. Get in touch.",
+                            text: "Yes, I am available for new roles or contract projects. Get in touch.",
                         },
                     },
                 ],
