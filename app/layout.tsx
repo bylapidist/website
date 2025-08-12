@@ -3,6 +3,7 @@ import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/tokens.scss";
 import "@/styles/globals.scss";
 import "@/styles/typography.scss";
+import Header from "@/components/Header/Header";
 
 // Load variable fonts so optical size and slant can be controlled via
 // `font-variation-settings` in CSS.
@@ -100,6 +101,7 @@ export default function RootLayout({
                 <a href="#main" className="skip-link">
                     Skip to content
                 </a>
+                <Header />
                 <main id="main">{children}</main>
             </body>
         </html>

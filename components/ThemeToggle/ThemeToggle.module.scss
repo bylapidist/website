@@ -1,0 +1,25 @@
+@layer components {
+    .toggle {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        padding: var(--space-xs);
+        border-radius: var(--radius-s);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-block-size: 44px;
+        min-inline-size: 44px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .toggle:hover {
+            background: var(--surface-hover);
+        }
+
+        .toggle:active {
+            background: var(--surface-active);
+        }
+    }
+}
