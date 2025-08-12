@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
-
 import "@/styles/tokens.scss";
 import "@/styles/globals.scss";
 
@@ -94,6 +93,12 @@ export default function RootLayout({
                     media="(prefers-color-scheme: dark)"
                     content="#090909"
                 />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossOrigin="anonymous"
+                />
+                <link rel="preload" as="image" href="/opengraph-image" />
                 <link rel="mask-icon" href="/mask-icon.svg" color="#6847ff" />
             </head>
             <body className={`${header.variable} ${body.variable}`}>
