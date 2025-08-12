@@ -1,22 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Button from "@/components/Button/Button";
 import Container from "@/components/Container/Container";
+import HeroBackground from "@/components/HeroBackground/HeroBackground";
 import styles from "./Hero.module.scss";
-
-const HeroBackground = dynamic(
-    () => import("@/components/HeroBackground/HeroBackground"),
-    {
-        ssr: false,
-        loading: () => (
-            <picture>
-                <source srcSet="/hero-bg-dark.svg" media="(prefers-color-scheme: dark)" />
-                <img src="/hero-bg-light.svg" alt="" aria-hidden="true" />
-            </picture>
-        ),
-    }
-);
 
 export default function Hero() {
     return (
