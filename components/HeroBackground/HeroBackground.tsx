@@ -41,15 +41,17 @@ export default function HeroBackground() {
         const style = getComputedStyle(document.documentElement);
         const parseColor = (variable: string) => {
             const value = style.getPropertyValue(variable).trim();
-            const element = document.createElement("div");
-            element.style.color = value;
-            document.body.appendChild(element);
-            const rgb = getComputedStyle(element).color;
-            element.remove();
-            return rgb;
+            const canvas = document.createElement("canvas");
+            canvas.width = canvas.height = 1;
+            const ctx = canvas.getContext("2d");
+            if (!ctx) return new Color(value);
+            ctx.fillStyle = value;
+            ctx.fillRect(0, 0, 1, 1);
+            const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+            return new Color(r / 255, g / 255, b / 255);
         };
-        const color1 = new Color(parseColor("--surface"));
-        const color2 = new Color(parseColor("--bg"));
+        const color1 = parseColor("--surface");
+        const color2 = parseColor("--bg");
 
         const material = new ShaderMaterial({
             uniforms: {
