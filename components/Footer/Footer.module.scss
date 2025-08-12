@@ -1,4 +1,12 @@
 @layer components {
+    .footer {
+        padding-block: var(--space-xl);
+        border-block-start: 1px solid var(--border);
+        font-size: var(--step-negative-1);
+        text-align: center;
+        color: var(--text-subtle);
+    }
+
     .footerNav,
     .social {
         list-style: none;
@@ -6,10 +14,16 @@
         display: flex;
         gap: var(--space-s);
         align-items: center;
+        justify-content: center;
     }
 
     .footerNav {
         flex-wrap: wrap;
+        margin-block-end: var(--space-m);
+    }
+
+    .footer p {
+        margin-block-start: var(--space-s);
     }
 
     .footerNav a,
@@ -21,5 +35,6 @@
         min-inline-size: 44px;
         text-decoration: none;
         padding: var(--space-xs) var(--space-s);
+        color: var(--text);
     }
 }
