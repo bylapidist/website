@@ -4,10 +4,11 @@ import styles from "./Contact.module.scss";
 
 export default function Contact() {
     return (
-        <Section id="contact" labelledBy="contact-heading">
-            <h2 id="contact-heading" className={styles.heading}>
-                Ready to ship?
-            </h2>
+        <Section
+            id="contact"
+            heading="Ready to ship?"
+            headingClassName={styles.heading}
+        >
             <div className={styles.ctaGroup}>
                 <Button href="mailto:hello@lapidist.net">
                     Book a 20-min discovery call

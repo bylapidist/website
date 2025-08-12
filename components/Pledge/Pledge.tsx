@@ -4,14 +4,18 @@ import styles from "./Pledge.module.scss";
 
 export default function Pledge() {
     return (
-        <Section labelledBy="pledge-heading">
-            <h2 id="pledge-heading">
+        <Section
+            id="pledge"
+            heading={
                 <VisuallyHidden>
                     Accessibility &amp; Performance pledge
                 </VisuallyHidden>
-            </h2>
+            }
+        >
             <details>
-                <summary>View my Accessibility &amp; Performance pledge</summary>
+                <summary>
+                    View my Accessibility &amp; Performance pledge
+                </summary>
                 <dl className={styles.checklist}>
                     <div>
                         <dt>Keyboard-first:</dt>
