@@ -10,6 +10,12 @@
         color: var(--text-subtle);
     }
 
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footerNav,
     .social {
         list-style: none;

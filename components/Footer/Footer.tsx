@@ -5,7 +5,7 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <Container>
+            <Container className={styles.footerContainer}>
                 <nav aria-label="Footer">
                     <ul className={styles.footerNav}>
                         <li>
@@ -19,20 +19,7 @@ export default function Footer() {
                         </li>
                     </ul>
                 </nav>
-                <p>
-                    Lapidist Ltd, registered in Scotland. Company number
-                    SC549211.
-                </p>
-                <p>© {new Date().getFullYear()} Brett Dorrans.</p>
                 <ul className={styles.social}>
-                    <li>
-                        <a
-                            href="https://twitter.com/bylapidist"
-                            rel="noopener noreferrer"
-                        >
-                            Twitter
-                        </a>
-                    </li>
                     <li>
                         <a
                             href="https://linkedin.com/in/brettdorrans"
@@ -41,7 +28,19 @@ export default function Footer() {
                             LinkedIn
                         </a>
                     </li>
+                    <li>
+                        <a
+                            href="https://guthub.com/bylapidist"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                    </li>
                 </ul>
+                <p>
+                    Lapidist Ltd, registered in Scotland.󠁿 Company number
+                    SC549211.
+                </p>
             </Container>
         </footer>
     );

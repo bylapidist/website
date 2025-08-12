@@ -28,6 +28,9 @@
         var(--primary) 80%,
         var(--primary-contrast) 20%
     );
+    --logo-blue: oklch(.65 .107 196.438);
+    --logo-green: oklch(.6927 .1301 138.13);
+    --logo-yellow: oklch(.841 .125 89.565);
 
     /* semantic */
     --success: #1b9a59;
@@ -76,7 +79,7 @@
     --step-5: clamp(3rem, 2.5rem + 2.5vw, 3.5rem);
     --leading-tight: 1.2;
     --leading-normal: 1.5;
-    --measure: 60ch;
+    --measure: 62ch;
     --font-opsz: 14;
     --font-slnt: 0;
 

@@ -1,7 +1,6 @@
 @layer components {
     .header {
         border-block-end: 1px solid var(--border);
-        background: var(--surface);
     }
 
     .inner {
@@ -14,11 +13,24 @@
     .logo {
         display: inline-flex;
         align-items: center;
-        gap: var(--space-xs);
+        gap: var(--space-s);
         text-decoration: none;
         color: var(--text);
-        font-size: var(--step-0);
+        font-size: var(--step-1);
         font-weight: 600;
+        font-family: var(--font-header), sans-serif;
+    }
+
+    .logoBlue {
+        fill: var(--logo-blue);
+    }
+
+    .logoGreen {
+        fill: var(--logo-green);
+    }
+
+    .logoYellow {
+        fill: var(--logo-yellow);
     }
 
     .logoMark {
@@ -33,16 +45,6 @@
         gap: var(--space-m);
         margin: 0;
         padding: 0;
-    }
-
-    .nav a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-block-size: var(--size-tap-min);
-        min-inline-size: var(--size-tap-min);
-        text-decoration: none;
-        padding: var(--space-xs) var(--space-s);
-        color: var(--text);
+        font-size: var(--step-0);
     }
 }

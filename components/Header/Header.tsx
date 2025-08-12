@@ -7,32 +7,33 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <Container className={styles.inner} as="div" cq="page">
-                <Link href="/" className={styles.logo} aria-label="Brett Dorrans">
+                <Link
+                    href="/"
+                    className={styles.logo}
+                    aria-label="Brett Dorrans"
+                >
                     <svg
                         aria-hidden="true"
-                        viewBox="0 0 32 32"
+                        viewBox="0 0 64 64"
                         className={styles.logoMark}
                     >
-                        <rect width="32" height="32" rx="4" />
+                        <polygon
+                            className={styles.logoBlue}
+                            points="0,0 0,32 32,32"
+                        ></polygon>
+                        <polygon
+                            className={styles.logoGreen}
+                            points="0,32 0,64 32,64"
+                        ></polygon>
+                        <polygon
+                            className={styles.logoYellow}
+                            points="32,0 32,64 64,32"
+                        ></polygon>
                     </svg>
                     <span>Brett Dorrans</span>
                 </Link>
-                <nav aria-label="Primary">
-                    <ul className={styles.nav}>
-                        <li>
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
                 <ThemeToggle />
             </Container>
         </header>
     );
 }
-
