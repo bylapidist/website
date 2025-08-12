@@ -2,6 +2,8 @@
 
 .hero {
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .heroTitle {
@@ -31,4 +33,13 @@
     font-size: var(--step-negative-1);
     max-inline-size: 14ch;
     text-align: center;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }

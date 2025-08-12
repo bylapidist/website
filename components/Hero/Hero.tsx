@@ -1,6 +1,7 @@
 import Button from "@/components/Button/Button";
 import Container from "@/components/Container/Container";
 import styles from "./Hero.module.scss";
+import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
     return (
@@ -9,6 +10,7 @@ export default function Hero() {
             role="region"
             aria-labelledby="hero-heading"
         >
+            <HeroBackground />
             <Container size="l">
                 <div className={styles.ctaGroup}>
                     <h1 id="hero-heading" className={styles.heroTitle}>
