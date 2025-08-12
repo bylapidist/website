@@ -1,5 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
-import abstract2 from "@/app/(assets)/images/abstract-2.svg";
+import Image from "next/image";
 import Card from "@/components/Card/Card";
 import Container from "@/components/Container/Container";
 import styles from "./CaseExample.module.scss";
@@ -33,7 +32,7 @@ export default function CaseExample() {
                     </p>
                     <p>Mechanism: refactored tokens; CI enforces them.</p>
                     <Image
-                        src={abstract2 as StaticImageData}
+                        src="/images/abstract-2.svg"
                         alt=""
                         width={400}
                         height={300}
