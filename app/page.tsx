@@ -1,19 +1,13 @@
-import dynamic from "next/dynamic";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
+import Stats from "@/components/Stats/Stats";
+import ProblemToSolution from "@/components/ProblemToSolution/ProblemToSolution";
+import Services from "@/components/Services/Services";
+import Approach from "@/components/Approach/Approach";
+import Pledge from "@/components/Pledge/Pledge";
+import CaseExample from "@/components/CaseExample/CaseExample";
+import Contact from "@/components/Contact/Contact";
 import { buildStructuredData } from "./structuredData";
-
-const Stats = dynamic(() => import("@/components/Stats/Stats"));
-const ProblemToSolution = dynamic(
-    () => import("@/components/ProblemToSolution/ProblemToSolution"),
-);
-const Services = dynamic(() => import("@/components/Services/Services"));
-const Approach = dynamic(() => import("@/components/Approach/Approach"));
-const Pledge = dynamic(() => import("@/components/Pledge/Pledge"));
-const CaseExample = dynamic(
-    () => import("@/components/CaseExample/CaseExample"),
-);
-const Contact = dynamic(() => import("@/components/Contact/Contact"));
 
 export default function Page() {
     const structuredData = buildStructuredData();
