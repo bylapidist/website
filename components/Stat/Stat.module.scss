@@ -7,27 +7,27 @@
     gap: var(--space-2xs);
 }
 
-.value {
+.stat dt {
     font-size: var(--step-2);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
 
-.label {
+.stat dd {
     font-size: var(--step-negative-1);
     color: var(--text-subtle);
 }
 
-.stat[data-size="lg"] .value {
+.stat[data-size="lg"] dt {
     font-size: var(--step-3);
 }
 
-.stat[data-size="lg"] .label {
+.stat[data-size="lg"] dd {
     font-size: var(--step-0);
 }
 
 @container section (max-width: 20rem) {
-    .value {
+    .stat dt {
         font-size: var(--step-1);
     }
 }
