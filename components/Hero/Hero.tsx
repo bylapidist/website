@@ -15,8 +15,8 @@ export default function Hero() {
                     Ship design systems teams trust.
                 </h1>
                 <p className={styles.heroIntro}>
-                    I help product orgs ship consistent UI faster &ndash;
-                    governance, performance, and accessibility baked in.
+                    I help product orgs ship consistent UI faster. Governance,
+                    performance, and accessibility baked in.
                 </p>
             </div>
             <div className={styles.ctaGroup}>

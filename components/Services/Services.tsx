@@ -29,7 +29,7 @@ export default function Services() {
                         guidance.
                     </p>
                     <p>
-                        Raise quality through tailored standards, coaching and
+                        Raise quality through tailored standards, coaching, and
                         reviews.
                     </p>
                 </Card>

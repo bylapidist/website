@@ -30,7 +30,10 @@ export default function Header() {
                             points="32,0 32,64 64,32"
                         ></polygon>
                     </svg>
-                    <span>Brett Dorrans</span>
+                    <span className={styles.logoLockup}>
+                        <span>Brett</span>
+                        <span>Dorrans</span>
+                    </span>
                 </Link>
                 <ThemeToggle />
             </Container>
