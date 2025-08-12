@@ -1,0 +1,28 @@
+@mixin steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    counter-reset: step;
+
+    li {
+        list-style-type: none;
+        counter-increment: step;
+        padding-inline-start: var(--space-m);
+        position: relative;
+
+        &::before {
+            content: counter(step) ".";
+            position: absolute;
+            inset-inline-start: calc(var(--space-l) * -1);
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: center;
+    margin-block-start: var(--space-2xl);
+}

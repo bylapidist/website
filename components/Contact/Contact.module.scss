@@ -1,7 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .ctaGroup {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-s);
-    justify-content: center;
-    margin-block-start: var(--space-2xl);
+    @include cta-group;
 }

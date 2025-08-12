@@ -6,7 +6,7 @@
 
 .checklist div {
     display: flex;
-    margin-top: var(--space-xs);
+    margin-block-start: var(--space-xs);
     gap: var(--space-s);
 }
 

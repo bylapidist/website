@@ -1,7 +1,7 @@
 .cards {
     display: grid;
     gap: var(--space-xl);
-    margin-top: var(--space-l);
+    margin-block-start: var(--space-l);
 }
 
 @container (min-width:50rem) {
