@@ -1,0 +1,12 @@
+/* stylelint-disable no-invalid-position-declaration */
+@mixin fade-slide-up {
+    opacity: 0;
+    transform: translateY(var(--space-m));
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition-property: opacity, transform;
+        transition-duration: var(--dur-3);
+        transition-timing-function: var(--ease-standard);
+    }
+}
+/* stylelint-enable no-invalid-position-declaration */

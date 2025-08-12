@@ -1,11 +1,17 @@
+"use client";
+
 import Container from "@/components/Container/Container";
 import Stat from "@/components/Stat/Stat";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { useInView } from "@/lib/motion";
 import styles from "./Stats.module.scss";
 
 export default function Stats() {
+    const ref = useInView<HTMLElement>();
     return (
         <section
+            ref={ref}
+            className={styles.root}
             role="region"
             aria-labelledby="stats-heading"
             style={{ contentVisibility: "auto" }}
