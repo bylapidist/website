@@ -14,9 +14,11 @@ body {
     font-family: var(--font-body), sans-serif;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
     font-variant-numeric: tabular-nums;
     font-feature-settings: "kern", "liga", "clig", "calt";
+    font-variation-settings: "opsz" var(--font-opsz),
+        "slnt" var(--font-slnt);
 }
 
 @supports (font-size: clamp(1rem, 1vw, 2rem)) {
@@ -38,16 +40,9 @@ svg {
     font-family: var(--font-header), sans-serif;
     text-wrap: balance;
     hyphens: auto;
-    margin-block: 0;
-}
-
-:where(p, ul, ol, dl) {
-    margin-block: 0;
-}
-
-:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl)
-    + :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl) {
-    margin-block-start: var(--space-m);
+    line-height: var(--leading-tight);
+    font-variation-settings: "opsz" var(--font-opsz),
+        "slnt" var(--font-slnt);
 }
 
 a {
@@ -81,9 +76,6 @@ section {
     transform: translateY(0);
 }
 
-:where(h1, h2, h3) + p {
-    margin-block-start: var(--space-xs);
-}
 
 :target {
     outline: var(--focus-ring);

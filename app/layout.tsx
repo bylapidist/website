@@ -2,25 +2,20 @@ import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/tokens.scss";
 import "@/styles/globals.scss";
+import "@/styles/typography.scss";
 
-// Limit downloaded font weights to reduce font file size.
-// Only the normal (400) and semi-bold (600) weights are used across the
-// site, so we explicitly request those weights from Google Fonts. This
-// prevents the default variable font files from being included, trimming
-// several unnecessary woff2 files from the build and improving
-// Lighthouse performance scores.
+// Load variable fonts so optical size and slant can be controlled via
+// `font-variation-settings` in CSS.
 const header = Lexend_Deca({
     variable: "--font-header",
     subsets: ["latin"],
     display: "swap",
-    weight: ["400", "600"],
 });
 
 const body = Roboto_Mono({
     variable: "--font-body",
     subsets: ["latin"],
     display: "swap",
-    weight: ["400", "600"],
 });
 
 export const viewport: Viewport = {
