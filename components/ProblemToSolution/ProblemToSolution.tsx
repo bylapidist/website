@@ -3,9 +3,15 @@ import styles from "./ProblemToSolution.module.scss";
 
 export default function ProblemToSolution() {
     return (
-        <section style={{ contentVisibility: "auto" }}>
+        <section
+            role="region"
+            aria-labelledby="problem-to-solution-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
-                <h2>From problem to solution</h2>
+                <h2 id="problem-to-solution-heading">
+                    From problem to solution
+                </h2>
                 <ul className={styles.steps}>
                     <li>Tame design drift with scalable tokens.</li>
                     <li>Cut PR nitpicks via shared components.</li>

@@ -4,9 +4,14 @@ import styles from "./Contact.module.scss";
 
 export default function Contact() {
     return (
-        <section id="contact" style={{ contentVisibility: "auto" }}>
+        <section
+            id="contact"
+            role="region"
+            aria-labelledby="contact-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
-                <h2>Ready to ship?</h2>
+                <h2 id="contact-heading">Ready to ship?</h2>
                 <div className={styles.ctaGroup}>
                     <Button href="mailto:hello@lapidist.net">
                         Book a 20-min discovery call
