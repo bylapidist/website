@@ -1,8 +1,24 @@
 @layer components {
+    .services {
+        background: var(--surface);
+    }
+
     .cards {
         display: grid;
         gap: var(--space-xl);
         margin-block-start: var(--space-l);
+    }
+
+    .icon {
+        align-self: start;
+        margin-block-end: var(--space-s);
+        background: var(--muted);
+        border-radius: var(--radius-s);
+    }
+
+    .cta {
+        margin-block-start: var(--space-xl);
+        text-align: center;
     }
 
     @container (min-width:50rem) {

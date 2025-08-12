@@ -1,0 +1,29 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .grid {
+        display: grid;
+        gap: var(--space-l);
+    }
+
+    .case {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+    }
+
+    .visual {
+        width: 100%;
+        background: var(--muted);
+        border-radius: var(--radius-s);
+    }
+
+    .impact {
+        font-size: var(--step-1);
+    }
+
+    .cta {
+        margin-block-start: var(--space-l);
+        text-align: center;
+    }
+}

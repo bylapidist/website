@@ -18,6 +18,26 @@ export default function Hero() {
                     I help product orgs ship consistent UI faster &ndash;
                     governance, performance, and accessibility baked in.
                 </p>
+                <p className={styles.personality}>
+                    I’ve spent 15 years making complex UI systems feel
+                    simple—for teams from scrappy startups to global
+                    enterprises.
+                </p>
+                <p className={styles.metrics}>
+                    <strong>15+ years experience</strong> •{" "}
+                    <strong>-38% UI bugs</strong> •{" "}
+                    <strong>+24% delivery velocity</strong>
+                </p>
+                <div className={styles.signature}>
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        width="80"
+                        height="40"
+                        viewBox="0 0 80 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    ></svg>
+                </div>
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
