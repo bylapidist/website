@@ -39,7 +39,8 @@
         "next": "15.4.6",
         "prettier": "3.6.2",
         "react": "19.1.1",
-        "react-dom": "19.1.1"
+        "react-dom": "19.1.1",
+        "three": "^0.179.1"
     },
     "devDependencies": {
         "@axe-core/playwright": "4.10.2",
@@ -53,6 +54,7 @@
         "@types/node": "24.2.1",
         "@types/react": "19.1.10",
         "@types/react-dom": "19.1.7",
+        "@types/three": "^0.179.0",
         "eslint": "9.33.0",
         "eslint-config-next": "15.4.6",
         "eslint-import-resolver-typescript": "^4.4.4",
