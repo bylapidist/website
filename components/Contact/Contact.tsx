@@ -1,28 +1,21 @@
 import Button from "@/components/Button/Button";
-import Container from "@/components/Container/Container";
+import Section from "@/components/Section/Section";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
     return (
-        <section
-            id="contact"
-            role="region"
-            aria-labelledby="contact-heading"
-            style={{ contentVisibility: "auto" }}
-        >
-            <Container>
-                <h2 id="contact-heading" className={styles.heading}>
-                    Ready to ship?
-                </h2>
-                <div className={styles.ctaGroup}>
-                    <Button href="mailto:hello@lapidist.net">
-                        Book a 20-min discovery call
-                    </Button>
-                    <Button href="/brett-dorrans-cv.pdf" variant="secondary">
-                        Download capabilities deck
-                    </Button>
-                </div>
-            </Container>
-        </section>
+        <Section id="contact" labelledBy="contact-heading">
+            <h2 id="contact-heading" className={styles.heading}>
+                Ready to ship?
+            </h2>
+            <div className={styles.ctaGroup}>
+                <Button href="mailto:hello@lapidist.net">
+                    Book a 20-min discovery call
+                </Button>
+                <Button href="/brett-dorrans-cv.pdf" variant="secondary">
+                    Download capabilities deck
+                </Button>
+            </div>
+        </Section>
     );
 }
