@@ -31,8 +31,8 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-block-size: 44px;
-        min-inline-size: 44px;
+        min-block-size: var(--size-tap-min);
+        min-inline-size: var(--size-tap-min);
         text-decoration: none;
         padding: var(--space-xs) var(--space-s);
         color: var(--text);
