@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className={styles.footer}>
             <Container>
                 <nav aria-label="Footer">
                     <ul className={styles.footerNav}>
