@@ -28,9 +28,9 @@
         var(--primary) 80%,
         var(--primary-contrast) 20%
     );
-    --logo-blue: oklch(.65 .107 196.438);
-    --logo-green: oklch(.6927 .1301 138.13);
-    --logo-yellow: oklch(.841 .125 89.565);
+    --logo-blue: oklch(65% .107 196.438deg);
+    --logo-green: oklch(69.27% .1301 138.13deg);
+    --logo-yellow: oklch(84.1% .125 89.565deg);
 
     /* semantic */
     --success: #1b9a59;

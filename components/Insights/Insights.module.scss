@@ -1,0 +1,16 @@
+@layer components {
+    .insights {
+        background: var(--surface-1);
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--space-l);
+    }
+
+    .visual {
+        inline-size: 100%;
+        block-size: 7rem;
+        background: var(--surface-3);
+    }
+}

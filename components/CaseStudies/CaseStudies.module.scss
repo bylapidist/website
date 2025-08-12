@@ -1,0 +1,44 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .caseStudies {
+        background: var(--surface-1);
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--space-l);
+    }
+
+    .case {
+        display: grid;
+        gap: var(--space-s);
+    }
+
+    .visual {
+        inline-size: 100%;
+        block-size: 7rem;
+        background: var(--surface-3);
+    }
+
+    .case dl {
+        display: grid;
+        gap: var(--space-2xs);
+    }
+
+    .case dt {
+        font-weight: 600;
+    }
+
+    .case .stat {
+        display: inline-block;
+        font-size: var(--step-1);
+        font-weight: 700;
+        margin-inline-end: var(--space-s);
+    }
+
+    .cta {
+        margin-block-start: var(--space-l);
+        text-align: center;
+    }
+}

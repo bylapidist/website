@@ -1,0 +1,25 @@
+@layer components {
+    .trusted {
+        text-align: center;
+        background: var(--surface-2);
+    }
+
+    .intro {
+        font-size: var(--step-1);
+        margin-block-end: var(--space-s);
+    }
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-l);
+        list-style: none;
+        padding: 0;
+    }
+
+    .logo {
+        inline-size: 6rem;
+        block-size: 2rem;
+        background: var(--surface-3);
+    }
+}
