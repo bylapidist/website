@@ -1,17 +1,19 @@
 @use "../../styles/motion" as *;
 
-.root {
-    @include fade-slide-up;
+@layer components {
+    .root {
+        @include fade-slide-up;
 
-    &.isVisible {
-        opacity: 1;
-        transform: translateY(0);
+        &.isVisible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-}
 
-.stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xl);
-    justify-content: space-between;
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xl);
+        justify-content: space-between;
+    }
 }

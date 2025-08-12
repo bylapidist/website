@@ -1,11 +1,13 @@
-.cards {
-    display: grid;
-    gap: var(--space-xl);
-    margin-block-start: var(--space-l);
-}
-
-@container (min-width:50rem) {
+@layer components {
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-l);
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }

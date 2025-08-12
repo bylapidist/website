@@ -1,5 +1,7 @@
 @use "../../styles/mixins" as *;
 
-.steps {
-    @include steps;
+@layer components {
+    .steps {
+        @include steps;
+    }
 }
