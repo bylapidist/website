@@ -11,7 +11,9 @@ export default function Contact() {
             style={{ contentVisibility: "auto" }}
         >
             <Container>
-                <h2 id="contact-heading">Ready to ship?</h2>
+                <h2 id="contact-heading" className={styles.heading}>
+                    Ready to ship?
+                </h2>
                 <div className={styles.ctaGroup}>
                     <Button href="mailto:hello@lapidist.net">
                         Book a 20-min discovery call

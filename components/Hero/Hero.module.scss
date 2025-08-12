@@ -9,12 +9,14 @@
         max-inline-size: 25ch;
         text-wrap: balance;
         hyphens: auto;
+        font-size: var(--step-4);
     }
 
     .heroIntro {
         max-inline-size: 45ch;
         text-wrap: balance;
         hyphens: auto;
+        font-size: var(--step-2);
     }
 
     .ctaGroup {
@@ -32,5 +34,15 @@
         font-size: var(--step-negative-1);
         max-inline-size: 14ch;
         text-align: center;
+    }
+
+    @container (min-width:50rem) {
+        .heroTitle {
+            font-size: var(--step-5);
+        }
+
+        .heroIntro {
+            font-size: var(--step-3);
+        }
     }
 }
