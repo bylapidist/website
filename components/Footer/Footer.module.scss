@@ -4,6 +4,9 @@
         border-block-start: 1px solid var(--border);
         font-size: var(--step-negative-1);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: var(--text-subtle);
     }
 
