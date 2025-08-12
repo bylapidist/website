@@ -49,7 +49,6 @@
     }
 
     a {
-        color: inherit;
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
@@ -103,7 +102,7 @@
         list-style: none;
         padding-block: var(--space-xs);
         padding-inline: var(--space-s);
-        min-block-size: 44px;
+        min-block-size: var(--size-tap-min);
         border-radius: var(--radius-s);
         font-family: var(--font-header), sans-serif;
     }

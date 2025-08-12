@@ -12,7 +12,7 @@
         padding-block: var(--space-s);
         padding-inline: var(--space-m);
         border-radius: var(--radius-m);
-        min-block-size: 44px;
+        min-block-size: var(--size-tap-min);
         box-shadow: var(--shadow-1);
     }
 
