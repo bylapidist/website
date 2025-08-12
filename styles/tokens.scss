@@ -69,6 +69,11 @@
     --step-1: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
     --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
     --step-3: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --measure: 60ch;
+    --font-opsz: 14;
+    --font-slnt: 0;
 
     /* layout */
     --max-w-s: 40rem;
