@@ -10,8 +10,12 @@ export default function ThemeToggle() {
     useEffect(() => {
         if (typeof window === "undefined") return;
         const stored = window.localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const initial = (stored as "light" | "dark" | null) ?? (prefersDark ? "dark" : "light");
+        const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+        ).matches;
+        const initial =
+            (stored as "light" | "dark" | null) ??
+            (prefersDark ? "dark" : "light");
         document.documentElement.classList.toggle("dark", initial === "dark");
         document.documentElement.classList.toggle("light", initial === "light");
         setTheme(initial);
@@ -25,7 +29,8 @@ export default function ThemeToggle() {
         setTheme(next);
     }
 
-    const label = theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+    const label =
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
 
     return (
         <button
@@ -67,4 +72,3 @@ export default function ThemeToggle() {
         </button>
     );
 }
-
