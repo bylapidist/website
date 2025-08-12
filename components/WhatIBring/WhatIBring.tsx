@@ -3,8 +3,7 @@ import styles from "./WhatIBring.module.scss";
 
 export default function WhatIBring() {
     return (
-        <Section labelledBy="problem-to-solution-heading">
-            <h2 id="problem-to-solution-heading">What I bring to the table</h2>
+        <Section id="what-i-bring" heading="What I bring to the table">
             <p>I bridge the gap between product, design and engineering.</p>
             <p>
                 My work has shaped everything from small internal tools to

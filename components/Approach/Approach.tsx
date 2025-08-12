@@ -3,8 +3,7 @@ import styles from "./Approach.module.scss";
 
 export default function Approach() {
     return (
-        <Section labelledBy="approach-heading">
-            <h2 id="approach-heading">My approach</h2>
+        <Section id="approach" heading="My approach">
             <ol className={styles.steps}>
                 <li>
                     <strong>Audit</strong> &rarr; analyse the current UI and
@@ -15,8 +14,7 @@ export default function Approach() {
                     gather feedback.
                 </li>
                 <li>
-                    <strong>Rollout</strong> &rarr; launch, measure, and
-                    refine.
+                    <strong>Rollout</strong> &rarr; launch, measure, and refine.
                 </li>
                 <li>
                     <strong>Review</strong> &rarr; continuous improvements and

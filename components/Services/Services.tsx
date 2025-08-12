@@ -4,8 +4,7 @@ import styles from "./Services.module.scss";
 
 export default function Services() {
     return (
-        <Section id="services" labelledBy="services-heading">
-            <h2 id="services-heading">Signature services</h2>
+        <Section id="services" heading="Signature services">
             <div className={styles.cards}>
                 <Card title="Design System Bootstrap" highlight>
                     <p>Launch a production-ready design system in weeks.</p>
@@ -15,9 +14,7 @@ export default function Services() {
                     <p>
                         Turn your existing assets into a clear system strategy.
                     </p>
-                    <p>
-                        Receive a practical roadmap to grow what you have.
-                    </p>
+                    <p>Receive a practical roadmap to grow what you have.</p>
                 </Card>
                 <Card title="Hands-on Build">
                     <p>
@@ -28,7 +25,8 @@ export default function Services() {
                 </Card>
                 <Card title="Advisory & Team Uplift">
                     <p>
-                        Grow your team&apos;s capabilities with ongoing guidance.
+                        Grow your team&apos;s capabilities with ongoing
+                        guidance.
                     </p>
                     <p>
                         Raise quality through tailored standards, coaching and
