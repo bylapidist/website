@@ -25,16 +25,14 @@ export default function Page() {
                     __html: JSON.stringify(structuredData),
                 }}
             />
-            <main>
-                <Hero />
-                <Stats />
-                <ProblemToSolution />
-                <Services />
-                <Approach />
-                <Pledge />
-                <CaseExample />
-                <Contact />
-            </main>
+            <Hero />
+            <Stats />
+            <ProblemToSolution />
+            <Services />
+            <Approach />
+            <Pledge />
+            <CaseExample />
+            <Contact />
             <Footer />
         </>
     );
