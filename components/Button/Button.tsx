@@ -1,7 +1,9 @@
+import { forwardRef } from "react";
 import type {
     AnchorHTMLAttributes,
     ButtonHTMLAttributes,
     ReactNode,
+    Ref,
 } from "react";
 import styles from "./Button.module.scss";
 
@@ -22,47 +24,59 @@ type AnchorProps = BaseProps &
 
 type Props = ButtonProps | AnchorProps;
 
-export default function Button({
-    variant = "primary",
-    size = "md",
-    loading = false,
-    className,
-    children,
-    href,
-    ...rest
-}: Props) {
-    const classes = [styles.button, className].filter(Boolean).join(" ");
-    const data = {
-        "data-variant": variant,
-        "data-size": size,
-        "data-loading": loading,
-    } as const;
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
+    (
+        {
+            variant = "primary",
+            size = "md",
+            loading = false,
+            className,
+            children,
+            href,
+            ...rest
+        },
+        ref,
+    ) => {
+        const classes = [styles.button, className].filter(Boolean).join(" ");
+        const data = {
+            "data-variant": variant,
+            "data-size": size,
+            "data-loading": loading,
+        } as const;
 
-    if (href) {
+        if (href) {
+            return (
+                <a
+                    {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+                    {...data}
+                    href={href}
+                    className={classes}
+                    aria-busy={loading || undefined}
+                    ref={ref as Ref<HTMLAnchorElement>}
+                >
+                    {children}
+                </a>
+            );
+        }
+
+        const buttonRest = rest as ButtonHTMLAttributes<HTMLButtonElement>;
+
         return (
-            <a
-                {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+            <button
+                {...buttonRest}
+                type={buttonRest.type ?? "button"}
                 {...data}
-                href={href}
                 className={classes}
                 aria-busy={loading || undefined}
+                disabled={loading || buttonRest.disabled}
+                ref={ref as Ref<HTMLButtonElement>}
             >
                 {children}
-            </a>
+            </button>
         );
-    }
+    },
+);
 
-    const buttonRest = rest as ButtonHTMLAttributes<HTMLButtonElement>;
+Button.displayName = "Button";
 
-    return (
-        <button
-            {...buttonRest}
-            {...data}
-            className={classes}
-            aria-busy={loading || undefined}
-            disabled={loading || buttonRest.disabled}
-        >
-            {children}
-        </button>
-    );
-}
+export default Button;
