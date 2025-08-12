@@ -28,11 +28,6 @@
         font-size: var(--step-0);
     }
 
-    .foot {
-        font-size: var(--step-negative-1);
-        margin-block-start: auto;
-    }
-
     @container section (max-width: 40rem) {
         .card {
             padding: var(--space-m);

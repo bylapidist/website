@@ -18,7 +18,8 @@
         line-height: var(--leading-normal);
         font-variant-numeric: tabular-nums;
         font-feature-settings: "kern", "liga", "clig", "calt";
-        font-variation-settings: "opsz" var(--font-opsz),
+        font-variation-settings:
+            "opsz" var(--font-opsz),
             "slnt" var(--font-slnt);
     }
 
@@ -42,7 +43,8 @@
         text-wrap: balance;
         hyphens: auto;
         line-height: var(--leading-tight);
-        font-variation-settings: "opsz" var(--font-opsz),
+        font-variation-settings:
+            "opsz" var(--font-opsz),
             "slnt" var(--font-slnt);
     }
 

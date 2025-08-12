@@ -22,7 +22,3 @@ export const Highlighted: Story = {
 export const Large: Story = {
     args: { size: "lg" },
 };
-
-export const WithFooter: Story = {
-    args: { footer: "Footer content" },
-};

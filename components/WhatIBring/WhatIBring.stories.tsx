@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import Stats from "./Stats";
+import WhatIBring from "./WhatIBring";
 
 const meta = {
-    title: "Components/Stats",
-    component: Stats,
-} satisfies Meta<typeof Stats>;
+    title: "Components/WhatIBring",
+    component: WhatIBring,
+} satisfies Meta<typeof WhatIBring>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -6,7 +6,6 @@ interface Props {
     title: string;
     highlight?: boolean;
     children: ReactNode;
-    footer?: ReactNode;
     headingLevel?: "h3" | "h4";
     size?: "md" | "lg";
     className?: string;
@@ -17,7 +16,6 @@ export default function Card({
     title,
     highlight,
     children,
-    footer,
     headingLevel = "h3",
     size = "md",
     className,
@@ -34,7 +32,6 @@ export default function Card({
                 <Heading>{title}</Heading>
             </header>
             <div className={styles.body}>{children}</div>
-            {footer && <footer className={styles.foot}>{footer}</footer>}
         </Component>
     );
 }

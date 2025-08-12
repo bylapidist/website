@@ -2,10 +2,10 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import tseslint from "typescript-eslint";
-import storybook from "eslint-plugin-storybook";
-import reactCompiler from "eslint-plugin-react-compiler";
 import eslintPluginImport from "eslint-plugin-import";
+import reactCompiler from "eslint-plugin-react-compiler";
+import storybook from "eslint-plugin-storybook";
+import tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,6 +20,7 @@ export default [
             "eslint.config.mjs",
             "stylelint.config.mjs",
             "postcss.config.cjs",
+            "storybook-static/**",
             ".storybook/**",
             ".next/**",
             "out/**",

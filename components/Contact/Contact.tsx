@@ -18,7 +18,7 @@ export default function Contact() {
                     <Button href="mailto:hello@lapidist.net">
                         Book a 20-min discovery call
                     </Button>
-                    <Button href="/deck.pdf" variant="secondary">
+                    <Button href="/brett-dorrans-cv.pdf" variant="secondary">
                         Download capabilities deck
                     </Button>
                 </div>

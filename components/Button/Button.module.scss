@@ -58,16 +58,19 @@
         .button:not(:disabled)[data-variant="primary"]:hover {
             background: var(--primary-hover);
             box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
         }
 
         .button:not(:disabled)[data-variant="secondary"]:hover {
             background: var(--primary-hover);
             box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
         }
 
         .button:not(:disabled)[data-variant="ghost"]:hover {
             background: var(--surface-hover);
             box-shadow: var(--shadow-2);
+            color: var(--primary-contrast);
         }
 
         .button:not(:disabled)[data-variant="primary"]:active {

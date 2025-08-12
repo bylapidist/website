@@ -10,7 +10,10 @@ export default {
         "media-feature-range-notation": null,
         "selector-class-pattern": null,
         "property-no-unknown": [true, { ignoreProperties: [/^--/] }],
-        "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["global", "export"] }],
+        "selector-pseudo-class-no-unknown": [
+            true,
+            { ignorePseudoClasses: ["global", "export"] },
+        ],
     },
     overrides: [
         {

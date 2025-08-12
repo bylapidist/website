@@ -1,8 +1,5 @@
-"use client";
-
 import Button from "@/components/Button/Button";
 import Container from "@/components/Container/Container";
-import HeroBackground from "@/components/HeroBackground/HeroBackground";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
@@ -12,17 +9,14 @@ export default function Hero() {
             role="region"
             aria-labelledby="hero-heading"
         >
-            <div className={styles.background}>
-                <HeroBackground />
-            </div>
             <Container size="l">
                 <div className={styles.ctaGroup}>
                     <h1 id="hero-heading" className={styles.heroTitle}>
                         Ship design systems teams trust.
                     </h1>
                     <p className={styles.heroIntro}>
-                        I help product orgs ship consistent UI faster —
-                        governance, performance, accessibility baked in.
+                        I help product orgs ship consistent UI faster &ndash;
+                        governance, performance, and accessibility baked in.
                     </p>
                 </div>
                 <div className={styles.ctaGroup}>
@@ -33,7 +27,11 @@ export default function Hero() {
                         <p className={styles.note}>Let&apos;s chat.</p>
                     </div>
                     <div className={styles.cta}>
-                        <Button href="/deck.pdf" variant="secondary" size="lg">
+                        <Button
+                            href="/brett-dorrans-cv.pdf"
+                            variant="secondary"
+                            size="lg"
+                        >
                             Download capabilities deck
                         </Button>
                         <p className={styles.note}>No email gate.</p>

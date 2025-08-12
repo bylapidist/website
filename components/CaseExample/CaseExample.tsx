@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Card from "@/components/Card/Card";
 import Container from "@/components/Container/Container";
 import styles from "./CaseExample.module.scss";
@@ -11,34 +10,18 @@ export default function CaseExample() {
             style={{ contentVisibility: "auto" }}
         >
             <Container>
-                <h2 id="case-example-heading">Case example</h2>
-                <Card
-                    className={styles.caseExample}
-                    title="Global fintech"
-                    footer={
-                        <p>
-                            After: –38% UI bugs per release · +24% velocity on
-                            UI tickets · 95th pctl route paint &lt; 1.2s
-                        </p>
-                    }
-                >
+                <h2 id="case-example-heading">Case examples</h2>
+                <Card className={styles.caseExample} title="Global fintech">
                     <p>
-                        Before: fragmented widgets, duplicated effort,
-                        inaccessible flows.
+                        <strong>Before:</strong> fragmented widgets, duplicated
+                        effort, inaccessible flows.
                     </p>
                     <p>
-                        After: unified tokens, audited patterns—CI checks keep
-                        regressions out.
+                        <strong>After:</strong> unified tokens, audited
+                        patterns—CI checks keep regressions out, –38% UI bugs
+                        per release, +24% velocity on UI tickets, 95th pctl
+                        route paint &lt; 1.2s.
                     </p>
-                    <p>Mechanism: refactored tokens; CI enforces them.</p>
-                    <Image
-                        src="/images/abstract-2.svg"
-                        alt=""
-                        width={400}
-                        height={300}
-                        decoding="async"
-                        sizes="(max-width: 600px) 100vw, 400px"
-                    />
                 </Card>
             </Container>
         </section>

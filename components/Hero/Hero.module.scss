@@ -14,13 +14,6 @@
         font-size: var(--step-4);
     }
 
-    .background {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        content-visibility: auto;
-    }
-
     .heroIntro {
         max-inline-size: 45ch;
         text-wrap: balance;
