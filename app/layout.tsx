@@ -3,6 +3,7 @@ import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/tokens.scss";
 import "@/styles/globals.scss";
 import "@/styles/typography.scss";
+import Header from "@/components/Header/Header";
 
 // Load variable fonts so optical size and slant can be controlled via
 // `font-variation-settings` in CSS.
@@ -97,9 +98,15 @@ export default function RootLayout({
                 <link rel="mask-icon" href="/mask-icon.svg" color="#6847ff" />
             </head>
             <body className={`${header.variable} ${body.variable}`}>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: "try{const t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);document.documentElement.style.colorScheme=t;}}catch(e){}",
+                    }}
+                />
                 <a href="#main" className="skip-link">
                     Skip to content
                 </a>
+                <Header />
                 <main id="main">{children}</main>
             </body>
         </html>

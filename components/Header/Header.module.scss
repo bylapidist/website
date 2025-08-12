@@ -1,0 +1,66 @@
+@layer components {
+    .header {
+        position: sticky;
+        inset-block-start: 0;
+        z-index: var(--z-2);
+        border-block-end: 1px solid var(--border);
+        background: var(--surface);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-s);
+        padding-block: var(--space-s);
+    }
+
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: var(--space-s);
+    }
+
+    .nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-block-size: 44px;
+        padding: var(--space-xs) var(--space-s);
+        text-decoration: none;
+        color: var(--text);
+    }
+
+    .themeToggle {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-block-size: 44px;
+        min-inline-size: 44px;
+        color: var(--text);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .nav a:hover,
+        .themeToggle:hover {
+            background: var(--surface-hover);
+        }
+
+        .nav a:active,
+        .themeToggle:active {
+            background: var(--surface-active);
+        }
+    }
+}
