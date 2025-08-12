@@ -1,4 +1,3 @@
-import { useId } from "react";
 import styles from "./Stat.module.scss";
 
 interface Props {
@@ -16,17 +15,14 @@ export default function Stat({
     size = "md",
     className,
 }: Props) {
-    const id = useId();
     const classes = [styles.stat, className].filter(Boolean).join(" ");
     return (
-        <div className={classes} data-size={size}>
-            <div className={styles.value} aria-describedby={id}>
+        <dl className={classes} data-size={size}>
+            <dt>
                 {value}
                 {suffix && <span aria-hidden="true">{suffix}</span>}
-            </div>
-            <div id={id} className={styles.label}>
-                {label}
-            </div>
-        </div>
+            </dt>
+            <dd>{label}</dd>
+        </dl>
     );
 }
