@@ -1,10 +1,20 @@
 import Container from "@/components/Container/Container";
+import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import styles from "./Pledge.module.scss";
 
 export default function Pledge() {
     return (
-        <section style={{ contentVisibility: "auto" }}>
+        <section
+            role="region"
+            aria-labelledby="pledge-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
+                <h2 id="pledge-heading">
+                    <VisuallyHidden>
+                        Accessibility &amp; Performance pledge
+                    </VisuallyHidden>
+                </h2>
                 <details>
                     <summary>
                         View my Accessibility &amp; Performance pledge

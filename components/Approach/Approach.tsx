@@ -3,9 +3,13 @@ import styles from "./Approach.module.scss";
 
 export default function Approach() {
     return (
-        <section style={{ contentVisibility: "auto" }}>
+        <section
+            role="region"
+            aria-labelledby="approach-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
-                <h2>My Approach</h2>
+                <h2 id="approach-heading">My Approach</h2>
                 <ol className={styles.steps}>
                     <li>
                         <strong>Audit</strong> &rarr; baseline current UI

@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
-
+import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
+import { buildStructuredData } from "./structuredData";
+
 const Stats = dynamic(() => import("@/components/Stats/Stats"));
 const ProblemToSolution = dynamic(
     () => import("@/components/ProblemToSolution/ProblemToSolution"),
@@ -12,9 +14,6 @@ const CaseExample = dynamic(
     () => import("@/components/CaseExample/CaseExample"),
 );
 const Contact = dynamic(() => import("@/components/Contact/Contact"));
-import Footer from "@/components/Footer/Footer";
-
-import { buildStructuredData } from "./structuredData";
 
 export default function Page() {
     const structuredData = buildStructuredData();
@@ -26,14 +25,16 @@ export default function Page() {
                     __html: JSON.stringify(structuredData),
                 }}
             />
-            <Hero />
-            <Stats />
-            <ProblemToSolution />
-            <Services />
-            <Approach />
-            <Pledge />
-            <CaseExample />
-            <Contact />
+            <main>
+                <Hero />
+                <Stats />
+                <ProblemToSolution />
+                <Services />
+                <Approach />
+                <Pledge />
+                <CaseExample />
+                <Contact />
+            </main>
             <Footer />
         </>
     );

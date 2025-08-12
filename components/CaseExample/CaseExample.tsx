@@ -1,14 +1,18 @@
 import Image, { type StaticImageData } from "next/image";
+import abstract2 from "@/app/(assets)/images/abstract-2.svg";
 import Card from "@/components/Card/Card";
 import Container from "@/components/Container/Container";
 import styles from "./CaseExample.module.scss";
-import abstract2 from "@/app/(assets)/images/abstract-2.svg";
 
 export default function CaseExample() {
     return (
-        <section style={{ contentVisibility: "auto" }}>
+        <section
+            role="region"
+            aria-labelledby="case-example-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
-                <h2>Case example</h2>
+                <h2 id="case-example-heading">Case example</h2>
                 <Card
                     className={styles.caseExample}
                     title="Global fintech"

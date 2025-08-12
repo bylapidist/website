@@ -4,9 +4,14 @@ import styles from "./Services.module.scss";
 
 export default function Services() {
     return (
-        <section id="services" style={{ contentVisibility: "auto" }}>
+        <section
+            id="services"
+            role="region"
+            aria-labelledby="services-heading"
+            style={{ contentVisibility: "auto" }}
+        >
             <Container>
-                <h2>Signature services</h2>
+                <h2 id="services-heading">Signature services</h2>
                 <div className={styles.cards}>
                     <Card
                         title="Design System Bootstrap"

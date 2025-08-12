@@ -1,13 +1,17 @@
-import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
+import Container from "@/components/Container/Container";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
     return (
-        <section className={styles.hero}>
+        <section
+            className={styles.hero}
+            role="region"
+            aria-labelledby="hero-heading"
+        >
             <Container size="l">
                 <div className={styles.ctaGroup}>
-                    <h1 className={styles.heroTitle}>
+                    <h1 id="hero-heading" className={styles.heroTitle}>
                         Ship design systems teams trust.
                     </h1>
                     <p className={styles.heroIntro}>
