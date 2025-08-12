@@ -1,5 +1,5 @@
 @layer components {
-    .services {
+    .caseStudies {
         background-color: var(--surface);
         text-align: center;
     }
@@ -10,10 +10,16 @@
         margin-block-start: var(--space-l);
     }
 
-    .icon {
-        width: 40px;
-        height: 40px;
+    .visual {
+        width: 100%;
+        height: 120px;
         margin-block-end: var(--space-s);
+    }
+
+    .stat {
+        font-size: var(--step-3);
+        font-weight: bold;
+        margin-block-start: var(--space-s);
     }
 
     .cta {
@@ -23,7 +29,7 @@
 
     @container (min-width:50rem) {
         .cards {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

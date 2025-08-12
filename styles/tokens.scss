@@ -28,9 +28,9 @@
         var(--primary) 80%,
         var(--primary-contrast) 20%
     );
-    --logo-blue: oklch(.65 .107 196.438);
-    --logo-green: oklch(.6927 .1301 138.13);
-    --logo-yellow: oklch(.841 .125 89.565);
+    --logo-blue: oklch(65% 0.107 196.438deg);
+    --logo-green: oklch(69.27% 0.1301 138.13deg);
+    --logo-yellow: oklch(84.1% 0.125 89.565deg);
 
     /* semantic */
     --success: #1b9a59;
@@ -222,16 +222,8 @@
     --text-subtle: #b3b3b3;
     --border: #333333;
     --muted: #2a2a2a;
-    --surface-hover: color-mix(
-        in srgb,
-        var(--surface) 90%,
-        var(--text) 10%
-    );
-    --surface-active: color-mix(
-        in srgb,
-        var(--surface) 80%,
-        var(--text) 20%
-    );
+    --surface-hover: color-mix(in srgb, var(--surface) 90%, var(--text) 10%);
+    --surface-active: color-mix(in srgb, var(--surface) 80%, var(--text) 20%);
     --primary: #b0a3ff;
     --primary-contrast: #000000;
     --primary-hover: color-mix(
