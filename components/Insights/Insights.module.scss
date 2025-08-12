@@ -1,0 +1,24 @@
+@layer components {
+    .insights {
+        background: var(--surface);
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-l);
+    }
+
+    .visual {
+        width: 100%;
+        height: 120px;
+        background: var(--muted);
+        margin-block-end: var(--space-s);
+    }
+
+    @container (min-width:50rem) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

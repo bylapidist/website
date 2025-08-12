@@ -7,6 +7,17 @@
         text-align: center;
     }
 
+    .introGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-l);
+    }
+
+    .content {
+        max-inline-size: 45ch;
+    }
+
     .heroTitle {
         max-inline-size: 25ch;
         text-wrap: balance;
@@ -19,6 +30,18 @@
         text-wrap: balance;
         hyphens: auto;
         font-size: var(--step-2);
+    }
+
+    .portrait {
+        width: 120px;
+        height: 120px;
+    }
+
+    .portrait img {
+        width: 100%;
+        height: 100%;
+        background: var(--muted);
+        border-radius: var(--radius-l);
     }
 
     .ctaGroup {
@@ -45,6 +68,19 @@
 
         .heroIntro {
             font-size: var(--step-3);
+        }
+
+        .introGroup {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .portrait {
+            margin-inline-start: var(--space-xl);
         }
     }
 }

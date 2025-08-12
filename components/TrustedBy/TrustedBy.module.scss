@@ -1,0 +1,21 @@
+@layer components {
+    .trusted {
+        background: var(--surface);
+    }
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xl);
+        list-style: none;
+        margin: var(--space-l) 0 0;
+        padding: 0;
+    }
+
+    .logos img {
+        width: 80px;
+        height: 40px;
+        background: var(--muted);
+    }
+}
