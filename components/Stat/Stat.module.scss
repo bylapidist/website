@@ -1,33 +1,35 @@
-.stat {
-    text-align: center;
-    border-radius: var(--radius-l);
-    padding: var(--space-l);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2xs);
-}
+@layer components {
+    .stat {
+        text-align: center;
+        border-radius: var(--radius-l);
+        padding: var(--space-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
+    }
 
-.stat dt {
-    font-size: var(--step-2);
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-}
-
-.stat dd {
-    font-size: var(--step-negative-1);
-    color: var(--text-subtle);
-}
-
-.stat[data-size="lg"] dt {
-    font-size: var(--step-3);
-}
-
-.stat[data-size="lg"] dd {
-    font-size: var(--step-0);
-}
-
-@container section (max-width: 20rem) {
     .stat dt {
-        font-size: var(--step-1);
+        font-size: var(--step-2);
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .stat dd {
+        font-size: var(--step-negative-1);
+        color: var(--text-subtle);
+    }
+
+    .stat[data-size="lg"] dt {
+        font-size: var(--step-3);
+    }
+
+    .stat[data-size="lg"] dd {
+        font-size: var(--step-0);
+    }
+
+    @container section (max-width: 20rem) {
+        .stat dt {
+            font-size: var(--step-1);
+        }
     }
 }

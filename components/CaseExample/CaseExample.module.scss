@@ -1,3 +1,5 @@
-.caseExample {
-    margin-block-start: var(--space-l);
+@layer components {
+    .caseExample {
+        margin-block-start: var(--space-l);
+    }
 }

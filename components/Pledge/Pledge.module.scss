@@ -1,28 +1,30 @@
-.checklist {
-    margin: 0;
-    display: grid;
-    gap: var(--space-s);
-}
+@layer components {
+    .checklist {
+        margin: 0;
+        display: grid;
+        gap: var(--space-s);
+    }
 
-.checklist div {
-    display: flex;
-    margin-block-start: var(--space-xs);
-    gap: var(--space-s);
-}
+    .checklist div {
+        display: flex;
+        margin-block-start: var(--space-xs);
+        gap: var(--space-s);
+    }
 
-.checklist dt {
-    font-weight: 600;
-    margin-inline-end: var(--space-xs);
-    font-family: var(--font-header), sans-serif;
-}
+    .checklist dt {
+        font-weight: 600;
+        margin-inline-end: var(--space-xs);
+        font-family: var(--font-header), sans-serif;
+    }
 
-.checklist dt::before {
-    content: "\2713";
-    color: var(--success);
-    margin-inline-end: var(--space-m);
-    margin-inline-start: var(--space-s);
-}
+    .checklist dt::before {
+        content: "\2713";
+        color: var(--success);
+        margin-inline-end: var(--space-m);
+        margin-inline-start: var(--space-s);
+    }
 
-.checklist dd {
-    margin: 0;
+    .checklist dd {
+        margin: 0;
+    }
 }

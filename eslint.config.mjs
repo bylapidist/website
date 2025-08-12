@@ -16,7 +16,14 @@ const compat = new FlatCompat({
 
 export default [
     {
-        ignores: ["eslint.config.mjs", "stylelint.config.mjs", ".storybook/**", ".next/**", "out/**"],
+        ignores: [
+            "eslint.config.mjs",
+            "stylelint.config.mjs",
+            "postcss.config.cjs",
+            ".storybook/**",
+            ".next/**",
+            "out/**",
+        ],
     },
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
