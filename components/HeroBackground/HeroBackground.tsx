@@ -39,8 +39,17 @@ export default function HeroBackground() {
         const geometry = new PlaneGeometry(2, 2);
 
         const style = getComputedStyle(document.documentElement);
-        const color1 = new Color(style.getPropertyValue("--surface").trim());
-        const color2 = new Color(style.getPropertyValue("--bg").trim());
+        const parseColor = (variable: string) => {
+            const value = style.getPropertyValue(variable).trim();
+            const element = document.createElement("div");
+            element.style.color = value;
+            document.body.appendChild(element);
+            const rgb = getComputedStyle(element).color;
+            element.remove();
+            return rgb;
+        };
+        const color1 = new Color(parseColor("--surface"));
+        const color2 = new Color(parseColor("--bg"));
 
         const material = new ShaderMaterial({
             uniforms: {
