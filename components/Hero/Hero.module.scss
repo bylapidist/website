@@ -7,16 +7,6 @@
         text-align: center;
     }
 
-    .heroBg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        z-index: -1;
-        pointer-events: none;
-    }
-
     .heroTitle {
         max-inline-size: 25ch;
         text-wrap: balance;
