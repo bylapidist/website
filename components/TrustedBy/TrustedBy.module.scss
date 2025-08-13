@@ -1,0 +1,24 @@
+@layer components {
+    .trustedBy {
+        background: var(--surface);
+        text-align: center;
+    }
+
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-l);
+        list-style: none;
+        margin: var(--space-m) 0 0;
+        padding: 0;
+    }
+
+    .logos svg {
+        display: block;
+        inline-size: 100px;
+        block-size: 40px;
+        background: var(--muted);
+        border-radius: var(--radius-s);
+    }
+}

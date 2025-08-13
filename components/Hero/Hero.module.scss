@@ -21,6 +21,20 @@
         font-size: var(--step-1);
     }
 
+    .heroMetric {
+        font-size: var(--step-0);
+        font-weight: 600;
+        margin-block: var(--space-s);
+    }
+
+    .signature {
+        inline-size: 100px;
+        block-size: 40px;
+        background: var(--muted);
+        border-radius: var(--radius-s);
+        margin-inline: auto;
+    }
+
     .ctaGroup {
         @include cta-group;
     }

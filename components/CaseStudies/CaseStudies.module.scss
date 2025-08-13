@@ -1,25 +1,37 @@
 @layer components {
-    .services {
-        background: var(--surface);
+    .caseStudies {
+        background: var(--surface-elevated);
     }
 
-    .cards {
+    .grid {
         display: grid;
         gap: var(--space-xl);
         margin-block-start: var(--space-l);
     }
 
     @container (min-width:50rem) {
-        .cards {
+        .grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    .icon {
-        display: block;
+    .visual {
+        inline-size: 100%;
+        block-size: 80px;
         margin-block-end: var(--space-s);
+    }
+
+    .visual svg {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
         background: var(--muted);
         border-radius: var(--radius-s);
+    }
+
+    .stat {
+        font-size: var(--step-1);
+        font-weight: 700;
     }
 
     .cta {

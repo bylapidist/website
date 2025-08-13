@@ -15,9 +15,19 @@ export default function Hero() {
                     Ship design systems teams trust.
                 </h1>
                 <p className={styles.heroIntro}>
-                    I help product orgs ship consistent UI faster. Governance,
-                    performance, and accessibility baked in.
+                    I’ve spent 15 years making complex UI systems feel simple —
+                    for teams from scrappy startups to global enterprises.
                 </p>
+                <p className={styles.heroMetric}>
+                    Recent work cut UI bugs by 38% and lifted velocity 24%.
+                </p>
+                <svg
+                    className={styles.signature}
+                    aria-hidden="true"
+                    viewBox="0 0 100 40"
+                    width="100"
+                    height="40"
+                />
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
@@ -25,16 +35,6 @@ export default function Hero() {
                         Book a 20-min discovery call
                     </Button>
                     <p className={styles.note}>Let&apos;s chat.</p>
-                </div>
-                <div className={styles.cta}>
-                    <Button
-                        href="/brett-dorrans-cv.pdf"
-                        variant="secondary"
-                        size="lg"
-                    >
-                        Download capabilities deck
-                    </Button>
-                    <p className={styles.note}>No email gate.</p>
                 </div>
             </div>
         </Section>

@@ -1,0 +1,42 @@
+@layer components {
+    .testimonials {
+        background: var(--surface);
+    }
+
+    .list {
+        list-style: none;
+        display: grid;
+        gap: var(--space-xl);
+        margin: var(--space-l) 0 0;
+        padding: 0;
+    }
+
+    @container (min-width:50rem) {
+        .list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .item {
+        text-align: center;
+    }
+
+    .avatar {
+        display: block;
+        margin-inline: auto;
+        margin-block-end: var(--space-s);
+        background: var(--muted);
+        border-radius: 50%;
+        inline-size: 80px;
+        block-size: 80px;
+    }
+
+    .item blockquote {
+        margin: 0 0 var(--space-s);
+        font-style: italic;
+    }
+
+    .caption {
+        font-size: var(--step-0);
+    }
+}

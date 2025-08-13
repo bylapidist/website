@@ -1,0 +1,31 @@
+@layer components {
+    .insights {
+        background: var(--surface-elevated);
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-l);
+    }
+
+    @container (min-width:50rem) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .visual {
+        inline-size: 100%;
+        block-size: 80px;
+        margin-block-end: var(--space-s);
+    }
+
+    .visual svg {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        background: var(--muted);
+        border-radius: var(--radius-s);
+    }
+}
