@@ -1,4 +1,5 @@
 import type { ElementType, ReactNode } from "react";
+import clsx from "clsx";
 import styles from "./Card.module.scss";
 
 interface Props {
@@ -21,7 +22,7 @@ export default function Card({
     className,
 }: Props) {
     const Heading = headingLevel as ElementType;
-    const classes = [styles.card, className].filter(Boolean).join(" ");
+    const classes = clsx(styles.card, className);
     return (
         <Component
             className={classes}

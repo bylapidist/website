@@ -1,4 +1,4 @@
-import Button from "@/components/Button/Button";
+import { BookCallButton } from "@/components/Cta/Cta";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import styles from "./CaseStudies.module.scss";
@@ -504,7 +504,7 @@ export default function CaseStudies() {
             </div>
             <div className={styles.cta}>
                 <p>Want these results for your team?</p>
-                <Button href="#contact">Book a call</Button>
+                <BookCallButton />
             </div>
         </Section>
     );

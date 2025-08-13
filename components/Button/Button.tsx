@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import clsx from "clsx";
 import type {
     AnchorHTMLAttributes,
     ButtonHTMLAttributes,
@@ -37,7 +38,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         },
         ref,
     ) => {
-        const classes = [styles.button, className].filter(Boolean).join(" ");
+        const classes = clsx(styles.button, className);
         const data = {
             "data-variant": variant,
             "data-size": size,

@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
+import { BookCallButton, DownloadDeckButton } from "@/components/Cta/Cta";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
@@ -21,19 +21,13 @@ export default function Hero() {
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
-                    <Button href="#contact" size="lg">
+                    <BookCallButton size="lg">
                         Book a 20-min discovery call
-                    </Button>
+                    </BookCallButton>
                     <p className={styles.note}>Let&apos;s chat.</p>
                 </div>
                 <div className={styles.cta}>
-                    <Button
-                        href="/brett-dorrans-cv.pdf"
-                        variant="secondary"
-                        size="lg"
-                    >
-                        Download capabilities deck
-                    </Button>
+                    <DownloadDeckButton size="lg" />
                     <p className={styles.note}>No email required.</p>
                 </div>
             </div>

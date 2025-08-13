@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
+import { BookCallButton } from "@/components/Cta/Cta";
 import Section from "@/components/Section/Section";
 import styles from "./Services.module.scss";
 
@@ -105,7 +105,7 @@ export default function Services() {
             </div>
             <div className={styles.cta}>
                 <p>Let&apos;s discuss which options fit your team.</p>
-                <Button href="#contact">Book a call</Button>
+                <BookCallButton />
             </div>
         </Section>
     );
