@@ -7,7 +7,7 @@ export default function Services() {
     return (
         <Section id="services" heading="Signature services">
             <div className={styles.cards}>
-                <Card title="Design System Bootstrap" className={styles.card}>
+                <Card title="Design System Bootstrap">
                     <svg
                         className={styles.icon}
                         aria-hidden="true"
