@@ -8,8 +8,8 @@
     }
 
     .icon {
-        width: 48px;
-        height: 48px;
+        width: var(--size-icon-l);
+        height: var(--size-icon-l);
         border-radius: var(--radius-s);
         margin-block-end: var(--space-s);
     }
