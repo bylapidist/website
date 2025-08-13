@@ -31,6 +31,30 @@ export const BookCallLargeLoading: Story = {
     args: { size: "lg", loading: true },
 };
 
+export const BookCallSecondaryLarge: Story = {
+    args: { variant: "secondary", size: "lg" },
+};
+
+export const BookCallSecondaryLoading: Story = {
+    args: { variant: "secondary", loading: true },
+};
+
+export const BookCallSecondaryLargeLoading: Story = {
+    args: { variant: "secondary", size: "lg", loading: true },
+};
+
+export const BookCallGhostLarge: Story = {
+    args: { variant: "ghost", size: "lg" },
+};
+
+export const BookCallGhostLoading: Story = {
+    args: { variant: "ghost", loading: true },
+};
+
+export const BookCallGhostLargeLoading: Story = {
+    args: { variant: "ghost", size: "lg", loading: true },
+};
+
 export const DownloadDeckSecondary: Story = {
     render: (args) => <DownloadDeckButton {...args} />,
 };
@@ -57,5 +81,35 @@ export const DownloadDeckLoading: Story = {
 
 export const DownloadDeckLargeLoading: Story = {
     args: { size: "lg", loading: true },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckPrimaryLarge: Story = {
+    args: { variant: "primary", size: "lg" },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckPrimaryLoading: Story = {
+    args: { variant: "primary", loading: true },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckPrimaryLargeLoading: Story = {
+    args: { variant: "primary", size: "lg", loading: true },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckGhostLarge: Story = {
+    args: { variant: "ghost", size: "lg" },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckGhostLoading: Story = {
+    args: { variant: "ghost", loading: true },
+    render: (args) => <DownloadDeckButton {...args} />,
+};
+
+export const DownloadDeckGhostLargeLoading: Story = {
+    args: { variant: "ghost", size: "lg", loading: true },
     render: (args) => <DownloadDeckButton {...args} />,
 };
