@@ -1,3 +1,6 @@
+$size-icon-m: 1.25rem;
+$size-icon-l: 3rem;
+
 :root {
     color-scheme: light dark;
 
@@ -56,6 +59,8 @@
 
     /* sizes */
     --size-tap-min: 44px;
+    --size-icon-m: 1.25rem;
+    --size-icon-l: 3rem;
 
     /* radius */
     --radius-xs: 2px;
