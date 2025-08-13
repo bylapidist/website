@@ -1,18 +1,16 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .insights {
         background: var(--surface);
     }
 
     .insights > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include centered-column;
     }
 
     .cards {
-        display: grid;
-        gap: var(--space-xl);
-        margin-block-start: var(--space-l);
+        @include card-grid();
     }
 
     @container (min-width:50rem) {

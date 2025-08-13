@@ -1,8 +1,9 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        @include inline-center;
+
         min-block-size: var(--size-tap-min);
         min-inline-size: var(--size-tap-min);
         padding: var(--space-xs);

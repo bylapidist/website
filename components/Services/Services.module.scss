@@ -2,9 +2,7 @@
 
 @layer components {
     .cards {
-        display: grid;
-        gap: var(--space-xl);
-        margin-block-start: var(--space-l);
+        @include card-grid();
     }
 
     .icon {
@@ -16,9 +14,7 @@
 
     .cta {
         @include cta-group;
-
-        flex-direction: column;
-        align-items: center;
+        @include centered-column;
     }
 
     @container (min-width:50rem) {

@@ -6,18 +6,16 @@
     }
 
     .cards {
-        display: grid;
-        gap: var(--space-xl);
-        margin-block-start: var(--space-l);
+        @include card-grid();
     }
 
     .card {
         background: var(--surface);
         padding: var(--space-l);
         border-radius: var(--radius-l);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+        @include centered-column;
+
         gap: var(--space-m);
     }
 
