@@ -1,5 +1,5 @@
-import Card from "@/components/Card/Card";
 import { ReactNode } from "react";
+import Card from "@/components/Card/Card";
 
 interface CaseStudyCardProps {
     title: string;

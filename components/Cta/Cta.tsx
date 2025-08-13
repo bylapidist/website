@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import Button from "@/components/Button/Button";
 
 interface Props extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
     variant?: "primary" | "secondary" | "ghost";

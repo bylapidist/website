@@ -1,5 +1,5 @@
-import Section from "@/components/Section/Section";
 import { BookCallButton, DownloadDeckButton } from "@/components/Cta/Cta";
+import Section from "@/components/Section/Section";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {

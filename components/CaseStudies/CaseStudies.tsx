@@ -3,9 +3,9 @@ import Section from "@/components/Section/Section";
 import styles from "./CaseStudies.module.scss";
 import CaseStudyCard from "./CaseStudyCard";
 import {
-    GlobalFintechVisual,
     B2CVisual,
     EcommerceVisual,
+    GlobalFintechVisual,
 } from "./CaseStudyVisuals";
 
 const caseStudies = [
@@ -13,8 +13,7 @@ const caseStudies = [
         title: "Global fintech",
         Visual: GlobalFintechVisual,
         before: "Fragmented widgets, duplicated effort, inaccessible flows.",
-        after:
-            "Unified tokens, audited patterns. CI checks keep regressions out.",
+        after: "Unified tokens, audited patterns. CI checks keep regressions out.",
     },
     {
         title: "B2C SaaS",
