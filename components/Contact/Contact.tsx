@@ -1,5 +1,5 @@
-import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
+import { BookCallButton, DownloadDeckButton } from "@/components/Cta/Cta";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
@@ -9,10 +9,8 @@ export default function Contact() {
                 Ready to talk?
             </h2>
             <div className={styles.ctaGroup}>
-                <Button href="mailto:hello@lapidist.net">Book a call</Button>
-                <Button href="/brett-dorrans-cv.pdf" variant="secondary">
-                    Download capabilities deck
-                </Button>
+                <BookCallButton href="mailto:hello@lapidist.net" />
+                <DownloadDeckButton />
             </div>
         </Section>
     );

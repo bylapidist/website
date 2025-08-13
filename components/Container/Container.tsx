@@ -1,4 +1,5 @@
 import type { ElementType, ReactNode } from "react";
+import clsx from "clsx";
 import styles from "./Container.module.scss";
 
 interface Props {
@@ -16,7 +17,7 @@ export default function Container({
     className,
     children,
 }: Props) {
-    const classes = [styles.container, className].filter(Boolean).join(" ");
+    const classes = clsx(styles.container, className);
     return (
         <Component
             className={classes}
