@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import clsx from "clsx";
 import type {
     AnchorHTMLAttributes,
     ButtonHTMLAttributes,
     ReactNode,
     Ref,
 } from "react";
+import clsx from "clsx";
 import styles from "./Button.module.scss";
 
 type BaseProps = {
