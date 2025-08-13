@@ -29,3 +29,11 @@ export const Article: Story = {
 export const Page: Story = {
     args: { cq: "page" },
 };
+
+export const SmallPage: Story = {
+    args: { size: "s", cq: "page" },
+};
+
+export const LargePage: Story = {
+    args: { size: "l", cq: "page" },
+};

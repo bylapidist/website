@@ -27,6 +27,14 @@ export const HeadingLevel3: Story = {
     args: { headingLevel: 3 },
 };
 
+export const SmallHeadingLevel3: Story = {
+    args: { containerSize: "s", headingLevel: 3 },
+};
+
+export const LargeHeadingLevel3: Story = {
+    args: { containerSize: "l", headingLevel: 3 },
+};
+
 export const WithoutHeading: Story = {
     args: { heading: undefined },
 };
