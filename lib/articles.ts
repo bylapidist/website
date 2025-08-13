@@ -5,7 +5,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 
-export interface ArticleMeta {
+interface ArticleMeta {
     year: string;
     slug: string;
     title: string;
