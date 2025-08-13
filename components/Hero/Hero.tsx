@@ -145,6 +145,17 @@ export default function Hero() {
                     <p className={styles.note}>No email gate.</p>
                 </div>
             </div>
+            <svg
+                aria-hidden="true"
+                className={styles.heroWave}
+                preserveAspectRatio="none"
+                viewBox="0 0 1440 100"
+            >
+                <path
+                    d="M0 100c240-80 480 80 720 0s480-80 720 0V0H0z"
+                    fill="var(--bg)"
+                />
+            </svg>
         </Section>
     );
 }
