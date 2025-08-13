@@ -1,0 +1,30 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .trustedBy {
+        background: var(--surface);
+        text-align: center;
+    }
+
+    .tagline {
+        margin: 0;
+        color: var(--text-subtle);
+    }
+
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-l);
+        justify-content: center;
+        list-style: none;
+        margin: var(--space-l) 0 0;
+        padding: 0;
+    }
+
+    .logo {
+        width: 120px;
+        height: 60px;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-m);
+    }
+}

@@ -1,7 +1,7 @@
 @use "../../styles/mixins" as *;
 
 @layer components {
-    .services {
+    .caseStudies {
         background: var(--surface);
     }
 
@@ -11,12 +11,23 @@
         margin-block-start: var(--space-l);
     }
 
-    .icon {
-        width: 48px;
-        height: 48px;
+    .visual {
+        width: 100%;
+        height: 90px;
         border: 2px solid var(--border);
-        border-radius: var(--radius-s);
-        margin-block-end: var(--space-s);
+        border-radius: var(--radius-m);
+        margin-block-end: var(--space-m);
+    }
+
+    .impact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+    }
+
+    .stat {
+        font-size: var(--step-1);
+        font-weight: 700;
     }
 
     .cta {
@@ -28,7 +39,7 @@
 
     @container (min-width:50rem) {
         .cards {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

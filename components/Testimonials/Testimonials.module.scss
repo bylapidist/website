@@ -1,0 +1,46 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .testimonials {
+        text-align: center;
+    }
+
+    .cards {
+        display: grid;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-l);
+    }
+
+    .card {
+        background: var(--surface);
+        padding: var(--space-l);
+        border-radius: var(--radius-l);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-m);
+    }
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+    }
+
+    .card blockquote {
+        margin: 0;
+        font-size: var(--step-0);
+    }
+
+    .card figcaption {
+        font-size: var(--step-negative-1);
+        color: var(--text-subtle);
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
