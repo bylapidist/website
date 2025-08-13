@@ -22,3 +22,7 @@ export const Highlighted: Story = {
 export const Large: Story = {
     args: { size: "lg" },
 };
+
+export const HeadingLevel4: Story = {
+    args: { headingLevel: "h4" },
+};

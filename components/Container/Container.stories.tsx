@@ -25,3 +25,7 @@ export const Large: Story = {
 export const Article: Story = {
     args: { as: "article" },
 };
+
+export const Page: Story = {
+    args: { cq: "page" },
+};
