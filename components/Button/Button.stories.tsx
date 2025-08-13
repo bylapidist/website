@@ -27,8 +27,36 @@ export const Large: Story = {
     args: { size: "lg" },
 };
 
+export const LargeLoading: Story = {
+    args: { size: "lg", loading: true },
+};
+
 export const Loading: Story = {
     args: { loading: true },
+};
+
+export const SecondaryLarge: Story = {
+    args: { variant: "secondary", size: "lg" },
+};
+
+export const SecondaryLoading: Story = {
+    args: { variant: "secondary", loading: true },
+};
+
+export const SecondaryLargeLoading: Story = {
+    args: { variant: "secondary", size: "lg", loading: true },
+};
+
+export const GhostLarge: Story = {
+    args: { variant: "ghost", size: "lg" },
+};
+
+export const GhostLoading: Story = {
+    args: { variant: "ghost", loading: true },
+};
+
+export const GhostLargeLoading: Story = {
+    args: { variant: "ghost", size: "lg", loading: true },
 };
 
 export const AsLink: Story = {
@@ -59,3 +87,4 @@ export const AsLinkWithRef: Story = {
         return <Button ref={ref} {...args} />;
     },
 };
+

@@ -23,6 +23,22 @@ export const Large: Story = {
     args: { size: "lg" },
 };
 
+export const LargeHighlighted: Story = {
+    args: { size: "lg", highlight: true },
+};
+
 export const HeadingLevel4: Story = {
     args: { headingLevel: "h4" },
+};
+
+export const HeadingLevel4Highlighted: Story = {
+    args: { headingLevel: "h4", highlight: true },
+};
+
+export const LargeHeadingLevel4: Story = {
+    args: { size: "lg", headingLevel: "h4" },
+};
+
+export const LargeHeadingLevel4Highlighted: Story = {
+    args: { size: "lg", headingLevel: "h4", highlight: true },
 };
