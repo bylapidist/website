@@ -10,44 +10,27 @@ export default function Testimonials() {
         >
             <div className={styles.cards}>
                 <figure className={styles.card}>
-                    <svg
-                        className={styles.avatar}
-                        aria-hidden="true"
-                        viewBox="0 0 64 64"
-                    />
                     <blockquote>
-                        “Brett helped us go from chaos to clarity in record
-                        time.”
+                        “Brett is as rock solid as they get. He’s a standout
+                        professional whose multidimensional skills and
+                        leadership make him an asset to any team.”
                     </blockquote>
                     <figcaption>
-                        Alex Morgan, Product Lead at FinCorp
+                        Marek Lenik
+                        <br />
+                        Engineering Lead at Wise
                     </figcaption>
                 </figure>
                 <figure className={styles.card}>
-                    <svg
-                        className={styles.avatar}
-                        aria-hidden="true"
-                        viewBox="0 0 64 64"
-                    />
                     <blockquote>
-                        “The design system uplift cut our review cycles in
-                        half.”
+                        “Brett&apos;s contributions to the design systems team
+                        have played a crucial role in planning and creating
+                        shareable components utilised within LendInvest.”
                     </blockquote>
                     <figcaption>
-                        Priya Shah, UX Director at DataWorks
-                    </figcaption>
-                </figure>
-                <figure className={styles.card}>
-                    <svg
-                        className={styles.avatar}
-                        aria-hidden="true"
-                        viewBox="0 0 64 64"
-                    />
-                    <blockquote>
-                        “Our engineers finally have a UI toolkit they trust.”
-                    </blockquote>
-                    <figcaption>
-                        Liam Chen, Engineering Manager at ShopHub
+                        Esteban Blanco
+                        <br />
+                        Senior Engineer at LendInvest
                     </figcaption>
                 </figure>
             </div>

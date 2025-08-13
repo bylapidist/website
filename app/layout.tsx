@@ -90,6 +90,10 @@ export default function RootLayout({
                     media="(prefers-color-scheme: dark)"
                     content="#090909"
                 />
+                <meta
+                    name="description"
+                    content="Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in."
+                />
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"

@@ -21,13 +21,6 @@
         gap: var(--space-m);
     }
 
-    .avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        border: 2px solid var(--border);
-    }
-
     .card blockquote {
         margin: 0;
         font-size: var(--step-0);
@@ -40,7 +33,7 @@
 
     @container (min-width:50rem) {
         .cards {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

@@ -3,6 +3,12 @@
         background: var(--surface);
     }
 
+    .insights > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .cards {
         display: grid;
         gap: var(--space-xl);
