@@ -24,9 +24,9 @@ export default function Page() {
             <Hero />
             <TrustedBy />
             <WhatIBring />
-            <Services />
             <Approach />
             <Pledge />
+            <Services />
             <CaseStudies />
             <Testimonials />
             <Insights />

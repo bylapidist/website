@@ -1,10 +1,6 @@
 @use "../../styles/mixins" as *;
 
 @layer components {
-    .services {
-        background: var(--surface);
-    }
-
     .cards {
         display: grid;
         gap: var(--space-xl);
