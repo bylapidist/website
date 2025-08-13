@@ -1,8 +1,9 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        @include inline-center;
+
         border: 1px solid transparent;
         cursor: pointer;
         font: inherit;

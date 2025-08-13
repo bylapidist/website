@@ -1,34 +1,28 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .footer {
+        @include centered-column;
+
         padding-block: var(--space-xl);
         border-block-start: 1px solid var(--border);
         font-size: var(--step-negative-1);
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         color: var(--text-subtle);
     }
 
     .footerContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footerNav,
-    .social {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: var(--space-s);
-        align-items: center;
-        justify-content: center;
+        @include centered-column;
     }
 
     .footerNav {
-        flex-wrap: wrap;
+        @include centered-list(var(--space-s), true);
+
         margin-block-end: var(--space-m);
+    }
+
+    .social {
+        @include centered-list(var(--space-s));
     }
 
     .footer p {
@@ -37,9 +31,8 @@
 
     .footerNav a,
     .social a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        @include inline-center;
+
         min-block-size: var(--size-tap-min);
         min-inline-size: var(--size-tap-min);
         text-decoration: none;
