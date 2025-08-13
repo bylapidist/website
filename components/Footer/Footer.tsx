@@ -41,6 +41,7 @@ export default function Footer() {
                     Lapidist Ltd, registered in Scotland.󠁿 Company number
                     SC549211.
                 </p>
+                <p>&copy; Brett Dorrans</p>
             </Container>
         </footer>
     );

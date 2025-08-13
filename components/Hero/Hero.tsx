@@ -15,7 +15,7 @@ export default function Hero() {
                     Ship design systems teams trust.
                 </h1>
                 <p className={styles.heroIntro}>
-                    I help product orgs ship consistent UI faster. Governance,
+                    I help product teams ship consistent UI faster. Governance,
                     performance, and accessibility baked in.
                 </p>
             </div>
@@ -34,7 +34,7 @@ export default function Hero() {
                     >
                         Download capabilities deck
                     </Button>
-                    <p className={styles.note}>No email gate.</p>
+                    <p className={styles.note}>No email required.</p>
                 </div>
             </div>
         </Section>

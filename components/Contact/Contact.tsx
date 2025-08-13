@@ -9,9 +9,7 @@ export default function Contact() {
                 Ready to talk?
             </h2>
             <div className={styles.ctaGroup}>
-                <Button href="mailto:hello@lapidist.net">
-                    Book a 20-min discovery call
-                </Button>
+                <Button href="mailto:hello@lapidist.net">Book a call</Button>
                 <Button href="/brett-dorrans-cv.pdf" variant="secondary">
                     Download capabilities deck
                 </Button>

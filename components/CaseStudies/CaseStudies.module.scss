@@ -1,0 +1,59 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .caseStudies {
+        background: var(--surface);
+        text-align: center;
+    }
+
+    .caseStudies > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tagline {
+        margin: 0;
+        color: var(--text-subtle);
+    }
+
+    .cards {
+        display: grid;
+        text-align: initial;
+        gap: var(--space-md);
+        margin-block-start: var(--space-l);
+    }
+
+    .visual {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: thin solid var(--text-subtle);
+        border-radius: var(--radius-m);
+        margin-block-end: var(--space-xl);
+        fill: var(--surface);
+    }
+
+    .panel,
+    .block {
+        fill: var(--surface);
+        stroke: var(--text-subtle);
+        stroke-width: 0.5;
+    }
+
+    .block {
+        stroke-width: 0.7;
+    }
+
+    .cta {
+        @include cta-group;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

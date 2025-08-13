@@ -1,8 +1,24 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .cards {
         display: grid;
         gap: var(--space-xl);
         margin-block-start: var(--space-l);
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-s);
+        margin-block-end: var(--space-s);
+    }
+
+    .cta {
+        @include cta-group;
+
+        flex-direction: column;
+        align-items: center;
     }
 
     @container (min-width:50rem) {

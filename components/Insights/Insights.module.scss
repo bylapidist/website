@@ -1,0 +1,23 @@
+@layer components {
+    .insights {
+        background: var(--surface);
+    }
+
+    .insights > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        display: grid;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-l);
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
