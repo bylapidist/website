@@ -4,10 +4,16 @@ import styles from "./Insights.module.scss";
 
 export default function Insights() {
     return (
-        <Section id="insights" heading="Recent work & insights" className={styles.insights}>
+        <Section
+            id="insights"
+            heading="Recent work & insights"
+            className={styles.insights}
+        >
             <div className={styles.cards}>
                 <Card title="Article: Designing token pipelines">
-                    <p>How a small team delivered accessible theming at scale.</p>
+                    <p>
+                        How a small team delivered accessible theming at scale.
+                    </p>
                 </Card>
                 <Card title="Talk: Accessible components at speed">
                     <p>Conference session on merging velocity with a11y.</p>
