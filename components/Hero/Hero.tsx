@@ -12,7 +12,7 @@ export default function Hero() {
         >
             <div className={styles.ctaGroup}>
                 <h1 id="hero-heading" className={styles.heroTitle}>
-                    Ship design systems teams trust.
+                    Craft design systems teams trust.
                 </h1>
                 <p className={styles.heroIntro}>
                     I help product teams ship consistent UI faster. Governance,
@@ -22,9 +22,9 @@ export default function Hero() {
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
                     <BookCallButton size="lg">
-                        Book a 20-min discovery call
+                        Schedule a 20-min chat
                     </BookCallButton>
-                    <p className={styles.note}>Let&apos;s chat.</p>
+                    <p className={styles.note}>Let&apos;s connect.</p>
                 </div>
                 <div className={styles.cta}>
                     <DownloadDeckButton size="lg" />

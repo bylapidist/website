@@ -1,8 +1,11 @@
+import Link from "next/link";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
+import { getAllArticles } from "@/lib/articles";
 import styles from "./Insights.module.scss";
 
-export default function Insights() {
+export default async function Insights() {
+    const articles = (await getAllArticles()).slice(0, 3);
     return (
         <Section
             id="insights"
@@ -10,17 +13,13 @@ export default function Insights() {
             className={styles.insights}
         >
             <div className={styles.cards}>
-                <Card title="Article: Designing token pipelines">
-                    <p>
-                        How a small team delivered accessible theming at scale.
-                    </p>
-                </Card>
-                <Card title="Talk: Accessible components at speed">
-                    <p>Conference session on merging velocity with a11y.</p>
-                </Card>
-                <Card title="Open-source: Audit tooling">
-                    <p>CLI that flags design drift before code review.</p>
-                </Card>
+                {articles.map(({ year, slug, title, description }) => (
+                    <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
+                        <Card title={title}>
+                            <p>{description}</p>
+                        </Card>
+                    </Link>
+                ))}
             </div>
         </Section>
     );

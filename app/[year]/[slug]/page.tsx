@@ -1,5 +1,6 @@
-import Container from "@/components/Container/Container";
+import Section from "@/components/Section/Section";
 import { getAllArticles, getArticle } from "@/lib/articles";
+import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
     const articles = await getAllArticles();
@@ -14,10 +15,14 @@ export default async function ArticlePage({
     const { year, slug } = await params;
     const { meta, content } = await getArticle(year, slug);
     return (
-        <Container as="article">
-            <h1>{meta.title}</h1>
-            {content}
-        </Container>
+        <Section heading={meta.title} headingLevel={1}>
+            <article className={styles.article}>
+                {meta.description && (
+                    <p className={styles.description}>{meta.description}</p>
+                )}
+                {content}
+            </article>
+        </Section>
     );
 }
 
