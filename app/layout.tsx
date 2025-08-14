@@ -5,7 +5,6 @@ import "@/styles/globals.scss";
 import "@/styles/typography.scss";
 import Header from "@/components/Header/Header";
 import styles from "./layout.module.scss";
-import MotionProvider from "./motion-provider";
 
 // Load variable fonts so optical size and slant can be controlled via
 // `font-variation-settings` in CSS.
@@ -228,7 +227,7 @@ export default function RootLayout({
                     Skip to content
                 </a>
                 <Header />
-                <MotionProvider>{children}</MotionProvider>
+                <main id="main">{children}</main>
             </body>
         </html>
     );
