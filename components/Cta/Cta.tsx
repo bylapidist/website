@@ -11,7 +11,7 @@ interface Props extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
 }
 
 export function BookCallButton({
-    children = "Book a call",
+    children = "Schedule a call",
     href = "#contact",
     ...props
 }: Props) {
