@@ -37,7 +37,6 @@
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
         "clsx": "2.1.1",
-        "framer-motion": "^11.18.2",
         "gray-matter": "4.0.3",
         "next": "15.4.6",
         "next-mdx-remote": "5.0.0",
