@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import {
     AnimatePresence,
     domAnimation,
@@ -16,19 +16,28 @@ interface Props {
 
 export default function AnimationProvider({ children }: Props) {
     const pathname = usePathname();
+    const initialLoad = useRef(true);
+
+    useEffect(() => {
+        initialLoad.current = false;
+    }, []);
+
     return (
         <MotionConfig reducedMotion="user">
             <LazyMotion features={domAnimation}>
                 <AnimatePresence mode="wait" initial={false}>
-                    <m.div
+                    <m.main
+                        id="main"
                         key={pathname}
-                        initial={{ opacity: 0, y: 16 }}
+                        initial={
+                            initialLoad.current ? false : { opacity: 0, y: 16 }
+                        }
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -16 }}
                         transition={{ duration: 0.2 }}
                     >
                         {children}
-                    </m.div>
+                    </m.main>
                 </AnimatePresence>
             </LazyMotion>
         </MotionConfig>

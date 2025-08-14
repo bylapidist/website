@@ -228,9 +228,7 @@ export default function RootLayout({
                     Skip to content
                 </a>
                 <Header />
-                <AnimationProvider>
-                    <main id="main">{children}</main>
-                </AnimationProvider>
+                <AnimationProvider>{children}</AnimationProvider>
             </body>
         </html>
     );
