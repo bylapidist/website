@@ -16,26 +16,28 @@ interface Props {
 
 export default function AnimationProvider({ children }: Props) {
     const pathname = usePathname();
-    const initialLoad = useRef(true);
+    const firstRender = useRef(true);
 
     useEffect(() => {
-        initialLoad.current = false;
+        firstRender.current = false;
     }, []);
+
+    const motionProps = firstRender.current
+        ? {}
+        : {
+              initial: { opacity: 0, y: 16 },
+              animate: { opacity: 1, y: 0 },
+              exit: { opacity: 0, y: -16 },
+              transition: { duration: 0.2 },
+          };
+
+    const features = domAnimation;
 
     return (
         <MotionConfig reducedMotion="user">
-            <LazyMotion features={domAnimation}>
-                <AnimatePresence mode="wait" initial={false}>
-                    <m.main
-                        id="main"
-                        key={pathname}
-                        initial={
-                            initialLoad.current ? false : { opacity: 0, y: 16 }
-                        }
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -16 }}
-                        transition={{ duration: 0.2 }}
-                    >
+            <LazyMotion features={features}>
+                <AnimatePresence mode="wait">
+                    <m.main id="main" key={pathname} {...motionProps}>
                         {children}
                     </m.main>
                 </AnimatePresence>
