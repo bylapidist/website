@@ -4,6 +4,7 @@ import "@/styles/tokens.scss";
 import "@/styles/globals.scss";
 import "@/styles/typography.scss";
 import Header from "@/components/Header/Header";
+import AnimationProvider from "./animation-provider";
 import styles from "./layout.module.scss";
 
 // Load variable fonts so optical size and slant can be controlled via
@@ -227,7 +228,9 @@ export default function RootLayout({
                     Skip to content
                 </a>
                 <Header />
-                <main id="main">{children}</main>
+                <AnimationProvider>
+                    <main id="main">{children}</main>
+                </AnimationProvider>
             </body>
         </html>
     );
