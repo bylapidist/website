@@ -1,3 +1,5 @@
+"use client";
+
 import type { ElementType, ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./Container.module.scss";
