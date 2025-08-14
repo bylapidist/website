@@ -1,12 +1,10 @@
 import { BookCallButton } from "@/components/Cta/Cta";
 import Section from "@/components/Section/Section";
+import B2CVisual from "./B2CVisual";
 import styles from "./CaseStudies.module.scss";
 import CaseStudyCard from "./CaseStudyCard";
-import {
-    B2CVisual,
-    EcommerceVisual,
-    GlobalFintechVisual,
-} from "./CaseStudyVisuals";
+import EcommerceVisual from "./EcommerceVisual";
+import GlobalFintechVisual from "./GlobalFintechVisual";
 
 const caseStudies = [
     {

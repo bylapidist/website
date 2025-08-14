@@ -10,6 +10,7 @@ interface Props {
     headingLevel?: "h3" | "h4";
     size?: "md" | "lg";
     className?: string;
+    icon?: ReactNode;
 }
 
 export default function Card({
@@ -20,6 +21,7 @@ export default function Card({
     headingLevel = "h3",
     size = "md",
     className,
+    icon,
 }: Props) {
     const Heading = headingLevel as ElementType;
     const classes = clsx(styles.card, className);
@@ -31,6 +33,7 @@ export default function Card({
         >
             <header className={styles.head}>
                 <Heading>{title}</Heading>
+                {icon}
             </header>
             <div className={styles.body}>{children}</div>
         </Component>
