@@ -36,10 +36,10 @@
     },
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
-        "clsx": "^2.1.1",
-        "gray-matter": "^4.0.3",
+        "clsx": "2.1.1",
+        "gray-matter": "4.0.3",
         "next": "15.4.6",
-        "next-mdx-remote": "^5.0.0",
+        "next-mdx-remote": "5.0.0",
         "prettier": "3.6.2",
         "react": "19.1.1",
         "react-dom": "19.1.1"
