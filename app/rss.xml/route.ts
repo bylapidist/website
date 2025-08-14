@@ -1,6 +1,10 @@
 import { getAllArticles } from "@/lib/articles";
 
 const BASE_URL = "https://lapidist.net";
+const SITE_TITLE =
+    "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist";
+const SITE_DESCRIPTION =
+    "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.";
 
 export const dynamic = "force-static";
 
@@ -22,7 +26,12 @@ export async function GET() {
         )
         .join("");
 
-    const rss = `<?xml version="1.0" encoding="UTF-8" ?>\n<rss version="2.0">\n    <channel>\n        <title>Lapidist Articles</title>\n        <link>${BASE_URL}</link>\n        <description>Articles from Lapidist</description>${items}\n    </channel>\n</rss>`;
+    const lastBuildDate =
+        articles.length > 0
+            ? new Date(articles[0].date).toUTCString()
+            : new Date().toUTCString();
+
+    const rss = `<?xml version="1.0" encoding="UTF-8" ?>\n<rss version="2.0">\n    <channel>\n        <title>${SITE_TITLE}</title>\n        <link>${BASE_URL}</link>\n        <description>${SITE_DESCRIPTION}</description>\n        <language>en-GB</language>\n        <lastBuildDate>${lastBuildDate}</lastBuildDate>\n        <image>\n            <url>${BASE_URL}/opengraph-image</url>\n            <title>${SITE_TITLE}</title>\n            <link>${BASE_URL}</link>\n        </image>${items}\n    </channel>\n</rss>`;
 
     return new Response(rss, {
         headers: {
