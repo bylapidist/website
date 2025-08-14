@@ -9,7 +9,6 @@ export default function Hero() {
             labelledBy="hero-heading"
             containerSize="l"
             contentVisibility={false}
-            animate={false}
         >
             <div className={styles.ctaGroup}>
                 <h1 id="hero-heading" className={styles.heroTitle}>
