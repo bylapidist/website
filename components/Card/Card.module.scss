@@ -17,6 +17,13 @@
         border: 2px solid var(--primary);
     }
 
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--space-s);
+    }
+
     .head h3,
     .head h4 {
         margin: 0;
