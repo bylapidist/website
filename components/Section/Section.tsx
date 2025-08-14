@@ -38,7 +38,6 @@ export default function Section({
     return (
         <section
             id={id}
-            role="region"
             aria-labelledby={headingId}
             className={className}
             style={sectionStyle}
