@@ -7,7 +7,7 @@ interface Props {
     title: string;
     highlight?: boolean;
     children: ReactNode;
-    headingLevel?: "h3" | "h4";
+    headingLevel?: "h2" | "h3" | "h4";
     size?: "md" | "lg";
     className?: string;
     icon?: ReactNode;
