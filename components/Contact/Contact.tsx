@@ -6,11 +6,13 @@ export default function Contact() {
     return (
         <Section id="contact" labelledBy="contact-heading">
             <h2 id="contact-heading" className={styles.heading}>
-                Ready to talk?
+                Let&apos;s work together
             </h2>
             <div className={styles.ctaGroup}>
-                <BookCallButton href="mailto:hello@lapidist.net" />
-                <DownloadDeckButton />
+                <BookCallButton href="mailto:hello@lapidist.net">
+                    Get in touch
+                </BookCallButton>
+                <DownloadDeckButton>Download profile</DownloadDeckButton>
             </div>
         </Section>
     );

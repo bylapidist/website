@@ -12,17 +12,19 @@ export default function Hero() {
         >
             <div className={styles.ctaGroup}>
                 <h1 id="hero-heading" className={styles.heroTitle}>
-                    Craft design systems teams trust.
+                    Principal Frontend Engineer. Crafting resilient design
+                    systems.
                 </h1>
                 <p className={styles.heroIntro}>
-                    I help product teams ship consistent UI faster. Governance,
-                    performance, and accessibility baked in.
+                    I help product teams ship systems that cut rework, lift
+                    accessibility, and accelerate delivery across distributed
+                    teams.
                 </p>
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
                     <BookCallButton size="lg">
-                        Schedule a 20-min chat
+                        Discuss your frontend roadmap
                     </BookCallButton>
                     <p className={styles.note}>Let&apos;s connect.</p>
                 </div>

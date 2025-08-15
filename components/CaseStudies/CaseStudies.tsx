@@ -10,20 +10,20 @@ const caseStudies = [
     {
         title: "Global fintech",
         Visual: GlobalFintechVisual,
-        before: "Fragmented widgets, duplicated effort, inaccessible flows.",
-        after: "Unified tokens, audited patterns. CI checks keep regressions out.",
+        before: "Fragmented widgets and 40% component duplication causing accessibility defects.",
+        after: "Token-driven system adopted by 100% of teams; CI audits stopped regressions and cut UI bugs by a third.",
     },
     {
         title: "B2C SaaS",
         Visual: B2CVisual,
         before: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
-        after: "Design system onboarding documentation and team upskilling.",
+        after: "Bootstrap docs and codemods halved onboarding time and lifted release velocity 20%.",
     },
     {
         title: "Ecommerce",
         Visual: EcommerceVisual,
         before: "Flaky components, accessibility gaps, shipping delays.",
-        after: "Accessible component library and automated testing.",
+        after: "Refactored component library with automated a11y tests cut bug reports 60% and met WCAG AA.",
     },
 ];
 
@@ -34,7 +34,9 @@ export default function CaseStudies() {
             heading="Case studies"
             className={styles.caseStudies}
         >
-            <p className={styles.tagline}>Quality that holds as you scale.</p>
+            <p className={styles.tagline}>
+                Real-world outcomes from complex UI work.
+            </p>
 
             <div className={styles.cards}>
                 {caseStudies.map(({ title, Visual, before, after }) => (

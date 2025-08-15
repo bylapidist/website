@@ -9,6 +9,7 @@ import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import TrustedBy from "@/components/TrustedBy/TrustedBy";
 import WhatIBring from "@/components/WhatIBring/WhatIBring";
+import { getAllArticles } from "@/lib/articles";
 
 function buildStructuredData() {
     const base = "https://lapidist.net";
@@ -158,7 +159,8 @@ function buildStructuredData() {
     } as const;
 }
 
-export default function Page() {
+export default async function Page() {
+    const articles = (await getAllArticles()).slice(0, 3);
     const structuredData = buildStructuredData();
     return (
         <>
@@ -176,7 +178,7 @@ export default function Page() {
             <Services />
             <CaseStudies />
             <Testimonials />
-            <Insights />
+            <Insights articles={articles} />
             <Contact />
             <Footer />
         </>

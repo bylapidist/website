@@ -33,9 +33,9 @@ const METADATA = {
     name: "Brett Dorrans",
     brand: "Lapidist",
     lang: "en-GB",
-    title: "Principal Frontend Engineer & Design Systems Specialist",
+    title: "Principal Frontend Engineer & Design Systems Specialist | Remote UK",
     description:
-        "Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based.",
+        "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.",
     theme: {
         light: "#ffffff",
         dark: "#090909",
