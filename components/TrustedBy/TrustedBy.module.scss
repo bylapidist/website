@@ -15,6 +15,15 @@
         @include centered-list(var(--space-l), true);
     }
 
+    .logoLink {
+        display: block;
+
+        &:focus-visible {
+            outline: var(--border-focus-ring);
+            outline-offset: var(--space-focus-ring-offset);
+        }
+    }
+
     .logo {
         width: 12ch;
         height: 5ch;
