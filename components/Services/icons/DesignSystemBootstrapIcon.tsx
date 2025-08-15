@@ -7,7 +7,7 @@ export default function DesignSystemBootstrapIcon(
         <svg aria-hidden="true" viewBox="0 0 48 48" {...props}>
             <g
                 fill="none"
-                stroke="var(--logo-yellow)"
+                stroke="var(--colour-logo-yellow)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

@@ -1,5 +1,5 @@
-$size-icon-m: 1.25rem;
-$size-icon-l: 3rem;
+$size-icon-m: var(--size-icon-m);
+$size-icon-l: var(--size-icon-l);
 
 :root {
     color-scheme: light dark;
@@ -8,47 +8,55 @@ $size-icon-l: 3rem;
        overrides below raise this to AAA. */
 
     /* neutral palette */
-    --bg: #ffffff;
-    --surface: #f5f5f5;
-    --surface-elevated: #ffffff;
-    --text: #111111;
-    --text-subtle: #555555;
-    --border: #d0d0d0;
-    --muted: #e5e5e5;
-    --surface-hover: color-mix(in srgb, var(--surface) 90%, var(--text) 10%);
-    --surface-active: color-mix(in srgb, var(--surface) 80%, var(--text) 20%);
+    --surface-level-0: #ffffff;
+    --surface-level-1: #f5f5f5;
+    --surface-level-2: #ffffff;
+    --colour-text: #111111;
+    --colour-text-subtle: #555555;
+    --colour-border: #d0d0d0;
+    --colour-muted: #e5e5e5;
+    --surface-level-1-hover: color-mix(
+        in srgb,
+        var(--surface-level-1) 90%,
+        var(--colour-text) 10%
+    );
+    --surface-level-1-active: color-mix(
+        in srgb,
+        var(--surface-level-1) 80%,
+        var(--colour-text) 20%
+    );
 
     /* brand */
-    --primary: #4b6be8;
-    --primary-contrast: #ffffff;
-    --primary-hover: color-mix(
+    --colour-primary: #4b6be8;
+    --colour-on-primary: #ffffff;
+    --colour-primary-hover: color-mix(
         in srgb,
-        var(--primary) 90%,
-        var(--primary-contrast) 10%
+        var(--colour-primary) 90%,
+        var(--colour-on-primary) 10%
     );
-    --primary-active: color-mix(
+    --colour-primary-active: color-mix(
         in srgb,
-        var(--primary) 80%,
-        var(--primary-contrast) 20%
+        var(--colour-primary) 80%,
+        var(--colour-on-primary) 20%
     );
-    --logo-blue: oklch(67.72% 0.1203 183.48deg);
-    --logo-green: oklch(77.86% 0.1387 133.71deg);
-    --logo-yellow: oklch(81.13% 0.1356 85.29deg);
+    --colour-logo-blue: oklch(67.72% 0.1203 183.48deg);
+    --colour-logo-green: oklch(77.86% 0.1387 133.71deg);
+    --colour-logo-yellow: oklch(81.13% 0.1356 85.29deg);
 
     /* semantic */
-    --success: #1b9a59;
-    --warning: #ffb700;
-    --danger: #d93025;
+    --colour-success: #1b9a59;
+    --colour-warning: #ffb700;
+    --colour-danger: #d93025;
 
     /* motion */
-    --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
-    --ease-emph: cubic-bezier(0.2, 0.9, 0.1, 1);
-    --dur-1: 120ms;
-    --dur-2: 200ms;
-    --dur-3: 320ms;
+    --motion-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --motion-ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+    --motion-dur-120: 120ms;
+    --motion-dur-200: 200ms;
+    --motion-dur-320: 320ms;
 
     /* spacing */
-    --space-2xs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);
+    --space-xxs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);
     --space-xs: clamp(0.25rem, 0.2rem + 0.3vw, 0.5rem);
     --space-s: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
     --space-m: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
@@ -71,29 +79,31 @@ $size-icon-l: 3rem;
     --radius-2xl: 36px;
 
     /* shadows */
-    --shadow-1: 0 1px 2px hsl(0deg 0% 0% / 5%);
-    --shadow-2: 0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
-    --shadow-3: 0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
+    --shadow-elev-1: 0 1px 2px hsl(0deg 0% 0% / 5%);
+    --shadow-elev-2:
+        0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
+    --shadow-elev-3:
+        0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
 
     /* typography */
-    --step-negative-1: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
-    --step-0: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
-    --step-1: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
-    --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-    --step-3: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
-    --step-4: clamp(2.5rem, 2.1rem + 2vw, 3rem);
-    --step-5: clamp(3rem, 2.5rem + 2.5vw, 3.5rem);
-    --leading-tighter: 1;
-    --leading-tight: 1.2;
-    --leading-normal: 1.5;
-    --measure: 80ch;
-    --font-opsz: 14;
-    --font-slnt: 0;
+    --typography-size-100: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
+    --typography-size-200: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
+    --typography-size-300: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
+    --typography-size-400: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --typography-size-500: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+    --typography-size-600: clamp(2.5rem, 2.1rem + 2vw, 3rem);
+    --typography-size-700: clamp(3rem, 2.5rem + 2.5vw, 3.5rem);
+    --typography-line-tighter: 1;
+    --typography-line-tight: 1.2;
+    --typography-line-normal: 1.5;
+    --typography-measure: 80ch;
+    --typography-font-opsz: 14;
+    --typography-font-slnt: 0;
 
     /* layout */
-    --max-w-s: 40rem;
-    --max-w-m: 60rem;
-    --max-w-l: 72rem;
+    --layout-max-w-s: 40rem;
+    --layout-max-w-m: 60rem;
+    --layout-max-w-l: 72rem;
 
     /* z-index scale */
     --z-1: 10; /* base content */
@@ -101,238 +111,246 @@ $size-icon-l: 3rem;
     --z-3: 1000; /* overlays */
 
     /* focus */
-    --focus-ring: 2px solid var(--primary);
-    --focus-ring-offset: 2px;
+    --border-focus-ring: 2px solid var(--colour-primary);
+    --space-focus-ring-offset: 2px;
 }
 
 @supports (color: oklch(0 0 0)) {
     :root {
-        --bg: oklch(100% 0 0deg);
-        --surface: oklch(97% 0.01 95deg);
-        --surface-elevated: oklch(100% 0 0deg);
-        --text: oklch(17% 0 0deg);
-        --text-subtle: oklch(55% 0 0deg);
-        --border: oklch(86% 0.02 95deg);
-        --muted: oklch(93% 0.01 95deg);
-        --surface-hover: color-mix(
+        --surface-level-0: oklch(100% 0 0deg);
+        --surface-level-1: oklch(97% 0.01 95deg);
+        --surface-level-2: oklch(100% 0 0deg);
+        --colour-text: oklch(17% 0 0deg);
+        --colour-text-subtle: oklch(55% 0 0deg);
+        --colour-border: oklch(86% 0.02 95deg);
+        --colour-muted: oklch(93% 0.01 95deg);
+        --surface-level-1-hover: color-mix(
             in oklch,
-            var(--surface) 90%,
-            var(--text) 10%
+            var(--surface-level-1) 90%,
+            var(--colour-text) 10%
         );
-        --surface-active: color-mix(
+        --surface-level-1-active: color-mix(
             in oklch,
-            var(--surface) 80%,
-            var(--text) 20%
+            var(--surface-level-1) 80%,
+            var(--colour-text) 20%
         );
-        --primary: oklch(57% 0.19 269deg);
-        --primary-contrast: oklch(100% 0 0deg);
-        --primary-hover: color-mix(
+        --colour-primary: oklch(57% 0.19 269deg);
+        --colour-on-primary: oklch(100% 0 0deg);
+        --colour-primary-hover: color-mix(
             in oklch,
-            var(--primary) 90%,
-            var(--primary-contrast) 10%
+            var(--colour-primary) 90%,
+            var(--colour-on-primary) 10%
         );
-        --primary-active: color-mix(
+        --colour-primary-active: color-mix(
             in oklch,
-            var(--primary) 80%,
-            var(--primary-contrast) 20%
+            var(--colour-primary) 80%,
+            var(--colour-on-primary) 20%
         );
-        --success: oklch(67% 0.15 154deg);
-        --warning: oklch(83% 0.16 83deg);
-        --danger: oklch(62% 0.22 27deg);
-        --shadow-1: 0 1px 2px oklch(0% 0 0deg / 5%);
-        --shadow-2:
+        --colour-success: oklch(67% 0.15 154deg);
+        --colour-warning: oklch(83% 0.16 83deg);
+        --colour-danger: oklch(62% 0.22 27deg);
+        --shadow-elev-1: 0 1px 2px oklch(0% 0 0deg / 5%);
+        --shadow-elev-2:
             0 2px 4px oklch(0% 0 0deg / 8%), 0 1px 2px oklch(0% 0 0deg / 5%);
-        --shadow-3:
+        --shadow-elev-3:
             0 4px 8px oklch(0% 0 0deg / 12%), 0 2px 4px oklch(0% 0 0deg / 8%);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not(.light) {
-        --bg: #090909;
-        --surface: #1a1a1a;
-        --surface-elevated: #222222;
-        --text: #f5f5f5;
-        --text-subtle: #b3b3b3;
-        --border: #333333;
-        --muted: #2a2a2a;
-        --surface-hover: color-mix(
+        --surface-level-0: #090909;
+        --surface-level-1: #1a1a1a;
+        --surface-level-2: #222222;
+        --colour-text: #f5f5f5;
+        --colour-text-subtle: #b3b3b3;
+        --colour-border: #333333;
+        --colour-muted: #2a2a2a;
+        --surface-level-1-hover: color-mix(
             in srgb,
-            var(--surface) 90%,
-            var(--text) 10%
+            var(--surface-level-1) 90%,
+            var(--colour-text) 10%
         );
-        --surface-active: color-mix(
+        --surface-level-1-active: color-mix(
             in srgb,
-            var(--surface) 80%,
-            var(--text) 20%
+            var(--surface-level-1) 80%,
+            var(--colour-text) 20%
         );
-        --primary: #b0a3ff;
-        --primary-contrast: #000000;
-        --primary-hover: color-mix(
+        --colour-primary: #b0a3ff;
+        --colour-on-primary: #000000;
+        --colour-primary-hover: color-mix(
             in srgb,
-            var(--primary) 90%,
-            var(--primary-contrast) 10%
+            var(--colour-primary) 90%,
+            var(--colour-on-primary) 10%
         );
-        --primary-active: color-mix(
+        --colour-primary-active: color-mix(
             in srgb,
-            var(--primary) 80%,
-            var(--primary-contrast) 20%
+            var(--colour-primary) 80%,
+            var(--colour-on-primary) 20%
         );
-        --success: #2fdd88;
-        --warning: #ffcb33;
-        --danger: #ff6b6b;
+        --colour-success: #2fdd88;
+        --colour-warning: #ffcb33;
+        --colour-danger: #ff6b6b;
     }
 
     @supports (color: oklch(0 0 0)) {
         :root:not(.light) {
-            --bg: oklch(12% 0 0deg);
-            --surface: oklch(30% 0 0deg);
-            --surface-elevated: oklch(35% 0 0deg);
-            --text: oklch(97% 0 0deg);
-            --text-subtle: oklch(75% 0 0deg);
-            --border: oklch(42% 0 0deg);
-            --muted: oklch(32% 0 0deg);
-            --surface-hover: color-mix(
+            --surface-level-0: oklch(12% 0 0deg);
+            --surface-level-1: oklch(30% 0 0deg);
+            --surface-level-2: oklch(35% 0 0deg);
+            --colour-text: oklch(97% 0 0deg);
+            --colour-text-subtle: oklch(75% 0 0deg);
+            --colour-border: oklch(42% 0 0deg);
+            --colour-muted: oklch(32% 0 0deg);
+            --surface-level-1-hover: color-mix(
                 in oklch,
-                var(--surface) 90%,
-                var(--text) 10%
+                var(--surface-level-1) 90%,
+                var(--colour-text) 10%
             );
-            --surface-active: color-mix(
+            --surface-level-1-active: color-mix(
                 in oklch,
-                var(--surface) 80%,
-                var(--text) 20%
+                var(--surface-level-1) 80%,
+                var(--colour-text) 20%
             );
-            --primary: oklch(75% 0.15 269deg);
-            --primary-contrast: oklch(0% 0 0deg);
-            --primary-hover: color-mix(
+            --colour-primary: oklch(75% 0.15 269deg);
+            --colour-on-primary: oklch(0% 0 0deg);
+            --colour-primary-hover: color-mix(
                 in oklch,
-                var(--primary) 90%,
-                var(--primary-contrast) 10%
+                var(--colour-primary) 90%,
+                var(--colour-on-primary) 10%
             );
-            --primary-active: color-mix(
+            --colour-primary-active: color-mix(
                 in oklch,
-                var(--primary) 80%,
-                var(--primary-contrast) 20%
+                var(--colour-primary) 80%,
+                var(--colour-on-primary) 20%
             );
-            --success: oklch(82% 0.12 154deg);
-            --warning: oklch(88% 0.14 90deg);
-            --danger: oklch(72% 0.14 27deg);
+            --colour-success: oklch(82% 0.12 154deg);
+            --colour-warning: oklch(88% 0.14 90deg);
+            --colour-danger: oklch(72% 0.14 27deg);
         }
     }
 }
 
 :root.dark {
-    --bg: #090909;
-    --surface: #1a1a1a;
-    --surface-elevated: #222222;
-    --text: #f5f5f5;
-    --text-subtle: #b3b3b3;
-    --border: #333333;
-    --muted: #2a2a2a;
-    --surface-hover: color-mix(in srgb, var(--surface) 90%, var(--text) 10%);
-    --surface-active: color-mix(in srgb, var(--surface) 80%, var(--text) 20%);
-    --primary: #b0a3ff;
-    --primary-contrast: #000000;
-    --primary-hover: color-mix(
+    --surface-level-0: #090909;
+    --surface-level-1: #1a1a1a;
+    --surface-level-2: #222222;
+    --colour-text: #f5f5f5;
+    --colour-text-subtle: #b3b3b3;
+    --colour-border: #333333;
+    --colour-muted: #2a2a2a;
+    --surface-level-1-hover: color-mix(
         in srgb,
-        var(--primary) 90%,
-        var(--primary-contrast) 10%
+        var(--surface-level-1) 90%,
+        var(--colour-text) 10%
     );
-    --primary-active: color-mix(
+    --surface-level-1-active: color-mix(
         in srgb,
-        var(--primary) 80%,
-        var(--primary-contrast) 20%
+        var(--surface-level-1) 80%,
+        var(--colour-text) 20%
     );
-    --success: #2fdd88;
-    --warning: #ffcb33;
-    --danger: #ff6b6b;
+    --colour-primary: #b0a3ff;
+    --colour-on-primary: #000000;
+    --colour-primary-hover: color-mix(
+        in srgb,
+        var(--colour-primary) 90%,
+        var(--colour-on-primary) 10%
+    );
+    --colour-primary-active: color-mix(
+        in srgb,
+        var(--colour-primary) 80%,
+        var(--colour-on-primary) 20%
+    );
+    --colour-success: #2fdd88;
+    --colour-warning: #ffcb33;
+    --colour-danger: #ff6b6b;
 }
 
 @supports (color: oklch(0 0 0)) {
     :root.dark {
-        --bg: oklch(12% 0 0deg);
-        --surface: oklch(30% 0 0deg);
-        --surface-elevated: oklch(35% 0 0deg);
-        --text: oklch(97% 0 0deg);
-        --text-subtle: oklch(75% 0 0deg);
-        --border: oklch(42% 0 0deg);
-        --muted: oklch(32% 0 0deg);
-        --surface-hover: color-mix(
+        --surface-level-0: oklch(12% 0 0deg);
+        --surface-level-1: oklch(30% 0 0deg);
+        --surface-level-2: oklch(35% 0 0deg);
+        --colour-text: oklch(97% 0 0deg);
+        --colour-text-subtle: oklch(75% 0 0deg);
+        --colour-border: oklch(42% 0 0deg);
+        --colour-muted: oklch(32% 0 0deg);
+        --surface-level-1-hover: color-mix(
             in oklch,
-            var(--surface) 90%,
-            var(--text) 10%
+            var(--surface-level-1) 90%,
+            var(--colour-text) 10%
         );
-        --surface-active: color-mix(
+        --surface-level-1-active: color-mix(
             in oklch,
-            var(--surface) 80%,
-            var(--text) 20%
+            var(--surface-level-1) 80%,
+            var(--colour-text) 20%
         );
-        --primary: oklch(75% 0.15 269deg);
-        --primary-contrast: oklch(0% 0 0deg);
-        --primary-hover: color-mix(
+        --colour-primary: oklch(75% 0.15 269deg);
+        --colour-on-primary: oklch(0% 0 0deg);
+        --colour-primary-hover: color-mix(
             in oklch,
-            var(--primary) 90%,
-            var(--primary-contrast) 10%
+            var(--colour-primary) 90%,
+            var(--colour-on-primary) 10%
         );
-        --primary-active: color-mix(
+        --colour-primary-active: color-mix(
             in oklch,
-            var(--primary) 80%,
-            var(--primary-contrast) 20%
+            var(--colour-primary) 80%,
+            var(--colour-on-primary) 20%
         );
-        --success: oklch(82% 0.12 154deg);
-        --warning: oklch(88% 0.14 90deg);
-        --danger: oklch(72% 0.14 27deg);
+        --colour-success: oklch(82% 0.12 154deg);
+        --colour-warning: oklch(88% 0.14 90deg);
+        --colour-danger: oklch(72% 0.14 27deg);
     }
 }
 
 /* High contrast mode for WCAG 2.2 AAA */
 @media (prefers-contrast: more) {
     :root {
-        --bg: #ffffff;
-        --surface: #ffffff;
-        --primary: #0000ff;
-        --primary-contrast: #ffffff;
-        --border: #000000;
-        --text-subtle: #000000;
-        --surface-hover: #e5e5e5;
-        --surface-active: #d0d0d0;
-        --primary-hover: #0000ee;
-        --primary-active: #0000cc;
+        --surface-level-0: #ffffff;
+        --surface-level-1: #ffffff;
+        --colour-primary: #0000ff;
+        --colour-on-primary: #ffffff;
+        --colour-border: #000000;
+        --colour-text-subtle: #000000;
+        --surface-level-1-hover: #e5e5e5;
+        --surface-level-1-active: #d0d0d0;
+        --colour-primary-hover: #0000ee;
+        --colour-primary-active: #0000cc;
     }
 
     @media (prefers-color-scheme: dark) {
         :root:not(.light) {
-            --bg: #000000;
-            --surface: #000000;
-            --primary: #ffff00;
-            --primary-contrast: #000000;
-            --border: #ffffff;
-            --text-subtle: #ffffff;
-            --surface-hover: #1a1a1a;
-            --surface-active: #333333;
-            --primary-hover: #ffff66;
-            --primary-active: #ffff00;
+            --surface-level-0: #000000;
+            --surface-level-1: #000000;
+            --colour-primary: #ffff00;
+            --colour-on-primary: #000000;
+            --colour-border: #ffffff;
+            --colour-text-subtle: #ffffff;
+            --surface-level-1-hover: #1a1a1a;
+            --surface-level-1-active: #333333;
+            --colour-primary-hover: #ffff66;
+            --colour-primary-active: #ffff00;
         }
     }
 
     :root.dark {
-        --bg: #000000;
-        --surface: #000000;
-        --primary: #ffff00;
-        --primary-contrast: #000000;
-        --border: #ffffff;
-        --text-subtle: #ffffff;
-        --surface-hover: #1a1a1a;
-        --surface-active: #333333;
-        --primary-hover: #ffff66;
-        --primary-active: #ffff00;
+        --surface-level-0: #000000;
+        --surface-level-1: #000000;
+        --colour-primary: #ffff00;
+        --colour-on-primary: #000000;
+        --colour-border: #ffffff;
+        --colour-text-subtle: #ffffff;
+        --surface-level-1-hover: #1a1a1a;
+        --surface-level-1-active: #333333;
+        --colour-primary-hover: #ffff66;
+        --colour-primary-active: #ffff00;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     :root {
-        --dur-1: 0ms;
-        --dur-2: 0ms;
-        --dur-3: 0ms;
+        --motion-dur-120: 0ms;
+        --motion-dur-200: 0ms;
+        --motion-dur-320: 0ms;
     }
 }

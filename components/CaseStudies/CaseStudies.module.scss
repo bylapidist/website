@@ -2,7 +2,7 @@
 
 @layer components {
     .caseStudies {
-        background: var(--surface);
+        background: var(--surface-level-1);
         text-align: center;
     }
 
@@ -12,7 +12,7 @@
 
     .tagline {
         margin: 0;
-        color: var(--text);
+        color: var(--colour-text);
     }
 
     .cards {
@@ -24,16 +24,16 @@
     .visual {
         width: 100%;
         aspect-ratio: 16 / 9;
-        border: thin solid var(--text-subtle);
+        border: thin solid var(--colour-text-subtle);
         border-radius: var(--radius-m);
         margin-block-end: var(--space-xl);
-        fill: var(--surface);
+        fill: var(--surface-level-1);
     }
 
     .panel,
     .block {
-        fill: var(--surface);
-        stroke: var(--text-subtle);
+        fill: var(--surface-level-1);
+        stroke: var(--colour-text-subtle);
         stroke-width: 0.5;
     }
 

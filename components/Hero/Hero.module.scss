@@ -11,14 +11,14 @@
         max-inline-size: 25ch;
         text-wrap: balance;
         hyphens: auto;
-        font-size: var(--step-3);
+        font-size: var(--typography-size-500);
     }
 
     .heroIntro {
         max-inline-size: 45ch;
         text-wrap: balance;
         hyphens: auto;
-        font-size: var(--step-1);
+        font-size: var(--typography-size-300);
     }
 
     .ctaGroup {
@@ -28,23 +28,23 @@
     .cta {
         @include centered-column;
 
-        gap: var(--space-2xs);
+        gap: var(--space-xxs);
         margin-bottom: var(--space-2xl);
     }
 
     .note {
-        font-size: var(--step-negative-1);
+        font-size: var(--typography-size-100);
         max-inline-size: 14ch;
         text-align: center;
     }
 
     @container (min-width:50rem) {
         .heroTitle {
-            font-size: var(--step-4);
+            font-size: var(--typography-size-600);
         }
 
         .heroIntro {
-            font-size: var(--step-2);
+            font-size: var(--typography-size-400);
         }
     }
 }

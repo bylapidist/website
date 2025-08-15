@@ -1,6 +1,6 @@
 @layer components {
     .header {
-        border-block-end: 1px solid var(--border);
+        border-block-end: 1px solid var(--colour-border);
     }
 
     .inner {
@@ -15,22 +15,22 @@
         align-items: center;
         gap: var(--space-s);
         text-decoration: none;
-        color: var(--text);
-        font-size: var(--step-0);
+        color: var(--colour-text);
+        font-size: var(--typography-size-200);
         font-weight: 400;
         font-family: var(--font-header), sans-serif;
     }
 
     .logoBlue {
-        fill: var(--logo-blue);
+        fill: var(--colour-logo-blue);
     }
 
     .logoGreen {
-        fill: var(--logo-green);
+        fill: var(--colour-logo-green);
     }
 
     .logoYellow {
-        fill: var(--logo-yellow);
+        fill: var(--colour-logo-yellow);
     }
 
     .logoLockup {
@@ -40,7 +40,7 @@
 
         span {
             font-family: inherit;
-            line-height: var(--leading-tighter);
+            line-height: var(--typography-line-tighter);
         }
     }
 
