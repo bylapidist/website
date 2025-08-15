@@ -3,6 +3,7 @@ import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles, getArticle } from "@/lib/articles";
+import { seo } from "@/lib/seo";
 import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
@@ -17,6 +18,35 @@ export default async function ArticlePage({
 }) {
     const { year, slug } = await params;
     const { meta, content } = await getArticle(year, slug);
+    const url = `/${year}/${slug}`;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                headline: meta.title,
+                description: meta.description,
+                author: { "@type": "Person", name: "Brett Dorrans" },
+                datePublished: meta.date,
+                url,
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        item: { "@id": "/articles", name: "Articles" },
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 2,
+                        item: { "@id": url, name: meta.title },
+                    },
+                ],
+            },
+        ],
+    };
     return (
         <>
             <Section heading={meta.title} headingLevel={1}>
@@ -29,6 +59,10 @@ export default async function ArticlePage({
             </Section>
             <Contact />
             <Footer />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </>
     );
 }
@@ -41,23 +75,10 @@ export async function generateMetadata({
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
     const url = `/${year}/${slug}`;
-    return {
+    return seo({
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: url },
-        openGraph: {
-            title: meta.title,
-            description: meta.description,
-            url,
-            type: "article",
-            publishedTime: meta.date,
-            images: [{ url: "/opengraph-image" }],
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: meta.title,
-            description: meta.description,
-            images: ["/twitter-image"],
-        },
-    };
+        canonical: url,
+        type: "article",
+    });
 }

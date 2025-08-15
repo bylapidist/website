@@ -10,20 +10,24 @@ const caseStudies = [
     {
         title: "Global fintech",
         Visual: GlobalFintechVisual,
-        before: "Fragmented widgets, duplicated effort, inaccessible flows.",
-        after: "Unified tokens, audited patterns. CI checks keep regressions out.",
+        problem: "Fragmented widgets, duplicated effort, inaccessible flows.",
+        approach:
+            "Introduced unified tokens and audited patterns with CI checks.",
+        impact: "60% faster builds; accessibility defects down 40%.",
     },
     {
         title: "B2C SaaS",
         Visual: B2CVisual,
-        before: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
-        after: "Design system onboarding documentation and team upskilling.",
+        problem: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
+        approach: "Documented system onboarding and upskilled team.",
+        impact: "Ramp-up cut from 4 weeks to 1; layout bugs halved.",
     },
     {
         title: "Ecommerce platform",
         Visual: EcommerceVisual,
-        before: "Flaky components, accessibility gaps, shipping delays.",
-        after: "Accessible component library and automated testing.",
+        problem: "Flaky components, accessibility gaps, shipping delays.",
+        approach: "Built accessible component library with automated tests.",
+        impact: "Release cycle sped up 30%; a11y issues blocked at PR.",
     },
 ];
 
@@ -34,18 +38,24 @@ export default function CaseStudies() {
             heading="Case studies"
             className={styles.caseStudies}
         >
-            <p className={styles.tagline}>Quality that holds as you scale.</p>
+            <p className={styles.tagline}>
+                Production-grade design systems and UI platforms that scale with
+                quality intact.
+            </p>
 
             <div className={styles.cards}>
-                {caseStudies.map(({ title, Visual, before, after }) => (
-                    <CaseStudyCard
-                        key={title}
-                        title={title}
-                        visual={<Visual />}
-                        before={before}
-                        after={after}
-                    />
-                ))}
+                {caseStudies.map(
+                    ({ title, Visual, problem, approach, impact }) => (
+                        <CaseStudyCard
+                            key={title}
+                            title={title}
+                            visual={<Visual />}
+                            problem={problem}
+                            approach={approach}
+                            impact={impact}
+                        />
+                    ),
+                )}
             </div>
             <div className={styles.cta}>
                 <p>Want these results for your team?</p>
