@@ -3,6 +3,13 @@
     *::before,
     *::after {
         box-sizing: border-box;
+        font-family: var(--font-body), sans-serif;
+        line-height: var(--leading-normal);
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        font-variation-settings:
+            "opsz" var(--font-opsz),
+            "slnt" var(--font-slnt);
     }
 
     html,
@@ -12,15 +19,8 @@
     }
 
     body {
-        font-family: var(--font-body), sans-serif;
         background: var(--bg);
         color: var(--text);
-        line-height: var(--leading-normal);
-        font-variant-numeric: tabular-nums;
-        font-feature-settings: "kern", "liga", "clig", "calt";
-        font-variation-settings:
-            "opsz" var(--font-opsz),
-            "slnt" var(--font-slnt);
     }
 
     @supports (font-size: clamp(1rem, 1vw, 2rem)) {
