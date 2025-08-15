@@ -35,6 +35,13 @@ function buildStructuredData() {
                     "accessibility",
                     "performance",
                     "governance",
+                    "API design",
+                    "data modelling",
+                    "Node.js",
+                    "CI/CD",
+                    "Docker",
+                    "AWS",
+                    "payments",
                 ],
                 sameAs: [
                     "https://linkedin.com/in/brettdorrans",
@@ -88,10 +95,10 @@ function buildStructuredData() {
             },
             {
                 "@type": "Service",
-                "@id": `${base}#design-system-consulting`,
-                name: "Design System Consulting",
+                "@id": `${base}#design-system-bootstrap`,
+                name: "Design System Bootstrap & Governance",
                 description:
-                    "Strategy and implementation support for design systems.",
+                    "Tokens, components, and contribution rules that keep products consistent.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -102,9 +109,10 @@ function buildStructuredData() {
             },
             {
                 "@type": "Service",
-                "@id": `${base}#accessibility-auditing`,
-                name: "Accessibility Auditing",
-                description: "WCAG reviews and inclusive design guidance.",
+                "@id": `${base}#frontend-platform-modernisation`,
+                name: "Frontend Platform & DX Modernisation",
+                description:
+                    "Build tooling, testing, and workflow improvements that lift delivery.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -115,9 +123,10 @@ function buildStructuredData() {
             },
             {
                 "@type": "Service",
-                "@id": `${base}#frontend-engineering`,
-                name: "Frontend Engineering",
-                description: "Accessible and performant user interfaces.",
+                "@id": `${base}#full-stack-foundations`,
+                name: "Full-stack Foundations",
+                description:
+                    "API contracts, data models, auth, and CI/CD to support product delivery.",
                 provider: { "@id": `${base}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {

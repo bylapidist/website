@@ -12,31 +12,30 @@ export default function Services() {
         <Section id="services" heading="Signature services">
             <div className={styles.cards}>
                 <Card
-                    title="Design System Bootstrap"
+                    title="Design System Bootstrap & Governance"
                     icon={<DesignSystemBootstrapIcon className={styles.icon} />}
                 >
                     <p>
-                        Launch a production-ready design system in weeks &ndash;
-                        boosting velocity, cutting rework, and improving
-                        accessibility from day one.
+                        Launch a production-ready system with tokens, components
+                        and contribution rules that keep products consistent.
                     </p>
                 </Card>
                 <Card
-                    title="System Audit & Roadmap"
+                    title="Frontend Platform & DX Modernisation"
                     icon={<SystemAuditRoadmapIcon className={styles.icon} />}
                 >
                     <p>
-                        Turn existing assets into a strategic UI architecture
-                        roadmap that reduces churn and flags risk early.
+                        Refine build tooling, testing, and workflows to cut
+                        defects and accelerate delivery.
                     </p>
                 </Card>
                 <Card
-                    title="Hands-on Build"
+                    title="Full-Stack Foundations"
                     icon={<HandsOnBuildIcon className={styles.icon} />}
                 >
                     <p>
-                        Ship resilient foundations without diverting your team
-                        so releases stay on schedule.
+                        Shape API contracts, data models, auth, and CI/CD so
+                        frontend work lands cleanly.
                     </p>
                 </Card>
                 <Card
@@ -44,8 +43,8 @@ export default function Services() {
                     icon={<ConsultingTeamUpliftIcon className={styles.icon} />}
                 >
                     <p>
-                        Raise team capability with ongoing mentorship that lifts
-                        quality and autonomy.
+                        Raise capability across the stack with mentoring that
+                        leaves teams self-sufficient.
                     </p>
                 </Card>
             </div>

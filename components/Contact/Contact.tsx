@@ -6,8 +6,12 @@ export default function Contact() {
     return (
         <Section id="contact" labelledBy="contact-heading">
             <h2 id="contact-heading" className={styles.heading}>
-                Let&apos;s work together
+                Hire a frontend lead who goes full-stack
             </h2>
+            <p className={styles.intro}>
+                Available for principal roles, consulting, and architecture
+                engagements.
+            </p>
             <div className={styles.ctaGroup}>
                 <BookCallButton href="mailto:hello@lapidist.net">
                     Get in touch

@@ -1,11 +1,13 @@
 import { ReactNode } from "react";
 import Card from "@/components/Card/Card";
+import styles from "./CaseStudyCard.module.scss";
 
 interface CaseStudyCardProps {
     title: string;
     visual: ReactNode;
     before: string;
     after: string;
+    highlights?: string[];
 }
 
 export default function CaseStudyCard({
@@ -13,6 +15,7 @@ export default function CaseStudyCard({
     visual,
     before,
     after,
+    highlights = [],
 }: CaseStudyCardProps) {
     return (
         <Card title={title} size="md">
@@ -21,6 +24,16 @@ export default function CaseStudyCard({
             <p>{before}</p>
             <h4>After:</h4>
             <p>{after}</p>
+            {highlights.length > 0 && (
+                <>
+                    <h4>Backend & Platform highlights:</h4>
+                    <ul className={styles.highlights}>
+                        {highlights.map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
+                    </ul>
+                </>
+            )}
         </Card>
     );
 }

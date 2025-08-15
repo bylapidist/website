@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 
@@ -17,6 +18,9 @@ export async function getArticle(year: string, slug: string) {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);
     const source = await fs.promises.readFile(filePath, "utf8");
     const { data, content } = matter(source);
+    if (data.draft) {
+        notFound();
+    }
     const { content: MDXContent } = await compileMDX({ source: content });
     const meta: ArticleMeta = {
         year,
@@ -40,6 +44,9 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
                 const filePath = path.join(dir, file);
                 const source = await fs.promises.readFile(filePath, "utf8");
                 const { data } = matter(source);
+                if (data.draft) {
+                    continue;
+                }
                 articles.push({
                     year,
                     slug,

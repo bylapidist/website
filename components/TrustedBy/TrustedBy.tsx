@@ -9,7 +9,8 @@ export default function TrustedBy() {
             className={styles.trustedBy}
         >
             <p className={styles.tagline}>
-                I help brands deliver reliable, inclusive products.
+                I help brands deliver reliable, inclusive, and scalable
+                products.
             </p>
             <ul className={styles.logos}>
                 <li>
