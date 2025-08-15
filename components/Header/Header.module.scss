@@ -36,7 +36,12 @@
     .logoLockup {
         display: flex;
         flex-direction: column;
-        line-height: var(--leading-tighter);
+        font-family: inherit;
+
+        span {
+            font-family: inherit;
+            line-height: var(--leading-tighter);
+        }
     }
 
     .logoMark {
