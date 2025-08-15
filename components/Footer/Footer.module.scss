@@ -5,10 +5,10 @@
         @include centered-column;
 
         padding-block: var(--space-xl);
-        border-block-start: 1px solid var(--border);
-        font-size: var(--step-negative-1);
+        border-block-start: 1px solid var(--colour-border);
+        font-size: var(--typography-size-100);
         text-align: center;
-        color: var(--text-subtle);
+        color: var(--colour-text-subtle);
     }
 
     .footerContainer {
@@ -37,6 +37,6 @@
         min-inline-size: var(--size-tap-min);
         text-decoration: none;
         padding: var(--space-xs) var(--space-s);
-        color: var(--text);
+        color: var(--colour-text);
     }
 }

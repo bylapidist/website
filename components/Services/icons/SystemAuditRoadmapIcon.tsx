@@ -5,7 +5,7 @@ export default function SystemAuditRoadmapIcon(props: SVGProps<SVGSVGElement>) {
         <svg aria-hidden="true" viewBox="0 0 48 48" {...props}>
             <g
                 fill="none"
-                stroke="var(--logo-blue)"
+                stroke="var(--colour-logo-blue)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

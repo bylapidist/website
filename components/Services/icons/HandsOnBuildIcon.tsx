@@ -5,7 +5,7 @@ export default function HandsOnBuildIcon(props: SVGProps<SVGSVGElement>) {
         <svg aria-hidden="true" viewBox="0 0 48 48" {...props}>
             <g
                 fill="none"
-                stroke="var(--logo-green)"
+                stroke="var(--colour-logo-green)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

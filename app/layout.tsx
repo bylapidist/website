@@ -131,12 +131,12 @@ export default function RootLayout({
                         <radialGradient id="b" cx="20%" cy="25%" r="60%">
                             <stop
                                 offset="0%"
-                                stopColor="var(--primary)"
+                                stopColor="var(--colour-primary)"
                                 stopOpacity=".25"
                             />
                             <stop
                                 offset="100%"
-                                stopColor="var(--primary)"
+                                stopColor="var(--colour-primary)"
                                 stopOpacity="0"
                             />
                         </radialGradient>
@@ -180,13 +180,13 @@ export default function RootLayout({
                         >
                             <path
                                 fill="none"
-                                stroke="var(--border)"
+                                stroke="var(--colour-border)"
                                 strokeOpacity=".25"
                                 d="M64 0H0v64"
                             />
                             <path
                                 fill="none"
-                                stroke="var(--border)"
+                                stroke="var(--colour-border)"
                                 strokeOpacity=".15"
                                 d="M32 0v64M0 32h64"
                             />
@@ -195,7 +195,11 @@ export default function RootLayout({
                             <rect width="100%" height="100%" fill="url(#a)" />
                         </mask>
                     </defs>
-                    <rect width="100%" height="100%" fill="var(--bg)" />
+                    <rect
+                        width="100%"
+                        height="100%"
+                        fill="var(--surface-level-0)"
+                    />
                     <rect width="100%" height="100%" fill="url(#b)" />
                     <rect width="100%" height="100%" fill="url(#c)" />
                     <rect
