@@ -33,7 +33,7 @@
         "perf:lhci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
         "qa": "start-server-and-test start http://localhost:3000 perf:lhci",
-        "a11y": "axe http://localhost:3000 --exit 1 --dir .axe --no-progress --timeout 60000"
+        "a11y": "axe http://localhost:3000 --exit 1 --dir .axe --timeout 60000"
     },
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
