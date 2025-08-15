@@ -17,6 +17,9 @@ export default function Insights({ articles }: { articles: Article[] }) {
             heading="Recent work & insights"
             className={styles.insights}
         >
+            <p className={styles.tagline}>
+                Articles on frontend platforms, API design, and design systems.
+            </p>
             <div className={styles.cards}>
                 {articles.map(({ year, slug, title, description }) => (
                     <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>

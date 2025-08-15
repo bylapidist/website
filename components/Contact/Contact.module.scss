@@ -15,4 +15,11 @@
     .ctaGroup {
         @include cta-group;
     }
+
+    .intro {
+        text-align: center;
+        max-inline-size: 40ch;
+        margin: var(--space-m) auto;
+        font-size: var(--step-0);
+    }
 }

@@ -10,12 +10,12 @@ import styles from "./page.module.scss";
 export const metadata: Metadata = {
     title: "Articles",
     description:
-        "Articles and insights on front-end engineering and design systems.",
+        "Articles and insights on frontend platforms, API design, and design systems.",
     alternates: { canonical: "/articles" },
     openGraph: {
         title: "Articles",
         description:
-            "Articles and insights on front-end engineering and design systems.",
+            "Articles and insights on frontend platforms, API design, and design systems.",
         url: "/articles",
         type: "website",
         images: [{ url: "/opengraph-image" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Articles",
         description:
-            "Articles and insights on front-end engineering and design systems.",
+            "Articles and insights on frontend platforms, API design, and design systems.",
         images: ["/twitter-image"],
     },
 };
