@@ -20,7 +20,7 @@ const caseStudies = [
         after: "Design system onboarding documentation and team upskilling.",
     },
     {
-        title: "Ecommerce platform",
+        title: "Ecommerce",
         Visual: EcommerceVisual,
         before: "Flaky components, accessibility gaps, shipping delays.",
         after: "Accessible component library and automated testing.",

@@ -6,8 +6,6 @@ import "@/styles/typography.scss";
 import Header from "@/components/Header/Header";
 import styles from "./layout.module.scss";
 
-// Load variable fonts so optical size and slant can be controlled via
-// `font-variation-settings` in CSS.
 const header = Lexend_Deca({
     variable: "--font-header",
     subsets: ["latin"],
@@ -30,32 +28,48 @@ export const viewport: Viewport = {
     ],
 };
 
-export const metadata: Metadata = {
-    metadataBase: new URL("https://lapidist.net"),
-    title: {
-        default:
-            "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
-        template: "%s | Brett Dorrans",
-    },
+const METADATA = {
+    url: "https://lapidist.net",
+    name: "Brett Dorrans",
+    brand: "Lapidist",
+    lang: "en-GB",
+    title: "Principal Frontend Engineer & Design Systems Specialist",
     description:
-        "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
-    icons: { icon: "/favicon.ico" },
+        "Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based.",
+    theme: {
+        light: "#ffffff",
+        dark: "#090909",
+    },
+    images: {
+        favicon: "/favicon.ico",
+        og: "/opengraph-image",
+        twitter: "/twitter-image",
+        mask: "/mask-icon.svg",
+    },
+} as const;
+
+export const metadata: Metadata = {
+    metadataBase: new URL(METADATA.url),
+    title: {
+        default: METADATA.title,
+        template: `%s | ${METADATA.name}`,
+    },
+    description: METADATA.description,
+    icons: { icon: METADATA.images.favicon },
     openGraph: {
-        title: "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
-        description:
-            "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
-        url: "https://lapidist.net",
-        siteName: "Brett Dorrans",
-        images: [{ url: "/opengraph-image" }],
+        title: METADATA.title,
+        description: METADATA.description,
+        url: METADATA.url,
+        siteName: METADATA.name,
+        images: [{ url: METADATA.images.og }],
         locale: "en_GB",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
-        description:
-            "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
-        images: ["/twitter-image"],
+        title: METADATA.title,
+        description: METADATA.description,
+        images: [METADATA.images.twitter],
     },
     robots: {
         index: true,
@@ -67,7 +81,7 @@ export const metadata: Metadata = {
             "max-image-preview": "large",
         },
     },
-    alternates: { canonical: "https://lapidist.net" },
+    alternates: { canonical: METADATA.url },
 };
 
 export default function RootLayout({
@@ -78,29 +92,33 @@ export default function RootLayout({
     return (
         <html lang="en-GB">
             <head>
-                <meta name="apple-mobile-web-app-title" content="Lapidist" />
+                <meta
+                    name="apple-mobile-web-app-title"
+                    content={METADATA.brand}
+                />
                 <meta name="color-scheme" content="light dark" />
                 <meta
                     name="theme-color"
                     media="(prefers-color-scheme: light)"
-                    content="#ffffff"
+                    content={METADATA.theme.light}
                 />
                 <meta
                     name="theme-color"
                     media="(prefers-color-scheme: dark)"
-                    content="#090909"
+                    content={METADATA.theme.dark}
                 />
-                <meta
-                    name="description"
-                    content="Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in."
-                />
+                <meta name="description" content={METADATA.description} />
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
                     crossOrigin="anonymous"
                 />
-                <link rel="preload" as="image" href="/opengraph-image" />
-                <link rel="mask-icon" href="/mask-icon.svg" color="#6847ff" />
+                <link rel="preload" as="image" href={METADATA.images.og} />
+                <link
+                    rel="mask-icon"
+                    href={METADATA.images.mask}
+                    color="#6847ff"
+                />
             </head>
             <body className={`${header.variable} ${body.variable}`}>
                 <svg

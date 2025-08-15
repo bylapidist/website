@@ -6,10 +6,10 @@ export default function EcommerceVisual() {
             <rect className="bg" width="256" height="144" />
             <rect
                 className={styles.panel}
-                x="0"
-                y="0"
-                width="256"
-                height="16"
+                x="-1"
+                y="-1"
+                width="258"
+                height="17"
             />
             <rect
                 className={styles.block}
