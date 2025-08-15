@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import eslintPluginImport from "eslint-plugin-import";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactCompiler from "eslint-plugin-react-compiler";
 import storybook from "eslint-plugin-storybook";
 import tseslint from "typescript-eslint";
@@ -34,6 +35,7 @@ export default [
     {
         plugins: {
             import: eslintPluginImport,
+            "jsx-a11y": jsxA11y,
         },
         settings: {
             "import/resolver": {

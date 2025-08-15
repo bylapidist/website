@@ -43,4 +43,16 @@
         inline-size: 3ch;
         fill: currentcolor;
     }
+
+    .nav {
+        display: flex;
+        gap: var(--space-m);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+        }
+    }
 }

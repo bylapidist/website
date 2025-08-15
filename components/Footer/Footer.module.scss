@@ -21,16 +21,11 @@
         margin-block-end: var(--space-m);
     }
 
-    .social {
-        @include centered-list(var(--space-s));
-    }
-
     .footer p {
         margin-block-start: var(--space-s);
     }
 
-    .footerNav a,
-    .social a {
+    .footerNav a {
         @include inline-center;
 
         min-block-size: var(--size-tap-min);

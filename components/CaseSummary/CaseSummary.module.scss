@@ -1,0 +1,9 @@
+.summary {
+    display: grid;
+    gap: 0.25rem 1rem;
+    grid-template-columns: max-content 1fr;
+
+    dt {
+        font-weight: 600;
+    }
+}
