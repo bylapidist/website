@@ -40,7 +40,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
-    const url = `/${year}/${slug}`;
+    const base = "https://lapidist.net";
+    const url = `${base}/${year}/${slug}/`;
     return {
         title: meta.title,
         description: meta.description,

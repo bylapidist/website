@@ -52,6 +52,10 @@
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
+
+        &:visited {
+            color: inherit;
+        }
     }
 
     section {
