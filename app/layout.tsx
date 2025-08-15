@@ -245,9 +245,20 @@ export default function RootLayout({
                     <rect width="100%" height="100%" filter="url(#i)" />
                     <rect width="100%" height="100%" fill="url(#j)" />
                 </svg>
-                <a href="#main" className="skip-link">
-                    Skip to content
-                </a>
+                <nav className="skip-links" aria-label="Skip links">
+                    <a href="#main" className="skip-link">
+                        Skip to content
+                    </a>
+                    <a href="#services" className="skip-link">
+                        Skip to services
+                    </a>
+                    <a href="#case-studies" className="skip-link">
+                        Skip to case studies
+                    </a>
+                    <a href="#contact" className="skip-link">
+                        Skip to contact
+                    </a>
+                </nav>
                 <Header />
                 <main id="main">{children}</main>
             </body>

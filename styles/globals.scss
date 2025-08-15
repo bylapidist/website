@@ -82,15 +82,20 @@
 }
 
 @layer components {
-    .skip-link {
+    .skip-links {
         position: absolute;
         inset-block-start: 0;
         inset-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: var(--z-3);
+    }
+
+    .skip-link {
         padding: var(--space-xs);
         background: var(--colour-primary);
         color: var(--colour-on-primary);
         transform: translateY(-100%);
-        z-index: var(--z-3);
     }
 
     .skip-link:focus {
