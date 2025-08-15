@@ -37,12 +37,12 @@ export const metadata: Metadata = {
         template: "%s | Brett Dorrans",
     },
     description:
-        "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
+        "Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based.",
     icons: { icon: "/favicon.ico" },
     openGraph: {
         title: "Principal Frontend Engineer & Design Systems Specialist",
         description:
-            "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
+            "Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based.",
         url: "https://lapidist.net",
         siteName: "Brett Dorrans",
         images: [{ url: "/opengraph-image" }],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Principal Frontend Engineer & Design Systems Specialist",
         description:
-            "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
+            "Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based.",
         images: ["/twitter-image"],
     },
     robots: {
@@ -91,7 +91,7 @@ export default function RootLayout({
                 />
                 <meta
                     name="description"
-                    content="Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based."
+                    content="Ship design systems teams love. I help orgs build UI platforms that scale with quality intact—accessibility and performance included. Remote-first, UK-based."
                 />
                 <link
                     rel="preconnect"
