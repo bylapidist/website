@@ -6,10 +6,10 @@ export default function GlobalFintechVisual() {
             <rect className="bg" width="256" height="144" />
             <rect
                 className={styles.panel}
-                x="0"
-                y="0"
-                width="36"
-                height="144"
+                x="-1"
+                y="-1"
+                width="37"
+                height="146"
             />
             <rect
                 className={styles.block}
@@ -54,14 +54,14 @@ export default function GlobalFintechVisual() {
             <rect
                 className={styles.panel}
                 x="36"
-                y="0"
-                width="220"
+                y="-1"
+                width="221"
                 height="20"
             />
             <rect
                 className={styles.block}
                 x="42"
-                y="6"
+                y="5"
                 width="30"
                 height="8"
                 rx="1"
@@ -69,7 +69,7 @@ export default function GlobalFintechVisual() {
             <rect
                 className={styles.block}
                 x="76"
-                y="6"
+                y="5"
                 width="30"
                 height="8"
                 rx="1"
@@ -77,7 +77,7 @@ export default function GlobalFintechVisual() {
             <rect
                 className={styles.block}
                 x="110"
-                y="6"
+                y="5"
                 width="30"
                 height="8"
                 rx="1"

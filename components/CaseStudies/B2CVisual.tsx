@@ -6,9 +6,9 @@ export default function B2CVisual() {
             <rect className="bg" width="256" height="144" />
             <rect
                 className={styles.panel}
-                x="0"
-                y="0"
-                width="256"
+                x="-1"
+                y="-1"
+                width="258"
                 height="18"
             />
             <rect
