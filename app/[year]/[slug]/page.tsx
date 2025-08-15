@@ -1,3 +1,5 @@
+import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import styles from "./page.module.scss";
@@ -15,14 +17,18 @@ export default async function ArticlePage({
     const { year, slug } = await params;
     const { meta, content } = await getArticle(year, slug);
     return (
-        <Section heading={meta.title} headingLevel={1}>
-            <article className={styles.article}>
-                {meta.description && (
-                    <p className={styles.description}>{meta.description}</p>
-                )}
-                {content}
-            </article>
-        </Section>
+        <>
+            <Section heading={meta.title} headingLevel={1}>
+                <article className={styles.article}>
+                    {meta.description && (
+                        <p className={styles.description}>{meta.description}</p>
+                    )}
+                    {content}
+                </article>
+            </Section>
+            <Contact />
+            <Footer />
+        </>
     );
 }
 
