@@ -30,9 +30,10 @@
         "build-storybook": "storybook build",
         "test": "playwright test",
         "test:install-browsers": "playwright install --with-deps",
-        "lh:ci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
+        "perf:lhci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
-        "qa": "start-server-and-test start http://localhost:3000 lh:ci"
+        "qa": "start-server-and-test start http://localhost:3000 perf:lhci",
+        "a11y": "axe http://localhost:3000 --exit 1 --dir .axe --no-progress --timeout 60000"
     },
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
@@ -45,6 +46,7 @@
         "react-dom": "19.1.1"
     },
     "devDependencies": {
+        "@axe-core/cli": "^4.10.2",
         "@axe-core/playwright": "4.10.2",
         "@eslint/eslintrc": "3.3.1",
         "@eslint/js": "9.33.0",
@@ -60,6 +62,7 @@
         "eslint-config-next": "15.4.6",
         "eslint-import-resolver-typescript": "^4.4.4",
         "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-react-compiler": "^19.1.0-rc.2",
         "eslint-plugin-storybook": "9.1.2",
         "lighthouse": "12.8.1",

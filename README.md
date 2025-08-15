@@ -1,10 +1,14 @@
 # @lapidist/website
 
-[![GitHub Release](https://img.shields.io/github/release/bylapidist/website.svg?style=flat)](https://github.com/bylapidist/website/releases)
-[![GitHub Issues](https://img.shields.io/github/issues/bylapidist/website.svg?style=flat)](https://github.com/bylapidist/website/issues)
-[![Build Status](https://github.com/bylapidist/website/workflows/Release/badge.svg)](https://github.com/bylapidist/website/actions?query=workflow%3ARelease)
+[![CI](https://github.com/bylapidist/website/actions/workflows/test.yml/badge.svg)](https://github.com/bylapidist/website/actions/workflows/test.yml)
+[![Lighthouse](https://img.shields.io/badge/Lighthouse-100-brightgreen)](https://github.com/bylapidist/website)
 
-This repository lives at [lapidist.net](https://lapidist.net)
+Personal site for Brett Dorrans. Showcases selected work and articles on
+enterprise design systems, accessibility, and UI platforms.
+
+## Author
+
+**Brett Dorrans** – Principal Frontend Engineer & Design Systems Specialist
 
 ## License
 

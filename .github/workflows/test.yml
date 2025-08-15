@@ -52,7 +52,12 @@ jobs:
             - name: Test
               run: npm test
 
-            - name: Lighthouse
+            - name: Accessibility
+              run: npx start-server-and-test start http://localhost:3000 a11y
+              env:
+                  NODE_ENV: production
+
+            - name: Performance
               run: npm run qa
               env:
                   NODE_ENV: production
