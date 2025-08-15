@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
@@ -36,8 +37,27 @@ export async function generateMetadata({
     params,
 }: {
     params: Promise<{ year: string; slug: string }>;
-}) {
+}): Promise<Metadata> {
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
-    return { title: meta.title, description: meta.description };
+    const url = `/${year}/${slug}`;
+    return {
+        title: meta.title,
+        description: meta.description,
+        alternates: { canonical: url },
+        openGraph: {
+            title: meta.title,
+            description: meta.description,
+            url,
+            type: "article",
+            publishedTime: meta.date,
+            images: [{ url: "/opengraph-image" }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: meta.title,
+            description: meta.description,
+            images: ["/twitter-image"],
+        },
+    };
 }
