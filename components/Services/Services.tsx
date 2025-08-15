@@ -16,7 +16,7 @@ export default function Services() {
                     icon={<DesignSystemBootstrapIcon className={styles.icon} />}
                 >
                     <p>
-                        Launch a production-ready design system in weeks —
+                        Launch a production-ready design system in weeks &ndash;
                         boosting velocity, cutting rework, and improving
                         accessibility from day one.
                     </p>
@@ -26,8 +26,8 @@ export default function Services() {
                     icon={<SystemAuditRoadmapIcon className={styles.icon} />}
                 >
                     <p>
-                        Turn your existing assets into a clear system strategy
-                        that reduces churn and flags risk early.
+                        Turn existing assets into a strategic UI architecture
+                        roadmap that reduces churn and flags risk early.
                     </p>
                 </Card>
                 <Card
@@ -35,8 +35,8 @@ export default function Services() {
                     icon={<HandsOnBuildIcon className={styles.icon} />}
                 >
                     <p>
-                        Ship reliable system foundations without diverting your
-                        team, so releases stay on track.
+                        Ship resilient foundations without diverting your team
+                        so releases stay on schedule.
                     </p>
                 </Card>
                 <Card
@@ -44,14 +44,14 @@ export default function Services() {
                     icon={<ConsultingTeamUpliftIcon className={styles.icon} />}
                 >
                     <p>
-                        Grow your team&apos;s capabilities with ongoing guidance
-                        that lifts quality and autonomy.
+                        Raise team capability with ongoing mentorship that lifts
+                        quality and autonomy.
                     </p>
                 </Card>
             </div>
             <div className={styles.cta}>
-                <p>Let&apos;s discuss which options fit your team.</p>
-                <BookCallButton />
+                <p>Let&apos;s discuss which option fits your team.</p>
+                <BookCallButton>Start the conversation</BookCallButton>
             </div>
         </Section>
     );

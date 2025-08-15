@@ -6,19 +6,20 @@ export default function Approach() {
         <Section id="approach" heading="My approach">
             <ol className={styles.steps}>
                 <li>
-                    <strong>Audit</strong> &rarr; analyse the current UI and
-                    spot opportunities.
+                    <strong>Assess</strong> &rarr; deep-dive current UI,
+                    tooling, and workflows.
                 </li>
                 <li>
-                    <strong>Prototype</strong> &rarr; early improvements and
-                    gather feedback.
+                    <strong>Align</strong> &rarr; co-create a roadmap with
+                    design and product leads.
                 </li>
                 <li>
-                    <strong>Rollout</strong> &rarr; launch, measure, and refine.
+                    <strong>Execute</strong> &rarr; deliver tokens, components,
+                    and docs iteratively.
                 </li>
                 <li>
-                    <strong>Review</strong> &rarr; continuous improvements and
-                    review.
+                    <strong>Govern</strong> &rarr; bake metrics and review loops
+                    into CI for sustained quality.
                 </li>
             </ol>
         </Section>

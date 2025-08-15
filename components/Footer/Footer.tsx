@@ -30,7 +30,7 @@ export default function Footer() {
                     </li>
                     <li>
                         <a
-                            href="https://guthub.com/bylapidist"
+                            href="https://github.com/bylapidist"
                             rel="noopener noreferrer"
                         >
                             GitHub
