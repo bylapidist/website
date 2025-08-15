@@ -7,14 +7,14 @@
     }
 
     .container[data-size="s"] {
-        max-width: var(--max-w-s);
+        max-width: var(--layout-max-w-s);
     }
 
     .container[data-size="m"] {
-        max-width: var(--max-w-m);
+        max-width: var(--layout-max-w-m);
     }
 
     .container[data-size="l"] {
-        max-width: var(--max-w-l);
+        max-width: var(--layout-max-w-l);
     }
 }

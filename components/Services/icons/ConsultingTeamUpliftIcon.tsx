@@ -7,7 +7,7 @@ export default function ConsultingTeamUpliftIcon(
         <svg aria-hidden="true" viewBox="0 0 48 48" {...props}>
             <g
                 fill="none"
-                stroke="var(--primary)"
+                stroke="var(--colour-primary)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

@@ -1,9 +1,9 @@
 @layer components {
     .card {
-        background: var(--surface);
+        background: var(--surface-level-1);
         border-radius: var(--radius-l);
         padding: var(--space-l);
-        box-shadow: var(--shadow-1);
+        box-shadow: var(--shadow-elev-1);
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
@@ -14,7 +14,7 @@
     }
 
     .card[data-highlight] {
-        border: 2px solid var(--primary);
+        border: 2px solid var(--colour-primary);
     }
 
     .head {
@@ -27,12 +27,12 @@
     .head h3,
     .head h4 {
         margin: 0;
-        font-size: var(--step-1);
+        font-size: var(--typography-size-300);
     }
 
     .body {
         flex-grow: 1;
-        font-size: var(--step-0);
+        font-size: var(--typography-size-200);
     }
 
     @container section (max-width: 40rem) {
@@ -42,7 +42,7 @@
 
         .head h3,
         .head h4 {
-            font-size: var(--step-0);
+            font-size: var(--typography-size-200);
         }
     }
 }

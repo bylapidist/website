@@ -3,12 +3,12 @@
 @layer components {
     .heading {
         text-align: center;
-        font-size: var(--step-3);
+        font-size: var(--typography-size-500);
     }
 
     @container (min-width:40rem) {
         .heading {
-            font-size: var(--step-4);
+            font-size: var(--typography-size-600);
         }
     }
 
