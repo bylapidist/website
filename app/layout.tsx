@@ -33,17 +33,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     metadataBase: new URL("https://lapidist.net"),
     title: {
-        default:
-            "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
+        default: "Principal Frontend Engineer & Design Systems Specialist",
         template: "%s | Brett Dorrans",
     },
     description:
-        "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
+        "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
     icons: { icon: "/favicon.ico" },
     openGraph: {
-        title: "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
+        title: "Principal Frontend Engineer & Design Systems Specialist",
         description:
-            "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
+            "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
         url: "https://lapidist.net",
         siteName: "Brett Dorrans",
         images: [{ url: "/opengraph-image" }],
@@ -52,9 +51,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist",
+        title: "Principal Frontend Engineer & Design Systems Specialist",
         description:
-            "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.",
+            "Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based.",
         images: ["/twitter-image"],
     },
     robots: {
@@ -92,7 +91,7 @@ export default function RootLayout({
                 />
                 <meta
                     name="description"
-                    content="Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in."
+                    content="Principal/Lead Frontend engineer specialising in enterprise design systems, accessibility, and UI platforms. Remote-first; UK-based."
                 />
                 <link
                     rel="preconnect"
