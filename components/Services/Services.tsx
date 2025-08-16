@@ -1,10 +1,7 @@
+import Image from "next/image";
 import Card from "@/components/Card/Card";
 import { BookCallButton } from "@/components/Cta/Cta";
 import Section from "@/components/Section/Section";
-import ConsultingTeamUpliftIcon from "./icons/ConsultingTeamUpliftIcon";
-import DesignSystemBootstrapIcon from "./icons/DesignSystemBootstrapIcon";
-import HandsOnBuildIcon from "./icons/HandsOnBuildIcon";
-import SystemAuditRoadmapIcon from "./icons/SystemAuditRoadmapIcon";
 import styles from "./Services.module.scss";
 
 export default function Services() {
@@ -13,7 +10,15 @@ export default function Services() {
             <div className={styles.cards}>
                 <Card
                     title="Design System Bootstrap"
-                    icon={<DesignSystemBootstrapIcon className={styles.icon} />}
+                    icon={
+                        <Image
+                            src="/icons/design-system-bootstrap.svg"
+                            alt=""
+                            width={48}
+                            height={48}
+                            className={styles.icon}
+                        />
+                    }
                 >
                     <p>
                         Launch a production-ready design system in weeks &ndash;
@@ -23,7 +28,15 @@ export default function Services() {
                 </Card>
                 <Card
                     title="System Audit & Roadmap"
-                    icon={<SystemAuditRoadmapIcon className={styles.icon} />}
+                    icon={
+                        <Image
+                            src="/icons/system-audit-roadmap.svg"
+                            alt=""
+                            width={48}
+                            height={48}
+                            className={styles.icon}
+                        />
+                    }
                 >
                     <p>
                         Turn existing assets into a strategic UI architecture
@@ -32,7 +45,15 @@ export default function Services() {
                 </Card>
                 <Card
                     title="Hands-on Build"
-                    icon={<HandsOnBuildIcon className={styles.icon} />}
+                    icon={
+                        <Image
+                            src="/icons/hands-on-build.svg"
+                            alt=""
+                            width={48}
+                            height={48}
+                            className={styles.icon}
+                        />
+                    }
                 >
                     <p>
                         Ship resilient foundations without diverting your team
@@ -41,7 +62,15 @@ export default function Services() {
                 </Card>
                 <Card
                     title="Consulting & Team Uplift"
-                    icon={<ConsultingTeamUpliftIcon className={styles.icon} />}
+                    icon={
+                        <Image
+                            src="/icons/consulting-team-uplift.svg"
+                            alt=""
+                            width={48}
+                            height={48}
+                            className={styles.icon}
+                        />
+                    }
                 >
                     <p>
                         Raise team capability with ongoing mentorship that lifts
