@@ -34,18 +34,9 @@
         border-color: var(--colour-primary);
     }
 
-    .button[data-variant="ghost"] {
-        background: transparent;
-        color: var(--colour-text);
-    }
-
     .button:disabled {
         cursor: not-allowed;
         opacity: 0.6;
-    }
-
-    .button[aria-busy="true"] {
-        cursor: wait;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -71,21 +62,12 @@
             color: var(--colour-on-primary);
         }
 
-        .button:not(:disabled)[data-variant="ghost"]:hover {
-            background: var(--surface-level-1-hover);
-            color: var(--colour-on-primary);
-        }
-
         .button:not(:disabled)[data-variant="primary"]:active {
             background: var(--colour-primary-active);
         }
 
         .button:not(:disabled)[data-variant="secondary"]:active {
             background: var(--colour-primary-active);
-        }
-
-        .button:not(:disabled)[data-variant="ghost"]:active {
-            background: var(--surface-level-1-active);
         }
 
         .button:not(:disabled):active {
