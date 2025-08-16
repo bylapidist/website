@@ -9,15 +9,20 @@
         transition: box-shadow var(--motion-dur-200) var(--motion-ease-standard);
     }
 
-    .header[data-scrolled] {
-        box-shadow: var(--shadow-elev-1);
-    }
-
     .inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-block: var(--space-m);
+        transition: padding var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    .header[data-scrolled] {
+        box-shadow: var(--shadow-elev-1);
+    }
+
+    .header[data-scrolled] .inner {
+        padding-block: var(--space-s);
     }
 
     .logo {
