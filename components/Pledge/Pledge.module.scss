@@ -3,5 +3,7 @@
 @layer components {
     .checklist {
         @include checklist;
+
+        padding-block-start: var(--space-m);
     }
 }
