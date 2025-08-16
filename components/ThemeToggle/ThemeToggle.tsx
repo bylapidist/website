@@ -40,6 +40,7 @@ export default function ThemeToggle() {
             className={styles.toggle}
             onClick={toggle}
             aria-label={label}
+            data-theme={theme}
         >
             {theme === "dark" ? (
                 <SunIcon className={styles.icon} />
