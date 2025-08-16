@@ -37,7 +37,10 @@ export default async function ArticlesPage() {
                 <h1>Articles</h1>
                 <div className={styles.cards}>
                     {articles.map(({ year, slug, title, description }) => (
-                        <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
+                        <Link
+                            key={`${year}-${slug}`}
+                            href={`/articles/${year}/${slug}`}
+                        >
                             <Card title={title} headingLevel="h2">
                                 <p>{description}</p>
                             </Card>

@@ -15,7 +15,7 @@ export default function Approach() {
                 </li>
                 <li>
                     <strong>Execute</strong> &rarr; deliver tokens, components,
-                    and docs iteratively.
+                    contracts, and docs iteratively.
                 </li>
                 <li>
                     <strong>Govern</strong> &rarr; bake metrics and review loops

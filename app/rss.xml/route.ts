@@ -2,7 +2,7 @@ import { getAllArticles } from "@/lib/articles";
 
 const BASE_URL = "https://lapidist.net";
 const SITE_TITLE =
-    "Brett Dorrans – Principal Frontend Engineer & Design Systems Specialist";
+    "Brett Dorrans – Lead Frontend Engineer & Design Systems Specialist";
 const SITE_DESCRIPTION =
     "Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.";
 
@@ -22,7 +22,7 @@ export async function GET() {
     const items = articles
         .map(
             ({ title, description, year, slug, date }) =>
-                `\n        <item>\n            <title>${escapeHtml(title)}</title>\n            <description>${escapeHtml(description)}</description>\n            <link>${BASE_URL}/${year}/${slug}/</link>\n            <guid>${BASE_URL}/${year}/${slug}/</guid>\n            <pubDate>${new Date(date).toUTCString()}</pubDate>\n        </item>`,
+                `\n        <item>\n            <title>${escapeHtml(title)}</title>\n            <description>${escapeHtml(description)}</description>\n            <link>${BASE_URL}/articles/${year}/${slug}/</link>\n            <guid>${BASE_URL}/articles/${year}/${slug}/</guid>\n            <pubDate>${new Date(date).toUTCString()}</pubDate>\n        </item>`,
         )
         .join("");
 
