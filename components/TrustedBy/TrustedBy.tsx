@@ -1,4 +1,5 @@
 import Section from "@/components/Section/Section";
+import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import styles from "./TrustedBy.module.scss";
 
 export default function TrustedBy() {
@@ -17,7 +18,7 @@ export default function TrustedBy() {
                     <a
                         className={styles.logoLink}
                         href="https://www.encompasscorporation.com"
-                        aria-label="Encompass Corporation"
+                        aria-describedby="trusted-by-encompass"
                     >
                         <svg
                             className={styles.logo}
@@ -64,13 +65,16 @@ export default function TrustedBy() {
                                 fill="var(--colour-text-subtle)"
                             />
                         </svg>
+                        <VisuallyHidden id="trusted-by-encompass">
+                            Encompass Corporation
+                        </VisuallyHidden>
                     </a>
                 </li>
                 <li>
                     <a
                         className={styles.logoLink}
                         href="https://www.lendinvest.com"
-                        aria-label="LendInvest"
+                        aria-describedby="trusted-by-lendinvest"
                     >
                         <svg
                             className={styles.logo}
@@ -84,13 +88,16 @@ export default function TrustedBy() {
                                 <path d="M0 9.7v18.77l8.13 4.7 8.13-4.7-8.13-4.69V5zM16 0v18.78l8.13 4.69V4.69zM106.03 8.72c1.35 0 2.36-1 2.36-2.36A2.32 2.32 0 00106.03 4c-1.32 0-2.36 1-2.36 2.36 0 1.35 1 2.36 2.36 2.36zM37 27.72h3.68V4.31H37v23.4zm145.95-4.32c0 3.21 1.86 4.72 4.88 4.72 1.06 0 2.04-.22 2.57-.5v-3.46c-.47.28-1.2.5-1.88.5-1.2 0-1.89-.57-1.89-1.76v-8.52h3.68v-3.15h-3.68V6.3l-3.68 2.24v2.7h-2.3v3.15h2.3v9.02zm-78.74 4.31h3.64V11.23h-3.64v16.48zm50.85-13.49a4.57 4.57 0 014.46 3.5h-8.96c.6-2.12 2.3-3.5 4.5-3.5zm-102.3 0a4.57 4.57 0 014.46 3.5h-8.96c.6-2.12 2.3-3.5 4.5-3.5zm38.61 10.44c-2.83 0-4.87-2.23-4.87-5.19 0-2.95 2.04-5.19 4.87-5.19 2.8 0 4.88 2.24 4.88 5.2 0 2.95-2.08 5.18-4.88 5.18zm24.53-6.45c0-2.3 1.73-3.93 4-3.93 2.23 0 3.7 1.64 3.7 3.94v9.5h3.66v-9.6c0-4.37-2.65-7.3-6.48-7.3-2.08 0-3.8.85-5 2.33v-1.92h-3.52v16.48h3.64v-9.5zm-47.83 0c0-2.3 1.73-3.93 4-3.93 2.23 0 3.7 1.64 3.7 3.94v9.5h3.65v-9.6c0-4.37-2.64-7.3-6.48-7.3-2.07 0-3.8.85-5 2.33v-1.92h-3.52v16.48h3.65v-9.5zm94.44 6.73l-2.48-2.51a5.78 5.78 0 01-4.6 2.3 4.93 4.93 0 01-4.93-3.81h12.95v-1.45c0-4.93-3.61-8.65-8.4-8.65-4.87 0-8.42 3.71-8.42 8.65s3.68 8.65 8.8 8.65a9.13 9.13 0 007.08-3.18zm-102.3 0l-2.49-2.51a5.78 5.78 0 01-4.59 2.3 4.93 4.93 0 01-4.93-3.81h12.95v-1.45c0-4.93-3.62-8.65-8.4-8.65-4.87 0-8.42 3.71-8.42 8.65s3.68 8.65 8.8 8.65a9.14 9.14 0 007.08-3.18zm111.58-3.8c2.45.85 2.95 1.38 2.95 2.14 0 .94-.81 1.44-2.32 1.44a4.02 4.02 0 01-3.78-2.3l-2.99 2.11c1.32 2.24 3.72 3.59 6.67 3.59 3.59 0 6.2-2.01 6.2-4.97 0-2.51-1.64-4.15-5.13-5.31l-.66-.22c-2.08-.7-2.58-1.3-2.58-2.02 0-.84.79-1.38 2.1-1.38 1.27 0 2.15.54 3.06 1.8l2.9-2.02a6.84 6.84 0 00-5.98-3.18c-3.46 0-5.82 2.02-5.82 4.88 0 2.42 1.48 4.09 4.75 5.22l.63.22zm-75.51 4.72v1.85h3.52V4.31h-3.65v8.65a7.16 7.16 0 00-5.25-2.14c-4.59 0-8.14 3.78-8.14 8.65 0 4.88 3.55 8.65 8.14 8.65 2.2 0 4.06-.82 5.38-2.26zm41.13 2.26l8.84-16.89h-4.21l-4.72 9.47-4.72-9.47h-4.21l8.84 16.89h.18z" />
                             </g>
                         </svg>
+                        <VisuallyHidden id="trusted-by-lendinvest">
+                            LendInvest
+                        </VisuallyHidden>
                     </a>
                 </li>
                 <li>
                     <a
                         className={styles.logoLink}
                         href="https://www.goldencharter.co.uk"
-                        aria-label="Golden Charter"
+                        aria-describedby="trusted-by-golden-charter"
                     >
                         <svg
                             className={styles.logo}
@@ -162,13 +169,16 @@ export default function TrustedBy() {
                                 d="M907.02 403.032c0 11.154-.116 21.814.066 32.47.06 3.484-1.05 4.777-4.569 4.576-4.316-.246-8.66-.184-12.985-.024-3.152.117-4.405-.928-4.396-4.279.094-36.97.088-73.942.017-110.913-.007-3.423 1.198-4.724 4.665-4.711 23.149.09 46.298.088 69.446-.003 3.407-.013 4.913 1.158 4.743 4.641-.163 3.323-.219 6.673.014 9.988.284 4.042-1.537 5.127-5.324 5.09-15.487-.146-30.977.032-46.463-.124-3.795-.039-5.432 1.009-5.283 5.063.256 6.986.301 13.997-.01 20.978-.204 4.552 1.652 5.643 5.868 5.576 13.32-.211 26.646.028 39.967-.136 4.35-.053 6.214 1.135 6.14 5.945-.206 13.546-.001 13.549-13.462 13.549-10.659 0-21.325.24-31.972-.106-4.998-.162-7.204 1.28-6.5 6.434.246 1.798.04 3.658.039 5.986zM1681.108 420.193c15.148.001 29.809.094 44.467-.06 3.82-.04 5.268 1.125 5.311 5.124.16 14.765.286 14.764-14.393 14.764-19.99 0-39.982-.094-59.972.075-4.068.034-5.435-1.1-5.417-5.333.155-36.316.153-72.634.009-108.95-.018-4.408 1.408-6.076 5.76-5.668 2.808.263 5.66.048 8.492.048 7.648 0 7.654 0 7.655 7.428.002 28.32 0 56.64.001 84.961 0 7.595.004 7.595 8.087 7.611zM1957.02 373c0 13.826-.004 27.153.003 40.48.003 6.694.012 6.707 6.494 6.71 15.16.008 30.321.17 45.475-.094 4.733-.082 5.95 1.59 5.905 6.08-.137 13.843.021 13.845-13.82 13.845-19.99 0-39.98-.1-59.968.077-4.337.039-6.065-.861-6.035-5.747.22-35.98.194-71.962.03-107.943-.022-4.72 1.25-6.748 6.175-6.282 3.632.344 7.34.29 10.983.006 3.825-.299 4.853 1.26 4.819 4.893-.148 15.824-.062 31.65-.06 47.975z"
                             />
                         </svg>
+                        <VisuallyHidden id="trusted-by-golden-charter">
+                            Golden Charter
+                        </VisuallyHidden>
                     </a>
                 </li>
                 <li>
                     <a
                         className={styles.logoLink}
                         href="https://www.hunterboots.com"
-                        aria-label="Hunter Boots"
+                        aria-describedby="trusted-by-hunter-boots"
                     >
                         <svg
                             className={styles.logo}
@@ -185,13 +195,16 @@ export default function TrustedBy() {
                         v41.6h-17.2L260.3,294.4z"
                             />
                         </svg>
+                        <VisuallyHidden id="trusted-by-hunter-boots">
+                            Hunter Boots
+                        </VisuallyHidden>
                     </a>
                 </li>
                 <li>
                     <a
                         className={styles.logoLink}
                         href="https://www.gant.com"
-                        aria-label="GANT"
+                        aria-describedby="trusted-by-gant"
                     >
                         <svg
                             className={styles.logo}
@@ -217,6 +230,9 @@ export default function TrustedBy() {
                                 />
                             </g>
                         </svg>
+                        <VisuallyHidden id="trusted-by-gant">
+                            GANT
+                        </VisuallyHidden>
                     </a>
                 </li>
             </ul>
