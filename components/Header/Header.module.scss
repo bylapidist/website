@@ -1,0 +1,59 @@
+@layer components {
+    .header {
+        border-block-end: 1px solid var(--colour-border);
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: var(--space-m);
+    }
+
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-s);
+        text-decoration: none;
+        color: var(--colour-text);
+        font-size: var(--typography-size-200);
+        font-weight: 400;
+        font-family: var(--font-header), sans-serif;
+    }
+
+    .logoBlue {
+        fill: var(--colour-logo-blue);
+    }
+
+    .logoGreen {
+        fill: var(--colour-logo-green);
+    }
+
+    .logoYellow {
+        fill: var(--colour-logo-yellow);
+    }
+
+    .logoLockup {
+        display: flex;
+        flex-direction: column;
+        font-family: inherit;
+
+        span {
+            font-family: inherit;
+            line-height: var(--typography-line-tighter);
+        }
+    }
+
+    .logoMark {
+        inline-size: 3ch;
+        fill: currentcolor;
+        transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .logo:hover .logoMark,
+        .logo:focus-visible .logoMark {
+            transform: rotate(-3deg) scale(1.05);
+        }
+    }
+}

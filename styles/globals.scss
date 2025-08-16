@@ -1,0 +1,177 @@
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        font-family: var(--font-body), sans-serif;
+        line-height: var(--typography-line-normal);
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        font-variation-settings:
+            "opsz" var(--typography-font-opsz),
+            "slnt" var(--typography-font-slnt);
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: var(--surface-level-0);
+        color: var(--colour-text);
+    }
+
+    @supports (font-size: clamp(1rem, 1vw, 2rem)) {
+        body {
+            font-size: var(--typography-size-200);
+        }
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    :where(h1, h2, h3, h4, h5, h6) {
+        font-family: var(--font-header), sans-serif;
+        text-wrap: balance;
+        hyphens: auto;
+        line-height: var(--typography-line-tight);
+        font-variation-settings:
+            "opsz" var(--typography-font-opsz),
+            "slnt" var(--typography-font-slnt);
+    }
+
+    a:not([class]) {
+        color: var(--colour-primary);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration-color: currentcolor;
+        transition:
+            color var(--motion-dur-200) var(--motion-ease-standard),
+            text-decoration-color var(--motion-dur-200)
+                var(--motion-ease-standard);
+
+        &:visited {
+            color: var(--colour-primary);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--colour-primary-hover);
+                text-decoration-color: var(--colour-primary-hover);
+            }
+
+            &:active {
+                color: var(--colour-primary-active);
+                text-decoration-color: var(--colour-primary-active);
+            }
+        }
+    }
+
+    section {
+        padding-block: var(--space-3xl);
+    }
+
+    :focus-visible {
+        outline: var(--border-focus-ring);
+        outline-offset: var(--space-focus-ring-offset);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    @media print {
+        body {
+            background: var(--surface-level-0);
+            color: var(--colour-text);
+        }
+    }
+}
+
+@layer components {
+    .skip-link {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        padding: var(--space-xs);
+        background: var(--colour-primary);
+        color: var(--colour-on-primary);
+        transform: translateY(-100%);
+        z-index: var(--z-3);
+    }
+
+    .skip-link:focus {
+        transform: translateY(0);
+    }
+
+    summary {
+        cursor: pointer;
+        list-style: none;
+        padding-block: var(--space-xs);
+        padding-inline: var(--space-s);
+        min-block-size: var(--size-tap-min);
+        border-radius: var(--radius-s);
+        font-family: var(--font-header), sans-serif;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::after {
+        content: "▸";
+        margin-inline-start: var(--space-xs);
+        transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    details[open] summary::after {
+        transform: rotate(90deg);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        summary:hover {
+            background: var(--surface-level-1-hover);
+        }
+
+        summary:active {
+            background: var(--surface-level-1-active);
+        }
+    }
+
+    @media print {
+        nav,
+        .ctaGroup,
+        button,
+        a[href^="mailto"],
+        .skip-link {
+            display: none !important;
+        }
+
+        a::after {
+            content: " (" attr(href) ")";
+        }
+    }
+}
+
+@layer utilities {
+    :target {
+        outline: var(--border-focus-ring);
+        outline-offset: var(--space-focus-ring-offset);
+        background: var(--surface-level-0);
+    }
+}

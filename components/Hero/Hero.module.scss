@@ -1,0 +1,58 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .hero {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .heroTitle {
+        max-inline-size: 25ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--typography-size-500);
+    }
+
+    .heroIntro {
+        max-inline-size: 45ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--typography-size-300);
+    }
+
+    .ctaGroup {
+        @include cta-group;
+    }
+
+    .cta {
+        @include centered-column;
+
+        gap: var(--space-xxs);
+        margin-bottom: var(--space-2xl);
+    }
+
+    .note {
+        font-size: var(--typography-size-100);
+        max-inline-size: 14ch;
+        text-align: center;
+    }
+
+    .availability {
+        display: flex;
+        gap: var(--space-xs);
+        justify-content: center;
+        font-size: var(--typography-size-100);
+        color: var(--colour-text-subtle);
+    }
+
+    @container (min-width:50rem) {
+        .heroTitle {
+            font-size: var(--typography-size-600);
+        }
+
+        .heroIntro {
+            font-size: var(--typography-size-400);
+        }
+    }
+}

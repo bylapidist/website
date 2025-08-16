@@ -1,0 +1,24 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .cards {
+        @include card-grid();
+    }
+
+    .icon {
+        width: var(--size-icon-l);
+        height: var(--size-icon-l);
+        border-radius: var(--radius-s);
+    }
+
+    .cta {
+        @include cta-group;
+        @include centered-column;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

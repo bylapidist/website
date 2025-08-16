@@ -1,0 +1,49 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .trustedBy > div {
+        @include centered-column;
+    }
+
+    .tagline {
+        margin: 0;
+        color: var(--colour-text-subtle);
+        text-align: center;
+    }
+
+    .logos {
+        @include centered-list(var(--space-l), true);
+    }
+
+    .logoLink {
+        display: block;
+
+        &:focus-visible {
+            outline: var(--border-focus-ring);
+            outline-offset: var(--space-focus-ring-offset);
+        }
+    }
+
+    .logo {
+        width: 12ch;
+        height: 5ch;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .logo {
+            transition: transform var(--motion-dur-200)
+                var(--motion-ease-standard);
+        }
+
+        .logoLink:hover .logo {
+            transform: scale(1.05);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .logo {
+            transition: none;
+            transform: none;
+        }
+    }
+}

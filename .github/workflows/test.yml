@@ -1,37 +1,65 @@
 name: Test
 on: [pull_request]
+
 jobs:
-    release:
+    test:
         name: Test
         runs-on: ubuntu-latest
+
         steps:
             - name: Checkout
-              uses: actions/checkout@v5
+              uses: actions/checkout@v4
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
+                  cache: npm
 
-            - name: Get node.js cache directory
-              id: node-cache-dir
-              run: echo "::set-output name=dir::$(npm config get cache)"
+            # Prevent browser download during npm ci
+            - name: Install deps (no browsers)
+              run: npm ci
+              env:
+                  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
-            - name: Cache npm dependencies
+            # Resolve the Playwright package version to make cache keys stable and bust on upgrades
+            - name: Resolve Playwright version
+              id: pw
+              run: |
+                  V=$(node -e "const p=require('./package.json');const v=(p.devDependencies?.['@playwright/test']||p.dependencies?.['@playwright/test']||'unknown');process.stdout.write(v)")
+                  echo "version=$V" >> "$GITHUB_OUTPUT"
+
+            # Cache the shared browsers directory
+            - name: Cache Playwright browsers
               uses: actions/cache@v4
               with:
-                  path: ${{ steps.node-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: ${{ runner.os }}-node-
+                  path: ~/.cache/ms-playwright
+                  key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}-
+                      ${{ runner.os }}-playwright-
 
-            - name: Install dependencies
-              run: npm ci
+            # Install browsers (will no-op if cache hit)
+            - name: Install Playwright browsers
+              run: npx playwright install --with-deps
 
-            - name: Lint files
+            - name: Lint
               run: npm run lint
 
-            - name: Run build storybook
+            - name: Type check
+              run: npm run typecheck
+
+            - name: Test
+              run: npm test
+
+            - name: Lighthouse
+              run: npm run qa
+              env:
+                  NODE_ENV: production
+                  LHCI_CHROMIUM_FLAGS: "--headless=new --no-sandbox --disable-dev-shm-usage"
+
+            - name: Build Storybook
               run: npm run build-storybook
 
-            - name: Run build
+            - name: Build app
               run: npm run build

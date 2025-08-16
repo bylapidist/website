@@ -1,0 +1,26 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .insights {
+        background: var(--surface-level-1);
+    }
+
+    .insights > div {
+        @include centered-column;
+    }
+
+    .cards {
+        @include card-grid();
+    }
+
+    .cards a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
