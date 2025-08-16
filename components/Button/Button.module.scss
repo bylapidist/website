@@ -56,21 +56,23 @@
                 transform var(--motion-dur-120) var(--motion-ease-emphasized);
         }
 
+        .button:not(:disabled):hover {
+            box-shadow: var(--shadow-elev-2);
+            transform: translateY(-1px);
+        }
+
         .button:not(:disabled)[data-variant="primary"]:hover {
             background: var(--colour-primary-hover);
-            box-shadow: var(--shadow-elev-2);
             color: var(--colour-on-primary);
         }
 
         .button:not(:disabled)[data-variant="secondary"]:hover {
             background: var(--colour-primary-hover);
-            box-shadow: var(--shadow-elev-2);
             color: var(--colour-on-primary);
         }
 
         .button:not(:disabled)[data-variant="ghost"]:hover {
             background: var(--surface-level-1-hover);
-            box-shadow: var(--shadow-elev-2);
             color: var(--colour-on-primary);
         }
 
@@ -95,6 +97,10 @@
     @media (prefers-reduced-motion: reduce) {
         .button {
             transition: none;
+            transform: none;
+        }
+
+        .button:not(:disabled):hover {
             transform: none;
         }
     }
