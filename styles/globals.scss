@@ -20,6 +20,8 @@
 
     html {
         scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--colour-primary) var(--surface-level-1);
     }
 
     body {
@@ -118,6 +120,29 @@
     ::selection {
         background: var(--colour-primary);
         color: var(--colour-on-primary);
+    }
+
+    /* Scrollbar styling */
+    @supports selector(::-webkit-scrollbar) {
+        html::-webkit-scrollbar {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: var(--surface-level-1);
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: var(--colour-border);
+            border-radius: var(--radius-m);
+            transition: background var(--motion-dur-200)
+                var(--motion-ease-standard);
+        }
+
+        html::-webkit-scrollbar-thumb:hover {
+            background: var(--colour-primary);
+        }
     }
 
     @media (prefers-reduced-motion: reduce) {
