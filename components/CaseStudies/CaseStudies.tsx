@@ -1,4 +1,4 @@
-import { BookCallButton } from "@/components/Cta/Cta";
+import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
 import B2CVisual from "./B2CVisual";
 import styles from "./CaseStudies.module.scss";
@@ -79,7 +79,7 @@ export default function CaseStudies() {
             </div>
             <div className={styles.cta}>
                 <p>Want these results for your team?</p>
-                <BookCallButton />
+                <Button href="#contact">Schedule a call</Button>
             </div>
         </Section>
     );

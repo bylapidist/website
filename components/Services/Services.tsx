@@ -1,5 +1,5 @@
+import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
-import { BookCallButton } from "@/components/Cta/Cta";
 import Section from "@/components/Section/Section";
 import ConsultingTeamUpliftIcon from "./icons/ConsultingTeamUpliftIcon";
 import DesignSystemBootstrapIcon from "./icons/DesignSystemBootstrapIcon";
@@ -51,7 +51,7 @@ export default function Services() {
             </div>
             <div className={styles.cta}>
                 <p>Let&apos;s discuss which option fits your team.</p>
-                <BookCallButton>Start the conversation</BookCallButton>
+                <Button href="#contact">Start the conversation</Button>
             </div>
         </Section>
     );
