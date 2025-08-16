@@ -7,3 +7,14 @@
     text-decoration: none;
     color: inherit;
 }
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: var(--space-xl);
+}
+
+.pagination a {
+    text-decoration: none;
+    color: inherit;
+}

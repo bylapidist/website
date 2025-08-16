@@ -31,12 +31,14 @@ export const metadata: Metadata = {
 
 export default async function ArticlesPage() {
     const articles = await getAllArticles();
+    const pageArticles = articles.slice(0, 10);
+    const totalPages = Math.ceil(articles.length / 10);
     return (
         <>
             <Container as="section">
                 <h1>Articles</h1>
                 <div className={styles.cards}>
-                    {articles.map(({ year, slug, title, description }) => (
+                    {pageArticles.map(({ year, slug, title, description }) => (
                         <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
                             <Card title={title} headingLevel="h2">
                                 <p>{description}</p>
@@ -44,6 +46,11 @@ export default async function ArticlesPage() {
                         </Link>
                     ))}
                 </div>
+                {totalPages > 1 && (
+                    <nav className={styles.pagination}>
+                        <Link href="/articles/page/2">Next</Link>
+                    </nav>
+                )}
             </Container>
             <Contact />
             <Footer />
