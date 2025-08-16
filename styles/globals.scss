@@ -18,6 +18,10 @@
         padding: 0;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         background: var(--surface-level-0);
         color: var(--colour-text);
@@ -83,6 +87,11 @@
     :focus-visible {
         outline: var(--border-focus-ring);
         outline-offset: var(--space-focus-ring-offset);
+    }
+
+    ::selection {
+        background: var(--colour-primary);
+        color: var(--colour-on-primary);
     }
 
     @media (prefers-reduced-motion: reduce) {
