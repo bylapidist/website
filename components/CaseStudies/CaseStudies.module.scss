@@ -11,14 +11,36 @@
     }
 
     .tagline {
-        margin: 0;
+        margin: var(--space-m) 0 var(--space-2xl);
         color: var(--colour-text);
     }
 
-    .cards {
-        @include card-grid(var(--space-l));
-
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
         text-align: initial;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xl);
+    }
+
+    .item {
+        display: flex;
+        gap: var(--space-l);
+        align-items: flex-start;
+        padding-block: var(--space-xl);
+        border-block-start: 1px solid var(--colour-border);
+    }
+
+    .item:first-child {
+        border-block-start: none;
+        padding-block-start: 0;
+    }
+
+    .media {
+        flex: 0 0 12rem;
     }
 
     .visual {
@@ -26,8 +48,29 @@
         aspect-ratio: 16 / 9;
         border: thin solid var(--colour-text-subtle);
         border-radius: var(--radius-m);
-        margin-block-end: var(--space-xl);
         fill: var(--surface-level-1);
+        flex-shrink: 0;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+        max-width: var(--typography-measure);
+    }
+
+    .content h3 {
+        margin: 0 0 var(--space-s);
+        font-size: var(--typography-size-300);
+    }
+
+    .content p {
+        margin: 0;
+    }
+
+    .impact {
+        font-weight: 600;
     }
 
     .panel,
@@ -46,9 +89,14 @@
         @include centered-column;
     }
 
-    @container (min-width:50rem) {
-        .cards {
-            grid-template-columns: repeat(3, 1fr);
+    @container section (max-width: 40rem) {
+        .item {
+            flex-direction: column;
+        }
+
+        .media {
+            flex-basis: auto;
+            width: 100%;
         }
     }
 }
