@@ -47,5 +47,13 @@
     .logoMark {
         inline-size: 3ch;
         fill: currentcolor;
+        transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .logo:hover .logoMark,
+        .logo:focus-visible .logoMark {
+            transform: rotate(-3deg) scale(1.05);
+        }
     }
 }
