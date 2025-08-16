@@ -7,7 +7,7 @@ import readingTime from "remark-reading-time";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 
-export interface ArticleMeta {
+type ArticleMeta = {
     year: string;
     slug: string;
     title: string;
@@ -21,7 +21,7 @@ export interface ArticleMeta {
         name?: string;
         url?: string;
     };
-}
+};
 
 export async function getArticle(year: string, slug: string) {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);
@@ -45,7 +45,7 @@ export async function getArticle(year: string, slug: string) {
         date: data.date as string,
         readingTime: readingTimeText,
         image: (data.image as string) || "",
-        author: ((data.author ?? {}) as { name?: string; url?: string }),
+        author: (data.author ?? {}) as { name?: string; url?: string },
     };
     return { meta, content: MDXContent, wordCount };
 }
@@ -79,10 +79,10 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
                     date: data.date as string,
                     readingTime: readingTimeText,
                     image: (data.image as string) || "",
-                    author: ((data.author ?? {}) as {
+                    author: (data.author ?? {}) as {
                         name?: string;
                         url?: string;
-                    }),
+                    },
                 });
             }
         }
