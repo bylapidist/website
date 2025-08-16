@@ -17,6 +17,11 @@ export default function Footer() {
                         <li>
                             <a href="#contact">Contact</a>
                         </li>
+                        <li>
+                            <Link href="/accessibility-statement">
+                                Accessibility Statement
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
                 <ul className={styles.social}>
