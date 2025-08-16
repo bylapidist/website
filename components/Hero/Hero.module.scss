@@ -38,6 +38,24 @@
         text-align: center;
     }
 
+    .availability {
+        font-size: var(--typography-size-100);
+        text-align: center;
+    }
+
+    .badges {
+        @include centered-list(var(--space-xs), true);
+
+        margin-block-start: var(--space-l);
+        font-size: var(--typography-size-100);
+
+        li {
+            background: var(--surface-level-1);
+            padding: var(--space-xxs) var(--space-xs);
+            border-radius: var(--radius-s);
+        }
+    }
+
     @container (min-width:50rem) {
         .heroTitle {
             font-size: var(--typography-size-600);
