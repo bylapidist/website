@@ -115,6 +115,11 @@ export default function RootLayout({
                 />
                 <link rel="preload" as="image" href={METADATA.images.og} />
                 <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    href="/rss.xml"
+                />
+                <link
                     rel="mask-icon"
                     href={METADATA.images.mask}
                     color="#6847ff"

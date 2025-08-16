@@ -74,13 +74,14 @@ export async function generateMetadata({
             url,
             type: "article",
             publishedTime: meta.date,
-            images: [{ url: "/opengraph-image" }],
+            images: meta.image ? [{ url: meta.image }] : undefined,
+            authors: meta.author.url ? [meta.author.url] : undefined,
         },
         twitter: {
             card: "summary_large_image",
             title: meta.title,
             description: meta.description,
-            images: ["/twitter-image"],
+            images: meta.image ? [meta.image] : undefined,
         },
     };
 }
