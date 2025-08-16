@@ -111,6 +111,8 @@
     :focus-visible {
         outline: var(--border-focus-ring);
         outline-offset: var(--space-focus-ring-offset);
+        transition: outline-offset var(--motion-dur-200)
+            var(--motion-ease-standard);
     }
 
     ::selection {
