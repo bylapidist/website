@@ -5,36 +5,30 @@ export default function WhatIBring() {
     return (
         <Section id="what-i-bring" heading="What I bring to the table">
             <p>
-                Specialist in frontend and design systems who steps across the
-                stack when it unlocks delivery.
+                I bridge product, design, and engineering to steer UI strategy.
             </p>
+            <p>I step across the stack when it unlocks delivery.</p>
             <p>
-                Experience ranges from MVPs to fintech platforms adopted by
+                My experience ranges from MVPs to fintech platforms adopted by
                 hundreds of engineers and tens of thousands of users.
             </p>
             <p>
                 I pair tooling with clear governance so UI and API contracts
-                evolve without regressions.
+                evolve without regressions, and without sacrificing quality as
+                it scales.
             </p>
             <ul className={styles.steps}>
                 <li>Grow cross-functional teams and mentoring culture.</li>
-                <li>Design API contracts that protect UI integrity.</li>
+                <li>
+                    Design end-to-end typesafe API contracts that protect UI
+                    integrity.
+                </li>
                 <li>Eliminate style drift with token-driven theming.</li>
                 <li>
                     Cut PR churn 40% through shared components and typed utils.
                 </li>
                 <li>Automate docs, checks, and deployments via CI/CD.</li>
                 <li>Embed accessibility, performance, and error budgets.</li>
-            </ul>
-            <h3>Full-stack in practice</h3>
-            <ul className={styles.fullStack}>
-                <li>
-                    GraphQL schema with cursor pagination cut over-fetching 40%.
-                </li>
-                <li>Node/Express service with JWT auth and rate limits.</li>
-                <li>
-                    Dockerised CI on AWS trimmed deploy lead time to 10 min.
-                </li>
             </ul>
         </Section>
     );

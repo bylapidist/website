@@ -26,7 +26,6 @@ export default function CaseStudyCard({
             <p>{after}</p>
             {highlights.length > 0 && (
                 <>
-                    <h4>Backend & Platform highlights:</h4>
                     <ul className={styles.highlights}>
                         {highlights.map((item) => (
                             <li key={item}>{item}</li>

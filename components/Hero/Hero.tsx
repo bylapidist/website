@@ -12,22 +12,14 @@ export default function Hero() {
         >
             <div className={styles.ctaGroup}>
                 <h1 id="hero-heading" className={styles.heroTitle}>
-                    Lead Frontend Engineer — full-stack capable when it
-                    multiplies outcomes.
+                    Lead Frontend Engineer. Crafting resilient design systems.
                 </h1>
                 <p className={styles.heroIntro}>
-                    I specialise in design systems and frontend platforms. When
-                    it matters, I architect APIs, model data, wire CI/CD, and
-                    integrate payments for regulated products.
+                    I build design systems and frontend platforms that cut
+                    rework, lift accessibility, and accelerate delivery &ndash;
+                    backed by API, data, CI/CD, and regulated industry
+                    expertise.
                 </p>
-                <ul className={styles.fullStack}>
-                    <li>API design</li>
-                    <li>Data modelling</li>
-                    <li>Auth</li>
-                    <li>CI/CD</li>
-                    <li>Docker</li>
-                    <li>AWS</li>
-                </ul>
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>

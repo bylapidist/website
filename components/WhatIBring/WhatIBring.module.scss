@@ -4,13 +4,4 @@
     .steps {
         @include steps;
     }
-
-    .fullStack {
-        margin-block-start: var(--space-m);
-        padding-inline-start: var(--space-l);
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-s);
-        font-size: var(--step-negative-1);
-    }
 }

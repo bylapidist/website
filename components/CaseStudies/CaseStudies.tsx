@@ -50,7 +50,7 @@ export default function CaseStudies() {
             className={styles.caseStudies}
         >
             <p className={styles.tagline}>
-                Real-world outcomes across UI and platform work.
+                Examples of real-world outcomes across UI and platform work.
             </p>
 
             <div className={styles.cards}>

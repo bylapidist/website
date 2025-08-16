@@ -16,7 +16,7 @@
     }
 
     .cards {
-        @include card-grid(var(--space-l));
+        @include card-grid(var(--space-m));
 
         text-align: initial;
     }
