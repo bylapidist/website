@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
-import SocialShare from "@/components/SocialShare/SocialShare";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
@@ -25,8 +24,6 @@ export default async function ArticlePage({
         slug,
         wordCount,
     );
-    const baseUrl = "https://lapidist.net";
-    const url = `${baseUrl}/${year}/${slug}/`;
     return (
         <>
             <script
@@ -50,7 +47,6 @@ export default async function ArticlePage({
                         </p>
                     )}
                     {content}
-                    <SocialShare url={url} title={meta.title} />
                 </article>
             </Section>
             <Contact />
@@ -67,7 +63,7 @@ export async function generateMetadata({
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
     const base = "https://lapidist.net";
-    const url = `${base}/${year}/${slug}/`;
+    const url = `${base}/articles/${year}/${slug}/`;
     return {
         title: meta.title,
         description: meta.description,

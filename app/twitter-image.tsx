@@ -27,7 +27,7 @@ export default function TwitterImage() {
                     Brett Dorrans
                 </span>
                 <span style={{ fontSize: 56 }}>
-                    Principal Frontend Engineer & Design Systems Specialist
+                    Lead Frontend Engineer & Design Systems Specialist
                 </span>
                 <span style={{ fontSize: 48 }}>
                     Ship design systems teams love.

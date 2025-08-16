@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const articles = await getAllArticles();
     const articleEntries = articles.map(({ year, slug, date }) => ({
-        url: `https://lapidist.net/${year}/${slug}/`,
+        url: `https://lapidist.net/articles/${year}/${slug}/`,
         lastModified: new Date(date),
     }));
     return [

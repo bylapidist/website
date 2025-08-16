@@ -169,7 +169,7 @@ export function buildArticleStructuredData(
                 author: { "@id": PERSON["@id"] },
                 publisher: { "@id": ORGANIZATION["@id"] },
                 wordCount,
-                url: `${BASE}/${year}/${slug}`,
+                url: `${BASE}/articles/${year}/${slug}`,
             },
         ],
     } as const;

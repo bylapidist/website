@@ -22,7 +22,10 @@ export default function Insights({ articles }: { articles: Article[] }) {
             <div className={styles.cards}>
                 {articles.map(
                     ({ year, slug, title, summary, tags, readingTime }) => (
-                        <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
+                        <Link
+                            key={`${year}-${slug}`}
+                            href={`/articles/${year}/${slug}`}
+                        >
                             <Card title={title}>
                                 <p>{summary}</p>
                                 {(tags.length > 0 || readingTime) && (
