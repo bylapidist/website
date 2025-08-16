@@ -10,20 +10,35 @@ const caseStudies = [
     {
         title: "Global fintech",
         Visual: GlobalFintechVisual,
-        before: "Fragmented widgets and 40% component duplication causing accessibility defects.",
-        after: "Token-driven system adopted by 100% of teams; CI audits stopped regressions and cut UI bugs by a third.",
+        context:
+            "International payments platform processing millions of transactions daily.",
+        team: "10 engineers across 3 squads",
+        problem:
+            "Fragmented widgets and 40% component duplication causing accessibility defects.",
+        approach:
+            "Unified design tokens, built a shared component kit, and added CI accessibility audits.",
+        results:
+            "Token-driven system adopted by 100% of teams; audits stopped regressions and cut UI bug backlog 33%.",
     },
     {
         title: "B2C SaaS",
         Visual: B2CVisual,
-        before: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
-        after: "Bootstrap docs and codemods halved onboarding time and lifted release velocity 20%.",
+        context: "Consumer subscription service with web and mobile clients.",
+        team: "6-person frontend guild",
+        problem: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
+        approach:
+            "Bootstrap docs and codemods standardized layouts and eliminated dead styles.",
+        results: "Halved onboarding time and lifted release velocity 20%.",
     },
     {
         title: "Ecommerce",
         Visual: EcommerceVisual,
-        before: "Flaky components, accessibility gaps, shipping delays.",
-        after: "Refactored component library with automated a11y tests cut bug reports 60% and met WCAG AA.",
+        context: "Retail marketplace fulfilling millions of orders worldwide.",
+        team: "8-person platform team",
+        problem: "Flaky components, accessibility gaps, shipping delays.",
+        approach:
+            "Refactored component library, added automated a11y tests, and simplified APIs.",
+        results: "Cut UI bug backlog 60% and achieved WCAG AA compliance.",
     },
 ];
 
@@ -39,15 +54,28 @@ export default function CaseStudies() {
             </p>
 
             <div className={styles.cards}>
-                {caseStudies.map(({ title, Visual, before, after }) => (
-                    <CaseStudyCard
-                        key={title}
-                        title={title}
-                        visual={<Visual />}
-                        before={before}
-                        after={after}
-                    />
-                ))}
+                {caseStudies.map(
+                    ({
+                        title,
+                        Visual,
+                        context,
+                        team,
+                        problem,
+                        approach,
+                        results,
+                    }) => (
+                        <CaseStudyCard
+                            key={title}
+                            title={title}
+                            visual={<Visual />}
+                            context={context}
+                            team={team}
+                            problem={problem}
+                            approach={approach}
+                            results={results}
+                        />
+                    ),
+                )}
             </div>
             <div className={styles.cta}>
                 <p>Want these results for your team?</p>
