@@ -39,9 +39,12 @@
         text-decoration: none;
         padding: var(--space-xs) var(--space-s);
         color: var(--colour-text);
+        box-shadow: var(--shadow-elev-1);
         transition:
             color var(--motion-dur-200) var(--motion-ease-standard),
-            background var(--motion-dur-200) var(--motion-ease-standard);
+            background var(--motion-dur-200) var(--motion-ease-standard),
+            transform var(--motion-dur-120) var(--motion-ease-emphasized),
+            box-shadow var(--motion-dur-200) var(--motion-ease-standard);
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -49,11 +52,24 @@
         .social a:hover {
             background: var(--surface-level-1-hover);
             color: var(--colour-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elev-2);
         }
 
         .footerNav a:active,
         .social a:active {
             background: var(--surface-level-1-active);
+            transform: translateY(0);
+            box-shadow: var(--shadow-elev-1);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .footerNav a,
+        .social a {
+            transition: none;
+            transform: none;
+            box-shadow: var(--shadow-elev-1);
         }
     }
 }

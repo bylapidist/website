@@ -19,6 +19,7 @@
         font-size: var(--typography-size-200);
         font-weight: 400;
         font-family: var(--font-header), sans-serif;
+        transition: color var(--motion-dur-200) var(--motion-ease-standard);
     }
 
     .logoBlue {
@@ -48,6 +49,13 @@
         inline-size: 3ch;
         fill: currentcolor;
         transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .logo:hover,
+        .logo:focus-visible {
+            color: var(--colour-primary);
+        }
     }
 
     @media (prefers-reduced-motion: no-preference) {
