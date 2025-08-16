@@ -36,6 +36,11 @@
         inline-size: var(--size-icon-m);
         block-size: var(--size-icon-m);
         fill: currentcolor;
-        transition: inherit;
+        transition: transform var(--motion-dur-320)
+            var(--motion-ease-emphasized);
+    }
+
+    .toggle[data-theme="dark"] .icon {
+        transform: rotate(180deg);
     }
 }

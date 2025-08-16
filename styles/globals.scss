@@ -25,6 +25,9 @@
     body {
         background: var(--surface-level-0);
         color: var(--colour-text);
+        transition:
+            background var(--motion-dur-200) var(--motion-ease-standard),
+            color var(--motion-dur-200) var(--motion-ease-standard);
     }
 
     @supports (font-size: clamp(1rem, 1vw, 2rem)) {
