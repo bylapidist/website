@@ -4,7 +4,12 @@
         gap: var(--space-l);
     }
 
-    .description {
+    .summary {
+        color: var(--colour-text-subtle);
+        font-size: var(--typography-size-300);
+    }
+
+    .meta {
         color: var(--colour-text-subtle);
         font-size: var(--typography-size-300);
     }

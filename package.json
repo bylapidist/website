@@ -42,7 +42,9 @@
         "next-mdx-remote": "5.0.0",
         "prettier": "3.6.2",
         "react": "19.1.1",
-        "react-dom": "19.1.1"
+        "react-dom": "19.1.1",
+        "remark": "^15.0.1",
+        "remark-reading-time": "^2.0.2"
     },
     "devDependencies": {
         "@axe-core/playwright": "4.10.2",
