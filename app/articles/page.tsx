@@ -19,6 +19,7 @@ export const metadata: Metadata = {
         url: "/articles",
         type: "website",
         images: [{ url: "/opengraph-image" }],
+        siteName: "Lapidist",
     },
     twitter: {
         card: "summary_large_image",
@@ -36,13 +37,13 @@ export default async function ArticlesPage() {
             <Container as="section">
                 <h1>Articles</h1>
                 <div className={styles.cards}>
-                    {articles.map(({ year, slug, title, description }) => (
+                    {articles.map(({ year, slug, title, summary }) => (
                         <Link
                             key={`${year}-${slug}`}
                             href={`/articles/${year}/${slug}`}
                         >
                             <Card title={title} headingLevel="h2">
-                                <p>{description}</p>
+                                <p>{summary}</p>
                             </Card>
                         </Link>
                     ))}

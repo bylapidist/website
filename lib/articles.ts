@@ -16,6 +16,11 @@ export interface ArticleMeta {
     tags: string[];
     date: string;
     readingTime: string;
+    image: string;
+    author: {
+        name?: string;
+        url?: string;
+    };
 }
 
 export async function getArticle(year: string, slug: string) {
@@ -39,6 +44,8 @@ export async function getArticle(year: string, slug: string) {
         tags: (data.tags as string[] | undefined) ?? [],
         date: data.date as string,
         readingTime: readingTimeText,
+        image: (data.image as string) || "",
+        author: ((data.author ?? {}) as { name?: string; url?: string }),
     };
     return { meta, content: MDXContent, wordCount };
 }
@@ -71,6 +78,11 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
                     tags: (data.tags as string[] | undefined) ?? [],
                     date: data.date as string,
                     readingTime: readingTimeText,
+                    image: (data.image as string) || "",
+                    author: ((data.author ?? {}) as {
+                        name?: string;
+                        url?: string;
+                    }),
                 });
             }
         }
