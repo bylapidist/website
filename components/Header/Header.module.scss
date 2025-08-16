@@ -6,7 +6,10 @@
         backdrop-filter: blur(8px);
         border-block-end: 1px solid var(--colour-border);
         z-index: var(--z-2);
-        transition: box-shadow var(--motion-dur-200) var(--motion-ease-standard);
+        transition:
+            background var(--motion-dur-200) var(--motion-ease-standard),
+            box-shadow var(--motion-dur-200) var(--motion-ease-standard);
+        will-change: background, box-shadow;
     }
 
     .inner {

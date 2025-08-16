@@ -8,6 +8,7 @@
         flex-direction: column;
         gap: var(--space-m);
         color: var(--colour-text);
+        will-change: box-shadow, transform, background;
         transition:
             background var(--motion-dur-200) var(--motion-ease-standard),
             box-shadow var(--motion-dur-200) var(--motion-ease-standard),
