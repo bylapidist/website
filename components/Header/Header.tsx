@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container/Container";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 import styles from "./Header.module.scss";
-import LogoMark from "./LogoMark";
 
 export default function Header() {
     return (
@@ -13,7 +13,13 @@ export default function Header() {
                     className={styles.logo}
                     aria-label="Brett Dorrans"
                 >
-                    <LogoMark />
+                    <Image
+                        src="/logos/logo-mark.svg"
+                        alt=""
+                        width={64}
+                        height={64}
+                        className={styles.logoMark}
+                    />
                     <span className={styles.logoLockup}>
                         <span>Brett</span>
                         <span>Dorrans</span>
