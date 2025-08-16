@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
@@ -9,9 +10,22 @@ import LogoMark from "./LogoMark";
 
 export default function Header() {
     const pathname = usePathname();
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        function onScroll() {
+            setScrolled(window.scrollY > 0);
+        }
+
+        onScroll();
+        window.addEventListener("scroll", onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+        };
+    }, []);
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} data-scrolled={scrolled || undefined}>
             <Container className={styles.inner} as="div" cq="page">
                 <nav role="navigation">
                     <Link
