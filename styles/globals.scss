@@ -48,13 +48,31 @@
             "slnt" var(--typography-font-slnt);
     }
 
-    a {
+    a:not([class]) {
+        color: var(--colour-primary);
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
+        text-decoration-color: currentcolor;
+        transition:
+            color var(--motion-dur-200) var(--motion-ease-standard),
+            text-decoration-color var(--motion-dur-200)
+                var(--motion-ease-standard);
 
         &:visited {
-            color: inherit;
+            color: var(--colour-primary);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--colour-primary-hover);
+                text-decoration-color: var(--colour-primary-hover);
+            }
+
+            &:active {
+                color: var(--colour-primary-active);
+                text-decoration-color: var(--colour-primary-active);
+            }
         }
     }
 
