@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import MoonIcon from "./MoonIcon";
+import SunIcon from "./SunIcon";
 import styles from "./ThemeToggle.module.scss";
 
 export default function ThemeToggle() {
@@ -41,21 +42,9 @@ export default function ThemeToggle() {
             aria-label={label}
         >
             {theme === "dark" ? (
-                <Image
-                    src="/icons/sun.svg"
-                    alt=""
-                    width={24}
-                    height={24}
-                    className={styles.icon}
-                />
+                <SunIcon className={styles.icon} />
             ) : (
-                <Image
-                    src="/icons/moon.svg"
-                    alt=""
-                    width={24}
-                    height={24}
-                    className={styles.icon}
-                />
+                <MoonIcon className={styles.icon} />
             )}
             <VisuallyHidden>{label}</VisuallyHidden>
         </button>
