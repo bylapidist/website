@@ -28,4 +28,22 @@
         width: 12ch;
         height: 5ch;
     }
+
+    @media (hover: hover) and (pointer: fine) {
+        .logo {
+            transition: transform var(--motion-dur-200)
+                var(--motion-ease-standard);
+        }
+
+        .logoLink:hover .logo {
+            transform: scale(1.05);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .logo {
+            transition: none;
+            transform: none;
+        }
+    }
 }
