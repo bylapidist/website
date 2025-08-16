@@ -197,5 +197,3 @@ export function buildArticleStructuredData(
         ],
     } as const;
 }
-
-export { BASE as baseUrl, PERSON as person, ORGANIZATION as organization };
