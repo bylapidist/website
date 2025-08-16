@@ -34,8 +34,17 @@ export default async function ArticlePage({
             />
             <Section heading={meta.title} headingLevel={1}>
                 <article className={styles.article}>
-                    {meta.description && (
-                        <p className={styles.description}>{meta.description}</p>
+                    {meta.summary && (
+                        <p className={styles.summary}>{meta.summary}</p>
+                    )}
+                    {(meta.tags.length > 0 || meta.readingTime) && (
+                        <p className={styles.meta}>
+                            {meta.tags.join(", ")}
+                            {meta.tags.length > 0 && meta.readingTime
+                                ? " · "
+                                : ""}
+                            {meta.readingTime}
+                        </p>
                     )}
                     {content}
                 </article>

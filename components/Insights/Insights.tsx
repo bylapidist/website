@@ -7,7 +7,9 @@ type Article = {
     year: string;
     slug: string;
     title: string;
-    description: string;
+    summary: string;
+    tags: string[];
+    readingTime: string;
 };
 
 export default function Insights({ articles }: { articles: Article[] }) {
@@ -18,13 +20,24 @@ export default function Insights({ articles }: { articles: Article[] }) {
             className={styles.insights}
         >
             <div className={styles.cards}>
-                {articles.map(({ year, slug, title, description }) => (
-                    <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
-                        <Card title={title}>
-                            <p>{description}</p>
-                        </Card>
-                    </Link>
-                ))}
+                {articles.map(
+                    ({ year, slug, title, summary, tags, readingTime }) => (
+                        <Link key={`${year}-${slug}`} href={`/${year}/${slug}`}>
+                            <Card title={title}>
+                                <p>{summary}</p>
+                                {(tags.length > 0 || readingTime) && (
+                                    <p>
+                                        {tags.join(", ")}
+                                        {tags.length > 0 && readingTime
+                                            ? " · "
+                                            : ""}
+                                        {readingTime}
+                                    </p>
+                                )}
+                            </Card>
+                        </Link>
+                    ),
+                )}
             </div>
         </Section>
     );
