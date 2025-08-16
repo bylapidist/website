@@ -39,5 +39,21 @@
         text-decoration: none;
         padding: var(--space-xs) var(--space-s);
         color: var(--colour-text);
+        transition:
+            color var(--motion-dur-200) var(--motion-ease-standard),
+            background var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .footerNav a:hover,
+        .social a:hover {
+            background: var(--surface-level-1-hover);
+            color: var(--colour-primary);
+        }
+
+        .footerNav a:active,
+        .social a:active {
+            background: var(--surface-level-1-active);
+        }
     }
 }
