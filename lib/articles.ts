@@ -17,6 +17,7 @@ export async function getArticle(year: string, slug: string) {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);
     const source = await fs.promises.readFile(filePath, "utf8");
     const { data, content } = matter(source);
+    const wordCount = content.split(/\s+/).filter(Boolean).length;
     const { content: MDXContent } = await compileMDX({ source: content });
     const meta: ArticleMeta = {
         year,
@@ -25,7 +26,7 @@ export async function getArticle(year: string, slug: string) {
         description: (data.description as string) || "",
         date: data.date as string,
     };
-    return { meta, content: MDXContent };
+    return { meta, content: MDXContent, wordCount };
 }
 
 export async function getAllArticles(): Promise<ArticleMeta[]> {

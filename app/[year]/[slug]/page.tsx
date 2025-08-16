@@ -3,6 +3,7 @@ import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles, getArticle } from "@/lib/articles";
+import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
@@ -16,9 +17,21 @@ export default async function ArticlePage({
     params: Promise<{ year: string; slug: string }>;
 }) {
     const { year, slug } = await params;
-    const { meta, content } = await getArticle(year, slug);
+    const { meta, content, wordCount } = await getArticle(year, slug);
+    const structuredData = buildArticleStructuredData(
+        meta,
+        year,
+        slug,
+        wordCount,
+    );
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData),
+                }}
+            />
             <Section heading={meta.title} headingLevel={1}>
                 <article className={styles.article}>
                     {meta.description && (
