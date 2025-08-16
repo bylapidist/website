@@ -5,6 +5,13 @@ const PERSON = {
     "@id": `${BASE}#person`,
     name: "Brett Dorrans",
     url: `${BASE}/`,
+    jobTitle: "Principal Frontend Engineer",
+    image: `${BASE}/opengraph-image`,
+    contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "enquiries",
+        email: "hello@lapidist.net",
+    },
     address: {
         "@type": "PostalAddress",
         addressLocality: "Glasgow",
@@ -78,11 +85,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 ],
             },
             {
-                "@type": "Service",
-                "@id": `${BASE}#design-system-consulting`,
-                name: "Design System Consulting",
+                "@type": ["Service", "ProfessionalService"],
+                "@id": `${BASE}#design-system-bootstrap`,
+                name: "Design System Bootstrap",
                 description:
-                    "Strategy and implementation support for design systems.",
+                    "Launch a production-ready design system in weeks – boosting velocity, cutting rework, and improving accessibility from day one.",
                 provider: { "@id": `${BASE}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -92,10 +99,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 },
             },
             {
-                "@type": "Service",
-                "@id": `${BASE}#accessibility-auditing`,
-                name: "Accessibility Auditing",
-                description: "WCAG reviews and inclusive design guidance.",
+                "@type": ["Service", "ProfessionalService"],
+                "@id": `${BASE}#system-audit-roadmap`,
+                name: "System Audit & Roadmap",
+                description:
+                    "Turn existing assets into a strategic UI architecture roadmap that reduces churn and flags risk early.",
                 provider: { "@id": `${BASE}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
@@ -105,10 +113,25 @@ export function buildHomePageStructuredData(datePublished: string) {
                 },
             },
             {
-                "@type": "Service",
-                "@id": `${BASE}#frontend-engineering`,
-                name: "Frontend Engineering",
-                description: "Accessible and performant user interfaces.",
+                "@type": ["Service", "ProfessionalService"],
+                "@id": `${BASE}#hands-on-build`,
+                name: "Hands-on Build",
+                description:
+                    "Ship resilient foundations without diverting your team so releases stay on schedule.",
+                provider: { "@id": `${BASE}#person` },
+                areaServed: ["United Kingdom", "Remote"],
+                offers: {
+                    "@type": "AggregateOffer",
+                    priceCurrency: "GBP",
+                    priceRange: "£££",
+                },
+            },
+            {
+                "@type": ["Service", "ProfessionalService"],
+                "@id": `${BASE}#consulting-team-uplift`,
+                name: "Consulting & Team Uplift",
+                description:
+                    "Raise team capability with ongoing mentorship that lifts quality and autonomy.",
                 provider: { "@id": `${BASE}#person` },
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {

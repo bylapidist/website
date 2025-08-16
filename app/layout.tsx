@@ -36,6 +36,11 @@ const METADATA = {
     title: "Lead Frontend Engineer & Design Systems Specialist | Remote UK",
     description:
         "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.",
+    keywords: [
+        "Principal Frontend Engineer",
+        "Design Systems Specialist",
+        "UK Remote",
+    ],
     theme: {
         light: "#ffffff",
         dark: "#090909",
@@ -55,6 +60,7 @@ export const metadata: Metadata = {
         template: `%s | ${METADATA.name}`,
     },
     description: METADATA.description,
+    keywords: [...METADATA.keywords],
     icons: { icon: METADATA.images.favicon },
     openGraph: {
         title: METADATA.title,
