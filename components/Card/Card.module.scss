@@ -9,6 +9,7 @@
         gap: var(--space-m);
         color: var(--colour-text);
         transition:
+            background var(--motion-dur-200) var(--motion-ease-standard),
             box-shadow var(--motion-dur-200) var(--motion-ease-standard),
             transform var(--motion-dur-120) var(--motion-ease-emphasized);
     }
@@ -23,17 +24,20 @@
 
     .card:focus-within {
         box-shadow: var(--shadow-elev-2);
+        background: var(--surface-level-1-hover);
     }
 
     @media (hover: hover) and (pointer: fine) {
         .card:hover {
             box-shadow: var(--shadow-elev-2);
             transform: translateY(-1px);
+            background: var(--surface-level-1-hover);
         }
 
         .card:active {
             box-shadow: var(--shadow-elev-3);
             transform: translateY(1px);
+            background: var(--surface-level-1-active);
         }
     }
 

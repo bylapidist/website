@@ -39,6 +39,10 @@
         opacity: 0.6;
     }
 
+    .button:not(:disabled):focus-visible {
+        box-shadow: var(--shadow-elev-2);
+    }
+
     @media (hover: hover) and (pointer: fine) {
         .button:not(:disabled) {
             transition:

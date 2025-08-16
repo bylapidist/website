@@ -47,6 +47,14 @@
             box-shadow var(--motion-dur-200) var(--motion-ease-standard);
     }
 
+    .footerNav a:focus-visible,
+    .social a:focus-visible {
+        background: var(--surface-level-1-hover);
+        color: var(--colour-primary);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-elev-2);
+    }
+
     @media (hover: hover) and (pointer: fine) {
         .footerNav a:hover,
         .social a:hover {
