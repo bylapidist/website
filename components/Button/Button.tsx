@@ -9,9 +9,8 @@ import clsx from "clsx";
 import styles from "./Button.module.scss";
 
 type BaseProps = {
-    variant?: "primary" | "secondary" | "ghost";
+    variant?: "primary" | "secondary";
     size?: "md" | "lg";
-    loading?: boolean;
     className?: string;
     children: ReactNode;
 };
@@ -30,7 +29,6 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         {
             variant = "primary",
             size = "md",
-            loading = false,
             className,
             children,
             href,
@@ -42,7 +40,6 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         const data = {
             "data-variant": variant,
             "data-size": size,
-            "data-loading": loading,
         } as const;
 
         if (href) {
@@ -52,7 +49,6 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
                     {...data}
                     href={href}
                     className={classes}
-                    aria-busy={loading || undefined}
                     ref={ref as Ref<HTMLAnchorElement>}
                 >
                     {children}
@@ -68,8 +64,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
                 type={buttonRest.type ?? "button"}
                 {...data}
                 className={classes}
-                aria-busy={loading || undefined}
-                disabled={loading || buttonRest.disabled}
+                disabled={buttonRest.disabled}
                 ref={ref as Ref<HTMLButtonElement>}
             >
                 {children}
