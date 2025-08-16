@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <Section id="contact" labelledBy="contact-heading">
             <h2 id="contact-heading" className={styles.heading}>
-                Hire a frontend lead who goes full-stack
+                Hire a frontend lead with full-stack reach
             </h2>
             <p className={styles.intro}>
                 Available for principal roles, consulting, and architecture
