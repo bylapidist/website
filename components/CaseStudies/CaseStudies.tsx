@@ -1,4 +1,5 @@
 import Button from "@/components/Button/Button";
+import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import B2CVisual from "./B2CVisual";
 import styles from "./CaseStudies.module.scss";
@@ -62,12 +63,16 @@ export default function CaseStudies() {
                         solution,
                         impact,
                     }) => (
-                        <li key={title} className={styles.item}>
+                        <Card
+                            as="li"
+                            key={title}
+                            title={title}
+                            className={styles.item}
+                        >
                             <div className={styles.media}>
                                 <Visual />
                             </div>
                             <div className={styles.content}>
-                                <h3>{title}</h3>
                                 <p>
                                     <strong>Business context:</strong> {context}
                                 </p>
@@ -84,7 +89,7 @@ export default function CaseStudies() {
                                     <strong>Impact:</strong> {impact}
                                 </p>
                             </div>
-                        </li>
+                        </Card>
                     ),
                 )}
             </ul>

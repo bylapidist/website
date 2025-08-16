@@ -2,7 +2,6 @@
 
 @layer components {
     .caseStudies {
-        background: var(--surface-level-1);
         text-align: center;
     }
 
@@ -28,15 +27,9 @@
 
     .item {
         display: flex;
+        flex-direction: row;
         gap: var(--space-l);
         align-items: flex-start;
-        padding-block: var(--space-xl);
-        border-block-start: 1px solid var(--colour-border);
-    }
-
-    .item:first-child {
-        border-block-start: none;
-        padding-block-start: 0;
     }
 
     .media {
@@ -58,11 +51,6 @@
         flex-direction: column;
         gap: var(--space-s);
         max-width: var(--typography-measure);
-    }
-
-    .content h3 {
-        margin: 0 0 var(--space-s);
-        font-size: var(--typography-size-300);
     }
 
     .content p {
