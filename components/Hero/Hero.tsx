@@ -1,4 +1,4 @@
-import { BookCallButton, DownloadDeckButton } from "@/components/Cta/Cta";
+import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
 import styles from "./Hero.module.scss";
 
@@ -37,13 +37,19 @@ export default function Hero() {
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
-                    <BookCallButton size="lg">
+                    <Button href="#contact" size="lg">
                         Discuss your frontend roadmap
-                    </BookCallButton>
+                    </Button>
                     <p className={styles.note}>Let&apos;s connect.</p>
                 </div>
                 <div className={styles.cta}>
-                    <DownloadDeckButton size="lg" />
+                    <Button
+                        href="/brett-dorrans-cv.pdf"
+                        size="lg"
+                        variant="secondary"
+                    >
+                        Download capabilities deck
+                    </Button>
                     <p className={styles.note}>No email required.</p>
                 </div>
             </div>
