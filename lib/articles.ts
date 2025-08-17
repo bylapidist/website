@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import readingTime from "remark-reading-time";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
@@ -34,7 +35,12 @@ export async function getArticle(year: string, slug: string) {
     };
     const wordCount = stats.words;
     const readingTimeText = `${String(Math.ceil(stats.minutes))} min read`;
-    const { content: MDXContent } = await compileMDX({ source: content });
+    const { content: MDXContent } = await compileMDX({
+        source: content,
+        options: {
+            mdxOptions: { remarkPlugins: [remarkGfm] },
+        },
+    });
     const meta: ArticleMeta = {
         year,
         slug,

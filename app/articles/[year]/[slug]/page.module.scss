@@ -13,4 +13,37 @@
         color: var(--colour-text-subtle);
         font-size: var(--typography-size-300);
     }
+
+    .article :global(.footnotes) {
+        border-top: 1px solid var(--colour-border);
+        font-size: var(--typography-size-300);
+        margin-top: var(--space-xl);
+        padding-top: var(--space-m);
+        display: grid;
+        gap: var(--space-s);
+    }
+
+    .article :global(.footnotes > hr) {
+        display: none;
+    }
+
+    .article :global(.footnotes)::before {
+        content: "References";
+        font-weight: bold;
+    }
+
+    .article :global(.footnotes ol) {
+        display: grid;
+        gap: var(--space-xs);
+        margin: 0;
+        padding-left: var(--space-l);
+    }
+
+    .article :global(.footnotes li p) {
+        margin: 0;
+    }
+
+    .article :global(sup[id^="fnref"] > a) {
+        text-decoration: none;
+    }
 }
