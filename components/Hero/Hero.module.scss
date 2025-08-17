@@ -1,0 +1,111 @@
+@use "../../styles/mixins" as *;
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(var(--space-m));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+@layer components {
+    .hero {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .heroTitle {
+        max-inline-size: 25ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--typography-size-500);
+    }
+
+    .heroIntro {
+        max-inline-size: 45ch;
+        text-wrap: balance;
+        hyphens: auto;
+        font-size: var(--typography-size-300);
+    }
+
+    .ctaGroup {
+        @include cta-group;
+    }
+
+    .cta {
+        @include centered-column;
+
+        gap: var(--space-xxs);
+        margin-bottom: var(--space-2xl);
+    }
+
+    .note {
+        font-size: var(--typography-size-100);
+        max-inline-size: 14ch;
+        text-align: center;
+    }
+
+    .availability {
+        display: flex;
+        gap: var(--space-xs);
+        justify-content: center;
+        font-size: var(--typography-size-100);
+        color: var(--colour-text-subtle);
+    }
+
+    .availability,
+    .heroTitle,
+    .heroIntro,
+    .cta {
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .availability,
+        .heroTitle,
+        .heroIntro,
+        .cta {
+            opacity: 0;
+            transform: translateY(var(--space-m));
+            visibility: hidden;
+            animation: fade-in-up var(--motion-dur-320)
+                var(--motion-ease-emphasized) forwards;
+        }
+
+        .availability {
+            animation-delay: 0s;
+        }
+
+        .heroTitle {
+            animation-delay: 0.2s;
+        }
+
+        .heroIntro {
+            animation-delay: 0.4s;
+        }
+
+        .cta:nth-of-type(1) {
+            animation-delay: 0.6s;
+        }
+
+        .cta:nth-of-type(2) {
+            animation-delay: 0.8s;
+        }
+    }
+
+    @container (min-width:50rem) {
+        .heroTitle {
+            font-size: var(--typography-size-600);
+        }
+
+        .heroIntro {
+            font-size: var(--typography-size-400);
+        }
+    }
+}

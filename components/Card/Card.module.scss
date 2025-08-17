@@ -1,0 +1,82 @@
+@layer components {
+    .card {
+        background: var(--surface-level-1);
+        border-radius: var(--radius-l);
+        padding: var(--space-l);
+        box-shadow: var(--shadow-elev-1);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+        color: var(--colour-text);
+        will-change: box-shadow, transform, background;
+        transition:
+            background var(--motion-dur-200) var(--motion-ease-standard),
+            box-shadow var(--motion-dur-200) var(--motion-ease-standard),
+            transform var(--motion-dur-120) var(--motion-ease-emphasized);
+    }
+
+    .card[data-size="lg"] {
+        padding: var(--space-xl);
+    }
+
+    .card[data-highlight] {
+        border: 2px solid var(--colour-primary);
+    }
+
+    .card:focus-within {
+        box-shadow: var(--shadow-elev-2);
+        background: var(--surface-level-1-hover);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .card:hover {
+            box-shadow: var(--shadow-elev-2);
+            transform: translateY(-1px);
+            background: var(--surface-level-1-hover);
+        }
+
+        .card:active {
+            box-shadow: var(--shadow-elev-3);
+            transform: translateY(1px);
+            background: var(--surface-level-1-active);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .card {
+            transition: none;
+            transform: none;
+        }
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--space-s);
+    }
+
+    .head h3,
+    .head h4 {
+        margin: 0;
+        font-size: var(--typography-size-300);
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        font-size: var(--typography-size-200);
+    }
+
+    @container section (max-width: 40rem) {
+        .card {
+            padding: var(--space-m);
+        }
+
+        .head h3,
+        .head h4 {
+            font-size: var(--typography-size-200);
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@mixin steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    counter-reset: step;
+
+    li {
+        list-style-type: none;
+        counter-increment: step;
+        padding-inline-start: var(--space-m);
+        position: relative;
+
+        &::before {
+            content: counter(step) ".";
+            position: absolute;
+            inset-inline-start: calc(var(--space-l) * -1);
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    margin-inline-start: var(--space-2xl);
+
+    > div {
+        position: relative;
+        padding-inline-start: var(--space-m);
+
+        &::before {
+            content: "\2713";
+            position: absolute;
+            inset-inline-start: calc(var(--space-l) * -1);
+            font-weight: 600;
+            color: var(--colour-success);
+        }
+
+        dt,
+        dd {
+            display: inline;
+            margin: 0;
+        }
+
+        dt {
+            font-weight: 600;
+            font-family: var(--font-header), sans-serif;
+            margin-inline-end: var(--space-s);
+        }
+    }
+}
+
+@mixin cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: center;
+    margin-block-start: var(--space-2xl);
+    text-align: center;
+}
+
+@mixin centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin inline-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centered-list($gap, $wrap: false) {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: $gap;
+    align-items: center;
+    justify-content: center;
+
+    @if $wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@mixin card-grid($gap: var(--space-xl)) {
+    display: grid;
+    gap: $gap;
+    margin-block-start: var(--space-l);
+}

@@ -1,0 +1,28 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .heading a {
+        font-size: var(--typography-size-200);
+    }
+
+    .cards {
+        @include card-grid();
+    }
+
+    .cards a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

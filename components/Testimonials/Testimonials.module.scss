@@ -1,0 +1,37 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .testimonials {
+        text-align: center;
+    }
+
+    .cards {
+        @include card-grid();
+    }
+
+    .card {
+        background: var(--surface-level-1);
+        padding: var(--space-l);
+        border-radius: var(--radius-l);
+
+        @include centered-column;
+
+        gap: var(--space-m);
+    }
+
+    .card blockquote {
+        margin: 0;
+        font-size: var(--typography-size-200);
+    }
+
+    .card figcaption {
+        font-size: var(--typography-size-100);
+        color: var(--colour-text);
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
