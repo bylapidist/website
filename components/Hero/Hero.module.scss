@@ -72,7 +72,7 @@
         .cta {
             opacity: 0;
             transform: translateY(var(--space-m));
-            animation: fade-in-up var(--motion-dur-400)
+            animation: fade-in-up var(--motion-dur-320)
                 var(--motion-ease-emphasized) forwards;
         }
 
