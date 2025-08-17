@@ -33,7 +33,7 @@
     }
 
     .media {
-        flex: 0 0 calc(var(--space-3xl) * 1.5);
+        flex: 0 0 var(--space-3xl);
     }
 
     .visual {
@@ -41,7 +41,7 @@
         aspect-ratio: 16 / 9;
         border: thin solid var(--colour-text-subtle);
         border-radius: var(--radius-m);
-        fill: var(--surface-level-1);
+        fill: var(--surface-level-2);
         flex-shrink: 0;
     }
 
@@ -63,7 +63,7 @@
 
     .panel,
     .block {
-        fill: var(--surface-level-1);
+        fill: var(--surface-level-2);
         stroke: var(--colour-text-subtle);
         stroke-width: 0.5;
     }
@@ -84,7 +84,7 @@
 
         .media {
             flex-basis: auto;
-            width: min(100%, calc(var(--space-3xl) * 4));
+            width: min(100%, calc(var(--space-3xl) * 3));
             margin-inline: auto;
         }
     }
