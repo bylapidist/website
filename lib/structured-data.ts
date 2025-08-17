@@ -19,7 +19,6 @@ const PERSON = {
         email: "hello@lapidist.net",
     },
     address: ADDRESS,
-    areaServed: ["United Kingdom", "Remote"],
     knowsAbout: [
         "frontend",
         "design systems",
