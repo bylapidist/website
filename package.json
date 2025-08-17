@@ -37,7 +37,9 @@
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
         "clsx": "2.1.1",
+        "github-slugger": "^2.0.0",
         "gray-matter": "4.0.3",
+        "mdast-util-to-string": "^4.0.0",
         "next": "15.4.6",
         "next-mdx-remote": "5.0.0",
         "prettier": "3.6.2",
@@ -45,7 +47,8 @@
         "react-dom": "19.1.1",
         "remark": "^15.0.1",
         "remark-gfm": "^4.0.1",
-        "remark-reading-time": "^2.0.2"
+        "remark-reading-time": "^2.0.2",
+        "unist-util-visit": "^5.0.0"
     },
     "devDependencies": {
         "@axe-core/playwright": "4.10.2",
