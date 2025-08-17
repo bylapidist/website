@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as *;
+
+@layer components {
+    .player {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+        width: 100%;
+    }
+
+    .slider {
+        flex: 1;
+    }
+
+    .label {
+        font-size: var(--typography-size-100);
+        color: var(--colour-text-subtle);
+    }
+}
