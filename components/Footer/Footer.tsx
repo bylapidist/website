@@ -22,6 +22,11 @@ export default function Footer() {
                                 Accessibility Statement
                             </Link>
                         </li>
+                        <li>
+                            <Link href="/ai-ethics-statement">
+                                AI Ethics Statement
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
                 <ul className={styles.social}>
