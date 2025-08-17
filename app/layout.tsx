@@ -37,7 +37,7 @@ const METADATA = {
     description:
         "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.",
     keywords: [
-        "Principal Frontend Engineer",
+        "Lead Frontend Engineer",
         "Design Systems Specialist",
         "UK Remote",
     ],

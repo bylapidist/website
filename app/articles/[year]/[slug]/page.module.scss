@@ -22,6 +22,26 @@
         border-radius: var(--radius-m);
     }
 
+    .article :global(img) {
+        max-width: 100%;
+        border-radius: var(--radius-m);
+        margin: var(--space-m) auto;
+    }
+
+    .article :global(figcaption) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-s);
+    }
+
+    .article :global(figcaption p) {
+        font-size: var(--typography-size-100);
+        text-align: center;
+        width: 100%
+    }
+
     .article :global(blockquote p) {
         margin: 0;
     }
@@ -47,5 +67,15 @@
 
     .article :global(sup[id^="fnref"] > a) {
         text-decoration: none;
+    }
+
+    @container (min-width:50rem) {
+        .article :global(img) {
+            max-width: 50%;
+        }
+
+        .article :global(figcaption p) {
+            width: 50%
+        }
     }
 }
