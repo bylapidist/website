@@ -34,7 +34,16 @@ export default async function ArticlesPage() {
     const articles = await getAllArticles();
     return (
         <>
-            <Section heading="Articles" headingLevel={1}>
+            <Section
+                heading={
+                    <>
+                        <span>Articles</span>
+                        <Link href="/rss.xml">RSS feed</Link>
+                    </>
+                }
+                headingClassName={styles.heading}
+                headingLevel={1}
+            >
                 <div className={styles.cards}>
                     {articles.map(({ year, slug, title, summary }) => (
                         <Link
