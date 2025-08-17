@@ -31,7 +31,7 @@ export async function GET() {
             ? new Date(articles[0].date).toUTCString()
             : new Date().toUTCString();
 
-    const rss = `<?xml version="1.0" encoding="UTF-8" ?>\n<rss version="2.0">\n    <channel>\n        <title>${SITE_TITLE}</title>\n        <link>${BASE_URL}</link>\n        <description>${SITE_DESCRIPTION}</description>\n        <language>en-GB</language>\n        <lastBuildDate>${lastBuildDate}</lastBuildDate>\n        <image>\n            <url>${BASE_URL}/opengraph-image</url>\n            <title>${SITE_TITLE}</title>\n            <link>${BASE_URL}</link>\n        </image>${items}\n    </channel>\n</rss>`;
+    const rss = `<?xml version="1.0" encoding="UTF-8" ?>\n<rss version="2.0">\n    <channel>\n        <title>${escapeHtml(SITE_TITLE)}</title>\n        <link>${BASE_URL}</link>\n        <description>${escapeHtml(SITE_DESCRIPTION)}</description>\n        <language>en-GB</language>\n        <lastBuildDate>${lastBuildDate}</lastBuildDate>\n        <image>\n            <url>${BASE_URL}/opengraph-image</url>\n            <title>${escapeHtml(SITE_TITLE)}</title>\n            <link>${BASE_URL}</link>\n        </image>${items}\n    </channel>\n</rss>`;
 
     return new Response(rss, {
         headers: {
