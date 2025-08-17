@@ -19,6 +19,8 @@ export default function TrustedBy() {
                         className={styles.logoLink}
                         href="https://www.encompasscorporation.com"
                         aria-describedby="trusted-by-encompass"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <svg
                             className={styles.logo}
@@ -75,6 +77,8 @@ export default function TrustedBy() {
                         className={styles.logoLink}
                         href="https://www.lendinvest.com"
                         aria-describedby="trusted-by-lendinvest"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <svg
                             className={styles.logo}
@@ -98,6 +102,8 @@ export default function TrustedBy() {
                         className={styles.logoLink}
                         href="https://www.goldencharter.co.uk"
                         aria-describedby="trusted-by-golden-charter"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <svg
                             className={styles.logo}
@@ -179,6 +185,8 @@ export default function TrustedBy() {
                         className={styles.logoLink}
                         href="https://www.hunterboots.com"
                         aria-describedby="trusted-by-hunter-boots"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <svg
                             className={styles.logo}
@@ -205,6 +213,8 @@ export default function TrustedBy() {
                         className={styles.logoLink}
                         href="https://www.gant.com"
                         aria-describedby="trusted-by-gant"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <svg
                             className={styles.logo}
