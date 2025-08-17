@@ -5,6 +5,7 @@ import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
+import { formatDate } from "@/lib/date";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
@@ -45,16 +46,37 @@ export default async function ArticlesPage() {
                 headingLevel={1}
             >
                 <div className={styles.cards}>
-                    {articles.map(({ year, slug, title, summary }) => (
-                        <Link
-                            key={`${year}-${slug}`}
-                            href={`/articles/${year}/${slug}`}
-                        >
-                            <Card title={title} headingLevel="h2">
-                                <p>{summary}</p>
-                            </Card>
-                        </Link>
-                    ))}
+                    {articles.map(
+                        ({
+                            year,
+                            slug,
+                            title,
+                            summary,
+                            date,
+                            tags,
+                            readingTime,
+                        }) => (
+                            <Link
+                                key={`${year}-${slug}`}
+                                href={`/articles/${year}/${slug}`}
+                            >
+                                <Card title={title} headingLevel="h2">
+                                    <p>{summary}</p>
+                                    <p>
+                                        {formatDate(date)}
+                                        {tags.length > 0 || readingTime
+                                            ? " · "
+                                            : ""}
+                                        {tags.join(", ")}
+                                        {tags.length > 0 && readingTime
+                                            ? " · "
+                                            : ""}
+                                        {readingTime}
+                                    </p>
+                                </Card>
+                            </Link>
+                        ),
+                    )}
                 </div>
             </Section>
             <Contact />

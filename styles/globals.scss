@@ -73,7 +73,7 @@
         scroll-margin-block-start: var(--space-2xl);
     }
 
-    a:not([class]) {
+    :where(a:not([class])) {
         color: var(--colour-primary);
         text-decoration: none;
         transition:
@@ -104,6 +104,10 @@
         @media (prefers-reduced-motion: reduce) {
             transition: none;
         }
+    }
+
+    .footnotes a {
+        text-decoration: underline;
     }
 
     section {

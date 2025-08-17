@@ -2,6 +2,7 @@ import Link from "next/link";
 import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
+import { formatDate } from "@/lib/date";
 import styles from "./Insights.module.scss";
 
 type Article = {
@@ -9,6 +10,7 @@ type Article = {
     slug: string;
     title: string;
     summary: string;
+    date: string;
     tags: string[];
     readingTime: string;
 };
@@ -22,22 +24,32 @@ export default function Insights({ articles }: { articles: Article[] }) {
         >
             <div className={styles.cards}>
                 {articles.map(
-                    ({ year, slug, title, summary, tags, readingTime }) => (
+                    ({
+                        year,
+                        slug,
+                        title,
+                        summary,
+                        date,
+                        tags,
+                        readingTime,
+                    }) => (
                         <Link
                             key={`${year}-${slug}`}
                             href={`/articles/${year}/${slug}`}
                         >
                             <Card title={title}>
                                 <p>{summary}</p>
-                                {(tags.length > 0 || readingTime) && (
-                                    <p>
-                                        {tags.join(", ")}
-                                        {tags.length > 0 && readingTime
-                                            ? " · "
-                                            : ""}
-                                        {readingTime}
-                                    </p>
-                                )}
+                                <p>
+                                    {formatDate(date)}
+                                    {tags.length > 0 || readingTime
+                                        ? " · "
+                                        : ""}
+                                    {tags.join(", ")}
+                                    {tags.length > 0 && readingTime
+                                        ? " · "
+                                        : ""}
+                                    {readingTime}
+                                </p>
                             </Card>
                         </Link>
                     ),

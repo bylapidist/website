@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import TableOfContents from "@/components/TableOfContents/TableOfContents";
 import { getAllArticles, getArticle } from "@/lib/articles";
+import { formatDate } from "@/lib/date";
 import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
 
@@ -38,15 +39,13 @@ export default async function ArticlePage({
                     {meta.summary && (
                         <p className={styles.summary}>{meta.summary}</p>
                     )}
-                    {(meta.tags.length > 0 || meta.readingTime) && (
-                        <p className={styles.meta}>
-                            {meta.tags.join(", ")}
-                            {meta.tags.length > 0 && meta.readingTime
-                                ? " · "
-                                : ""}
-                            {meta.readingTime}
-                        </p>
-                    )}
+                    <p className={styles.meta}>
+                        {formatDate(meta.date)}
+                        {meta.tags.length > 0 || meta.readingTime ? " · " : ""}
+                        {meta.tags.join(", ")}
+                        {meta.tags.length > 0 && meta.readingTime ? " · " : ""}
+                        {meta.readingTime}
+                    </p>
                     {headings.length > 0 && (
                         <TableOfContents headings={headings} />
                     )}
