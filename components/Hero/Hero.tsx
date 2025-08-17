@@ -30,9 +30,7 @@ export default function Hero() {
                 </h1>
                 <p className={styles.heroIntro}>
                     I build design systems and frontend platforms that cut
-                    rework, lift accessibility, and accelerate delivery &ndash;
-                    backed by typesafe API, CI/CD, and regulated industry
-                    expertise.
+                    rework, lift accessibility, and accelerate delivery.
                 </p>
             </div>
             <div className={styles.ctaGroup}>
