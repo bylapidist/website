@@ -97,7 +97,6 @@ export function buildHomePageStructuredData(datePublished: string) {
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -112,7 +111,6 @@ export function buildHomePageStructuredData(datePublished: string) {
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -127,7 +125,6 @@ export function buildHomePageStructuredData(datePublished: string) {
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -142,7 +139,6 @@ export function buildHomePageStructuredData(datePublished: string) {
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
