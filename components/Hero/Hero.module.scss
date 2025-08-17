@@ -9,6 +9,7 @@
     to {
         opacity: 1;
         transform: translateY(0);
+        visibility: visible;
     }
 }
 
@@ -72,6 +73,7 @@
         .cta {
             opacity: 0;
             transform: translateY(var(--space-m));
+            visibility: hidden;
             animation: fade-in-up var(--motion-dur-320)
                 var(--motion-ease-emphasized) forwards;
         }

@@ -64,50 +64,37 @@
 
     a:not([class]) {
         color: var(--colour-primary);
-        position: relative;
-        text-decoration: none;
-        transition: color var(--motion-dur-200) var(--motion-ease-standard);
+        text-decoration-line: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+        transition:
+            color var(--motion-dur-200) var(--motion-ease-standard),
+            text-decoration-color var(--motion-dur-200)
+                var(--motion-ease-standard);
 
         &:visited {
             color: var(--colour-primary);
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset-inline: 0;
-            inset-block-end: 0;
-            block-size: 1px;
-            background: currentcolor;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform var(--motion-dur-200)
-                var(--motion-ease-standard);
-        }
-
-        &:focus-visible::before {
-            transform: scaleX(1);
+        &:focus-visible {
+            text-decoration-color: currentcolor;
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 color: var(--colour-primary-hover);
+                text-decoration-color: currentcolor;
             }
 
             &:active {
                 color: var(--colour-primary-active);
-            }
-
-            &:hover::before,
-            &:active::before {
-                transform: scaleX(1);
+                text-decoration-color: currentcolor;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            &::before {
-                transition: none;
-            }
+            transition: none;
         }
     }
 
