@@ -1,6 +1,10 @@
 @use "../../styles/mixins" as *;
 
 @layer components {
+    .heading {
+        text-align: center;
+    }
+
     .cards {
         @include card-grid();
     }
