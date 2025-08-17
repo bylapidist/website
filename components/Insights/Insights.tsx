@@ -36,6 +36,7 @@ export default function Insights({ articles }: { articles: Article[] }) {
                         <Link
                             key={`${year}-${slug}`}
                             href={`/articles/${year}/${slug}`}
+                            className={styles.cardLink}
                         >
                             <Card title={title}>
                                 <p>{summary}</p>
