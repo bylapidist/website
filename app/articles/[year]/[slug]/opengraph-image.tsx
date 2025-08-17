@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { getAllArticles, getArticle } from "@/lib/articles";
 
 export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
@@ -34,7 +35,19 @@ function LogoLockup() {
     );
 }
 
-export default function OGImage() {
+export async function generateStaticParams() {
+    const articles = await getAllArticles();
+    return articles.map(({ year, slug }) => ({ year, slug }));
+}
+
+export default async function OGImage({
+    params,
+}: {
+    params: Promise<{ year: string; slug: string }>;
+}) {
+    const { year, slug } = await params;
+    const { meta } = await getArticle(year, slug);
+
     return new ImageResponse(
         (
             <div
@@ -54,8 +67,14 @@ export default function OGImage() {
                 }}
             >
                 <LogoLockup />
-                <span style={{ fontSize: 56 }}>
-                    Ship design systems teams love.
+                <span
+                    style={{
+                        fontSize: 56,
+                        fontWeight: 700,
+                        lineHeight: 1.2,
+                    }}
+                >
+                    {meta.title}
                 </span>
             </div>
         ),
