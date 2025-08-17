@@ -1,7 +1,8 @@
+@use "../../../../styles/mixins" as *;
+
 @layer components {
     .article {
-        display: grid;
-        gap: var(--space-sm);
+        @include grid-stack(var(--space-sm));
     }
 
     .summary {
@@ -21,8 +22,7 @@
     }
 
     .article :global(ol) {
-        display: grid;
-        gap: var(--space-l);
+        @include grid-stack(var(--space-l));
     }
 
     .article :global(blockquote) {
@@ -61,13 +61,13 @@
         font-size: var(--typography-size-100);
         margin-top: var(--space-xl);
         padding-top: var(--space-m);
-        display: grid;
-        gap: var(--space-s);
+
+        @include grid-stack(var(--space-s));
     }
 
     .article :global(.footnotes ol) {
-        display: grid;
-        gap: var(--space-xs);
+        @include grid-stack(var(--space-xs));
+
         margin: 0;
         padding-left: var(--space-2xl);
     }

@@ -72,6 +72,16 @@
     justify-content: center;
 }
 
+@mixin flex-between($align: center, $gap: null) {
+    display: flex;
+    justify-content: space-between;
+    align-items: $align;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
 @mixin centered-list($gap, $wrap: false) {
     list-style: none;
     padding: 0;
@@ -85,8 +95,13 @@
     }
 }
 
-@mixin card-grid($gap: var(--space-xl)) {
+@mixin grid-stack($gap: var(--space-m)) {
     display: grid;
     gap: $gap;
+}
+
+@mixin card-grid($gap: var(--space-xl)) {
+    @include grid-stack($gap);
+
     margin-block-start: var(--space-l);
 }

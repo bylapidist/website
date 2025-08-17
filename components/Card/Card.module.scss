@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .card {
         background: var(--surface-level-1);
@@ -50,10 +52,7 @@
     }
 
     .head {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: var(--space-s);
+        @include flex-between(flex-start, var(--space-s));
     }
 
     .head h3,

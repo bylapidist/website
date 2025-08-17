@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .toc {
         max-width: calc(var(--typography-measure) / 2);
@@ -10,8 +12,9 @@
 
     .list {
         margin: 0;
-        display: grid;
-        gap: var(--space-xs);
+
+        @include grid-stack(var(--space-xs));
+
         font-size: var(--typography-size-100);
     }
 
