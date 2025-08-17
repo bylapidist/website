@@ -182,6 +182,8 @@
     }
 
     summary {
+        display: flex;
+        align-items: center;
         cursor: pointer;
         list-style: none;
         padding-block: var(--space-xs);
