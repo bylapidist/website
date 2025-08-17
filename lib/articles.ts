@@ -1,10 +1,14 @@
 import fs from "fs";
 import path from "path";
+import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
+import type { Heading as MdastHeading, Root } from "mdast";
+import { toString } from "mdast-util-to-string";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import readingTime from "remark-reading-time";
+import { visit } from "unist-util-visit";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 
@@ -24,6 +28,8 @@ type ArticleMeta = {
     };
 };
 
+export type Heading = { id: string; text: string; level: number };
+
 export async function getArticle(year: string, slug: string) {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);
     const source = await fs.promises.readFile(filePath, "utf8");
@@ -35,10 +41,26 @@ export async function getArticle(year: string, slug: string) {
     };
     const wordCount = stats.words;
     const readingTimeText = `${String(Math.ceil(stats.minutes))} min read`;
+    const headings: Heading[] = [];
+    const slugger = new GithubSlugger();
+    const headingPlugin = () => (tree: Root) => {
+        visit(tree, "heading", (node: MdastHeading) => {
+            if (node.depth < 2) {
+                return;
+            }
+            const text = toString(node);
+            const id = slugger.slug(text);
+            headings.push({ id, text, level: node.depth });
+            const data = node.data || (node.data = {});
+            const props = (data.hProperties as { id?: string } | undefined) || {};
+            props.id = id;
+            data.hProperties = props;
+        });
+    };
     const { content: MDXContent } = await compileMDX({
         source: content,
         options: {
-            mdxOptions: { remarkPlugins: [remarkGfm] },
+            mdxOptions: { remarkPlugins: [remarkGfm, headingPlugin] },
         },
     });
     const meta: ArticleMeta = {
@@ -53,7 +75,7 @@ export async function getArticle(year: string, slug: string) {
         image: (data.image as string) || "",
         author: (data.author ?? {}) as { name?: string; url?: string },
     };
-    return { meta, content: MDXContent, wordCount };
+    return { meta, content: MDXContent, wordCount, headings };
 }
 
 export async function getAllArticles(): Promise<ArticleMeta[]> {

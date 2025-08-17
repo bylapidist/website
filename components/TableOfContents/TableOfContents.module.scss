@@ -1,0 +1,47 @@
+@layer components {
+    .toc {
+        padding: var(--space-m);
+        border: 1px solid var(--colour-border);
+        border-radius: var(--radius-m);
+        background: var(--surface-level-1);
+    }
+
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: var(--space-xs);
+    }
+
+    .item[data-level="3"] {
+        margin-inline-start: var(--space-m);
+    }
+
+    .item[data-level="4"] {
+        margin-inline-start: calc(var(--space-m) * 2);
+    }
+
+    .item[data-level="5"] {
+        margin-inline-start: calc(var(--space-m) * 3);
+    }
+
+    .item[data-level="6"] {
+        margin-inline-start: calc(var(--space-m) * 4);
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--colour-text);
+    }
+
+    .link:focus-visible {
+        text-decoration: underline;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .link:hover {
+            text-decoration: underline;
+        }
+    }
+}
