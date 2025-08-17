@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
+import TableOfContents from "@/components/TableOfContents/TableOfContents";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
@@ -17,7 +18,7 @@ export default async function ArticlePage({
     params: Promise<{ year: string; slug: string }>;
 }) {
     const { year, slug } = await params;
-    const { meta, content, wordCount } = await getArticle(year, slug);
+    const { meta, content, wordCount, headings } = await getArticle(year, slug);
     const structuredData = buildArticleStructuredData(
         meta,
         year,
@@ -45,6 +46,9 @@ export default async function ArticlePage({
                                 : ""}
                             {meta.readingTime}
                         </p>
+                    )}
+                    {headings.length > 0 && (
+                        <TableOfContents headings={headings} />
                     )}
                     {content}
                 </article>

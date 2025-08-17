@@ -16,6 +16,9 @@ test("article page is accessible", async ({ page }) => {
         "/articles/2025/what-recovering-from-a-stroke-at-36-taught-me",
     );
     await expect(page.locator("article")).toBeVisible();
+    await expect(
+        page.locator('nav[aria-label="Table of contents"]'),
+    ).toBeVisible();
     const accessibilityScanResults = await new AxeBuilder({ page })
         .include("main")
         .exclude('[role="alert"]')
