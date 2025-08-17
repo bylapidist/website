@@ -5,7 +5,7 @@ const PERSON = {
     "@id": `${BASE}#person`,
     name: "Brett Dorrans",
     url: `${BASE}/`,
-    jobTitle: "Principal Frontend Engineer",
+    jobTitle: "Lead Frontend Engineer",
     image: `${BASE}/opengraph-image`,
     contactPoint: {
         "@type": "ContactPoint",
