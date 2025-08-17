@@ -1,9 +1,18 @@
-.cards {
-    display: grid;
-    gap: 1rem;
-}
+@use "../../styles/mixins" as *;
 
-.cards a {
-    text-decoration: none;
-    color: inherit;
+@layer components {
+    .cards {
+        @include card-grid();
+    }
+
+    .cards a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @container (min-width:50rem) {
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 }
