@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
@@ -51,6 +52,9 @@ export default async function ArticlePage({
                     )}
                     {content}
                 </article>
+                <p className={styles.return}>
+                    <Link href="/articles">Return to articles</Link>
+                </p>
             </Section>
             <Contact />
             <Footer />
