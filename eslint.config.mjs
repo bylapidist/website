@@ -2,7 +2,9 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
 import eslintPluginImport from "eslint-plugin-import";
+import "eslint-import-resolver-typescript";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactCompiler from "eslint-plugin-react-compiler";
 import storybook from "eslint-plugin-storybook";
@@ -30,7 +32,11 @@ export default [
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...storybook.configs["flat/recommended"],
-    ...compat.extends("next/core-web-vitals", "next/typescript"),
+    ...compat.extends(
+        "eslint-config-next",
+        "next/core-web-vitals",
+        "next/typescript",
+    ),
     reactCompiler.configs.recommended,
     {
         rules: {
@@ -38,6 +44,7 @@ export default [
         },
         plugins: {
             import: eslintPluginImport,
+            "@next/next": nextPlugin,
         },
         settings: {
             "import/resolver": {
