@@ -44,6 +44,7 @@
         "react": "19.1.1",
         "react-dom": "19.1.1",
         "remark": "^15.0.1",
+        "remark-gfm": "^4.0.1",
         "remark-reading-time": "^2.0.2"
     },
     "devDependencies": {
