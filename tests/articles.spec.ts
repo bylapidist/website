@@ -12,7 +12,9 @@ test("articles index is accessible", async ({ page }) => {
 });
 
 test("article page is accessible", async ({ page }) => {
-    await page.goto("/articles/2025/on-freedom-curiosity-and-happiness");
+    await page.goto(
+        "/articles/2025/what-recovering-from-a-stroke-at-36-taught-me",
+    );
     await expect(page.locator("article")).toBeVisible();
     const accessibilityScanResults = await new AxeBuilder({ page })
         .include("main")

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import styles from "./Insights.module.scss";
@@ -41,6 +42,11 @@ export default function Insights({ articles }: { articles: Article[] }) {
                         </Link>
                     ),
                 )}
+            </div>
+            <div className={styles.cta}>
+                <Button href="/articles" variant="secondary">
+                    All articles
+                </Button>
             </div>
         </Section>
     );

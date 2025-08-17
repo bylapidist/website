@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "@/components/Card/Card";
 import Contact from "@/components/Contact/Contact";
-import Container from "@/components/Container/Container";
 import Footer from "@/components/Footer/Footer";
+import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
 import styles from "./page.module.scss";
 
@@ -34,8 +34,7 @@ export default async function ArticlesPage() {
     const articles = await getAllArticles();
     return (
         <>
-            <Container as="section">
-                <h1>Articles</h1>
+            <Section heading="Articles" headingLevel={1}>
                 <div className={styles.cards}>
                     {articles.map(({ year, slug, title, summary }) => (
                         <Link
@@ -48,7 +47,7 @@ export default async function ArticlesPage() {
                         </Link>
                     ))}
                 </div>
-            </Container>
+            </Section>
             <Contact />
             <Footer />
         </>
