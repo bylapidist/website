@@ -20,14 +20,10 @@
     }
 
     .header[data-scrolled] {
-        background: color-mix(in srgb, var(--surface-level-0) 90%, transparent);
+        background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);
         backdrop-filter: blur(8px);
         border-block-end-color: var(--colour-border);
-        box-shadow: var(--shadow-elev-1);
-    }
-
-    .header[data-scrolled] .inner {
-        padding-block: var(--space-s);
+        box-shadow: var(--shadow-elev-3);
     }
 
     .logo {
