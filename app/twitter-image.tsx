@@ -4,6 +4,36 @@ export const dynamic = "force-static";
 export const size = { width: 1600, height: 900 };
 export const contentType = "image/png";
 
+const LOGO_COLORS = {
+    blue: "#00af9f",
+    green: "#92ca6b",
+    yellow: "#e9ba4d",
+} as const;
+
+function LogoLockup() {
+    return (
+        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+            <svg width={128} height={128} viewBox="0 0 64 64">
+                <polygon points="0,0 0,32 32,32" fill={LOGO_COLORS.blue} />
+                <polygon points="0,32 0,64 32,64" fill={LOGO_COLORS.green} />
+                <polygon points="32,0 32,64 64,32" fill={LOGO_COLORS.yellow} />
+            </svg>
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    fontSize: 64,
+                    fontWeight: 700,
+                    lineHeight: 1,
+                }}
+            >
+                <span>Brett</span>
+                <span>Dorrans</span>
+            </div>
+        </div>
+    );
+}
+
 export default function TwitterImage() {
     return new ImageResponse(
         (
@@ -13,7 +43,7 @@ export default function TwitterImage() {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     background: "#000",
                     color: "#fff",
                     padding: "96px",
@@ -23,13 +53,8 @@ export default function TwitterImage() {
                     backgroundSize: "40px 40px",
                 }}
             >
-                <span style={{ fontSize: 80, fontWeight: 700 }}>
-                    Brett Dorrans
-                </span>
-                <span style={{ fontSize: 56 }}>
-                    Lead Frontend Engineer & Design Systems Specialist
-                </span>
-                <span style={{ fontSize: 48 }}>
+                <LogoLockup />
+                <span style={{ fontSize: 72 }}>
                     Ship design systems teams love.
                 </span>
             </div>

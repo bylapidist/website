@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
+import { getAllArticles, getArticle } from "@/lib/articles";
 
 export const dynamic = "force-static";
-export const size = { width: 1200, height: 630 };
+export const size = { width: 1600, height: 900 };
 export const contentType = "image/png";
 
 const LOGO_COLORS = {
@@ -34,7 +35,19 @@ function LogoLockup() {
     );
 }
 
-export default function OGImage() {
+export async function generateStaticParams() {
+    const articles = await getAllArticles();
+    return articles.map(({ year, slug }) => ({ year, slug }));
+}
+
+export default async function TwitterImage({
+    params,
+}: {
+    params: Promise<{ year: string; slug: string }>;
+}) {
+    const { year, slug } = await params;
+    const { meta } = await getArticle(year, slug);
+
     return new ImageResponse(
         (
             <div
@@ -46,7 +59,7 @@ export default function OGImage() {
                     justifyContent: "space-between",
                     background: "#000",
                     color: "#fff",
-                    padding: "80px",
+                    padding: "96px",
                     fontFamily: "sans-serif",
                     backgroundImage:
                         "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
@@ -54,8 +67,14 @@ export default function OGImage() {
                 }}
             >
                 <LogoLockup />
-                <span style={{ fontSize: 56 }}>
-                    Ship design systems teams love.
+                <span
+                    style={{
+                        fontSize: 72,
+                        fontWeight: 700,
+                        lineHeight: 1.2,
+                    }}
+                >
+                    {meta.title}
                 </span>
             </div>
         ),

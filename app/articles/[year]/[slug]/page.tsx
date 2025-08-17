@@ -67,6 +67,8 @@ export async function generateMetadata({
     const { meta } = await getArticle(year, slug);
     const base = "https://lapidist.net";
     const url = `${base}/articles/${year}/${slug}/`;
+    const ogImage = `/articles/${year}/${slug}/opengraph-image`;
+    const twitterImage = `/articles/${year}/${slug}/twitter-image`;
     return {
         title: meta.title,
         description: meta.description,
@@ -77,14 +79,14 @@ export async function generateMetadata({
             url,
             type: "article",
             publishedTime: meta.date,
-            images: meta.image ? [{ url: meta.image }] : undefined,
+            images: [{ url: ogImage }],
             authors: meta.author.url ? [meta.author.url] : undefined,
         },
         twitter: {
             card: "summary_large_image",
             title: meta.title,
             description: meta.description,
-            images: meta.image ? [meta.image] : undefined,
+            images: [twitterImage],
         },
     };
 }
