@@ -17,7 +17,7 @@ test("article page is accessible", async ({ page }) => {
     );
     await expect(page.locator("article")).toBeVisible();
     await expect(
-        page.locator('nav[aria-label="Table of contents"]'),
+        page.locator('nav[aria-labelledby="toc-heading"]'),
     ).toBeVisible();
     const accessibilityScanResults = await new AxeBuilder({ page })
         .include("main")
