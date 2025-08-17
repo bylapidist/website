@@ -1,5 +1,11 @@
 const BASE = "https://lapidist.net";
 
+const ADDRESS = {
+    "@type": "PostalAddress",
+    addressLocality: "Glasgow",
+    addressCountry: "UK",
+} as const;
+
 const PERSON = {
     "@type": "Person",
     "@id": `${BASE}#person`,
@@ -12,11 +18,7 @@ const PERSON = {
         contactType: "enquiries",
         email: "hello@lapidist.net",
     },
-    address: {
-        "@type": "PostalAddress",
-        addressLocality: "Glasgow",
-        addressCountry: "GB",
-    },
+    address: ADDRESS,
     knowsAbout: [
         "frontend",
         "design systems",
@@ -90,11 +92,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 description:
                     "Launch a production-ready design system in weeks – boosting velocity, cutting rework, and improving accessibility from day one.",
                 provider: { "@id": `${BASE}#person` },
+                address: ADDRESS,
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -104,11 +106,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 description:
                     "Turn existing assets into a strategic UI architecture roadmap that reduces churn and flags risk early.",
                 provider: { "@id": `${BASE}#person` },
+                address: ADDRESS,
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -118,11 +120,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 description:
                     "Ship resilient foundations without diverting your team so releases stay on schedule.",
                 provider: { "@id": `${BASE}#person` },
+                address: ADDRESS,
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
@@ -132,11 +134,11 @@ export function buildHomePageStructuredData(datePublished: string) {
                 description:
                     "Raise team capability with ongoing mentorship that lifts quality and autonomy.",
                 provider: { "@id": `${BASE}#person` },
+                address: ADDRESS,
                 areaServed: ["United Kingdom", "Remote"],
                 offers: {
                     "@type": "AggregateOffer",
                     priceCurrency: "GBP",
-                    priceRange: "£££",
                 },
             },
             {
