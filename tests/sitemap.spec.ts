@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 test("sitemap URLs match canonical URLs", async ({ request }) => {
     const articlePath =
-        "/articles/2025/what-recovering-from-a-stroke-at-36-taught-me/";
+        "/articles/2025/what-recovering-from-a-stroke-at-34-taught-me/";
     const articleUrl = `https://lapidist.net${articlePath}`;
 
     const sitemapResponse = await request.get("/sitemap.xml");
