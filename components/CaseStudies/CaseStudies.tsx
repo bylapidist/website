@@ -1,15 +1,11 @@
 import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
-import B2CVisual from "./B2CVisual";
 import styles from "./CaseStudies.module.scss";
-import EcommerceVisual from "./EcommerceVisual";
-import GlobalFintechVisual from "./GlobalFintechVisual";
 
 const caseStudies = [
     {
         title: "Global fintech",
-        Visual: GlobalFintechVisual,
         context:
             "International payments platform processing millions of transactions daily.",
         team: "10 engineers across 3 squads",
@@ -21,7 +17,6 @@ const caseStudies = [
     },
     {
         title: "B2C SaaS",
-        Visual: B2CVisual,
         context: "Consumer subscription service with web and mobile clients.",
         team: "6-person frontend guild",
         challenge: "Slow onboarding, inconsistent UI, hard-to-debug layouts.",
@@ -31,7 +26,6 @@ const caseStudies = [
     },
     {
         title: "Ecommerce",
-        Visual: EcommerceVisual,
         context: "Retail marketplace fulfilling millions of orders worldwide.",
         team: "8-person platform team",
         challenge: "Flaky components, accessibility gaps, shipping delays.",
@@ -54,41 +48,23 @@ export default function CaseStudies() {
 
             <ul className={styles.list}>
                 {caseStudies.map(
-                    ({
-                        title,
-                        Visual,
-                        context,
-                        team,
-                        challenge,
-                        solution,
-                        impact,
-                    }) => (
-                        <Card
-                            as="li"
-                            key={title}
-                            title={title}
-                            className={styles.item}
-                        >
-                            <div className={styles.media}>
-                                <Visual />
-                            </div>
-                            <div className={styles.content}>
-                                <p>
-                                    <strong>Business context:</strong> {context}
-                                </p>
-                                <p>
-                                    <strong>Team:</strong> {team}
-                                </p>
-                                <p>
-                                    <strong>Challenge:</strong> {challenge}
-                                </p>
-                                <p>
-                                    <strong>Solution:</strong> {solution}
-                                </p>
-                                <p className={styles.impact}>
-                                    <strong>Impact:</strong> {impact}
-                                </p>
-                            </div>
+                    ({ title, context, team, challenge, solution, impact }) => (
+                        <Card as="li" key={title} title={title}>
+                            <p>
+                                <strong>Business context:</strong> {context}
+                            </p>
+                            <p>
+                                <strong>Team:</strong> {team}
+                            </p>
+                            <p>
+                                <strong>Challenge:</strong> {challenge}
+                            </p>
+                            <p>
+                                <strong>Solution:</strong> {solution}
+                            </p>
+                            <p className={styles.impact}>
+                                <strong>Impact:</strong> {impact}
+                            </p>
                         </Card>
                     ),
                 )}

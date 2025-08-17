@@ -16,7 +16,7 @@ export default function Insights({ articles }: { articles: Article[] }) {
     return (
         <Section
             id="insights"
-            heading="Recent work & insights"
+            heading="Recent articles"
             className={styles.insights}
         >
             <div className={styles.cards}>
