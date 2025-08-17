@@ -17,7 +17,6 @@ const PERSON = {
         addressLocality: "Glasgow",
         addressCountry: "GB",
     },
-    areaServed: ["United Kingdom", "Remote"],
     knowsAbout: [
         "frontend",
         "design systems",
