@@ -59,6 +59,7 @@ export default async function ArticlesPage() {
                             <Link
                                 key={`${year}-${slug}`}
                                 href={`/articles/${year}/${slug}`}
+                                className={styles.cardLink}
                             >
                                 <Card title={title} headingLevel="h2">
                                     <p>{summary}</p>
