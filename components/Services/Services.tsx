@@ -9,7 +9,11 @@ import styles from "./Services.module.scss";
 
 export default function Services() {
     return (
-        <Section id="services" heading="Signature services">
+        <Section
+            id="services"
+            heading="Signature services"
+            headingClassName={styles.heading}
+        >
             <div className={styles.cards}>
                 <Card
                     title="Design System Bootstrap"
