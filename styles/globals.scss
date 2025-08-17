@@ -20,6 +20,7 @@
 
     html {
         scroll-behavior: smooth;
+        scroll-padding-block-start: var(--header-offset, 0);
         scrollbar-width: thin;
         scrollbar-color: var(--colour-primary) var(--surface-level-1);
         accent-color: var(--colour-primary);
