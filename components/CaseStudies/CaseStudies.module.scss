@@ -33,7 +33,7 @@
     }
 
     .media {
-        flex: 0 0 calc(var(--space-3xl) * 2);
+        flex: 0 0 calc(var(--space-3xl) * 1.5);
     }
 
     .visual {
@@ -84,7 +84,8 @@
 
         .media {
             flex-basis: auto;
-            width: 100%;
+            width: min(100%, calc(var(--space-3xl) * 4));
+            margin-inline: auto;
         }
     }
 }
