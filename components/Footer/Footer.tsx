@@ -29,6 +29,7 @@ export default function Footer() {
                         <a
                             href="https://linkedin.com/in/brettdorrans"
                             rel="noopener noreferrer"
+                            target="_blank"
                         >
                             LinkedIn
                         </a>
@@ -37,6 +38,7 @@ export default function Footer() {
                         <a
                             href="https://github.com/bylapidist"
                             rel="noopener noreferrer"
+                            target="_blank"
                         >
                             GitHub
                         </a>

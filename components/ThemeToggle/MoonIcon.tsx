@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 export default function MoonIcon(props: SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-            <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z" />
+            <path d="M12 22a10 10 0 0 0 9.94-9.06A8 8 0 1 1 12 2a10 10 0 0 0 0 20z" />
         </svg>
     );
 }

@@ -1,5 +1,4 @@
 import Approach from "@/components/Approach/Approach";
-import CaseStudies from "@/components/CaseStudies/CaseStudies";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
@@ -33,7 +32,6 @@ export default async function Page() {
             <Approach />
             <Pledge />
             <Services />
-            <CaseStudies />
             <Testimonials />
             <Insights articles={articles} />
             <Contact />

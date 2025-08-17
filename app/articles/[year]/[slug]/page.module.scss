@@ -1,7 +1,7 @@
 @layer components {
     .article {
         display: grid;
-        gap: var(--space-l);
+        gap: var(--space-sm);
     }
 
     .summary {
@@ -11,16 +11,15 @@
 
     .meta {
         color: var(--colour-text-subtle);
-        font-size: var(--typography-size-300);
+        font-size: var(--typography-size-100);
     }
 
     .article :global(blockquote) {
         margin: 0;
         padding: var(--space-m) var(--space-l);
-        border-inline-start: 4px solid var(--colour-primary);
+        border: 4px solid var(--colour-text-subtle);
         background: var(--surface-level-1);
         border-radius: var(--radius-m);
-        font-style: italic;
     }
 
     .article :global(blockquote p) {
@@ -28,21 +27,11 @@
     }
 
     .article :global(.footnotes) {
-        border-top: 1px solid var(--colour-border);
-        font-size: var(--typography-size-300);
+        font-size: var(--typography-size-100);
         margin-top: var(--space-xl);
         padding-top: var(--space-m);
         display: grid;
         gap: var(--space-s);
-    }
-
-    .article :global(.footnotes > hr) {
-        display: none;
-    }
-
-    .article :global(.footnotes)::before {
-        content: "References";
-        font-weight: bold;
     }
 
     .article :global(.footnotes ol) {
