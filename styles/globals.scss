@@ -31,6 +31,15 @@
         transition:
             background var(--motion-dur-200) var(--motion-ease-standard),
             color var(--motion-dur-200) var(--motion-ease-standard);
+        display: flex;
+        flex-direction: column;
+        min-block-size: 100vh;
+    }
+
+    main {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     @supports (font-size: clamp(1rem, 1vw, 2rem)) {

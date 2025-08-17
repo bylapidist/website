@@ -57,6 +57,7 @@
     gap: var(--space-s);
     justify-content: center;
     margin-block-start: var(--space-2xl);
+    text-align: center;
 }
 
 @mixin centered-column {

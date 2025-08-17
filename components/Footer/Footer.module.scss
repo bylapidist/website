@@ -4,6 +4,7 @@
     .footer {
         @include centered-column;
 
+        margin-block-start: auto;
         padding-block: var(--space-xl);
         border-block-start: 1px solid var(--colour-border);
         font-size: var(--typography-size-100);

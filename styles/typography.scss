@@ -9,6 +9,7 @@
     line-height: var(--typography-line-normal);
     max-inline-size: var(--typography-measure);
     text-wrap: pretty;
+    overflow-wrap: anywhere;
 }
 
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote)
