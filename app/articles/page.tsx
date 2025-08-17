@@ -39,7 +39,7 @@ export default async function ArticlesPage() {
                 heading={
                     <>
                         <span>Articles</span>
-                        <Link href="/rss.xml">RSS feed</Link>
+                        <a href="/rss.xml">RSS feed</a>
                     </>
                 }
                 headingClassName={styles.heading}

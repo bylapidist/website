@@ -75,7 +75,8 @@
 
     :where(a:not([class])) {
         color: var(--colour-primary);
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: currentcolor;
         transition:
             color var(--motion-dur-200) var(--motion-ease-standard),
             text-decoration-color var(--motion-dur-200)
