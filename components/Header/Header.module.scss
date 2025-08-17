@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 @layer components {
     .header {
         position: sticky;
@@ -12,9 +14,8 @@
     }
 
     .inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-between;
+
         padding-block: var(--space-m);
         transition: padding var(--motion-dur-200) var(--motion-ease-standard);
     }

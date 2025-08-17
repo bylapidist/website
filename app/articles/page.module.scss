@@ -2,9 +2,7 @@
 
 @layer components {
     .heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-between;
     }
 
     .heading a {
