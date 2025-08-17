@@ -52,7 +52,8 @@ export async function getArticle(year: string, slug: string) {
             const id = slugger.slug(text);
             headings.push({ id, text, level: node.depth });
             const data = node.data || (node.data = {});
-            const props = (data.hProperties as { id?: string } | undefined) || {};
+            const props =
+                (data.hProperties as { id?: string } | undefined) || {};
             props.id = id;
             data.hProperties = props;
         });
