@@ -14,6 +14,19 @@
         font-size: var(--typography-size-300);
     }
 
+    .article :global(blockquote) {
+        margin: 0;
+        padding: var(--space-m) var(--space-l);
+        border-inline-start: 4px solid var(--colour-primary);
+        background: var(--surface-level-1);
+        border-radius: var(--radius-m);
+        font-style: italic;
+    }
+
+    .article :global(blockquote p) {
+        margin: 0;
+    }
+
     .article :global(.footnotes) {
         border-top: 1px solid var(--colour-border);
         font-size: var(--typography-size-300);
