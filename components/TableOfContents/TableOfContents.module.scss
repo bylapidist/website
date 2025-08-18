@@ -1,51 +1,49 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .toc {
-        max-width: calc(var(--typography-measure) / 2);
-        padding: var(--space-m);
-        border: 1px solid var(--colour-border);
-        border-radius: var(--radius-m);
-        background: var(--surface-level-1);
-        margin-block: var(--space-xl);
-    }
+.toc {
+    max-width: calc(var(--typography-measure) / 2);
+    padding: var(--space-m);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius-m);
+    background: var(--surface-level-1);
+    margin-block: var(--space-xl);
+}
 
-    .list {
-        margin: 0;
+.list {
+    margin: 0;
 
-        @include grid-stack(var(--space-xs));
+    @include grid-stack(var(--space-xs));
 
-        font-size: var(--typography-size-100);
-    }
+    font-size: var(--typography-size-100);
+}
 
-    .item[data-level="3"] {
-        margin-inline-start: var(--space-m);
-    }
+.item[data-level="3"] {
+    margin-inline-start: var(--space-m);
+}
 
-    .item[data-level="4"] {
-        margin-inline-start: calc(var(--space-m) * 2);
-    }
+.item[data-level="4"] {
+    margin-inline-start: calc(var(--space-m) * 2);
+}
 
-    .item[data-level="5"] {
-        margin-inline-start: calc(var(--space-m) * 3);
-    }
+.item[data-level="5"] {
+    margin-inline-start: calc(var(--space-m) * 3);
+}
 
-    .item[data-level="6"] {
-        margin-inline-start: calc(var(--space-m) * 4);
-    }
+.item[data-level="6"] {
+    margin-inline-start: calc(var(--space-m) * 4);
+}
 
-    .link {
-        text-decoration: none;
-        color: var(--colour-text);
-    }
+.link {
+    text-decoration: none;
+    color: var(--colour-text);
+}
 
-    .link:focus-visible {
+.link:focus-visible {
+    text-decoration: underline;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .link:hover {
         text-decoration: underline;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .link:hover {
-            text-decoration: underline;
-        }
     }
 }

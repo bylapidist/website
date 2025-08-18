@@ -1,0 +1,19 @@
+/* Global reset styles */
+
+/* Box sizing, font smoothing, and base font settings */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    font-variation-settings:
+        "opsz" var(--typography-font-opsz),
+        "slnt" var(--typography-font-slnt);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,18 +1,16 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
+.heading {
+    text-align: center;
+    font-size: var(--typography-size-500);
+}
+
+@container (min-width:40rem) {
     .heading {
-        text-align: center;
-        font-size: var(--typography-size-500);
+        font-size: var(--typography-size-600);
     }
+}
 
-    @container (min-width:40rem) {
-        .heading {
-            font-size: var(--typography-size-600);
-        }
-    }
-
-    .ctaGroup {
-        @include cta-group;
-    }
+.ctaGroup {
+    @include cta-group;
 }
