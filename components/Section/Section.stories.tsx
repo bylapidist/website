@@ -87,6 +87,6 @@ export const WithoutHeading: Story = {
     args: { heading: undefined },
 };
 
-export const ContentVisibilityOff: Story = {
-    args: { contentVisibility: false },
+export const ContentVisibilityOn: Story = {
+    args: { contentVisibility: true },
 };

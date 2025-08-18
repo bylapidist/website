@@ -10,6 +10,10 @@ interface Props {
     className?: string;
     containerSize?: "s" | "m" | "l";
     style?: CSSProperties;
+    /**
+     * Enables `content-visibility: auto` for this section.
+     * Disabled by default due to Safari animation issues.
+     */
     contentVisibility?: boolean;
     children: ReactNode;
 }
@@ -23,7 +27,7 @@ export default function Section({
     className,
     containerSize,
     style,
-    contentVisibility = true,
+    contentVisibility = false,
     children,
 }: Props) {
     const sectionStyle = contentVisibility
