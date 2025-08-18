@@ -10,6 +10,8 @@ import { formatDate } from "@/lib/date";
 import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
     const articles = await getAllArticles();
     return articles.map(({ year, slug }) => ({ year, slug }));

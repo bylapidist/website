@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { getAllArticles, getArticle } from "@/lib/articles";
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
 export const size = { width: 1600, height: 900 };
 export const contentType = "image/png";
 
