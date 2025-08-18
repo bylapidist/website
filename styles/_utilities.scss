@@ -1,0 +1,7 @@
+@layer utilities {
+    :target {
+        outline: var(--border-focus-ring);
+        outline-offset: var(--space-focus-ring-offset);
+        background: var(--surface-level-0);
+    }
+}

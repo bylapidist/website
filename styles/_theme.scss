@@ -1,0 +1,177 @@
+@layer theme {
+    @media (prefers-color-scheme: dark) {
+        :root:not(.light) {
+            --surface-level-0: #090909;
+            --surface-level-1: #1a1a1a;
+            --surface-level-2: #222222;
+            --colour-text: #f5f5f5;
+            --colour-text-subtle: #b3b3b3;
+            --colour-border: #333333;
+            --colour-muted: #2a2a2a;
+            --surface-level-1-hover: color-mix(
+                in srgb,
+                var(--surface-level-1) 90%,
+                var(--colour-text) 10%
+            );
+            --surface-level-1-active: color-mix(
+                in srgb,
+                var(--surface-level-1) 80%,
+                var(--colour-text) 20%
+            );
+            --colour-primary: #b0a3ff;
+            --colour-on-primary: #000000;
+            --colour-primary-hover: color-mix(
+                in srgb,
+                var(--colour-primary) 90%,
+                var(--colour-on-primary) 10%
+            );
+            --colour-primary-active: color-mix(
+                in srgb,
+                var(--colour-primary) 80%,
+                var(--colour-on-primary) 20%
+            );
+            --colour-success: #2fdd88;
+            --colour-warning: #ffcb33;
+            --colour-danger: #ff6b6b;
+        }
+
+        @supports (color: oklch(0 0 0)) {
+            :root:not(.light) {
+                --surface-level-0: oklch(12% 0 0deg);
+                --surface-level-1: oklch(30% 0 0deg);
+                --surface-level-2: oklch(35% 0 0deg);
+                --colour-text: oklch(97% 0 0deg);
+                --colour-text-subtle: oklch(75% 0 0deg);
+                --colour-border: oklch(42% 0 0deg);
+                --colour-muted: oklch(32% 0 0deg);
+                --surface-level-1-hover: color-mix(
+                    in oklch,
+                    var(--surface-level-1) 90%,
+                    var(--colour-text) 10%
+                );
+                --surface-level-1-active: color-mix(
+                    in oklch,
+                    var(--surface-level-1) 80%,
+                    var(--colour-text) 20%
+                );
+                --colour-primary: oklch(75% 0.15 269deg);
+                --colour-on-primary: oklch(0% 0 0deg);
+                --colour-primary-hover: color-mix(
+                    in oklch,
+                    var(--colour-primary) 90%,
+                    var(--colour-on-primary) 10%
+                );
+                --colour-primary-active: color-mix(
+                    in oklch,
+                    var(--colour-primary) 80%,
+                    var(--colour-on-primary) 20%
+                );
+                --colour-success: oklch(82% 0.12 154deg);
+                --colour-warning: oklch(88% 0.14 90deg);
+                --colour-danger: oklch(72% 0.14 27deg);
+            }
+        }
+    }
+
+    :root.dark {
+        --surface-level-0: #090909;
+        --surface-level-1: #1a1a1a;
+        --surface-level-2: #222222;
+        --colour-text: #f5f5f5;
+        --colour-text-subtle: #b3b3b3;
+        --colour-border: #333333;
+        --colour-muted: #2a2a2a;
+        --surface-level-1-hover: color-mix(
+            in srgb,
+            var(--surface-level-1) 90%,
+            var(--colour-text) 10%
+        );
+        --surface-level-1-active: color-mix(
+            in srgb,
+            var(--surface-level-1) 80%,
+            var(--colour-text) 20%
+        );
+        --colour-primary: #b0a3ff;
+        --colour-on-primary: #000000;
+        --colour-primary-hover: color-mix(
+            in srgb,
+            var(--colour-primary) 90%,
+            var(--colour-on-primary) 10%
+        );
+        --colour-primary-active: color-mix(
+            in srgb,
+            var(--colour-primary) 80%,
+            var(--colour-on-primary) 20%
+        );
+        --colour-success: #2fdd88;
+        --colour-warning: #ffcb33;
+        --colour-danger: #ff6b6b;
+    }
+
+    @supports (color: oklch(0 0 0)) {
+        :root.dark {
+            --surface-level-0: oklch(12% 0 0deg);
+            --surface-level-1: oklch(30% 0 0deg);
+            --surface-level-2: oklch(35% 0 0deg);
+            --colour-text: oklch(97% 0 0deg);
+            --colour-text-subtle: oklch(75% 0 0deg);
+            --colour-border: oklch(42% 0 0deg);
+            --colour-muted: oklch(32% 0 0deg);
+            --surface-level-1-hover: color-mix(
+                in oklch,
+                var(--surface-level-1) 90%,
+                var(--colour-text) 10%
+            );
+            --surface-level-1-active: color-mix(
+                in oklch,
+                var(--surface-level-1) 80%,
+                var(--colour-text) 20%
+            );
+            --colour-primary: oklch(75% 0.15 269deg);
+            --colour-on-primary: oklch(0% 0 0deg);
+            --colour-primary-hover: color-mix(
+                in oklch,
+                var(--colour-primary) 90%,
+                var(--colour-on-primary) 10%
+            );
+            --colour-primary-active: color-mix(
+                in oklch,
+                var(--colour-primary) 80%,
+                var(--colour-on-primary) 20%
+            );
+            --colour-success: oklch(82% 0.12 154deg);
+            --colour-warning: oklch(88% 0.14 90deg);
+            --colour-danger: oklch(72% 0.14 27deg);
+        }
+    }
+
+    @media (prefers-contrast: more) {
+        @media (prefers-color-scheme: dark) {
+            :root:not(.light) {
+                --surface-level-0: #000000;
+                --surface-level-1: #000000;
+                --colour-primary: #ffff00;
+                --colour-on-primary: #000000;
+                --colour-border: #ffffff;
+                --colour-text-subtle: #ffffff;
+                --surface-level-1-hover: #1a1a1a;
+                --surface-level-1-active: #333333;
+                --colour-primary-hover: #ffff66;
+                --colour-primary-active: #ffff00;
+            }
+        }
+
+        :root.dark {
+            --surface-level-0: #000000;
+            --surface-level-1: #000000;
+            --colour-primary: #ffff00;
+            --colour-on-primary: #000000;
+            --colour-border: #ffffff;
+            --colour-text-subtle: #ffffff;
+            --surface-level-1-hover: #1a1a1a;
+            --surface-level-1-active: #333333;
+            --colour-primary-hover: #ffff66;
+            --colour-primary-active: #ffff00;
+        }
+    }
+}

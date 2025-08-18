@@ -1,26 +1,24 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .insights > div {
-        @include centered-column;
-    }
+.insights > div {
+    @include centered-column;
+}
 
+.cards {
+    @include card-grid();
+}
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cta {
+    @include cta-group;
+}
+
+@container (min-width:50rem) {
     .cards {
-        @include card-grid();
-    }
-
-    .cardLink {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .cta {
-        @include cta-group;
-    }
-
-    @container (min-width:50rem) {
-        .cards {
-            grid-template-columns: repeat(1, 1fr);
-        }
+        grid-template-columns: repeat(1, 1fr);
     }
 }

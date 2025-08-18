@@ -1,84 +1,82 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .header {
-        position: sticky;
-        inset-block-start: 0;
-        background: transparent;
-        border-block-end: 1px solid transparent;
-        z-index: var(--z-2);
-        transition:
-            background var(--motion-dur-200) var(--motion-ease-standard),
-            box-shadow var(--motion-dur-200) var(--motion-ease-standard);
-        will-change: background, box-shadow;
-    }
+.header {
+    position: sticky;
+    inset-block-start: 0;
+    background: transparent;
+    border-block-end: 1px solid transparent;
+    z-index: var(--z-2);
+    transition:
+        background var(--motion-dur-200) var(--motion-ease-standard),
+        box-shadow var(--motion-dur-200) var(--motion-ease-standard);
+    will-change: background, box-shadow;
+}
 
-    .inner {
-        @include flex-between;
+.inner {
+    @include flex-between;
 
-        padding-block: var(--space-m);
-        transition: padding var(--motion-dur-200) var(--motion-ease-standard);
-    }
+    padding-block: var(--space-m);
+    transition: padding var(--motion-dur-200) var(--motion-ease-standard);
+}
 
-    .header[data-scrolled] {
-        background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);
-        backdrop-filter: blur(8px);
-        border-block-end-color: var(--colour-border);
-        box-shadow: var(--shadow-elev-3);
-    }
+.header[data-scrolled] {
+    background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);
+    backdrop-filter: blur(8px);
+    border-block-end-color: var(--colour-border);
+    box-shadow: var(--shadow-elev-3);
+}
 
-    .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-s);
-        text-decoration: none;
-        color: var(--colour-text);
-        font-size: var(--typography-size-200);
-        font-weight: 400;
-        font-family: var(--font-header), sans-serif;
-        transition: color var(--motion-dur-200) var(--motion-ease-standard);
-    }
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-s);
+    text-decoration: none;
+    color: var(--colour-text);
+    font-size: var(--typography-size-200);
+    font-weight: 400;
+    font-family: var(--font-header), sans-serif;
+    transition: color var(--motion-dur-200) var(--motion-ease-standard);
+}
 
-    .logoBlue {
-        fill: var(--colour-logo-blue);
-    }
+.logoBlue {
+    fill: var(--colour-logo-blue);
+}
 
-    .logoGreen {
-        fill: var(--colour-logo-green);
-    }
+.logoGreen {
+    fill: var(--colour-logo-green);
+}
 
-    .logoYellow {
-        fill: var(--colour-logo-yellow);
-    }
+.logoYellow {
+    fill: var(--colour-logo-yellow);
+}
 
-    .logoLockup {
-        display: flex;
-        flex-direction: column;
+.logoLockup {
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+
+    span {
         font-family: inherit;
-
-        span {
-            font-family: inherit;
-            line-height: var(--typography-line-tighter);
-        }
+        line-height: var(--typography-line-tighter);
     }
+}
 
-    .logoMark {
-        inline-size: 3ch;
-        fill: currentcolor;
-        transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+.logoMark {
+    inline-size: 3ch;
+    fill: currentcolor;
+    transition: transform var(--motion-dur-200) var(--motion-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logo:hover,
+    .logo:focus-visible {
+        color: var(--colour-primary);
     }
+}
 
-    @media (hover: hover) and (pointer: fine) {
-        .logo:hover,
-        .logo:focus-visible {
-            color: var(--colour-primary);
-        }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-        .logo:hover .logoMark,
-        .logo:focus-visible .logoMark {
-            transform: rotate(-3deg) scale(1.05);
-        }
+@media (prefers-reduced-motion: no-preference) {
+    .logo:hover .logoMark,
+    .logo:focus-visible .logoMark {
+        transform: rotate(-3deg) scale(1.05);
     }
 }
