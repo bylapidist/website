@@ -11,8 +11,8 @@ export default function Testimonials() {
             <div className={styles.cards}>
                 <figure className={styles.card}>
                     <blockquote>
-                        “Brett is as rock solid as they get. He’s a standout
-                        professional whose multidimensional skills and
+                        “Brett is as rock solid as they get. He&apos;s a
+                        standout professional whose multidimensional skills and
                         leadership make him an asset to any team.”
                     </blockquote>
                     <figcaption>
