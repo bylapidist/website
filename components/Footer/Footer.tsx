@@ -12,10 +12,15 @@ export default function Footer() {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/#services">Services</Link>
+                            <Link href="/articles">Articles</Link>
                         </li>
                         <li>
-                            <Link href="/#contact">Contact</Link>
+                            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                            <a href="/#services">Services</a>
+                        </li>
+                        <li>
+                            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                            <a href="/#contact">Contact</a>
                         </li>
                         <li>
                             <Link href="/accessibility-statement">
