@@ -100,18 +100,6 @@ export default function RootLayout({
                     name="apple-mobile-web-app-title"
                     content={METADATA.brand}
                 />
-                <meta name="color-scheme" content="light dark" />
-                <meta
-                    name="theme-color"
-                    media="(prefers-color-scheme: light)"
-                    content={METADATA.theme.light}
-                />
-                <meta
-                    name="theme-color"
-                    media="(prefers-color-scheme: dark)"
-                    content={METADATA.theme.dark}
-                />
-                <meta name="description" content={METADATA.description} />
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
