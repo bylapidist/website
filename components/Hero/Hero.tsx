@@ -15,7 +15,6 @@ export default function Hero() {
             className={styles.hero}
             labelledBy="hero-heading"
             containerSize="l"
-            contentVisibility={false}
         >
             <div className={styles.availability}>
                 <p>
