@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Approach from "@/components/Approach/Approach";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
@@ -20,12 +21,13 @@ export default async function Page() {
     const structuredData = buildHomePageStructuredData(datePublished);
     return (
         <>
-            <script
+            <Script
+                id="structured-data"
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(structuredData),
-                }}
-            />
+                strategy="beforeInteractive"
+            >
+                {JSON.stringify(structuredData)}
+            </Script>
             <Hero />
             <TrustedBy />
             <WhatIBring />
