@@ -12,11 +12,15 @@
     --colour-text-subtle: #555555;
     --colour-border: #d0d0d0;
     --colour-muted: #e5e5e5;
+    --surface-level-1-hover: #dedede;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --surface-level-1-hover: color-mix(
         in srgb,
         var(--surface-level-1) 90%,
         var(--colour-text) 10%
     );
+    --surface-level-1-active: #c7c7c7;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --surface-level-1-active: color-mix(
         in srgb,
         var(--surface-level-1) 80%,
@@ -26,11 +30,15 @@
     /* brand */
     --colour-primary: #4b6be8;
     --colour-on-primary: #ffffff;
+    --colour-primary-hover: #5d7aea;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --colour-primary-hover: color-mix(
         in srgb,
         var(--colour-primary) 90%,
         var(--colour-on-primary) 10%
     );
+    --colour-primary-active: #6f89ed;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --colour-primary-active: color-mix(
         in srgb,
         var(--colour-primary) 80%,
@@ -237,11 +245,15 @@
     --colour-text-subtle: #b3b3b3;
     --colour-border: #333333;
     --colour-muted: #2a2a2a;
+    --surface-level-1-hover: #303030;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --surface-level-1-hover: color-mix(
         in srgb,
         var(--surface-level-1) 90%,
         var(--colour-text) 10%
     );
+    --surface-level-1-active: #464646;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --surface-level-1-active: color-mix(
         in srgb,
         var(--surface-level-1) 80%,
@@ -249,11 +261,15 @@
     );
     --colour-primary: #b0a3ff;
     --colour-on-primary: #000000;
+    --colour-primary-hover: #9e93e6;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --colour-primary-hover: color-mix(
         in srgb,
         var(--colour-primary) 90%,
         var(--colour-on-primary) 10%
     );
+    --colour-primary-active: #8d82cc;
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
     --colour-primary-active: color-mix(
         in srgb,
         var(--colour-primary) 80%,

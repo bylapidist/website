@@ -21,6 +21,7 @@
     }
 
     .header[data-scrolled] {
+        background: var(--surface-level-0);
         background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);
         backdrop-filter: blur(8px);
         border-block-end-color: var(--colour-border);
