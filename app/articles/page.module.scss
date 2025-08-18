@@ -1,26 +1,24 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .heading {
-        @include flex-between;
-    }
+.heading {
+    @include flex-between;
+}
 
-    .heading a {
-        font-size: var(--typography-size-200);
-    }
+.heading a {
+    font-size: var(--typography-size-200);
+}
 
+.cards {
+    @include card-grid();
+}
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+@container (min-width:50rem) {
     .cards {
-        @include card-grid();
-    }
-
-    .cardLink {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    @container (min-width:50rem) {
-        .cards {
-            grid-template-columns: repeat(1, 1fr);
-        }
+        grid-template-columns: repeat(1, 1fr);
     }
 }

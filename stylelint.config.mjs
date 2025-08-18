@@ -14,6 +14,7 @@ export default {
             true,
             { ignorePseudoClasses: ["global", "export"] },
         ],
+        "import-notation": "string",
     },
     overrides: [
         {
