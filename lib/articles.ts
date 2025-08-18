@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { cache } from "react";
 import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
 import type { Heading as MdastHeading, Root } from "mdast";
@@ -30,7 +31,7 @@ type ArticleMeta = {
 
 export type Heading = { id: string; text: string; level: number };
 
-export async function getArticle(year: string, slug: string) {
+export const getArticle = cache(async (year: string, slug: string) => {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);
     const source = await fs.promises.readFile(filePath, "utf8");
     const { data, content } = matter(source);
@@ -77,9 +78,9 @@ export async function getArticle(year: string, slug: string) {
         author: (data.author ?? {}) as { name?: string; url?: string },
     };
     return { meta, content: MDXContent, wordCount, headings };
-}
+});
 
-export async function getAllArticles(): Promise<ArticleMeta[]> {
+export const getAllArticles = cache(async (): Promise<ArticleMeta[]> => {
     const years = await fs.promises.readdir(ARTICLES_PATH);
     const articles: ArticleMeta[] = [];
     for (const year of years) {
@@ -119,4 +120,4 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
     return articles.sort(
         (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
-}
+});
