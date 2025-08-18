@@ -57,3 +57,13 @@ jobs:
                   token: ${{ secrets.GH_TOKEN }}
                   branch: gh-pages
                   folder: out
+                  clean: true
+
+            - name: Deploy Storybook
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+                  repository-name: bylapidist/website-storybook
+                  branch: gh-pages
+                  folder: storybook-static
+                  clean: true
