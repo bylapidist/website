@@ -1,94 +1,92 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .button {
-        @include inline-center;
+.button {
+    @include inline-center;
 
-        border: 1px solid transparent;
-        cursor: pointer;
-        font: inherit;
-        font-family: var(--font-header), sans-serif;
-        font-weight: 600;
-        text-decoration: none;
-        padding-block: var(--space-s);
-        padding-inline: var(--space-m);
-        border-radius: var(--radius-m);
-        min-block-size: var(--size-tap-min);
-        box-shadow: var(--shadow-elev-1);
-        will-change: box-shadow, transform, background;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font: inherit;
+    font-family: var(--font-header), sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding-block: var(--space-s);
+    padding-inline: var(--space-m);
+    border-radius: var(--radius-m);
+    min-block-size: var(--size-tap-min);
+    box-shadow: var(--shadow-elev-1);
+    will-change: box-shadow, transform, background;
+}
+
+.button[data-size="lg"] {
+    padding-block: var(--space-m);
+    padding-inline: var(--space-l);
+    font-size: var(--typography-size-200);
+}
+
+.button[data-variant="primary"] {
+    background: var(--colour-primary);
+    color: var(--colour-on-primary);
+}
+
+.button[data-variant="secondary"] {
+    background: transparent;
+    color: var(--colour-primary);
+    border-color: var(--colour-primary);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button:not(:disabled):focus-visible {
+    box-shadow: var(--shadow-elev-2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button:not(:disabled) {
+        transition:
+            background var(--motion-dur-200) var(--motion-ease-standard),
+            box-shadow var(--motion-dur-200) var(--motion-ease-standard),
+            transform var(--motion-dur-120) var(--motion-ease-emphasized);
     }
 
-    .button[data-size="lg"] {
-        padding-block: var(--space-m);
-        padding-inline: var(--space-l);
-        font-size: var(--typography-size-200);
+    .button:not(:disabled):hover {
+        box-shadow: var(--shadow-elev-2);
+        transform: translateY(-1px);
     }
 
-    .button[data-variant="primary"] {
-        background: var(--colour-primary);
+    .button:not(:disabled)[data-variant="primary"]:hover {
+        background: var(--colour-primary-hover);
         color: var(--colour-on-primary);
     }
 
-    .button[data-variant="secondary"] {
-        background: transparent;
-        color: var(--colour-primary);
-        border-color: var(--colour-primary);
+    .button:not(:disabled)[data-variant="secondary"]:hover {
+        background: var(--colour-primary-hover);
+        color: var(--colour-on-primary);
     }
 
-    .button:disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
+    .button:not(:disabled)[data-variant="primary"]:active {
+        background: var(--colour-primary-active);
     }
 
-    .button:not(:disabled):focus-visible {
-        box-shadow: var(--shadow-elev-2);
+    .button:not(:disabled)[data-variant="secondary"]:active {
+        background: var(--colour-primary-active);
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        .button:not(:disabled) {
-            transition:
-                background var(--motion-dur-200) var(--motion-ease-standard),
-                box-shadow var(--motion-dur-200) var(--motion-ease-standard),
-                transform var(--motion-dur-120) var(--motion-ease-emphasized);
-        }
+    .button:not(:disabled):active {
+        box-shadow: var(--shadow-elev-3);
+        transform: translateY(1px);
+    }
+}
 
-        .button:not(:disabled):hover {
-            box-shadow: var(--shadow-elev-2);
-            transform: translateY(-1px);
-        }
-
-        .button:not(:disabled)[data-variant="primary"]:hover {
-            background: var(--colour-primary-hover);
-            color: var(--colour-on-primary);
-        }
-
-        .button:not(:disabled)[data-variant="secondary"]:hover {
-            background: var(--colour-primary-hover);
-            color: var(--colour-on-primary);
-        }
-
-        .button:not(:disabled)[data-variant="primary"]:active {
-            background: var(--colour-primary-active);
-        }
-
-        .button:not(:disabled)[data-variant="secondary"]:active {
-            background: var(--colour-primary-active);
-        }
-
-        .button:not(:disabled):active {
-            box-shadow: var(--shadow-elev-3);
-            transform: translateY(1px);
-        }
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+        transform: none;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-        .button {
-            transition: none;
-            transform: none;
-        }
-
-        .button:not(:disabled):hover {
-            transform: none;
-        }
+    .button:not(:disabled):hover {
+        transform: none;
     }
 }

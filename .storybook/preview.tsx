@@ -1,8 +1,6 @@
 import { Decorator, Preview } from "@storybook/nextjs";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
-import "../styles/tokens.scss";
 import "../styles/globals.scss";
-import "../styles/typography.scss";
 
 const header = Lexend_Deca({
     subsets: ["latin"],

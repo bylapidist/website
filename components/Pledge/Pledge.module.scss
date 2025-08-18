@@ -1,9 +1,7 @@
 @use "../../styles/mixins" as *;
 
-@layer components {
-    .checklist {
-        @include checklist;
+.checklist {
+    @include checklist;
 
-        padding-block-start: var(--space-m);
-    }
+    padding-block-start: var(--space-m);
 }

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
-import "@/styles/index.scss";
+import "@/styles/globals.scss";
 import Header from "@/components/Header/Header";
 import styles from "./layout.module.scss";
 
