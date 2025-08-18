@@ -128,18 +128,64 @@ export default function RootLayout({
                         <radialGradient id="b" cx="20%" cy="25%" r="60%">
                             <stop
                                 offset="0%"
-                                style={{ stopColor: "var(--colour-primary)" }}
+                                stopColor="var(--colour-primary)"
                                 stopOpacity=".25"
                             />
                             <stop
                                 offset="100%"
-                                style={{ stopColor: "var(--colour-primary)" }}
+                                stopColor="var(--colour-primary)"
+                                stopOpacity="0"
+                            />
+                        </radialGradient>
+                        <radialGradient id="c" cx="80%" cy="75%" r="60%">
+                            <stop
+                                offset="0%"
+                                stopColor="var(--colour-primary)"
+                                stopOpacity=".25"
+                            />
+                            <stop
+                                offset="100%"
+                                stopColor="var(--colour-primary)"
                                 stopOpacity="0"
                             />
                         </radialGradient>
                         <radialGradient id="a" cx="50%" cy="45%" r="42%">
                             <stop offset="0%" stopColor="#fff" />
                             <stop offset="100%" />
+                        </radialGradient>
+                        <radialGradient id="g" cx="50%" cy="50%" r="50%">
+                            <stop
+                                offset="0%"
+                                stopColor="var(--colour-primary)"
+                            />
+                            <stop
+                                offset="100%"
+                                stopColor="var(--colour-primary)"
+                                stopOpacity="0"
+                            />
+                        </radialGradient>
+                        <radialGradient id="h" cx="50%" cy="50%" r="50%">
+                            <stop
+                                offset="0%"
+                                stopColor="var(--colour-primary)"
+                            />
+                            <stop
+                                offset="100%"
+                                stopColor="var(--colour-primary)"
+                                stopOpacity="0"
+                            />
+                        </radialGradient>
+                        <radialGradient id="j" cx="50%" cy="50%" r="75%">
+                            <stop
+                                offset="0%"
+                                stopColor="var(--surface-level-0)"
+                                stopOpacity="0"
+                            />
+                            <stop
+                                offset="100%"
+                                stopColor="var(--surface-level-0)"
+                                stopOpacity=".5"
+                            />
                         </radialGradient>
                         <filter
                             id="i"
@@ -177,13 +223,13 @@ export default function RootLayout({
                         >
                             <path
                                 fill="none"
-                                style={{ stroke: "var(--colour-border)" }}
+                                stroke="var(--colour-border)"
                                 strokeOpacity=".25"
                                 d="M64 0H0v64"
                             />
                             <path
                                 fill="none"
-                                style={{ stroke: "var(--colour-border)" }}
+                                stroke="var(--colour-border)"
                                 strokeOpacity=".15"
                                 d="M32 0v64M0 32h64"
                             />
@@ -195,7 +241,7 @@ export default function RootLayout({
                     <rect
                         width="100%"
                         height="100%"
-                        style={{ fill: "var(--surface-level-0)" }}
+                        fill="var(--surface-level-0)"
                     />
                     <rect width="100%" height="100%" fill="url(#b)" />
                     <rect width="100%" height="100%" fill="url(#c)" />
