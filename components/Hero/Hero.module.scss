@@ -28,7 +28,7 @@
     }
 
     .heroIntro {
-        max-inline-size: 45ch;
+        max-inline-size: var(--typography-measure);
         text-wrap: balance;
         hyphens: auto;
         font-size: var(--typography-size-300);
