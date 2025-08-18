@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
@@ -29,12 +30,13 @@ export default async function ArticlePage({
     );
     return (
         <>
-            <script
+            <Script
+                id="structured-data"
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(structuredData),
-                }}
-            />
+                strategy="beforeInteractive"
+            >
+                {JSON.stringify(structuredData)}
+            </Script>
             <Section heading={meta.title} headingLevel={1}>
                 <article className={styles.article}>
                     {meta.summary && (
