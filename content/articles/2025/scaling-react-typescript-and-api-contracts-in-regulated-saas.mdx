@@ -80,6 +80,18 @@ Architecting a frontend platform with all these layers of discipline might seem 
 
 In sum, the investment in a scalable frontend platform yields dividends in compliance assurance, faster delivery of features, easier onboarding, and less wasteful work.
 
+## Case Insights - Building a KYC/AML SaaS Frontend, Lessons from the Trenches
+
+Drawing from my experience building a greenfield KYC/AML SaaS platform's frontend, a few real-world insights illustrate how the principles above come together:
+
+- **Design System as a Compliance Enforcer**: A consent component logged every agreement with a version stamp and timestamp so auditors could trace exactly what a user saw and accepted. Centralising this in the design system meant no team could ship a flow without the required logging.
+- **Shared API Models Killed Entire Categories of Bugs**: By generating TypeScript types from a single OpenAPI source of truth, mismatched field names like `customerId` vs. `customer_id` simply couldn't compile, eliminating an entire class of integration defects.
+- **Onboarding via "Quality Gates Passport"**: New engineers completed a checklist that guided them through linting, Storybook, and accessibility tooling. This made platform conventions second nature and prevented accidental bypassing of established checks.
+- **Entity Filtering Hook in Context**: Refactoring a complex AML alert list into a `useAlertFilters` hook backed by context removed duplicated state logic and made adding new filters trivial.[^12]
+- **React Hook Form + Zod in Practice**: Multi-step onboarding forms used `react-hook-form` with Zod schemas to validate inputs like ID document numbers client-side and server-side, reducing support tickets from invalid submissions.[^9] [^14]
+
+In all these cases, a bit of upfront investment in shared logic or architecture paid off by simplifying future work and reducing errors. The insights may seem small in isolation, but together they demonstrate how disciplined frontend engineering directly supports compliance and developer velocity.
+
 ## Future Outlook - AI-Assisted Tooling and Agentic Workflows on the Horizon
 
 As we look forward, one exciting frontier for frontend platforms is the incorporation of AI-assisted tooling and "agentic" workflows. The idea is that many of the tasks we now handle through manual effort or static scripts could be offloaded to intelligent agents.
