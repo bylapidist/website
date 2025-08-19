@@ -256,7 +256,7 @@ export default function RootLayout({
                             cx="280"
                             cy="220"
                             fill="url(#g)"
-                            opacity=".9"
+                            opacity=".2"
                             rx="300"
                             ry="180"
                         />
@@ -264,7 +264,7 @@ export default function RootLayout({
                             cx="1640"
                             cy="900"
                             fill="url(#h)"
-                            opacity=".9"
+                            opacity=".2"
                             rx="360"
                             ry="220"
                         />
@@ -272,7 +272,7 @@ export default function RootLayout({
                             cx="1580"
                             cy="260"
                             fill="url(#g)"
-                            opacity=".7"
+                            opacity=".1"
                             rx="220"
                             ry="160"
                         />
@@ -280,7 +280,7 @@ export default function RootLayout({
                             cx="420"
                             cy="920"
                             fill="url(#h)"
-                            opacity=".6"
+                            opacity=".1"
                             rx="260"
                             ry="200"
                         />
