@@ -80,16 +80,23 @@ Architecting a frontend platform with all these layers of discipline might seem 
 
 In sum, the investment in a scalable frontend platform yields dividends in compliance assurance, faster delivery of features, easier onboarding, and less wasteful work.
 
+## Case Insights – Building a KYC/AML SaaS Frontend, Lessons from the Trenches
+
+Real-world projects tie these principles together:
+
+- **Design system as compliance enforcer.** Consent modals and disclaimer components logged versioned events so audits could trace exactly what users saw and agreed to.[^2]
+- **Shared API models killed entire categories of bugs.** Generating TypeScript types from OpenAPI meant mismatched fields like `customerId` versus `customer_id` never made it to production.[^7]
+- **Onboarding through a "quality-gates passport."** New engineers completed tasks that exercised linting, Storybook, and accessibility checks, so platform conventions became second nature.
+- **Entity filtering with context hooks.** A dashboard refactor moved scattered filter state into a single `useAlertFilters` context, avoiding duplicated query logic and making new filter types trivial to add.[^12]
+- **React Hook Form + Zod in practice.** Multi-step onboarding forms validated complex inputs on blur, reusing the same Zod schemas server-side for defence in depth.[^9][^14]
+
+These patterns turned architectural ideals into daily developer wins and audit-ready workflows.
+
 ## Future Outlook - AI-Assisted Tooling and Agentic Workflows on the Horizon
 
-As we look forward, one exciting frontier for frontend platforms is the incorporation of AI-assisted tooling and "agentic" workflows. The idea is that many of the tasks we now handle through manual effort or static scripts could be offloaded to intelligent agents.
+AI is creeping into the frontend toolchain. Code scanning services already flag dead code and unused dependencies for removal, eliminating stale clutter before humans notice.[^11] Newer agentic reviewers go further: they read pull requests, suggest refactors, and can even auto-fix common issues or open PRs themselves.[^16] These agents are starting to spot redundant components, design system drift, and unused CSS, nudging teams toward consistency. Accessibility and compliance checks will benefit too as bots simulate screen readers or keyboard-only flows.
 
-- Dead code elimination and unused dependencies are already targeted by tools.[^11]
-- AI-assisted code review is becoming mainstream.
-- Redundant components and inconsistent styling can be flagged automatically.
-- Accessibility and compliance reviews can extend beyond static rules, with AI simulating user flows.
-
-In my view, the arrival of AI tooling will further elevate the importance of a well-structured frontend platform. Good architecture makes AI more effective, and AI in turn helps maintain that good architecture.
+A well-structured, typed codebase makes these tools far more effective, creating a virtuous cycle where good architecture enables smarter AI, and AI helps maintain that architecture.
 
 ## Conclusion - A Pragmatic Blueprint for Frontend Platforms in 2025
 
@@ -136,3 +143,5 @@ Building a modern frontend platform is certainly a lot of work - but in today's 
 [^14]: How to Validate Forms with Zod and React-Hook-Form | FreeCodeCamp https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form/
 
 [^15]: How a Design System Saves Time and Money | by Liana Ghazaryan https://www.designsystemscollective.com/how-a-design-system-saves-time-and-money-fdef6280042e
+
+[^16]: AI Code Review and the Best AI Code Review Tools in 2025 - Qodo https://www.qodo.ai/blog/ai-code-review/
