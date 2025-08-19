@@ -37,6 +37,7 @@
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
         "clsx": "2.1.1",
+        "feed": "^4.2.2",
         "github-slugger": "^2.0.0",
         "gray-matter": "4.0.3",
         "mdast-util-to-string": "^4.0.0",
