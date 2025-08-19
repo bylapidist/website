@@ -153,6 +153,14 @@ details[open] summary::after {
     transform: rotate(90deg);
 }
 
+code {
+    background: var(--surface-level-2);
+    border: var(--border-width-l) solid var(--surface-level-2);
+    border-radius: var(--radius-s);
+    font-size: var(--typography-size-100);
+    white-space: nowrap;
+}
+
 @media (hover: hover) and (pointer: fine) {
     summary:hover {
         background: var(--surface-level-1-hover);
