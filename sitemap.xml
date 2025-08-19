@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://lapidist.net/</loc>
-<lastmod>2025-08-19T12:39:06.977Z</lastmod>
+<lastmod>2025-08-19T14:20:56.435Z</lastmod>
 </url>
 <url>
 <loc>https://lapidist.net/articles/</loc>
-<lastmod>2025-08-19T12:39:06.977Z</lastmod>
+<lastmod>2025-08-19T14:20:56.435Z</lastmod>
+</url>
+<url>
+<loc>https://lapidist.net/articles/2025/scaling-react-typescript-and-api-contracts-in-regulated-saas/</loc>
+<lastmod>2025-08-19T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://lapidist.net/articles/2025/what-recovering-from-a-stroke-at-34-taught-me/</loc>

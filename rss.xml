@@ -5,12 +5,19 @@
         <link>https://lapidist.net</link>
         <description>Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.</description>
         <language>en-GB</language>
-        <lastBuildDate>Sun, 17 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Aug 2025 00:00:00 GMT</lastBuildDate>
         <image>
             <url>https://lapidist.net/opengraph-image</url>
             <title>Brett Dorrans – Lead Frontend Engineer &amp; Design Systems Specialist</title>
             <link>https://lapidist.net</link>
         </image>
+        <item>
+            <title>Architecting a Modern Frontend Platform: Scaling React, TypeScript, and API Contracts in Regulated SaaS</title>
+            <description>Why frontend is the backbone of compliance, velocity, and resilience in regulated SaaS.</description>
+            <link>https://lapidist.net/articles/2025/scaling-react-typescript-and-api-contracts-in-regulated-saas/</link>
+            <guid>https://lapidist.net/articles/2025/scaling-react-typescript-and-api-contracts-in-regulated-saas/</guid>
+            <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title>What recovering from a stroke at 34 taught me about work, life, and finding a balance</title>
             <description>Reflections on a stroke at 34 and how recovery reshaped my approach to work and health.</description>
