@@ -19,6 +19,31 @@
     transition: padding var(--motion-dur-200) var(--motion-ease-standard);
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--colour-text);
+    font-size: var(--typography-size-200);
+    font-family: var(--font-header), sans-serif;
+    transition: color var(--motion-dur-200) var(--motion-ease-standard);
+}
+
+.navLink[aria-current="page"] {
+    color: var(--colour-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .navLink:hover,
+    .navLink:focus-visible {
+        color: var(--colour-primary);
+    }
+}
+
 .header[data-scrolled] {
     background: var(--surface-level-0);
     background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);

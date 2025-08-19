@@ -15,6 +15,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lastModified: new Date(),
         },
         {
+            url: "https://lapidist.net/about/",
+            lastModified: new Date(),
+        },
+        {
             url: "https://lapidist.net/articles/",
             lastModified: new Date(),
         },
