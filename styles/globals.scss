@@ -1,10 +1,11 @@
+@use "sass:meta";
 @layer base, tokens;
 
 @layer base {
-    @import "base";
-    @import "typography";
+    @include meta.load-css("base");
+    @include meta.load-css("typography");
 }
 
 @layer tokens {
-    @import "tokens";
+    @include meta.load-css("tokens");
 }
