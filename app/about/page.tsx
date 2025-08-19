@@ -14,48 +14,91 @@ export default function AboutPage() {
     return (
         <>
             <Container as="section">
-                <h1>About</h1>
+                <h1>About Me</h1>
                 <p id="bio">
-                    Brett Dorrans is a lead frontend engineer and design systems
-                    specialist with over 15 years of experience. He has led
-                    design system rollouts at Encompass, LendInvest, Golden
-                    Charter, and multiple startups, helping teams avoid months
-                    of technical debt. After surviving a stroke at 34 in 2021,
-                    he rebuilt his career with a focus on sustainable,
-                    human-centred engineering. He now consults remotely,
-                    embedding accessible frontend platforms that serve teams as
-                    much as users.
+                    I&apos;m Brett Dorrans, a principal frontend engineer and
+                    design systems specialist with more than 15 years of
+                    experience. I&apos;ve built and scaled design systems at
+                    Encompass, LendInvest, Golden Charter, and multiple startups
+                    - helping teams cut through months of potential technical
+                    debt by putting the right foundations in place. My work
+                    spans fintech, regulated SaaS, and high-growth startups,
+                    where I&apos;ve repeatedly been the first or only frontend
+                    hire trusted to embed the discipline from the ground up.
                 </p>
+                <p>
+                    In October 2021, at 34, I suffered a cerebellar stroke.
+                    Recovery forced me to slow down, rethink, and rebuild - not
+                    just my health but my approach to engineering. That
+                    experience reshaped my outlook: I no longer see success as
+                    speed at all costs, but as sustainable delivery that
+                    supports both the people who use software and the teams who
+                    build it.
+                </p>
+                <p>
+                    Today, I work remotely with organisations that want to take
+                    frontend seriously. I focus on embedding accessible,
+                    resilient frontend platforms that scale with the business
+                    and protect against the hidden costs of technical debt.
+                </p>
+                <hr />
                 <h2>Career highlights</h2>
+                <ul>
+                    <li>
+                        15+ years building and architecting frontends that scale
+                        across regulated industries and startups.
+                    </li>
+                    <li>
+                        Led design system rollouts and governance at Encompass,
+                        LendInvest, and Golden Charter.
+                    </li>
+                    <li>
+                        Specialist in React, TypeScript, accessibility, and
+                        developer experience.
+                    </li>
+                    <li>
+                        Proven track record of saving teams months of rework by
+                        aligning design systems and tooling to business goals.
+                    </li>
+                    <li>
+                        Comfortable leading as the sole frontend engineer or
+                        guiding a team, embedding practices that last.
+                    </li>
+                </ul>
+                <hr />
+                <h2>Resilience &amp; Balance</h2>
                 <p>
-                    Brett has spent the last 15+ years architecting frontends
-                    that scale. He has led design system rollouts across fintech
-                    and startup environments, providing expertise in TypeScript,
-                    React, accessibility, and developer experience. His
-                    freelance consulting has repeatedly saved teams months of
-                    technical debt by aligning tooling and design systems to
-                    business goals.
+                    My stroke in 2021 stopped everything overnight. Months of
+                    rehabilitation taught me pacing, adaptability, and
+                    perspective. It reminded me that engineering culture - like
+                    health - needs sustainability at its core. I now carry that
+                    lesson into every team I work with: design systems,
+                    processes, and platforms should protect people, not drain
+                    them.
                 </p>
-                <h2>Resilience &amp; balance</h2>
+                <hr />
+                <h2>Engineering Philosophy</h2>
                 <p>
-                    A cerebellar stroke in 2021 halted everything. Months of
-                    rehabilitation taught Brett the value of pacing and
-                    adaptability. The experience reframed success as sustainable
-                    delivery, not constant grind, and reinforced the need to
-                    design teams and systems that protect human health.
+                    I believe frontend engineering is the backbone of modern
+                    SaaS. In regulated industries, I&apos;ve seen how
+                    disclaimers, validations, and audit trails quietly carry
+                    legal and business weight. A single missing disclaimer can
+                    derail an audit or launch. Frontend isn&apos;t &quot;just
+                    UI&quot; - it&apos;s where compliance, trust, and resilience
+                    live.
                 </p>
-                <h2>Engineering philosophy</h2>
                 <p>
-                    In regulated SaaS, Brett has seen how the frontend quietly
-                    enforces compliance through disclaimers, validation, and
-                    audit trails. It&rsquo;s the backbone of developer velocity
-                    and product resilience, not &ldquo;just UI&rdquo;. He is
-                    passionate about embedding frontend engineering deeply
-                    within organisations, scaling design systems, and building
-                    platforms that improve both user experience and developer
-                    culture. Above all, he champions human-centred, sustainable
-                    engineering that serves the people who build and use the
-                    software.
+                    That&apos;s why I specialise in building design systems and
+                    frontend platforms that embed accessibility, governance, and
+                    developer velocity from the start. My goal is to serve both
+                    users and engineers by creating systems that scale
+                    gracefully, reduce hidden risks, and improve day-to-day
+                    developer culture.
+                </p>
+                <p>
+                    Above all, I build with a human-centred, sustainable mindset
+                    - software that works for the long term, and teams that
+                    don&apos;t burn out delivering it.
                 </p>
             </Container>
             <Contact />
