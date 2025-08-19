@@ -153,6 +153,11 @@ details[open] summary::after {
     transform: rotate(90deg);
 }
 
+code {
+    background: var(--surface-level-1);
+    border: var(--)
+}
+
 @media (hover: hover) and (pointer: fine) {
     summary:hover {
         background: var(--surface-level-1-hover);

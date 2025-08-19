@@ -1,0 +1,67 @@
+---
+title: "Architecting a Modern Frontend Platform: Scaling React, TypeScript, and API Contracts in Regulated SaaS"
+date: 2025-08-17
+description: "The hidden complexity of frontend in regulated SaaS."
+summary: "Lessons on burnout, balance, and human-centred engineering learned through my recovery from a stroke in my thirties."
+image: "/opengraph-image"
+author:
+name: "Brett Dorrans"
+url: "https://lapidist.net"
+tags:
+- health
+- burnout
+- engineering
+- leadership
+---
+
+## The Hidden Complexity of Frontend in Regulated SaaS
+
+In regulated SaaS domains like fintech or govtech, the frontend is more than just a pretty interface; it becomes part of the product's legal and engineering backbone. Frontend platforms in these environments silently enforce compliance (through disclaimers, validations, audit logs) and embody critical business rules. A seemingly minor UI tweak can carry outsized risk. For example, one fintech startup removed a passive data-sharing disclaimer during a redesign. Nothing else changed. Yet the absence of that notice caused a failed compliance audit and a delayed launch.[^2] The lesson? Even non-functional UI elements can be legally required in high-regulation workflows. In this context, frontend architecture is strategic: it's not just about delivering features to end-users, but about embedding resilience, trust, and compliance into the product experience from the ground up.[^2]
+
+Senior engineers and CTOs in regulated SaaS recognise that a robust frontend platform is essential for moving fast and staying safe. “Frontend engineering is way more than UI - at its core, it's about building systems that serve human experiences”.[^3] This system-thinking view is crucial when users' actions must comply with strict rules (think KYC identity checks or medical data privacy) and when every UI component might double as a legal contract. In practice, this means our frontend stack must be deliberately architected to handle complexity: strong foundations in React/TypeScript for maintainability, API contracts to ensure data consistency, state management patterns for reliability, and rigorous governance (linting, testing, accessibility) to enforce quality across the board. In the following sections, I'll share how to architect a modern frontend platform that scales - drawing on 15+ years of experience, with the last 5 in building regulated SaaS UIs - and why the effort pays off in developer velocity, compliance, and product success.
+
+## Foundation Layer - React, TypeScript, and Setup Decisions that Matter
+
+At the heart of any modern frontend platform is a solid foundation. In 2025, that foundation is typically React for the UI library and TypeScript for the language - a combination now considered an industry standard for large-scale apps.[^4] It's easy to treat the initial setup as boilerplate, but early technical decisions ripple forward into long-term velocity. Compare it to city planning: if you build narrow roads today, your city will gridlock as it grows; but if you design wide avenues and strong bridges, your city thrives regardless of scale.[^4] In other words, your framework, language, and architectural patterns are the “roads and bridges” of your digital city. A rushed or flimsy foundation can become a bottleneck, whereas a well-thought-out one enables sustained feature development without constantly tripping on tech debt or rework.
+
+TypeScript deserves special mention in laying this foundation. In large frontends, static typing isn't a luxury - it's a linchpin for maintainability and robustness. By catching type mismatches at compile time, TypeScript prevents entire classes of runtime errors and makes the code self-documenting for new engineers.[^5] In my experience, adopting TypeScript has an initial learning curve, but it pays off exponentially as the codebase grows. It provides improved code clarity and safer refactoring, which means we can keep a high development pace without fearing that a small change will break something unseen.[^5] Put simply, TypeScript brings “robustness to JavaScript that elevates its suitability for large-scale projects”,[^6] allowing a team to move fast now and later. The goal is to balance developer velocity with long-term maintainability - choosing conventions and tools that speed up daily work (like good developer experience, fast reloads, etc.) but also prevent accumulation of chaos.
+
+Foundational decisions also include project structure and shared libraries. In multi-team SaaS products, I advocate for an “internal open-source” model: a mono-repo or modular repo where core pieces (design system components, utility functions, API clients) are centralised and reused across features. This avoids siloed code and keeps everyone on the same foundation. For example, AdRoll's Frontend Core team enabled dozens of engineers to collaborate by bundling common UI packages in a monorepo, so teams could share build tools and not reinvent the wheel for each product.[^1] This kind of sharing culture, supported by tooling (e.g. Turborepo or Nx for monorepos), ensures that improvements to the foundation benefit all parts of the application. It also enforces consistency: one design system, one approach to state management, one lint config, etc., rather than each squad rolling their own. Ultimately, a strong React + TypeScript foundation - with intelligent project structure and shared conventions - lets you build features quickly because the underlying infrastructure is sound and standardised. As we'll see, this foundation sets the stage for everything from API integrations to testing and onboarding.
+
+## API-First Contracts - OpenAPI, Orval, Zod, and React Query in Tandem
+
+A modern frontend platform in a regulated environment must treat APIs as first-class contracts. When multiple teams (and possibly external partners) are developing services, a formal API contract ensures everyone speaks the same language. In practice, this often means using OpenAPI (Swagger) to define your backend endpoints, request/response schemas, and authentication methods up front. By having an explicit OpenAPI spec, we create a single source of truth for data models that both frontend and backend agree on - crucial in high-compliance domains where a mismatched field or unexpected null can cause serious issues.
+
+The next step is to integrate that API contract directly into the frontend code using code generation tools. At a KYC fintech, I used Orval (a popular RESTful client generator) to automatically generate a TypeScript API client and React Query hooks from the OpenAPI spec.[^7] With a simple config, Orval can read our `openapi.yaml` and produce a full suite of strongly-typed functions and custom React hooks for each endpoint. For example, given an endpoint `GET /pets/{id}`, Orval will create a `useShowPetById` hook that wraps React Query's `useQuery` under the hood.[^7] These generated hooks come with typed response data and even pre-defined query keys for caching, so the frontend team never has to write repetitive boilerplate for data fetching. The result is an end-to-end type-safe API integration: if the backend changes a field type, the frontend build breaks immediately rather than failing at runtime.
+
+[^1]: How to Run a Front-End Infrastructure Team - NextRoll https://tech.nextroll.com/blog/frontend/2017/08/29/how-to-run-a-front-end-infrastructure-team.html
+
+[^2]: Building Frontend Applications in Fintech: What Developers Must Know About Compliance, Risk, and Restrictions | by Roman Fedytskyi | Jun, 2025 | Medium https://medium.com/@roman_fedyskyi/building-frontend-applications-in-fintech-what-developers-must-know-about-compliance-risk-and-afca8454b437
+
+[^3]: Frontend Isn't Just UI - DEV Community https://dev.to/muhammadahsanmirza/frontend-isnt-just-ui-289d
+
+[^4]: The New Frontier: Why React and TypeScript Matter in 2025 | by Rick Hightower | Jun, 2025 | Medium https://medium.com/@richardhightower/the-new-frontier-why-react-and-typescript-matter-in-2025-bfce03f5d3c9
+
+[^5]: How to Use TypeScript with React: Building a Strong Foundation | by Chirag Dave | Medium https://medium.com/@chirag.dave/how-to-use-typescript-with-react-building-a-strong-foundation-72d87ba8e699
+
+[^6]: The Essential Role of TypeScript in Large-Scale React Projects https://elevator3.com/the-essential-role-of-typescript-in-large-scale-react-projects/
+
+[^7]: React Query | Orval https://orval.dev/guides/react-query
+
+[^8]: Zod | Orval https://orval.dev/guides/zod
+
+[^9]: Learn Zod validation with React Hook Form | Contentful https://www.contentful.com/blog/react-hook-form-validation-zod/
+
+[^10]: React Query for Data Fetching: Explore the Advanced Features https://www.dhiwise.com/post/react-query-a-deep-dive-into-the-advanced-features
+
+[^11]: How do I find and remove the dead code? | Milestone https://mstone.ai/question/find-remove-dead-code/
+
+[^12]: How to Create a Filterable List in React with the Context API | by Sameer Jain | Medium https://jainsameer.medium.com/react-filterable-list-page-7e3bcf7913cc
+
+[^13]: Mastering React's usePersistedState Hook | LabEx https://labex.io/tutorials/react-react-usepersistedstate-hook-38402
+
+[^14]: How to Validate Forms with Zod and React-Hook-Form | FreeCodeCamp https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form/
+
+[^15]: How a Design System Saves Time and Money | by Liana Ghazaryan https://www.designsystemscollective.com/how-a-design-system-saves-time-and-money-fdef6280042e
+
+[^16]: AI Code Review and the Best AI Code Review Tools in 2025 - Qodo https://www.qodo.ai/blog/ai-code-review/
