@@ -18,7 +18,7 @@ const TableOfContents: FC<Props> = ({ headings }) => {
 
     return (
         <nav aria-labelledby="toc-heading" className={styles.toc}>
-            <h2 id="toc-heading">Table of contents</h2>
+            <h3 id="toc-heading">Table of contents</h3>
             <ol className={styles.list}>
                 {headings.map((heading) => (
                     <li

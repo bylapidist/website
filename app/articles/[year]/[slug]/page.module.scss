@@ -2,11 +2,13 @@
 
 .article {
     @include grid-stack(var(--space-sm));
+
+    max-inline-size: var(--typography-measure);
 }
 
 .summary {
     color: var(--colour-text-subtle);
-    font-size: var(--typography-size-300);
+    font-size: var(--typography-size-200);
 }
 
 .meta {

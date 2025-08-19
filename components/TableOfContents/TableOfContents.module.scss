@@ -1,12 +1,16 @@
 @use "../../styles/mixins" as *;
 
 .toc {
-    max-width: calc(var(--typography-measure) / 2);
+    max-inline-size: 40ch;
     padding: var(--space-m);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
     background: var(--surface-level-1);
     margin-block: var(--space-xl);
+
+    :where(h3) {
+        margin-bottom: var(--space-l);
+    }
 }
 
 .list {
