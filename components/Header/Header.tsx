@@ -53,7 +53,7 @@ export default function Header() {
             data-scrolled={scrolled || undefined}
         >
             <Container className={styles.inner} as="div" cq="page">
-                <nav className={styles.nav} aria-label="Main">
+                <nav>
                     <Link
                         href="/"
                         className={styles.logo}
@@ -65,15 +65,6 @@ export default function Header() {
                             <span>Brett</span>
                             <span>Dorrans</span>
                         </span>
-                    </Link>
-                    <Link
-                        href="/about"
-                        className={styles.navLink}
-                        aria-current={
-                            pathname === "/about" ? "page" : undefined
-                        }
-                    >
-                        About
                     </Link>
                 </nav>
                 <ThemeToggle />

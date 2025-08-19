@@ -37,17 +37,6 @@ export default function AboutPage() {
                     business goals.
                 </p>
                 <h2>Resilience &amp; balance</h2>
-                <figure>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/images/me-stroke.jpg"
-                        alt="Brett in hospital after his 2021 stroke"
-                    />
-                    <figcaption>
-                        Recovering from a cerebellar stroke in 2021 reset
-                        Brett&rsquo;s approach to work and life.
-                    </figcaption>
-                </figure>
                 <p>
                     A cerebellar stroke in 2021 halted everything. Months of
                     rehabilitation taught Brett the value of pacing and
