@@ -56,6 +56,19 @@
     color: var(--colour-text-subtle);
 }
 
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underlineSvg {
+    position: absolute;
+    bottom: calc(var(--space-xs) * -1);
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 .heroTitle,
 .heroIntro,
 .cta {
