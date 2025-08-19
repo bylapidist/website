@@ -83,6 +83,11 @@
     --radius-xl: 24px;
     --radius-2xl: 36px;
 
+    /* border width */
+    --border-width-s: 1px;
+    --border-width-m: 2px;
+    --border-width-l: 4px;
+
     /* shadows */
     --shadow-elev-1: 0 1px 2px hsl(0deg 0% 0% / 5%);
     --shadow-elev-2:
@@ -117,7 +122,7 @@
     --z-3: 1000; /* overlays */
 
     /* focus */
-    --border-focus-ring: 2px solid var(--colour-primary);
+    --border-focus-ring: var(--border-width-m) solid var(--colour-primary);
     --space-focus-ring-offset: 2px;
 }
 

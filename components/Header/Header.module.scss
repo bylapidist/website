@@ -4,7 +4,7 @@
     position: sticky;
     inset-block-start: 0;
     background: transparent;
-    border-block-end: 1px solid transparent;
+    border-block-end: var(--border-width-s) solid transparent;
     z-index: var(--z-2);
     transition:
         background var(--motion-dur-200) var(--motion-ease-standard),

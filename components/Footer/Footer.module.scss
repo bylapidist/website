@@ -5,7 +5,7 @@
 
     margin-block-start: auto;
     padding-block: var(--space-xl);
-    border-block-start: 1px solid var(--colour-border);
+    border-block-start: var(--border-width-s) solid var(--colour-border);
     font-size: var(--typography-size-100);
     text-align: center;
     color: var(--colour-text-subtle);
