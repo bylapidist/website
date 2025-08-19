@@ -53,7 +53,7 @@ export default function Header() {
             data-scrolled={scrolled || undefined}
         >
             <Container className={styles.inner} as="div" cq="page">
-                <nav role="navigation">
+                <nav>
                     <Link
                         href="/"
                         className={styles.logo}

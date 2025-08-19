@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as *;
+
+.article {
+    @include grid-stack(var(--space-sm));
+
+    max-inline-size: var(--typography-measure);
+}
+
+.article :global(ol) {
+    @include grid-stack(var(--space-l));
+}
+
+.article :global(img) {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-m);
+    margin: var(--space-xs) 0 var(--space-m) 0;
+}
+
+@container (min-width:50rem) {
+    .article :global(img) {
+        width: 33%;
+    }
+}
