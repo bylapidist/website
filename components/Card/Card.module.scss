@@ -21,7 +21,7 @@
 }
 
 .card[data-highlight] {
-    border: 2px solid var(--colour-primary);
+    border: var(--border-width-m) solid var(--colour-primary);
 }
 
 .card:focus-within {

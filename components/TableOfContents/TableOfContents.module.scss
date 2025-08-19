@@ -3,7 +3,7 @@
 .toc {
     max-width: calc(var(--typography-measure) / 2);
     padding: var(--space-m);
-    border: 1px solid var(--colour-border);
+    border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
     background: var(--surface-level-1);
     margin-block: var(--space-xl);
