@@ -54,7 +54,7 @@ This approach doubles your CSS, increases maintenance, and risks introducing sub
 
 ## Logical properties: flow-relative layout
 
-Logical properties were introduced to solve exactly this problem. Instead of coding for physical sides of the screen, you code relative to the flow of text:
+Logical properties were introduced to solve exactly this problem[^1]. Instead of coding for physical sides of the screen, you code relative to the flow of text:
 
 - **Block axis** – the direction content flows in block layout (top to bottom in most scripts).
 - **Inline axis** – the direction text flows (left to right in English, right to left in Arabic, top to bottom in vertical Japanese).
@@ -74,7 +74,7 @@ These adjust automatically depending on writing mode. In English (LTR), `margin-
 
 ### Shorthand versions
 
-You can also use shorthands:
+You can also use shorthands[^2]:
 
 ```css
 /* Margins on both sides of the inline axis */
@@ -152,11 +152,11 @@ body {
 }
 ```
 
-This works automatically in Japanese or Mongolian text layouts, where vertical writing is common.
+This works automatically in Japanese or Mongolian text layouts, where vertical writing is common[^3].
 
 ## Browser support and adoption
 
-Logical properties are well supported in modern browsers. Chrome, Firefox, Safari, and Edge all implement them. Unless you are targeting IE11 (which is end-of-life), you can use them today.
+Logical properties are well supported in modern browsers[^5]. Chrome, Firefox, Safari, and Edge all implement them. Unless you are targeting IE11 (which is end-of-life), you can use them today.
 
 Fallback strategy for legacy projects:
 
@@ -204,7 +204,7 @@ Codemods or search/replace scripts can help accelerate this process.
 
 ## Future outlook
 
-Logical properties are still “new” to many engineers, but they are no longer experimental. The CSSWG spec defines them as part of the core language. As localisation and accessibility become baseline requirements, logical properties will replace physical ones in:
+Logical properties are still “new” to many engineers, but they are no longer experimental. The CSSWG spec defines them as part of the core language[^4]. As localisation and accessibility become baseline requirements, logical properties will replace physical ones in:
 
 - CSS frameworks (e.g. Tailwind, Bootstrap)
 - Component libraries (Material UI, Radix)
@@ -218,10 +218,12 @@ Physical CSS properties (`margin-left`, `margin-top`) were designed for a world 
 
 If you maintain a design system or enterprise frontend, adopting logical properties is not just nice to have — it is strategic engineering. They make your platform more resilient, accessible, and ready for the future.
 
-## References
+[^1]: CSS Logical Properties and Values – MDN https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
 
-- [CSS Logical Properties and Values – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
-- [margin-inline – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline)
-- [CSS Writing Modes Level 3 – W3C](https://www.w3.org/TR/css-writing-modes-3/)
-- [CSS Logical Properties Level 1 – W3C Draft](https://www.w3.org/TR/css-logical-1/)
-- [Can I Use: CSS Logical Properties](https://caniuse.com/css-logical-props)
+[^2]: margin-inline – MDN https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
+
+[^3]: CSS Writing Modes Level 3 – W3C https://www.w3.org/TR/css-writing-modes-3/
+
+[^4]: CSS Logical Properties Level 1 – W3C Draft https://www.w3.org/TR/css-logical-1/
+
+[^5]: Can I Use: CSS Logical Properties https://caniuse.com/css-logical-props
