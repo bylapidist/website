@@ -58,7 +58,7 @@
         "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
         "@lhci/cli": "0.15.1",
         "@next/eslint-plugin-next": "15.5.0",
-        "@playwright/test": "1.54.2",
+        "@playwright/test": "1.55.0",
         "@storybook/nextjs": "^9.1.1",
         "@types/node": "24.3.0",
         "@types/react": "19.1.10",
