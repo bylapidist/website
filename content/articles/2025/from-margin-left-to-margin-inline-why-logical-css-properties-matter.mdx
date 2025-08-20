@@ -1,0 +1,227 @@
+---
+title: "From margin-left to margin-inline: Why Logical CSS Properties Matter"
+date: 2025-08-20
+description: "Learn the difference between physical and logical CSS properties, why they matter for internationalisation, and how to adopt them in design systems."
+summary: "An in-depth guide to logical CSS properties like margin-inline and margin-block, with code examples and practical advice for modern frontend engineering."
+image: "/opengraph-image"
+author:
+    name: "Brett Dorrans"
+    url: "https://lapidist.net"
+tags:
+    - css
+    - frontend
+    - design-systems
+    - accessibility
+    - internationalisation
+---
+
+Most developers learn `margin-left` before they learn `margin-inline-start`. For years, CSS layout was taught through **physical properties** — `margin-top`, `margin-right`, `padding-left`, `border-bottom`. These work fine if you only ever build left-to-right (LTR), English-language interfaces. But modern products do not have that luxury. If you want your interface to adapt to **right-to-left (RTL) scripts** such as Arabic or Hebrew, or **vertical writing modes** such as Japanese, physical properties begin to fail.
+
+That is where **logical properties** come in. They describe layout in terms of the _flow of content_ (block versus inline) rather than fixed physical directions. In this article, I will break down the differences, show real-world examples, and explain why logical properties should now be the **default in design systems and enterprise frontends**.
+
+## Physical CSS properties: the old default
+
+CSS originally defined margins, paddings, and borders with physical directions:
+
+```css
+.card {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+```
+
+These map directly to the physical edges of the screen: top, right, bottom, left. The assumption baked into these properties is that content flows horizontally, left to right, as in English.
+
+The problem? Interfaces are no longer limited to that assumption. For example:
+
+```css
+.card {
+    margin-left: 2rem; /* Works in English, breaks in Arabic */
+}
+```
+
+If your application switches to RTL, that `margin-left` suddenly appears on the wrong side. The fix traditionally involved conditional overrides:
+
+```css
+[dir="rtl"] .card {
+    margin-right: 2rem;
+}
+```
+
+This approach doubles your CSS, increases maintenance, and risks introducing subtle bugs.
+
+## Logical properties: flow-relative layout
+
+Logical properties were introduced to solve exactly this problem. Instead of coding for physical sides of the screen, you code relative to the flow of text:
+
+- **Block axis** – the direction content flows in block layout (top to bottom in most scripts).
+- **Inline axis** – the direction text flows (left to right in English, right to left in Arabic, top to bottom in vertical Japanese).
+
+### Example: margins
+
+```css
+.card {
+    margin-inline-start: 2rem; /* Instead of margin-left */
+    margin-inline-end: 2rem; /* Instead of margin-right */
+    margin-block-start: 1rem; /* Instead of margin-top */
+    margin-block-end: 1rem; /* Instead of margin-bottom */
+}
+```
+
+These adjust automatically depending on writing mode. In English (LTR), `margin-inline-start` maps to `margin-left`. In Arabic (RTL), it maps to `margin-right`. If you switch to vertical Japanese, the same code applies margins at the top and bottom as expected.
+
+### Shorthand versions
+
+You can also use shorthands:
+
+```css
+/* Margins on both sides of the inline axis */
+.card {
+    margin-inline: 1rem;
+}
+
+/* Margins on both sides of the block axis */
+.card {
+    margin-block: 2rem;
+}
+```
+
+These work like `margin-left` plus `margin-right` or `margin-top` plus `margin-bottom` – but in a flow-relative way.
+
+## Why logical properties matter
+
+1. **Global products**
+
+    Most enterprise SaaS and consumer apps need to support multiple languages. With logical properties, you can write one set of CSS rules that adapt to every locale:
+
+    ```css
+    .button {
+        margin-inline-start: 1rem;
+    }
+    ```
+
+    No RTL overrides required.
+
+2. **Accessibility and consistency**
+
+    Logical properties reduce visual bugs that occur when assumptions about text flow break down. They make codebases more predictable, especially in design systems consumed by teams across regions.
+
+3. **Maintainability**
+
+    Instead of duplicating CSS for each writing direction, logical properties let you maintain one source of truth. This matters in regulated industries where UI consistency is not just aesthetic but compliance-critical.
+
+4. **Future-proofing**
+
+    As CSS evolves, logical properties are positioned as the long-term model. Teaching new engineers `margin-inline` rather than `margin-left` helps them build global-ready UIs from day one.
+
+## Real-world examples
+
+### Buttons in RTL interfaces
+
+Old way:
+
+```css
+.button {
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .button {
+    margin-right: 1rem;
+}
+```
+
+New way:
+
+```css
+.button {
+    margin-inline-start: 1rem;
+}
+```
+
+### Vertical writing modes
+
+```css
+body {
+    writing-mode: vertical-rl;
+}
+
+.headline {
+    margin-block-end: 2rem; /* adds space below text in vertical flow */
+}
+```
+
+This works automatically in Japanese or Mongolian text layouts, where vertical writing is common.
+
+## Browser support and adoption
+
+Logical properties are well supported in modern browsers. Chrome, Firefox, Safari, and Edge all implement them. Unless you are targeting IE11 (which is end-of-life), you can use them today.
+
+Fallback strategy for legacy projects:
+
+```css
+/* Provide physical property as fallback */
+.card {
+    margin-left: 2rem; /* Legacy browsers */
+    margin-inline-start: 2rem; /* Modern browsers */
+}
+```
+
+Browsers that support logical properties will take the second declaration.
+
+## Design system perspective
+
+As a design system engineer, I treat logical properties as the baseline. They reduce risk and create components that adapt to multiple contexts with zero overrides.
+
+Guidelines I recommend:
+
+- Default to logical properties in tokens, utilities, and component styles.
+- Abstract into spacing utilities that teams can use without worrying about writing mode.
+- Educate teams: explain not just how to use them, but why they matter.
+
+Example with spacing tokens:
+
+```css
+.button {
+    margin-inline-start: var(--space-s);
+}
+```
+
+This ensures consistency across components and languages.
+
+## Migration strategy for legacy code
+
+Migrating large CSS codebases is non-trivial. Here is a phased approach:
+
+1. Audit your CSS for physical properties (`margin-left`, `padding-right`, etc.).
+2. Prioritise high-risk areas: components used in forms, navigation, or disclaimers in internationalised flows.
+3. Introduce linting rules via Stylelint to flag new physical property usage.
+4. Refactor gradually, starting with shared components in your design system.
+5. Educate engineers: provide docs and code examples in your internal design system guidelines.
+
+Codemods or search/replace scripts can help accelerate this process.
+
+## Future outlook
+
+Logical properties are still “new” to many engineers, but they are no longer experimental. The CSSWG spec defines them as part of the core language. As localisation and accessibility become baseline requirements, logical properties will replace physical ones in:
+
+- CSS frameworks (e.g. Tailwind, Bootstrap)
+- Component libraries (Material UI, Radix)
+- Education and tutorials
+
+Within a few years, I expect frontend bootcamps to teach `margin-inline` before `margin-left`.
+
+## Conclusion
+
+Physical CSS properties (`margin-left`, `margin-top`) were designed for a world where text flowed one way. Logical properties (`margin-inline`, `margin-block`) are designed for a global web. They adapt automatically to different writing modes, simplify your code, and reduce risk in internationalised interfaces.
+
+If you maintain a design system or enterprise frontend, adopting logical properties is not just nice to have — it is strategic engineering. They make your platform more resilient, accessible, and ready for the future.
+
+## References
+
+- [CSS Logical Properties and Values – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [margin-inline – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline)
+- [CSS Writing Modes Level 3 – W3C](https://www.w3.org/TR/css-writing-modes-3/)
+- [CSS Logical Properties Level 1 – W3C Draft](https://www.w3.org/TR/css-logical-1/)
+- [Can I Use: CSS Logical Properties](https://caniuse.com/css-logical-props)
