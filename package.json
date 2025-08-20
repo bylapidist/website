@@ -36,7 +36,6 @@
     },
     "dependencies": {
         "@lapidist/cv-generator": "2.4.0",
-        "@next/mdx": "^15.5.0",
         "clsx": "2.1.1",
         "feed": "^5.0.0",
         "github-slugger": "^2.0.0",
