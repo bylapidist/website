@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import type { Heading as MdastHeading, Root } from "mdast";
 import { toString } from "mdast-util-to-string";
 import { compileMDX } from "next-mdx-remote/rsc";
-import rehypePrism from "rehype-prism-plus";
+import rehypePrismPlus from "rehype-prism-plus";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import readingTime from "remark-reading-time";
@@ -65,7 +65,7 @@ export const getArticle = cache(async (year: string, slug: string) => {
         options: {
             mdxOptions: {
                 remarkPlugins: [remarkGfm, headingPlugin],
-                rehypePlugins: [rehypePrism],
+                rehypePlugins: [rehypePrismPlus],
             },
         },
     });
