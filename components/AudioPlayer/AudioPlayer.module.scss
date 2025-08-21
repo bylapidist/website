@@ -1,9 +1,31 @@
 @use "../../styles/mixins" as *;
 
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 .player {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--space-s);
+    margin-block: var(--space-l);
 }
 
 .controls {
@@ -19,7 +41,7 @@
 }
 
 .icon {
-    inline-size: var(--size-icon-m);
+    inline-size: var(--size-icon-l);
     block-size: var(--size-icon-m);
     fill: currentcolor;
 }
@@ -36,8 +58,38 @@
 .waveform {
     inline-size: 100%;
     block-size: var(--space-3xl);
+    height: var(--size-tap-min);
 }
 
 .native {
     display: none;
+}
+
+.loading {
+    position: absolute;
+    inset: 0;
+    cursor: not-allowed;
+    z-index: var(--z-2);
+    border-radius: var(--radius-s);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            120deg,
+            var(--surface-level-1) 0%,
+            var(--surface-level-2) 40%,
+            var(--surface-level-1) 80%
+        );
+        background-size: 200% 100%;
+        animation: shimmer var(--motion-dur-1000) var(--motion-ease-infinite)
+            linear;
+        border-radius: var(--radius-m);
+    }
+}
+
+.loaded {
+    pointer-events: none;
+    animation: fade-out var(--motion-dur-320) var(--motion-ease-emphasized) both;
 }

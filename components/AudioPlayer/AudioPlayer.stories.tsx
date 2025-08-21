@@ -20,14 +20,6 @@ export const Default: Story = {
     },
 };
 
-export const WithWaveform: Story = {
-    args: {
-        src: "/audio/sample.mp3",
-        title: "Sample audio",
-        showWaveform: true,
-    },
-};
-
 export const Loading: Story = {
     args: {
         src: "/audio/sample.mp3",

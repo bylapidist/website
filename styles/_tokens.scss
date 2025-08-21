@@ -56,9 +56,11 @@
     /* motion */
     --motion-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
     --motion-ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+    --motion-ease-infinite: infinite;
     --motion-dur-120: 120ms;
     --motion-dur-200: 200ms;
     --motion-dur-320: 320ms;
+    --motion-dur-1000: 1000ms;
 
     /* spacing */
     --space-xxs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);

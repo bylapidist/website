@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
@@ -51,6 +52,7 @@ export default async function ArticlePage({
                         {meta.tags.length > 0 && meta.readingTime ? " · " : ""}
                         {meta.readingTime}
                     </p>
+                    {meta.audio && <AudioPlayer src={meta.audio} />}
                     {headings.length > 0 && (
                         <TableOfContents headings={headings} />
                     )}
