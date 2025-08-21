@@ -155,10 +155,15 @@ details[open] summary::after {
 
 code {
     background: var(--surface-level-2);
-    border: var(--border-width-l) solid var(--surface-level-2);
     border-radius: var(--radius-s);
+    padding: var(--space-xxs);
+    padding-inline: var(--space-xs);
     font-size: var(--typography-size-100);
     white-space: nowrap;
+}
+
+pre {
+    border-radius: var(--radius-m);
 }
 
 @media (hover: hover) and (pointer: fine) {

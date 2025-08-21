@@ -27,16 +27,15 @@ export default [
             ".storybook/**",
             ".next/**",
             "out/**",
+            "next-env.d.ts",
         ],
     },
+    ...compat.config({
+        extends: ["next", "next/core-web-vitals", "next/typescript"],
+    }),
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...storybook.configs["flat/recommended"],
-    ...compat.extends(
-        "eslint-config-next",
-        "next/core-web-vitals",
-        "next/typescript",
-    ),
     reactCompiler.configs.recommended,
     {
         rules: {
