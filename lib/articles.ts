@@ -28,6 +28,7 @@ type ArticleMeta = {
         name?: string;
         url?: string;
     };
+    audio?: string;
 };
 
 export type Heading = { id: string; text: string; level: number };
@@ -80,6 +81,7 @@ export const getArticle = cache(async (year: string, slug: string) => {
         readingTime: readingTimeText,
         image: (data.image as string) || "",
         author: (data.author ?? {}) as { name?: string; url?: string },
+        audio: (data.audio as string) || "",
     };
     return { meta, content: MDXContent, wordCount, headings };
 });
@@ -113,6 +115,7 @@ export const getAllArticles = cache(async (): Promise<ArticleMeta[]> => {
                     date: data.date as string,
                     readingTime: readingTimeText,
                     image: (data.image as string) || "",
+                    audio: (data.audio as string) || "",
                     author: (data.author ?? {}) as {
                         name?: string;
                         url?: string;
