@@ -1,0 +1,43 @@
+@use "../../styles/mixins" as *;
+
+.player {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.play {
+    @include inline-center;
+
+    padding: var(--space-xs);
+}
+
+.icon {
+    inline-size: var(--size-icon-m);
+    block-size: var(--size-icon-m);
+    fill: currentcolor;
+}
+
+.slider {
+    flex: 1;
+    accent-color: var(--colour-primary);
+}
+
+.time {
+    font-variant-numeric: tabular-nums;
+}
+
+.waveform {
+    inline-size: 100%;
+    block-size: var(--space-3xl);
+}
+
+.native {
+    display: none;
+}

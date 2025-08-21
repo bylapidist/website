@@ -51,7 +51,8 @@
         "remark": "^15.0.1",
         "remark-gfm": "^4.0.1",
         "remark-reading-time": "^2.0.2",
-        "unist-util-visit": "^5.0.0"
+        "unist-util-visit": "^5.0.0",
+        "wavesurfer.js": "^7.7.11"
     },
     "devDependencies": {
         "@axe-core/playwright": "4.10.2",
@@ -61,6 +62,7 @@
         "@lhci/cli": "0.15.1",
         "@next/eslint-plugin-next": "15.5.0",
         "@playwright/test": "1.55.0",
+        "@storybook/addon-a11y": "9.1.2",
         "@storybook/nextjs": "^9.1.1",
         "@types/node": "24.3.0",
         "@types/react": "19.1.10",
