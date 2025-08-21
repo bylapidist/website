@@ -40,6 +40,8 @@ export default function AudioPlayer({ src, title }: Props) {
 
         ws.on("ready", () => {
             setDuration(ws.getDuration());
+        });
+        ws.on("redrawcomplete", () => {
             setLoading(false);
         });
         ws.on("play", () => {
@@ -65,7 +67,9 @@ export default function AudioPlayer({ src, title }: Props) {
 
         function onLoadedMetadata() {
             setDuration(audioEl.duration);
-            setLoading(false);
+            if (!waveSurferRef.current) {
+                setLoading(false);
+            }
         }
         function onTimeUpdate() {
             setCurrentTime(audioEl.currentTime);
