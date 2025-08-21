@@ -156,9 +156,11 @@ export default function AudioPlayer({ src, title }: Props) {
                 className={styles.native}
                 aria-hidden="true"
             />
-            <div className={loadingClasses} />
             <p>Listen to this article:</p>
-            <div ref={waveformRef} className={styles.waveform} />
+            <div className={styles.waveformWrapper}>
+                <div ref={waveformRef} className={styles.waveform} />
+                <div className={loadingClasses} />
+            </div>
             <div className={styles.controls}>
                 <Button
                     onClick={togglePlay}

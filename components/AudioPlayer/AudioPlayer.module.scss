@@ -55,6 +55,10 @@
     font-variant-numeric: tabular-nums;
 }
 
+.waveformWrapper {
+    position: relative;
+}
+
 .waveform {
     inline-size: 100%;
     block-size: var(--space-3xl);
