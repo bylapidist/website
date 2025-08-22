@@ -85,7 +85,15 @@
     color: var(--colour-text);
 }
 
-.burgerIcon,
+.burgerIcon {
+    display: block;
+    position: relative;
+    inline-size: var(--size-icon-m);
+    block-size: var(--border-width-m);
+    background: currentcolor;
+    border-radius: var(--radius-xs);
+}
+
 .burgerIcon::before,
 .burgerIcon::after {
     content: "";

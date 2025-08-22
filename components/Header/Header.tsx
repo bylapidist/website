@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import {
+    autoUpdate,
     FloatingFocusManager,
     FloatingPortal,
     offset,
@@ -34,6 +35,7 @@ export default function Header() {
         onOpenChange: setOpen,
         placement: "bottom-end",
         middleware: [offset(8)],
+        whileElementsMounted: autoUpdate,
     });
     const click = useClick(context);
     const dismiss = useDismiss(context);
