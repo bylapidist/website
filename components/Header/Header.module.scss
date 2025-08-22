@@ -68,6 +68,131 @@
     transition: transform var(--motion-dur-200) var(--motion-ease-standard);
 }
 
+.actions {
+    @include flex-between(center, var(--space-s));
+}
+
+.burger {
+    @include inline-center;
+
+    position: relative;
+    inline-size: var(--size-tap-min);
+    block-size: var(--size-tap-min);
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: var(--colour-text);
+}
+
+.burgerIcon,
+.burgerIcon::before,
+.burgerIcon::after {
+    content: "";
+    position: absolute;
+    inline-size: var(--size-icon-m);
+    block-size: var(--border-width-m);
+    background: currentcolor;
+    border-radius: var(--radius-xs);
+}
+
+.burgerIcon::before {
+    transform: translateY(calc(-1 * var(--space-xs)));
+}
+
+.burgerIcon::after {
+    transform: translateY(var(--space-xs));
+}
+
+.burger[data-open] .burgerIcon {
+    background: transparent;
+}
+
+.burger[data-open] .burgerIcon::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.burger[data-open] .burgerIcon::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .burgerIcon,
+    .burgerIcon::before,
+    .burgerIcon::after {
+        transition:
+            transform var(--motion-dur-200) var(--motion-ease-standard),
+            opacity var(--motion-dur-200) var(--motion-ease-standard);
+    }
+
+    .burger {
+        transition: color var(--motion-dur-200) var(--motion-ease-standard);
+
+        &:active .burgerIcon {
+            transform: scale(0.9);
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .burger:hover,
+        .burger:focus-visible {
+            color: var(--colour-primary);
+        }
+
+        .burger:not([data-open]):hover .burgerIcon::before,
+        .burger:not([data-open]):focus-visible .burgerIcon::before {
+            transform: translateY(calc(-1 * var(--space-s)));
+        }
+
+        .burger:not([data-open]):hover .burgerIcon::after,
+        .burger:not([data-open]):focus-visible .burgerIcon::after {
+            transform: translateY(var(--space-s));
+        }
+    }
+}
+
+.menu {
+    @include stack(var(--space-xs));
+
+    border: var(--border-width-s) solid var(--colour-border);
+    background: var(--surface-level-0);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-elev-3);
+    padding: var(--space-s);
+    z-index: var(--z-3);
+}
+
+.menuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include stack(var(--space-xs));
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--colour-text);
+    padding: var(--space-xs) var(--space-s);
+    border-radius: var(--radius-s);
+    transition:
+        color var(--motion-dur-200) var(--motion-ease-standard),
+        background var(--motion-dur-200) var(--motion-ease-standard);
+}
+
+.menu a:focus-visible {
+    background: var(--surface-level-1-hover);
+    color: var(--colour-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .menu a:hover {
+        background: var(--surface-level-1-hover);
+        color: var(--colour-primary);
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     .logo:hover,
     .logo:focus-visible {
