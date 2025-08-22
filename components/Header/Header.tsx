@@ -36,6 +36,7 @@ export default function Header() {
         placement: "bottom-end",
         middleware: [offset(8)],
         whileElementsMounted: autoUpdate,
+        strategy: "fixed",
     });
     const click = useClick(context);
     const dismiss = useDismiss(context);
