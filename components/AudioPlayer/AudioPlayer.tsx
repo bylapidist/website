@@ -169,7 +169,7 @@ export default function AudioPlayer({ src, title }: Props) {
                 className={styles.native}
                 aria-hidden="true"
             />
-            {title && <h3 id={titleId}>{title}</h3>}
+            {title && <h2 id={titleId}>{title}</h2>}
             <div className={styles.waveformWrapper}>
                 <div ref={waveformRef} className={styles.waveform} />
                 <div className={loadingClasses} />
