@@ -1,7 +1,12 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/restrict-template-expressions */
-import { useEffect, useRef, useState } from "react";
+import {
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+    type CSSProperties,
+} from "react";
 import {
     autoUpdate,
     FloatingFocusManager,
@@ -56,6 +61,13 @@ export default function Header() {
                 : { opacity: 0, transform: "scale(0.95)" },
         },
     );
+
+    const menuStyles = useMemo<CSSProperties>(() => {
+        const transform = [floatingStyles.transform, transitionStyles.transform]
+            .filter((value): value is string => Boolean(value))
+            .join(" ");
+        return { ...floatingStyles, ...transitionStyles, transform };
+    }, [floatingStyles, transitionStyles]);
 
     useEffect(() => {
         function onScroll() {
@@ -137,16 +149,7 @@ export default function Header() {
                         <div
                             ref={refs.setFloating}
                             className={styles.menu}
-                            style={{
-                                ...floatingStyles,
-                                ...transitionStyles,
-                                transform: `${floatingStyles.transform ?? ""}${
-                                    floatingStyles.transform &&
-                                    transitionStyles.transform
-                                        ? " "
-                                        : ""
-                                }${transitionStyles.transform ?? ""}`,
-                            }}
+                            style={menuStyles}
                             {...getFloatingProps()}
                         >
                             <nav aria-label="Site">
