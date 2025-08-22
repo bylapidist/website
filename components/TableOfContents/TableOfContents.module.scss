@@ -70,16 +70,13 @@
 }
 
 .content {
-    display: grid;
-    grid-template-rows: 1fr;
     transition:
-        grid-template-rows var(--motion-dur-320) var(--motion-ease-standard),
+        height var(--motion-dur-320) var(--motion-ease-standard),
         opacity var(--motion-dur-200) var(--motion-ease-standard);
     overflow: hidden;
 }
 
 .collapsed {
-    grid-template-rows: 0fr;
     opacity: 0;
 }
 

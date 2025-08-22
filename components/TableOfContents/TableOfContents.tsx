@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC, SVGProps } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import styles from "./TableOfContents.module.scss";
@@ -33,6 +33,14 @@ function ChevronIcon(props: SVGProps<SVGSVGElement>) {
 
 const TableOfContents: FC<Props> = ({ headings }) => {
     const [open, setOpen] = useState(true);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [height, setHeight] = useState<number>();
+
+    useEffect(() => {
+        if (contentRef.current) {
+            setHeight(contentRef.current.scrollHeight);
+        }
+    }, [headings, open]);
 
     if (headings.length === 0) {
         return null;
@@ -61,6 +69,8 @@ const TableOfContents: FC<Props> = ({ headings }) => {
             </div>
             <div
                 id="toc-list"
+                ref={contentRef}
+                style={{ height: open ? height : 0 }}
                 className={clsx(styles.content, !open && styles.collapsed)}
             >
                 <ol className={styles.list}>
