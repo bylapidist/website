@@ -1,0 +1,34 @@
+{
+    "light": {
+        "surface": {
+            "level-0": { "value": "#ffffff" },
+            "level-1": { "value": "#f5f5f5" },
+            "level-2": { "value": "#ffffff" },
+            "level-1-hover": {
+                "value": "color-mix(\n        in srgb,\n        var(--surface-level-1) 90%,\n        var(--colour-text) 10%\n    )"
+            },
+            "level-1-active": {
+                "value": "color-mix(\n        in srgb,\n        var(--surface-level-1) 80%,\n        var(--colour-text) 20%\n    )"
+            }
+        },
+        "colour": {
+            "text": { "value": "#111111" },
+            "text-subtle": { "value": "#6f6f6f" },
+            "border": { "value": "#d0d0d0" },
+            "muted": { "value": "#e5e5e5" },
+            "primary": {
+                "value": "#4b6be8",
+                "hover": {
+                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 90%,\n        var(--colour-on-primary) 10%\n    )"
+                },
+                "active": {
+                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
+                }
+            },
+            "on-primary": { "value": "#ffffff" },
+            "success": { "value": "#1b9a59" },
+            "warning": { "value": "#ffb700" },
+            "danger": { "value": "#d93025" }
+        }
+    }
+}

@@ -22,6 +22,7 @@ export default [
         ignores: [
             "eslint.config.mjs",
             "stylelint.config.mjs",
+            "style-dictionary.config.mjs",
             "postcss.config.cjs",
             "storybook-static/**",
             ".storybook/**",
