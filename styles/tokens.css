@@ -1,0 +1,137 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --motion-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --motion-ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+  --motion-ease-infinite: infinite;
+  --motion-dur-120: 120ms;
+  --motion-dur-200: 200ms;
+  --motion-dur-320: 320ms;
+  --motion-dur-1000: 1000ms;
+  --space-xxs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);
+  --space-xs: clamp(0.25rem, 0.2rem + 0.3vw, 0.5rem);
+  --space-s: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+  --space-m: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+  --space-l: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+  --space-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --space-2xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  --space-3xl: clamp(3rem, 2.5rem + 2vw, 4rem);
+  --size-tap-min: 44px;
+  --size-icon-m: 1.25rem;
+  --size-icon-l: 3rem;
+  --radius-xs: 2px;
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-xl: 24px;
+  --radius-2xl: 36px;
+  --border-width-s: 1px;
+  --border-width-m: 2px;
+  --border-width-l: 4px;
+  --border-focus-ring: var(--border-width-m) solid var(--colour-primary);
+  --shadow-elev-1: 0 1px 2px hsl(0deg 0% 0% / 5%);
+  --shadow-elev-2: 0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
+  --shadow-elev-3: 0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --typography-size-100: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
+  --typography-size-200: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
+  --typography-size-300: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
+  --typography-size-400: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --typography-size-500: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+  --typography-size-600: clamp(2.5rem, 2.1rem + 2vw, 3rem);
+  --typography-size-700: clamp(3rem, 2.5rem + 2.5vw, 3.5rem);
+  --typography-line-tighter: 1;
+  --typography-line-tight: 1.2;
+  --typography-line-normal: 1.5;
+  --typography-line-wide: 1.8;
+  --typography-measure: 70ch;
+  --typography-font-opsz: 14;
+  --typography-font-slnt: 0;
+  --layout-max-w-s: 40rem;
+  --layout-max-w-m: 60rem;
+  --layout-max-w-l: 72rem;
+  --z-1: 10;
+  --z-2: 100;
+  --z-3: 1000;
+  --space-focus-ring-offset: 2px;
+  --colour-logo-blue: oklch(67.72% 0.1203 183.48deg);
+  --colour-logo-green: oklch(77.86% 0.1387 133.71deg);
+  --colour-logo-yellow: oklch(81.13% 0.1356 85.29deg);
+  --surface-level-0: oklch(100% 0 89.88deg);
+  --surface-level-1: oklch(97.02% 0 89.88deg);
+  --surface-level-2: oklch(100% 0 89.88deg);
+  --surface-level-1-hover: color-mix(
+        in srgb,
+        var(--surface-level-1) 90%,
+        var(--colour-text) 10%
+    );
+  --surface-level-1-active: color-mix(
+        in srgb,
+        var(--surface-level-1) 80%,
+        var(--colour-text) 20%
+    );
+  --colour-text: oklch(17.76% 0 89.88deg);
+  --colour-text-subtle: oklch(54.17% 0 89.88deg);
+  --colour-border: oklch(85.76% 0 89.88deg);
+  --colour-muted: oklch(92.19% 0 89.88deg);
+  --colour-primary: oklch(57.37% 0.1922 268.77deg);
+  --colour-on-primary: oklch(100% 0 89.88deg);
+  --colour-success: oklch(60.56% 0.1436 154.40deg);
+  --colour-warning: oklch(82.53% 0.1709 80.01deg);
+  --colour-danger: oklch(57.85% 0.2063 29.01deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+  --surface-level-0: oklch(13.98% 0 89.88deg);
+  --surface-level-1: oklch(21.78% 0 89.88deg);
+  --surface-level-2: oklch(25.20% 0 89.88deg);
+  --surface-level-1-hover: color-mix(
+        in srgb,
+        var(--surface-level-1) 90%,
+        var(--colour-text) 10%
+    );
+  --surface-level-1-active: color-mix(
+        in srgb,
+        var(--surface-level-1) 80%,
+        var(--colour-text) 20%
+    );
+  --colour-text: oklch(97.02% 0 89.88deg);
+  --colour-text-subtle: oklch(76.68% 0 89.88deg);
+  --colour-border: oklch(32.11% 0 89.88deg);
+  --colour-muted: oklch(28.50% 0 89.88deg);
+  --colour-primary: oklch(76.23% 0.1303 289.41deg);
+  --colour-on-primary: oklch(0% 0 0deg);
+  --colour-success: oklch(79.38% 0.1818 155.76deg);
+  --colour-warning: oklch(86.46% 0.1642 88.17deg);
+  --colour-danger: oklch(71.16% 0.1812 22.84deg);
+  }
+}
+
+:root.dark {
+  --surface-level-0: oklch(13.98% 0 89.88deg);
+  --surface-level-1: oklch(21.78% 0 89.88deg);
+  --surface-level-2: oklch(25.20% 0 89.88deg);
+  --surface-level-1-hover: color-mix(
+        in srgb,
+        var(--surface-level-1) 90%,
+        var(--colour-text) 10%
+    );
+  --surface-level-1-active: color-mix(
+        in srgb,
+        var(--surface-level-1) 80%,
+        var(--colour-text) 20%
+    );
+  --colour-text: oklch(97.02% 0 89.88deg);
+  --colour-text-subtle: oklch(76.68% 0 89.88deg);
+  --colour-border: oklch(32.11% 0 89.88deg);
+  --colour-muted: oklch(28.50% 0 89.88deg);
+  --colour-primary: oklch(76.23% 0.1303 289.41deg);
+  --colour-on-primary: oklch(0% 0 0deg);
+  --colour-success: oklch(79.38% 0.1818 155.76deg);
+  --colour-warning: oklch(86.46% 0.1642 88.17deg);
+  --colour-danger: oklch(71.16% 0.1812 22.84deg);
+}

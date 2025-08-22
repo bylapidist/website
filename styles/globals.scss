@@ -9,5 +9,5 @@
 }
 
 @layer tokens {
-    @include meta.load-css("tokens");
+    @include meta.load-css("tokens.css");
 }

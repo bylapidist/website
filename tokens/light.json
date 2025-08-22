@@ -1,0 +1,34 @@
+{
+    "light": {
+        "surface": {
+            "level-0": { "value": "oklch(100% 0 89.88deg)" },
+            "level-1": { "value": "oklch(97.02% 0 89.88deg)" },
+            "level-2": { "value": "oklch(100% 0 89.88deg)" },
+            "level-1-hover": {
+                "value": "color-mix(\n        in srgb,\n        var(--surface-level-1) 90%,\n        var(--colour-text) 10%\n    )"
+            },
+            "level-1-active": {
+                "value": "color-mix(\n        in srgb,\n        var(--surface-level-1) 80%,\n        var(--colour-text) 20%\n    )"
+            }
+        },
+        "colour": {
+            "text": { "value": "oklch(17.76% 0 89.88deg)" },
+            "text-subtle": { "value": "oklch(54.17% 0 89.88deg)" },
+            "border": { "value": "oklch(85.76% 0 89.88deg)" },
+            "muted": { "value": "oklch(92.19% 0 89.88deg)" },
+            "primary": {
+                "value": "oklch(57.37% 0.1922 268.77deg)",
+                "hover": {
+                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 90%,\n        var(--colour-on-primary) 10%\n    )"
+                },
+                "active": {
+                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
+                }
+            },
+            "on-primary": { "value": "oklch(100% 0 89.88deg)" },
+            "success": { "value": "oklch(60.56% 0.1436 154.40deg)" },
+            "warning": { "value": "oklch(82.53% 0.1709 80.01deg)" },
+            "danger": { "value": "oklch(57.85% 0.2063 29.01deg)" }
+        }
+    }
+}
