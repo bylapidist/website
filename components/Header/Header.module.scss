@@ -52,8 +52,8 @@
 }
 
 .logoLockup {
-    display: flex;
-    flex-direction: column;
+    @include stack(null);
+
     font-family: inherit;
 
     span {
