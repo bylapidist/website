@@ -1,4 +1,5 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import clsx from "clsx";
 
 type VisuallyHiddenProps = {
     children: ReactNode;
@@ -6,25 +7,11 @@ type VisuallyHiddenProps = {
 
 export default function VisuallyHidden({
     children,
-    style,
+    className,
     ...rest
 }: VisuallyHiddenProps) {
     return (
-        <span
-            {...rest}
-            style={{
-                position: "absolute",
-                width: 1,
-                height: 1,
-                padding: 0,
-                margin: -1,
-                overflow: "hidden",
-                clip: "rect(0 0 0 0)",
-                whiteSpace: "nowrap",
-                border: 0,
-                ...style,
-            }}
-        >
+        <span {...rest} className={clsx("visually-hidden", className)}>
             {children}
         </span>
     );
