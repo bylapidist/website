@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "lib": ["ES2022", "WebWorker"],
+        "strict": true,
+        "outDir": "dist-sw",
+        "noEmit": false,
+        "allowJs": false
+    },
+    "include": ["src/sw/sw.ts"],
+    "exclude": []
+}

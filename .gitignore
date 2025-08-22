@@ -18,6 +18,7 @@
 # next.js
 /.next/
 /out/
+/dist-sw/
 
 # production
 /build

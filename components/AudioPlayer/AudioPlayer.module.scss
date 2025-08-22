@@ -92,12 +92,12 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(
-                120deg,
-                var(--colour-logo-blue) 0%,
-                var(--colour-logo-green) 25%,
-                var(--colour-logo-yellow) 50%,
-                var(--colour-logo-green) 75%,
-                var(--colour-logo-blue) 100%
+            120deg,
+            var(--colour-logo-blue) 0%,
+            var(--colour-logo-green) 25%,
+            var(--colour-logo-yellow) 50%,
+            var(--colour-logo-green) 75%,
+            var(--colour-logo-blue) 100%
         );
         background-size: 200% 100%;
         animation: shimmer var(--motion-dur-1000) var(--motion-ease-infinite)

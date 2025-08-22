@@ -3,6 +3,7 @@ import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/globals.scss";
 import Header from "@/components/Header/Header";
 import styles from "./layout.module.scss";
+import SwRegister from "./sw-register";
 
 const header = Lexend_Deca({
     variable: "--font-header",
@@ -293,6 +294,7 @@ export default function RootLayout({
                 </a>
                 <Header />
                 <main id="main">{children}</main>
+                <SwRegister />
             </body>
         </html>
     );

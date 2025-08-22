@@ -28,6 +28,8 @@ export default [
             ".next/**",
             "out/**",
             "next-env.d.ts",
+            "scripts/build-sw.mts",
+            "src/sw/**",
         ],
     },
     ...compat.config({
