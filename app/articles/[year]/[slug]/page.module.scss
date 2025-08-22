@@ -12,7 +12,7 @@
 }
 
 .meta {
-    color: var(--colour-text-subtle);
+    color: var(--colour-text);
     font-size: var(--typography-size-100);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .article :global(ol) {
-    @include grid-stack(var(--space-l));
+    @include grid-stack(var(--space-s));
 }
 
 .article :global(blockquote) {

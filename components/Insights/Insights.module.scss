@@ -17,6 +17,14 @@
     @include cta-group;
 }
 
+.summary {
+    color: var(--colour-text-subtle);
+}
+
+.meta {
+    font-size: var(--typography-size-100);
+}
+
 @container (min-width:50rem) {
     .cards {
         grid-template-columns: repeat(1, 1fr);

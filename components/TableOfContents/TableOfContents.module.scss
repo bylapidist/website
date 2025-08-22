@@ -6,19 +6,20 @@
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
     background: var(--surface-level-1);
-    margin-block: var(--space-xl);
+    margin-block: var(--space-l);
+    margin-block-end: var(--space-3xl);
 
     :where(h2) {
-        margin-bottom: var(--space-l);
+        font-size: var(--typography-size-200);
+        margin-bottom: var(--space-m);
     }
 }
 
 .list {
     margin: 0;
+    font-size: var(--typography-size-100);
 
     @include grid-stack(var(--space-xs));
-
-    font-size: var(--typography-size-100);
 }
 
 .item[data-level="3"] {

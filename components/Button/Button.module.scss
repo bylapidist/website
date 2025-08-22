@@ -17,6 +17,12 @@
     will-change: box-shadow, transform, background;
 }
 
+.button[data-size="sm"] {
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-xs);
+    font-size: var(--typography-size-100);
+}
+
 .button[data-size="lg"] {
     padding-block: var(--space-m);
     padding-inline: var(--space-l);

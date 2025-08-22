@@ -10,7 +10,7 @@ import styles from "./Button.module.scss";
 
 type BaseProps = {
     variant?: "primary" | "secondary";
-    size?: "md" | "lg";
+    size?: "sm" | "md" | "lg";
     className?: string;
     children: ReactNode;
 };

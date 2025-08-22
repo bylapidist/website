@@ -52,7 +52,12 @@ export default async function ArticlePage({
                         {meta.tags.length > 0 && meta.readingTime ? " · " : ""}
                         {meta.readingTime}
                     </p>
-                    {meta.audio && <AudioPlayer src={meta.audio} />}
+                    {meta.audio && (
+                        <AudioPlayer
+                            src={meta.audio}
+                            title="Listen to this article"
+                        />
+                    )}
                     {headings.length > 0 && (
                         <TableOfContents headings={headings} />
                     )}

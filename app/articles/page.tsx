@@ -62,8 +62,8 @@ export default async function ArticlesPage() {
                                 className={styles.cardLink}
                             >
                                 <Card title={title} headingLevel="h2">
-                                    <p>{summary}</p>
-                                    <p>
+                                    <p className={styles.summary}>{summary}</p>
+                                    <p className={styles.meta}>
                                         {formatDate(date)}
                                         {tags.length > 0 || readingTime
                                             ? " · "

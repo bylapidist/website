@@ -17,6 +17,16 @@
     color: inherit;
 }
 
+.summary {
+    color: var(--colour-text-subtle);
+    font-size: var(--typography-size-200);
+}
+
+.meta {
+    color: var(--colour-text);
+    font-size: var(--typography-size-100);
+}
+
 @container (min-width:50rem) {
     .cards {
         grid-template-columns: repeat(1, 1fr);

@@ -20,7 +20,7 @@ export default function Contact() {
                     Book a call
                 </Button>
                 <Button href="/brett-dorrans-cv.pdf" variant="secondary">
-                    Download profile
+                    Download CV
                 </Button>
             </div>
         </Section>

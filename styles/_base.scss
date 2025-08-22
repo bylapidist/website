@@ -57,6 +57,24 @@ svg {
     display: block;
 }
 
+h1 {
+    font-size: var(--typography-size-400);
+}
+
+h2 {
+    font-size: var(--typography-size-300);
+}
+
+h3 {
+    font-size: var(--typography-size-200);
+}
+
+h4,
+h5,
+h6 {
+    font-size: var(--typography-size-100);
+}
+
 :where(h1, h2, h3, h4, h5, h6) {
     font-family: var(--font-header), sans-serif;
     text-wrap: balance;

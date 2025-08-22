@@ -39,8 +39,8 @@ export default function Insights({ articles }: { articles: Article[] }) {
                             className={styles.cardLink}
                         >
                             <Card title={title}>
-                                <p>{summary}</p>
-                                <p>
+                                <p className={styles.summary}>{summary}</p>
+                                <p className={styles.meta}>
                                     {formatDate(date)}
                                     {tags.length > 0 || readingTime
                                         ? " · "
@@ -58,7 +58,7 @@ export default function Insights({ articles }: { articles: Article[] }) {
             </div>
             <div className={styles.cta}>
                 <Button href="/articles" variant="secondary">
-                    All articles
+                    View all articles
                 </Button>
             </div>
         </Section>

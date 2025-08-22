@@ -1,6 +1,13 @@
 "use client";
 
-import { ChangeEvent, SVGProps, useEffect, useRef, useState } from "react";
+import {
+    ChangeEvent,
+    SVGProps,
+    useEffect,
+    useId,
+    useRef,
+    useState,
+} from "react";
 import clsx from "clsx";
 import WaveSurfer from "wavesurfer.js";
 import Button from "@/components/Button/Button";
@@ -21,6 +28,7 @@ export default function AudioPlayer({ src, title }: Props) {
     const [duration, setDuration] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const titleId = useId();
 
     const label = title ? `Audio player for ${title}` : "Audio player";
 
@@ -30,7 +38,7 @@ export default function AudioPlayer({ src, title }: Props) {
             container: waveformRef.current,
             waveColor: "#4d4d4d",
             progressColor: "#87a8ff",
-            height: 44,
+            height: 32,
             barWidth: 2,
             barGap: 1,
             barRadius: 2,
@@ -147,7 +155,12 @@ export default function AudioPlayer({ src, title }: Props) {
     const loadingClasses = clsx(styles.loading, { [styles.loaded]: !loading });
 
     return (
-        <div className={styles.player} role="region" aria-label={label}>
+        <div
+            className={styles.player}
+            role="region"
+            aria-labelledby={title ? titleId : undefined}
+            aria-label={!title ? label : undefined}
+        >
             {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
             <audio
                 ref={audioRef}
@@ -156,7 +169,7 @@ export default function AudioPlayer({ src, title }: Props) {
                 className={styles.native}
                 aria-hidden="true"
             />
-            <p>Listen to this article:</p>
+            {title && <h3 id={titleId}>{title}</h3>}
             <div className={styles.waveformWrapper}>
                 <div ref={waveformRef} className={styles.waveform} />
                 <div className={loadingClasses} />
@@ -167,6 +180,8 @@ export default function AudioPlayer({ src, title }: Props) {
                     aria-pressed={isPlaying}
                     className={styles.play}
                     variant="secondary"
+                    disabled={loading}
+                    size="sm"
                 >
                     {isPlaying ? (
                         <PauseIcon className={styles.icon} />
