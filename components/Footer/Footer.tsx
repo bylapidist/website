@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container/Container";
+import { siteLinks } from "@/lib/site-links";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -8,33 +9,11 @@ export default function Footer() {
             <Container className={styles.footerContainer}>
                 <nav aria-label="Footer">
                     <ul className={styles.footerNav}>
-                        <li>
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link href="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link href="/articles">Articles</Link>
-                        </li>
-                        <li>
-                            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                            <a href="/#services">Services</a>
-                        </li>
-                        <li>
-                            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                            <a href="/#contact">Contact</a>
-                        </li>
-                        <li>
-                            <Link href="/accessibility-statement">
-                                Accessibility Statement
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/ai-ethics-statement">
-                                AI Ethics Statement
-                            </Link>
-                        </li>
+                        {siteLinks.map(({ href, label }) => (
+                            <li key={href}>
+                                <Link href={href}>{label}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 <ul className={styles.social}>
