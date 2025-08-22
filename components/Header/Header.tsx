@@ -1,5 +1,6 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/restrict-template-expressions */
 import { useEffect, useRef, useState } from "react";
 import {
     autoUpdate,
@@ -135,7 +136,16 @@ export default function Header() {
                         <div
                             ref={refs.setFloating}
                             className={styles.menu}
-                            style={{ ...floatingStyles, ...transitionStyles }}
+                            style={{
+                                ...floatingStyles,
+                                ...transitionStyles,
+                                transform: `${floatingStyles.transform ?? ""}${
+                                    floatingStyles.transform &&
+                                    transitionStyles.transform
+                                        ? " "
+                                        : ""
+                                }${transitionStyles.transform ?? ""}`,
+                            }}
                             {...getFloatingProps()}
                         >
                             <nav aria-label="Site">

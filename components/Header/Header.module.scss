@@ -102,14 +102,15 @@
     block-size: var(--border-width-m);
     background: currentcolor;
     border-radius: var(--radius-xs);
+    inset-inline-start: 0;
 }
 
 .burgerIcon::before {
-    transform: translateY(calc(-1 * var(--space-xs)));
+    top: calc(-1 * var(--space-xs));
 }
 
 .burgerIcon::after {
-    transform: translateY(var(--space-xs));
+    top: var(--space-xs);
 }
 
 .burger[data-open] .burgerIcon {
@@ -117,11 +118,13 @@
 }
 
 .burger[data-open] .burgerIcon::before {
-    transform: translateY(0) rotate(45deg);
+    top: 0;
+    transform: rotate(45deg);
 }
 
 .burger[data-open] .burgerIcon::after {
-    transform: translateY(0) rotate(-45deg);
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -130,7 +133,8 @@
     .burgerIcon::after {
         transition:
             transform var(--motion-dur-200) var(--motion-ease-standard),
-            opacity var(--motion-dur-200) var(--motion-ease-standard);
+            opacity var(--motion-dur-200) var(--motion-ease-standard),
+            top var(--motion-dur-200) var(--motion-ease-standard);
     }
 
     .burger {
@@ -149,12 +153,12 @@
 
         .burger:not([data-open]):hover .burgerIcon::before,
         .burger:not([data-open]):focus-visible .burgerIcon::before {
-            transform: translateY(calc(-1 * var(--space-s)));
+            top: calc(-1 * var(--space-s));
         }
 
         .burger:not([data-open]):hover .burgerIcon::after,
         .burger:not([data-open]):focus-visible .burgerIcon::after {
-            transform: translateY(var(--space-s));
+            top: var(--space-s);
         }
     }
 }
