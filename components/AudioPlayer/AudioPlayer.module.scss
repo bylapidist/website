@@ -12,11 +12,11 @@
 
 @keyframes shimmer {
     0% {
-        background-position: -200% 0;
+        background-position: -100% 0;
     }
 
     100% {
-        background-position: 200% 0;
+        background-position: 100% 0;
     }
 }
 
@@ -84,23 +84,26 @@
     cursor: not-allowed;
     z-index: var(--z-2);
     border-radius: var(--radius-xs);
-    mix-blend-mode: color-dodge;
     height: var(--space-xl);
+    opacity: 0.98;
 
     &::before {
         content: "";
         position: absolute;
         inset: 0;
         background: linear-gradient(
-            120deg,
-            var(--surface-level-1) 0%,
-            var(--surface-level-2) 40%,
-            var(--surface-level-1) 80%
+                120deg,
+                var(--colour-logo-blue) 0%,
+                var(--colour-logo-green) 25%,
+                var(--colour-logo-yellow) 50%,
+                var(--colour-logo-green) 75%,
+                var(--colour-logo-blue) 100%
         );
         background-size: 200% 100%;
         animation: shimmer var(--motion-dur-1000) var(--motion-ease-infinite)
             linear;
-        border-radius: var(--radius-m);
+        border-radius: var(--radius-s);
+        box-shadow: var(--shadow-elev-1);
     }
 }
 
