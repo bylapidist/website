@@ -38,7 +38,7 @@ export default function AudioPlayer({ src, title }: Props) {
             container: waveformRef.current,
             waveColor: "#4d4d4d",
             progressColor: "#87a8ff",
-            height: 32,
+            height: 31.59,
             barWidth: 2,
             barGap: 1,
             barRadius: 2,
@@ -169,7 +169,11 @@ export default function AudioPlayer({ src, title }: Props) {
                 className={styles.native}
                 aria-hidden="true"
             />
-            {title && <h2 id={titleId}>{title}</h2>}
+            {title && (
+                <h2 id={titleId} className={styles.title}>
+                    {title}
+                </h2>
+            )}
             <div className={styles.waveformWrapper}>
                 <div ref={waveformRef} className={styles.waveform} />
                 <div className={loadingClasses} />

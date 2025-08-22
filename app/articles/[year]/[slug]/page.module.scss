@@ -35,16 +35,15 @@
 }
 
 .article :global(img) {
-    max-width: 100%;
     border-radius: var(--radius-m);
-    margin: var(--space-m) auto;
+    margin: var(--space-2xl) auto var(--space-xxs);
 }
 
 .article :global(figcaption) {
     @include centered-column;
 
     justify-content: center;
-    padding: var(--space-s);
+    padding: var(--space-l);
 }
 
 .article :global(figcaption p) {
@@ -81,11 +80,8 @@
 }
 
 @container (min-width:50rem) {
+    .article :global(figcaption p),
     .article :global(img) {
-        max-width: 50%;
-    }
-
-    .article :global(figcaption p) {
-        width: 50%;
+        max-width: calc(var(--typography-measure) / 1.5);
     }
 }
