@@ -1,7 +1,15 @@
-@mixin steps {
+@mixin stack($gap: var(--space-m)) {
     display: flex;
     flex-direction: column;
-    gap: var(--space-m);
+
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin steps {
+    @include stack;
+
     counter-reset: step;
 
     li {
@@ -20,9 +28,8 @@
 }
 
 @mixin checklist {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
+    @include stack;
+
     margin-inline-start: var(--space-2xl);
 
     > div {
