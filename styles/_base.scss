@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 *,
 *::before,
 *::after {
@@ -30,8 +32,9 @@ body {
         background-color var(--motion-dur-200) var(--motion-ease-standard),
         color var(--motion-dur-200) var(--motion-ease-standard);
     will-change: background-color, color;
-    display: flex;
-    flex-direction: column;
+
+    @include stack(null);
+
     min-block-size: 100vh;
     font-family: var(--font-body), sans-serif;
     line-height: var(--typography-line-normal);
@@ -39,8 +42,8 @@ body {
 
 main {
     flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
+
+    @include stack(null);
 }
 
 @supports (font-size: clamp(1rem, 1vw, 2rem)) {

@@ -22,9 +22,9 @@
 
 .player {
     position: relative;
-    display: flex;
-    gap: var(--space-xs);
-    flex-direction: column;
+
+    @include stack(var(--space-xs));
+
     margin-block-start: var(--space-l);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
