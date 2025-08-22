@@ -16,7 +16,7 @@
     "scripts": {
         "dev": "npm run build:tokens:watch & next dev --turbopack",
         "start": "npx serve@latest out",
-        "build": "npm run build:tokens && next build",
+        "build": "npm run build:tokens && npm run build:cv && next build",
         "export": "next export",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
         "build:sw": "tsc -p tsconfig.sw.json && tsx scripts/build-sw.mts",
