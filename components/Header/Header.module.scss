@@ -34,7 +34,7 @@
     text-decoration: none;
     color: var(--colour-text);
     font-size: var(--typography-size-200);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-family: var(--font-header), sans-serif;
     transition: color var(--motion-dur-200) var(--motion-ease-standard);
 }

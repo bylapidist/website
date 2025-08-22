@@ -98,6 +98,8 @@
         0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
 
     /* typography */
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
     --typography-size-100: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
     --typography-size-200: clamp(1rem, 0.96rem + 0.3vw, 1.1rem);
     --typography-size-300: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);

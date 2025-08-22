@@ -7,7 +7,7 @@
     cursor: pointer;
     font: inherit;
     font-family: var(--font-header), sans-serif;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
     padding-block: var(--space-s);
     padding-inline: var(--space-m);
