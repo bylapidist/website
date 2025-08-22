@@ -98,6 +98,8 @@
 .burgerIcon::after {
     content: "";
     position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
     inline-size: var(--size-icon-m);
     block-size: var(--border-width-m);
     background: currentcolor;
