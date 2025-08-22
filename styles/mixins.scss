@@ -14,7 +14,7 @@
             content: counter(step) ".";
             position: absolute;
             inset-inline-start: calc(var(--space-l) * -1);
-            font-weight: 600;
+            font-weight: var(--font-weight-semibold);
         }
     }
 }
@@ -33,7 +33,7 @@
             content: "\2713";
             position: absolute;
             inset-inline-start: calc(var(--space-l) * -1);
-            font-weight: 600;
+            font-weight: var(--font-weight-semibold);
             color: var(--colour-success);
         }
 
@@ -44,7 +44,7 @@
         }
 
         dt {
-            font-weight: 600;
+            font-weight: var(--font-weight-semibold);
             font-family: var(--font-header), sans-serif;
             margin-inline-end: var(--space-s);
         }
