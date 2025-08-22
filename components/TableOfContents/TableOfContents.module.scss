@@ -5,6 +5,7 @@
     padding: var(--space-m);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
+    box-shadow: var(--shadow-elev-1);
     background: var(--surface-level-1);
     margin-block: var(--space-l);
     margin-block-end: var(--space-3xl);
@@ -17,8 +18,6 @@
 
 .header {
     @include flex-between(center);
-
-    margin-block-end: var(--space-m);
 }
 
 .toggle {
