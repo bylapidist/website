@@ -16,9 +16,11 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "start": "npx serve@latest out",
-        "build": "npm run build:cv && npm run build:next",
+        "build": "next build",
+        "export": "next export",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
-        "build:next": "next build",
+        "build:sw": "tsc -p tsconfig.sw.json && tsx scripts/build-sw.mts",
+        "build:static": "npm run build && npm run export && npm run build:sw",
         "lint": "npm run lint:js && npm run lint:styles",
         "lint:js": "eslint .",
         "lint:styles": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
@@ -83,6 +85,7 @@
         "stylelint": "16.23.1",
         "stylelint-config-css-modules": "4.5.1",
         "stylelint-config-standard": "39.0.0",
+        "tsx": "4.19.2",
         "typescript": "5.9.2",
         "typescript-eslint": "8.40.0"
     }
