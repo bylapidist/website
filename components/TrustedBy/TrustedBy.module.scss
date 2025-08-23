@@ -15,7 +15,9 @@
 }
 
 .logoLink {
-    display: block;
+    @include inline-center;
+
+    gap: var(--space-xxs);
 
     &:focus-visible {
         outline: var(--border-focus-ring);
