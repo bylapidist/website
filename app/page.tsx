@@ -5,7 +5,6 @@ import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import Insights from "@/components/Insights/Insights";
-import Pledge from "@/components/Pledge/Pledge";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import TrustedBy from "@/components/TrustedBy/TrustedBy";
@@ -55,7 +54,6 @@ export default async function Page() {
             <TrustedBy />
             <WhatIBring />
             <Approach />
-            <Pledge />
             <Services />
             <Testimonials />
             <Insights articles={articles} />

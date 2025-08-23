@@ -8,22 +8,22 @@ export interface Step {
 
 const DEFAULT_STEPS: Step[] = [
     {
-        title: "Assess",
-        description: "deep-dive current UI, tooling, and workflows.",
+        title: "Assess:",
+        description: "Deep-dive current UI, tooling, and workflows.",
     },
     {
-        title: "Align",
-        description: "co-create a roadmap with design and product leads.",
+        title: "Align:",
+        description: "Co-create a roadmap with design and product leads.",
     },
     {
-        title: "Execute",
+        title: "Execute:",
         description:
-            "deliver tokens, components, contracts, and docs iteratively.",
+            "Deliver tokens, components, contracts, and docs iteratively.",
     },
     {
-        title: "Govern",
+        title: "Govern:",
         description:
-            "bake metrics and review loops into CI for sustained quality.",
+            "Bake metrics and review loops into CI for sustained quality.",
     },
 ];
 
@@ -42,6 +42,29 @@ export default function Approach({ steps = DEFAULT_STEPS }: Props) {
                     </li>
                 ))}
             </ol>
+            <details>
+                <summary className={styles.summary}>
+                    View my Accessibility &amp; Performance pledge
+                </summary>
+                <dl className={styles.checklist}>
+                    <div>
+                        <dt>Keyboard-first:</dt>
+                        <dd>Every control works without a mouse.</dd>
+                    </div>
+                    <div>
+                        <dt>Contrast:</dt>
+                        <dd>Minimum 4.5:1 text contrast.</dd>
+                    </div>
+                    <div>
+                        <dt>Fast paint:</dt>
+                        <dd>95th percentile route paint &lt;1.2s.</dd>
+                    </div>
+                    <div>
+                        <dt>Motion aware:</dt>
+                        <dd>Animations off when you prefer less.</dd>
+                    </div>
+                </dl>
+            </details>
         </Section>
     );
 }

@@ -12,6 +12,7 @@
     background: var(--surface-level-1);
     padding: var(--space-l);
     border-radius: var(--radius-l);
+    border: var(--border-width-s) solid var(--colour-border);
 
     @include centered-column;
 

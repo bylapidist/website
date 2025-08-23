@@ -3,6 +3,7 @@
 .card {
     background: var(--surface-level-1);
     border-radius: var(--radius-l);
+    border: var(--border-width-s) solid var(--colour-border);
     padding: var(--space-l);
     box-shadow: var(--shadow-elev-1);
 
