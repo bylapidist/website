@@ -31,6 +31,18 @@ export const AsLink: Story = {
     args: { href: "#" },
 };
 
+export const FullWidth: Story = {
+    args: { fullWidth: true },
+};
+
+export const Disabled: Story = {
+    args: { disabled: true },
+};
+
+export const DisabledLink: Story = {
+    args: { href: "#", disabled: true },
+};
+
 export const WithRef: Story = {
     render: function WithRefStory(args) {
         const ref = useRef<HTMLButtonElement>(null);

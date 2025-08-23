@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import type {
     AnchorHTMLAttributes,
     ButtonHTMLAttributes,
+    MouseEvent,
     ReactNode,
     Ref,
 } from "react";
@@ -13,6 +14,7 @@ type BaseProps = {
     size?: "sm" | "md" | "lg";
     className?: string;
     children: ReactNode;
+    fullWidth?: boolean;
 };
 
 type ButtonProps = BaseProps &
@@ -20,6 +22,7 @@ type ButtonProps = BaseProps &
 type AnchorProps = BaseProps &
     AnchorHTMLAttributes<HTMLAnchorElement> & {
         href: string;
+        disabled?: boolean;
     };
 
 type Props = ButtonProps | AnchorProps;
@@ -32,6 +35,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
             className,
             children,
             href,
+            fullWidth = false,
             ...rest
         },
         ref,
@@ -40,16 +44,34 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         const data = {
             "data-variant": variant,
             "data-size": size,
+            "data-fullwidth": fullWidth ? "true" : undefined,
         } as const;
 
         if (href) {
+            const { disabled, onClick, tabIndex, ...anchorRest } =
+                rest as AnchorHTMLAttributes<HTMLAnchorElement> & {
+                    disabled?: boolean;
+                };
+
+            function handleClick(event: MouseEvent<HTMLAnchorElement>) {
+                if (disabled) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return;
+                }
+                onClick?.(event);
+            }
+
             return (
                 <a
-                    {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+                    {...anchorRest}
                     {...data}
-                    href={href}
+                    href={disabled ? undefined : href}
                     className={classes}
                     ref={ref as Ref<HTMLAnchorElement>}
+                    aria-disabled={disabled || undefined}
+                    tabIndex={disabled ? -1 : tabIndex}
+                    onClick={handleClick}
                 >
                     {children}
                 </a>
