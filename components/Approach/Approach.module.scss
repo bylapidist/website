@@ -1,5 +1,52 @@
 @use "../../styles/mixins" as *;
 
 .steps {
-    @include steps;
+    @include stack(var(--space-l));
+
+    counter-reset: step;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        counter-increment: step;
+        position: relative;
+        padding-inline-start: calc(var(--size-icon-l) + var(--space-s));
+
+        &::before {
+            content: counter(step);
+            position: absolute;
+            inset-inline-start: 0;
+            top: 0;
+            inline-size: var(--size-icon-l);
+            block-size: var(--size-icon-l);
+            border-radius: 50%;
+            background: var(--colour-primary);
+            color: var(--colour-on-primary);
+            font-weight: var(--font-weight-semibold);
+
+            @include inline-center;
+        }
+
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: var(--size-icon-l);
+            inset-inline-start: calc(var(--size-icon-l) / 2);
+            inline-size: 1px;
+            block-size: calc(100% - var(--size-icon-l));
+            background: var(--colour-border);
+        }
+
+        strong {
+            display: block;
+            margin-block-end: var(--space-xs);
+            font-family: var(--font-header), sans-serif;
+            font-weight: var(--font-weight-semibold);
+        }
+
+        p {
+            margin: 0;
+        }
+    }
 }
