@@ -42,7 +42,3 @@
     fill: currentcolor;
     transition: transform var(--motion-dur-320) var(--motion-ease-emphasized);
 }
-
-.toggle[data-theme="dark"] .icon {
-    transform: rotate(180deg);
-}
