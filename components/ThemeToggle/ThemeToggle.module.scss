@@ -29,11 +29,6 @@
         transition: none;
         transform: none;
     }
-
-    :global(html.reducedMotion) & {
-        transition: none;
-        transform: none;
-    }
 }
 
 .icon {
