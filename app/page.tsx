@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Script from "next/script";
 import Approach from "@/components/Approach/Approach";
 import Contact from "@/components/Contact/Contact";
@@ -11,6 +12,28 @@ import TrustedBy from "@/components/TrustedBy/TrustedBy";
 import WhatIBring from "@/components/WhatIBring/WhatIBring";
 import { getAllArticles } from "@/lib/articles";
 import { buildHomePageStructuredData } from "@/lib/structured-data";
+
+const DESCRIPTION =
+    "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.";
+
+export const metadata: Metadata = {
+    description: DESCRIPTION,
+    alternates: { canonical: "/" },
+    openGraph: {
+        title: "Lead Frontend Engineer & Design Systems Specialist | Remote UK",
+        description: DESCRIPTION,
+        url: "/",
+        type: "website",
+        images: [{ url: "/opengraph-image" }],
+        siteName: "Lapidist",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Lead Frontend Engineer & Design Systems Specialist | Remote UK",
+        description: DESCRIPTION,
+        images: ["/twitter-image"],
+    },
+};
 
 export default async function Page() {
     const allArticles = await getAllArticles();
