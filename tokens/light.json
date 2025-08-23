@@ -16,14 +16,12 @@
             "text-subtle": { "value": "oklch(54.17% 0 89.88deg)" },
             "border": { "value": "oklch(85.76% 0 89.88deg)" },
             "muted": { "value": "oklch(92.19% 0 89.88deg)" },
-            "primary": {
-                "value": "oklch(40% 0.17 289.41deg)",
-                "hover": {
-                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 90%,\n        var(--colour-on-primary) 10%\n    )"
-                },
-                "active": {
-                    "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
-                }
+            "primary": { "value": "oklch(40% 0.17 289.41deg)" },
+            "primary-hover": {
+                "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 90%,\n        var(--colour-on-primary) 10%\n    )"
+            },
+            "primary-active": {
+                "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
             },
             "on-primary": { "value": "oklch(100% 0 89.88deg)" },
             "success": { "value": "oklch(60.56% 0.1436 154.40deg)" },
