@@ -1,41 +1,55 @@
-import type { ElementType, ReactNode } from "react";
+import type { ElementType, HTMLAttributes, ReactNode } from "react";
+import { forwardRef } from "react";
 import clsx from "clsx";
 import styles from "./Card.module.scss";
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLElement> {
     as?: ElementType;
-    title: string;
+    heading: ReactNode;
     highlight?: boolean;
     children: ReactNode;
-    headingLevel?: "h2" | "h3" | "h4";
+    headingLevel?: 2 | 3 | 4;
     size?: "md" | "lg";
     className?: string;
     icon?: ReactNode;
 }
 
-export default function Card({
-    as: Component = "article",
-    title,
-    highlight,
-    children,
-    headingLevel = "h3",
-    size = "md",
-    className,
-    icon,
-}: Props) {
-    const Heading = headingLevel as ElementType;
-    const classes = clsx(styles.card, className);
-    return (
-        <Component
-            className={classes}
-            data-highlight={highlight || undefined}
-            data-size={size}
-        >
-            <header className={styles.head}>
-                <Heading>{title}</Heading>
-                {icon}
-            </header>
-            <div className={styles.body}>{children}</div>
-        </Component>
-    );
-}
+const Card = forwardRef<HTMLElement, Props>(
+    (
+        {
+            as: Component = "article",
+            heading,
+            highlight,
+            children,
+            headingLevel = 3,
+            size = "md",
+            className,
+            icon,
+            ...rest
+        },
+        ref,
+    ) => {
+        const Heading = `h${String(headingLevel)}` as unknown as ElementType;
+        const classes = clsx(styles.card, className);
+
+        return (
+            <Component
+                ref={ref}
+                className={classes}
+                data-highlight={highlight || undefined}
+                data-size={size}
+                {...rest}
+            >
+                <header className={styles.head}>
+                    <Heading>{heading}</Heading>
+                    {icon}
+                </header>
+                <div className={styles.body}>{children}</div>
+            </Component>
+        );
+    },
+);
+
+Card.displayName = "Card";
+
+export default Card;

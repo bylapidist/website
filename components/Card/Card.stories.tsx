@@ -5,7 +5,7 @@ const meta = {
     title: "Components/Card",
     component: Card,
     args: {
-        title: "Card title",
+        heading: "Card heading",
         children: "Card content",
     },
 } satisfies Meta<typeof Card>;
@@ -28,17 +28,17 @@ export const LargeHighlighted: Story = {
 };
 
 export const HeadingLevel4: Story = {
-    args: { headingLevel: "h4" },
+    args: { headingLevel: 4 },
 };
 
 export const HeadingLevel4Highlighted: Story = {
-    args: { headingLevel: "h4", highlight: true },
+    args: { headingLevel: 4, highlight: true },
 };
 
 export const LargeHeadingLevel4: Story = {
-    args: { size: "lg", headingLevel: "h4" },
+    args: { size: "lg", headingLevel: 4 },
 };
 
 export const LargeHeadingLevel4Highlighted: Story = {
-    args: { size: "lg", headingLevel: "h4", highlight: true },
+    args: { size: "lg", headingLevel: 4, highlight: true },
 };
