@@ -133,8 +133,8 @@ figure {
     text-decoration: underline;
 }
 
-a[target="_blank"]::after,
-button[target="_blank"]::after {
+a[target="_blank"]:not(.logoLink, [href$=".pdf"])::after,
+button[target="_blank"]:not(.logoLink, [href$=".pdf"])::after {
     content: "";
     display: inline-block;
     inline-size: 1em;
@@ -142,6 +142,18 @@ button[target="_blank"]::after {
     margin-inline-start: var(--space-xxs);
     background-color: currentcolor;
     mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27currentColor%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20stroke%3D%27none%27%20d%3D%27M0%200h24v24H0z%27%20fill%3D%27none%27/%3E%3Cpath%20d%3D%27M12%206h-6a2%202%200%200%200%20-2%202v10a2%202%200%200%200%202%202h10a2%202%200%200%200%202%20-2v-6%27/%3E%3Cpath%20d%3D%27M11%2013l9%20-9%27/%3E%3Cpath%20d%3D%27M15%204h5v5%27/%3E%3C/svg%3E")
+        no-repeat center / contain;
+}
+
+a[href$=".pdf"]:not(.logoLink)::after,
+button[href$=".pdf"]:not(.logoLink)::after {
+    content: "";
+    display: inline-block;
+    inline-size: 1em;
+    block-size: 1em;
+    margin-inline-start: var(--space-xxs);
+    background-color: currentcolor;
+    mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20stroke%3D%22none%22%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M4%2017v2a2%202%200%200%200%202%202h12a2%202%200%200%200%202%20-2v-2%22%20%2F%3E%3Cpath%20d%3D%22M7%2011l5%205l5%20-5%22%20%2F%3E%3Cpath%20d%3D%22M12%204l0%2012%22%20%2F%3E%3C%2Fsvg%3E")
         no-repeat center / contain;
 }
 
