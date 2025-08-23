@@ -1,7 +1,7 @@
 @use "../../styles/mixins" as *;
 
 .article {
-    @include grid-stack(var(--space-sm));
+    @include grid-stack(var(--space-s));
 
     max-inline-size: var(--typography-measure);
 }
