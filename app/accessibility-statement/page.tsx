@@ -19,6 +19,24 @@ export default function AccessibilityStatementPage() {
                     encounter any accessibility barriers or have suggestions,
                     please get in touch so I can improve the experience.
                 </p>
+                <h2>Standards</h2>
+                <p>
+                    This site aims to conform to the Web Content Accessibility
+                    Guidelines (WCAG) 2.1 Level AA. Pages are regularly reviewed
+                    to maintain compliance as content evolves.
+                </p>
+                <h2>High Contrast</h2>
+                <p>
+                    Design and layout are checked with high-contrast modes to
+                    ensure text remains legible and interactive elements are
+                    clearly distinguishable.
+                </p>
+                <h2>Images</h2>
+                <p>
+                    All meaningful images include descriptive alternative text.
+                    Decorative images are either hidden from assistive
+                    technology or omitted entirely.
+                </p>
             </Container>
             <Contact />
             <Footer />
