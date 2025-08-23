@@ -36,7 +36,7 @@
         "preqa": "npm run build",
         "qa": "start-server-and-test start http://localhost:3000 lh:ci",
         "build:tokens": "style-dictionary build --config style-dictionary.config.mjs",
-        "build:tokens:watch": "style-dictionary build --config style-dictionary.config.mjs --watch"
+        "build:tokens:watch": "node scripts/build-tokens-watch.mjs"
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",
