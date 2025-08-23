@@ -8,11 +8,6 @@
     @include card-grid();
 }
 
-.cardLink {
-    text-decoration: none;
-    color: inherit;
-}
-
 .cta {
     @include cta-group;
 }

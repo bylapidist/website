@@ -1,3 +1,4 @@
+import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import styles from "./Approach.module.scss";
 
@@ -36,10 +37,10 @@ export default function Approach({ steps = DEFAULT_STEPS }: Props) {
         <Section id="approach" heading="My approach">
             <ol className={styles.steps}>
                 {steps.map(({ title, description }) => (
-                    <li key={title}>
+                    <Card as="li" key={title} variant="step">
                         <strong>{title}</strong>
                         <p>{description}</p>
-                    </li>
+                    </Card>
                 ))}
             </ol>
             <details>

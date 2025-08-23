@@ -56,26 +56,27 @@ export default async function ArticlesPage() {
                             tags,
                             readingTime,
                         }) => (
-                            <Link
+                            <Card
                                 key={`${year}-${slug}`}
+                                as={Link}
                                 href={`/articles/${year}/${slug}`}
-                                className={styles.cardLink}
+                                heading={title}
+                                headingLevel={2}
+                                variant="link"
                             >
-                                <Card heading={title} headingLevel={2}>
-                                    <p className={styles.summary}>{summary}</p>
-                                    <p className={styles.meta}>
-                                        {formatDate(date)}
-                                        {tags.length > 0 || readingTime
-                                            ? " · "
-                                            : ""}
-                                        {tags.join(", ")}
-                                        {tags.length > 0 && readingTime
-                                            ? " · "
-                                            : ""}
-                                        {readingTime}
-                                    </p>
-                                </Card>
-                            </Link>
+                                <p className={styles.summary}>{summary}</p>
+                                <p className={styles.meta}>
+                                    {formatDate(date)}
+                                    {tags.length > 0 || readingTime
+                                        ? " · "
+                                        : ""}
+                                    {tags.join(", ")}
+                                    {tags.length > 0 && readingTime
+                                        ? " · "
+                                        : ""}
+                                    {readingTime}
+                                </p>
+                            </Card>
                         ),
                     )}
                 </div>

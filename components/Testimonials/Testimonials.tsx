@@ -1,3 +1,4 @@
+import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import styles from "./Testimonials.module.scss";
 
@@ -9,7 +10,7 @@ export default function Testimonials() {
             className={styles.testimonials}
         >
             <div className={styles.cards}>
-                <figure className={styles.card}>
+                <Card as="figure" variant="testimonial">
                     <blockquote>
                         “Brett is as rock solid as they get. He&apos;s a
                         standout professional whose multidimensional skills and
@@ -20,8 +21,8 @@ export default function Testimonials() {
                         <br />
                         Engineering Lead at Wise
                     </figcaption>
-                </figure>
-                <figure className={styles.card}>
+                </Card>
+                <Card as="figure" variant="testimonial">
                     <blockquote>
                         “Brett&apos;s contributions to the design systems team
                         have played a crucial role in planning and creating
@@ -32,7 +33,7 @@ export default function Testimonials() {
                         <br />
                         Senior Engineer at LendInvest
                     </figcaption>
-                </figure>
+                </Card>
             </div>
         </Section>
     );

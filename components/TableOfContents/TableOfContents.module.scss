@@ -3,21 +3,18 @@
 .toc {
     max-inline-size: 40ch;
     padding: var(--space-m);
-    border: var(--border-width-s) solid var(--colour-border);
-    border-radius: var(--radius-m);
-    box-shadow: var(--shadow-elev-1);
-    background: var(--surface-level-1);
     margin-block: var(--space-l);
     margin-block-end: var(--space-3xl);
+
+    header {
+        align-items: center;
+        gap: 0;
+    }
 
     :where(h2) {
         font-size: var(--typography-size-200);
         margin: 0;
     }
-}
-
-.header {
-    @include flex-between(center);
 }
 
 .toggle {
