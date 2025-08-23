@@ -16,7 +16,7 @@ export default function Services() {
         >
             <div className={styles.cards}>
                 <Card
-                    title="Design System Bootstrap"
+                    heading="Design System Bootstrap"
                     icon={<DesignSystemBootstrapIcon className={styles.icon} />}
                 >
                     <p>
@@ -26,7 +26,7 @@ export default function Services() {
                     </p>
                 </Card>
                 <Card
-                    title="System Audit & Roadmap"
+                    heading="System Audit & Roadmap"
                     icon={<SystemAuditRoadmapIcon className={styles.icon} />}
                 >
                     <p>
@@ -35,7 +35,7 @@ export default function Services() {
                     </p>
                 </Card>
                 <Card
-                    title="Hands-on Build"
+                    heading="Hands-on Build"
                     icon={<HandsOnBuildIcon className={styles.icon} />}
                 >
                     <p>
@@ -44,7 +44,7 @@ export default function Services() {
                     </p>
                 </Card>
                 <Card
-                    title="Consulting & Team Uplift"
+                    heading="Consulting & Team Uplift"
                     icon={<ConsultingTeamUpliftIcon className={styles.icon} />}
                 >
                     <p>

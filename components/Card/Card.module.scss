@@ -54,6 +54,7 @@
     @include flex-between(flex-start, var(--space-s));
 }
 
+.head h2,
 .head h3,
 .head h4 {
     margin: 0;
@@ -72,6 +73,7 @@
         padding: var(--space-m);
     }
 
+    .head h2,
     .head h3,
     .head h4 {
         font-size: var(--typography-size-200);
