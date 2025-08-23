@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
 import { formatDate } from "@/lib/date";
+import { Variant } from "@/lib/enums";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default async function ArticlesPage() {
                                 href={`/articles/${year}/${slug}`}
                                 heading={title}
                                 headingLevel={2}
-                                variant="link"
+                                variant={Variant.Link}
                             >
                                 <p className={styles.summary}>{summary}</p>
                                 <p className={styles.meta}>

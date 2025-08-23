@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { Size } from "@/lib/enums";
 import Card from "./Card";
 
 const meta = {
@@ -20,11 +21,11 @@ export const Highlighted: Story = {
 };
 
 export const Large: Story = {
-    args: { size: "lg" },
+    args: { size: Size.Lg },
 };
 
 export const LargeHighlighted: Story = {
-    args: { size: "lg", highlight: true },
+    args: { size: Size.Lg, highlight: true },
 };
 
 export const HeadingLevel4: Story = {
@@ -36,9 +37,9 @@ export const HeadingLevel4Highlighted: Story = {
 };
 
 export const LargeHeadingLevel4: Story = {
-    args: { size: "lg", headingLevel: 4 },
+    args: { size: Size.Lg, headingLevel: 4 },
 };
 
 export const LargeHeadingLevel4Highlighted: Story = {
-    args: { size: "lg", headingLevel: 4, highlight: true },
+    args: { size: Size.Lg, headingLevel: 4, highlight: true },
 };

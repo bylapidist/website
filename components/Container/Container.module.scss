@@ -5,14 +5,14 @@
     container-type: inline-size;
 }
 
-.container[data-size="s"] {
+.container[data-size="sm"] {
     max-width: var(--layout-max-w-s);
 }
 
-.container[data-size="m"] {
+.container[data-size="md"] {
     max-width: var(--layout-max-w-m);
 }
 
-.container[data-size="l"] {
+.container[data-size="lg"] {
     max-width: var(--layout-max-w-l);
 }

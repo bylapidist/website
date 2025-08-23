@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { Size, Variant } from "@/lib/enums";
 import Button from "./Button";
 
 const meta = {
@@ -16,15 +17,15 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Secondary: Story = {
-    args: { variant: "secondary" },
+    args: { variant: Variant.Secondary },
 };
 
 export const Large: Story = {
-    args: { size: "lg" },
+    args: { size: Size.Lg },
 };
 
 export const SecondaryLarge: Story = {
-    args: { variant: "secondary", size: "lg" },
+    args: { variant: Variant.Secondary, size: Size.Lg },
 };
 
 export const AsLink: Story = {

@@ -1,5 +1,6 @@
 import type { CSSProperties, ElementType, ReactNode } from "react";
 import Container from "@/components/Container/Container";
+import { Size } from "@/lib/enums";
 
 interface Props {
     id?: string;
@@ -8,7 +9,7 @@ interface Props {
     headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
     headingClassName?: string;
     className?: string;
-    containerSize?: "s" | "m" | "l";
+    containerSize?: Size;
     style?: CSSProperties;
     /**
      * Enables `content-visibility: auto` for this section.
