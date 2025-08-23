@@ -264,6 +264,15 @@ pre {
     }
 }
 
+html.reducedMotion,
+html.reducedMotion *,
+html.reducedMotion *::before,
+html.reducedMotion *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}
+
 @media print {
     body {
         background: var(--surface-level-0);

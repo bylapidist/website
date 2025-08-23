@@ -8,12 +8,19 @@ export default function usePrefersReducedMotion() {
             "(prefers-reduced-motion: reduce)",
         );
         const handleChange = () => {
-            setPrefersReducedMotion(mediaQuery.matches);
+            const stored = window.localStorage.getItem("reduced-motion");
+            if (stored !== null) {
+                setPrefersReducedMotion(stored === "true");
+            } else {
+                setPrefersReducedMotion(mediaQuery.matches);
+            }
         };
         handleChange();
         mediaQuery.addEventListener("change", handleChange);
+        window.addEventListener("reduced-motion", handleChange);
         return () => {
             mediaQuery.removeEventListener("change", handleChange);
+            window.removeEventListener("reduced-motion", handleChange);
         };
     }, []);
 
