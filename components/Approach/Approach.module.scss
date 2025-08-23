@@ -8,43 +8,6 @@
     margin: 0;
     padding: 0;
     margin-block: var(--space-l);
-
-    li {
-        display: flex;
-        flex-direction: column;
-        counter-increment: step;
-        position: relative;
-        padding: var(--space-m);
-        padding-inline-start: calc(var(--size-icon-l) + var(--space-2xl));
-        border: var(--border-width-s) solid var(--colour-border);
-        border-radius: var(--radius-m);
-        background: var(--surface-level-2);
-        box-shadow: var(--shadow-elev-1);
-
-        &::before {
-            content: counter(step);
-            position: absolute;
-            inset-inline-start: var(--space-m);
-            inline-size: var(--size-icon-l);
-            block-size: var(--size-icon-l);
-            border-radius: var(--radius-m);
-            background: var(--colour-primary);
-            color: var(--colour-on-primary);
-            font-weight: var(--font-weight-semibold);
-
-            @include inline-center;
-        }
-
-        strong {
-            font-family: var(--font-header), sans-serif;
-            font-weight: var(--font-weight-semibold);
-            line-height: var(--typography-line-tight);
-        }
-
-        p {
-            margin: 0;
-        }
-    }
 }
 
 .summary {

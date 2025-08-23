@@ -69,6 +69,61 @@
     font-size: var(--typography-size-200);
 }
 
+.card[data-variant="link"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card[data-variant="testimonial"] {
+    @include centered-column;
+
+    gap: var(--space-m);
+
+    blockquote {
+        margin: 0;
+        font-size: var(--typography-size-200);
+    }
+
+    figcaption {
+        font-size: var(--typography-size-100);
+        color: var(--colour-text);
+    }
+}
+
+.card[data-variant="step"] {
+    padding: var(--space-m);
+    padding-inline-start: calc(var(--size-icon-l) + var(--space-2xl));
+    border-radius: var(--radius-m);
+    background: var(--surface-level-2);
+    position: relative;
+    counter-increment: step;
+    gap: 0;
+
+    &::before {
+        content: counter(step);
+        position: absolute;
+        inset-inline-start: var(--space-m);
+        inline-size: var(--size-icon-l);
+        block-size: var(--size-icon-l);
+        border-radius: var(--radius-m);
+        background: var(--colour-primary);
+        color: var(--colour-on-primary);
+        font-weight: var(--font-weight-semibold);
+
+        @include inline-center;
+    }
+
+    strong {
+        font-family: var(--font-header), sans-serif;
+        font-weight: var(--font-weight-semibold);
+        line-height: var(--typography-line-tight);
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
 @container section (max-width: 40rem) {
     .card {
         padding: var(--space-m);

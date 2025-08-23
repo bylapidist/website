@@ -3,6 +3,7 @@
 import type { FC, SVGProps } from "react";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import Card from "@/components/Card/Card";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import styles from "./TableOfContents.module.scss";
 
@@ -51,9 +52,12 @@ const TableOfContents: FC<Props> = ({ headings }) => {
         : "Expand table of contents";
 
     return (
-        <nav aria-labelledby="toc-heading" className={styles.toc}>
-            <div className={styles.header}>
-                <h2 id="toc-heading">Table of contents</h2>
+        <Card
+            as="nav"
+            aria-labelledby="toc-heading"
+            className={styles.toc}
+            heading={<span id="toc-heading">Table of contents</span>}
+            icon={
                 <button
                     type="button"
                     className={styles.toggle}
@@ -66,7 +70,9 @@ const TableOfContents: FC<Props> = ({ headings }) => {
                     <ChevronIcon className={styles.icon} />
                     <VisuallyHidden>{label}</VisuallyHidden>
                 </button>
-            </div>
+            }
+            headingLevel={2}
+        >
             <div
                 id="toc-list"
                 ref={contentRef}
@@ -87,7 +93,7 @@ const TableOfContents: FC<Props> = ({ headings }) => {
                     ))}
                 </ol>
             </div>
-        </nav>
+        </Card>
     );
 };
 

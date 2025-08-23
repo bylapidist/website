@@ -12,11 +12,6 @@
     @include card-grid();
 }
 
-.cardLink {
-    text-decoration: none;
-    color: inherit;
-}
-
 .summary {
     color: var(--colour-text-subtle);
     font-size: var(--typography-size-200);
