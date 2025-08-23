@@ -6,11 +6,12 @@ import type {
     Ref,
 } from "react";
 import clsx from "clsx";
+import { Size, Variant } from "@/lib/enums";
 import styles from "./Button.module.scss";
 
 type BaseProps = {
-    variant?: "primary" | "secondary";
-    size?: "sm" | "md" | "lg";
+    variant?: Variant.Primary | Variant.Secondary;
+    size?: Size;
     className?: string;
     children: ReactNode;
 };
@@ -27,8 +28,8 @@ type Props = ButtonProps | AnchorProps;
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
     (
         {
-            variant = "primary",
-            size = "md",
+            variant = Variant.Primary,
+            size = Size.Md,
             className,
             children,
             href,

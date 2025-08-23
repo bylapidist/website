@@ -1,5 +1,6 @@
 import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
+import { Variant } from "@/lib/enums";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
@@ -13,13 +14,16 @@ export default function Contact() {
                 <Button href="mailto:hello@lapidist.net">Get in touch</Button>
                 <Button
                     href="https://cal.com/brett-dorrans-l2qjwo"
-                    variant="secondary"
+                    variant={Variant.Secondary}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Book a call
                 </Button>
-                <Button href="/brett-dorrans-cv.pdf" variant="secondary">
+                <Button
+                    href="/brett-dorrans-cv.pdf"
+                    variant={Variant.Secondary}
+                >
                     Download CV
                 </Button>
             </div>

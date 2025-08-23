@@ -1,5 +1,6 @@
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
+import { Variant } from "@/lib/enums";
 import styles from "./Approach.module.scss";
 
 export interface Step {
@@ -37,7 +38,7 @@ export default function Approach({ steps = DEFAULT_STEPS }: Props) {
         <Section id="approach" heading="My approach">
             <ol className={styles.steps}>
                 {steps.map(({ title, description }) => (
-                    <Card as="li" key={title} variant="step">
+                    <Card as="li" key={title} variant={Variant.Step}>
                         <strong>{title}</strong>
                         <p>{description}</p>
                     </Card>

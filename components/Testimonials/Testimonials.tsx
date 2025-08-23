@@ -1,5 +1,6 @@
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
+import { Variant } from "@/lib/enums";
 import styles from "./Testimonials.module.scss";
 
 export default function Testimonials() {
@@ -10,7 +11,7 @@ export default function Testimonials() {
             className={styles.testimonials}
         >
             <div className={styles.cards}>
-                <Card as="figure" variant="testimonial">
+                <Card as="figure" variant={Variant.Testimonial}>
                     <blockquote>
                         “Brett is as rock solid as they get. He&apos;s a
                         standout professional whose multidimensional skills and
@@ -22,7 +23,7 @@ export default function Testimonials() {
                         Engineering Lead at Wise
                     </figcaption>
                 </Card>
-                <Card as="figure" variant="testimonial">
+                <Card as="figure" variant={Variant.Testimonial}>
                     <blockquote>
                         “Brett&apos;s contributions to the design systems team
                         have played a crucial role in planning and creating

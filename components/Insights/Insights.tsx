@@ -3,6 +3,7 @@ import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import { formatDate } from "@/lib/date";
+import { Variant } from "@/lib/enums";
 import styles from "./Insights.module.scss";
 
 type Article = {
@@ -38,7 +39,7 @@ export default function Insights({ articles }: { articles: Article[] }) {
                             as={Link}
                             href={`/articles/${year}/${slug}`}
                             heading={title}
-                            variant="link"
+                            variant={Variant.Link}
                         >
                             <p className={styles.summary}>{summary}</p>
                             <p className={styles.meta}>
@@ -53,7 +54,7 @@ export default function Insights({ articles }: { articles: Article[] }) {
                 )}
             </div>
             <div className={styles.cta}>
-                <Button href="/articles" variant="secondary">
+                <Button href="/articles" variant={Variant.Secondary}>
                     View all articles
                 </Button>
             </div>

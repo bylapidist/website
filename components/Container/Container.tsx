@@ -1,10 +1,11 @@
 import type { ElementType, ReactNode } from "react";
 import clsx from "clsx";
+import { Size } from "@/lib/enums";
 import styles from "./Container.module.scss";
 
 interface Props {
     as?: ElementType;
-    size?: "s" | "m" | "l";
+    size?: Size;
     cq?: "page" | "section";
     className?: string;
     children: ReactNode;
@@ -12,7 +13,7 @@ interface Props {
 
 export default function Container({
     as: Component = "div",
-    size = "m",
+    size = Size.Md,
     cq = "section",
     className,
     children,

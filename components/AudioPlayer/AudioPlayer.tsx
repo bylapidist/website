@@ -12,6 +12,7 @@ import clsx from "clsx";
 import WaveSurfer from "wavesurfer.js";
 import Button from "@/components/Button/Button";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { Size, Variant } from "@/lib/enums";
 import styles from "./AudioPlayer.module.scss";
 
 type Props = {
@@ -183,9 +184,9 @@ export default function AudioPlayer({ src, title }: Props) {
                     onClick={togglePlay}
                     aria-pressed={isPlaying}
                     className={styles.play}
-                    variant="secondary"
+                    variant={Variant.Secondary}
                     disabled={loading}
-                    size="sm"
+                    size={Size.Sm}
                 >
                     {isPlaying ? (
                         <PauseIcon className={styles.icon} />

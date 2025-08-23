@@ -1,6 +1,7 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { forwardRef } from "react";
 import clsx from "clsx";
+import { Size, Variant } from "@/lib/enums";
 import styles from "./Card.module.scss";
 
 interface Props extends HTMLAttributes<HTMLElement> {
@@ -9,10 +10,10 @@ interface Props extends HTMLAttributes<HTMLElement> {
     highlight?: boolean;
     children: ReactNode;
     headingLevel?: 2 | 3 | 4;
-    size?: "md" | "lg";
+    size?: Size.Md | Size.Lg;
     className?: string;
     icon?: ReactNode;
-    variant?: "testimonial" | "link" | "step";
+    variant?: Variant.Testimonial | Variant.Link | Variant.Step;
     href?: string;
 }
 
@@ -24,7 +25,7 @@ const Card = forwardRef<HTMLElement, Props>(
             highlight,
             children,
             headingLevel = 3,
-            size = "md",
+            size = Size.Md,
             className,
             icon,
             variant,
@@ -35,7 +36,7 @@ const Card = forwardRef<HTMLElement, Props>(
         const Heading = `h${String(headingLevel)}` as unknown as ElementType;
         const classes = clsx(styles.card, className);
 
-        if (variant === "testimonial" || variant === "step") {
+        if (variant === Variant.Testimonial || variant === Variant.Step) {
             return (
                 <Component
                     ref={ref}
