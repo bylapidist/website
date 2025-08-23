@@ -3,7 +3,14 @@
 .button {
     @include inline-center;
 
-    border: var(--border-width-s) solid transparent;
+    --button-background: var(--colour-primary);
+    --button-background-hover: var(--colour-primary-hover);
+    --button-background-active: var(--colour-primary-active);
+    --button-color: var(--colour-on-primary);
+    --button-border: transparent;
+    --button-width: auto;
+
+    border: var(--border-width-s) solid var(--button-border);
     cursor: pointer;
     font: inherit;
     font-family: var(--font-header), sans-serif;
@@ -15,6 +22,9 @@
     min-block-size: var(--size-tap-min);
     box-shadow: var(--shadow-elev-1);
     will-change: box-shadow, transform, background;
+    background: var(--button-background);
+    color: var(--button-color);
+    width: var(--button-width);
 }
 
 .button[data-size="sm"] {
@@ -29,60 +39,48 @@
     font-size: var(--typography-size-200);
 }
 
-.button[data-variant="primary"] {
-    background: var(--colour-primary);
-    color: var(--colour-on-primary);
-}
-
 .button[data-variant="secondary"] {
-    background: transparent;
-    color: var(--colour-primary);
-    border-color: var(--colour-primary);
+    --button-background: transparent;
+    --button-background-hover: var(--colour-primary-hover);
+    --button-background-active: var(--colour-primary-active);
+    --button-color: var(--colour-primary);
+    --button-color-hover: var(--colour-on-primary);
+    --button-border: var(--colour-primary);
 }
 
-.button:disabled {
+.button[data-fullwidth="true"] {
+    --button-width: 100%;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
     cursor: not-allowed;
     opacity: 0.6;
 }
 
-.button:not(:disabled):focus-visible {
+.button:not(:is(:disabled, [aria-disabled="true"])):focus-visible {
     box-shadow: var(--shadow-elev-2);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .button:not(:disabled) {
+    .button:not(:is(:disabled, [aria-disabled="true"])) {
         transition:
             background var(--motion-dur-200) var(--motion-ease-standard),
             box-shadow var(--motion-dur-200) var(--motion-ease-standard),
             transform var(--motion-dur-120) var(--motion-ease-emphasized);
     }
 
-    .button:not(:disabled):hover {
+    .button:not(:is(:disabled, [aria-disabled="true"])):hover {
         box-shadow: var(--shadow-elev-2);
         transform: translateY(-1px);
+        background: var(--button-background-hover);
+        color: var(--button-color-hover, var(--button-color));
     }
 
-    .button:not(:disabled)[data-variant="primary"]:hover {
-        background: var(--colour-primary-hover);
-        color: var(--colour-on-primary);
-    }
-
-    .button:not(:disabled)[data-variant="secondary"]:hover {
-        background: var(--colour-primary-hover);
-        color: var(--colour-on-primary);
-    }
-
-    .button:not(:disabled)[data-variant="primary"]:active {
-        background: var(--colour-primary-active);
-    }
-
-    .button:not(:disabled)[data-variant="secondary"]:active {
-        background: var(--colour-primary-active);
-    }
-
-    .button:not(:disabled):active {
+    .button:not(:is(:disabled, [aria-disabled="true"])):active {
         box-shadow: var(--shadow-elev-3);
         transform: translateY(1px);
+        background: var(--button-background-active);
     }
 }
 
@@ -92,7 +90,7 @@
         transform: none;
     }
 
-    .button:not(:disabled):hover {
+    .button:not(:is(:disabled, [aria-disabled="true"])):hover {
         transform: none;
     }
 }
