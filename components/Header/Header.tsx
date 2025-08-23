@@ -22,7 +22,6 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
-import MotionToggle from "@/components/MotionToggle/MotionToggle";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 import { siteLinks } from "@/lib/site-links";
 import usePrefersReducedMotion from "@/lib/use-prefers-reduced-motion";
@@ -125,7 +124,6 @@ export default function Header() {
                     </Link>
                 </nav>
                 <div className={styles.actions}>
-                    <MotionToggle />
                     <ThemeToggle />
                     <button
                         type="button"
