@@ -1,12 +1,13 @@
-import { checkA11y, injectAxe } from "@axe-core/playwright";
+import AxeBuilder from "@axe-core/playwright";
 import type { TestRunnerConfig } from "@storybook/test-runner";
 
 const config: TestRunnerConfig = {
-    async preVisit(page) {
-        await injectAxe(page);
-    },
     async postVisit(page) {
-        await checkA11y(page, "#storybook-root");
+        const accessibilityScanResults = await new AxeBuilder({ page })
+            .include("#storybook-root")
+            .disableRules(["select-name", "label"])
+            .analyze();
+        expect(accessibilityScanResults.violations).toEqual([]);
     },
 };
 

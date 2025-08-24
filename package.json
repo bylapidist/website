@@ -29,7 +29,7 @@
         "fix": "npm run lint:js -- --fix && npm run lint:styles -- --fix && npm run format:write",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "test:storybook": "test-storybook --ci --url file:./storybook-static",
+        "test:storybook": "npm run build-storybook && start-server-and-test 'npx http-server storybook-static -p 6006' http://127.0.0.1:6006 'test-storybook --ci --url http://127.0.0.1:6006'",
         "test": "npm run test:unit && npm run test:e2e",
         "test:unit": "vitest run",
         "test:e2e": "playwright test",
