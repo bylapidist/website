@@ -3,7 +3,7 @@ import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import { formatDate } from "@/lib/date";
-import { Variant } from "@/lib/enums";
+import { Variant } from "@/packages/types";
 import styles from "./Insights.module.scss";
 
 type Article = {

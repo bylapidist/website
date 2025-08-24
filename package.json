@@ -29,13 +29,15 @@
         "fix": "npm run lint:js -- --fix && npm run lint:styles -- --fix && npm run format:write",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
+        "test:storybook": "test-storybook --ci --url file:./storybook-static",
         "test": "playwright test",
         "test:install-browsers": "playwright install --with-deps",
         "lh:ci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
         "qa": "start-server-and-test start http://localhost:3000 lh:ci",
         "build:tokens": "style-dictionary build --config style-dictionary.config.mjs",
-        "build:tokens:watch": "node scripts/build-tokens-watch.mjs"
+        "build:tokens:watch": "node scripts/build-tokens-watch.mjs",
+        "check:props": "tsx scripts/check-props.ts"
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",
@@ -68,6 +70,7 @@
         "@playwright/test": "1.55.0",
         "@storybook/addon-a11y": "9.1.3",
         "@storybook/nextjs": "^9.1.1",
+        "@storybook/test-runner": "^0.23.0",
         "@types/node": "24.3.0",
         "@types/react": "19.1.11",
         "@types/react-dom": "19.1.7",

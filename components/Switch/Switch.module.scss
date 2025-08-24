@@ -1,0 +1,20 @@
+.switch {
+    width: calc(var(--size-icon-md) * 2);
+    height: var(--size-icon-md);
+    accent-color: var(--colour-primary);
+}
+
+.switch[data-size="sm"] {
+    width: calc(var(--size-icon-sm) * 2);
+    height: var(--size-icon-sm);
+}
+
+.switch[data-size="lg"] {
+    width: calc(var(--size-icon-lg) * 2);
+    height: var(--size-icon-lg);
+}
+
+.switch[data-invalid="true"],
+.switch[data-variant="destructive"] {
+    accent-color: var(--colour-destructive);
+}

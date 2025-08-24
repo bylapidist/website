@@ -12,7 +12,7 @@ import clsx from "clsx";
 import WaveSurfer from "wavesurfer.js";
 import Button from "@/components/Button/Button";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
-import { Size, Variant } from "@/lib/enums";
+import { Size, Variant } from "@/packages/types";
 import styles from "./AudioPlayer.module.scss";
 
 type Props = {
@@ -186,7 +186,7 @@ export default function AudioPlayer({ src, title }: Props) {
                     className={styles.play}
                     variant={Variant.Secondary}
                     disabled={loading}
-                    size={Size.Sm}
+                    size={Size.SM}
                 >
                     {isPlaying ? (
                         <PauseIcon className={styles.icon} />
@@ -206,6 +206,9 @@ export default function AudioPlayer({ src, title }: Props) {
                     onChange={handleSliderChange}
                     className={styles.slider}
                     aria-label="Audio progress"
+                    aria-valuemin={0}
+                    aria-valuemax={duration}
+                    aria-valuenow={currentTime}
                 />
                 <span className={styles.time}>
                     <VisuallyHidden>Elapsed time:</VisuallyHidden>

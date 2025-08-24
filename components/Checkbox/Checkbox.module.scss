@@ -1,0 +1,20 @@
+.checkbox {
+    width: var(--size-icon-md);
+    height: var(--size-icon-md);
+    accent-color: var(--colour-primary);
+}
+
+.checkbox[data-size="sm"] {
+    width: var(--size-icon-sm);
+    height: var(--size-icon-sm);
+}
+
+.checkbox[data-size="lg"] {
+    width: var(--size-icon-lg);
+    height: var(--size-icon-lg);
+}
+
+.checkbox[data-invalid="true"],
+.checkbox[data-variant="destructive"] {
+    accent-color: var(--colour-destructive);
+}

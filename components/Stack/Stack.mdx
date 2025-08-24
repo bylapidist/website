@@ -1,0 +1,20 @@
+import { Canvas, Meta, Props, Story } from "@storybook/blocks";
+import Stack from "./Stack";
+import * as StackStories from "./Stack.stories";
+
+<Meta of={StackStories} />
+
+# Stack
+
+Vertical flex container with configurable gap.
+
+<Canvas>
+    <Story name="example">
+        <Stack>
+            <div>One</div>
+            <div>Two</div>
+        </Stack>
+    </Story>
+</Canvas>
+
+<Props of={Stack} />

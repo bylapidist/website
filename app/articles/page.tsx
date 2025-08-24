@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
 import { formatDate } from "@/lib/date";
-import { Variant } from "@/lib/enums";
+import { Variant } from "@/packages/types";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {

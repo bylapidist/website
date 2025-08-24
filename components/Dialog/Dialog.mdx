@@ -1,0 +1,18 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Dialog from "./Dialog";
+import { Playground } from "./Dialog.stories";
+
+<Meta of={Dialog} />
+
+# Dialog
+
+Modal dialog with focus trapping and escape key support.
+
+<Canvas of={Playground} />
+
+## Accessibility contract
+
+- Uses `role="dialog"` and `aria-modal="true"` when open
+- Focus is trapped within the dialog
+- Escape key and clicking the backdrop close the dialog
+- Provide a heading inside and reference it with `aria-labelledby`

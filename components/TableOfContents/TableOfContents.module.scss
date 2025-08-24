@@ -49,8 +49,8 @@
 }
 
 .icon {
-    inline-size: var(--size-icon-m);
-    block-size: var(--size-icon-m);
+    inline-size: var(--size-icon-md);
+    block-size: var(--size-icon-md);
     fill: currentcolor;
     transition: transform var(--motion-dur-320) var(--motion-ease-emphasized);
 }

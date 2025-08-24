@@ -1,10 +1,8 @@
 import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
+import Icon from "@/components/Icon/Icon";
 import Section from "@/components/Section/Section";
-import ConsultingTeamUpliftIcon from "./icons/ConsultingTeamUpliftIcon";
-import DesignSystemBootstrapIcon from "./icons/DesignSystemBootstrapIcon";
-import HandsOnBuildIcon from "./icons/HandsOnBuildIcon";
-import SystemAuditRoadmapIcon from "./icons/SystemAuditRoadmapIcon";
+import { Size } from "@/packages/types";
 import styles from "./Services.module.scss";
 
 export default function Services() {
@@ -17,7 +15,14 @@ export default function Services() {
             <div className={styles.cards}>
                 <Card
                     heading="Design System Bootstrap"
-                    icon={<DesignSystemBootstrapIcon className={styles.icon} />}
+                    icon={
+                        <Icon
+                            name="design-system-bootstrap"
+                            size={Size.XL}
+                            className={styles.icon}
+                            decorative
+                        />
+                    }
                 >
                     <p>
                         Launch a production-ready design system in weeks &ndash;
@@ -27,7 +32,14 @@ export default function Services() {
                 </Card>
                 <Card
                     heading="System Audit & Roadmap"
-                    icon={<SystemAuditRoadmapIcon className={styles.icon} />}
+                    icon={
+                        <Icon
+                            name="system-audit-roadmap"
+                            size={Size.XL}
+                            className={styles.icon}
+                            decorative
+                        />
+                    }
                 >
                     <p>
                         Turn existing assets into a strategic UI architecture
@@ -36,7 +48,14 @@ export default function Services() {
                 </Card>
                 <Card
                     heading="Hands-on Build"
-                    icon={<HandsOnBuildIcon className={styles.icon} />}
+                    icon={
+                        <Icon
+                            name="hands-on-build"
+                            size={Size.XL}
+                            className={styles.icon}
+                            decorative
+                        />
+                    }
                 >
                     <p>
                         Ship resilient foundations without diverting your team
@@ -45,7 +64,14 @@ export default function Services() {
                 </Card>
                 <Card
                     heading="Consulting & Team Uplift"
-                    icon={<ConsultingTeamUpliftIcon className={styles.icon} />}
+                    icon={
+                        <Icon
+                            name="consulting-team-uplift"
+                            size={Size.XL}
+                            className={styles.icon}
+                            decorative
+                        />
+                    }
                 >
                     <p>
                         Raise team capability with ongoing mentorship that lifts

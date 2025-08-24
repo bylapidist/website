@@ -1,0 +1,29 @@
+.heading {
+    font-family: var(--font-header), sans-serif;
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--typography-line-tight);
+}
+
+.heading[data-level="1"] {
+    font-size: var(--typography-size-700);
+}
+
+.heading[data-level="2"] {
+    font-size: var(--typography-size-600);
+}
+
+.heading[data-level="3"] {
+    font-size: var(--typography-size-500);
+}
+
+.heading[data-level="4"] {
+    font-size: var(--typography-size-400);
+}
+
+.heading[data-level="5"] {
+    font-size: var(--typography-size-300);
+}
+
+.heading[data-level="6"] {
+    font-size: var(--typography-size-200);
+}

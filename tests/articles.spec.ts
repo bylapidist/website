@@ -27,3 +27,21 @@ test("article page is accessible", async ({ page }) => {
         .analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
 });
+
+test("table of contents toggles", async ({ page }) => {
+    await page.goto(
+        "/articles/2025/what-recovering-from-a-stroke-at-34-taught-me",
+    );
+    const toggle = page.getByRole("button", {
+        name: "Collapse table of contents",
+    });
+    const list = page.locator('nav[aria-labelledby="toc-heading"] ol');
+    await expect(toggle).toHaveAttribute("aria-expanded", "true");
+    await expect(list).toBeVisible();
+    await toggle.click();
+    const collapsed = page.getByRole("button", {
+        name: "Expand table of contents",
+    });
+    await expect(collapsed).toHaveAttribute("aria-expanded", "false");
+    await expect(list).toBeHidden();
+});

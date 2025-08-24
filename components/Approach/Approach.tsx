@@ -1,6 +1,6 @@
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
-import { Variant } from "@/lib/enums";
+import { Variant } from "@/packages/types";
 import styles from "./Approach.module.scss";
 
 export interface Step {

@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import * as AudioPlayerStories from "./AudioPlayer.stories";
+
+<Meta of={AudioPlayerStories} />
+
+# AudioPlayer
+
+Accessible audio playback component with keyboard controls.
+
+## Keyboard shortcuts
+
+- **Space** or **K** – Toggle play/pause
+- **Arrow Left/Right** – Seek backward/forward
+- **Home/End** – Jump to start/end
+
+<Canvas>
+    <Story of={AudioPlayerStories.Default} />
+</Canvas>

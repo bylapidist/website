@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDisclosure } from "@/components/hooks/useDisclosure";
+import Icon from "@/components/Icon/Icon";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
-import MoonIcon from "./MoonIcon";
-import SunIcon from "./SunIcon";
+import { Size } from "@/packages/types";
 import styles from "./ThemeToggle.module.scss";
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const { isOpen, open, close } = useDisclosure();
 
     useEffect(() => {
         if (typeof window === "undefined") return;
@@ -20,15 +21,25 @@ export default function ThemeToggle() {
             (prefersDark ? "dark" : "light");
         document.documentElement.classList.toggle("dark", initial === "dark");
         document.documentElement.classList.toggle("light", initial === "light");
-        setTheme(initial);
-    }, []);
+        if (initial === "dark") {
+            open();
+        } else {
+            close();
+        }
+    }, [open, close]);
+
+    const theme = isOpen ? "dark" : "light";
 
     function toggle() {
         const next = theme === "dark" ? "light" : "dark";
         document.documentElement.classList.remove(theme);
         document.documentElement.classList.add(next);
         window.localStorage.setItem("theme", next);
-        setTheme(next);
+        if (theme === "dark") {
+            close();
+        } else {
+            open();
+        }
     }
 
     const label =
@@ -40,13 +51,15 @@ export default function ThemeToggle() {
             className={styles.toggle}
             onClick={toggle}
             aria-label={label}
+            aria-pressed={isOpen}
             data-theme={theme}
         >
-            {theme === "dark" ? (
-                <SunIcon className={styles.icon} />
-            ) : (
-                <MoonIcon className={styles.icon} />
-            )}
+            <Icon
+                name={theme === "dark" ? "sun" : "moon"}
+                size={Size.MD}
+                className={styles.icon}
+                decorative
+            />
             <VisuallyHidden>{label}</VisuallyHidden>
         </button>
     );

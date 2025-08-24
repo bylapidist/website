@@ -1,0 +1,21 @@
+import { Canvas, Meta, Props, Story } from "@storybook/blocks";
+import Button from "../Button/Button";
+import ButtonGroup from "./ButtonGroup";
+import * as ButtonGroupStories from "./ButtonGroup.stories";
+
+<Meta of={ButtonGroupStories} />
+
+# ButtonGroup
+
+Horizontal flex container for grouping buttons.
+
+<Canvas>
+    <Story name="example">
+        <ButtonGroup>
+            <Button>A</Button>
+            <Button>B</Button>
+        </ButtonGroup>
+    </Story>
+</Canvas>
+
+<Props of={ButtonGroup} />

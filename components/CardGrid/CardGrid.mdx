@@ -1,0 +1,20 @@
+import { Canvas, Meta, Props, Story } from "@storybook/blocks";
+import CardGrid from "./CardGrid";
+import * as CardGridStories from "./CardGrid.stories";
+
+<Meta of={CardGridStories} />
+
+# CardGrid
+
+Grid layout with default spacing for card collections.
+
+<Canvas>
+    <Story name="example">
+        <CardGrid>
+            <div>One</div>
+            <div>Two</div>
+        </CardGrid>
+    </Story>
+</Canvas>
+
+<Props of={CardGrid} />

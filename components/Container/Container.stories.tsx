@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Size } from "@/lib/enums";
+import { Size } from "@/packages/types";
 import Container from "./Container";
 
 const meta = {
@@ -16,11 +16,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Small: Story = {
-    args: { size: Size.Sm },
+    args: { size: Size.SM },
 };
 
 export const Large: Story = {
-    args: { size: Size.Lg },
+    args: { size: Size.LG },
 };
 
 export const Article: Story = {
@@ -32,9 +32,9 @@ export const Page: Story = {
 };
 
 export const SmallPage: Story = {
-    args: { size: Size.Sm, cq: "page" },
+    args: { size: Size.SM, cq: "page" },
 };
 
 export const LargePage: Story = {
-    args: { size: Size.Lg, cq: "page" },
+    args: { size: Size.LG, cq: "page" },
 };

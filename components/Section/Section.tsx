@@ -1,6 +1,7 @@
-import type { CSSProperties, ElementType, ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Container from "@/components/Container/Container";
-import { Size } from "@/lib/enums";
+import Heading from "@/components/Heading/Heading";
+import type { Size } from "@/packages/types";
 
 interface Props {
     id?: string;
@@ -38,7 +39,6 @@ export default function Section({
     const headingId = heading
         ? (labelledBy ?? (id ? `${id}-heading` : undefined))
         : labelledBy;
-    const HeadingTag = `h${String(headingLevel)}` as ElementType;
 
     return (
         <section
@@ -49,9 +49,13 @@ export default function Section({
         >
             <Container size={containerSize}>
                 {heading && (
-                    <HeadingTag id={headingId} className={headingClassName}>
+                    <Heading
+                        id={headingId}
+                        level={headingLevel}
+                        className={headingClassName}
+                    >
                         {heading}
-                    </HeadingTag>
+                    </Heading>
                 )}
                 {children}
             </Container>

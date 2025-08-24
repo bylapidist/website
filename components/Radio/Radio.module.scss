@@ -1,0 +1,20 @@
+.radio {
+    width: var(--size-icon-md);
+    height: var(--size-icon-md);
+    accent-color: var(--colour-primary);
+}
+
+.radio[data-size="sm"] {
+    width: var(--size-icon-sm);
+    height: var(--size-icon-sm);
+}
+
+.radio[data-size="lg"] {
+    width: var(--size-icon-lg);
+    height: var(--size-icon-lg);
+}
+
+.radio[data-invalid="true"],
+.radio[data-variant="destructive"] {
+    accent-color: var(--colour-destructive);
+}

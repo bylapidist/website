@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Size, Variant } from "@/lib/enums";
+import { sizeArg, variantArg } from "@/components/story-utils/args";
+import { Size, Variant } from "@/packages/types";
 import Button from "./Button";
 
 const meta = {
@@ -8,6 +9,12 @@ const meta = {
     component: Button,
     args: {
         children: "Click me",
+        size: Size.MD,
+        variant: Variant.Primary,
+    },
+    argTypes: {
+        size: sizeArg,
+        variant: variantArg,
     },
 } satisfies Meta<typeof Button>;
 
@@ -21,15 +28,19 @@ export const Secondary: Story = {
 };
 
 export const Large: Story = {
-    args: { size: Size.Lg },
+    args: { size: Size.LG },
 };
 
 export const SecondaryLarge: Story = {
-    args: { variant: Variant.Secondary, size: Size.Lg },
+    args: { variant: Variant.Secondary, size: Size.LG },
 };
 
 export const AsLink: Story = {
     args: { href: "#" },
+};
+
+export const DisabledLink: Story = {
+    args: { href: "#", disabled: true },
 };
 
 export const WithRef: Story = {

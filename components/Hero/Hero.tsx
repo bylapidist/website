@@ -1,6 +1,6 @@
 import Button from "@/components/Button/Button";
 import Section from "@/components/Section/Section";
-import { Size, Variant } from "@/lib/enums";
+import { Size, Variant } from "@/packages/types";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
@@ -15,7 +15,7 @@ export default function Hero() {
         <Section
             className={styles.hero}
             labelledBy="hero-heading"
-            containerSize={Size.Lg}
+            containerSize={Size.LG}
         >
             <div className={styles.availability}>
                 <p>
@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
-                    <Button href="#contact" size={Size.Lg}>
+                    <Button href="#contact" size={Size.LG}>
                         Discuss your frontend roadmap
                     </Button>
                     <p className={styles.note}>Let&apos;s connect.</p>
@@ -76,7 +76,7 @@ export default function Hero() {
                 <div className={styles.cta}>
                     <Button
                         href="/brett-dorrans-cv.pdf"
-                        size={Size.Lg}
+                        size={Size.LG}
                         variant={Variant.Secondary}
                     >
                         Download capabilities deck

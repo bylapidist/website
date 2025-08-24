@@ -49,6 +49,9 @@ jobs:
             - name: Type check
               run: npm run typecheck
 
+            - name: Check props
+              run: npm run check:props
+
             - name: Test
               run: npm test
 
@@ -60,6 +63,9 @@ jobs:
 
             - name: Build Storybook
               run: npm run build-storybook
+
+            - name: Storybook a11y
+              run: npm run test:storybook
 
             - name: Build app
               run: npm run build

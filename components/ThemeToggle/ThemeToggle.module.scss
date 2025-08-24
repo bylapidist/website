@@ -32,8 +32,6 @@
 }
 
 .icon {
-    inline-size: var(--size-icon-m);
-    block-size: var(--size-icon-m);
     fill: currentcolor;
     transition: transform var(--motion-dur-320) var(--motion-ease-emphasized);
 }

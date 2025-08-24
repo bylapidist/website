@@ -92,7 +92,7 @@
 
 .card[data-variant="step"] {
     padding: var(--space-m);
-    padding-inline-start: calc(var(--size-icon-l) + var(--space-2xl));
+    padding-inline-start: calc(var(--size-icon-xl) + var(--space-2xl));
     border-radius: var(--radius-m);
     background: var(--surface-level-2);
     position: relative;
@@ -103,8 +103,8 @@
         content: counter(step);
         position: absolute;
         inset-inline-start: var(--space-m);
-        inline-size: var(--size-icon-l);
-        block-size: var(--size-icon-l);
+        inline-size: var(--size-icon-xl);
+        block-size: var(--size-icon-xl);
         border-radius: var(--radius-m);
         background: var(--colour-primary);
         color: var(--colour-on-primary);
