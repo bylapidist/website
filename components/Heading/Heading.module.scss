@@ -2,6 +2,9 @@
     font-family: var(--font-header), sans-serif;
     font-weight: var(--font-weight-semibold);
     line-height: var(--typography-line-tight);
+    margin-block: 0;
+    margin-block-end: var(--space-xs);
+    max-inline-size: var(--typography-measure);
 }
 
 .heading[data-level="1"] {
@@ -26,4 +29,17 @@
 
 .heading[data-level="6"] {
     font-size: var(--typography-size-200);
+}
+
+.heading + :where(.heading, p, ul, ol, dl, blockquote) {
+    margin-block-start: var(--space-l);
+}
+
+:where(
+        .heading[data-level="1"],
+        .heading[data-level="2"],
+        .heading[data-level="3"]
+    )
+    + p {
+    margin-block-start: var(--space-l);
 }
