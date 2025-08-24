@@ -1,4 +1,3 @@
-import { withInteractions } from "@storybook/addon-interactions";
 import { Decorator, Preview } from "@storybook/nextjs";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "../styles/globals.scss";
@@ -27,7 +26,7 @@ const withFontVariables: Decorator = (Story) => (
     </>
 );
 
-export const decorators: Decorator[] = [withFontVariables, withInteractions];
+export const decorators: Decorator[] = [withFontVariables];
 
 const preview: Preview = {
     parameters: {
