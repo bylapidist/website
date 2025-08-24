@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { sizeArg } from "@/.storybook/args";
 import { Size } from "@/types/props";
 import Icon from "./Icon";
 import { icons } from "./icons";
@@ -15,10 +16,7 @@ const meta = {
             control: { type: "select" },
             options: Object.keys(icons),
         },
-        size: {
-            control: { type: "select" },
-            options: Object.values(Size),
-        },
+        size: sizeArg,
     },
 } satisfies Meta<typeof Icon>;
 

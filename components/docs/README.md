@@ -18,3 +18,4 @@ This folder houses shared documentation for Storybook and design guidelines.
 - `use-disclosure.mdx` – guidance for the `useDisclosure` hook.
 - `icon-policy.mdx` – rules for using the shared `<Icon />` component.
 - `Tokens.mdx` – catalogue of design tokens.
+- `token-a11y.mdx` – token usage and accessibility best practices.
