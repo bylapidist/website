@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
 import Heading from "@/components/Heading/Heading";
 import Section from "@/components/Section/Section";
 import styles from "./page.module.scss";
@@ -116,8 +114,6 @@ export default function AboutPage() {
                     </p>
                 </div>
             </Section>
-            <Contact />
-            <Footer />
         </>
     );
 }

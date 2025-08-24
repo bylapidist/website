@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "@/components/Card/Card";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
 import { formatDate } from "@/lib/date";
@@ -82,8 +80,6 @@ export default async function ArticlesPage() {
                     )}
                 </div>
             </Section>
-            <Contact />
-            <Footer />
         </>
     );
 }

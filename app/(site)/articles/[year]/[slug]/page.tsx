@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import TableOfContents from "@/components/TableOfContents/TableOfContents";
 import { getAllArticles, getArticle } from "@/lib/articles";
@@ -67,8 +65,6 @@ export default async function ArticlePage({
                     <Link href="/articles">Return to articles</Link>
                 </p>
             </Section>
-            <Contact />
-            <Footer />
         </>
     );
 }

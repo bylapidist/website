@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Contact from "@/components/Contact/Contact";
 import Container from "@/components/Container/Container";
-import Footer from "@/components/Footer/Footer";
 import Heading from "@/components/Heading/Heading";
 
 export const metadata: Metadata = {
@@ -39,8 +37,6 @@ export default function AccessibilityStatementPage() {
                     technology or omitted entirely.
                 </p>
             </Container>
-            <Contact />
-            <Footer />
         </>
     );
 }
