@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import Heading from "@/components/Heading/Heading";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
     title: "Accessibility Statement",
     description: "Commitment to an accessible web experience.",
-    alternates: { canonical: "/accessibility-statement" },
-};
+    canonical: "/accessibility-statement",
+});
 
 export default function AccessibilityStatementPage() {
     return (

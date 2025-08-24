@@ -1,34 +1,18 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "@/components/Card/Card";
 import Section from "@/components/Section/Section";
 import { getAllArticles } from "@/lib/articles";
 import { formatDate } from "@/lib/date";
+import { buildMetadata } from "@/lib/metadata";
 import { Variant } from "@/types";
 import styles from "./page.module.scss";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
     title: "Articles",
     description:
         "Articles and insights on front-end engineering and design systems.",
-    alternates: { canonical: "/articles" },
-    openGraph: {
-        title: "Articles",
-        description:
-            "Articles and insights on front-end engineering and design systems.",
-        url: "/articles",
-        type: "website",
-        images: [{ url: "/opengraph-image" }],
-        siteName: "Lapidist",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Articles",
-        description:
-            "Articles and insights on front-end engineering and design systems.",
-        images: ["/twitter-image"],
-    },
-};
+    canonical: "/articles",
+});
 
 export default async function ArticlesPage() {
     const articles = await getAllArticles();

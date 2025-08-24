@@ -1,31 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Heading from "@/components/Heading/Heading";
 import Section from "@/components/Section/Section";
+import { buildMetadata } from "@/lib/metadata";
 import styles from "./page.module.scss";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
     title: "About",
     description:
         "Brett Dorrans' journey as a frontend engineer and design systems specialist.",
-    alternates: { canonical: "/about" },
-    openGraph: {
-        title: "About",
-        description:
-            "Brett Dorrans' journey as a frontend engineer and design systems specialist.",
-        url: "/about",
-        type: "website",
-        images: [{ url: "/opengraph-image" }],
-        siteName: "Lapidist",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "About",
-        description:
-            "Brett Dorrans' journey as a frontend engineer and design systems specialist.",
-        images: ["/twitter-image"],
-    },
-};
+    canonical: "/about",
+});
 
 export default function AboutPage() {
     return (
