@@ -6,10 +6,16 @@ import * as StackStories from "./Stack.stories";
 
 # Stack
 
-Vertical flex container with configurable gap.
+Flex container with configurable gap and orientation.
 
 <Canvas>
     <Story name="example">
+        <Stack orientation="horizontal">
+            <div>One</div>
+            <div>Two</div>
+        </Stack>
+    </Story>
+    <Story name="vertical">
         <Stack>
             <div>One</div>
             <div>Two</div>
