@@ -5,12 +5,14 @@ import styles from "./Stack.module.scss";
 interface Props extends HTMLAttributes<HTMLElement> {
     as?: ElementType;
     gap?: string;
+    orientation?: "vertical" | "horizontal";
     children: ReactNode;
 }
 
 export default function Stack({
     as: Component = "div",
     gap,
+    orientation = "vertical",
     className,
     children,
     ...rest
@@ -20,7 +22,13 @@ export default function Stack({
         : undefined;
     return (
         <Component
-            className={clsx(styles.stack, className)}
+            className={clsx(
+                styles.stack,
+                orientation === "horizontal"
+                    ? styles.horizontal
+                    : styles.vertical,
+                className,
+            )}
             style={style}
             {...rest}
         >

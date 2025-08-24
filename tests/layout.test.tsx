@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import Button from "@/components/Button/Button";
-import ButtonGroup from "@/components/ButtonGroup/ButtonGroup";
 import CardGrid from "@/components/CardGrid/CardGrid";
 import Grid from "@/components/Grid/Grid";
 import Stack from "@/components/Stack/Stack";
@@ -37,12 +36,12 @@ test("card grid renders children", () => {
     expect(screen.getByTestId("card-grid").children.length).toBe(2);
 });
 
-test("button group wraps buttons", () => {
+test("horizontal stack wraps buttons", () => {
     render(
-        <ButtonGroup data-testid="button-group">
+        <Stack data-testid="button-group" orientation="horizontal">
             <Button>A</Button>
             <Button>B</Button>
-        </ButtonGroup>,
+        </Stack>,
     );
     expect(screen.getByTestId("button-group").children.length).toBe(2);
 });
