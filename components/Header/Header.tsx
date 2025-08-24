@@ -21,10 +21,10 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
-import { useDisclosure } from "@/components/hooks/useDisclosure";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
+import { useDisclosure } from "@/hooks/useDisclosure";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { siteLinks } from "@/lib/site-links";
-import usePrefersReducedMotion from "@/lib/use-prefers-reduced-motion";
 import styles from "./Header.module.scss";
 import LogoMark from "./LogoMark";
 
