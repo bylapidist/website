@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { useDisclosure } from "@/components/hooks/useDisclosure";
+import { useDisclosure } from "@/hooks/useDisclosure";
 
 function Disclosure() {
     const { isOpen, open } = useDisclosure();

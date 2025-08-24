@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { useDisclosure } from "@/components/hooks/useDisclosure";
 import Icon from "@/components/Icon/Icon";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { useDisclosure } from "@/hooks/useDisclosure";
 import { Size } from "@/packages/types";
 import styles from "./ThemeToggle.module.scss";
 

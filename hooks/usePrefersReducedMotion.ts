@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function usePrefersReducedMotion() {
+export function usePrefersReducedMotion() {
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
     useEffect(() => {

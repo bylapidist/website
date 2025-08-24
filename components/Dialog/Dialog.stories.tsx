@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import Heading from "@/components/Heading/Heading";
-import { useDisclosure } from "../hooks/useDisclosure";
+import { useDisclosure } from "@/hooks/useDisclosure";
 import Dialog from "./Dialog";
 
 const meta = {
