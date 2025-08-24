@@ -4,8 +4,8 @@ import type { FC, SVGProps } from "react";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Card from "@/components/Card/Card";
-import { useDisclosure } from "@/components/hooks/useDisclosure";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { useDisclosure } from "@/hooks/useDisclosure";
 import styles from "./TableOfContents.module.scss";
 
 export type TableOfContentsHeading = {
