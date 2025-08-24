@@ -1,6 +1,7 @@
 "use client";
 
 import Dialog from "@/components/Dialog/Dialog";
+import Heading from "@/components/Heading/Heading";
 import { useDisclosure } from "@/components/hooks/useDisclosure";
 
 export default function Page() {
@@ -11,7 +12,9 @@ export default function Page() {
                 Open dialog
             </button>
             <Dialog open={isOpen} onClose={close} aria-labelledby="test-title">
-                <h2 id="test-title">Test dialog</h2>
+                <Heading level={2} id="test-title">
+                    Test dialog
+                </Heading>
                 <p>Content</p>
                 <button onClick={close} data-testid="close">
                     Close

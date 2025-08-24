@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Contact from "@/components/Contact/Contact";
 import Container from "@/components/Container/Container";
 import Footer from "@/components/Footer/Footer";
+import Heading from "@/components/Heading/Heading";
 
 export const metadata: Metadata = {
     title: "AI Ethics Statement",
@@ -13,7 +14,7 @@ export default function AIEthicsStatementPage() {
     return (
         <>
             <Container as="section">
-                <h1>AI Ethics Statement</h1>
+                <Heading level={1}>AI Ethics Statement</Heading>
                 <p>
                     I use artificial intelligence to edit articles and generate
                     code throughout this site. The following principles guide

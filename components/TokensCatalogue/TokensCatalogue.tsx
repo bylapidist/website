@@ -1,3 +1,4 @@
+import Heading from "@/components/Heading/Heading";
 import baseTokens from "@/tokens/base.json";
 import lightTokens from "@/tokens/light.json";
 import styles from "./TokensCatalogue.module.scss";
@@ -40,7 +41,7 @@ export default function TokensCatalogue() {
     return (
         <div className={styles.wrapper}>
             <section>
-                <h2>Colours</h2>
+                <Heading level={2}>Colours</Heading>
                 <ul className={styles.list}>
                     {colours.map((t) => (
                         <li key={t.var} className={styles.item}>
@@ -55,7 +56,7 @@ export default function TokensCatalogue() {
                 </ul>
             </section>
             <section>
-                <h2>Icon sizes</h2>
+                <Heading level={2}>Icon sizes</Heading>
                 <ul className={styles.list}>
                     {icons.map((t) => (
                         <li key={t.var} className={styles.item}>
