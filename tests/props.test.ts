@@ -1,7 +1,6 @@
-import { expect, test } from "@playwright/test";
 import { Size, Variant } from "../packages/types/props";
 
-test.describe("shared prop enums", () => {
+describe("shared prop enums", () => {
     test("size enum values", () => {
         expect(Object.values(Size)).toEqual(["xs", "sm", "md", "lg", "xl"]);
     });

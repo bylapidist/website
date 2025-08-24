@@ -1,5 +1,5 @@
-import { test } from "@playwright/test";
 import { RuleTester } from "eslint";
+import { test } from "vitest";
 import rule from "../.eslint/custom-rules/no-ad-hoc-props.mjs";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
