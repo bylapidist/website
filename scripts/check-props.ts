@@ -64,7 +64,12 @@ async function scanProps(root: string) {
     const extensions = [".ts", ".tsx"];
     const files = await collectFiles(root, extensions, ignore);
 
-    const enumsFile = path.join(root, "packages", "types", "props.ts");
+    let enumsFile = path.join(root, "types", "props.ts");
+    try {
+        await fs.access(enumsFile);
+    } catch {
+        enumsFile = path.join(root, "packages", "types", "props.ts");
+    }
     const sizeEnum = await loadEnum(enumsFile, "Size");
     const variantEnum = await loadEnum(enumsFile, "Variant");
 
