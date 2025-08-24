@@ -24,7 +24,7 @@ function replaceEnums(content: string): string {
     let result = content;
 
     // update import path
-    result = result.replace(/@\/lib\/enums/g, "@/packages/types");
+    result = result.replace(/@\/lib\/enums/g, "@/types");
 
     // normalise Size enum members
     result = result
@@ -56,7 +56,7 @@ function replaceEnums(content: string): string {
 function ensureImports(content: string): string {
     const needsSize = content.includes("Size.");
     const needsVariant = content.includes("Variant.");
-    const importRegex = /import\s+{([^}]+)}\s+from\s+"@\/packages\/types";/;
+    const importRegex = /import\s+{([^}]+)}\s+from\s+"@\/types";/;
     const match = content.match(importRegex);
     if (match) {
         const names = match[1]
@@ -68,14 +68,14 @@ function ensureImports(content: string): string {
         else set.delete("Size");
         if (needsVariant) set.add("Variant");
         else set.delete("Variant");
-        const updated = `import { ${Array.from(set).sort().join(", ")} } from "@/packages/types";`;
+        const updated = `import { ${Array.from(set).sort().join(", ")} } from "@/types";`;
         return content.replace(importRegex, updated);
     }
     const names: string[] = [];
     if (needsSize) names.push("Size");
     if (needsVariant) names.push("Variant");
     if (names.length === 0) return content;
-    const importLine = `import { ${names.join(", ")} } from "@/packages/types";`;
+    const importLine = `import { ${names.join(", ")} } from "@/types";`;
     const lines = content.split("\n");
     let lastImport = -1;
     for (let i = 0; i < lines.length; i++) {

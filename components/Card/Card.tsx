@@ -2,7 +2,7 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { forwardRef } from "react";
 import clsx from "clsx";
 import Heading from "@/components/Heading/Heading";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Card.module.scss";
 
 interface Props extends HTMLAttributes<HTMLElement> {

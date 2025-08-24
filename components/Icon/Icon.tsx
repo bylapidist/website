@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 import clsx from "clsx";
-import { Size, type WithSize } from "@/packages/types/props";
+import { Size, type WithSize } from "@/types/props";
 import styles from "./Icon.module.scss";
 import { icons, type IconName } from "./icons";
 

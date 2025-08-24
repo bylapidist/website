@@ -1,7 +1,7 @@
 import Button from "@/components/Button/Button";
 import Heading from "@/components/Heading/Heading";
 import Section from "@/components/Section/Section";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {

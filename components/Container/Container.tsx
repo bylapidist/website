@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode } from "react";
 import clsx from "clsx";
-import { Size } from "@/packages/types";
+import { Size } from "@/types";
 import styles from "./Container.module.scss";
 
 interface Props {

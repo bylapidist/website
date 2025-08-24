@@ -1,4 +1,4 @@
-import { Size, Variant } from "../packages/types/props";
+import { Size, Variant } from "@/types/props";
 
 describe("shared prop enums", () => {
     test("size enum values", () => {

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import type { InputHTMLAttributes } from "react";
 import clsx from "clsx";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Input.module.scss";
 
 type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "size"> & {

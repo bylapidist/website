@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { sizeArg, variantArg } from "@/components/story-utils/args";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import Switch from "./Switch";
 
 const meta: Meta<typeof Switch> = {

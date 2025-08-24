@@ -13,7 +13,7 @@ import WaveSurfer from "wavesurfer.js";
 import Button from "@/components/Button/Button";
 import Heading from "@/components/Heading/Heading";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./AudioPlayer.module.scss";
 
 type Props = {

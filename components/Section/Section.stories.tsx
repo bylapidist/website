@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Size } from "@/packages/types";
+import { Size } from "@/types";
 import Section from "./Section";
 
 const meta = {

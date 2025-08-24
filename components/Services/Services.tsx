@@ -2,7 +2,7 @@ import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
 import Icon from "@/components/Icon/Icon";
 import Section from "@/components/Section/Section";
-import { Size } from "@/packages/types";
+import { Size } from "@/types";
 import styles from "./Services.module.scss";
 
 export default function Services() {

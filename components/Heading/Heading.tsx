@@ -1,7 +1,7 @@
 import type { ElementType, ReactNode } from "react";
 import { useId } from "react";
 import clsx from "clsx";
-import type { PolymorphicProps } from "@/packages/types";
+import type { PolymorphicProps } from "@/types";
 import styles from "./Heading.module.scss";
 
 export type HeadingProps<As extends ElementType> = PolymorphicProps<

@@ -1,4 +1,4 @@
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 
 export const enumControl = (e: Record<string, string>) =>
     ({

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Size } from "@/packages/types/props";
+import { Size } from "@/types/props";
 import Icon from "./Icon";
 import { icons } from "./icons";
 
