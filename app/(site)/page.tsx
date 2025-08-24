@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Approach from "@/components/Approach/Approach";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import Insights from "@/components/Insights/Insights";
 import Services from "@/components/Services/Services";
@@ -57,8 +55,6 @@ export default async function Page() {
             <Services />
             <Testimonials />
             <Insights articles={articles} />
-            <Contact />
-            <Footer />
         </>
     );
 }
