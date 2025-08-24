@@ -11,6 +11,7 @@ import {
 import clsx from "clsx";
 import WaveSurfer from "wavesurfer.js";
 import Button from "@/components/Button/Button";
+import Heading from "@/components/Heading/Heading";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import { Size, Variant } from "@/packages/types";
 import styles from "./AudioPlayer.module.scss";
@@ -171,9 +172,9 @@ export default function AudioPlayer({ src, title }: Props) {
                 aria-hidden="true"
             />
             {title && (
-                <h2 id={titleId} className={styles.title}>
+                <Heading level={2} id={titleId} className={styles.title}>
                     {title}
-                </h2>
+                </Heading>
             )}
             <div className={styles.waveformWrapper}>
                 <div ref={waveformRef} className={styles.waveform} />

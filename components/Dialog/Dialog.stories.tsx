@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import Heading from "@/components/Heading/Heading";
 import { useDisclosure } from "../hooks/useDisclosure";
 import Dialog from "./Dialog";
 
@@ -23,7 +24,9 @@ export const Playground: Story = {
                     onClose={close}
                     aria-labelledby="dialog-title"
                 >
-                    <h2 id="dialog-title">Example dialog</h2>
+                    <Heading level={2} id="dialog-title">
+                        Example dialog
+                    </Heading>
                     <p>Content</p>
                     <button onClick={close} data-testid="close">
                         Close

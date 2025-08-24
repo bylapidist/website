@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
+import Heading from "@/components/Heading/Heading";
 import Section from "@/components/Section/Section";
 import styles from "./page.module.scss";
 
@@ -58,7 +59,7 @@ export default function AboutPage() {
                         frontend platforms that scale with the business and
                         protect against the hidden costs of technical debt.
                     </p>
-                    <h2>Career highlights</h2>
+                    <Heading level={2}>Career highlights</Heading>
                     <ul>
                         <li>
                             15+ years building and architecting frontends that
@@ -82,7 +83,7 @@ export default function AboutPage() {
                             guiding a team, embedding practices that last.
                         </li>
                     </ul>
-                    <h2>Engineering philosophy</h2>
+                    <Heading level={2}>Engineering philosophy</Heading>
                     <p>
                         In October 2021, at 34, I suffered a cerebellar stroke.
                         Recovery forced me to slow down, rethink, and rebuild -

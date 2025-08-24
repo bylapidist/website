@@ -1,4 +1,5 @@
 import Button from "@/components/Button/Button";
+import Heading from "@/components/Heading/Heading";
 import Section from "@/components/Section/Section";
 import { Size, Variant } from "@/packages/types";
 import styles from "./Hero.module.scss";
@@ -25,7 +26,11 @@ export default function Hero() {
             </div>
 
             <div className={styles.ctaGroup}>
-                <h1 id="hero-heading" className={styles.heroTitle}>
+                <Heading
+                    level={1}
+                    id="hero-heading"
+                    className={styles.heroTitle}
+                >
                     Lead Frontend Engineer. Crafting{" "}
                     <span className={styles.underline}>
                         resilient
@@ -60,7 +65,7 @@ export default function Hero() {
                         </svg>
                     </span>{" "}
                     design systems.
-                </h1>
+                </Heading>
                 <p className={styles.heroIntro}>
                     I build design systems and frontend platforms that cut
                     rework, lift accessibility, and accelerate delivery.
