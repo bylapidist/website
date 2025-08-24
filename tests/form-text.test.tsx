@@ -1,9 +1,11 @@
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Input from "@/components/Input/Input";
 import Select from "@/components/Select/Select";
 import Textarea from "@/components/Textarea/Textarea";
 
-export default function Page() {
-    return (
+test("text inputs link labels and errors", async () => {
+    render(
         <form>
             <label htmlFor="name">Name</label>
             <Input id="name" data-testid="input" />
@@ -24,6 +26,12 @@ export default function Page() {
                 aria-describedby="error-msg"
             />
             <p id="error-msg">Required</p>
-        </form>
+        </form>,
     );
-}
+    const user = userEvent.setup();
+    await user.click(screen.getByText("Name"));
+    expect(screen.getByTestId("input")).toHaveFocus();
+    const invalid = screen.getByTestId("invalid");
+    expect(invalid).toHaveAttribute("aria-invalid", "true");
+    expect(invalid).toHaveAttribute("aria-describedby", "error-msg");
+});
