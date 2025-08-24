@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 import { forwardRef } from "react";
 import type { InputHTMLAttributes } from "react";
 import clsx from "clsx";
@@ -30,6 +31,7 @@ const Radio = forwardRef<HTMLInputElement, Props>(
                 data-size={size}
                 data-variant={variant}
                 data-invalid={invalid ? "true" : undefined}
+                aria-invalid={invalid || undefined}
             />
         );
     },
