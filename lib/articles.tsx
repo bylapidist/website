@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { cache } from "react";
+import { cache, type ComponentPropsWithoutRef, type ReactNode } from "react";
 import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
 import type { Heading as MdastHeading, Root } from "mdast";
@@ -11,6 +11,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import readingTime from "remark-reading-time";
 import { visit } from "unist-util-visit";
+import Heading from "@/components/Heading/Heading";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 
@@ -61,8 +62,29 @@ export const getArticle = cache(async (year: string, slug: string) => {
             data.hProperties = props;
         });
     };
+    const headingComponents = {
+        h1: (
+            props: ComponentPropsWithoutRef<"h1"> & { children: ReactNode },
+        ) => <Heading level={1} {...props} />,
+        h2: (
+            props: ComponentPropsWithoutRef<"h2"> & { children: ReactNode },
+        ) => <Heading level={2} {...props} />,
+        h3: (
+            props: ComponentPropsWithoutRef<"h3"> & { children: ReactNode },
+        ) => <Heading level={3} {...props} />,
+        h4: (
+            props: ComponentPropsWithoutRef<"h4"> & { children: ReactNode },
+        ) => <Heading level={4} {...props} />,
+        h5: (
+            props: ComponentPropsWithoutRef<"h5"> & { children: ReactNode },
+        ) => <Heading level={5} {...props} />,
+        h6: (
+            props: ComponentPropsWithoutRef<"h6"> & { children: ReactNode },
+        ) => <Heading level={6} {...props} />,
+    };
     const { content: MDXContent } = await compileMDX({
         source: content,
+        components: headingComponents,
         options: {
             mdxOptions: {
                 remarkPlugins: [remarkGfm, headingPlugin],
