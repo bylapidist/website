@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Icon from "@/components/Icon/Icon";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import { useDisclosure } from "@/hooks/useDisclosure";
-import { Size } from "@/packages/types";
+import { Size } from "@/types";
 import styles from "./ThemeToggle.module.scss";
 
 export default function ThemeToggle() {

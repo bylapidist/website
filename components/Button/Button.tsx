@@ -8,7 +8,7 @@ import type {
     Ref,
 } from "react";
 import clsx from "clsx";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Button.module.scss";
 
 type BaseProps = {

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import type { SelectHTMLAttributes } from "react";
 import clsx from "clsx";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Select.module.scss";
 
 type Props = Omit<SelectHTMLAttributes<HTMLSelectElement>, "size"> & {

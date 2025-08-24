@@ -1,7 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import Container from "@/components/Container/Container";
 import Heading from "@/components/Heading/Heading";
-import type { Size } from "@/packages/types";
+import type { Size } from "@/types";
 
 interface Props {
     id?: string;

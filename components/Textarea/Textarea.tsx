@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import type { TextareaHTMLAttributes } from "react";
 import clsx from "clsx";
-import { Size, Variant } from "@/packages/types";
+import { Size, Variant } from "@/types";
 import styles from "./Textarea.module.scss";
 
 type Props = TextareaHTMLAttributes<HTMLTextAreaElement> & {
