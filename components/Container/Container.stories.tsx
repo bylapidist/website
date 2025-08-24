@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { sizeArg } from "@/.storybook/args";
 import { Size } from "@/types";
 import Container from "./Container";
 
@@ -7,6 +8,9 @@ const meta = {
     component: Container,
     args: {
         children: "Container content",
+    },
+    argTypes: {
+        size: sizeArg,
     },
 } satisfies Meta<typeof Container>;
 

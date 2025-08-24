@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { sizeArg, variantArg } from "@/components/story-utils/args";
+import { sizeArg, variantArg } from "@/.storybook/args";
 import { Size, Variant } from "@/types";
 import Select from "./Select";
 
