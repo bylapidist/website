@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import Heading from "@/components/Heading/Heading";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
     title: "AI Ethics Statement",
     description: "How I use AI responsibly in my work.",
-    alternates: { canonical: "/ai-ethics-statement" },
-};
+    canonical: "/ai-ethics-statement",
+});
 
 export default function AIEthicsStatementPage() {
     return (

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
@@ -6,6 +5,7 @@ import Section from "@/components/Section/Section";
 import TableOfContents from "@/components/TableOfContents/TableOfContents";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { formatDate } from "@/lib/date";
+import { buildMetadata } from "@/lib/metadata";
 import { buildArticleStructuredData } from "@/lib/structured-data";
 import styles from "./page.module.scss";
 
@@ -73,31 +73,24 @@ export async function generateMetadata({
     params,
 }: {
     params: Promise<{ year: string; slug: string }>;
-}): Promise<Metadata> {
+}) {
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
-    const base = "https://lapidist.net";
-    const url = `${base}/articles/${year}/${slug}/`;
+    const canonical = `/articles/${year}/${slug}`;
     const ogImage = `/articles/${year}/${slug}/opengraph-image`;
     const twitterImage = `/articles/${year}/${slug}/twitter-image`;
-    return {
+    return buildMetadata({
         title: meta.title,
         description: meta.description,
-        alternates: { canonical: url },
+        canonical,
         openGraph: {
-            title: meta.title,
-            description: meta.description,
-            url,
             type: "article",
             publishedTime: meta.date,
             images: [{ url: ogImage }],
             authors: meta.author.url ? [meta.author.url] : undefined,
         },
         twitter: {
-            card: "summary_large_image",
-            title: meta.title,
-            description: meta.description,
             images: [twitterImage],
         },
-    };
+    });
 }
