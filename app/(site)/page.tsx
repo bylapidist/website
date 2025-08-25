@@ -9,11 +9,8 @@ import {
     TrustedBy,
     WhatIBring,
 } from "@/components";
-import {
-    buildHomePageStructuredData,
-    buildMetadata,
-    getAllArticles,
-} from "@/utils";
+import { buildHomePageStructuredData, buildMetadata } from "@/utils";
+import { getAllArticles } from "@/utils/articles";
 
 const DESCRIPTION =
     "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.";
