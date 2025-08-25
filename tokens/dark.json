@@ -23,7 +23,7 @@
             "primary-active": {
                 "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
             },
-            "on-primary": { "value": "oklch(100% 0 89.88deg)" },
+            "on-primary": { "value": "oklch(13.98% 0 89.88deg)" },
             "success": { "value": "oklch(79.38% 0.1818 155.76deg)" },
             "warning": { "value": "oklch(86.46% 0.1642 88.17deg)" },
             "destructive": { "value": "oklch(71.16% 0.1812 22.84deg)" },

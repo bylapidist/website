@@ -121,19 +121,19 @@
                 "value": "clamp(1.125rem, calc(1.08rem + 0.4vw), 1.35rem)"
             },
             "h6": {
-                "value": "clamp(1.15rem, calc(1.1rem + 0.5vw), 1.3rem)"
+                "value": "clamp(0.92rem, calc(0.88rem + 0.4vw), 1.04rem)"
             },
             "h5": {
-                "value": "clamp(1.33rem, calc(1.25rem + 0.6vw), 1.6rem)"
+                "value": "clamp(1.06rem, calc(1rem + 0.48vw), 1.28rem)"
             },
             "h4": {
-                "value": "clamp(1.6rem, calc(1.45rem + 0.8vw), 1.8rem)"
+                "value": "clamp(1.28rem, calc(1.16rem + 0.64vw), 1.44rem)"
             },
             "h3": {
-                "value": "clamp(2rem, calc(1.8rem + 1vw), 2.25rem)"
+                "value": "clamp(1.6rem, calc(1.44rem + 0.8vw), 1.8rem)"
             },
             "h2": {
-                "value": "clamp(2.5rem, calc(2.2rem + 1.2vw), 2.75rem)"
+                "value": "clamp(2rem, calc(1.76rem + 0.96vw), 2.2rem)"
             },
             "h1": {
                 "value": "clamp(3rem, calc(2.6rem + 1.5vw), 3.375rem)"
