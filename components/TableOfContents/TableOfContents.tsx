@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Card from "@/components/Card/Card";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
-import { useDisclosure } from "@/hooks/useDisclosure";
+import { useDisclosure } from "@/hooks/useDisclosure/useDisclosure";
 import styles from "./TableOfContents.module.scss";
 
 export type TableOfContentsHeading = {

@@ -52,8 +52,8 @@
         "components/TrustedBy/TrustedBy.stories.tsx",
         "components/VisuallyHidden/VisuallyHidden.stories.tsx",
         "components/WhatIBring/WhatIBring.stories.tsx",
-        "hooks/useDisclosure.stories.tsx",
-        "hooks/usePrefersReducedMotion.stories.tsx"
+        "hooks/useDisclosure/useDisclosure.stories.tsx",
+        "hooks/usePrefersReducedMotion/usePrefersReducedMotion.stories.tsx"
     ],
     "tokens": ["tokens/base.json", "tokens/dark.json", "tokens/light.json"],
     "mixins": [
