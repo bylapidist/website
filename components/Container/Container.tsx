@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from "react";
+import type { CSSProperties, ElementType, ReactNode } from "react";
 import clsx from "clsx";
 import { Size } from "@/types";
 import styles from "./Container.module.scss";
@@ -8,6 +8,7 @@ interface Props {
     size?: Size;
     cq?: "page" | "section";
     className?: string;
+    style?: CSSProperties;
     children: ReactNode;
 }
 
@@ -16,6 +17,7 @@ export default function Container({
     size = Size.MD,
     cq = "section",
     className,
+    style,
     children,
 }: Props) {
     const classes = clsx(styles.container, className);
@@ -23,7 +25,11 @@ export default function Container({
         <Component
             className={classes}
             data-size={size}
-            style={{ containerType: "inline-size", containerName: cq }}
+            style={{
+                containerType: "inline-size",
+                containerName: cq,
+                ...style,
+            }}
         >
             {children}
         </Component>
