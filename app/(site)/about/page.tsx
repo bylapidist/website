@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Heading from "@/components/Heading/Heading";
-import Section from "@/components/Section/Section";
-import { buildMetadata } from "@/lib/metadata";
+import { Heading, Section } from "@/components";
+import { buildMetadata } from "@/utils";
 import styles from "./page.module.scss";
 
 export const metadata = buildMetadata({

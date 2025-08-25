@@ -11,7 +11,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import readingTime from "remark-reading-time";
 import { visit } from "unist-util-visit";
-import Heading from "@/components/Heading/Heading";
+import { Heading } from "@/components";
 
 const ARTICLES_PATH = path.join(process.cwd(), "content", "articles");
 

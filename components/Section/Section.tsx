@@ -5,8 +5,7 @@ import type {
     ReactNode,
 } from "react";
 import clsx from "clsx";
-import Container from "@/components/Container/Container";
-import Heading from "@/components/Heading/Heading";
+import { Container, Heading } from "@/components";
 import type { Size } from "@/types";
 import styles from "./Section.module.scss";
 

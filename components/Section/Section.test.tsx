@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Button from "@/components/Button/Button";
-import Section from "@/components/Section/Section";
+import { Button, Section } from "@/components";
 
 test("stack layout applies gap token", () => {
     render(

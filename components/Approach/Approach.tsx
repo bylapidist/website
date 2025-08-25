@@ -1,5 +1,4 @@
-import Card from "@/components/Card/Card";
-import Container from "@/components/Container/Container";
+import { Card, Container } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Approach.module.scss";
 

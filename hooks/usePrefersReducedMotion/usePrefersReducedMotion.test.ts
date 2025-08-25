@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 import { vi } from "vitest";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import { usePrefersReducedMotion } from "@/hooks";
 
 describe("usePrefersReducedMotion", () => {
     const originalMatchMedia = window.matchMedia;

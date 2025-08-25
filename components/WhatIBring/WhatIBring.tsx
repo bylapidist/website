@@ -1,5 +1,4 @@
-import Card from "@/components/Card/Card";
-import Container from "@/components/Container/Container";
+import { Card, Container } from "@/components";
 import styles from "./WhatIBring.module.scss";
 
 export default function WhatIBring() {

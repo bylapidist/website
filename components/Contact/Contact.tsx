@@ -1,5 +1,4 @@
-import Button from "@/components/Button/Button";
-import Section from "@/components/Section/Section";
+import { Button, Section } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Contact.module.scss";
 

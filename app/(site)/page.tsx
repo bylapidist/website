@@ -1,15 +1,19 @@
 import Script from "next/script";
-import Approach from "@/components/Approach/Approach";
-import Hero from "@/components/Hero/Hero";
-import Insights from "@/components/Insights/Insights";
-import Section from "@/components/Section/Section";
-import Services from "@/components/Services/Services";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import TrustedBy from "@/components/TrustedBy/TrustedBy";
-import WhatIBring from "@/components/WhatIBring/WhatIBring";
-import { getAllArticles } from "@/lib/articles";
-import { buildMetadata } from "@/lib/metadata";
-import { buildHomePageStructuredData } from "@/lib/structured-data";
+import {
+    Approach,
+    Hero,
+    Insights,
+    Section,
+    Services,
+    Testimonials,
+    TrustedBy,
+    WhatIBring,
+} from "@/components";
+import {
+    buildHomePageStructuredData,
+    buildMetadata,
+    getAllArticles,
+} from "@/utils";
 
 const DESCRIPTION =
     "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.";

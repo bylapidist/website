@@ -1,6 +1,5 @@
 import clsx from "clsx";
-import Section from "@/components/Section/Section";
-import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { Section, VisuallyHidden } from "@/components";
 import styles from "./TrustedBy.module.scss";
 
 export default function TrustedBy() {

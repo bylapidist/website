@@ -1,6 +1,4 @@
-import Button from "@/components/Button/Button";
-import Heading from "@/components/Heading/Heading";
-import Section from "@/components/Section/Section";
+import { Button, Heading, Section } from "@/components";
 import { Size, Variant } from "@/types";
 import styles from "./Hero.module.scss";
 

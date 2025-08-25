@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Icon from "@/components/Icon/Icon";
+import { Icon } from "@/components";
 import { Size } from "@/types/props";
 
 test("handles title and decorative props", () => {

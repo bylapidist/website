@@ -10,9 +10,7 @@ import {
 } from "react";
 import clsx from "clsx";
 import WaveSurfer from "wavesurfer.js";
-import Button from "@/components/Button/Button";
-import Heading from "@/components/Heading/Heading";
-import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { Button, Heading, VisuallyHidden } from "@/components";
 import { Size, Variant } from "@/types";
 import styles from "./AudioPlayer.module.scss";
 
