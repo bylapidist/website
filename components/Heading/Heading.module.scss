@@ -1,10 +1,9 @@
 .heading {
-    font-family: var(--font-header), sans-serif;
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--typography-line-tight);
-    margin-block: 0;
-    margin-block-end: var(--space-xs);
-    max-inline-size: var(--typography-measure);
+    font-family: var(--typography-font-family-header);
+    font-weight: var(--typography-font-weight-600);
+    line-height: var(--typography-line-height-heading-lg);
+    margin: 0;
+    max-inline-size: var(--size-measure-prose);
     text-wrap: balance;
     hyphens: auto;
     font-variation-settings:
@@ -13,44 +12,32 @@
 }
 
 .heading[id] {
-    scroll-margin-block-start: var(--space-2xl);
+    scroll-margin-block-start: var(--space-scale-300);
 }
 
 .heading[data-level="1"] {
-    font-size: var(--typography-size-700);
+    font-size: var(--typography-size-h1);
 }
 
 .heading[data-level="2"] {
-    font-size: var(--typography-size-400);
+    font-size: var(--typography-size-h2);
 }
 
 .heading[data-level="3"] {
-    font-size: var(--typography-size-300);
+    font-size: var(--typography-size-h3);
 }
 
 .heading[data-level="4"] {
-    font-size: var(--typography-size-200);
+    font-size: var(--typography-size-h4);
 }
 
 .heading[data-level="5"] {
-    font-size: var(--typography-size-200);
-    font-weight: var(--font-weight-regular);
+    font-size: var(--typography-size-h5);
+    font-weight: var(--typography-font-weight-400);
 }
 
 .heading[data-level="6"] {
-    font-size: var(--typography-size-100);
-    font-weight: var(--font-weight-regular);
-}
-
-.heading + :where(.heading, p, ul, ol, dl, blockquote) {
-    margin-block-start: var(--space-l);
-}
-
-:where(
-        .heading[data-level="1"],
-        .heading[data-level="2"],
-        .heading[data-level="3"]
-    )
-    + p {
-    margin-block-start: var(--space-l);
+    font-size: var(--typography-size-h6);
+    font-weight: var(--typography-font-weight-400);
+    letter-spacing: var(--typography-letter-spacing-caps);
 }

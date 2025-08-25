@@ -2,22 +2,18 @@
 
 .article {
     @include grid-stack(var(--space-s));
-
-    max-inline-size: var(--typography-measure);
 }
 
 .summary {
     color: var(--colour-text-subtle);
-    font-size: var(--typography-size-200);
 }
 
 .meta {
     color: var(--colour-text);
-    font-size: var(--typography-size-100);
 }
 
 .return {
-    margin-top: var(--space-xl);
+    margin-block-start: var(--space-scale-200);
     font-size: var(--typography-size-100);
     text-align: center;
 }
@@ -58,8 +54,8 @@
 
 .article :global(.footnotes) {
     font-size: var(--typography-size-100);
-    margin-top: var(--space-xl);
-    padding-top: var(--space-m);
+    margin-block-start: var(--space-scale-200);
+    padding-block-start: var(--space-m);
 
     @include grid-stack(var(--space-s));
 }
@@ -68,7 +64,7 @@
     @include grid-stack(var(--space-xs));
 
     margin: 0;
-    padding-left: var(--space-2xl);
+    padding-inline-start: var(--space-scale-300);
 }
 
 .article :global(.footnotes li p) {
