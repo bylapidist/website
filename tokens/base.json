@@ -13,14 +13,17 @@
         }
     },
     "space": {
-        "xxs": { "value": "clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem)" },
-        "xs": { "value": "clamp(0.25rem, 0.2rem + 0.3vw, 0.5rem)" },
-        "s": { "value": "clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem)" },
-        "m": { "value": "clamp(0.75rem, 0.6rem + 0.6vw, 1rem)" },
-        "l": { "value": "clamp(1rem, 0.8rem + 0.8vw, 1.5rem)" },
-        "xl": { "value": "clamp(1.5rem, 1.2rem + 1vw, 2rem)" },
-        "2xl": { "value": "clamp(2rem, 1.5rem + 1.5vw, 3rem)" },
-        "3xl": { "value": "clamp(3rem, 2.5rem + 2vw, 4rem)" }
+        "scale": {
+            "0": { "value": "0" },
+            "025": { "value": "0.25rem" },
+            "050": { "value": "0.5rem" },
+            "075": { "value": "0.75rem" },
+            "100": { "value": "1rem" },
+            "150": { "value": "1.5rem" },
+            "200": { "value": "2rem" },
+            "300": { "value": "3rem" },
+            "400": { "value": "4rem" }
+        }
     },
     "size": {
         "tap-min": { "value": "44px" },
@@ -30,6 +33,9 @@
             "md": { "value": "1.25rem" },
             "lg": { "value": "1.5rem" },
             "xl": { "value": "3rem" }
+        },
+        "measure": {
+            "prose": { "value": "65ch" }
         }
     },
     "opacity": {
@@ -85,7 +91,53 @@
         }
     },
     "typography": {
+        "font": {
+            "family": {
+                "body": { "value": "var(--font-body), monospace" },
+                "header": { "value": "var(--font-header), sans-serif" }
+            },
+            "weight": {
+                "100": { "value": "100" },
+                "200": { "value": "200" },
+                "300": { "value": "300" },
+                "400": { "value": "400" },
+                "500": { "value": "500" },
+                "600": { "value": "600" },
+                "700": { "value": "700" },
+                "800": { "value": "800" },
+                "900": { "value": "900" }
+            },
+            "opsz": { "value": "14" },
+            "slnt": { "value": "0" }
+        },
         "size": {
+            "body": {
+                "value": "clamp(1rem, calc(0.96rem + 0.35vw), 1.125rem)"
+            },
+            "small": {
+                "value": "clamp(0.875rem, calc(0.84rem + 0.2vw), 0.95rem)"
+            },
+            "lead": {
+                "value": "clamp(1.125rem, calc(1.08rem + 0.4vw), 1.35rem)"
+            },
+            "h6": {
+                "value": "clamp(0.92rem, calc(0.88rem + 0.4vw), 1.04rem)"
+            },
+            "h5": {
+                "value": "clamp(1.06rem, calc(1rem + 0.48vw), 1.28rem)"
+            },
+            "h4": {
+                "value": "clamp(1.28rem, calc(1.16rem + 0.64vw), 1.44rem)"
+            },
+            "h3": {
+                "value": "clamp(1.6rem, calc(1.44rem + 0.8vw), 1.8rem)"
+            },
+            "h2": {
+                "value": "clamp(2rem, calc(1.76rem + 0.96vw), 2.2rem)"
+            },
+            "h1": {
+                "value": "clamp(3rem, calc(2.6rem + 1.5vw), 3.375rem)"
+            },
             "100": { "value": "clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem)" },
             "200": { "value": "clamp(1rem, 0.96rem + 0.3vw, 1.1rem)" },
             "300": { "value": "clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem)" },
@@ -100,17 +152,24 @@
             "normal": { "value": "1.5" },
             "wide": { "value": "1.8" }
         },
+        "lineHeight": {
+            "body": { "value": "1.55" },
+            "headingLg": { "value": "1.2" },
+            "headingSm": { "value": "1.25" },
+            "code": { "value": "1.45" }
+        },
         "tracking": {
             "tighter": { "value": "-0.05em" },
             "tight": { "value": "-0.02em" },
             "normal": { "value": "0" },
             "wide": { "value": "0.05em" }
         },
-        "measure": { "value": "70ch" },
-        "font": {
-            "opsz": { "value": "14" },
-            "slnt": { "value": "0" }
-        }
+        "letterSpacing": {
+            "body": { "value": "0" },
+            "small": { "value": "0.005em" },
+            "caps": { "value": "0.04em" }
+        },
+        "measure": { "value": "70ch" }
     },
     "layout": {
         "max-w": {

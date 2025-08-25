@@ -1,4 +1,4 @@
-@mixin stack($gap: var(--space-m)) {
+@mixin stack($gap: var(--space-scale-100)) {
     display: flex;
     flex-direction: column;
 
@@ -15,13 +15,13 @@
     li {
         list-style-type: none;
         counter-increment: step;
-        padding-inline-start: var(--space-m);
+        padding-inline-start: var(--space-scale-100);
         position: relative;
 
         &::before {
             content: counter(step) ".";
             position: absolute;
-            inset-inline-start: calc(var(--space-l) * -1);
+            inset-inline-start: calc(var(--space-scale-150) * -1);
             font-weight: var(--font-weight-semibold);
         }
     }
@@ -30,16 +30,16 @@
 @mixin checklist {
     @include stack;
 
-    margin-inline-start: var(--space-2xl);
+    margin-inline-start: var(--space-scale-300);
 
     > div {
         position: relative;
-        padding-inline-start: var(--space-m);
+        padding-inline-start: var(--space-scale-100);
 
         &::before {
             content: "\2713";
             position: absolute;
-            inset-inline-start: calc(var(--space-l) * -1);
+            inset-inline-start: calc(var(--space-scale-150) * -1);
             font-weight: var(--font-weight-semibold);
             color: var(--colour-success);
         }
@@ -53,7 +53,7 @@
         dt {
             font-weight: var(--font-weight-semibold);
             font-family: var(--font-header), sans-serif;
-            margin-inline-end: var(--space-s);
+            margin-inline-end: var(--space-scale-075);
         }
     }
 }
@@ -61,9 +61,9 @@
 @mixin cta-group {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-s);
+    gap: var(--space-scale-075);
     justify-content: center;
-    margin-block-start: var(--space-2xl);
+    margin-block-start: var(--space-scale-300);
     text-align: center;
 }
 
@@ -102,15 +102,15 @@
     }
 }
 
-@mixin grid-stack($gap: var(--space-m)) {
+@mixin grid-stack($gap: var(--space-scale-100)) {
     display: grid;
     gap: $gap;
 }
 
-@mixin card-grid($gap: var(--space-xl)) {
+@mixin card-grid($gap: var(--space-scale-200)) {
     @include grid-stack($gap);
 
-    margin-block-start: var(--space-l);
+    margin-block-start: var(--space-scale-150);
 }
 
 @mixin icon-button {

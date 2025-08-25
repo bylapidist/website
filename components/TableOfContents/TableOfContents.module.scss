@@ -2,9 +2,9 @@
 
 .toc {
     max-inline-size: 40ch;
-    padding: var(--space-m);
-    margin-block: var(--space-l);
-    margin-block-end: var(--space-3xl);
+    padding: var(--space-scale-100);
+    margin-block: var(--space-scale-150);
+    margin-block-end: var(--space-scale-400);
     gap: 0;
 
     header {
@@ -59,23 +59,23 @@
     margin: 0;
     font-size: var(--typography-size-100);
 
-    @include grid-stack(var(--space-xs));
+    @include grid-stack(var(--space-scale-050));
 }
 
 .item[data-level="3"] {
-    margin-inline-start: var(--space-m);
+    margin-inline-start: var(--space-scale-100);
 }
 
 .item[data-level="4"] {
-    margin-inline-start: calc(var(--space-m) * 2);
+    margin-inline-start: calc(var(--space-scale-100) * 2);
 }
 
 .item[data-level="5"] {
-    margin-inline-start: calc(var(--space-m) * 3);
+    margin-inline-start: calc(var(--space-scale-100) * 3);
 }
 
 .item[data-level="6"] {
-    margin-inline-start: calc(var(--space-m) * 4);
+    margin-inline-start: calc(var(--space-scale-100) * 4);
 }
 
 .link {

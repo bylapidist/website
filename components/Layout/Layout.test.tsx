@@ -4,13 +4,13 @@ import Layout from "@/components/Layout/Layout";
 
 test("stack layout applies gap token", () => {
     render(
-        <Layout data-testid="stack" gap="var(--space-s)">
+        <Layout data-testid="stack" gap="var(--space-scale-075)">
             <div>One</div>
             <div>Two</div>
         </Layout>,
     );
     expect(screen.getByTestId("stack").getAttribute("style")).toContain(
-        "--stack-gap: var(--space-s)",
+        "--stack-gap: var(--space-scale-075)",
     );
 });
 
@@ -26,13 +26,13 @@ test("horizontal stack wraps buttons", () => {
 
 test("grid layout applies gap token", () => {
     render(
-        <Layout data-testid="grid" layout="grid" gap="var(--space-s)">
+        <Layout data-testid="grid" layout="grid" gap="var(--space-scale-075)">
             <div>One</div>
             <div>Two</div>
         </Layout>,
     );
     expect(screen.getByTestId("grid").getAttribute("style")).toContain(
-        "--grid-gap: var(--space-s)",
+        "--grid-gap: var(--space-scale-075)",
     );
 });
 
@@ -44,6 +44,6 @@ test("card layout sets default gap", () => {
         </Layout>,
     );
     expect(screen.getByTestId("card").getAttribute("style")).toContain(
-        "--grid-gap: var(--space-xl)",
+        "--grid-gap: var(--space-scale-200)",
     );
 });

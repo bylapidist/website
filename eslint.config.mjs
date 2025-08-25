@@ -57,6 +57,23 @@ export default [
         },
     },
     {
+        // Test utilities rely on any-typed APIs from Vitest and Playwright
+        files: [
+            "**/*.test.ts",
+            "**/*.test.tsx",
+            "**/*.spec.ts",
+            "**/*.spec.tsx",
+            "smoke-tests/**/*.ts",
+            "vitest.config.ts",
+        ],
+        rules: {
+            "@typescript-eslint/no-unsafe-call": "off",
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-member-access": "off",
+            "@typescript-eslint/no-unsafe-argument": "off",
+        },
+    },
+    {
         files: ["scripts/**/*.{js,mjs,ts}"],
         languageOptions: {
             globals: {

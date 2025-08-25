@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import Script from "next/script";
 import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
@@ -39,11 +40,13 @@ export default async function ArticlePage({
                 {JSON.stringify(structuredData)}
             </Script>
             <Section heading={meta.title} headingLevel={1}>
-                <article className={styles.article}>
+                <article className={clsx(styles.article, "prose", "flow")}>
                     {meta.summary && (
-                        <p className={styles.summary}>{meta.summary}</p>
+                        <p className={clsx(styles.summary, "text-lead")}>
+                            {meta.summary}
+                        </p>
                     )}
-                    <p className={styles.meta}>
+                    <p className={clsx(styles.meta, "text-small")}>
                         {formatDate(meta.date)}
                         {meta.tags.length > 0 || meta.readingTime ? " · " : ""}
                         {meta.tags.join(", ")}
@@ -61,7 +64,7 @@ export default async function ArticlePage({
                     )}
                     {content}
                 </article>
-                <p className={styles.return}>
+                <p className={clsx(styles.return, "text-small")}>
                     <Link href="/articles">Return to articles</Link>
                 </p>
             </Section>

@@ -15,7 +15,7 @@
 .inner {
     @include flex-between;
 
-    padding-block: var(--space-m);
+    padding-block: var(--space-scale-100);
     transition: padding var(--motion-dur-200) var(--motion-ease-standard);
 }
 
@@ -30,7 +30,7 @@
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-s);
+    gap: var(--space-scale-075);
     text-decoration: none;
     color: var(--colour-text);
     font-size: var(--typography-size-200);
@@ -69,7 +69,7 @@
 }
 
 .actions {
-    @include flex-between(center, var(--space-s));
+    @include flex-between(center, var(--space-scale-075));
 }
 
 .burger {
@@ -107,11 +107,11 @@
 }
 
 .burgerIcon::before {
-    top: calc(-1 * var(--space-xs));
+    top: calc(-1 * var(--space-scale-050));
 }
 
 .burgerIcon::after {
-    top: var(--space-xs);
+    top: var(--space-scale-050);
 }
 
 .burger[data-open] .burgerIcon {
@@ -154,24 +154,24 @@
 
         .burger:not([data-open]):hover .burgerIcon::before,
         .burger:not([data-open]):focus-visible .burgerIcon::before {
-            top: calc(-1 * var(--space-s));
+            top: calc(-1 * var(--space-scale-075));
         }
 
         .burger:not([data-open]):hover .burgerIcon::after,
         .burger:not([data-open]):focus-visible .burgerIcon::after {
-            top: var(--space-s);
+            top: var(--space-scale-075);
         }
     }
 }
 
 .menu {
-    @include stack(var(--space-xs));
+    @include stack(var(--space-scale-050));
 
     border: var(--border-width-s) solid var(--colour-border);
     background: var(--surface-level-0);
     border-radius: var(--radius-m);
     box-shadow: var(--shadow-elev-3);
-    padding: var(--space-s);
+    padding: var(--space-scale-075);
     z-index: var(--z-3);
 }
 
@@ -180,14 +180,14 @@
     margin: 0;
     padding: 0;
 
-    @include stack(var(--space-xs));
+    @include stack(var(--space-scale-050));
 }
 
 .menu a {
     display: block;
     text-decoration: none;
     color: var(--colour-text);
-    padding: var(--space-xs) var(--space-s);
+    padding: var(--space-scale-050) var(--space-scale-075);
     border-radius: var(--radius-s);
     transition:
         color var(--motion-dur-200) var(--motion-ease-standard),

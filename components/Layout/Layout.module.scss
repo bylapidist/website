@@ -1,6 +1,6 @@
 .stack {
     display: flex;
-    gap: var(--stack-gap, var(--space-m));
+    gap: var(--stack-gap, var(--space-scale-100));
 }
 
 .vertical {
@@ -13,9 +13,9 @@
 
 .grid {
     display: grid;
-    gap: var(--grid-gap, var(--space-m));
+    gap: var(--grid-gap, var(--space-scale-100));
 }
 
 .cardGrid {
-    margin-block-start: var(--space-l);
+    margin-block-start: var(--space-scale-150);
 }
