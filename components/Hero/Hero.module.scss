@@ -40,7 +40,7 @@
     @include centered-column;
 
     gap: var(--space-scale-025);
-    margin-bottom: var(--space-scale-300);
+    margin-block-end: var(--space-scale-300);
 }
 
 .note {

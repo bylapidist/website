@@ -31,7 +31,7 @@
 
 .button[data-variant="primary"] {
     background: var(--colour-primary);
-    color: var(--colour-on-primary);
+    color: var(--colour-on-primary, var(--colour-text));
 }
 
 .button[data-variant="secondary"] {
