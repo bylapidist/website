@@ -1,10 +1,19 @@
 .heading {
     font-family: var(--font-header), sans-serif;
     font-weight: var(--font-weight-semibold);
-    line-height: var(--typography-line-tight);
+    line-height: var(--typography-line-wide);
     margin-block: 0;
     margin-block-end: var(--space-xs);
     max-inline-size: var(--typography-measure);
+    text-wrap: balance;
+    hyphens: auto;
+    font-variation-settings:
+        "opsz" var(--typography-font-opsz),
+        "slnt" var(--typography-font-slnt);
+}
+
+.heading[id] {
+    scroll-margin-block-start: var(--space-2xl);
 }
 
 .heading[data-level="1"] {
