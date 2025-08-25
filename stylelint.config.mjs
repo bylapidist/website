@@ -14,6 +14,7 @@ export default {
             { ignoreProperties: ["text-size-adjust"] }, // required for iOS font sizing
         ],
         "selector-class-pattern": "^[a-z][a-z0-9-]*$", // enforce kebab-case class names
+        "no-invalid-position-at-import-rule": null, // Sass requires @use before @import
     },
     overrides: [
         {
