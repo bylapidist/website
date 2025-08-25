@@ -5,28 +5,24 @@ import "../styles/globals.scss";
 const header = Lexend_Deca({
     subsets: ["latin"],
     display: "swap",
+    variable: "--font-header",
 });
 
 const body = Roboto_Mono({
     subsets: ["latin"],
     display: "swap",
+    variable: "--font-body",
 });
 
-const withFontVariables: Decorator = (Story) => (
-    <>
-        <style>
-            {`
-                :root {
-                    --font-header: ${header.style.fontFamily};
-                    --font-body: ${body.style.fontFamily};
-                }
-            `}
-        </style>
+const withFonts: Decorator = (Story) => (
+    <div
+        className={`${header.className} ${header.variable} ${body.className} ${body.variable}`}
+    >
         <Story />
-    </>
+    </div>
 );
 
-export const decorators: Decorator[] = [withFontVariables];
+export const decorators: Decorator[] = [withFonts];
 
 const preview: Preview = {
     parameters: {

@@ -117,7 +117,9 @@ export default function RootLayout({
                     color="#6847ff"
                 />
             </head>
-            <body className={`${header.variable} ${body.variable}`}>
+            <body
+                className={`${header.className} ${header.variable} ${body.className} ${body.variable}`}
+            >
                 <Background />
                 <a href="#main" className="skip-link">
                     Skip to content
