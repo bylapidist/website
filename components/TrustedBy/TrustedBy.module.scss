@@ -5,21 +5,33 @@
 }
 
 .tagline {
-    margin: 0;
-    color: var(--colour-text);
+    margin-block: 0 var(--space-scale-200);
+    color: var(--colour-text-subtle);
     text-align: center;
+    font-size: var(--typography-size-lead);
 }
 
 .logos {
-    @include centered-list(var(--space-scale-150), true);
+    @include centered-list(var(--space-scale-200), true);
 }
 
 .logoLink {
-    display: block;
+    @include inline-center;
+
+    padding: var(--space-scale-100);
+    background: var(--surface-level-1);
+    border: var(--border-width-s) solid var(--colour-border);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-elev-1);
+    transition:
+        background var(--motion-dur-200) var(--motion-ease-standard),
+        box-shadow var(--motion-dur-200) var(--motion-ease-standard),
+        transform var(--motion-dur-120) var(--motion-ease-emphasized);
 
     &:focus-visible {
         outline: var(--border-focus-ring);
         outline-offset: var(--space-focus-ring-offset);
+        box-shadow: var(--shadow-elev-2);
     }
 }
 
@@ -29,6 +41,18 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+    .logoLink:hover {
+        background: var(--surface-level-1-hover);
+        box-shadow: var(--shadow-elev-2);
+        transform: translateY(-1px);
+    }
+
+    .logoLink:active {
+        background: var(--surface-level-1-active);
+        box-shadow: var(--shadow-elev-3);
+        transform: translateY(1px);
+    }
+
     .logo {
         transition: transform var(--motion-dur-200) var(--motion-ease-standard);
     }
@@ -39,6 +63,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .logoLink {
+        transition: none;
+        transform: none;
+    }
+
     .logo {
         transition: none;
         transform: none;
