@@ -63,38 +63,8 @@ svg {
     height: auto;
 }
 
-h1 {
-    font-size: var(--typography-size-400);
-}
-
-h2 {
-    font-size: var(--typography-size-300);
-}
-
-h3 {
-    font-size: var(--typography-size-200);
-}
-
 figure {
     margin: 0;
-}
-
-:where(h4, h5, h6) {
-    font-size: var(--typography-size-100);
-}
-
-:where(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--font-header), sans-serif;
-    text-wrap: balance;
-    hyphens: auto;
-    line-height: var(--typography-line-wide);
-    font-variation-settings:
-        "opsz" var(--typography-font-opsz),
-        "slnt" var(--typography-font-slnt);
-}
-
-:where(h1, h2, h3, h4, h5, h6)[id] {
-    scroll-margin-block-start: var(--space-2xl);
 }
 
 :where(a:not([class])) {
