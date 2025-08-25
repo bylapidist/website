@@ -1,17 +1,17 @@
 @use "../../styles/mixins" as *;
 
 .steps {
-    @include stack(var(--space-l));
+    @include stack(var(--space-scale-150));
 
     counter-reset: step;
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-block: var(--space-l);
+    margin-block: var(--space-scale-150);
 }
 
 .summary {
-    margin-block-end: var(--space-l);
+    margin-block-end: var(--space-scale-150);
 }
 
 .checklist {

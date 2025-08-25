@@ -12,7 +12,6 @@ import {
     FloatingFocusManager,
     FloatingPortal,
     offset,
-    useClick,
     useDismiss,
     useFloating,
     useInteractions,
@@ -21,34 +20,34 @@ import {
 } from "@floating-ui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Container from "@/components/Container/Container";
-import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
-import { siteLinks } from "@/lib/site-links";
-import usePrefersReducedMotion from "@/lib/use-prefers-reduced-motion";
+import { Container, ThemeToggle } from "@/components";
+import { useDisclosure, usePrefersReducedMotion } from "@/hooks";
+import { siteLinks } from "@/utils";
 import styles from "./Header.module.scss";
 import LogoMark from "./LogoMark";
 
 export default function Header() {
     const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
-    const [open, setOpen] = useState(false);
+    const disclosure = useDisclosure();
     const headerRef = useRef<HTMLElement>(null);
 
     const prefersReducedMotion = usePrefersReducedMotion();
 
     const { refs, floatingStyles, context } = useFloating<HTMLButtonElement>({
-        open,
-        onOpenChange: setOpen,
+        open: disclosure.isOpen,
+        onOpenChange: (o) => {
+            if (o) disclosure.open();
+            else disclosure.close();
+        },
         placement: "bottom-end",
         middleware: [offset(8)],
         whileElementsMounted: autoUpdate,
         strategy: "fixed",
     });
-    const click = useClick(context);
     const dismiss = useDismiss(context);
     const role = useRole(context);
     const { getReferenceProps, getFloatingProps } = useInteractions([
-        click,
         dismiss,
         role,
     ]);
@@ -129,11 +128,12 @@ export default function Header() {
                         type="button"
                         className={styles.burger}
                         ref={refs.setReference}
-                        data-open={open || undefined}
-                        {...getReferenceProps({
-                            "aria-label": "Toggle navigation menu",
-                            "aria-expanded": open,
-                        })}
+                        data-open={disclosure.isOpen || undefined}
+                        {...disclosure.getTriggerProps(
+                            getReferenceProps({
+                                "aria-label": "Toggle navigation menu",
+                            }),
+                        )}
                     >
                         <span className={styles.burgerIcon} />
                     </button>
@@ -150,7 +150,7 @@ export default function Header() {
                             ref={refs.setFloating}
                             className={styles.menu}
                             style={menuStyles}
-                            {...getFloatingProps()}
+                            {...getFloatingProps(disclosure.getPanelProps())}
                         >
                             <nav aria-label="Site">
                                 <ul className={styles.menuList}>
@@ -159,7 +159,7 @@ export default function Header() {
                                             <Link
                                                 href={href}
                                                 onClick={() => {
-                                                    setOpen(false);
+                                                    disclosure.close();
                                                 }}
                                             >
                                                 {label}

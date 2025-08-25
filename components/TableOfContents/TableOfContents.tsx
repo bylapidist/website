@@ -3,8 +3,8 @@
 import type { FC, SVGProps } from "react";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
-import Card from "@/components/Card/Card";
-import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { Card, VisuallyHidden } from "@/components";
+import { useDisclosure } from "@/hooks";
 import styles from "./TableOfContents.module.scss";
 
 export type TableOfContentsHeading = {
@@ -33,7 +33,7 @@ function ChevronIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const TableOfContents: FC<Props> = ({ headings }) => {
-    const [open, setOpen] = useState(true);
+    const disclosure = useDisclosure({ initialOpen: true });
     const contentRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState<number>();
 
@@ -41,13 +41,13 @@ const TableOfContents: FC<Props> = ({ headings }) => {
         if (contentRef.current) {
             setHeight(contentRef.current.scrollHeight);
         }
-    }, [headings, open]);
+    }, [headings, disclosure.isOpen]);
 
     if (headings.length === 0) {
         return null;
     }
 
-    const label = open
+    const label = disclosure.isOpen
         ? "Collapse table of contents"
         : "Expand table of contents";
 
@@ -59,25 +59,27 @@ const TableOfContents: FC<Props> = ({ headings }) => {
             heading={<span id="toc-heading">Table of contents</span>}
             icon={
                 <button
-                    type="button"
-                    className={styles.toggle}
-                    aria-expanded={open}
-                    aria-controls="toc-list"
-                    onClick={() => {
-                        setOpen((prev) => !prev);
-                    }}
+                    {...disclosure.getTriggerProps({
+                        type: "button" as const,
+                        className: styles.toggle,
+                        "aria-label": label,
+                    })}
                 >
                     <ChevronIcon className={styles.icon} />
                     <VisuallyHidden>{label}</VisuallyHidden>
                 </button>
             }
             headingLevel={2}
+            headingClassName={styles.heading}
         >
             <div
-                id="toc-list"
                 ref={contentRef}
-                style={{ height: open ? height : 0 }}
-                className={clsx(styles.content, !open && styles.collapsed)}
+                style={{ height: disclosure.isOpen ? height : 0 }}
+                className={clsx(
+                    styles.content,
+                    !disclosure.isOpen && styles.collapsed,
+                )}
+                {...disclosure.getPanelProps()}
             >
                 <ol className={styles.list}>
                     {headings.map((heading) => (

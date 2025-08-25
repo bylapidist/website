@@ -1,0 +1,24 @@
+@mixin focus-ring {
+    outline: var(--border-focus-ring);
+    outline-offset: var(--space-focus-ring-offset);
+}
+
+:focus-visible {
+    @include focus-ring;
+
+    transition: outline-offset var(--motion-dur-200) var(--motion-ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :focus-visible {
+        transition: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

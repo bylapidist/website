@@ -1,6 +1,5 @@
-import Card from "@/components/Card/Card";
-import Section from "@/components/Section/Section";
-import { Variant } from "@/lib/enums";
+import { Card, Section } from "@/components";
+import { Variant } from "@/types";
 import styles from "./Testimonials.module.scss";
 
 export default function Testimonials() {

@@ -26,7 +26,9 @@
             "on-primary": { "value": "oklch(100% 0 89.88deg)" },
             "success": { "value": "oklch(60.56% 0.1436 154.40deg)" },
             "warning": { "value": "oklch(82.53% 0.1709 80.01deg)" },
-            "danger": { "value": "oklch(57.85% 0.2063 29.01deg)" }
+            "destructive": { "value": "oklch(57.85% 0.2063 29.01deg)" },
+            "info": { "value": "oklch(66.5% 0.13 264.5deg)" },
+            "neutral": { "value": "oklch(73% 0 89.88deg)" }
         }
     }
 }

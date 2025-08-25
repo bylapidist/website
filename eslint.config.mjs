@@ -1,6 +1,5 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import nextPlugin from "@next/eslint-plugin-next";
 import eslintPluginImport from "eslint-plugin-import";
@@ -9,13 +8,9 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactCompiler from "eslint-plugin-react-compiler";
 import storybook from "eslint-plugin-storybook";
 import tseslint from "typescript-eslint";
+import localPlugin from "./.eslint/index.mjs";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default [
     {
@@ -26,25 +21,25 @@ export default [
             "postcss.config.cjs",
             "storybook-static/**",
             ".storybook/**",
+            ".eslint/**",
             ".next/**",
             "out/**",
             "next-env.d.ts",
         ],
     },
-    ...compat.config({
-        extends: ["next", "next/core-web-vitals", "next/typescript"],
-    }),
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...storybook.configs["flat/recommended"],
     reactCompiler.configs.recommended,
+    nextPlugin.flatConfig.coreWebVitals,
+    jsxA11y.flatConfigs.strict,
     {
-        rules: {
-            ...jsxA11y.configs.strict.rules,
-        },
         plugins: {
             import: eslintPluginImport,
-            "@next/next": nextPlugin,
+            local: localPlugin,
+        },
+        rules: {
+            "local/no-ad-hoc-props": "error",
         },
         settings: {
             "import/resolver": {
@@ -58,6 +53,34 @@ export default [
             parserOptions: {
                 project: ["./tsconfig.json"],
                 tsconfigRootDir: __dirname,
+            },
+        },
+    },
+    {
+        // Test utilities rely on any-typed APIs from Vitest and Playwright
+        files: [
+            "**/*.test.ts",
+            "**/*.test.tsx",
+            "**/*.spec.ts",
+            "**/*.spec.tsx",
+            "smoke-tests/**/*.ts",
+            "vitest.config.ts",
+        ],
+        rules: {
+            "@typescript-eslint/no-unsafe-call": "off",
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-member-access": "off",
+            "@typescript-eslint/no-unsafe-argument": "off",
+        },
+    },
+    {
+        files: ["scripts/**/*.{js,mjs,ts}"],
+        languageOptions: {
+            globals: {
+                process: "readonly",
+                console: "readonly",
+                setTimeout: "readonly",
+                clearTimeout: "readonly",
             },
         },
     },

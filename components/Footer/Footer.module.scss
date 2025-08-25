@@ -4,7 +4,7 @@
     @include centered-column;
 
     margin-block-start: auto;
-    padding-block: var(--space-xl);
+    padding-block: var(--space-scale-200);
     border-block-start: var(--border-width-s) solid var(--colour-border);
     font-size: var(--typography-size-100);
     text-align: center;
@@ -17,17 +17,17 @@
 }
 
 .footerNav {
-    @include centered-list(var(--space-s), true);
+    @include centered-list(var(--space-scale-075), true);
 
-    margin-block-end: var(--space-m);
+    margin-block-end: var(--space-scale-100);
 }
 
 .social {
-    @include centered-list(var(--space-s));
+    @include centered-list(var(--space-scale-075));
 }
 
 .footer p {
-    margin-block-start: var(--space-s);
+    margin-block-start: var(--space-scale-075);
 }
 
 .footerNav a,
@@ -37,7 +37,7 @@
     min-block-size: var(--size-tap-min);
     min-inline-size: var(--size-tap-min);
     text-decoration: none;
-    padding: var(--space-xs) var(--space-s);
+    padding: var(--space-scale-050) var(--space-scale-075);
     color: var(--colour-text);
     box-shadow: var(--shadow-elev-1);
     transition:

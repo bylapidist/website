@@ -1,6 +1,5 @@
-import Button from "@/components/Button/Button";
-import Section from "@/components/Section/Section";
-import { Variant } from "@/lib/enums";
+import { Button, Section } from "@/components";
+import { Variant } from "@/types";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {

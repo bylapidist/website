@@ -21,32 +21,32 @@
 }
 
 .player {
-    @include stack(var(--space-xs));
+    @include stack(var(--space-scale-050));
 
     position: relative;
-    margin-block-start: var(--space-l);
+    margin-block-start: var(--space-scale-150);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
     background: var(--surface-level-1);
     box-shadow: var(--shadow-elev-1);
-    padding: var(--space-m);
+    padding: var(--space-scale-100);
 }
 
 .controls {
     display: flex;
     align-items: center;
-    gap: var(--space-s);
+    gap: var(--space-scale-075);
 }
 
 .play {
     @include inline-center;
 
-    padding: var(--space-xs);
+    padding: var(--space-scale-050);
 }
 
 .icon {
-    inline-size: var(--size-icon-l);
-    block-size: var(--size-icon-m);
+    inline-size: var(--size-icon-xl);
+    block-size: var(--size-icon-md);
     fill: currentcolor;
 }
 
@@ -62,6 +62,7 @@
 
 .title {
     font-size: var(--typography-size-200);
+    line-height: var(--typography-line-height-heading-lg);
 }
 
 .waveformWrapper {
@@ -70,8 +71,8 @@
 
 .waveform {
     inline-size: 100%;
-    height: var(--space-xl);
-    margin-block-end: var(--space-s);
+    height: var(--space-scale-200);
+    margin-block-end: var(--space-scale-075);
 }
 
 .native {
@@ -84,7 +85,7 @@
     cursor: not-allowed;
     z-index: var(--z-2);
     border-radius: var(--radius-xs);
-    height: var(--space-xl);
+    height: var(--space-scale-200);
     opacity: 0.98;
 
     &::before {

@@ -1,0 +1,25 @@
+.icon {
+    block-size: var(--size-icon-md);
+    inline-size: var(--size-icon-md);
+    flex-shrink: 0;
+}
+
+.icon[data-size="xs"] {
+    block-size: var(--size-icon-xs);
+    inline-size: var(--size-icon-xs);
+}
+
+.icon[data-size="sm"] {
+    block-size: var(--size-icon-sm);
+    inline-size: var(--size-icon-sm);
+}
+
+.icon[data-size="lg"] {
+    block-size: var(--size-icon-lg);
+    inline-size: var(--size-icon-lg);
+}
+
+.icon[data-size="xl"] {
+    block-size: var(--size-icon-xl);
+    inline-size: var(--size-icon-xl);
+}

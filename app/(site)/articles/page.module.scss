@@ -1,0 +1,25 @@
+@use "../../../styles/mixins" as *;
+
+.heading {
+    @include flex-between;
+}
+
+.heading a {
+    font-size: var(--typography-size-200);
+}
+
+.summary {
+    color: var(--colour-text-subtle);
+    font-size: var(--typography-size-200);
+}
+
+.meta {
+    color: var(--colour-text);
+    font-size: var(--typography-size-100);
+}
+
+.statement {
+    text-align: center;
+    font-size: var(--typography-size-100);
+    color: var(--colour-text-subtle);
+}

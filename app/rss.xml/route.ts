@@ -1,5 +1,5 @@
 import { Feed } from "feed";
-import { getAllArticles } from "@/lib/articles";
+import { getAllArticles } from "@/utils";
 
 const BASE_URL = "https://lapidist.net";
 const SITE_TITLE =

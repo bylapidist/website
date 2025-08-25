@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Container from "@/components/Container/Container";
-import { siteLinks } from "@/lib/site-links";
+import { Container } from "@/components";
+import { siteLinks } from "@/utils";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
