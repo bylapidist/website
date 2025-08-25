@@ -28,7 +28,7 @@ export default function AboutPage() {
                         I&apos;m <strong>Brett Dorrans</strong>, a principal
                         frontend engineer and design systems specialist with
                         more than 15 years of experience. I&apos;ve built and
-                        scaled design systems at
+                        scaled design systems at{" "}
                         <a
                             href="https://www.encompasscorporation.com"
                             target="_blank"
@@ -36,7 +36,7 @@ export default function AboutPage() {
                         >
                             Encompass
                         </a>
-                        ,
+                        ,{" "}
                         <a
                             href="https://www.lendinvest.com"
                             target="_blank"
@@ -44,7 +44,7 @@ export default function AboutPage() {
                         >
                             LendInvest
                         </a>
-                        ,
+                        ,{" "}
                         <a
                             href="https://www.goldencharter.co.uk"
                             target="_blank"
@@ -73,30 +73,7 @@ export default function AboutPage() {
                         </li>
                         <li>
                             Led design system rollouts and governance at
-                            <a
-                                href="https://www.encompasscorporation.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Encompass
-                            </a>
-                            ,
-                            <a
-                                href="https://www.lendinvest.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                LendInvest
-                            </a>
-                            , and
-                            <a
-                                href="https://www.goldencharter.co.uk"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Golden Charter
-                            </a>
-                            .
+                            Encompass, LendInvest, and Golden Charter.
                         </li>
                         <li>
                             Specialist in React, TypeScript, accessibility, and
