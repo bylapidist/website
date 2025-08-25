@@ -6,7 +6,7 @@ const meta = {
     component: Layout,
     args: {
         children: [<div key="1">One</div>, <div key="2">Two</div>],
-        gap: "var(--space-s)",
+        gap: "var(--space-scale-075)",
         orientation: "vertical",
     },
     argTypes: {

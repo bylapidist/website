@@ -3,7 +3,7 @@
 @keyframes fade-in-up {
     from {
         opacity: 0;
-        transform: translateY(var(--space-m));
+        transform: translateY(var(--space-scale-100));
     }
 
     to {
@@ -39,8 +39,8 @@
 .cta {
     @include centered-column;
 
-    gap: var(--space-xxs);
-    margin-bottom: var(--space-2xl);
+    gap: var(--space-scale-025);
+    margin-bottom: var(--space-scale-300);
 }
 
 .note {
@@ -50,7 +50,7 @@
 
 .availability {
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--space-scale-050);
     justify-content: center;
     font-size: var(--typography-size-100);
     color: var(--colour-text-subtle);
@@ -63,7 +63,7 @@
 
 .underlineSvg {
     position: absolute;
-    bottom: calc(var(--space-xs) * -1);
+    bottom: calc(var(--space-scale-050) * -1);
     left: 0;
     width: 100%;
     z-index: -1;
@@ -80,7 +80,7 @@
     .heroIntro,
     .cta {
         opacity: 0;
-        transform: translateY(var(--space-m));
+        transform: translateY(var(--space-scale-100));
         animation: fade-in-up var(--motion-dur-320)
             var(--motion-ease-emphasized) both;
     }

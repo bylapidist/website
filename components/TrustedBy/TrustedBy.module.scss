@@ -11,7 +11,7 @@
 }
 
 .logos {
-    @include centered-list(var(--space-l), true);
+    @include centered-list(var(--space-scale-150), true);
 }
 
 .logoLink {

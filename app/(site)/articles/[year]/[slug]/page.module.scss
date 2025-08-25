@@ -1,7 +1,7 @@
 @use "../../../../../styles/mixins" as *;
 
 .article {
-    @include grid-stack(var(--space-s));
+    @include grid-stack(var(--space-scale-075));
 }
 
 .summary {
@@ -19,12 +19,12 @@
 }
 
 .article :global(ol) {
-    @include grid-stack(var(--space-s));
+    @include grid-stack(var(--space-scale-075));
 }
 
 .article :global(blockquote) {
     margin: 0;
-    padding: var(--space-m) var(--space-l);
+    padding: var(--space-scale-100) var(--space-scale-150);
     border: var(--border-width-l) solid var(--colour-text-subtle);
     background: var(--surface-level-1);
     border-radius: var(--radius-m);
@@ -32,14 +32,14 @@
 
 .article :global(img) {
     border-radius: var(--radius-m);
-    margin: var(--space-2xl) auto var(--space-xxs);
+    margin: var(--space-scale-300) auto var(--space-scale-025);
 }
 
 .article :global(figcaption) {
     @include centered-column;
 
     justify-content: center;
-    padding: var(--space-l);
+    padding: var(--space-scale-150);
 }
 
 .article :global(figcaption p) {
@@ -55,13 +55,13 @@
 .article :global(.footnotes) {
     font-size: var(--typography-size-100);
     margin-block-start: var(--space-scale-200);
-    padding-block-start: var(--space-m);
+    padding-block-start: var(--space-scale-100);
 
-    @include grid-stack(var(--space-s));
+    @include grid-stack(var(--space-scale-075));
 }
 
 .article :global(.footnotes ol) {
-    @include grid-stack(var(--space-xs));
+    @include grid-stack(var(--space-scale-050));
 
     margin: 0;
     padding-inline-start: var(--space-scale-300);

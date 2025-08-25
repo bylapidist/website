@@ -24,7 +24,7 @@ export default function Layout({
             ? ({
                   ...(layout === "grid" || layout === "card"
                       ? {
-                            "--grid-gap": gap ?? "var(--space-xl)",
+                            "--grid-gap": gap ?? "var(--space-scale-200)",
                         }
                       : { "--stack-gap": gap }),
               } as React.CSSProperties)
