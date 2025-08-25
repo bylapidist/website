@@ -1,0 +1,31 @@
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import Approach from "./Approach";
+import * as ApproachStories from "./Approach.stories";
+
+<Meta of={ApproachStories} />
+
+# Approach
+
+Outlines the typical engagement flow from assessment through governance.
+
+## Default steps
+
+- **Assess:** Deep-dive current UI, tooling, and workflows.
+- **Align:** Co-create a roadmap with design and product leads.
+- **Execute:** Deliver tokens, components, contracts, and docs iteratively.
+- **Govern:** Bake metrics and review loops into CI for sustained quality.
+
+## Accessibility notes
+
+- Steps are rendered in an ordered list for assistive technologies.
+- The pledge section uses `<details>` and `<summary>` elements for accessible disclosure.
+
+<Canvas>
+    <Story of={ApproachStories.Default} />
+</Canvas>
+
+<Canvas>
+    <Story of={ApproachStories.CustomSteps} />
+</Canvas>
+
+<ArgTypes of={Approach} />
