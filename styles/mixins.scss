@@ -112,3 +112,18 @@
 
     margin-block-start: var(--space-scale-150);
 }
+
+@mixin icon-button {
+    @include inline-center;
+
+    min-block-size: var(--size-tap-min);
+    min-inline-size: var(--size-tap-min);
+    padding: var(--space-xs);
+    background: none;
+    border: none;
+    color: var(--colour-text);
+    cursor: pointer;
+    transition:
+        color var(--motion-dur-200) var(--motion-ease-standard),
+        transform var(--motion-dur-120) var(--motion-ease-emphasized);
+}
