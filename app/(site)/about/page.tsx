@@ -28,15 +28,37 @@ export default function AboutPage() {
                         I&apos;m <strong>Brett Dorrans</strong>, a principal
                         frontend engineer and design systems specialist with
                         more than 15 years of experience. I&apos;ve built and
-                        scaled design systems at Encompass, LendInvest, Golden
-                        Charter, and multiple startups - helping teams cut
-                        through months of potential technical debt by putting
-                        the right foundations in place. My work spans fintech,
-                        regulated SaaS, and high-growth startups, where
-                        I&apos;ve been both the first or only frontend hire
-                        trusted to embed the discipline from the ground up, and
-                        a steward of a larger team seeking to improve their
-                        processes.
+                        scaled design systems at
+                        <a
+                            href="https://www.encompasscorporation.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Encompass
+                        </a>
+                        ,
+                        <a
+                            href="https://www.lendinvest.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LendInvest
+                        </a>
+                        ,
+                        <a
+                            href="https://www.goldencharter.co.uk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Golden Charter
+                        </a>
+                        , and multiple startups - helping teams cut through
+                        months of potential technical debt by putting the right
+                        foundations in place. My work spans fintech, regulated
+                        SaaS, and high-growth startups, where I&apos;ve been
+                        both the first or only frontend hire trusted to embed
+                        the discipline from the ground up, and a steward of a
+                        larger team seeking to improve their processes.
                     </p>
                     <p>
                         Today, I focus on embedding accessible, resilient
@@ -51,7 +73,30 @@ export default function AboutPage() {
                         </li>
                         <li>
                             Led design system rollouts and governance at
-                            Encompass, LendInvest, and Golden Charter.
+                            <a
+                                href="https://www.encompasscorporation.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Encompass
+                            </a>
+                            ,
+                            <a
+                                href="https://www.lendinvest.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                LendInvest
+                            </a>
+                            , and
+                            <a
+                                href="https://www.goldencharter.co.uk"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Golden Charter
+                            </a>
+                            .
                         </li>
                         <li>
                             Specialist in React, TypeScript, accessibility, and
