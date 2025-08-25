@@ -1,0 +1,16 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import * as BackgroundStories from "./Background.stories";
+
+<Meta of={BackgroundStories} />
+
+# Background
+
+Decorative SVG backdrop used across pages.
+
+## Performance considerations
+
+The SVG employs multiple filters and gradients which can be costly to render; keep it static and avoid using more than once per page.
+
+<Canvas>
+    <Story of={BackgroundStories.Default} />
+</Canvas>
