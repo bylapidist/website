@@ -41,3 +41,35 @@
     font-weight: var(--typography-font-weight-400);
     letter-spacing: var(--typography-letter-spacing-caps);
 }
+
+@container (max-width: 40rem) {
+    .heading[data-level="1"] {
+        font-size: var(--typography-size-h2);
+    }
+
+    .heading[data-level="2"] {
+        font-size: var(--typography-size-h3);
+    }
+
+    .heading[data-level="3"] {
+        font-size: var(--typography-size-h4);
+    }
+}
+
+@container (max-width: 30rem) {
+    .heading[data-level="1"] {
+        font-size: var(--typography-size-h3);
+    }
+
+    .heading[data-level="2"] {
+        font-size: var(--typography-size-h4);
+    }
+
+    .heading[data-level="3"] {
+        font-size: var(--typography-size-h5);
+    }
+
+    .heading[data-level="4"] {
+        font-size: var(--typography-size-h6);
+    }
+}
