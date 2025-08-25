@@ -17,7 +17,7 @@ export default function TrustedBy() {
             <ul className={styles.logos}>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.encompasscorporation.com"
                         aria-describedby="trusted-by-encompass"
                         target="_blank"
@@ -75,7 +75,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.lendinvest.com"
                         aria-describedby="trusted-by-lendinvest"
                         target="_blank"
@@ -100,7 +100,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.goldencharter.co.uk"
                         aria-describedby="trusted-by-golden-charter"
                         target="_blank"
