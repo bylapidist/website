@@ -1,34 +1,7 @@
 @use "../../styles/mixins" as *;
 
 .toggle {
-    @include inline-center;
-
-    min-block-size: var(--size-tap-min);
-    min-inline-size: var(--size-tap-min);
-    padding: var(--space-xs);
-    background: none;
-    border: none;
-    color: var(--colour-text);
-    cursor: pointer;
-    transition:
-        color var(--motion-dur-200) var(--motion-ease-standard),
-        transform var(--motion-dur-120) var(--motion-ease-emphasized);
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            color: var(--colour-primary);
-            transform: scale(1.1);
-        }
-
-        &:active {
-            transform: scale(0.95);
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        transition: none;
-        transform: none;
-    }
+    @include icon-button;
 }
 
 .icon {
@@ -38,4 +11,26 @@
 
 .toggle[data-theme="dark"] .icon {
     transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .toggle:hover {
+        color: var(--colour-primary);
+        transform: scale(1.1);
+    }
+
+    .toggle:active {
+        transform: scale(0.95);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toggle {
+        transition: none;
+        transform: none;
+    }
+
+    .icon {
+        transition: none;
+    }
 }
