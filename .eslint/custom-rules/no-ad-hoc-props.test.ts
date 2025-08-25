@@ -1,6 +1,6 @@
 import { RuleTester } from "eslint";
 import { test } from "vitest";
-import rule from "../.eslint/custom-rules/no-ad-hoc-props.mjs";
+import rule from "./no-ad-hoc-props.mjs";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const testerRule: any = rule;
