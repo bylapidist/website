@@ -1,0 +1,17 @@
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import Icon from "./Icon";
+import * as IconStories from "./Icon.stories";
+
+<Meta of={IconStories} />
+
+# Icon
+
+Renders an SVG from the shared registry with token-based sizing. Refer to the [icon policy](../docs/icon-policy.mdx) for usage guidelines.
+
+<Canvas>
+    <Story name="example">
+        <Icon name="sun" />
+    </Story>
+</Canvas>
+
+<ArgTypes of={Icon} />

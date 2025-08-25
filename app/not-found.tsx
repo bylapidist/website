@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Section from "@/components/Section/Section";
+import { Section } from "@/components";
 
 export default function NotFound() {
     return (

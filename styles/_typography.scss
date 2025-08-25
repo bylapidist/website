@@ -1,22 +1,131 @@
-:where(h1, h2, h3, h4, h5, h6) {
+.prose {
+    max-inline-size: var(--size-measure-prose);
+}
+
+.prose :is(h1, h2) + * {
+    --flow-space: var(--space-scale-075);
+}
+
+.prose :is(h3, h4) + * {
+    --flow-space: var(--space-scale-075);
+}
+
+.prose.flow > * + * {
+    margin-block-start: var(--flow-space, var(--space-scale-100));
+}
+
+.prose p + :is(h2, h3) {
+    --flow-space: var(--space-scale-300);
+}
+
+.prose :is(ul, ol, blockquote, pre, table, figure) {
+    margin-block: var(--space-scale-150) var(--space-scale-150);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--typography-font-family-header);
+    letter-spacing: var(--typography-letter-spacing-body);
     margin-block: 0;
-    margin-block-end: var(--space-xs);
-    line-height: var(--typography-line-tight);
-    max-inline-size: var(--typography-measure);
 }
 
-:where(p, ul, ol, dl, blockquote) {
-    margin-block: 0;
-    line-height: var(--typography-line-wide);
-    text-wrap: pretty;
-    overflow-wrap: anywhere;
+h1 {
+    font-size: var(--typography-size-h1);
+    line-height: var(--typography-line-height-heading-lg);
+    font-weight: var(--typography-font-weight-700);
+    margin-block: var(--space-scale-300) var(--space-scale-075);
 }
 
-:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote)
-    + :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote) {
-    margin-block-start: var(--space-l);
+h2 {
+    font-size: var(--typography-size-h2);
+    line-height: var(--typography-line-height-heading-lg);
+    font-weight: var(--typography-font-weight-600);
+    margin-block: var(--space-scale-200) var(--space-scale-075);
 }
 
-:where(h1, h2, h3) + p {
-    margin-block-start: var(--space-l);
+h3 {
+    font-size: var(--typography-size-h3);
+    line-height: var(--typography-line-height-heading-lg);
+    font-weight: var(--typography-font-weight-600);
+    margin-block: var(--space-scale-200) var(--space-scale-050);
+}
+
+h4 {
+    font-size: var(--typography-size-h4);
+    line-height: var(--typography-line-height-heading-sm);
+    font-weight: var(--typography-font-weight-600);
+    margin-block: var(--space-scale-150) var(--space-scale-050);
+}
+
+h5 {
+    font-size: var(--typography-size-h5);
+    line-height: var(--typography-line-height-heading-sm);
+    font-weight: var(--typography-font-weight-500);
+    margin-block: var(--space-scale-150) var(--space-scale-050);
+}
+
+h6 {
+    font-size: var(--typography-size-h6);
+    line-height: var(--typography-line-height-heading-sm);
+    font-weight: var(--typography-font-weight-500);
+    letter-spacing: var(--typography-letter-spacing-caps);
+    margin-block: var(--space-scale-150) var(--space-scale-050);
+}
+
+p {
+    margin: 0;
+}
+
+.text-small {
+    font-size: var(--typography-size-small);
+    letter-spacing: var(--typography-letter-spacing-small);
+}
+
+.text-lead {
+    font-size: var(--typography-size-lead);
+    line-height: var(--typography-line-height-body);
+}
+
+ul,
+ol {
+    padding-inline-start: 1.25em;
+    margin-block: 0 var(--space-scale-100);
+}
+
+.prose li + li {
+    margin-block-start: var(--space-scale-050);
+}
+
+blockquote {
+    margin: 0;
+    padding-inline-start: var(--space-scale-150);
+    border-inline-start: 2px solid currentcolor;
+}
+
+blockquote > :last-child {
+    margin-block-end: 0;
+}
+
+table {
+    border-collapse: collapse;
+    inline-size: 100%;
+}
+
+th,
+td {
+    padding: var(--space-scale-075) var(--space-scale-100);
+    text-align: start;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: var(--typography-size-small);
+    margin-block-start: var(--space-scale-050);
 }

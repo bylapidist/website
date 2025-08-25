@@ -1,5 +1,9 @@
 @use "../../styles/mixins" as *;
 
+.copy {
+    @include stack;
+}
+
 .steps {
     @include steps;
 }

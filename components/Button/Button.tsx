@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import type {
     AnchorHTMLAttributes,
@@ -6,7 +8,7 @@ import type {
     Ref,
 } from "react";
 import clsx from "clsx";
-import { Size, Variant } from "@/lib/enums";
+import { Size, Variant } from "@/types";
 import styles from "./Button.module.scss";
 
 type BaseProps = {
@@ -21,6 +23,7 @@ type ButtonProps = BaseProps &
 type AnchorProps = BaseProps &
     AnchorHTMLAttributes<HTMLAnchorElement> & {
         href: string;
+        disabled?: boolean;
     };
 
 type Props = ButtonProps | AnchorProps;
@@ -29,7 +32,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
     (
         {
             variant = Variant.Primary,
-            size = Size.Md,
+            size = Size.MD,
             className,
             children,
             href,
@@ -44,13 +47,27 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         } as const;
 
         if (href) {
+            const { disabled, onClick, tabIndex, ...anchorRest } =
+                rest as AnchorHTMLAttributes<HTMLAnchorElement> & {
+                    disabled?: boolean;
+                };
             return (
                 <a
-                    {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+                    {...anchorRest}
                     {...data}
                     href={href}
                     className={classes}
                     ref={ref as Ref<HTMLAnchorElement>}
+                    aria-disabled={disabled ? "true" : undefined}
+                    tabIndex={disabled ? -1 : tabIndex}
+                    onClick={
+                        disabled
+                            ? (event) => {
+                                  event.preventDefault();
+                                  event.stopPropagation();
+                              }
+                            : onClick
+                    }
                 >
                     {children}
                 </a>

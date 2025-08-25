@@ -1,6 +1,5 @@
 import clsx from "clsx";
-import Section from "@/components/Section/Section";
-import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
+import { Section, VisuallyHidden } from "@/components";
 import styles from "./TrustedBy.module.scss";
 
 export default function TrustedBy() {
@@ -17,7 +16,7 @@ export default function TrustedBy() {
             <ul className={styles.logos}>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.encompasscorporation.com"
                         aria-describedby="trusted-by-encompass"
                         target="_blank"
@@ -75,7 +74,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.lendinvest.com"
                         aria-describedby="trusted-by-lendinvest"
                         target="_blank"
@@ -100,7 +99,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.goldencharter.co.uk"
                         aria-describedby="trusted-by-golden-charter"
                         target="_blank"
@@ -183,7 +182,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.hunterboots.com"
                         aria-describedby="trusted-by-hunter-boots"
                         target="_blank"
@@ -211,7 +210,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.gant.com"
                         aria-describedby="trusted-by-gant"
                         target="_blank"

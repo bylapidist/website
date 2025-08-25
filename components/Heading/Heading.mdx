@@ -1,0 +1,17 @@
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
+import Heading from "./Heading";
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+Accessible heading component supporting levels 1–6, optional id generation, visually hidden text and polymorphic rendering.
+
+<Canvas>
+    <Story name="example">
+        <Heading level={2}>Example heading</Heading>
+    </Story>
+</Canvas>
+
+<ArgTypes of={Heading} />

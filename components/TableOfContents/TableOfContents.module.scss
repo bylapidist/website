@@ -2,67 +2,34 @@
 
 .toc {
     max-inline-size: 40ch;
-    padding: var(--space-m);
-    margin-block: var(--space-l);
-    margin-block-end: var(--space-3xl);
+    padding: var(--space-scale-100);
+    margin-block: var(--space-scale-150);
+    margin-block-end: var(--space-scale-400);
+    gap: 0;
 
     header {
         align-items: center;
         gap: 0;
     }
 
-    :where(h2) {
+    .heading {
         font-size: var(--typography-size-200);
-        margin: 0;
     }
 }
 
 .toggle {
-    @include inline-center;
-
-    min-block-size: var(--size-tap-min);
-    min-inline-size: var(--size-tap-min);
-    padding: var(--space-xs);
-    background: none;
-    border: none;
-    color: var(--colour-text);
-    cursor: pointer;
-    transition:
-        color var(--motion-dur-200) var(--motion-ease-standard),
-        transform var(--motion-dur-120) var(--motion-ease-emphasized);
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            color: var(--colour-primary);
-            transform: scale(1.1);
-        }
-
-        &:active {
-            transform: scale(0.95);
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        transition: none;
-        transform: none;
-    }
+    @include icon-button;
 }
 
 .icon {
-    inline-size: var(--size-icon-m);
-    block-size: var(--size-icon-m);
+    inline-size: var(--size-icon-md);
+    block-size: var(--size-icon-md);
     fill: currentcolor;
     transition: transform var(--motion-dur-320) var(--motion-ease-emphasized);
 }
 
 .toggle[aria-expanded="false"] .icon {
     transform: rotate(180deg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .icon {
-        transition: none;
-    }
 }
 
 .content {
@@ -77,6 +44,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .toggle {
+        transition: none;
+        transform: none;
+    }
+
+    .icon,
     .content {
         transition: none;
     }
@@ -86,23 +59,23 @@
     margin: 0;
     font-size: var(--typography-size-100);
 
-    @include grid-stack(var(--space-xs));
+    @include grid-stack(var(--space-scale-050));
 }
 
 .item[data-level="3"] {
-    margin-inline-start: var(--space-m);
+    margin-inline-start: var(--space-scale-100);
 }
 
 .item[data-level="4"] {
-    margin-inline-start: calc(var(--space-m) * 2);
+    margin-inline-start: calc(var(--space-scale-100) * 2);
 }
 
 .item[data-level="5"] {
-    margin-inline-start: calc(var(--space-m) * 3);
+    margin-inline-start: calc(var(--space-scale-100) * 3);
 }
 
 .item[data-level="6"] {
-    margin-inline-start: calc(var(--space-m) * 4);
+    margin-inline-start: calc(var(--space-scale-100) * 4);
 }
 
 .link {
@@ -115,6 +88,15 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+    .toggle:hover {
+        color: var(--colour-primary);
+        transform: scale(1.1);
+    }
+
+    .toggle:active {
+        transform: scale(0.95);
+    }
+
     .link:hover {
         text-decoration: underline;
     }

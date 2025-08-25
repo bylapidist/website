@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Size } from "@/lib/enums";
+import { sizeArg } from "@/.storybook/args";
+import { Size } from "@/types";
 import Card from "./Card";
 
 const meta = {
@@ -8,6 +9,9 @@ const meta = {
     args: {
         heading: "Card heading",
         children: "Card content",
+    },
+    argTypes: {
+        size: sizeArg,
     },
 } satisfies Meta<typeof Card>;
 
@@ -21,11 +25,11 @@ export const Highlighted: Story = {
 };
 
 export const Large: Story = {
-    args: { size: Size.Lg },
+    args: { size: Size.LG },
 };
 
 export const LargeHighlighted: Story = {
-    args: { size: Size.Lg, highlight: true },
+    args: { size: Size.LG, highlight: true },
 };
 
 export const HeadingLevel4: Story = {
@@ -37,9 +41,9 @@ export const HeadingLevel4Highlighted: Story = {
 };
 
 export const LargeHeadingLevel4: Story = {
-    args: { size: Size.Lg, headingLevel: 4 },
+    args: { size: Size.LG, headingLevel: 4 },
 };
 
 export const LargeHeadingLevel4Highlighted: Story = {
-    args: { size: Size.Lg, headingLevel: 4, highlight: true },
+    args: { size: Size.LG, headingLevel: 4, highlight: true },
 };

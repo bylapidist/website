@@ -1,0 +1,83 @@
+@use "../../../../../styles/mixins" as *;
+
+.article {
+    @include grid-stack(var(--space-scale-075));
+}
+
+.summary {
+    color: var(--colour-text-subtle);
+}
+
+.meta {
+    color: var(--colour-text);
+}
+
+.return {
+    margin-block-start: var(--space-scale-200);
+    font-size: var(--typography-size-100);
+    text-align: center;
+}
+
+.article :global(ol) {
+    @include grid-stack(var(--space-scale-075));
+}
+
+.article :global(blockquote) {
+    margin: 0;
+    padding: var(--space-scale-100) var(--space-scale-150);
+    border: var(--border-width-l) solid var(--colour-text-subtle);
+    background: var(--surface-level-1);
+    border-radius: var(--radius-m);
+}
+
+.article :global(img) {
+    border-radius: var(--radius-m);
+    margin: var(--space-scale-300) auto var(--space-scale-025);
+}
+
+.article :global(figcaption) {
+    @include centered-column;
+
+    justify-content: center;
+    padding: var(--space-scale-150);
+}
+
+.article :global(figcaption p) {
+    font-size: var(--typography-size-100);
+    text-align: center;
+    width: 100%;
+}
+
+.article :global(blockquote p) {
+    margin: 0;
+}
+
+.article :global(.footnotes) {
+    font-size: var(--typography-size-100);
+    margin-block-start: var(--space-scale-200);
+    padding-block-start: var(--space-scale-100);
+
+    @include grid-stack(var(--space-scale-075));
+}
+
+.article :global(.footnotes ol) {
+    @include grid-stack(var(--space-scale-050));
+
+    margin: 0;
+    padding-inline-start: var(--space-scale-300);
+}
+
+.article :global(.footnotes li p) {
+    margin: 0;
+}
+
+.article :global(sup[id^="fnref"] > a) {
+    text-decoration: none;
+}
+
+@container (min-width:50rem) {
+    .article :global(figcaption p),
+    .article :global(img) {
+        max-width: calc(var(--typography-measure) / 1.5);
+    }
+}
