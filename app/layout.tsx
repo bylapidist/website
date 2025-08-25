@@ -94,7 +94,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en-GB">
+        <html lang="en-GB" className={`${header.variable} ${body.variable}`}>
             <head>
                 <meta
                     name="apple-mobile-web-app-title"
@@ -117,9 +117,7 @@ export default function RootLayout({
                     color="#6847ff"
                 />
             </head>
-            <body
-                className={`${header.className} ${header.variable} ${body.className} ${body.variable}`}
-            >
+            <body className={body.className}>
                 <Background />
                 <a href="#main" className="skip-link">
                     Skip to content

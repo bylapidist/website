@@ -15,9 +15,7 @@ const body = Roboto_Mono({
 });
 
 const withFonts: Decorator = (Story) => (
-    <div
-        className={`${header.className} ${header.variable} ${body.className} ${body.variable}`}
-    >
+    <div className={`${header.variable} ${body.variable} ${body.className}`}>
         <Story />
     </div>
 );
