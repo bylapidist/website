@@ -1,5 +1,3 @@
-"use server";
-
 import fs from "fs";
 import path from "path";
 import { cache, type ComponentPropsWithoutRef, type ReactNode } from "react";
