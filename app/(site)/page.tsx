@@ -2,7 +2,7 @@ import Script from "next/script";
 import Approach from "@/components/Approach/Approach";
 import Hero from "@/components/Hero/Hero";
 import Insights from "@/components/Insights/Insights";
-import Layout from "@/components/Layout/Layout";
+import Section from "@/components/Section/Section";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import TrustedBy from "@/components/TrustedBy/TrustedBy";
@@ -37,10 +37,10 @@ export default async function Page() {
             </Script>
             <Hero />
             <TrustedBy />
-            <Layout gap="var(--space-scale-400)">
+            <Section as="div" container={false} gap="var(--space-scale-400)">
                 <Approach />
                 <WhatIBring />
-            </Layout>
+            </Section>
             <Services />
             <Testimonials />
             <Insights articles={articles} />
