@@ -1,6 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
+import { AudioPlayer } from "@/components";
 
 const callbacks: Record<string, (() => void) | undefined> = {};
 

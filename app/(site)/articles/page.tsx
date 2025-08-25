@@ -1,10 +1,7 @@
 import Link from "next/link";
-import Card from "@/components/Card/Card";
-import Section from "@/components/Section/Section";
-import { getAllArticles } from "@/lib/articles";
-import { formatDate } from "@/lib/date";
-import { buildMetadata } from "@/lib/metadata";
+import { Card, Section } from "@/components";
 import { Variant } from "@/types";
+import { buildMetadata, formatDate, getAllArticles } from "@/utils";
 import styles from "./page.module.scss";
 
 export const metadata = buildMetadata({

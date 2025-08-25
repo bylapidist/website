@@ -1,5 +1,4 @@
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
+import { Contact, Footer } from "@/components";
 
 export default function SiteLayout({
     children,

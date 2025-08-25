@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Heading from "@/components/Heading/Heading";
+import { Heading } from "@/components";
 
 test("renders levels and attributes", () => {
     render(

@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/globals.scss";
-import Background from "@/components/Background/Background";
-import Header from "@/components/Header/Header";
+import { Background, Header } from "@/components";
 
 const header = Lexend_Deca({
     variable: "--font-header",

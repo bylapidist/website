@@ -20,11 +20,9 @@ import {
 } from "@floating-ui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Container from "@/components/Container/Container";
-import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
-import { useDisclosure } from "@/hooks/useDisclosure/useDisclosure";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion/usePrefersReducedMotion";
-import { siteLinks } from "@/lib/site-links";
+import { Container, ThemeToggle } from "@/components";
+import { useDisclosure, usePrefersReducedMotion } from "@/hooks";
+import { siteLinks } from "@/utils";
 import styles from "./Header.module.scss";
 import LogoMark from "./LogoMark";
 

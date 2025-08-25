@@ -1,5 +1,5 @@
-import Section from "@/components/Section/Section";
-import { buildMetadata } from "@/lib/metadata";
+import { Section } from "@/components";
+import { buildMetadata } from "@/utils";
 
 export const metadata = buildMetadata({
     title: "AI Ethics Statement",

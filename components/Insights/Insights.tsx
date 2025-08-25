@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Button from "@/components/Button/Button";
-import Card from "@/components/Card/Card";
-import Section from "@/components/Section/Section";
-import { formatDate } from "@/lib/date";
+import { Button, Card, Section } from "@/components";
 import { Variant } from "@/types";
+import { formatDate } from "@/utils";
 import styles from "./Insights.module.scss";
 
 type Article = {

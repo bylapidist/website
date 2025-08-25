@@ -1,6 +1,5 @@
-import Heading from "@/components/Heading/Heading";
-import Section from "@/components/Section/Section";
-import { buildMetadata } from "@/lib/metadata";
+import { Heading, Section } from "@/components";
+import { buildMetadata } from "@/utils";
 
 export const metadata = buildMetadata({
     title: "Accessibility Statement",
