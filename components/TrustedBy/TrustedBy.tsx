@@ -183,7 +183,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.hunterboots.com"
                         aria-describedby="trusted-by-hunter-boots"
                         target="_blank"
@@ -211,7 +211,7 @@ export default function TrustedBy() {
                 </li>
                 <li>
                     <a
-                        className={clsx(styles.logoLink, "logoLink")}
+                        className={clsx(styles.logoLink, "logo-link")}
                         href="https://www.gant.com"
                         aria-describedby="trusted-by-gant"
                         target="_blank"

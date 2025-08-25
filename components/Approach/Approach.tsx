@@ -36,46 +36,43 @@ interface Props {
 export default function Approach({ steps = DEFAULT_STEPS }: Props) {
     return (
         <Section id="approach" heading="My approach">
-            <div className="prose flow">
-                <p>
-                    Practical and collaborative, focused on turning complex
-                    frontend challenges into clear, scalable systems. From
-                    assessment through execution to governance, I ensure every
-                    decision is intentional and every outcome supports long-term
-                    quality and impact.
-                </p>
-                <ol className={styles.steps}>
-                    {steps.map(({ title, description }) => (
-                        <Card as="li" key={title} variant={Variant.Step}>
-                            <strong>{title}</strong>
-                            <p>{description}</p>
-                        </Card>
-                    ))}
-                </ol>
-                <details>
-                    <summary className={styles.summary}>
-                        Accessibility &amp; Performance pledge
-                    </summary>
-                    <dl className={styles.checklist}>
-                        <div>
-                            <dt>Keyboard-first:</dt>
-                            <dd>Every control works without a mouse.</dd>
-                        </div>
-                        <div>
-                            <dt>Contrast:</dt>
-                            <dd>Minimum 4.5:1 text contrast.</dd>
-                        </div>
-                        <div>
-                            <dt>Fast paint:</dt>
-                            <dd>95th percentile route paint &lt;1.2s.</dd>
-                        </div>
-                        <div>
-                            <dt>Motion aware:</dt>
-                            <dd>Animations off when you prefer less.</dd>
-                        </div>
-                    </dl>
-                </details>
-            </div>
+            <p>
+                Practical and collaborative, focused on turning complex frontend
+                challenges into clear, scalable systems. From assessment through
+                execution to governance, I ensure every decision is intentional
+                and every outcome supports long-term quality and impact.
+            </p>
+            <ol className={styles.steps}>
+                {steps.map(({ title, description }) => (
+                    <Card as="li" key={title} variant={Variant.Step}>
+                        <strong>{title}</strong>
+                        <p>{description}</p>
+                    </Card>
+                ))}
+            </ol>
+            <details>
+                <summary className={styles.summary}>
+                    Accessibility &amp; Performance pledge
+                </summary>
+                <dl className={styles.checklist}>
+                    <div>
+                        <dt>Keyboard-first:</dt>
+                        <dd>Every control works without a mouse.</dd>
+                    </div>
+                    <div>
+                        <dt>Contrast:</dt>
+                        <dd>Minimum 4.5:1 text contrast.</dd>
+                    </div>
+                    <div>
+                        <dt>Fast paint:</dt>
+                        <dd>95th percentile route paint &lt;1.2s.</dd>
+                    </div>
+                    <div>
+                        <dt>Motion aware:</dt>
+                        <dd>Animations off when you prefer less.</dd>
+                    </div>
+                </dl>
+            </details>
         </Section>
     );
 }
