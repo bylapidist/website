@@ -36,8 +36,8 @@ export default async function Page() {
             </Script>
             <Hero />
             <TrustedBy />
-            <WhatIBring />
             <Approach />
+            <WhatIBring />
             <Services />
             <Testimonials />
             <Insights articles={articles} />

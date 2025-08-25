@@ -36,6 +36,12 @@ interface Props {
 export default function Approach({ steps = DEFAULT_STEPS }: Props) {
     return (
         <Section id="approach" heading="My approach">
+            <p>
+                Practical and collaborative, focused on turning complex frontend
+                challenges into clear, scalable systems. From assessment through
+                execution to governance, I ensure every decision is intentional
+                and every outcome supports long-term quality and impact.
+            </p>
             <ol className={styles.steps}>
                 {steps.map(({ title, description }) => (
                     <Card as="li" key={title} variant={Variant.Step}>
@@ -46,7 +52,7 @@ export default function Approach({ steps = DEFAULT_STEPS }: Props) {
             </ol>
             <details>
                 <summary className={styles.summary}>
-                    View my Accessibility &amp; Performance pledge
+                    Accessibility &amp; Performance pledge
                 </summary>
                 <dl className={styles.checklist}>
                     <div>

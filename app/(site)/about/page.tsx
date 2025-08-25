@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Heading from "@/components/Heading/Heading";
+import Layout from "@/components/Layout/Layout";
 import Section from "@/components/Section/Section";
 import { buildMetadata } from "@/lib/metadata";
 import styles from "./page.module.scss";
@@ -15,14 +16,15 @@ export default function AboutPage() {
     return (
         <>
             <Section heading="About me" headingLevel={1}>
-                <div className={styles.article}>
+                <Layout>
                     <Image
+                        className={styles.me}
                         src="/images/me-current.webp"
                         alt="A picture of Brett Dorrans from 2025"
                         width="1440"
                         height="1440"
                     />
-                    <p id="bio">
+                    <p>
                         I&apos;m <strong>Brett Dorrans</strong>, a principal
                         frontend engineer and design systems specialist with
                         more than 15 years of experience. I&apos;ve built and
@@ -96,7 +98,7 @@ export default function AboutPage() {
                         mindset - software that works for the long term, and
                         teams that don&apos;t burn out delivering it.
                     </p>
-                </div>
+                </Layout>
             </Section>
         </>
     );

@@ -1,0 +1,21 @@
+.stack {
+    display: flex;
+    gap: var(--stack-gap, var(--space-m));
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+    gap: var(--grid-gap, var(--space-m));
+}
+
+.cardGrid {
+    margin-block-start: var(--space-l);
+}

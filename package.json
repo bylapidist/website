@@ -20,6 +20,8 @@
         "export": "next export",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && mv brett-dorrans-cv.pdf public/",
         "build:static": "npm run build && npm run export",
+        "build:tokens": "style-dictionary build --config style-dictionary.config.mjs && prettier styles/tokens.css --write",
+        "build:tokens:watch": "node scripts/build-tokens-watch.mjs",
         "lint": "npm run lint:js && npm run lint:styles",
         "lint:js": "eslint .",
         "lint:styles": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
@@ -36,9 +38,7 @@
         "test:install-browsers": "playwright install --with-deps",
         "lh:ci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
-        "qa": "start-server-and-test start http://localhost:3000 lh:ci",
-        "build:tokens": "style-dictionary build --config style-dictionary.config.mjs",
-        "build:tokens:watch": "node scripts/build-tokens-watch.mjs"
+        "qa": "start-server-and-test start http://localhost:3000 lh:ci"
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",

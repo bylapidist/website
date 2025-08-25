@@ -8,6 +8,7 @@ import styles from "./Card.module.scss";
 interface Props extends HTMLAttributes<HTMLElement> {
     as?: ElementType;
     heading?: ReactNode;
+    headingClassName?: string;
     highlight?: boolean;
     children: ReactNode;
     headingLevel?: 2 | 3 | 4;
@@ -23,6 +24,7 @@ const Card = forwardRef<HTMLElement, Props>(
         {
             as: Component = "article",
             heading,
+            headingClassName,
             highlight,
             children,
             headingLevel = 3,
@@ -63,7 +65,12 @@ const Card = forwardRef<HTMLElement, Props>(
                 {(heading || icon) && (
                     <header className={styles.head}>
                         {heading && (
-                            <Heading level={headingLevel}>{heading}</Heading>
+                            <Heading
+                                level={headingLevel}
+                                className={headingClassName}
+                            >
+                                {heading}
+                            </Heading>
                         )}
                         {icon}
                     </header>

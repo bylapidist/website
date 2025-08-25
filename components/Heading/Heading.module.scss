@@ -1,7 +1,7 @@
 .heading {
     font-family: var(--font-header), sans-serif;
     font-weight: var(--font-weight-semibold);
-    line-height: var(--typography-line-wide);
+    line-height: var(--typography-line-tight);
     margin-block: 0;
     margin-block-end: var(--space-xs);
     max-inline-size: var(--typography-measure);
@@ -21,23 +21,25 @@
 }
 
 .heading[data-level="2"] {
-    font-size: var(--typography-size-600);
-}
-
-.heading[data-level="3"] {
-    font-size: var(--typography-size-500);
-}
-
-.heading[data-level="4"] {
     font-size: var(--typography-size-400);
 }
 
-.heading[data-level="5"] {
+.heading[data-level="3"] {
     font-size: var(--typography-size-300);
 }
 
-.heading[data-level="6"] {
+.heading[data-level="4"] {
     font-size: var(--typography-size-200);
+}
+
+.heading[data-level="5"] {
+    font-size: var(--typography-size-200);
+    font-weight: var(--font-weight-regular);
+}
+
+.heading[data-level="6"] {
+    font-size: var(--typography-size-100);
+    font-weight: var(--font-weight-regular);
 }
 
 .heading + :where(.heading, p, ul, ol, dl, blockquote) {

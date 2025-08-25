@@ -8,10 +8,6 @@
     font-size: var(--typography-size-200);
 }
 
-.cards {
-    @include card-grid();
-}
-
 .summary {
     color: var(--colour-text-subtle);
     font-size: var(--typography-size-200);
@@ -22,8 +18,8 @@
     font-size: var(--typography-size-100);
 }
 
-@container (min-width:50rem) {
-    .cards {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.statement {
+    text-align: center;
+    font-size: var(--typography-size-100);
+    color: var(--colour-text-subtle);
 }

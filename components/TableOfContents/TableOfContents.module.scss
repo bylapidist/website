@@ -5,15 +5,15 @@
     padding: var(--space-m);
     margin-block: var(--space-l);
     margin-block-end: var(--space-3xl);
+    gap: 0;
 
     header {
         align-items: center;
         gap: 0;
     }
 
-    :where(h2) {
+    .heading {
         font-size: var(--typography-size-200);
-        margin: 0;
     }
 }
 

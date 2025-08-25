@@ -71,6 +71,7 @@ const TableOfContents: FC<Props> = ({ headings }) => {
                 </button>
             }
             headingLevel={2}
+            headingClassName={styles.heading}
         >
             <div
                 ref={contentRef}
