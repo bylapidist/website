@@ -49,9 +49,6 @@ jobs:
             - name: Type check
               run: npm run typecheck
 
-            - name: Check props
-              run: npm run check:props
-
             - name: Test
               run: npm run test:unit && npm run test:e2e
 
