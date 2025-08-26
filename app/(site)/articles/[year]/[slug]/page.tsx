@@ -62,8 +62,8 @@ export async function generateMetadata({
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
     const canonical = `/articles/${year}/${slug}`;
-    const ogImage = `${canonical}/opengraph-image.png`;
-    const twitterImage = `${canonical}/twitter-image.png`;
+    const ogImage = `${canonical}/opengraph-image`;
+    const twitterImage = `${canonical}/twitter-image`;
     return buildMetadata({
         title: meta.title,
         description: meta.description,
@@ -71,11 +71,11 @@ export async function generateMetadata({
         openGraph: {
             type: "article",
             publishedTime: meta.date,
-            images: [{ url: ogImage }],
+            images: [{ url: meta.image || ogImage }],
             authors: meta.author.url ? [meta.author.url] : undefined,
         },
         twitter: {
-            images: [twitterImage],
+            images: [meta.image || twitterImage],
         },
     });
 }
