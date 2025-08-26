@@ -67,7 +67,8 @@ export const metadata: Metadata = {
         siteName: METADATA.name,
         images: [{ url: METADATA.images.og }],
         locale: "en_GB",
-        type: "website",
+        type: "article",
+        authors: [METADATA.name],
     },
     twitter: {
         card: "summary_large_image",
