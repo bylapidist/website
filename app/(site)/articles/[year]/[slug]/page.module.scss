@@ -2,6 +2,8 @@
 
 .article {
     @include grid-stack(var(--space-scale-075));
+
+    overflow-wrap: anywhere;
 }
 
 .summary {
