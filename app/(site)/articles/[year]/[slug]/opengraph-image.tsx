@@ -12,6 +12,10 @@ const LOGO_COLORS = {
     yellow: "#e9ba4d",
 } as const;
 
+const BACKGROUND = "#0f172a";
+const FOREGROUND = "#f8fafc";
+const GRID_COLOR = "rgba(255,255,255,0.05)";
+
 function LogoLockup() {
     return (
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
@@ -58,12 +62,11 @@ export default async function OGImage({
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    background: "#000",
-                    color: "#fff",
+                    background: BACKGROUND,
+                    color: FOREGROUND,
                     padding: "80px",
-                    fontFamily: "sans-serif",
-                    backgroundImage:
-                        "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
+                    fontFamily: "system-ui, sans-serif",
+                    backgroundImage: `linear-gradient(${GRID_COLOR} 1px, transparent 1px), linear-gradient(90deg, ${GRID_COLOR} 1px, transparent 1px)`,
                     backgroundSize: "40px 40px",
                 }}
             >
@@ -73,6 +76,7 @@ export default async function OGImage({
                         fontSize: 56,
                         fontWeight: 700,
                         lineHeight: 1.2,
+                        color: LOGO_COLORS.blue,
                     }}
                 >
                     {meta.title}
