@@ -5,11 +5,17 @@ import { buildMetadata, formatDate } from "@/utils";
 import { getAllArticles } from "@/utils/articles";
 import styles from "./page.module.scss";
 
+const DESCRIPTION =
+    "Explore detailed tutorials, opinions, and case studies on front-end engineering, design systems, accessibility, performance, and modern web development practices.";
+const OG_IMAGE = "/opengraph-image";
+const TWITTER_IMAGE = "/twitter-image";
+
 export const metadata = buildMetadata({
     title: "Articles",
-    description:
-        "Articles and insights on front-end engineering and design systems.",
+    description: DESCRIPTION,
     canonical: "/articles",
+    openGraph: { images: [{ url: OG_IMAGE }] },
+    twitter: { images: [TWITTER_IMAGE] },
 });
 
 export default async function ArticlesPage() {
