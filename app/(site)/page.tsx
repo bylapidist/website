@@ -1,4 +1,3 @@
-import Script from "next/script";
 import {
     Approach,
     Hero,
@@ -33,13 +32,13 @@ export default async function Page() {
     const structuredData = buildHomePageStructuredData(datePublished);
     return (
         <>
-            <Script
+            <script
                 id="structured-data"
                 type="application/ld+json"
-                strategy="beforeInteractive"
-            >
-                {JSON.stringify(structuredData)}
-            </Script>
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData),
+                }}
+            />
             <Hero />
             <TrustedBy />
             <Section as="div" container={false} gap="var(--space-scale-400)">

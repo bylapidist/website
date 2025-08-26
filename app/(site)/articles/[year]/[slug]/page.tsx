@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import Link from "next/link";
-import Script from "next/script";
 import { AudioPlayer, Section, TableOfContents } from "@/components";
 import { buildArticleStructuredData, buildMetadata, formatDate } from "@/utils";
 import { getAllArticles, getArticle } from "@/utils/articles";
@@ -28,13 +27,13 @@ export default async function ArticlePage({
     );
     return (
         <>
-            <Script
+            <script
                 id="structured-data"
                 type="application/ld+json"
-                strategy="beforeInteractive"
-            >
-                {JSON.stringify(structuredData)}
-            </Script>
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData),
+                }}
+            />
             <Section heading={meta.title} headingLevel={1}>
                 <article className={clsx(styles.article, "prose", "flow")}>
                     {meta.summary && (
