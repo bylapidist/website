@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
+import "@/styles/globals.scss";
 import { Background, Header } from "@/components";
-
-const globalStylesHref = new URL("../styles/globals.scss", import.meta.url)
-    .href;
 
 const header = Lexend_Deca({
     variable: "--font-header",
@@ -101,11 +99,6 @@ export default function RootLayout({
                 <meta
                     name="apple-mobile-web-app-title"
                     content={METADATA.brand}
-                />
-                <link
-                    rel="stylesheet"
-                    href={globalStylesHref}
-                    precedence="default"
                 />
                 <link
                     rel="preconnect"
