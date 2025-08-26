@@ -5,7 +5,7 @@ on:
             - master
 
 permissions:
-    contents: read
+    contents: write
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
@@ -19,7 +19,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v5
               with:
-                  fetch-depth: 1
+                  fetch-depth: 0
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
