@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/globals.scss";
+import "prismjs/themes/prism-tomorrow.css";
 import { Background, Header } from "@/components";
 
 const header = Lexend_Deca({
