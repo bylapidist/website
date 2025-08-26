@@ -1,6 +1,13 @@
 name: Test
 on: [pull_request]
 
+permissions:
+    contents: read
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     test:
         name: Test
@@ -9,12 +16,16 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v5
+              with:
+                  fetch-depth: 1
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
                   cache: npm
+                  cache-dependency-path: |
+                      **/package-lock.json
 
             # Prevent browser download during npm ci
             - name: Install deps (no browsers)
@@ -63,6 +74,14 @@ jobs:
 
             - name: Storybook a11y
               run: npm run test:storybook
+
+            - name: Restore Next.js cache
+              uses: actions/cache@v4
+              with:
+                  path: .next/cache
+                  key: ${{ runner.os }}-next-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-next-
 
             - name: Build app
               run: npm run build
