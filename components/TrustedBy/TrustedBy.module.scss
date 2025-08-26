@@ -8,17 +8,19 @@
     margin-block: 0 var(--space-scale-200);
     color: var(--colour-text-subtle);
     text-align: center;
-    font-size: var(--typography-size-lead);
+    font-size: var(--typography-size-h6);
 }
 
 .logos {
-    @include centered-list(var(--space-scale-200), true);
+    @include centered-list(var(--space-scale-100), true);
+
+    margin-block-start: var(--space-scale-100);
 }
 
 .logoLink {
     @include inline-center;
 
-    padding: var(--space-scale-100);
+    padding: var(--space-scale-075);
     background: var(--surface-level-1);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-m);
@@ -36,8 +38,8 @@
 }
 
 .logo {
-    width: 12ch;
-    height: 5ch;
+    width: 10ch;
+    height: 3ch;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -71,5 +73,20 @@
     .logo {
         transition: none;
         transform: none;
+    }
+}
+
+@container (min-width:50em) {
+    .tagline {
+        font-size: var(--typography-size-h5);
+    }
+
+    .logoLink {
+        padding: var(--space-scale-100);
+    }
+
+    .logo {
+        width: 12ch;
+        height: 5ch;
     }
 }

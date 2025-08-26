@@ -57,6 +57,8 @@
 
 .list {
     margin: 0;
+    margin-block: var(--space-scale-100);
+    margin-inline-start: var(--space-scale-150);
     font-size: var(--typography-size-100);
 
     @include grid-stack(var(--space-scale-050));

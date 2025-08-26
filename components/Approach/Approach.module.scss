@@ -10,10 +10,6 @@
     margin-block: var(--space-scale-150);
 }
 
-.summary {
-    margin-block-end: var(--space-scale-150);
-}
-
 .checklist {
     @include checklist;
 }
