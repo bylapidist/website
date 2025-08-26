@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true,
     },
+    experimental: {
+        cssChunking: "strict",
+    },
     ...(basePath ? { basePath } : {}),
 };
 
