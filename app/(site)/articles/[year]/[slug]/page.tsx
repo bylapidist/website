@@ -62,8 +62,8 @@ export async function generateMetadata({
     const { year, slug } = await params;
     const { meta } = await getArticle(year, slug);
     const canonical = `/articles/${year}/${slug}`;
-    const ogImage = `/articles/${year}/${slug}/opengraph-image`;
-    const twitterImage = `/articles/${year}/${slug}/twitter-image`;
+    const ogImage = `${canonical}/opengraph-image.png`;
+    const twitterImage = `${canonical}/twitter-image.png`;
     return buildMetadata({
         title: meta.title,
         description: meta.description,
