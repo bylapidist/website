@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 test("home page is accessible", async ({ page }) => {
     await page.goto("/", { waitUntil: "networkidle" });
-    await expect(page.locator("h1")).toContainText("design systems");
+    await expect(page.locator("h1")).toContainText("Lead Frontend Engineer");
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
     const nav = await page.evaluate(
