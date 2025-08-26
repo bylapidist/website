@@ -1,9 +1,9 @@
+import type { RuleDefinition, RuleDefinitionTypeOptions } from "@eslint/core";
 import { RuleTester } from "eslint";
 import { test } from "vitest";
 import rule from "./no-ad-hoc-props.mjs";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const testerRule: any = rule;
+const testerRule = rule as unknown as RuleDefinition<RuleDefinitionTypeOptions>;
 
 test("no-ad-hoc-props rule flags string literals", () => {
     const ruleTester = new RuleTester({
@@ -16,7 +16,6 @@ test("no-ad-hoc-props rule flags string literals", () => {
         },
     });
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     ruleTester.run("no-ad-hoc-props", testerRule, {
         valid: ["const C = () => <div size={size} variant={variant} />;"],
         invalid: [
