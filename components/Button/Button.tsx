@@ -4,10 +4,12 @@ import { forwardRef } from "react";
 import type {
     AnchorHTMLAttributes,
     ButtonHTMLAttributes,
+    MouseEvent,
     ReactNode,
     Ref,
 } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 import { Size, Variant } from "@/types";
 import styles from "./Button.module.scss";
 
@@ -51,24 +53,32 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
                 rest as AnchorHTMLAttributes<HTMLAnchorElement> & {
                     disabled?: boolean;
                 };
+
+            const commonProps = {
+                ...anchorRest,
+                ...data,
+                href,
+                className: classes,
+                "aria-disabled": disabled || undefined,
+                tabIndex: disabled ? -1 : tabIndex,
+                onClick: disabled
+                    ? (event: MouseEvent<HTMLAnchorElement>) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                    : onClick,
+            };
+
+            if (href.startsWith("/")) {
+                return (
+                    <Link {...commonProps} ref={ref as Ref<HTMLAnchorElement>}>
+                        {children}
+                    </Link>
+                );
+            }
+
             return (
-                <a
-                    {...anchorRest}
-                    {...data}
-                    href={href}
-                    className={classes}
-                    ref={ref as Ref<HTMLAnchorElement>}
-                    aria-disabled={disabled ? "true" : undefined}
-                    tabIndex={disabled ? -1 : tabIndex}
-                    onClick={
-                        disabled
-                            ? (event) => {
-                                  event.preventDefault();
-                                  event.stopPropagation();
-                              }
-                            : onClick
-                    }
-                >
+                <a {...commonProps} ref={ref as Ref<HTMLAnchorElement>}>
                     {children}
                 </a>
             );
