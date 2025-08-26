@@ -1,5 +1,4 @@
 import type { ElementType, ReactNode } from "react";
-import { useId } from "react";
 import clsx from "clsx";
 import type { PolymorphicProps } from "@/types";
 import styles from "./Heading.module.scss";
@@ -23,7 +22,6 @@ export default function Heading<As extends ElementType = "h1">({
     children,
     ...rest
 }: HeadingProps<As>) {
-    const generatedId = useId();
     const Component: ElementType = as ?? (`h${String(level)}` as ElementType);
 
     const semantic =
@@ -33,7 +31,7 @@ export default function Heading<As extends ElementType = "h1">({
 
     return (
         <Component
-            id={id ?? generatedId}
+            id={id}
             data-level={level}
             className={clsx(
                 styles.heading,
