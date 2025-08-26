@@ -81,6 +81,15 @@ p {
     margin: 0;
 }
 
+p:has(+ h1),
+p:has(+ h2),
+p:has(+ h3),
+p:has(+ h4),
+p:has(+ h5),
+p:has(+ h6) {
+    margin-block-end: var(--space-scale-150);
+}
+
 .text-small {
     font-size: var(--typography-size-small);
     letter-spacing: var(--typography-letter-spacing-small);

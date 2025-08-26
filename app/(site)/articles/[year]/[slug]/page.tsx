@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { AudioPlayer, Section, TableOfContents } from "@/components";
+import { getAllArticles, getArticle } from "@/lib/articles";
 import { buildArticleStructuredData, buildMetadata, formatDate } from "@/utils";
-import { getAllArticles, getArticle } from "@/utils/articles";
 import styles from "./page.module.scss";
 
 export const dynamicParams = false;

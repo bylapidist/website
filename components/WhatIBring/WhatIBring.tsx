@@ -27,24 +27,25 @@ export default function WhatIBring() {
                     </p>
                     <ul className={styles.steps}>
                         <li>
-                            Grow cross-functional teams and mentoring culture.
+                            I grow cross-functional teams and mentoring culture.
                         </li>
                         <li>
-                            Design end-to-end typesafe API contracts that
+                            I design end-to-end typesafe API contracts that
                             protect UI integrity.
                         </li>
                         <li>
-                            Eliminate style drift with token-driven theming.
+                            I eliminate style drift with token-driven theming.
                         </li>
                         <li>
-                            Cut PR churn 40% through shared components and typed
-                            utils.
+                            I cut PR churn ~40% through shared components and
+                            typed utils.
                         </li>
                         <li>
-                            Automate docs, checks, and deployments via CI/CD.
+                            I automate docs, checks, and deployments via CI/CD.
                         </li>
                         <li>
-                            Embed accessibility, performance, and error budgets.
+                            I embed accessibility, performance, and error
+                            budgets.
                         </li>
                     </ul>
                 </div>

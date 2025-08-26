@@ -57,9 +57,7 @@ export default function Approach({ steps = DEFAULT_STEPS }: Props) {
                     ))}
                 </ol>
                 <details>
-                    <summary className={styles.summary}>
-                        Accessibility &amp; Performance pledge
-                    </summary>
+                    <summary>Accessibility &amp; Performance pledge</summary>
                     <dl className={styles.checklist}>
                         <div>
                             <dt>Keyboard-first:</dt>

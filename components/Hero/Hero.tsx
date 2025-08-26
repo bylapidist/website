@@ -18,7 +18,7 @@ export default function Hero() {
         >
             <div className={styles.availability}>
                 <p>
-                    Currently open for new roles and projects –
+                    Currently open for new roles and projects:
                     <time dateTime={isoDate}> {formattedDate}</time>
                 </p>
             </div>
@@ -31,7 +31,7 @@ export default function Hero() {
                 >
                     Lead Frontend Engineer. Crafting{" "}
                     <span className={styles.underline}>
-                        resilient
+                        scalable
                         <svg
                             viewBox="0 0 1213 73"
                             aria-hidden="true"
@@ -62,7 +62,7 @@ export default function Hero() {
                             </defs>
                         </svg>
                     </span>{" "}
-                    design systems.
+                    UI.
                 </Heading>
                 <p className={styles.heroIntro}>
                     I build design systems and frontend platforms that cut
@@ -72,7 +72,7 @@ export default function Hero() {
             <div className={styles.ctaGroup}>
                 <div className={styles.cta}>
                     <Button href="#contact" size={Size.LG}>
-                        Discuss your frontend roadmap
+                        Get in touch with me
                     </Button>
                     <p className={styles.note}>Let&apos;s connect.</p>
                 </div>
@@ -82,9 +82,9 @@ export default function Hero() {
                         size={Size.LG}
                         variant={Variant.Secondary}
                     >
-                        Download capabilities deck
+                        Download my resume
                     </Button>
-                    <p className={styles.note}>No email required.</p>
+                    <p className={styles.note}>In PDF format.</p>
                 </div>
             </div>
         </Section>

@@ -21,6 +21,8 @@
 }
 
 .article :global(ol) {
+    margin-inline-start: var(--space-scale-100);
+
     @include grid-stack(var(--space-scale-075));
 }
 

@@ -10,7 +10,7 @@ export default function Contact() {
             headingClassName={styles.heading}
         >
             <div className={styles.ctaGroup}>
-                <Button href="mailto:hello@lapidist.net">Get in touch</Button>
+                <Button href="mailto:hello@lapidist.net">Send an email</Button>
                 <Button
                     href="https://cal.com/brett-dorrans-l2qjwo"
                     variant={Variant.Secondary}
