@@ -100,6 +100,27 @@ export default function RootLayout({
                     name="apple-mobile-web-app-title"
                     content={METADATA.brand}
                 />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `(() => {
+                            try {
+                                const stored = localStorage.getItem("theme");
+                                const prefersDark = window.matchMedia(
+                                    "(prefers-color-scheme: dark)",
+                                ).matches;
+                                const theme =
+                                    stored ?? (prefersDark ? "dark" : "light");
+                                document.documentElement.classList.remove(
+                                    "light",
+                                    "dark",
+                                );
+                                document.documentElement.classList.add(theme);
+                            } catch {
+                                /* no-op */
+                            }
+                        })();`,
+                    }}
+                />
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
