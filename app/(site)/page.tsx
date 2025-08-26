@@ -14,10 +14,14 @@ import { getAllArticles } from "@/utils/articles";
 
 const DESCRIPTION =
     "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.";
+const OG_IMAGE = "/opengraph-image";
+const TWITTER_IMAGE = "/twitter-image";
 
 export const metadata = buildMetadata({
     description: DESCRIPTION,
     canonical: "/",
+    openGraph: { images: [{ url: OG_IMAGE }] },
+    twitter: { images: [TWITTER_IMAGE] },
 });
 
 export default async function Page() {
