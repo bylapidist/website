@@ -18,29 +18,20 @@
     text-align: center;
 }
 
-.heroTitle {
-    max-inline-size: var(--typography-measure);
-    text-wrap: balance;
-    hyphens: auto;
-    font-size: var(--typography-size-500);
-}
-
 .heroIntro {
-    max-inline-size: var(--typography-measure);
-    text-wrap: balance;
-    hyphens: auto;
-    font-size: var(--typography-size-300);
+    font-size: var(--typography-size-h5);
 }
 
 .ctaGroup {
     @include cta-group;
+
+    margin-block-end: var(--space-scale-300);
 }
 
 .cta {
     @include centered-column;
 
-    gap: var(--space-scale-025);
-    margin-block-end: var(--space-scale-300);
+    gap: var(--space-scale-050);
 }
 
 .note {
@@ -63,16 +54,10 @@
 
 .underlineSvg {
     position: absolute;
-    bottom: calc(var(--space-scale-050) * -1);
+    bottom: calc(var(--space-scale-025) * -1);
     left: 0;
     width: 100%;
     z-index: -1;
-}
-
-.heroTitle,
-.heroIntro,
-.cta {
-    opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -106,12 +91,22 @@
     }
 }
 
-@container (min-width:50rem) {
-    .heroTitle {
-        font-size: var(--typography-size-600);
+@media (prefers-reduced-motion: reduce) {
+    .heroTitle,
+    .heroIntro,
+    .cta {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
+
+@container (min-width:40rem) {
+    .heroIntro {
+        font-size: var(--typography-size-h3);
     }
 
-    .heroIntro {
-        font-size: var(--typography-size-400);
+    .underlineSvg {
+        bottom: calc(var(--space-scale-050) * -1);
     }
 }

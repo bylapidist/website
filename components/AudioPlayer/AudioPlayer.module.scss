@@ -30,6 +30,12 @@
     background: var(--surface-level-1);
     box-shadow: var(--shadow-elev-1);
     padding: var(--space-scale-100);
+
+    .title {
+        font-size: var(--typography-size-300);
+        line-height: var(--typography-line-height-heading-lg);
+        margin-block-end: var(--space-scale-050);
+    }
 }
 
 .controls {
@@ -58,11 +64,6 @@
 .time {
     font-variant-numeric: tabular-nums;
     font-size: var(--typography-size-100);
-}
-
-.title {
-    font-size: var(--typography-size-200);
-    line-height: var(--typography-line-height-heading-lg);
 }
 
 .waveformWrapper {

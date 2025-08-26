@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Card, Section } from "@/components";
+import { getAllArticles } from "@/lib/articles";
 import { Variant } from "@/types";
 import { buildMetadata, formatDate } from "@/utils";
-import { getAllArticles } from "@/utils/articles";
 import styles from "./page.module.scss";
 
 const DESCRIPTION =
@@ -36,7 +36,7 @@ export default async function ArticlesPage() {
                     I occasionally publish articles on topics I find
                     interesting. I aim to keep everything accurate. If you
                     notice a mistake, please{" "}
-                    <Link href="#contact">let me know</Link>.
+                    <Link href="#contact">let me know.</Link>
                 </p>
                 {articles.map(
                     ({

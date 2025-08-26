@@ -8,8 +8,8 @@ import {
     TrustedBy,
     WhatIBring,
 } from "@/components";
+import { getAllArticles } from "@/lib/articles";
 import { buildHomePageStructuredData, buildMetadata } from "@/utils";
-import { getAllArticles } from "@/utils/articles";
 
 const DESCRIPTION =
     "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.";
@@ -42,8 +42,8 @@ export default async function Page() {
             <Hero />
             <TrustedBy />
             <Section as="div" container={false} gap="var(--space-scale-400)">
-                <Approach />
                 <WhatIBring />
+                <Approach />
             </Section>
             <Services />
             <Testimonials />

@@ -6,13 +6,9 @@ export default function TrustedBy() {
     return (
         <Section
             id="trusted-by"
-            heading="Trusted by"
+            heading="Where I've contributed"
             className={styles.trustedBy}
         >
-            <p className={styles.tagline}>
-                I help brands deliver reliable, inclusive, and scalable
-                products.
-            </p>
             <ul className={styles.logos}>
                 <li>
                     <a
@@ -246,6 +242,11 @@ export default function TrustedBy() {
                     </a>
                 </li>
             </ul>
+            <p className={styles.tagline}>
+                I help brands deliver reliable, inclusive, and scalable
+                products. My work blends technical rigour with creativity to
+                ensure interfaces are polished and built to last.
+            </p>
         </Section>
     );
 }

@@ -6,12 +6,12 @@ export default function Services() {
     return (
         <Section
             id="services"
-            heading="Signature services"
+            heading="I can help you with"
             headingClassName={styles.heading}
         >
             <div className={styles.cards}>
                 <Card
-                    heading="Design System Bootstrap"
+                    heading="Design System Bootstraps"
                     icon={
                         <Icon
                             name="design-system-bootstrap"
@@ -28,7 +28,7 @@ export default function Services() {
                     </p>
                 </Card>
                 <Card
-                    heading="System Audit & Roadmap"
+                    heading="System Audits & Roadmaps"
                     icon={
                         <Icon
                             name="system-audit-roadmap"
@@ -44,7 +44,7 @@ export default function Services() {
                     </p>
                 </Card>
                 <Card
-                    heading="Hands-on Build"
+                    heading="Hands-on Builds"
                     icon={
                         <Icon
                             name="hands-on-build"
@@ -77,7 +77,7 @@ export default function Services() {
                 </Card>
             </div>
             <div className={styles.cta}>
-                <p>Let&apos;s discuss which option fits your team.</p>
+                <p>Let&apos;s discuss what fits your team.</p>
                 <Button href="#contact">Start the conversation</Button>
             </div>
         </Section>

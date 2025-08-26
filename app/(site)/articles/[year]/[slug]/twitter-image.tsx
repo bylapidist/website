@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getAllArticles, getArticle } from "@/utils/articles";
+import { getAllArticles, getArticle } from "@/lib/articles";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
