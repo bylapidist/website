@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { AudioPlayer, Section, TableOfContents } from "@/components";
 import { getAllArticles, getArticle } from "@/lib/articles";
-import { buildArticleStructuredData, buildMetadata, formatDate } from "@/utils";
+import { buildMetadata, formatDate } from "@/utils";
 import styles from "./page.module.scss";
 
 export const dynamicParams = false;
@@ -18,22 +18,9 @@ export default async function ArticlePage({
     params: Promise<{ year: string; slug: string }>;
 }) {
     const { year, slug } = await params;
-    const { meta, content, wordCount, headings } = await getArticle(year, slug);
-    const structuredData = buildArticleStructuredData(
-        meta,
-        year,
-        slug,
-        wordCount,
-    );
+    const { meta, content, headings } = await getArticle(year, slug);
     return (
         <>
-            <script
-                id="structured-data"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(structuredData),
-                }}
-            />
             <Section heading={meta.title} headingLevel={1}>
                 <article className={clsx(styles.article, "prose", "flow")}>
                     {meta.summary && (
