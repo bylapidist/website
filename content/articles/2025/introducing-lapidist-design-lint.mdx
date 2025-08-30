@@ -21,13 +21,13 @@ tags:
 
 **Source:** https://github.com/bylapidist/design-lint
 
-I built a design-system-aware linter because I kept running into the same problem: maintaining a consistent design system across a growing product is harder than it looks.
+Today I'm open-sourcing `@lapidist/design-lint`, a linter that understands your design system and keeps it consistent as your product scales.
 
-As new features and teams contribute, tiny variations creep in - an off-brand spacing here, a hard-coded hex color there. Even with a well-documented design system, drift begins immediately.[^1] One day you're confident in your colour palette, and a few releases later you find three near-identical "primary" blues scattered across the UI.
+Maintaining a coherent design system across a growing product is harder than it looks. As new features and teams contribute, tiny variations creep in – an off-brand spacing here, a hard-coded hex colour there. Even with a well documented design system, drift begins immediately.[^1] One day you're confident in your colour palette, and a few releases later you find three near-identical "primary" blues scattered across the UI.
 
-Each deviation feels small, but together they chip away at consistency, accessibility, and trust in the design system. Traditional linting tools don't catch these issues - ESLint and Stylelint care about syntax, not whether your team is following tokens or components correctly.[^2]
+Each deviation feels small, but together they chip away at consistency, accessibility, and trust in the design system. Traditional linting tools don't catch these issues – ESLint and Stylelint care about syntax, not whether your team is following tokens or components correctly.[^2]
 
-I wanted a way to enforce design consistency with the same rigor we apply to code quality. So I built a linter that's aware of **design tokens, components, and the rules of your system**.
+I wanted a way to enforce design consistency with the same rigour we apply to code quality. So I built a linter that's aware of **design tokens, components, and the rules of your system**.
 
 ## Why I built a design-aware linter
 
@@ -55,7 +55,7 @@ Under the hood, design-lint works like any other linter, but with design intelli
   It scans JavaScript, TypeScript, and CSS (via PostCSS), and supports React, Vue, Svelte, and Web Components. Wherever your styles live, it can parse them.
 
 - **Validating tokens**  
-  You provide a config of design tokens - colors, spacing, typography, etc. Every style value is checked against this source of truth. Built-in rules cover almost every category you'd expect.
+  You provide a config of design tokens – colours, spacing, typography, etc. Every style value is checked against this source of truth. Built-in rules cover almost every category you'd expect.
 
 - **Enforcing component usage**  
   If your system provides `<Button>`, it can flag a raw `<button>` with ad-hoc styles. This encourages reuse, consistency, and built-in accessibility.
