@@ -1,0 +1,95 @@
+---
+title: "Introducing @lapidist/design-lint: A Linter for Design System Consistency"
+date: 2025-08-30
+description: "I built @lapidist/design-lint to solve the problem of design drift at scale. Here's why I created it, how it works, and how it can help your team maintain sustainable, accessible design systems."
+summary: "An introduction to @lapidist/design-lint, a linter I created to enforce design system consistency through token validation, component usage checks, and automated governance."
+image: "/opengraph-image"
+author:
+    name: "Brett Dorrans"
+    url: "https://lapidist.net"
+tags:
+    - design systems
+    - frontend
+    - css
+    - accessibility
+    - linting
+---
+
+## Introduction
+
+**Docs:** https://design-lint.lapidist.net
+
+**Source:** https://github.com/bylapidist/design-lint
+
+I built a design-system-aware linter because I kept running into the same problem: maintaining a consistent design system across a growing product is harder than it looks.
+
+As new features and teams contribute, tiny variations creep in - an off-brand spacing here, a hard-coded hex color there. Even with a well-documented design system, drift begins immediately.[^1] One day you're confident in your colour palette, and a few releases later you find three near-identical "primary" blues scattered across the UI.
+
+Each deviation feels small, but together they chip away at consistency, accessibility, and trust in the design system. Traditional linting tools don't catch these issues - ESLint and Stylelint care about syntax, not whether your team is following tokens or components correctly.[^2]
+
+I wanted a way to enforce design consistency with the same rigor we apply to code quality. So I built a linter that's aware of **design tokens, components, and the rules of your system**.
+
+## Why I built a design-aware linter
+
+In my own work, I found myself repeatedly commenting on spacing values or font sizes in pull requests. It felt tedious, error-prone, and not scalable. I wanted automated guardrails that could:
+
+1. **Enforce consistency and accessibility**  
+   `@lapidist/design-lint` treats tokens as the single source of truth. No rogue hex codes, no arbitrary `17px` margins. Only approved, accessible values.
+
+2. **Prevent design drift**  
+   Drift happens silently unless you catch it at the source. This linter flags deviations at commit or build time, not six months later during a painful audit.
+
+3. **Manage change and deprecation**  
+   Design systems evolve. When tokens or components change, design-lint can warn or even auto-replace outdated usage. For example, if `oldBrandColor` becomes `newBrandColor`, the linter updates it automatically.
+
+4. **Align design and engineering**  
+   Most importantly, the tool gives designers and developers a shared language. Instead of vague comments like "this spacing feels off," engineers get precise, actionable feedback: "use `spacing.md` instead of `24px`."
+
+In short, I built `@lapidist/design-lint` to make design governance continuous, automated, and part of everyday development.
+
+## How it works
+
+Under the hood, design-lint works like any other linter, but with design intelligence baked in:
+
+- **Parsing your codebase**  
+  It scans JavaScript, TypeScript, and CSS (via PostCSS), and supports React, Vue, Svelte, and Web Components. Wherever your styles live, it can parse them.
+
+- **Validating tokens**  
+  You provide a config of design tokens - colors, spacing, typography, etc. Every style value is checked against this source of truth. Built-in rules cover almost every category you'd expect.
+
+- **Enforcing component usage**  
+  If your system provides `<Button>`, it can flag a raw `<button>` with ad-hoc styles. This encourages reuse, consistency, and built-in accessibility.
+
+- **Integration into your workflow**  
+  Run it from the CLI (`npx design-lint src`) or integrate it into CI. Output formats include JSON and SARIF, making it easy to surface results in PRs or dashboards. With `--fix`, it can even autocorrect certain issues like deprecated tokens.
+
+The idea is not to replace ESLint or Stylelint, but to **complement them**. They handle code quality; design-lint handles design system fidelity.
+
+## Adopting it in your team
+
+If you're considering trying it, here's the approach I recommend:
+
+1. **Start with your tokens**: Audit and define them clearly in your config.
+2. **Run a first scan**: Expect noise, treat it as a design debt audit.
+3. **Fix in phases**: Use `--fix` for quick wins, then tackle deeper issues.
+4. **Integrate into CI gradually**: Start with warnings, then tighten to errors over time.
+5. **Educate your team**: Explain why the rules matter - this isn't nitpicking, it's consistency and accessibility.
+6. **Keep it alive**: Update rules and tokens as your system evolves.
+
+Over time, the linter stops feeling like a blocker and becomes a safety net. In my experience, engineers quickly take pride in keeping their code "lint clean."
+
+## Conclusion
+
+Front-end engineers have long relied on linters and tests for code quality. I believe it's time we treat design system quality with the same seriousness.
+
+It's not about adding another tool for the sake of it - it's about sustainable governance. It keeps your design system healthy as your product and team scale. It reduces design debt, bakes in accessibility, and preserves brand trust.
+
+Most importantly, it gives your design system a voice in development. Instead of static documentation that drifts out of sync, you get continuous feedback in the tools developers already use.
+
+If you care about consistency, accessibility, and scaling design systems without drowning in manual QA, I think you'll find `@lapidist/design-lint` a useful companion.
+
+I built it because I needed it. I hope it helps your team too.
+
+[^1]: Drift: Why your Design System isn't working - Chuck Rice, UX Collective https://uxdesign.cc/drift-why-your-design-system-isnt-working-a34d782d9266?gi=9a002b94f728
+
+[^2]: @lapidist/design-lint - npm https://www.npmjs.com/package/@lapidist/design-lint
