@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
         unoptimized: true,
     },
     experimental: {
-        cssChunking: "strict",
+        cssChunking: true,
     },
     ...(basePath ? { basePath } : {}),
 };
