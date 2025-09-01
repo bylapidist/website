@@ -1,3 +1,4 @@
+import path from "path";
 import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
@@ -13,5 +14,14 @@ const config: StorybookConfig = {
         options: {},
     },
     staticDirs: ["../public"],
+    webpackFinal: async (config) => {
+        config.resolve = config.resolve || {};
+        config.resolve.alias = config.resolve.alias || {};
+        config.resolve.alias["server-only"] = path.resolve(
+            __dirname,
+            "server-only.ts",
+        );
+        return config;
+    },
 };
 export default config;
