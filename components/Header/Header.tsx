@@ -20,7 +20,8 @@ import {
 } from "@floating-ui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Container, ThemeToggle } from "@/components";
+import Container from "@/components/Container/Container";
+import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 import { useDisclosure, usePrefersReducedMotion } from "@/hooks";
 import { siteLinks } from "@/utils";
 import styles from "./Header.module.scss";

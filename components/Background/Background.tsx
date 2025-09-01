@@ -1,3 +1,4 @@
+import "server-only";
 import styles from "./Background.module.scss";
 
 export default function Background() {

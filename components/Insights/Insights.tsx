@@ -1,3 +1,4 @@
+import "server-only";
 import Link from "next/link";
 import { Button, Card, Section } from "@/components";
 import { Variant } from "@/types";

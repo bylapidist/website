@@ -1,3 +1,4 @@
+import "server-only";
 import { Section } from "@/components";
 import { buildMetadata } from "@/utils";
 

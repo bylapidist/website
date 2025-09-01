@@ -1,3 +1,4 @@
+import "server-only";
 import Link from "next/link";
 import { Container } from "@/components";
 import { siteLinks } from "@/utils";

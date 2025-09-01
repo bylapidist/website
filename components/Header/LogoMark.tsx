@@ -1,3 +1,5 @@
+"use client";
+
 import type { SVGProps } from "react";
 import clsx from "clsx";
 import styles from "./Header.module.scss";

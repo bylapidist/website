@@ -1,3 +1,4 @@
+import "server-only";
 import { Card, Container } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Approach.module.scss";

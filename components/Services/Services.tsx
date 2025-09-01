@@ -1,3 +1,4 @@
+import "server-only";
 import { Button, Card, Icon, Section } from "@/components";
 import { Size } from "@/types";
 import styles from "./Services.module.scss";

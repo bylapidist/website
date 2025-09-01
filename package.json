@@ -59,6 +59,7 @@
         "remark": "^15.0.1",
         "remark-gfm": "^4.0.1",
         "remark-reading-time": "^2.0.2",
+        "server-only": "^0.0.1",
         "unist-util-visit": "^5.0.0",
         "wavesurfer.js": "^7.7.11"
     },
