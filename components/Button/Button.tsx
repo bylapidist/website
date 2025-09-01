@@ -26,6 +26,7 @@ type AnchorProps = BaseProps &
     AnchorHTMLAttributes<HTMLAnchorElement> & {
         href: string;
         disabled?: boolean;
+        prefetch?: boolean;
     };
 
 type Props = ButtonProps | AnchorProps;
@@ -49,9 +50,10 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
         } as const;
 
         if (href) {
-            const { disabled, onClick, tabIndex, ...anchorRest } =
+            const { disabled, onClick, tabIndex, prefetch, ...anchorRest } =
                 rest as AnchorHTMLAttributes<HTMLAnchorElement> & {
                     disabled?: boolean;
+                    prefetch?: boolean;
                 };
 
             const commonProps = {
@@ -71,7 +73,11 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
 
             if (href.startsWith("/")) {
                 return (
-                    <Link {...commonProps} ref={ref as Ref<HTMLAnchorElement>}>
+                    <Link
+                        {...commonProps}
+                        prefetch={prefetch}
+                        ref={ref as Ref<HTMLAnchorElement>}
+                    >
                         {children}
                     </Link>
                 );
