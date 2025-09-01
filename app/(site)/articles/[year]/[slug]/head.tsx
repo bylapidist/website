@@ -1,3 +1,4 @@
+import "server-only";
 import { getArticle } from "@/lib/articles";
 import { buildArticleStructuredData } from "@/utils";
 

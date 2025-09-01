@@ -1,3 +1,5 @@
+"use client";
+
 import type {
     CSSProperties,
     ElementType,
@@ -5,7 +7,8 @@ import type {
     ReactNode,
 } from "react";
 import clsx from "clsx";
-import { Container, Heading } from "@/components";
+import Container from "@/components/Container/Container";
+import Heading from "@/components/Heading/Heading";
 import type { Size } from "@/types";
 import styles from "./Section.module.scss";
 

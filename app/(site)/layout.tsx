@@ -1,3 +1,4 @@
+import "server-only";
 import { Contact, Footer } from "@/components";
 
 export default function SiteLayout({
