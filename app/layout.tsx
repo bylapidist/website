@@ -1,3 +1,4 @@
+import "server-only";
 import type { Metadata, Viewport } from "next";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "@/styles/globals.scss";

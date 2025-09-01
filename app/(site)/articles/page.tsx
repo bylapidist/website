@@ -1,3 +1,4 @@
+import "server-only";
 import Link from "next/link";
 import { Card, Section } from "@/components";
 import { getAllArticles } from "@/lib/articles";

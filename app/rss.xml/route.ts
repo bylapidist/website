@@ -1,3 +1,4 @@
+import "server-only";
 import { Feed } from "feed";
 import { getAllArticles } from "@/lib/articles";
 

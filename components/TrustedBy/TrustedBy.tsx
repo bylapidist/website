@@ -1,3 +1,4 @@
+import "server-only";
 import clsx from "clsx";
 import { Section, VisuallyHidden } from "@/components";
 import styles from "./TrustedBy.module.scss";

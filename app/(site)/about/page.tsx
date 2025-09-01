@@ -1,3 +1,4 @@
+import "server-only";
 import Image from "next/image";
 import { Heading, Section } from "@/components";
 import { buildMetadata } from "@/utils";

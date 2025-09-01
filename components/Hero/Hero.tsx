@@ -1,3 +1,4 @@
+import "server-only";
 import { Button, Heading, Section } from "@/components";
 import { Size, Variant } from "@/types";
 import styles from "./Hero.module.scss";

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Section } from "@/components";
+import Section from "@/components/Section/Section";
 
 export default function Error() {
     return (

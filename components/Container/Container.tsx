@@ -1,3 +1,5 @@
+"use client";
+
 import type { CSSProperties, ElementType, ReactNode } from "react";
 import clsx from "clsx";
 import { Size } from "@/types";

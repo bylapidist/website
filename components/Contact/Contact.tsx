@@ -1,3 +1,4 @@
+import "server-only";
 import { Button, Section } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Contact.module.scss";
