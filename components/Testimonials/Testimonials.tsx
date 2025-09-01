@@ -1,3 +1,4 @@
+import "server-only";
 import { Card, Section } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Testimonials.module.scss";

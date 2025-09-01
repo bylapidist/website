@@ -1,3 +1,4 @@
+import "server-only";
 import { getAllArticles } from "@/lib/articles";
 import { buildHomePageStructuredData } from "@/utils";
 

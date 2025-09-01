@@ -1,3 +1,4 @@
+import "server-only";
 import { Card, Container } from "@/components";
 import styles from "./WhatIBring.module.scss";
 

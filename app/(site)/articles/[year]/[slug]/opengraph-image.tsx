@@ -1,3 +1,4 @@
+import "server-only";
 import { ImageResponse } from "next/og";
 import { getAllArticles, getArticle } from "@/lib/articles";
 

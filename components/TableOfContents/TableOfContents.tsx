@@ -3,7 +3,8 @@
 import type { FC, SVGProps } from "react";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
-import { Card, VisuallyHidden } from "@/components";
+import Card from "@/components/Card/Card";
+import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import { useDisclosure } from "@/hooks";
 import styles from "./TableOfContents.module.scss";
 

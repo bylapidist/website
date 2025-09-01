@@ -1,3 +1,5 @@
+"use client";
+
 import type { ElementType, ReactNode } from "react";
 import clsx from "clsx";
 import type { PolymorphicProps } from "@/types";
