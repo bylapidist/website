@@ -112,7 +112,7 @@
         },
         "size": {
             "body": {
-                "value": "clamp(1rem, calc(0.96rem + 0.35vw), 1.125rem)"
+                "value": "clamp(1rem, calc(0.96rem + 0.35vw), 1.025rem)"
             },
             "small": {
                 "value": "clamp(0.875rem, calc(0.84rem + 0.2vw), 0.95rem)"
