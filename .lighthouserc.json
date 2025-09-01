@@ -11,9 +11,9 @@
                     "width": 1350,
                     "height": 940,
                     "disabled": false
-                }
+                },
+                "chromeFlags": "--headless=new --no-sandbox --disable-dev-shm-usage"
             },
-            "chromeFlags": "--headless=new --no-sandbox --disable-dev-shm-usage",
             "budgetsPath": "budget.lighthouse.json"
         },
         "assert": {

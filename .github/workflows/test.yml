@@ -12,6 +12,9 @@ jobs:
     test:
         name: Test
         runs-on: ubuntu-latest
+        container:
+            image: mcr.microsoft.com/playwright:v1.55.0-noble
+            options: --ipc=host
 
         steps:
             - name: Checkout
@@ -33,27 +36,6 @@ jobs:
               env:
                   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
-            # Resolve the Playwright package version to make cache keys stable and bust on upgrades
-            - name: Resolve Playwright version
-              id: pw
-              run: |
-                  V=$(node -e "const p=require('./package.json');const v=(p.devDependencies?.['@playwright/test']||p.dependencies?.['@playwright/test']||'unknown');process.stdout.write(v)")
-                  echo "version=$V" >> "$GITHUB_OUTPUT"
-
-            # Cache the shared browsers directory
-            - name: Cache Playwright browsers
-              uses: actions/cache@v4
-              with:
-                  path: ~/.cache/ms-playwright
-                  key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}-
-                      ${{ runner.os }}-playwright-
-
-            # Install browsers (will no-op if cache hit)
-            - name: Install Playwright browsers
-              run: npx playwright install --with-deps
-
             - name: Lint
               run: npm run lint
 
@@ -64,16 +46,14 @@ jobs:
               run: npm run test:unit && npm run test:e2e
 
             - name: Lighthouse
-              run: npm run qa
+              run: |
+                  export CHROME_PATH=$(node -e "process.stdout.write(require('@playwright/test').chromium.executablePath())")
+                  npm run qa
               env:
                   NODE_ENV: production
-                  LHCI_CHROMIUM_FLAGS: "--headless=new --no-sandbox --disable-dev-shm-usage"
 
             - name: Build Storybook
               run: npm run build-storybook
 
             - name: Storybook a11y
               run: npm run test:storybook
-
-            - name: Build app
-              run: npm run build
