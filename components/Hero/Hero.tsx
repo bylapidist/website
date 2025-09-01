@@ -81,6 +81,7 @@ export default function Hero() {
                         href="/brett-dorrans-cv.pdf"
                         size={Size.LG}
                         variant={Variant.Secondary}
+                        prefetch={false}
                     >
                         Download my resume
                     </Button>

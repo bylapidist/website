@@ -22,6 +22,7 @@ export default function Contact() {
                 <Button
                     href="/brett-dorrans-cv.pdf"
                     variant={Variant.Secondary}
+                    prefetch={false}
                 >
                     Download CV
                 </Button>
