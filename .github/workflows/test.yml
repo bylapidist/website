@@ -51,7 +51,6 @@ jobs:
                   npm run qa
               env:
                   NODE_ENV: production
-                  LHCI_CHROMIUM_FLAGS: "--headless=new --no-sandbox --disable-dev-shm-usage"
 
             - name: Build Storybook
               run: npm run build-storybook
