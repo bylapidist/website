@@ -40,7 +40,7 @@
         "lh:ci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
         "qa": "start-server-and-test start http://localhost:3000 lh:ci",
-        "lint:design": "npx --yes node@22 ./node_modules/.bin/design-lint ."
+        "lint:design": "npx --yes design-lint ."
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",
