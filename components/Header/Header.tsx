@@ -57,8 +57,8 @@ export default function Header() {
         {
             duration: prefersReducedMotion ? 0 : { open: 200, close: 150 },
             initial: prefersReducedMotion
-                ? { opacity: 0 }
-                : { opacity: 0, transform: "scale(0.95)" },
+                ? { opacity: "var(--opacity-0)" }
+                : { opacity: "var(--opacity-0)", transform: "scale(0.95)" },
         },
     );
 

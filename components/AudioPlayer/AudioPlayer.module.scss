@@ -2,11 +2,11 @@
 
 @keyframes fade-out {
     from {
-        opacity: 1;
+        opacity: var(--opacity-100);
     }
 
     to {
-        opacity: 0;
+        opacity: var(--opacity-0);
     }
 }
 
@@ -87,7 +87,7 @@
     z-index: var(--z-2);
     border-radius: var(--radius-xs);
     height: var(--space-scale-200);
-    opacity: 0.98;
+    opacity: calc(var(--opacity-100) * 0.98);
 
     &::before {
         content: "";

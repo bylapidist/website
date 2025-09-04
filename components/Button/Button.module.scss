@@ -6,7 +6,7 @@
     border: var(--border-width-s) solid transparent;
     cursor: pointer;
     font: inherit;
-    font-family: var(--font-header), sans-serif;
+    font-family: var(--font-family-header);
     font-weight: var(--font-weight-semibold);
     text-decoration: none;
     padding-block: var(--space-scale-075);
@@ -43,7 +43,7 @@
 .button:disabled,
 .button[aria-disabled="true"] {
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: var(--opacity-60);
 }
 
 .button:not(:disabled, [aria-disabled="true"]):focus-visible {

@@ -35,7 +35,7 @@
     color: var(--colour-text);
     font-size: var(--typography-size-200);
     font-weight: var(--font-weight-regular);
-    font-family: var(--font-header), sans-serif;
+    font-family: var(--font-family-header);
     transition: color var(--motion-dur-200) var(--motion-ease-standard);
 }
 
@@ -79,7 +79,7 @@
     inline-size: var(--size-tap-min);
     block-size: var(--size-tap-min);
     padding: 0;
-    border: 0;
+    border: none;
     background: none;
     cursor: pointer;
     color: var(--colour-text);
