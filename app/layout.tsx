@@ -21,8 +21,14 @@ export const viewport: Viewport = {
     width: "device-width",
     initialScale: 1,
     themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#090909" },
+        {
+            media: "(prefers-color-scheme: light)",
+            color: "var(--surface-level-0)",
+        },
+        {
+            media: "(prefers-color-scheme: dark)",
+            color: "var(--surface-level-0)",
+        },
     ],
 };
 
@@ -40,8 +46,8 @@ const METADATA = {
         "UK Remote",
     ],
     theme: {
-        light: "#ffffff",
-        dark: "#090909",
+        light: "var(--surface-level-0)",
+        dark: "var(--surface-level-0)",
     },
     images: {
         favicon: "/favicon.ico",
@@ -136,7 +142,7 @@ export default function RootLayout({
                 <link
                     rel="mask-icon"
                     href={METADATA.images.mask}
-                    color="#6847ff"
+                    color="var(--colour-primary)"
                 />
             </head>
             <body className={body.className}>

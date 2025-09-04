@@ -139,6 +139,18 @@ const outlineTokens = ["--border-focus-ring"];
 
 export default defineConfig({
     wrapTokensWithVar: true,
+    ignoreFiles: [
+        "**/*.config.*",
+        "**/globals.d.ts",
+        "**/setup-tests.ts",
+        "**/playwright.config.ts",
+        "**/vitest.config.ts",
+        "**/.eslint/**",
+        ".storybook/**",
+        "app/error.tsx",
+        "app/**/twitter-image.tsx",
+        "app/**/opengraph-image.tsx",
+    ],
     tokens: {
         colors: makeTokens(colorTokens),
         borderColors: makeTokens(colorTokens),
