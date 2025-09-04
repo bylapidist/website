@@ -155,6 +155,7 @@ export default defineConfig({
         "app/error.tsx",
         "app/**/twitter-image.tsx",
         "app/**/opengraph-image.tsx",
+        "styles/tokens.css",
     ],
     tokens: {
         colors: makeTokens(colorTokens),
