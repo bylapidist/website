@@ -141,6 +141,11 @@ export default defineConfig({
     wrapTokensWithVar: true,
     ignoreFiles: [
         "**/*.config.*",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.mjs",
         "**/globals.d.ts",
         "**/setup-tests.ts",
         "**/playwright.config.ts",
