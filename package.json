@@ -26,7 +26,7 @@
         "lint": "npm run lint:js && npm run lint:styles",
         "lint:js": "eslint .",
         "lint:styles": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
-        "lint:design": "design-lint .",
+        "lint:design": "design-lint $(find . -type f -name '*.scss' -not -path './node_modules/*')",
         "format": "prettier . --check --plugin=@ianvs/prettier-plugin-sort-imports",
         "format:write": "prettier . --write --plugin=@ianvs/prettier-plugin-sort-imports",
         "typecheck": "tsc --noEmit",
