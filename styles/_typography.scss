@@ -113,7 +113,7 @@ ol {
 blockquote {
     margin: 0;
     padding-inline-start: var(--space-scale-150);
-    border-inline-start: 2px solid currentcolor;
+    border-inline-start: var(--border-width-m) solid currentcolor;
 }
 
 blockquote > :last-child {
