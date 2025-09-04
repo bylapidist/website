@@ -39,7 +39,8 @@
         "test:install-browsers": "playwright install --with-deps",
         "lh:ci": "lhci autorun --config=.lighthouserc.json --enable-error-reporting=false",
         "preqa": "npm run build",
-        "qa": "start-server-and-test start http://localhost:3000 lh:ci"
+        "qa": "start-server-and-test start http://localhost:3000 lh:ci",
+        "lint:design": "npx --yes node@22 ./node_modules/.bin/design-lint ."
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",
@@ -68,6 +69,7 @@
         "@eslint/eslintrc": "3.3.1",
         "@eslint/js": "9.34.0",
         "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
+        "@lapidist/design-lint": "^4.3.2",
         "@lhci/cli": "0.15.1",
         "@next/eslint-plugin-next": "15.5.2",
         "@playwright/test": "1.55.0",
