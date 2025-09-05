@@ -22,7 +22,7 @@
 .header[data-scrolled] {
     background: var(--surface-level-0);
     background: color-mix(in srgb, var(--surface-level-0) 30%, transparent);
-    backdrop-filter: blur(calc(var(--space-scale-025) * 2));
+    backdrop-filter: blur(var(--space-scale-050));
     border-block-end-color: var(--colour-border);
     box-shadow: var(--shadow-elev-3);
 }

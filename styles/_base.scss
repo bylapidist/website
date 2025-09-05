@@ -142,10 +142,10 @@ section {
 
 .visually-hidden {
     position: absolute;
-    width: calc(var(--space-scale-025) / 4);
-    height: calc(var(--space-scale-025) / 4);
+    width: var(--space-scale-00625);
+    height: var(--space-scale-00625);
     padding: 0;
-    margin: calc(var(--space-scale-025) / -4);
+    margin: calc(var(--space-scale-00625) * -1);
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;

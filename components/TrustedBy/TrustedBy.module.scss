@@ -46,13 +46,13 @@
     .logoLink:hover {
         background: var(--surface-level-1-hover);
         box-shadow: var(--shadow-elev-2);
-        transform: translateY(calc(var(--space-scale-025) / -4));
+        transform: translateY(calc(var(--space-scale-00625) * -1));
     }
 
     .logoLink:active {
         background: var(--surface-level-1-active);
         box-shadow: var(--shadow-elev-3);
-        transform: translateY(calc(var(--space-scale-025) / 4));
+        transform: translateY(var(--space-scale-00625));
     }
 
     .logo {

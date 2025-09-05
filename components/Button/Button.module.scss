@@ -60,7 +60,7 @@
 
     .button:not(:disabled, [aria-disabled="true"]):hover {
         box-shadow: var(--shadow-elev-2);
-        transform: translateY(calc(var(--space-scale-025) / -4));
+        transform: translateY(calc(var(--space-scale-00625) * -1));
     }
 
     .button:not(
@@ -95,7 +95,7 @@
 
     .button:not(:disabled, [aria-disabled="true"]):active {
         box-shadow: var(--shadow-elev-3);
-        transform: translateY(calc(var(--space-scale-025) / 4));
+        transform: translateY(var(--space-scale-00625));
     }
 }
 

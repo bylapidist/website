@@ -87,7 +87,7 @@
     z-index: var(--z-2);
     border-radius: var(--radius-xs);
     height: var(--space-scale-200);
-    opacity: calc(var(--opacity-100) * 0.98);
+    opacity: var(--opacity-90);
 
     &::before {
         content: "";

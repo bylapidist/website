@@ -5,13 +5,13 @@ import "@/styles/globals.scss";
 import { Background, Header } from "@/components";
 
 const header = Lexend_Deca({
-    variable: "--font-header",
+    variable: "--font-family-header",
     subsets: ["latin"],
     display: "swap",
 });
 
 const body = Roboto_Mono({
-    variable: "--font-body",
+    variable: "--font-family-body",
     subsets: ["latin"],
     display: "swap",
 });

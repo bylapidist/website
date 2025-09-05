@@ -29,6 +29,8 @@ const colorTokens = [
 
 const spacingTokens = [
     "--space-scale-0",
+    "--space-scale-00625",
+    "--space-scale-0125",
     "--space-scale-025",
     "--space-scale-050",
     "--space-scale-075",
@@ -63,8 +65,13 @@ const boxShadowTokens = [
 const durationTokens = [
     "--motion-dur-120",
     "--motion-dur-200",
+    "--motion-dur-300",
     "--motion-dur-320",
+    "--motion-dur-500",
+    "--motion-dur-700",
+    "--motion-dur-900",
     "--motion-dur-1000",
+    "--motion-dur-1100",
 ];
 
 const lineHeightTokens = [
@@ -119,7 +126,7 @@ const fontSizeTokens = [
     "--typography-size-h1",
 ];
 
-const zIndexTokens = ["--z-1", "--z-2", "--z-3"];
+const zIndexTokens = ["--z-negative", "--z-1", "--z-2", "--z-3"];
 
 const opacityTokens = [
     "--opacity-0",
@@ -137,6 +144,7 @@ const opacityTokens = [
 
 const outlineTokens = ["--border-focus-ring"];
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 export default defineConfig({
     wrapTokensWithVar: true,
     ignoreFiles: [

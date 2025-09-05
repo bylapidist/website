@@ -8,14 +8,21 @@
     --motion-ease-infinite: infinite;
     --motion-dur-120: 120ms;
     --motion-dur-200: 200ms;
+    --motion-dur-300: 300ms;
     --motion-dur-320: 320ms;
+    --motion-dur-500: 500ms;
+    --motion-dur-700: 700ms;
+    --motion-dur-900: 900ms;
     --motion-dur-1000: 1000ms;
+    --motion-dur-1100: 1100ms;
     --space-scale-0: 0;
     --space-scale-100: 1rem;
     --space-scale-150: 1.5rem;
     --space-scale-200: 2rem;
     --space-scale-300: 3rem;
     --space-scale-400: 4rem;
+    --space-scale-00625: 0.0625rem;
+    --space-scale-0125: 0.125rem;
     --space-scale-025: 0.25rem;
     --space-scale-050: 0.5rem;
     --space-scale-075: 0.75rem;
@@ -52,12 +59,8 @@
         0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
     --shadow-elev-3:
         0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
-    --font-family-header: var(--font-header), sans-serif;
-    --font-family-body: var(--font-body), monospace;
     --font-weight-regular: 400;
     --font-weight-semibold: 600;
-    --typography-font-family-body: var(--font-body), monospace;
-    --typography-font-family-header: var(--font-header), sans-serif;
     --typography-font-weight-100: 100;
     --typography-font-weight-200: 200;
     --typography-font-weight-300: 300;
@@ -112,6 +115,7 @@
     --z-1: 10;
     --z-2: 100;
     --z-3: 1000;
+    --z-negative: -1;
     --space-focus-ring-offset: 2px;
     --colour-logo-blue: oklch(67.72% 0.1203 183.48deg);
     --colour-logo-green: oklch(77.86% 0.1387 133.71deg);
