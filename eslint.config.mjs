@@ -18,6 +18,7 @@ export default [
             "eslint.config.mjs",
             "stylelint.config.mjs",
             "style-dictionary.config.mjs",
+            "designlint.config.mjs",
             "postcss.config.cjs",
             "storybook-static/**",
             ".storybook/**",

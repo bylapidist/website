@@ -35,7 +35,7 @@ export default function Background() {
                     />
                 </radialGradient>
                 <radialGradient id="a" cx="50%" cy="45%" r="42%">
-                    <stop offset="0%" stopColor="#fff" />
+                    <stop offset="0%" stopColor="var(--colour-on-primary)" />
                     <stop offset="100%" />
                 </radialGradient>
                 <radialGradient id="g" cx="50%" cy="50%" r="50%">

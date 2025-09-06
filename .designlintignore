@@ -1,0 +1,4 @@
+styles/tokens.css
+**/*.test.*
+**/*.stories.*
+components/Icon/icons.tsx

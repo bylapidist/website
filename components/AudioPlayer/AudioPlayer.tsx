@@ -38,8 +38,8 @@ export default function AudioPlayer({ src, title }: Props) {
         if (!waveformRef.current) return;
         const ws = WaveSurfer.create({
             container: waveformRef.current,
-            waveColor: "#4d4d4d",
-            progressColor: "#87a8ff",
+            waveColor: "var(--colour-border)",
+            progressColor: "var(--colour-primary)",
             height: 31.59,
             barWidth: 2,
             barGap: 1,
