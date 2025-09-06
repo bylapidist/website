@@ -28,6 +28,7 @@ export default function Container({
             className={classes}
             data-size={size}
             style={{
+                // design-lint-disable-next-line
                 containerType: "inline-size",
                 containerName: cq,
                 ...style,
