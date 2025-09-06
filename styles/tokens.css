@@ -112,6 +112,7 @@
     --z-1: 10;
     --z-2: 100;
     --z-3: 1000;
+    --z-neg-1: -10;
     --space-focus-ring-offset: 2px;
     --colour-logo-blue: oklch(67.72% 0.1203 183.48deg);
     --colour-logo-green: oklch(77.86% 0.1387 133.71deg);
