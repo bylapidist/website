@@ -35,7 +35,7 @@
     color: var(--colour-text);
     font-size: var(--typography-size-200);
     font-weight: var(--font-weight-regular);
-    font-family: var(--font-header), sans-serif;
+    font-family: var(--font-family-header);
     transition: color var(--motion-dur-200) var(--motion-ease-standard);
 }
 
@@ -54,10 +54,10 @@
 .logoLockup {
     @include stack(null);
 
-    font-family: inherit;
+    font-family: var(--font-family-header);
 
     span {
-        font-family: inherit;
+        font-family: var(--font-family-header);
         line-height: var(--typography-line-tighter);
     }
 }

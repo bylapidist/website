@@ -40,7 +40,7 @@
 }
 
 .collapsed {
-    opacity: 0;
+    opacity: var(--opacity-0);
 }
 
 @media (prefers-reduced-motion: reduce) {
