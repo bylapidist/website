@@ -36,10 +36,17 @@ export default function AudioPlayer({ src, title }: Props) {
 
     useEffect(() => {
         if (!waveformRef.current) return;
+        const styles = getComputedStyle(document.documentElement);
+        const waveColor = styles
+            .getPropertyValue("--colour-text-subtle")
+            .trim();
+        const progressColor = styles
+            .getPropertyValue("--colour-primary")
+            .trim();
         const ws = WaveSurfer.create({
             container: waveformRef.current,
-            waveColor: "#4d4d4d",
-            progressColor: "#87a8ff",
+            waveColor,
+            progressColor,
             height: 31.59,
             barWidth: 2,
             barGap: 1,
