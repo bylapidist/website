@@ -1,6 +1,6 @@
 {
-    "masterIssue": true,
-    "extends": ["config:base"],
+    "dependencyDashboard": true,
+    "extends": ["config:recommended"],
     "packageRules": [
         {
             "matchUpdateTypes": ["minor", "patch"],
