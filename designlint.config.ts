@@ -1,0 +1,40 @@
+import { defineConfig } from "@lapidist/design-lint";
+
+export default defineConfig({
+    wrapTokensWithVar: true,
+    patterns: ["components/**/*.{tsx,css,scss}", "styles/**/*.{css,scss}"],
+    ignoreFiles: ["styles/tokens.css"],
+    tokens: {
+        colors: ["--colour-*", "--surface-*"],
+        spacing: ["--space-*"],
+        borderRadius: ["--radius-*"],
+        borderWidths: ["--border-width-*"],
+        shadows: ["--shadow-*"],
+        durations: ["--motion-dur-*"],
+        opacity: ["--opacity-*"],
+        zIndex: ["--z-*"],
+        fontSizes: ["--typography-size-*"],
+        fontWeights: ["--font-weight-*", "--typography-font-weight-*"],
+        lineHeights: ["--typography-line-*", "--typography-line-height-*"],
+        letterSpacings: [
+            "--typography-tracking-*",
+            "--typography-letter-spacing-*",
+        ],
+        fonts: ["--font-family-*", "--typography-font-family-*"],
+    },
+    rules: {
+        "design-token/colors": "error",
+        "design-token/spacing": "error",
+        "design-token/border-radius": "error",
+        "design-token/border-width": "error",
+        "design-token/box-shadow": "error",
+        "design-token/duration": "error",
+        "design-token/opacity": "error",
+        "design-token/z-index": "error",
+        "design-token/font-size": "error",
+        "design-token/font-weight": "error",
+        "design-token/line-height": "error",
+        "design-token/letter-spacing": "error",
+        "design-token/font-family": "error",
+    },
+});
