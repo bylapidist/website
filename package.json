@@ -1,6 +1,7 @@
 {
     "name": "@lapidist/website",
     "version": "0.0.0",
+    "packageManager": "npm@11.6.0",
     "description": "The Lapidist website living at lapidist.net",
     "author": "Brett Dorrans <hello@lapidist.net>",
     "license": "MIT",
@@ -69,7 +70,7 @@
         "@eslint/eslintrc": "3.3.1",
         "@eslint/js": "9.35.0",
         "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
-        "@lapidist/design-lint": "^5.0.0",
+        "@lapidist/design-lint": "^5.2.0",
         "@lhci/cli": "0.15.1",
         "@next/eslint-plugin-next": "15.5.3",
         "@playwright/test": "1.55.0",

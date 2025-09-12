@@ -3,51 +3,48 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "@lapidist/design-lint";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const tokensCss = readFileSync(join(__dirname, "styles/tokens.css"), "utf8");
+function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === "object" && value !== null;
+}
 
-function extractTokens(prefixes: string[]): Record<string, string> {
-    const tokens: Record<string, string> = {};
-    const regex = /(--[A-Za-z0-9-_]+)\s*:/g;
-    let match: RegExpExecArray | null;
-    while ((match = regex.exec(tokensCss))) {
-        const name = match[1];
-        if (prefixes.some((p) => name.startsWith(p))) {
-            tokens[name] = name;
+function deepMerge(
+    target: Record<string, unknown>,
+    source: Record<string, unknown>,
+): Record<string, unknown> {
+    const output: Record<string, unknown> = { ...target };
+    for (const [key, value] of Object.entries(source)) {
+        if (isRecord(value) && !Array.isArray(value)) {
+            const base = isRecord(output[key]) ? output[key] : {};
+            output[key] = deepMerge(base, value);
+        } else {
+            output[key] = value;
         }
     }
-    return tokens;
+    return output;
 }
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const baseTokens = JSON.parse(
+    readFileSync(join(__dirname, "tokens/base.json"), "utf8"),
+) as Record<string, unknown>;
+const lightTokens = JSON.parse(
+    readFileSync(join(__dirname, "tokens/light.json"), "utf8"),
+) as Record<string, unknown>;
+const darkTokens = JSON.parse(
+    readFileSync(join(__dirname, "tokens/dark.json"), "utf8"),
+) as Record<string, unknown>;
+
+const light = deepMerge(baseTokens, lightTokens);
+const dark = deepMerge(baseTokens, darkTokens);
+
 export default defineConfig({
-    wrapTokensWithVar: true,
     patterns: ["components/**/*.{tsx,css,scss}", "styles/**/*.{css,scss}"],
     ignoreFiles: ["styles/tokens.css"],
     tokens: {
-        colors: extractTokens(["--colour-", "--surface-"]),
-        spacing: extractTokens(["--space-"]),
-        borderRadius: extractTokens(["--radius-"]),
-        borderWidths: extractTokens(["--border-width-"]),
-        shadows: extractTokens(["--shadow-"]),
-        durations: extractTokens(["--motion-dur-"]),
-        opacity: extractTokens(["--opacity-"]),
-        zIndex: extractTokens(["--z-"]),
-        fontSizes: extractTokens(["--typography-size-"]),
-        fontWeights: {
-            ...extractTokens(["--font-weight-"]),
-            ...extractTokens(["--typography-font-weight-"]),
-        },
-        lineHeights: {
-            ...extractTokens(["--typography-line-"]),
-            ...extractTokens(["--typography-line-height-"]),
-        },
-        letterSpacings: {
-            ...extractTokens(["--typography-tracking-"]),
-            ...extractTokens(["--typography-letter-spacing-"]),
-        },
-        fonts: {
-            ...extractTokens(["--font-family-"]),
-            ...extractTokens(["--typography-font-family-"]),
-        },
+        default: baseTokens,
+        light,
+        dark,
     },
     rules: {
         "design-token/colors": "error",
