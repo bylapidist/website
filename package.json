@@ -1,6 +1,7 @@
 {
     "name": "@lapidist/website",
     "version": "0.0.0",
+    "packageManager": "npm@11.6.0",
     "description": "The Lapidist website living at lapidist.net",
     "author": "Brett Dorrans <hello@lapidist.net>",
     "license": "MIT",
