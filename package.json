@@ -96,7 +96,7 @@
         "postcss-import": "^16.1.1",
         "postcss-scss": "^4.0.9",
         "sass": "1.92.1",
-        "start-server-and-test": "2.1.0",
+        "start-server-and-test": "2.1.1",
         "storybook": "9.1.6",
         "style-dictionary": "^5.0.0",
         "stylelint": "16.24.0",
