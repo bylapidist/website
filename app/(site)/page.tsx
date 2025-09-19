@@ -1,6 +1,7 @@
 import "server-only";
 import {
     Approach,
+    FeaturedProject,
     Hero,
     Insights,
     Section,
@@ -35,6 +36,7 @@ export default async function Page() {
                 <WhatIBring />
                 <Approach />
             </Section>
+            <FeaturedProject />
             <Services />
             <Testimonials />
             <Insights articles={articles} />

@@ -1,0 +1,36 @@
+@use "../../styles/mixins" as *;
+
+.featuredProject {
+    text-align: left;
+}
+
+.card {
+    gap: var(--space-scale-150);
+}
+
+.copy {
+    @include stack(var(--space-scale-125));
+
+    p {
+        margin: 0;
+    }
+}
+
+.highlights {
+    @include checklist;
+
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-scale-075);
+    margin-block-start: var(--space-scale-150);
+}
+
+@container (min-width:50rem) {
+    .links {
+        justify-content: flex-start;
+    }
+}
