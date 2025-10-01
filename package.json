@@ -103,7 +103,7 @@
         "stylelint-config-css-modules": "4.5.1",
         "stylelint-config-standard": "39.0.0",
         "tsx": "4.20.6",
-        "typescript": "5.9.2",
+        "typescript": "5.9.3",
         "typescript-eslint": "8.45.0",
         "vite": "^7.1.3",
         "vitest": "^3.2.4"
