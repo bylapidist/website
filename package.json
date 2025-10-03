@@ -67,7 +67,7 @@
     "devDependencies": {
         "@axe-core/playwright": "4.10.2",
         "@eslint/eslintrc": "3.3.1",
-        "@eslint/js": "9.36.0",
+        "@eslint/js": "9.37.0",
         "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
         "@lapidist/design-lint": "^5.0.0",
         "@lhci/cli": "0.15.1",
@@ -84,7 +84,7 @@
         "@types/react": "19.2.0",
         "@types/react-dom": "19.2.0",
         "concurrently": "^9.2.1",
-        "eslint": "9.36.0",
+        "eslint": "9.37.0",
         "eslint-config-next": "15.5.4",
         "eslint-import-resolver-typescript": "^4.4.4",
         "eslint-plugin-import": "^2.32.0",
