@@ -1,12 +1,6 @@
 "use client";
 
-import {
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-    type CSSProperties,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 import {
     autoUpdate,
     FloatingFocusManager,
@@ -61,13 +55,6 @@ export default function Header() {
                 : { opacity: 0, transform: "scale(0.95)" },
         },
     );
-
-    const menuStyles = useMemo<CSSProperties>(() => {
-        const transform = [floatingStyles.transform, transitionStyles.transform]
-            .filter((value): value is string => Boolean(value))
-            .join(" ");
-        return { ...floatingStyles, ...transitionStyles, transform };
-    }, [floatingStyles, transitionStyles]);
 
     useEffect(() => {
         function onScroll() {
@@ -149,26 +136,32 @@ export default function Header() {
                     >
                         <div
                             ref={refs.setFloating}
-                            className={styles.menu}
-                            style={menuStyles}
+                            className={styles.menuFloating}
+                            style={floatingStyles}
                             {...getFloatingProps(disclosure.getPanelProps())}
                         >
-                            <nav aria-label="Site">
-                                <ul className={styles.menuList}>
-                                    {siteLinks.map(({ href, label }) => (
-                                        <li key={href}>
-                                            <Link
-                                                href={href}
-                                                onClick={() => {
-                                                    disclosure.close();
-                                                }}
-                                            >
-                                                {label}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
+                            <div style={transitionStyles}>
+                                <div className={styles.menu}>
+                                    <nav aria-label="Site">
+                                        <ul className={styles.menuList}>
+                                            {siteLinks.map(
+                                                ({ href, label }) => (
+                                                    <li key={href}>
+                                                        <Link
+                                                            href={href}
+                                                            onClick={() => {
+                                                                disclosure.close();
+                                                            }}
+                                                        >
+                                                            {label}
+                                                        </Link>
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </FloatingFocusManager>
                 </FloatingPortal>
