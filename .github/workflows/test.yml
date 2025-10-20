@@ -13,7 +13,7 @@ jobs:
         name: Test
         runs-on: ubuntu-latest
         container:
-            image: mcr.microsoft.com/playwright:v1.55.0-noble
+            image: mcr.microsoft.com/playwright:v1.56.1-noble
             options: --ipc=host
 
         steps:
@@ -38,9 +38,6 @@ jobs:
 
             - name: Lint
               run: npm run lint
-
-            - name: Design lint
-              run: npm run lint:design
 
             - name: Type check
               run: npm run typecheck

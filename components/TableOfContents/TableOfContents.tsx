@@ -75,7 +75,6 @@ const TableOfContents: FC<Props> = ({ headings }) => {
         >
             <div
                 ref={contentRef}
-                // design-lint-disable-next-line
                 style={{ height: disclosure.isOpen ? height : 0 }}
                 className={clsx(
                     styles.content,
