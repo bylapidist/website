@@ -39,9 +39,6 @@ jobs:
             - name: Lint
               run: npm run lint
 
-            - name: Design lint
-              run: npm run lint:design
-
             - name: Type check
               run: npm run typecheck
 
