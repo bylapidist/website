@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lapidist.net</id>
     <title>Brett Dorrans – Lead Frontend Engineer &amp; Design Systems Specialist</title>
-    <updated>2025-08-30T00:00:00.000Z</updated>
+    <updated>2025-10-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lapidist.net"/>
     <subtitle>Ship design systems teams love. I help product orgs ship consistent UI faster — with governance, performance and accessibility built in.</subtitle>
     <logo>https://lapidist.net/opengraph-image</logo>
     <rights>2025 Brett Dorrans</rights>
+    <entry>
+        <title type="html"><![CDATA[Building AI-Ready Design Systems with DesignOps and Design Tokens]]></title>
+        <id>https://lapidist.net/articles/2025/designops-design-tokens-as-infrastructure-and-why-dtifx-matters-in-an-ai-assisted-world/</id>
+        <link href="https://lapidist.net/articles/2025/designops-design-tokens-as-infrastructure-and-why-dtifx-matters-in-an-ai-assisted-world/"/>
+        <updated>2025-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How DesignOps and design tokens combine to keep AI-assisted design workflows coherent, measurable, and safe.]]></summary>
+        <author>
+            <name>Brett Dorrans</name>
+            <uri>https://lapidist.net</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Introducing @lapidist/design-lint: A Linter for Design System Consistency]]></title>
         <id>https://lapidist.net/articles/2025/introducing-lapidist-design-lint/</id>
