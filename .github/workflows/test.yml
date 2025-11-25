@@ -13,7 +13,7 @@ jobs:
         name: Test
         runs-on: ubuntu-latest
         container:
-            image: mcr.microsoft.com/playwright:v1.56.1-noble
+            image: mcr.microsoft.com/playwright:v1.57.0-noble
             options: --ipc=host
 
         steps:
