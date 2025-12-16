@@ -2,7 +2,19 @@
 
 @keyframes fade-in-up {
     from {
+        opacity: var(--opacity-0);
         transform: translateY(var(--space-scale-100));
+    }
+
+    to {
+        opacity: var(--opacity-100);
+        transform: translateY(0);
+    }
+}
+
+@keyframes lift-in {
+    from {
+        transform: translateY(var(--space-scale-075));
     }
 
     to {
@@ -62,9 +74,21 @@
     .heroTitle,
     .heroIntro,
     .cta {
+        animation-duration: var(--motion-dur-320);
+        animation-timing-function: var(--motion-ease-emphasized);
+        animation-fill-mode: both;
+    }
+
+    .heroTitle,
+    .heroIntro {
+        opacity: var(--opacity-0);
         transform: translateY(var(--space-scale-100));
-        animation: fade-in-up var(--motion-dur-320)
-            var(--motion-ease-emphasized) both;
+        animation-name: fade-in-up;
+    }
+
+    .cta {
+        transform: none;
+        animation: none;
     }
 
     .availability {
@@ -92,6 +116,7 @@
     .heroTitle,
     .heroIntro,
     .cta {
+        opacity: var(--opacity-100);
         transform: none;
         animation: none;
     }
