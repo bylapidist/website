@@ -172,7 +172,7 @@
         --colour-text-subtle: oklch(76.68% 0 89.88deg);
         --colour-border: oklch(32.11% 0 89.88deg);
         --colour-muted: oklch(28.5% 0 89.88deg);
-        --colour-primary: oklch(76.23% 0.1303 289.41deg);
+        --colour-primary: #7964e7;
         --colour-primary-hover: color-mix(
             in srgb,
             var(--colour-primary) 90%,
@@ -183,7 +183,7 @@
             var(--colour-primary) 80%,
             var(--colour-on-primary) 20%
         );
-        --colour-on-primary: oklch(13.98% 0 89.88deg);
+        --colour-on-primary: #090909;
         --colour-success: oklch(79.38% 0.1818 155.76deg);
         --colour-warning: oklch(86.46% 0.1642 88.17deg);
         --colour-destructive: oklch(71.16% 0.1812 22.84deg);
@@ -210,7 +210,7 @@
     --colour-text-subtle: oklch(76.68% 0 89.88deg);
     --colour-border: oklch(32.11% 0 89.88deg);
     --colour-muted: oklch(28.5% 0 89.88deg);
-    --colour-primary: oklch(76.23% 0.1303 289.41deg);
+    --colour-primary: #7964e7;
     --colour-primary-hover: color-mix(
         in srgb,
         var(--colour-primary) 90%,
@@ -221,7 +221,7 @@
         var(--colour-primary) 80%,
         var(--colour-on-primary) 20%
     );
-    --colour-on-primary: oklch(13.98% 0 89.88deg);
+    --colour-on-primary: #090909;
     --colour-success: oklch(79.38% 0.1818 155.76deg);
     --colour-warning: oklch(86.46% 0.1642 88.17deg);
     --colour-destructive: oklch(71.16% 0.1812 22.84deg);
