@@ -1,4 +1,4 @@
-import { Decorator, Preview } from "@storybook/nextjs";
+import { Decorator, Preview } from "@storybook/nextjs-vite";
 import { Lexend_Deca, Roboto_Mono } from "next/font/google";
 import "../styles/globals.scss";
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import type { Meta, StoryObj } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { sizeArg, variantArg } from "@/.storybook/args";
 import { Size, Variant } from "@/types";
 import Button from "./Button";

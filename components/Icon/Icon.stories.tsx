@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { sizeArg } from "@/.storybook/args";
 import { Size } from "@/types/props";
 import Icon from "./Icon";

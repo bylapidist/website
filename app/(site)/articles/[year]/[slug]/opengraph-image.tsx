@@ -55,35 +55,33 @@ export default async function OGImage({
     const { meta } = await getArticle(year, slug);
 
     return new ImageResponse(
-        (
-            <div
+        <div
+            style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                background: BACKGROUND,
+                color: FOREGROUND,
+                padding: "80px",
+                fontFamily: "system-ui, sans-serif",
+                backgroundImage: `linear-gradient(${GRID_COLOR} 1px, transparent 1px), linear-gradient(90deg, ${GRID_COLOR} 1px, transparent 1px)`,
+                backgroundSize: "40px 40px",
+            }}
+        >
+            <LogoLockup />
+            <span
                 style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    background: BACKGROUND,
-                    color: FOREGROUND,
-                    padding: "80px",
-                    fontFamily: "system-ui, sans-serif",
-                    backgroundImage: `linear-gradient(${GRID_COLOR} 1px, transparent 1px), linear-gradient(90deg, ${GRID_COLOR} 1px, transparent 1px)`,
-                    backgroundSize: "40px 40px",
+                    fontSize: 56,
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+                    color: LOGO_COLORS.blue,
                 }}
             >
-                <LogoLockup />
-                <span
-                    style={{
-                        fontSize: 56,
-                        fontWeight: 700,
-                        lineHeight: 1.2,
-                        color: LOGO_COLORS.blue,
-                    }}
-                >
-                    {meta.title}
-                </span>
-            </div>
-        ),
+                {meta.title}
+            </span>
+        </div>,
         size,
     );
 }
