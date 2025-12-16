@@ -1,5 +1,4 @@
 import "server-only";
-import Link from "next/link";
 import { Button, Card, Section } from "@/components";
 import { Variant } from "@/types";
 import { formatDate } from "@/utils";
@@ -35,7 +34,6 @@ export default function Insights({ articles }: { articles: Article[] }) {
                     }) => (
                         <Card
                             key={`${year}-${slug}`}
-                            as={Link}
                             href={`/articles/${year}/${slug}`}
                             heading={title}
                             variant={Variant.Link}

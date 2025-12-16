@@ -95,7 +95,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en-GB" className={`${header.variable} ${body.variable}`}>
+        <html
+            lang="en-GB"
+            className={`${header.variable} ${body.variable}`}
+            suppressHydrationWarning
+        >
             <head>
                 <meta
                     name="apple-mobile-web-app-title"

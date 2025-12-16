@@ -51,7 +51,6 @@ export default async function ArticlesPage() {
                     }) => (
                         <Card
                             key={`${year}-${slug}`}
-                            as={Link}
                             href={`/articles/${year}/${slug}`}
                             heading={title}
                             headingLevel={2}
