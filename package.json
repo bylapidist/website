@@ -16,6 +16,7 @@
     "scripts": {
         "dev": "concurrently \"npm run build:tokens:watch\" \"next dev --turbopack\"",
         "start": "npx serve@latest out",
+        "start:server": "next start",
         "build": "npm run build:tokens && npm run build:cv && next build",
         "export": "next export",
         "build:cv": "node ./node_modules/@lapidist/cv-generator/dist/es5/cli.js && node -e \"require('fs').renameSync('brett-dorrans-cv.pdf','public/brett-dorrans-cv.pdf')\"",

@@ -2,12 +2,10 @@
 
 @keyframes fade-in-up {
     from {
-        opacity: var(--opacity-0);
         transform: translateY(var(--space-scale-100));
     }
 
     to {
-        opacity: var(--opacity-100);
         transform: translateY(0);
     }
 }
@@ -64,7 +62,6 @@
     .heroTitle,
     .heroIntro,
     .cta {
-        opacity: var(--opacity-0);
         transform: translateY(var(--space-scale-100));
         animation: fade-in-up var(--motion-dur-320)
             var(--motion-ease-emphasized) both;
@@ -95,7 +92,6 @@
     .heroTitle,
     .heroIntro,
     .cta {
-        opacity: var(--opacity-100);
         transform: none;
         animation: none;
     }
