@@ -34,6 +34,14 @@
     color: var(--colour-on-primary, var(--colour-text));
 }
 
+@supports not (color: oklch(0% 0 0)) {
+    .button[data-variant="primary"] {
+        // Fall back to a solid accessible colour if CSS variables use unsupported color formats
+        background: #4b2b9b;
+        color: #fff;
+    }
+}
+
 .button[data-variant="secondary"] {
     background: transparent;
     color: var(--colour-primary);
