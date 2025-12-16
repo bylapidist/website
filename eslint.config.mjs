@@ -1,9 +1,9 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
-import nextPlugin from "@next/eslint-plugin-next";
 import eslintPluginImport from "eslint-plugin-import";
 import "eslint-import-resolver-typescript";
+import nextPlugin from "@next/eslint-plugin-next";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactCompiler from "eslint-plugin-react-compiler";
 import storybook from "eslint-plugin-storybook";
@@ -31,7 +31,12 @@ export default [
     ...tseslint.configs.strictTypeChecked,
     ...storybook.configs["flat/recommended"],
     reactCompiler.configs.recommended,
-    nextPlugin.flatConfig.coreWebVitals,
+    {
+        plugins: {
+            "@next/next": nextPlugin,
+        },
+        rules: nextPlugin.configs["core-web-vitals"].rules,
+    },
     jsxA11y.flatConfigs.strict,
     {
         plugins: {

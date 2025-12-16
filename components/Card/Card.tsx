@@ -3,6 +3,7 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { forwardRef } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 import Heading from "@/components/Heading/Heading";
 import { Size, Variant } from "@/types";
 import styles from "./Card.module.scss";
@@ -24,7 +25,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
 const Card = forwardRef<HTMLElement, Props>(
     (
         {
-            as: Component = "article",
+            as: asProp,
             heading,
             headingClassName,
             highlight,
@@ -34,10 +35,12 @@ const Card = forwardRef<HTMLElement, Props>(
             className,
             icon,
             variant,
+            href,
             ...rest
         },
         ref,
     ) => {
+        const Component: ElementType = asProp ?? (href ? Link : "article");
         const classes = clsx(styles.card, className);
 
         if (variant === Variant.Testimonial || variant === Variant.Step) {
@@ -48,6 +51,7 @@ const Card = forwardRef<HTMLElement, Props>(
                     data-highlight={highlight || undefined}
                     data-size={size}
                     data-variant={variant}
+                    href={href}
                     {...rest}
                 >
                     {children}
@@ -62,6 +66,7 @@ const Card = forwardRef<HTMLElement, Props>(
                 data-highlight={highlight || undefined}
                 data-size={size}
                 data-variant={variant}
+                href={href}
                 {...rest}
             >
                 {(heading || icon) && (

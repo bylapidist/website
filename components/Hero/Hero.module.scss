@@ -12,6 +12,16 @@
     }
 }
 
+@keyframes lift-in {
+    from {
+        transform: translateY(var(--space-scale-075));
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -64,10 +74,21 @@
     .heroTitle,
     .heroIntro,
     .cta {
+        animation-duration: var(--motion-dur-320);
+        animation-timing-function: var(--motion-ease-emphasized);
+        animation-fill-mode: both;
+    }
+
+    .heroTitle,
+    .heroIntro {
         opacity: var(--opacity-0);
         transform: translateY(var(--space-scale-100));
-        animation: fade-in-up var(--motion-dur-320)
-            var(--motion-ease-emphasized) both;
+        animation-name: fade-in-up;
+    }
+
+    .cta {
+        transform: none;
+        animation: none;
     }
 
     .availability {

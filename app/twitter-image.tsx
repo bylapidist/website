@@ -41,28 +41,26 @@ function LogoLockup() {
 
 export default function TwitterImage() {
     return new ImageResponse(
-        (
-            <div
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    background: BACKGROUND,
-                    color: FOREGROUND,
-                    padding: "96px",
-                    fontFamily: "system-ui, sans-serif",
-                    backgroundImage: `linear-gradient(${GRID_COLOR} 1px, transparent 1px), linear-gradient(90deg, ${GRID_COLOR} 1px, transparent 1px)`,
-                    backgroundSize: "40px 40px",
-                }}
-            >
-                <LogoLockup />
-                <span style={{ fontSize: 72, color: LOGO_COLORS.blue }}>
-                    Ship design systems teams love.
-                </span>
-            </div>
-        ),
+        <div
+            style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                background: BACKGROUND,
+                color: FOREGROUND,
+                padding: "96px",
+                fontFamily: "system-ui, sans-serif",
+                backgroundImage: `linear-gradient(${GRID_COLOR} 1px, transparent 1px), linear-gradient(90deg, ${GRID_COLOR} 1px, transparent 1px)`,
+                backgroundSize: "40px 40px",
+            }}
+        >
+            <LogoLockup />
+            <span style={{ fontSize: 72, color: LOGO_COLORS.blue }}>
+                Ship design systems teams love.
+            </span>
+        </div>,
         size,
     );
 }
