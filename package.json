@@ -44,7 +44,7 @@
     },
     "dependencies": {
         "@floating-ui/react": "^0.27.16",
-        "@lapidist/cv-generator": "2.8.0",
+        "@lapidist/cv-generator": "2.8.1",
         "clsx": "2.1.1",
         "feed": "^5.1.0",
         "github-slugger": "^2.0.0",
