@@ -52,7 +52,7 @@
         "mdast-util-to-string": "^4.0.0",
         "next": "16.1.2",
         "next-mdx-remote": "5.0.0",
-        "prettier": "3.7.4",
+        "prettier": "3.8.0",
         "prismjs": "^1.30.0",
         "react": "19.2.3",
         "react-dom": "19.2.3",
