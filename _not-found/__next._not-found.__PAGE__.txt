@@ -3,5 +3,5 @@
 3:I[22016,["/_next/static/chunks/8ce71bb52ba5db17.js","/_next/static/chunks/b8b7618570a4cfe1.js"],""]
 4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/4d348ff2302e5aac.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
-0:{"buildId":"65zemAKOpZuaOJqkY79NF","rsc":["$","$1","c",{"children":[["$","$L2",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$L3",null,{"href":"/","children":"Return home"}]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"PT33E4U21kz2dWTJKACXL","rsc":["$","$1","c",{"children":[["$","$L2",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$L3",null,{"href":"/","children":"Return home"}]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null
