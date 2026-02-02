@@ -4,26 +4,12 @@ import { Size, Variant } from "@/types";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
-    const today = new Date();
-    const formattedDate = today.toLocaleDateString("en-US", {
-        month: "long",
-        year: "numeric",
-    });
-    const isoDate = today.toISOString().split("T")[0];
-
     return (
         <Section
             className={styles.hero}
             labelledBy="hero-heading"
             containerSize={Size.LG}
         >
-            <div className={styles.availability}>
-                <p>
-                    Currently open for new roles and projects:
-                    <time dateTime={isoDate}> {formattedDate}</time>
-                </p>
-            </div>
-
             <div className={styles.ctaGroup}>
                 <Heading
                     level={1}
