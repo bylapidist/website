@@ -90,7 +90,7 @@
         "eslint-plugin-react-compiler": "^19.1.0-rc.2",
         "eslint-plugin-storybook": "10.2.8",
         "jsdom": "^27.3.0",
-        "lighthouse": "13.0.2",
+        "lighthouse": "13.0.3",
         "postcss-import": "^16.1.1",
         "postcss-scss": "^4.0.9",
         "sass": "1.97.3",
