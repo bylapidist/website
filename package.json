@@ -93,7 +93,7 @@
         "lighthouse": "13.0.3",
         "postcss-import": "^16.1.1",
         "postcss-scss": "^4.0.9",
-        "sass": "1.97.3",
+        "sass": "1.98.0",
         "start-server-and-test": "2.1.5",
         "storybook": "10.2.18",
         "style-dictionary": "^5.1.1",
