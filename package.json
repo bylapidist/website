@@ -108,6 +108,6 @@
         "@storybook/nextjs-vite": "10.3.3"
     },
     "overrides": {
-        "@swc/helpers": "0.5.20"
+        "@swc/helpers": "0.5.21"
     }
 }
