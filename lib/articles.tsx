@@ -3,7 +3,7 @@ import path from "path";
 import { cache, type ComponentPropsWithoutRef, type ReactNode } from "react";
 import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
-import type { Root } from "mdast";
+import type { Heading as MdastHeading, Root } from "mdast";
 import { toString } from "mdast-util-to-string";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypePrismPlus from "rehype-prism-plus";
@@ -48,7 +48,7 @@ export const getArticle = cache(async (year: string, slug: string) => {
     const headings: Heading[] = [];
     const slugger = new GithubSlugger();
     const headingPlugin = () => (tree: Root) => {
-        visit(tree, "heading", (node) => {
+        visit(tree, "heading", (node: MdastHeading) => {
             if (node.depth < 2) {
                 return;
             }
