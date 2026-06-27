@@ -8,7 +8,7 @@ import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import { useDisclosure } from "@/hooks";
 import styles from "./TableOfContents.module.scss";
 
-export type TableOfContentsHeading = {
+type TableOfContentsHeading = {
     id: string;
     text: string;
     level: number;

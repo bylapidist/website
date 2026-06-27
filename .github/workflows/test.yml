@@ -37,6 +37,9 @@ jobs:
               env:
                   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
+            - name: Knip
+              run: pnpm run knip
+
             - name: Lint
               run: pnpm run lint
 

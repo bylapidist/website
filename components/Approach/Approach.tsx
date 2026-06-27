@@ -3,7 +3,7 @@ import { Card, Container } from "@/components";
 import { Variant } from "@/types";
 import styles from "./Approach.module.scss";
 
-export interface Step {
+interface Step {
     title: string;
     description: string;
 }

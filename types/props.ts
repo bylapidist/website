@@ -25,10 +25,6 @@ export type WithSize = {
     size?: Size;
 };
 
-export type WithVariant = {
-    variant?: Variant;
-};
-
 export type PolymorphicProps<
     As extends ElementType,
     Props extends object = Record<string, unknown>,

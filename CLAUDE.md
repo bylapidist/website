@@ -32,6 +32,7 @@ pnpm run start            # Serve the built `out/` directory locally
 
 ### Code quality
 ```sh
+pnpm run knip             # Dead code / unused deps check (knip)
 pnpm run lint             # ESLint + Stylelint
 pnpm run typecheck        # tsc --noEmit
 pnpm run format           # Prettier check
@@ -144,7 +145,7 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 
 | Trigger | Workflow | Steps |
 |---------|----------|-------|
-| Pull request | `test.yml` | Lint → typecheck → unit + E2E tests |
+| Pull request | `test.yml` | Knip → lint → typecheck → unit + E2E tests |
 | Push to `master` | `release.yml` | Lint → build app → semantic-release → deploy to GitHub Pages |
 
 - **Conventional Commits are required.** `semantic-release` on master reads commit messages to determine the version bump and generate the changelog.
