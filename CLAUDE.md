@@ -47,12 +47,6 @@ pnpm run test:unit               # Vitest (jsdom)
 pnpm run test:e2e                # Playwright smoke tests
 ```
 
-### QA / Lighthouse
-```sh
-pnpm run preqa   # Build the app (prerequisite)
-pnpm run qa      # Serve + run Lighthouse CI
-```
-
 ## Architecture
 
 ### Directory layout
@@ -150,7 +144,7 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 
 | Trigger | Workflow | Steps |
 |---------|----------|-------|
-| Pull request | `test.yml` | Lint → typecheck → unit + E2E tests → Lighthouse CI |
+| Pull request | `test.yml` | Lint → typecheck → unit + E2E tests |
 | Push to `master` | `release.yml` | Lint → build app → semantic-release → deploy to GitHub Pages |
 
 - **Conventional Commits are required.** `semantic-release` on master reads commit messages to determine the version bump and generate the changelog.
