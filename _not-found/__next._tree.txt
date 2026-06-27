@@ -1,4 +1,4 @@
 :HL["/_next/static/chunks/0yjj3ydj4txel.css","style"]
 :HL["/_next/static/chunks/3f1bdyopoli_7.css","style"]
 :HL["/opengraph-image","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"T5dIr8YRwB6wctcoqEFkq"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"-6Qzy9iSCgIOqSob0Tk1H"}
