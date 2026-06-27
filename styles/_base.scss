@@ -39,7 +39,7 @@ body {
     @include stack(null);
 
     min-block-size: 100vh;
-    font-family: var(--typography-font-family-body);
+    font-family: var(--font-family-header);
     font-size: var(--typography-size-body);
     line-height: var(--typography-line-height-body);
     letter-spacing: var(--typography-letter-spacing-body);
@@ -190,7 +190,7 @@ summary::after {
 }
 
 details[open] summary::after {
-    transform: rotate(90deg);
+    transform: rotate(var(--motion-rotate-open));
 }
 
 code {
@@ -252,6 +252,25 @@ pre {
 
     html::-webkit-scrollbar-thumb:hover {
         background: var(--colour-primary);
+    }
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(var(--size-reveal-translate));
+    transition:
+        opacity var(--motion-dur-500) var(--motion-ease-out),
+        transform var(--motion-dur-500) var(--motion-ease-out);
+
+    &[data-visible] {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 

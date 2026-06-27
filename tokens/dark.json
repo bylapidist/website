@@ -1,9 +1,9 @@
 {
     "dark": {
         "surface": {
-            "level-0": { "value": "oklch(13.98% 0 89.88deg)" },
-            "level-1": { "value": "oklch(21.78% 0 89.88deg)" },
-            "level-2": { "value": "oklch(25.20% 0 89.88deg)" },
+            "level-0": { "value": "#0C0D10" },
+            "level-1": { "value": "#15161A" },
+            "level-2": { "value": "#1E1F25" },
             "level-1-hover": {
                 "value": "color-mix(\n        in srgb,\n        var(--surface-level-1) 90%,\n        var(--colour-text) 10%\n    )"
             },
@@ -12,23 +12,25 @@
             }
         },
         "colour": {
-            "text": { "value": "oklch(97.02% 0 89.88deg)" },
-            "text-subtle": { "value": "oklch(76.68% 0 89.88deg)" },
-            "border": { "value": "oklch(32.11% 0 89.88deg)" },
-            "muted": { "value": "oklch(28.50% 0 89.88deg)" },
-            "primary": { "value": "#7964e7" },
+            "text": { "value": "#ECECEF" },
+            "text-subtle": { "value": "#9A9AA5" },
+            "border": { "value": "#26272D" },
+            "muted": { "value": "#1E1F25" },
+            "primary": { "value": "#7AA5E8" },
+            "primary-strong": { "value": "#93B6EE" },
             "primary-hover": {
                 "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 90%,\n        var(--colour-on-primary) 10%\n    )"
             },
             "primary-active": {
                 "value": "color-mix(\n        in srgb,\n        var(--colour-primary) 80%,\n        var(--colour-on-primary) 20%\n    )"
             },
-            "on-primary": { "value": "#090909" },
-            "success": { "value": "oklch(79.38% 0.1818 155.76deg)" },
-            "warning": { "value": "oklch(86.46% 0.1642 88.17deg)" },
-            "destructive": { "value": "oklch(71.16% 0.1812 22.84deg)" },
-            "info": { "value": "oklch(80% 0.12 264.5deg)" },
-            "neutral": { "value": "oklch(64% 0 89.88deg)" }
+            "on-primary": { "value": "#0C0D10" },
+            "gold": { "value": "#D9B968" },
+            "success": { "value": "#4CAF7D" },
+            "warning": { "value": "#D9B968" },
+            "destructive": { "value": "#E57373" },
+            "info": { "value": "#7AA5E8" },
+            "neutral": { "value": "#5B5B66" }
         }
     }
 }

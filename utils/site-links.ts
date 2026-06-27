@@ -4,11 +4,16 @@ export interface SiteLink {
 }
 
 export const siteLinks: SiteLink[] = [
-    { href: "/", label: "Home" },
+    { href: "/articles", label: "Writing" },
+    { href: "/#projects", label: "Projects" },
     { href: "/about", label: "About" },
-    { href: "/articles", label: "Articles" },
-    { href: "/#services", label: "Services" },
-    { href: "/#contact", label: "Contact" },
-    { href: "/accessibility-statement", label: "Accessibility Statement" },
-    { href: "/ai-ethics-statement", label: "AI Ethics Statement" },
+];
+
+export const footerLinks: SiteLink[] = [
+    { href: "/articles", label: "Writing" },
+    { href: "/about", label: "About" },
+    {
+        href: "/accessibility-statement",
+        label: "Accessibility statement",
+    },
 ];

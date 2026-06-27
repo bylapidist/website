@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Icon from "@/components/Icon/Icon";
 import VisuallyHidden from "@/components/VisuallyHidden/VisuallyHidden";
 import { useDisclosure } from "@/hooks";
-import { Size } from "@/types";
 import styles from "./ThemeToggle.module.scss";
 
 export default function ThemeToggle() {
@@ -54,12 +52,9 @@ export default function ThemeToggle() {
             aria-pressed={isOpen}
             data-theme={theme}
         >
-            <Icon
-                name={theme === "dark" ? "sun" : "moon"}
-                size={Size.MD}
-                className={styles.icon}
-                decorative
-            />
+            <span className={styles.icon} aria-hidden="true">
+                {theme === "light" ? "☾" : "☀"}
+            </span>
             <VisuallyHidden>{label}</VisuallyHidden>
         </button>
     );

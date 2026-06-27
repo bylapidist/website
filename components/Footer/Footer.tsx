@@ -1,47 +1,67 @@
 import "server-only";
 import Link from "next/link";
 import { Container } from "@/components";
-import { siteLinks } from "@/utils";
+import { footerLinks } from "@/utils";
 import styles from "./Footer.module.scss";
+
+const EMAIL = "hello@lapidist.net";
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <Container className={styles.footerContainer}>
-                <nav aria-label="Footer">
-                    <ul className={styles.footerNav}>
-                        {siteLinks.map(({ href, label }) => (
+            <Container className={styles.inner}>
+                <div className={styles.contact}>
+                    <p className={styles.contactLine}>
+                        The best way to reach me is email.
+                    </p>
+                    <ul className={styles.contactLinks}>
+                        <li>
+                            <a
+                                href={`mailto:${EMAIL}`}
+                                className={styles.emailLink}
+                            >
+                                {EMAIL}
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/bylapidist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.mutedLink}
+                            >
+                                github.com/bylapidist
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://linkedin.com/in/brettdorrans"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.mutedLink}
+                            >
+                                linkedin.com/in/brettdorrans
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <nav aria-label="Footer" className={styles.footerNav}>
+                    <ul className={styles.footerNavList}>
+                        {footerLinks.map(({ href, label }) => (
                             <li key={href}>
-                                <Link href={href}>{label}</Link>
+                                <Link href={href} className={styles.footerLink}>
+                                    {label}
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <ul className={styles.social}>
-                    <li>
-                        <a
-                            href="https://linkedin.com/in/brettdorrans"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/bylapidist"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            GitHub
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    Lapidist Ltd, registered in Scotland.󠁿 Company number
-                    SC549211.
+            </Container>
+            <Container className={styles.legal}>
+                <p className={styles.legalText}>
+                    Lapidist Ltd, registered in Scotland &middot; Company number
+                    SC549211 &middot; &copy; Brett Dorrans
                 </p>
-                <p>&copy; Brett Dorrans</p>
             </Container>
         </footer>
     );

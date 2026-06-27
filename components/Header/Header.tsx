@@ -26,7 +26,6 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const disclosure = useDisclosure();
     const headerRef = useRef<HTMLElement>(null);
-
     const prefersReducedMotion = usePrefersReducedMotion();
 
     const { refs, floatingStyles, context } = useFloating<HTMLButtonElement>({
@@ -96,19 +95,31 @@ export default function Header() {
             data-scrolled={scrolled || undefined}
         >
             <Container className={styles.inner} as="div" cq="page">
-                <nav>
+                <nav aria-label="Primary" className={styles.nav}>
                     <Link
                         href="/"
                         className={styles.logo}
-                        aria-label="Brett Dorrans"
+                        aria-label="Brett Dorrans — home"
                         aria-current={pathname === "/" ? "page" : undefined}
                     >
                         <LogoMark />
-                        <span className={styles.logoLockup}>
-                            <span>Brett</span>
-                            <span>Dorrans</span>
-                        </span>
+                        <span className={styles.logoName}>Brett Dorrans</span>
                     </Link>
+                    <ul className={styles.navLinks}>
+                        {siteLinks.map(({ href, label }) => (
+                            <li key={href}>
+                                <Link
+                                    href={href}
+                                    className={styles.navLink}
+                                    aria-current={
+                                        pathname === href ? "page" : undefined
+                                    }
+                                >
+                                    {label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </nav>
                 <div className={styles.actions}>
                     <ThemeToggle />
