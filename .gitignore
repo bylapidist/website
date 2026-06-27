@@ -12,7 +12,6 @@
 
 # testing
 /coverage
-.lighthouseci
 /test-results
 
 # next.js
@@ -45,5 +44,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-*storybook.log
-storybook-static

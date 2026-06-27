@@ -38,7 +38,7 @@ export function useDisclosure({
                 props.onClick?.(event);
                 toggle();
             },
-        } as T & { "aria-expanded": boolean; "aria-controls": string };
+        };
     }
 
     function getPanelProps<T extends { id?: string }>(
@@ -48,7 +48,7 @@ export function useDisclosure({
             id: panelId,
             hidden: !isOpen,
             ...props,
-        } as T & { id: string; hidden: boolean };
+        };
     }
 
     return { isOpen, open, close, toggle, getTriggerProps, getPanelProps };

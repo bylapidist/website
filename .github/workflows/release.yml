@@ -21,25 +21,23 @@ jobs:
               with:
                   fetch-depth: 0
 
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Setup Node.js
               uses: actions/setup-node@v6
               with:
                   node-version: 24
-                  cache: npm
-                  cache-dependency-path: |
-                      **/package-lock.json
+                  cache: pnpm
 
             - name: Install dependencies
-              run: npm ci
+              run: pnpm install --frozen-lockfile
 
             - name: Lint files
-              run: npm run lint
-
-            - name: Run build storybook
-              run: npm run build-storybook
+              run: pnpm run lint
 
             - name: Build
-              run: npm run build
+              run: pnpm run build
 
             - name: Set domain CNAME
               run: echo "lapidist.net" >> out/CNAME
@@ -51,7 +49,7 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-              run: npx semantic-release
+              run: pnpm dlx semantic-release
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4
@@ -61,11 +59,3 @@ jobs:
                   folder: out
                   clean: true
 
-            - name: Deploy Storybook
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                  token: ${{ secrets.GH_TOKEN }}
-                  repository-name: bylapidist/website-storybook
-                  branch: gh-pages
-                  folder: storybook-static
-                  clean: true

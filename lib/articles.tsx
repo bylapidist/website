@@ -32,7 +32,7 @@ type ArticleMeta = {
     audio?: string;
 };
 
-export type Heading = { id: string; text: string; level: number };
+type Heading = { id: string; text: string; level: number };
 
 export const getArticle = cache(async (year: string, slug: string) => {
     const filePath = path.join(ARTICLES_PATH, year, `${slug}.mdx`);

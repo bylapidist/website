@@ -6,7 +6,6 @@ import "eslint-import-resolver-typescript";
 import nextPlugin from "@next/eslint-plugin-next";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactCompiler from "eslint-plugin-react-compiler";
-import storybook from "eslint-plugin-storybook";
 import tseslint from "typescript-eslint";
 import localPlugin from "./.eslint/index.mjs";
 
@@ -19,8 +18,6 @@ export default [
             "stylelint.config.mjs",
             "style-dictionary.config.mjs",
             "postcss.config.cjs",
-            "storybook-static/**",
-            ".storybook/**",
             ".eslint/**",
             ".next/**",
             "out/**",
@@ -29,7 +26,6 @@ export default [
     },
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
-    ...storybook.configs["flat/recommended"],
     reactCompiler.configs.recommended,
     {
         plugins: {

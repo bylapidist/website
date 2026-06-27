@@ -7,10 +7,10 @@ const TOKENS_CSS = path.join(process.cwd(), "styles", "tokens.css");
 
 function build() {
     execSync(
-        "npx style-dictionary build --config style-dictionary.config.mjs",
+        "pnpm exec style-dictionary build --config style-dictionary.config.mjs",
         { stdio: "inherit" },
     );
-    execSync(`npx prettier "${TOKENS_CSS}" --write`, {
+    execSync(`pnpm exec prettier "${TOKENS_CSS}" --write`, {
         stdio: "inherit",
     });
 }

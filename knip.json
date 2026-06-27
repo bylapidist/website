@@ -1,0 +1,18 @@
+{
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "entry": [
+        "components/index.ts",
+        "hooks/index.ts",
+        "utils/index.ts",
+        "types/props.ts",
+        "style-dictionary.config.mjs",
+        "scripts/**/*.{ts,mjs}"
+    ],
+    "ignore": ["styles/**"],
+    "ignoreDependencies": [
+        "prismjs",
+        "@types/unist",
+        "eslint-config-next",
+        "postcss-import"
+    ]
+}
