@@ -52,9 +52,3 @@ jobs:
                   pnpm run qa
               env:
                   NODE_ENV: production
-
-            - name: Build Storybook
-              run: pnpm run build-storybook
-
-            - name: Storybook a11y
-              run: pnpm run test:storybook

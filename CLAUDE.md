@@ -20,7 +20,6 @@ This project uses **pnpm 11.9.0**. Never use `npm` or `yarn`.
 ### Development
 ```sh
 pnpm run dev              # Turbopack dev server + design token watcher (run together)
-pnpm run storybook        # Storybook on port 6006
 ```
 
 ### Building
@@ -28,7 +27,6 @@ pnpm run storybook        # Storybook on port 6006
 pnpm run build            # Full build: tokens → CV PDF → next build
 pnpm run build:tokens     # Regenerate styles/tokens.css from tokens/*.json
 pnpm run build:cv         # Generate brett-dorrans-cv.pdf into public/
-pnpm run build-storybook  # Static Storybook output
 pnpm run start            # Serve the built `out/` directory locally
 ```
 
@@ -47,7 +45,6 @@ pnpm run test:install-browsers   # One-time: install Playwright browsers
 pnpm run test                    # Unit tests + E2E tests
 pnpm run test:unit               # Vitest (jsdom)
 pnpm run test:e2e                # Playwright smoke tests
-pnpm run test:storybook          # Build Storybook + run accessibility tests
 ```
 
 ### QA / Lighthouse
@@ -76,7 +73,6 @@ tokens/           Design token source JSON files
 content/articles/ MDX blog posts organised by year
 scripts/          Build-time Node scripts
 smoke-tests/      Playwright E2E specs
-.storybook/       Storybook config
 .eslint/          Custom local ESLint rules
 .github/workflows/ CI/CD pipelines
 ```
@@ -89,7 +85,6 @@ Each component lives in its own folder:
 components/Button/
   Button.tsx
   Button.module.scss
-  Button.stories.tsx
   Button.test.tsx
 ```
 
@@ -146,10 +141,6 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 - In non-CI mode Playwright reuses an already-running server; in CI it builds and starts the app fresh.
 - Axe accessibility scans run as part of the home page spec.
 
-### Storybook a11y
-- `pnpm run test:storybook` builds Storybook, serves it, then runs `test-storybook`.
-- Storybook aliases `server-only` to a browser-safe stub (`.storybook/server-only.ts`) so server-only imports don't break.
-
 ## Dark mode
 
 - `app/layout.tsx` contains an inline `<script>` that reads `localStorage` and `prefers-color-scheme` to set `.light` or `.dark` on `<html>` before first paint. **Do not remove or move this script** — it prevents flash of unstyled content (FOUC).
@@ -159,8 +150,8 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 
 | Trigger | Workflow | Steps |
 |---------|----------|-------|
-| Pull request | `test.yml` | Lint → typecheck → unit + E2E tests → Lighthouse CI → Storybook a11y |
-| Push to `master` | `release.yml` | Lint → build Storybook → build app → semantic-release → deploy to GitHub Pages |
+| Pull request | `test.yml` | Lint → typecheck → unit + E2E tests → Lighthouse CI |
+| Push to `master` | `release.yml` | Lint → build app → semantic-release → deploy to GitHub Pages |
 
 - **Conventional Commits are required.** `semantic-release` on master reads commit messages to determine the version bump and generate the changelog.
 - CI runs inside the `mcr.microsoft.com/playwright` Docker image (browsers pre-installed). `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` is set to skip redundant downloads.

@@ -36,9 +36,6 @@ jobs:
             - name: Lint files
               run: pnpm run lint
 
-            - name: Run build storybook
-              run: pnpm run build-storybook
-
             - name: Build
               run: pnpm run build
 
@@ -62,11 +59,3 @@ jobs:
                   folder: out
                   clean: true
 
-            - name: Deploy Storybook
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                  token: ${{ secrets.GH_TOKEN }}
-                  repository-name: bylapidist/website-storybook
-                  branch: gh-pages
-                  folder: storybook-static
-                  clean: true
