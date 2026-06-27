@@ -1,0 +1,9 @@
+overrides:
+    "@swc/helpers": "0.5.21"
+
+allowBuilds:
+    "@parcel/watcher": true
+    "@swc/core": true
+    esbuild: true
+    sharp: true
+    unrs-resolver: true

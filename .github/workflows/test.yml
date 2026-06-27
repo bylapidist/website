@@ -22,38 +22,41 @@ jobs:
               with:
                   fetch-depth: 1
 
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 11
+
             - name: Setup Node.js
               uses: actions/setup-node@v6
               with:
                   node-version: 24
-                  cache: npm
-                  cache-dependency-path: |
-                      **/package-lock.json
+                  cache: pnpm
 
-            # Prevent browser download during npm ci
+            # Prevent browser download during pnpm install
             - name: Install deps (no browsers)
-              run: npm ci
+              run: pnpm install --frozen-lockfile
               env:
                   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
             - name: Lint
-              run: npm run lint
+              run: pnpm run lint
 
             - name: Type check
-              run: npm run typecheck
+              run: pnpm run typecheck
 
             - name: Test
-              run: npm run test:unit && npm run test:e2e
+              run: pnpm run test:unit && pnpm run test:e2e
 
             - name: Lighthouse
               run: |
                   export CHROME_PATH=$(node -e "process.stdout.write(require('@playwright/test').chromium.executablePath())")
-                  npm run qa
+                  pnpm run qa
               env:
                   NODE_ENV: production
 
             - name: Build Storybook
-              run: npm run build-storybook
+              run: pnpm run build-storybook
 
             - name: Storybook a11y
-              run: npm run test:storybook
+              run: pnpm run test:storybook
