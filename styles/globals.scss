@@ -1,5 +1,5 @@
 @use "sass:meta";
-@import "@fontsource-variable/mona-sans";
+@include meta.load-css("@fontsource-variable/mona-sans");
 @layer base, tokens;
 
 @layer base {
