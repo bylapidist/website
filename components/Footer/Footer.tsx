@@ -28,6 +28,7 @@ export default function Footer() {
                                 href="https://github.com/bylapidist"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                data-no-ext-icon
                                 className={styles.mutedLink}
                             >
                                 github.com/bylapidist
@@ -38,6 +39,7 @@ export default function Footer() {
                                 href="https://linkedin.com/in/brettdorrans"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                data-no-ext-icon
                                 className={styles.mutedLink}
                             >
                                 linkedin.com/in/brettdorrans

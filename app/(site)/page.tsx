@@ -179,6 +179,7 @@ export default async function Page() {
                             href={p.url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-no-ext-icon
                             data-reveal
                             className={styles.projectCard}
                         >

@@ -10,7 +10,9 @@ export const siteLinks: SiteLink[] = [
 ];
 
 export const footerLinks: SiteLink[] = [
+    { href: "/", label: "Home" },
     { href: "/articles", label: "Writing" },
+    { href: "/#projects", label: "Projects" },
     { href: "/about", label: "About" },
     {
         href: "/accessibility-statement",

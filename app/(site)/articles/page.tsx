@@ -4,8 +4,9 @@ import { getAllArticles } from "@/lib/articles";
 import { buildMetadata, formatDate } from "@/utils";
 import styles from "./page.module.scss";
 
+const TITLE = "Essays on systems, tokens, and craft.";
 const DESCRIPTION =
-    "Essays on systems, craft, and the frontend work that doesn't show up in a screenshot.";
+    "Notes on building interfaces that stay coherent — design systems, frontend architecture, and the tooling that holds them together.";
 
 export const metadata = buildMetadata({
     title: "Writing",
@@ -21,7 +22,8 @@ export default async function ArticlesPage() {
         <div className={styles.page}>
             <div data-reveal className={styles.pageHeader}>
                 <p className={styles.eyebrow}>Writing</p>
-                <h1 className={styles.pageTitle}>{DESCRIPTION}</h1>
+                <h1 className={styles.pageTitle}>{TITLE}</h1>
+                <p className={styles.pageDesc}>{DESCRIPTION}</p>
             </div>
             <ul className={styles.articleList}>
                 {articles.map(

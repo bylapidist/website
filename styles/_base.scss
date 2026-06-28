@@ -112,8 +112,12 @@ a {
     text-decoration: underline;
 }
 
-a[target="_blank"]:not(.logo-link, [href$=".pdf"])::after,
-button[target="_blank"]:not(.logo-link, [href$=".pdf"])::after {
+a[target="_blank"]:not(.logo-link, [href$=".pdf"], [data-no-ext-icon])::after,
+button[target="_blank"]:not(
+        .logo-link,
+        [href$=".pdf"],
+        [data-no-ext-icon]
+    )::after {
     content: "";
     display: inline-block;
     inline-size: var(--size-icon-md);

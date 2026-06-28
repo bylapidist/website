@@ -1,4 +1,5 @@
 .page {
+    width: 100%;
     max-width: var(--layout-max-w-l);
     margin-inline: auto;
     padding-inline: var(--space-scale-150);
@@ -27,8 +28,16 @@
     font-size: var(--typography-size-page-title-sm);
     line-height: var(--typography-line-height-title);
     letter-spacing: var(--typography-letter-spacing-tight);
-    margin: 0;
+    margin: 0 0 var(--space-scale-100);
     text-wrap: balance;
+}
+
+.pageDesc {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose-sm);
+    line-height: var(--typography-line-height-relaxed);
+    color: var(--colour-text-subtle);
+    margin: 0;
 }
 
 .articleList {
@@ -44,6 +53,7 @@
 .articleLink {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-scale-087);
     padding-block: var(--space-responsive-card-pad);
     text-decoration: none;
