@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test("header menu toggles", async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
     await page.goto("/", { waitUntil: "networkidle" });
     const menuToggle = page.getByLabel("Toggle navigation menu");
     await expect(menuToggle).toHaveAttribute("aria-expanded", "false");

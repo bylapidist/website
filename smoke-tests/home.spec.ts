@@ -13,7 +13,7 @@ test("home page is accessible", async ({ page }, testInfo) => {
         theme,
     );
 
-    await expect(page.locator("h1")).toContainText("scalable UI");
+    await expect(page.locator("h1")).toContainText("frontend platforms");
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
     const nav = await page.evaluate(

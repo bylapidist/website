@@ -31,7 +31,7 @@ export default async function ArticlePage({
                     ),
                 }}
             />
-            <div className={styles.articlePage}>
+            <article className={styles.articlePage}>
                 <Link href="/articles" className={styles.backLink}>
                     ← All writing
                 </Link>
@@ -62,7 +62,7 @@ export default async function ArticlePage({
                     )}
                     {content}
                 </div>
-            </div>
+            </article>
         </>
     );
 }
