@@ -22,7 +22,9 @@
     --filter-backdrop-blur: 12px;
     --space-scale-0: 0;
     --space-scale-100: 1rem;
+    --space-scale-125: 1.25rem;
     --space-scale-150: 1.5rem;
+    --space-scale-175: 1.75rem;
     --space-scale-200: 2rem;
     --space-scale-300: 3rem;
     --space-scale-400: 4rem;
@@ -44,6 +46,8 @@
     --space-responsive-gap-now: clamp(20px, 4vw, 56px);
     --space-responsive-gap-sm: clamp(20px, 3vw, 36px);
     --space-responsive-nav-gap: clamp(16px, 3vw, 30px);
+    --space-responsive-article-back-mb: clamp(28px, 4vw, 48px);
+    --space-responsive-article-header-mb: clamp(32px, 4vw, 48px);
     --size-tap-min: 44px;
     --size-theme-toggle: 36px;
     --size-reveal-translate: 10px;
@@ -206,6 +210,7 @@
     --layout-max-w-s: 40rem;
     --layout-max-w-m: 60rem;
     --layout-max-w-l: 70rem;
+    --layout-max-w-article: 45rem;
     --breakpoint-xs: 30rem;
     --breakpoint-sm: 40rem;
     --breakpoint-md: 48rem;

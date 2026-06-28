@@ -36,7 +36,9 @@
             "075": { "value": "0.75rem" },
             "087": { "value": "0.875rem" },
             "100": { "value": "1rem" },
+            "125": { "value": "1.25rem" },
             "150": { "value": "1.5rem" },
+            "175": { "value": "1.75rem" },
             "200": { "value": "2rem" },
             "300": { "value": "3rem" },
             "400": { "value": "4rem" }
@@ -55,7 +57,9 @@
             "gap-lg": { "value": "clamp(24px, 3vw, 40px)" },
             "gap-now": { "value": "clamp(20px, 4vw, 56px)" },
             "gap-sm": { "value": "clamp(20px, 3vw, 36px)" },
-            "nav-gap": { "value": "clamp(16px, 3vw, 30px)" }
+            "nav-gap": { "value": "clamp(16px, 3vw, 30px)" },
+            "article-back-mb": { "value": "clamp(28px, 4vw, 48px)" },
+            "article-header-mb": { "value": "clamp(32px, 4vw, 48px)" }
         }
     },
     "size": {
@@ -290,7 +294,8 @@
         "max-w": {
             "s": { "value": "40rem" },
             "m": { "value": "60rem" },
-            "l": { "value": "70rem" }
+            "l": { "value": "70rem" },
+            "article": { "value": "45rem" }
         }
     },
     "breakpoint": {
