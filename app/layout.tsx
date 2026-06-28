@@ -141,7 +141,7 @@ export default function RootLayout({
                     color="#1F4E8C"
                 />
             </head>
-            <body>
+            <body suppressHydrationWarning>
                 <a href="#main" className="skip-link">
                     Skip to content
                 </a>
