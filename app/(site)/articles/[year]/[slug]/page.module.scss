@@ -1,62 +1,123 @@
 @use "../../../../../styles/mixins" as *;
 
-.article {
+.articlePage {
+    width: 100%;
+    max-width: var(--layout-max-w-l);
+    margin-inline: auto;
+    padding-inline: var(--space-scale-150);
+    padding-block: var(--space-responsive-section-y)
+        var(--space-responsive-section-y-end);
+}
+
+.backLink {
+    display: inline-block;
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-sm);
+    color: var(--colour-text-subtle);
+    text-decoration: none;
+    margin-block-end: var(--space-responsive-article-back-mb);
+    transition: color var(--motion-dur-220) var(--motion-ease-link);
+}
+
+.articleHeader {
+    max-width: var(--layout-max-w-article);
+    margin-inline: auto;
+    margin-block-end: var(--space-responsive-article-header-mb);
+}
+
+.articleHeading {
+    font-size: var(--typography-size-page-title);
+    line-height: var(--typography-line-height-display);
+    letter-spacing: var(--typography-letter-spacing-tighter);
+    margin: 0;
+}
+
+.meta {
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-meta);
+    letter-spacing: var(--typography-letter-spacing-meta);
+    color: var(--colour-text-subtle);
+    margin: 0 0 var(--space-scale-125);
+}
+
+.articleBody {
     @include grid-stack(var(--space-scale-075));
 
+    max-width: var(--layout-max-w-article);
+    margin-inline: auto;
     overflow-wrap: anywhere;
+}
+
+.articleBody :global(p) {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose);
+    line-height: var(--typography-line-height-prose);
+}
+
+.articleBody :global(h2) {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-article-h2);
+    line-height: var(--typography-line-height-heading-sm);
+    letter-spacing: var(--typography-letter-spacing-snug);
+    margin-block: var(--space-scale-300) var(--space-scale-100);
+}
+
+.articleBody > :global(ul),
+.articleBody > :global(ol) {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose);
+    line-height: var(--typography-line-height-relaxed);
 }
 
 .summary {
     color: var(--colour-text-subtle);
 }
 
-.meta {
-    color: var(--colour-text);
-}
-
-.return {
-    margin-block-start: var(--space-scale-200);
-    font-size: var(--typography-size-100);
-    text-align: center;
-}
-
-.article :global(ol) {
+.articleBody :global(ol) {
     margin-inline-start: var(--space-scale-100);
 
     @include grid-stack(var(--space-scale-075));
 }
 
-.article :global(blockquote) {
-    margin: 0;
-    padding: var(--space-scale-100) var(--space-scale-150);
-    border: var(--border-width-l) solid var(--colour-text-subtle);
-    background: var(--surface-level-1);
-    border-radius: var(--radius-m);
+.articleBody :global(blockquote) {
+    margin: var(--space-responsive-gap-sm) 0;
+    padding: var(--space-scale-025) 0 var(--space-scale-025)
+        calc(var(--space-scale-150) + var(--space-scale-025));
+    border: 0;
+    border-inline-start: var(--border-width-m) solid var(--colour-primary);
+    background: none;
+    border-radius: 0;
+    font-family: var(--font-family-prose);
+    font-style: italic;
+    font-size: var(--typography-size-article-title);
+    line-height: var(--typography-line-height-blockquote);
+    color: var(--colour-text);
 }
 
-.article :global(img) {
+.articleBody :global(img) {
     border-radius: var(--radius-m);
     margin: var(--space-scale-300) auto var(--space-scale-025);
 }
 
-.article :global(figcaption) {
+.articleBody :global(figcaption) {
     @include centered-column;
 
     justify-content: center;
     padding: var(--space-scale-150);
 }
 
-.article :global(figcaption p) {
+.articleBody :global(figcaption p) {
     font-size: var(--typography-size-100);
     text-align: center;
     width: 100%;
 }
 
-.article :global(blockquote p) {
+.articleBody :global(blockquote p) {
     margin: 0;
 }
 
-.article :global(.footnotes) {
+.articleBody :global(.footnotes) {
     font-size: var(--typography-size-100);
     margin-block-start: var(--space-scale-200);
     padding-block-start: var(--space-scale-100);
@@ -64,24 +125,30 @@
     @include grid-stack(var(--space-scale-075));
 }
 
-.article :global(.footnotes ol) {
+.articleBody :global(.footnotes ol) {
     @include grid-stack(var(--space-scale-050));
 
     margin: 0;
     padding-inline-start: var(--space-scale-300);
 }
 
-.article :global(.footnotes li p) {
+.articleBody :global(.footnotes li p) {
     margin: 0;
 }
 
-.article :global(sup[id^="fnref"] > a) {
+.articleBody :global(sup[id^="fnref"] > a) {
     text-decoration: none;
 }
 
 @container (min-width:50rem) {
-    .article :global(figcaption p),
-    .article :global(img) {
+    .articleBody :global(figcaption p),
+    .articleBody :global(img) {
         max-width: calc(var(--typography-measure) / 1.5);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .backLink:hover {
+        color: var(--colour-primary);
     }
 }

@@ -1,18 +1,27 @@
 import "server-only";
 import type { Metadata, Viewport } from "next";
-import { Lexend_Deca, Roboto_Mono } from "next/font/google";
+import { Hanken_Grotesk, IBM_Plex_Mono, Newsreader } from "next/font/google";
 import "@/styles/globals.scss";
-import { Background, Header } from "@/components";
+import { Header } from "@/components";
 
-const header = Lexend_Deca({
-    variable: "--font-header",
+const headerFallback = Hanken_Grotesk({
+    variable: "--font-header-fallback",
     subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
     display: "swap",
 });
 
-const body = Roboto_Mono({
+const prose = Newsreader({
+    variable: "--font-prose",
+    subsets: ["latin"],
+    display: "swap",
+    axes: ["opsz"],
+});
+
+const mono = IBM_Plex_Mono({
     variable: "--font-body",
     subsets: ["latin"],
+    weight: ["400", "500"],
     display: "swap",
 });
 
@@ -21,8 +30,8 @@ export const viewport: Viewport = {
     width: "device-width",
     initialScale: 1,
     themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#090909" },
+        { media: "(prefers-color-scheme: light)", color: "#F8F8F6" },
+        { media: "(prefers-color-scheme: dark)", color: "#0C0D10" },
     ],
 };
 
@@ -31,18 +40,14 @@ const METADATA = {
     name: "Brett Dorrans",
     brand: "Lapidist",
     lang: "en-GB",
-    title: "Lead Frontend Engineer & Design Systems Specialist | Remote UK",
+    title: "Staff Frontend Engineer & Design Systems Specialist | Remote UK",
     description:
-        "Ship design systems teams love. I architect UI platforms, uplift engineering culture, and deliver accessible, high-performance products.",
+        "I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent.",
     keywords: [
-        "Lead Frontend Engineer",
+        "Staff Frontend Engineer",
         "Design Systems Specialist",
         "UK Remote",
     ],
-    theme: {
-        light: "#ffffff",
-        dark: "#090909",
-    },
     images: {
         favicon: "/favicon.ico",
         og: "/opengraph-image",
@@ -97,7 +102,8 @@ export default function RootLayout({
     return (
         <html
             lang="en-GB"
-            className={`${header.variable} ${body.variable}`}
+            className={`${headerFallback.variable} ${prose.variable} ${mono.variable}`}
+            data-scroll-behavior="smooth"
             suppressHydrationWarning
         >
             <head>
@@ -140,11 +146,10 @@ export default function RootLayout({
                 <link
                     rel="mask-icon"
                     href={METADATA.images.mask}
-                    color="#6847ff"
+                    color="#1F4E8C"
                 />
             </head>
-            <body className={body.className}>
-                <Background />
+            <body suppressHydrationWarning>
                 <a href="#main" className="skip-link">
                     Skip to content
                 </a>

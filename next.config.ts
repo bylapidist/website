@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
     experimental: {
         cssChunking: true,
     },
+    turbopack: {
+        root: __dirname,
+    },
     ...(basePath ? { basePath } : {}),
 };
 

@@ -1,13 +1,106 @@
-.me {
-    width: 50%;
-    height: auto;
-    aspect-ratio: 1;
-    border-radius: var(--radius-m);
-    margin: var(--space-scale-050) 0 var(--space-scale-100) 0;
+.page {
+    width: 100%;
+    max-width: var(--layout-max-w-l);
+    margin-inline: auto;
+    padding-inline: var(--space-scale-150);
+    padding-block: var(--space-responsive-page-y)
+        var(--space-responsive-section-y-end);
 }
 
-@container (min-width:50rem) {
-    .me {
-        width: 33%;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--size-grid-min-about), 1fr)
+    );
+    gap: var(--space-responsive-gap-xl);
+    align-items: start;
+    max-width: var(--size-about-max);
+}
+
+.portraitCol {
+    position: relative;
+}
+
+.portraitWrapper {
+    position: relative;
+    border-radius: var(--radius-s);
+    overflow: hidden;
+    clip-path: polygon(
+        0 0,
+        calc(100% - var(--size-clip-corner-sm)) 0,
+        100% var(--size-clip-corner-sm),
+        100% 100%,
+        0 100%
+    );
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.portraitAccentLine {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    width: var(--size-accent-line-w-sm);
+    height: var(--size-accent-line-h);
+    background: var(--colour-primary);
+    transform-origin: center;
+    transform: translate(
+            calc(50% - var(--size-clip-corner-sm-offset)),
+            var(--size-accent-line-translate-y-sm)
+        )
+        rotate(var(--motion-rotate-accent));
+}
+
+.bioCol {
+    max-width: var(--size-measure-content);
+}
+
+.eyebrow {
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--typography-letter-spacing-caps);
+    text-transform: uppercase;
+    color: var(--colour-primary);
+    margin: 0 0 var(--space-scale-100);
+}
+
+.name {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-page-title-sm);
+    line-height: var(--typography-line-height-heading);
+    letter-spacing: var(--typography-letter-spacing-tight);
+    margin: 0 0 var(--space-scale-175);
+}
+
+.bio {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose);
+    line-height: var(--typography-line-height-prose);
+    margin: 0 0 var(--space-scale-150);
+    color: var(--colour-text);
+}
+
+.subheading {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-prose-lg);
+    letter-spacing: var(--typography-letter-spacing-snug);
+    margin: 0 0 var(--space-scale-100);
+}
+
+.philosophy {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose-sm);
+    line-height: var(--typography-line-height-prose);
+    color: var(--colour-text-subtle);
+    margin: 0;
 }

@@ -7,9 +7,6 @@
     box-sizing: border-box;
     font-variant-numeric: tabular-nums;
     font-feature-settings: "kern", "liga", "clig", "calt";
-    font-variation-settings:
-        "opsz" var(--typography-font-opsz),
-        "slnt" var(--typography-font-slnt);
 }
 
 html,
@@ -39,7 +36,7 @@ body {
     @include stack(null);
 
     min-block-size: 100vh;
-    font-family: var(--typography-font-family-body);
+    font-family: var(--font-family-header);
     font-size: var(--typography-size-body);
     line-height: var(--typography-line-height-body);
     letter-spacing: var(--typography-letter-spacing-body);
@@ -112,8 +109,12 @@ a {
     text-decoration: underline;
 }
 
-a[target="_blank"]:not(.logo-link, [href$=".pdf"])::after,
-button[target="_blank"]:not(.logo-link, [href$=".pdf"])::after {
+a[target="_blank"]:not(.logo-link, [href$=".pdf"], [data-no-ext-icon])::after,
+button[target="_blank"]:not(
+        .logo-link,
+        [href$=".pdf"],
+        [data-no-ext-icon]
+    )::after {
     content: "";
     display: inline-block;
     inline-size: var(--size-icon-md);
@@ -190,7 +191,7 @@ summary::after {
 }
 
 details[open] summary::after {
-    transform: rotate(90deg);
+    transform: rotate(var(--motion-rotate-open));
 }
 
 code {
@@ -252,6 +253,25 @@ pre {
 
     html::-webkit-scrollbar-thumb:hover {
         background: var(--colour-primary);
+    }
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(var(--size-reveal-translate));
+    transition:
+        opacity var(--motion-dur-500) var(--motion-ease-out),
+        transform var(--motion-dur-500) var(--motion-ease-out);
+
+    &[data-visible] {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 

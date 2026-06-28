@@ -18,11 +18,13 @@ This project uses **pnpm 11.9.0**. Never use `npm` or `yarn`.
 ## Commands
 
 ### Development
+
 ```sh
 pnpm run dev              # Turbopack dev server + design token watcher (run together)
 ```
 
 ### Building
+
 ```sh
 pnpm run build            # Full build: tokens → CV PDF → next build
 pnpm run build:tokens     # Regenerate styles/tokens.css from tokens/*.json
@@ -31,6 +33,7 @@ pnpm run start            # Serve the built `out/` directory locally
 ```
 
 ### Code quality
+
 ```sh
 pnpm run knip             # Dead code / unused deps check (knip)
 pnpm run lint             # ESLint + Stylelint
@@ -41,6 +44,7 @@ pnpm run fix              # All fixes at once: lint --fix + stylelint --fix + fo
 ```
 
 ### Testing
+
 ```sh
 pnpm run test:install-browsers   # One-time: install Playwright browsers
 pnpm run test                    # Unit tests + E2E tests
@@ -92,8 +96,8 @@ components/Button/
 - Content: `content/articles/[year]/[slug].mdx`
 - Fetching: `lib/articles.tsx` — uses React `cache()` so `getArticle` / `getAllArticles` deduplicate within a render pass.
 - Frontmatter fields:
-  - **Required:** `title`, `description`, `summary`, `tags`, `date`
-  - **Optional:** `author`, `audio`
+    - **Required:** `title`, `description`, `summary`, `tags`, `date`
+    - **Optional:** `author`, `audio`
 - MDX pipeline: gray-matter → remark (gfm, reading-time) → rehype-prism-plus → next-mdx-remote
 - Headings in MDX are wrapped by the `Heading` component, which generates stable anchor IDs via `github-slugger`.
 
@@ -102,6 +106,7 @@ components/Button/
 ### Tokens
 
 Source files in `tokens/`:
+
 - `base.json` — primitive values (colours, spacing, type scale)
 - `light.json` — light-theme semantic overrides
 - `dark.json` — dark-theme semantic overrides
@@ -125,11 +130,13 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 ## Testing
 
 ### Unit tests (Vitest)
+
 - Files: `**/*.test.ts(x)` — note `.test`, not `.spec`.
 - Environment: jsdom with Testing Library globals.
 - Setup: `setup-tests.ts` imports `@testing-library/jest-dom/vitest` matchers.
 
 ### E2E tests (Playwright)
+
 - Files: `smoke-tests/**/*.spec.ts`.
 - Two projects run every spec: `light` and `dark` colour schemes.
 - **First-time setup:** `pnpm run test:install-browsers` (downloads browser binaries).
@@ -143,9 +150,9 @@ Style Dictionary compiles these into `styles/tokens.css` as CSS custom propertie
 
 ## CI/CD
 
-| Trigger | Workflow | Steps |
-|---------|----------|-------|
-| Pull request | `test.yml` | Knip → lint → typecheck → unit + E2E tests |
+| Trigger          | Workflow      | Steps                                                        |
+| ---------------- | ------------- | ------------------------------------------------------------ |
+| Pull request     | `test.yml`    | Knip → lint → typecheck → unit + E2E tests                   |
 | Push to `master` | `release.yml` | Lint → build app → semantic-release → deploy to GitHub Pages |
 
 - **Conventional Commits are required.** `semantic-release` on master reads commit messages to determine the version bump and generate the changelog.

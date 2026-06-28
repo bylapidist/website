@@ -1,36 +1,35 @@
-@use "../../styles/mixins" as *;
-
 .toggle {
-    @include icon-button;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-theme-toggle);
+    height: var(--size-theme-toggle);
+    border: var(--border-width-s) solid var(--colour-border);
+    background: var(--surface-level-1);
+    color: var(--colour-text);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    padding: 0;
+    transition:
+        border-color var(--motion-dur-200) var(--motion-ease-standard),
+        background var(--motion-dur-200) var(--motion-ease-standard);
 }
 
 .icon {
-    fill: currentcolor;
-    transition: transform var(--motion-dur-320) var(--motion-ease-emphasized);
-}
-
-.toggle[data-theme="dark"] .icon {
-    transform: rotate(180deg);
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-symbol);
+    line-height: var(--typography-line-height-flat);
 }
 
 @media (hover: hover) and (pointer: fine) {
     .toggle:hover {
+        border-color: var(--colour-primary);
         color: var(--colour-primary);
-        transform: scale(1.1);
-    }
-
-    .toggle:active {
-        transform: scale(0.95);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .toggle {
-        transition: none;
-        transform: none;
-    }
-
-    .icon {
         transition: none;
     }
 }

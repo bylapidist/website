@@ -1,7 +1,7 @@
 import "server-only";
 import clsx from "clsx";
 import Link from "next/link";
-import { AudioPlayer, Section, TableOfContents } from "@/components";
+import { AudioPlayer, TableOfContents } from "@/components";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { buildArticleStructuredData, buildMetadata, formatDate } from "@/utils";
 import styles from "./page.module.scss";
@@ -31,20 +31,26 @@ export default async function ArticlePage({
                     ),
                 }}
             />
-            <Section heading={meta.title} headingLevel={1}>
-                <article className={clsx(styles.article, "prose", "flow")}>
-                    {meta.summary && (
-                        <p className={clsx(styles.summary, "text-lead")}>
-                            {meta.summary}
-                        </p>
-                    )}
-                    <p className={clsx(styles.meta, "text-small")}>
+            <article className={styles.articlePage}>
+                <Link href="/articles" className={styles.backLink}>
+                    ← All writing
+                </Link>
+                <header className={styles.articleHeader}>
+                    <p className={styles.meta}>
                         {formatDate(meta.date)}
                         {meta.tags.length > 0 || meta.readingTime ? " · " : ""}
                         {meta.tags.join(", ")}
                         {meta.tags.length > 0 && meta.readingTime ? " · " : ""}
                         {meta.readingTime}
                     </p>
+                    <h1 className={styles.articleHeading}>{meta.title}</h1>
+                </header>
+                <div className={clsx(styles.articleBody, "prose", "flow")}>
+                    {meta.summary && (
+                        <p className={clsx(styles.summary, "text-lead")}>
+                            {meta.summary}
+                        </p>
+                    )}
                     {meta.audio && (
                         <AudioPlayer
                             src={meta.audio}
@@ -55,11 +61,8 @@ export default async function ArticlePage({
                         <TableOfContents headings={headings} />
                     )}
                     {content}
-                </article>
-                <p className={clsx(styles.return, "text-small")}>
-                    <Link href="/articles">Return to articles</Link>
-                </p>
-            </Section>
+                </div>
+            </article>
         </>
     );
 }

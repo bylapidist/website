@@ -115,14 +115,15 @@
     .card[data-variant="link"]:hover,
     .card[data-variant="step"]:hover {
         box-shadow: var(--shadow-elev-2);
-        transform: translateY(-1px);
+        transform: translateY(calc(-1 * var(--size-card-hover-lift)));
+        border-color: var(--colour-primary);
         background: var(--surface-level-1-hover);
     }
 
     .card[data-variant="link"]:active,
     .card[data-variant="step"]:active {
         box-shadow: var(--shadow-elev-3);
-        transform: translateY(1px);
+        transform: translateY(var(--border-width-s));
         background: var(--surface-level-1-active);
     }
 }

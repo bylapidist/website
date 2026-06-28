@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 import { useDisclosure, usePrefersReducedMotion } from "@/hooks";
+import { Size } from "@/types";
 import { siteLinks } from "@/utils";
 import styles from "./Header.module.scss";
 import LogoMark from "./LogoMark";
@@ -26,7 +27,6 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const disclosure = useDisclosure();
     const headerRef = useRef<HTMLElement>(null);
-
     const prefersReducedMotion = usePrefersReducedMotion();
 
     const { refs, floatingStyles, context } = useFloating<HTMLButtonElement>({
@@ -95,22 +95,38 @@ export default function Header() {
             className={styles.header}
             data-scrolled={scrolled || undefined}
         >
-            <Container className={styles.inner} as="div" cq="page">
-                <nav>
-                    <Link
-                        href="/"
-                        className={styles.logo}
-                        aria-label="Brett Dorrans"
-                        aria-current={pathname === "/" ? "page" : undefined}
-                    >
-                        <LogoMark />
-                        <span className={styles.logoLockup}>
-                            <span>Brett</span>
-                            <span>Dorrans</span>
-                        </span>
-                    </Link>
-                </nav>
-                <div className={styles.actions}>
+            <Container
+                className={styles.inner}
+                as="nav"
+                aria-label="Primary"
+                cq="page"
+                size={Size.LG}
+            >
+                <Link
+                    href="/"
+                    className={styles.logo}
+                    aria-label="Brett Dorrans — home"
+                    aria-current={pathname === "/" ? "page" : undefined}
+                >
+                    <LogoMark />
+                    <span className={styles.logoName}>Brett Dorrans</span>
+                </Link>
+                <div className={styles.navGroup}>
+                    <ul className={styles.navLinks}>
+                        {siteLinks.map(({ href, label }) => (
+                            <li key={href}>
+                                <Link
+                                    href={href}
+                                    className={styles.navLink}
+                                    aria-current={
+                                        pathname === href ? "page" : undefined
+                                    }
+                                >
+                                    {label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                     <ThemeToggle />
                     <button
                         type="button"

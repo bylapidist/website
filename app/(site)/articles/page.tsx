@@ -1,78 +1,71 @@
 import "server-only";
 import Link from "next/link";
-import { Card, Section } from "@/components";
 import { getAllArticles } from "@/lib/articles";
-import { Variant } from "@/types";
 import { buildMetadata, formatDate } from "@/utils";
 import styles from "./page.module.scss";
 
+const TITLE = "Essays on systems, tokens, and craft.";
 const DESCRIPTION =
-    "Explore detailed tutorials, opinions, and case studies on front-end engineering, design systems, accessibility, performance, and modern web development practices.";
-const OG_IMAGE = "/opengraph-image";
-const TWITTER_IMAGE = "/twitter-image";
+    "Notes on building interfaces that stay coherent — design systems, frontend architecture, and the tooling that holds them together.";
 
 export const metadata = buildMetadata({
-    title: "Articles",
+    title: "Writing",
     description: DESCRIPTION,
     canonical: "/articles",
-    openGraph: { images: [{ url: OG_IMAGE }] },
-    twitter: { images: [TWITTER_IMAGE] },
+    openGraph: { images: [{ url: "/opengraph-image" }] },
+    twitter: { images: ["/twitter-image"] },
 });
 
 export default async function ArticlesPage() {
     const articles = await getAllArticles();
     return (
-        <>
-            <Section
-                heading={
-                    <>
-                        <span>Articles</span>
-                        <a href="/rss.xml">RSS feed</a>
-                    </>
-                }
-                headingClassName={styles.heading}
-                headingLevel={1}
-            >
-                <p>
-                    I occasionally publish articles on topics I find
-                    interesting. I aim to keep everything accurate. If you
-                    notice a mistake, please{" "}
-                    <Link href="#contact">let me know.</Link>
-                </p>
+        <div className={styles.page}>
+            <div data-reveal className={styles.pageHeader}>
+                <p className={styles.eyebrow}>Writing</p>
+                <h1 className={styles.pageTitle}>{TITLE}</h1>
+                <p className={styles.pageDesc}>{DESCRIPTION}</p>
+            </div>
+            <ul className={styles.articleList}>
                 {articles.map(
                     ({
                         year,
                         slug,
                         title,
-                        summary,
+                        description,
                         date,
                         tags,
                         readingTime,
                     }) => (
-                        <Card
-                            key={`${year}-${slug}`}
-                            href={`/articles/${year}/${slug}`}
-                            heading={title}
-                            headingLevel={2}
-                            variant={Variant.Link}
-                        >
-                            <p className={styles.summary}>{summary}</p>
-                            <p className={styles.meta}>
-                                {formatDate(date)}
-                                {tags.length > 0 || readingTime ? " · " : ""}
-                                {tags.join(", ")}
-                                {tags.length > 0 && readingTime ? " · " : ""}
-                                {readingTime}
-                            </p>
-                        </Card>
+                        <li key={`${year}-${slug}`} data-reveal>
+                            <Link
+                                href={`/articles/${year}/${slug}`}
+                                className={styles.articleLink}
+                            >
+                                <h2 className={styles.articleTitle}>{title}</h2>
+                                <p className={styles.articleDesc}>
+                                    {description}
+                                </p>
+                                <p className={styles.articleMeta}>
+                                    {formatDate(date)}
+                                    {tags.length > 0 || readingTime
+                                        ? " · "
+                                        : ""}
+                                    {tags.join(", ")}
+                                    {tags.length > 0 && readingTime
+                                        ? " · "
+                                        : ""}
+                                    {readingTime}
+                                </p>
+                            </Link>
+                        </li>
                     ),
                 )}
-                <p className={styles.statement}>
-                    Some articles are edited with AI; see my{" "}
-                    <Link href="/ai-ethics-statement">AI Ethics Statement</Link>{" "}
-                    for details.
-                </p>
-            </Section>
-        </>
+            </ul>
+            <p className={styles.statement}>
+                Some articles are edited with AI assistance; see my{" "}
+                <Link href="/ai-ethics-statement">AI Ethics Statement</Link> for
+                details.
+            </p>
+        </div>
     );
 }

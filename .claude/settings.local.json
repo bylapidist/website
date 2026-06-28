@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pnpm --version)",
+      "Bash(npm install *)",
+      "Bash(node $PNPM11 *)",
+      "Bash(node /Users/brett/.nvm/versions/node/v24.11.1/lib/node_modules/pnpm/bin/pnpm.cjs import)",
+      "Bash(node /Users/brett/.nvm/versions/node/v24.11.1/lib/node_modules/pnpm/bin/pnpm.cjs install)",
+      "Bash(node *)",
+      "Bash(grep -v \"NPM_TOKEN\\\\|npm-run-path\\\\|npmignore\\\\|pnpm\\\\|\\\\\"npm\\\\\"\\\\|semver\\\\|#.*npm\\\\|publishing on npm\\\\|Run \\\\`npm i sass\")",
+      "Bash(git -C /Users/brett/Repositories/website status)",
+      "Bash(git -C /Users/brett/Repositories/website log --oneline -10)",
+      "Bash(git -C /Users/brett/Repositories/website add .github/workflows/release.yml .github/workflows/test.yml AGENTS.md package-lock.json package.json playwright.config.ts scripts/build-tokens-watch.mjs pnpm-lock.yaml pnpm-workspace.yaml .idea/workspace.xml)",
+      "Bash(git -C /Users/brett/Repositories/website commit -m ' *)",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && head -15 {}')",
+      "Bash(git -C /Users/brett/Repositories/website add CLAUDE.md AGENTS.md)",
+      "Bash(git *)",
+      "Bash(gh pr *)",
+      "Bash(pnpm list *)",
+      "Bash(pnpm run *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\(sorted\\([f'{k}: {v}' for k,v in {**d.get\\('dependencies',{}\\), **d.get\\('devDependencies',{}\\)}.items\\(\\) if any\\(x in k for x in ['unist','mdast','remark','rehype','hast']\\)\\)\\)\\)\")",
+      "Bash(xargs -I{} node -e \"const p=require\\('{}'\\); console.log\\(p.name, p.version\\)\")",
+      "Bash(npm info *)",
+      "Bash(pnpm info *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm remove *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm exec *)",
+      "Bash(ncu *)",
+      "Skill(update-config)",
+      "WebFetch(domain:claude.ai)"
+    ]
+  }
+}

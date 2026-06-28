@@ -1,5 +1,6 @@
 import "server-only";
-import { Contact, Footer } from "@/components";
+import { Footer } from "@/components";
+import ScrollRevealObserver from "@/components/ScrollReveal/ScrollRevealObserver";
 
 export default function SiteLayout({
     children,
@@ -8,8 +9,8 @@ export default function SiteLayout({
 }) {
     return (
         <>
+            <ScrollRevealObserver />
             {children}
-            <Contact />
             <Footer />
         </>
     );

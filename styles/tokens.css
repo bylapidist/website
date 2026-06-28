@@ -6,26 +6,84 @@
     --motion-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
     --motion-ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
     --motion-ease-infinite: infinite;
+    --motion-ease-link: ease;
+    --motion-ease-out: ease-out;
     --motion-dur-120: 120ms;
     --motion-dur-200: 200ms;
+    --motion-dur-220: 220ms;
     --motion-dur-320: 320ms;
+    --motion-dur-500: 500ms;
     --motion-dur-1000: 1000ms;
+    --motion-scale-hover: 1.05;
+    --motion-rotate-accent: 45deg;
+    --motion-rotate-hover-logo: -3deg;
+    --motion-rotate-open: 90deg;
+    --filter-backdrop-saturate: 160%;
+    --filter-backdrop-blur: 12px;
     --space-scale-0: 0;
     --space-scale-100: 1rem;
+    --space-scale-125: 1.25rem;
     --space-scale-150: 1.5rem;
+    --space-scale-175: 1.75rem;
     --space-scale-200: 2rem;
     --space-scale-300: 3rem;
     --space-scale-400: 4rem;
     --space-scale-025: 0.25rem;
     --space-scale-050: 0.5rem;
     --space-scale-075: 0.75rem;
+    --space-scale-087: 0.875rem;
+    --space-responsive-hero-y: clamp(56px, 9vw, 104px);
+    --space-responsive-section-y: clamp(40px, 6vw, 72px);
+    --space-responsive-section-y-end: clamp(56px, 8vw, 96px);
+    --space-responsive-page-y: clamp(48px, 7vw, 88px);
+    --space-responsive-footer-y: clamp(48px, 6vw, 72px);
+    --space-responsive-footer-gap: clamp(40px, 6vw, 80px);
+    --space-responsive-hero-pad: clamp(28px, 5vw, 56px);
+    --space-responsive-card-pad: clamp(24px, 3vw, 32px);
+    --space-responsive-project-pad: clamp(22px, 2.6vw, 28px);
+    --space-responsive-gap-xl: clamp(32px, 5vw, 64px);
+    --space-responsive-gap-lg: clamp(24px, 3vw, 40px);
+    --space-responsive-gap-now: clamp(20px, 4vw, 56px);
+    --space-responsive-gap-sm: clamp(20px, 3vw, 36px);
+    --space-responsive-nav-gap: clamp(16px, 3vw, 30px);
+    --space-responsive-article-back-mb: clamp(28px, 4vw, 48px);
+    --space-responsive-article-header-mb: clamp(32px, 4vw, 48px);
     --size-tap-min: 44px;
+    --size-theme-toggle: 36px;
+    --size-reveal-translate: 10px;
+    --size-card-hover-lift: 2px;
+    --size-underline-offset: 2px;
+    --size-logo-mark: 23px;
+    --size-accent-line-w: 49px;
+    --size-accent-line-w-sm: 43px;
+    --size-accent-line-h: 1.5px;
+    --size-clip-corner: 34px;
+    --size-clip-corner-sm: 30px;
+    --size-clip-corner-offset: 17px;
+    --size-clip-corner-sm-offset: 15px;
+    --size-accent-line-translate-y: 16px;
+    --size-accent-line-translate-y-sm: 14px;
+    --size-hero-max: 880px;
+    --size-about-max: 980px;
+    --size-card-min-h: 200px;
+    --size-card-min-h-project: 188px;
+    --size-grid-min-article: 300px;
+    --size-grid-min-project: 280px;
+    --size-grid-min-about: 260px;
+    --size-grid-min-footer: 240px;
+    --size-col-now-label: 200px;
     --size-icon-xs: 0.75rem;
     --size-icon-sm: 1rem;
     --size-icon-md: 1.25rem;
     --size-icon-lg: 1.5rem;
     --size-icon-xl: 3rem;
+    --size-measure-hero-heading: 18ch;
+    --size-measure-hero-intro: 54ch;
+    --size-measure-compact: 36ch;
+    --size-measure-content: 62ch;
+    --size-measure-content-wide: 60ch;
     --size-measure-prose: 65ch;
+    --size-measure-wide: 70ch;
     --opacity-0: 0;
     --opacity-10: 0.1;
     --opacity-20: 0.2;
@@ -37,8 +95,10 @@
     --opacity-80: 0.8;
     --opacity-90: 0.9;
     --opacity-100: 1;
+    --opacity-header-bg: 82%;
     --radius-xs: 2px;
     --radius-s: 4px;
+    --radius-base: 6px;
     --radius-m: 8px;
     --radius-l: 12px;
     --radius-xl: 24px;
@@ -52,12 +112,22 @@
         0 2px 4px hsl(0deg 0% 0% / 8%), 0 1px 2px hsl(0deg 0% 0% / 5%);
     --shadow-elev-3:
         0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
-    --font-family-header: var(--font-header), sans-serif;
-    --font-family-body: var(--font-body), monospace;
+    --font-family-header:
+        "Mona Sans", var(--font-header-fallback), ui-sans-serif, system-ui,
+        -apple-system, sans-serif;
+    --font-family-prose: var(--font-prose), Georgia, "Times New Roman", serif;
+    --font-family-body:
+        var(--font-body), "SF Mono", Menlo, ui-monospace, monospace;
     --font-weight-regular: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
-    --typography-font-family-body: var(--font-body), monospace;
-    --typography-font-family-header: var(--font-header), sans-serif;
+    --typography-font-family-header:
+        "Mona Sans", var(--font-header-fallback), ui-sans-serif, system-ui,
+        -apple-system, sans-serif;
+    --typography-font-family-prose:
+        var(--font-prose), Georgia, "Times New Roman", serif;
+    --typography-font-family-body:
+        var(--font-body), "SF Mono", Menlo, ui-monospace, monospace;
     --typography-font-weight-100: 100;
     --typography-font-weight-200: 200;
     --typography-font-weight-300: 300;
@@ -76,6 +146,26 @@
     --typography-size-500: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
     --typography-size-600: clamp(2.5rem, 2.1rem + 2vw, 3rem);
     --typography-size-700: clamp(3rem, 2.5rem + 2.5vw, 3.5rem);
+    --typography-size-mono-xs: 0.75rem;
+    --typography-size-mono-sm: 0.8125rem;
+    --typography-size-nav: 0.9375rem;
+    --typography-size-base: 1rem;
+    --typography-size-prose-sm: 1.0625rem;
+    --typography-size-prose: 1.1875rem;
+    --typography-size-prose-lg: 1.25rem;
+    --typography-size-hero: clamp(2.25rem, 5.4vw, 3.5rem);
+    --typography-size-page-title: clamp(2rem, 4.4vw, 3rem);
+    --typography-size-page-title-sm: clamp(1.75rem, 3.6vw, 2.5rem);
+    --typography-size-writing-title: clamp(2rem, 4.4vw, 2.75rem);
+    --typography-size-page-desc: 1.125rem;
+    --typography-size-mono-meta: 0.78125rem;
+    --typography-size-section-title: clamp(1.5rem, 3vw, 1.75rem);
+    --typography-size-article-title: clamp(1.25rem, 2.4vw, 1.5rem);
+    --typography-size-article-h2: clamp(1.375rem, 2.6vw, 1.625rem);
+    --typography-size-hero-intro: clamp(1.0625rem, 2vw, 1.25rem);
+    --typography-size-now-text: clamp(1.0625rem, 1.8vw, 1.25rem);
+    --typography-size-mono-base: 0.875rem;
+    --typography-size-symbol: 0.95rem;
     --typography-size-body: clamp(1rem, calc(0.96rem + 0.35vw), 1.025rem);
     --typography-size-small: clamp(0.875rem, calc(0.84rem + 0.2vw), 0.95rem);
     --typography-size-lead: clamp(1.125rem, calc(1.08rem + 0.4vw), 1.35rem);
@@ -89,21 +179,37 @@
     --typography-line-tight: 1.2;
     --typography-line-normal: 1.5;
     --typography-line-wide: 1.8;
-    --typography-line-height-body: 1.55;
+    --typography-line-height-flat: 1;
+    --typography-line-height-hero: 1.05;
+    --typography-line-height-heading: 1.12;
+    --typography-line-height-title: 1.3;
+    --typography-line-height-contact: 1.5;
+    --typography-line-height-desc: 1.55;
+    --typography-line-height-body: 1.6;
+    --typography-line-height-relaxed: 1.7;
+    --typography-line-height-prose: 1.75;
     --typography-line-height-heading-lg: 1.2;
     --typography-line-height-heading-sm: 1.25;
-    --typography-line-height-code: 1.45;
+    --typography-line-height-display: 1.1;
+    --typography-line-height-blockquote: 1.45;
+    --typography-line-height-code: 1.6;
     --typography-tracking-tighter: -0.05em;
     --typography-tracking-tight: -0.02em;
     --typography-tracking-normal: 0;
     --typography-tracking-wide: 0.05em;
     --typography-letter-spacing-body: 0;
-    --typography-letter-spacing-small: 0.005em;
-    --typography-letter-spacing-caps: 0.04em;
+    --typography-letter-spacing-snug: -0.01em;
+    --typography-letter-spacing-tight: -0.015em;
+    --typography-letter-spacing-tighter: -0.02em;
+    --typography-letter-spacing-wide: 0.02em;
+    --typography-letter-spacing-meta: 0.04em;
+    --typography-letter-spacing-caps-sm: 0.12em;
+    --typography-letter-spacing-caps: 0.14em;
     --typography-measure: 70ch;
     --layout-max-w-s: 40rem;
     --layout-max-w-m: 60rem;
-    --layout-max-w-l: 72rem;
+    --layout-max-w-l: 70rem;
+    --layout-max-w-article: 45rem;
     --breakpoint-xs: 30rem;
     --breakpoint-sm: 40rem;
     --breakpoint-md: 48rem;
@@ -117,9 +223,9 @@
     --colour-logo-blue: oklch(67.72% 0.1203 183.48deg);
     --colour-logo-green: oklch(77.86% 0.1387 133.71deg);
     --colour-logo-yellow: oklch(81.13% 0.1356 85.29deg);
-    --surface-level-0: oklch(100% 0 89.88deg);
-    --surface-level-1: oklch(97.02% 0 89.88deg);
-    --surface-level-2: oklch(100% 0 89.88deg);
+    --surface-level-0: #f8f8f6;
+    --surface-level-1: #ffffff;
+    --surface-level-2: #f2f2ef;
     --surface-level-1-hover: color-mix(
         in srgb,
         var(--surface-level-1) 90%,
@@ -130,11 +236,12 @@
         var(--surface-level-1) 80%,
         var(--colour-text) 20%
     );
-    --colour-text: oklch(17.76% 0 89.88deg);
-    --colour-text-subtle: oklch(54.17% 0 89.88deg);
-    --colour-border: oklch(85.76% 0 89.88deg);
-    --colour-muted: oklch(92.19% 0 89.88deg);
-    --colour-primary: oklch(40% 0.17 289.41deg);
+    --colour-text: #16161a;
+    --colour-text-subtle: #5b5b66;
+    --colour-border: #e6e6e2;
+    --colour-muted: #f2f2ef;
+    --colour-primary: #1f4e8c;
+    --colour-primary-strong: #173b6b;
     --colour-primary-hover: color-mix(
         in srgb,
         var(--colour-primary) 90%,
@@ -145,19 +252,20 @@
         var(--colour-primary) 80%,
         var(--colour-on-primary) 20%
     );
-    --colour-on-primary: oklch(100% 0 89.88deg);
-    --colour-success: oklch(60.56% 0.1436 154.4deg);
-    --colour-warning: oklch(82.53% 0.1709 80.01deg);
-    --colour-destructive: oklch(57.85% 0.2063 29.01deg);
-    --colour-info: oklch(66.5% 0.13 264.5deg);
-    --colour-neutral: oklch(73% 0 89.88deg);
+    --colour-on-primary: #ffffff;
+    --colour-gold: #c8a24a;
+    --colour-success: #2d7a4f;
+    --colour-warning: #c8a24a;
+    --colour-destructive: #c0392b;
+    --colour-info: #1f4e8c;
+    --colour-neutral: #9a9aa5;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not(.light) {
-        --surface-level-0: oklch(13.98% 0 89.88deg);
-        --surface-level-1: oklch(21.78% 0 89.88deg);
-        --surface-level-2: oklch(25.2% 0 89.88deg);
+        --surface-level-0: #0c0d10;
+        --surface-level-1: #15161a;
+        --surface-level-2: #1e1f25;
         --surface-level-1-hover: color-mix(
             in srgb,
             var(--surface-level-1) 90%,
@@ -168,11 +276,12 @@
             var(--surface-level-1) 80%,
             var(--colour-text) 20%
         );
-        --colour-text: oklch(97.02% 0 89.88deg);
-        --colour-text-subtle: oklch(76.68% 0 89.88deg);
-        --colour-border: oklch(32.11% 0 89.88deg);
-        --colour-muted: oklch(28.5% 0 89.88deg);
-        --colour-primary: #7964e7;
+        --colour-text: #ececef;
+        --colour-text-subtle: #9a9aa5;
+        --colour-border: #26272d;
+        --colour-muted: #1e1f25;
+        --colour-primary: #7aa5e8;
+        --colour-primary-strong: #93b6ee;
         --colour-primary-hover: color-mix(
             in srgb,
             var(--colour-primary) 90%,
@@ -183,19 +292,20 @@
             var(--colour-primary) 80%,
             var(--colour-on-primary) 20%
         );
-        --colour-on-primary: #090909;
-        --colour-success: oklch(79.38% 0.1818 155.76deg);
-        --colour-warning: oklch(86.46% 0.1642 88.17deg);
-        --colour-destructive: oklch(71.16% 0.1812 22.84deg);
-        --colour-info: oklch(80% 0.12 264.5deg);
-        --colour-neutral: oklch(64% 0 89.88deg);
+        --colour-on-primary: #0c0d10;
+        --colour-gold: #d9b968;
+        --colour-success: #4caf7d;
+        --colour-warning: #d9b968;
+        --colour-destructive: #e57373;
+        --colour-info: #7aa5e8;
+        --colour-neutral: #5b5b66;
     }
 }
 
 :root.dark {
-    --surface-level-0: oklch(13.98% 0 89.88deg);
-    --surface-level-1: oklch(21.78% 0 89.88deg);
-    --surface-level-2: oklch(25.2% 0 89.88deg);
+    --surface-level-0: #0c0d10;
+    --surface-level-1: #15161a;
+    --surface-level-2: #1e1f25;
     --surface-level-1-hover: color-mix(
         in srgb,
         var(--surface-level-1) 90%,
@@ -206,11 +316,12 @@
         var(--surface-level-1) 80%,
         var(--colour-text) 20%
     );
-    --colour-text: oklch(97.02% 0 89.88deg);
-    --colour-text-subtle: oklch(76.68% 0 89.88deg);
-    --colour-border: oklch(32.11% 0 89.88deg);
-    --colour-muted: oklch(28.5% 0 89.88deg);
-    --colour-primary: #7964e7;
+    --colour-text: #ececef;
+    --colour-text-subtle: #9a9aa5;
+    --colour-border: #26272d;
+    --colour-muted: #1e1f25;
+    --colour-primary: #7aa5e8;
+    --colour-primary-strong: #93b6ee;
     --colour-primary-hover: color-mix(
         in srgb,
         var(--colour-primary) 90%,
@@ -221,10 +332,11 @@
         var(--colour-primary) 80%,
         var(--colour-on-primary) 20%
     );
-    --colour-on-primary: #090909;
-    --colour-success: oklch(79.38% 0.1818 155.76deg);
-    --colour-warning: oklch(86.46% 0.1642 88.17deg);
-    --colour-destructive: oklch(71.16% 0.1812 22.84deg);
-    --colour-info: oklch(80% 0.12 264.5deg);
-    --colour-neutral: oklch(64% 0 89.88deg);
+    --colour-on-primary: #0c0d10;
+    --colour-gold: #d9b968;
+    --colour-success: #4caf7d;
+    --colour-warning: #d9b968;
+    --colour-destructive: #e57373;
+    --colour-info: #7aa5e8;
+    --colour-neutral: #5b5b66;
 }

@@ -1,26 +1,105 @@
-@use "../../../styles/mixins" as *;
-
-.heading {
-    @include flex-between;
+.page {
+    width: 100%;
+    max-width: var(--layout-max-w-l);
+    margin-inline: auto;
+    padding-inline: var(--space-scale-150);
+    padding-block: var(--space-responsive-page-y)
+        var(--space-responsive-section-y-end);
 }
 
-.heading a {
-    font-size: var(--typography-size-200);
+.pageHeader {
+    margin-block-end: var(--space-responsive-gap-xl);
+    max-width: var(--size-measure-content);
 }
 
-.summary {
+.eyebrow {
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--typography-letter-spacing-caps);
+    text-transform: uppercase;
+    color: var(--colour-primary);
+    margin: 0 0 var(--space-scale-100);
+}
+
+.pageTitle {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-writing-title);
+    line-height: var(--typography-line-height-display);
+    letter-spacing: var(--typography-letter-spacing-tight);
+    margin: 0 0 var(--space-scale-100);
+    text-wrap: balance;
+}
+
+.pageDesc {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-page-desc);
+    line-height: var(--typography-line-height-relaxed);
     color: var(--colour-text-subtle);
-    font-size: var(--typography-size-200);
-    margin-block-end: var(--space-scale-100);
+    margin: 0;
 }
 
-.meta {
-    color: var(--colour-text);
-    font-size: var(--typography-size-100);
+.articleList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.articleList li {
+    border-block-start: var(--border-width-s) solid var(--colour-border);
+}
+
+.articleLink {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-scale-075);
+    padding-block: var(--space-responsive-card-pad);
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--motion-dur-220) var(--motion-ease-link);
+}
+
+.articleTitle {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-article-title);
+    line-height: var(--typography-line-height-heading-sm);
+    letter-spacing: var(--typography-letter-spacing-snug);
+    margin: 0;
+    max-width: var(--size-measure-content-wide);
+}
+
+.articleDesc {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose-sm);
+    line-height: var(--typography-line-height-desc);
+    color: var(--colour-text-subtle);
+    margin: 0;
+    max-width: var(--size-measure-wide);
+}
+
+.articleMeta {
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-meta);
+    color: var(--colour-text-subtle);
+    margin: 0;
+    letter-spacing: var(--typography-letter-spacing-wide);
 }
 
 .statement {
-    text-align: center;
-    font-size: var(--typography-size-100);
+    border-block-start: var(--border-width-s) solid var(--colour-border);
+    padding-block-start: var(--space-scale-150);
+    margin-block: var(--space-scale-100) 0;
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-xs);
     color: var(--colour-text-subtle);
+    letter-spacing: var(--typography-letter-spacing-wide);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .articleLink:hover .articleTitle {
+        color: var(--colour-primary);
+    }
 }

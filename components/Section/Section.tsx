@@ -119,7 +119,7 @@ export default function Section({
               ...layoutStyle,
               ...style,
           } as CSSProperties)
-        : ({ ...layoutStyle, ...style });
+        : { ...layoutStyle, ...style };
 
     return (
         <Component
