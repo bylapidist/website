@@ -13,8 +13,8 @@
 /* ===== Hero ===== */
 
 .heroSection {
-    padding-block-start: var(--space-responsive-hero-y);
-    padding-block-end: var(--space-responsive-section-y);
+    padding-block: var(--space-responsive-hero-y)
+        var(--space-responsive-section-y);
 }
 
 .heroCard {
@@ -257,7 +257,7 @@
     color: var(--colour-primary);
     margin: 0;
     letter-spacing: var(--typography-letter-spacing-snug);
-    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .projectDesc {
@@ -371,7 +371,7 @@
 
 /* ===== Responsive ===== */
 
-@media (max-width: var(--breakpoint-sm)) {
+@media (width < 40rem) {
     .nowGrid {
         grid-template-columns: 1fr;
     }

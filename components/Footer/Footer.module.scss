@@ -48,8 +48,7 @@
     &::after {
         content: "";
         position: absolute;
-        inset-inline-start: 0;
-        inset-inline-end: 0;
+        inset-inline: 0;
         inset-block-end: calc(-1 * var(--size-underline-offset));
         block-size: var(--border-width-s);
         background: var(--colour-primary);
@@ -68,8 +67,7 @@
     &::after {
         content: "";
         position: absolute;
-        inset-inline-start: 0;
-        inset-inline-end: 0;
+        inset-inline: 0;
         inset-block-end: calc(-1 * var(--size-underline-offset));
         block-size: var(--border-width-s);
         background: var(--colour-primary);
@@ -105,8 +103,7 @@
     &::after {
         content: "";
         position: absolute;
-        inset-inline-start: 0;
-        inset-inline-end: 0;
+        inset-inline: 0;
         inset-block-end: calc(-1 * var(--size-underline-offset));
         block-size: var(--border-width-s);
         background: var(--colour-primary);

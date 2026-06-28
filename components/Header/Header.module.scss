@@ -26,8 +26,6 @@
     );
     backdrop-filter: saturate(var(--filter-backdrop-saturate))
         blur(var(--filter-backdrop-blur));
-    -webkit-backdrop-filter: saturate(var(--filter-backdrop-saturate))
-        blur(var(--filter-backdrop-blur));
     border-block-end-color: var(--colour-border);
 }
 
@@ -96,8 +94,7 @@
     &::after {
         content: "";
         position: absolute;
-        inset-inline-start: 0;
-        inset-inline-end: 0;
+        inset-inline: 0;
         inset-block-end: calc(-1 * var(--size-underline-offset));
         block-size: var(--border-width-s);
         background: var(--colour-primary);
@@ -257,7 +254,7 @@
 }
 
 /* Desktop: show inline nav, hide burger */
-@media (min-width: 40rem) {
+@media (width >= 40rem) {
     .navLinks {
         display: flex;
     }
@@ -268,7 +265,7 @@
 }
 
 /* Mobile: hide inline nav, show burger */
-@media (max-width: 39.9375rem) {
+@media (width < 40rem) {
     .navLinks {
         display: none;
     }
