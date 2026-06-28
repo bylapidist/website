@@ -1,6 +1,7 @@
 @use "../../../../../styles/mixins" as *;
 
-.articleHeading {
+/* .heading[data-level="1"] has specificity (0,1,1); doubling the class gives (0,2,0) to win */
+.articleHeading.articleHeading {
     font-size: var(--typography-size-page-title);
     line-height: var(--typography-line-height-display);
     letter-spacing: var(--typography-letter-spacing-tighter);

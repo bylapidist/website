@@ -110,8 +110,8 @@
     --shadow-elev-3:
         0 4px 8px hsl(0deg 0% 0% / 12%), 0 2px 4px hsl(0deg 0% 0% / 8%);
     --font-family-header:
-        "Mona Sans", "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system,
-        sans-serif;
+        "Mona Sans", var(--font-header-fallback), ui-sans-serif, system-ui,
+        -apple-system, sans-serif;
     --font-family-prose: var(--font-prose), Georgia, "Times New Roman", serif;
     --font-family-body:
         var(--font-body), "SF Mono", Menlo, ui-monospace, monospace;
@@ -119,8 +119,8 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --typography-font-family-header:
-        "Mona Sans", "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system,
-        sans-serif;
+        "Mona Sans", var(--font-header-fallback), ui-sans-serif, system-ui,
+        -apple-system, sans-serif;
     --typography-font-family-prose:
         var(--font-prose), Georgia, "Times New Roman", serif;
     --typography-font-family-body:

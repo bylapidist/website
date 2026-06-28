@@ -148,7 +148,7 @@
     "font": {
         "family": {
             "header": {
-                "value": "'Mona Sans', 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif"
+                "value": "'Mona Sans', var(--font-header-fallback), ui-sans-serif, system-ui, -apple-system, sans-serif"
             },
             "prose": {
                 "value": "var(--font-prose), Georgia, 'Times New Roman', serif"
@@ -167,7 +167,7 @@
         "font": {
             "family": {
                 "header": {
-                    "value": "'Mona Sans', 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif"
+                    "value": "'Mona Sans', var(--font-header-fallback), ui-sans-serif, system-ui, -apple-system, sans-serif"
                 },
                 "prose": {
                     "value": "var(--font-prose), Georgia, 'Times New Roman', serif"

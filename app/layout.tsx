@@ -1,8 +1,15 @@
 import "server-only";
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { Hanken_Grotesk, IBM_Plex_Mono, Newsreader } from "next/font/google";
 import "@/styles/globals.scss";
 import { Header } from "@/components";
+
+const headerFallback = Hanken_Grotesk({
+    variable: "--font-header-fallback",
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+    display: "swap",
+});
 
 const prose = Newsreader({
     variable: "--font-prose",
@@ -95,7 +102,7 @@ export default function RootLayout({
     return (
         <html
             lang="en-GB"
-            className={`${prose.variable} ${mono.variable}`}
+            className={`${headerFallback.variable} ${prose.variable} ${mono.variable}`}
             suppressHydrationWarning
         >
             <head>
