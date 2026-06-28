@@ -79,7 +79,7 @@
         "accent-line-translate-y": { "value": "16px" },
         "accent-line-translate-y-sm": { "value": "14px" },
         "hero-max": { "value": "880px" },
-        "experience-max": { "value": "760px" },
+
         "about-max": { "value": "980px" },
         "card-min-h": { "value": "200px" },
         "card-min-h-project": { "value": "188px" },

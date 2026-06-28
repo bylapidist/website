@@ -36,23 +36,6 @@ const PROJECTS = [
     },
 ];
 
-const EXPERIENCE = [
-    { role: "Staff Frontend Engineer", company: "Codat", period: "Current" },
-    {
-        role: "Frontend Engineer / Design Systems",
-        company: "Encompass",
-        period: "",
-    },
-    {
-        role: "Frontend Engineer / Design Systems",
-        company: "LendInvest",
-        period: "",
-    },
-    { role: "Frontend Engineer", company: "Golden Charter", period: "" },
-    { role: "Frontend Engineer", company: "Hunter", period: "" },
-    { role: "Frontend Engineer", company: "GANT", period: "" },
-];
-
 export default async function Page() {
     const allArticles = await getAllArticles();
     const recentArticles = allArticles.slice(0, 3);
@@ -199,44 +182,6 @@ export default async function Page() {
                         </a>
                     ))}
                 </div>
-            </section>
-
-            {/* EXPERIENCE */}
-            <section
-                aria-labelledby="exp-heading"
-                className={styles.experienceSection}
-            >
-                <div data-reveal className={styles.experienceHeader}>
-                    <h2 id="exp-heading" className={styles.sectionTitle}>
-                        Experience
-                    </h2>
-                    <p className={styles.experienceDesc}>
-                        Selected roles across fintech, regulated SaaS, and
-                        consumer brands.
-                    </p>
-                </div>
-                <ul data-reveal className={styles.experienceList}>
-                    {EXPERIENCE.map((e) => (
-                        <li
-                            key={`${e.role}-${e.company}`}
-                            className={styles.experienceItem}
-                        >
-                            <span className={styles.experienceRole}>
-                                <span className={styles.experienceTitle}>
-                                    {e.role}
-                                </span>
-                                <span className={styles.experienceCompany}>
-                                    {e.company}
-                                </span>
-                            </span>
-                            {e.period && (
-                                <span className={styles.experiencePeriod}>
-                                    {e.period}
-                                </span>
-                            )}
-                        </li>
-                    ))}
-                </ul>
             </section>
         </>
     );
