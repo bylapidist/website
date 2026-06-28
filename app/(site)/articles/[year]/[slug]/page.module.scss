@@ -20,6 +20,8 @@
 }
 
 .articleHeader {
+    max-width: var(--layout-max-w-article);
+    margin-inline: auto;
     margin-block-end: var(--space-responsive-article-header-mb);
 }
 
@@ -41,6 +43,8 @@
 .articleBody {
     @include grid-stack(var(--space-scale-075));
 
+    max-width: var(--layout-max-w-article);
+    margin-inline: auto;
     overflow-wrap: anywhere;
 }
 
