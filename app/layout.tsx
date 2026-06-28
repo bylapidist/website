@@ -103,6 +103,7 @@ export default function RootLayout({
         <html
             lang="en-GB"
             className={`${headerFallback.variable} ${prose.variable} ${mono.variable}`}
+            data-scroll-behavior="smooth"
             suppressHydrationWarning
         >
             <head>
