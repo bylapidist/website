@@ -63,8 +63,8 @@
     margin-block: var(--space-scale-300) var(--space-scale-100);
 }
 
-.articleBody :global(ul),
-.articleBody :global(ol) {
+.articleBody > :global(ul),
+.articleBody > :global(ol) {
     font-family: var(--font-family-prose);
     font-size: var(--typography-size-prose);
     line-height: var(--typography-line-height-relaxed);
