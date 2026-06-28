@@ -153,8 +153,12 @@
     --typography-size-hero: clamp(2.25rem, 5.4vw, 3.5rem);
     --typography-size-page-title: clamp(2rem, 4.4vw, 3rem);
     --typography-size-page-title-sm: clamp(1.75rem, 3.6vw, 2.5rem);
+    --typography-size-writing-title: clamp(2rem, 4.4vw, 2.75rem);
+    --typography-size-page-desc: 1.125rem;
+    --typography-size-mono-meta: 0.78125rem;
     --typography-size-section-title: clamp(1.5rem, 3vw, 1.75rem);
     --typography-size-article-title: clamp(1.25rem, 2.4vw, 1.5rem);
+    --typography-size-article-h2: clamp(1.375rem, 2.6vw, 1.625rem);
     --typography-size-hero-intro: clamp(1.0625rem, 2vw, 1.25rem);
     --typography-size-now-text: clamp(1.0625rem, 1.8vw, 1.25rem);
     --typography-size-mono-base: 0.875rem;
@@ -183,6 +187,8 @@
     --typography-line-height-prose: 1.75;
     --typography-line-height-heading-lg: 1.2;
     --typography-line-height-heading-sm: 1.25;
+    --typography-line-height-display: 1.1;
+    --typography-line-height-blockquote: 1.45;
     --typography-line-height-code: 1.6;
     --typography-tracking-tighter: -0.05em;
     --typography-tracking-tight: -0.02em;

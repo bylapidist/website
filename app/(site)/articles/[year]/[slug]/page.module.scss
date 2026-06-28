@@ -1,9 +1,37 @@
 @use "../../../../../styles/mixins" as *;
 
+.articleHeading {
+    font-size: var(--typography-size-page-title);
+    line-height: var(--typography-line-height-display);
+    letter-spacing: var(--typography-letter-spacing-tighter);
+}
+
 .article {
     @include grid-stack(var(--space-scale-075));
 
     overflow-wrap: anywhere;
+}
+
+.article :global(p) {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose);
+    line-height: var(--typography-line-height-prose);
+}
+
+.article :global(h2) {
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--typography-size-article-h2);
+    line-height: var(--typography-line-height-heading-sm);
+    letter-spacing: var(--typography-letter-spacing-snug);
+    margin-block: var(--space-scale-300) var(--space-scale-100);
+}
+
+.article :global(ul),
+.article :global(ol) {
+    font-family: var(--font-family-prose);
+    font-size: var(--typography-size-prose);
+    line-height: var(--typography-line-height-relaxed);
 }
 
 .summary {
@@ -11,7 +39,17 @@
 }
 
 .meta {
-    color: var(--colour-text);
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-meta);
+    letter-spacing: var(--typography-letter-spacing-meta);
+    color: var(--colour-text-subtle);
+}
+
+/* .meta is inside .article so needs higher specificity than .article :global(p) */
+.article .meta {
+    font-family: var(--font-family-body);
+    font-size: var(--typography-size-mono-meta);
+    line-height: var(--typography-line-height-body);
 }
 
 .return {
@@ -27,11 +65,18 @@
 }
 
 .article :global(blockquote) {
-    margin: 0;
-    padding: var(--space-scale-100) var(--space-scale-150);
-    border: var(--border-width-l) solid var(--colour-text-subtle);
-    background: var(--surface-level-1);
-    border-radius: var(--radius-m);
+    margin: var(--space-responsive-gap-sm) 0;
+    padding: var(--space-scale-025) 0 var(--space-scale-025)
+        calc(var(--space-scale-150) + var(--space-scale-025));
+    border: 0;
+    border-inline-start: var(--border-width-m) solid var(--colour-primary);
+    background: none;
+    border-radius: 0;
+    font-family: var(--font-family-prose);
+    font-style: italic;
+    font-size: var(--typography-size-article-title);
+    line-height: var(--typography-line-height-blockquote);
+    color: var(--colour-text);
 }
 
 .article :global(img) {

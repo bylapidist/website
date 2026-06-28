@@ -31,7 +31,11 @@ export default async function ArticlePage({
                     ),
                 }}
             />
-            <Section heading={meta.title} headingLevel={1}>
+            <Section
+                heading={meta.title}
+                headingLevel={1}
+                headingClassName={styles.articleHeading}
+            >
                 <article className={clsx(styles.article, "prose", "flow")}>
                     {meta.summary && (
                         <p className={clsx(styles.summary, "text-lead")}>

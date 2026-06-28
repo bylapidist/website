@@ -154,7 +154,8 @@
     background: var(--colour-border);
     border: var(--border-width-s) solid var(--colour-border);
     border-radius: var(--radius-base);
-    overflow: hidden;
+    overflow: clip;
+    overflow-clip-margin: var(--size-card-hover-lift);
 }
 
 .articleCard {

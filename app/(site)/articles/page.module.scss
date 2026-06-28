@@ -25,8 +25,8 @@
 .pageTitle {
     font-family: var(--font-family-header);
     font-weight: var(--font-weight-semibold);
-    font-size: var(--typography-size-page-title-sm);
-    line-height: var(--typography-line-height-title);
+    font-size: var(--typography-size-writing-title);
+    line-height: var(--typography-line-height-display);
     letter-spacing: var(--typography-letter-spacing-tight);
     margin: 0 0 var(--space-scale-100);
     text-wrap: balance;
@@ -34,7 +34,7 @@
 
 .pageDesc {
     font-family: var(--font-family-prose);
-    font-size: var(--typography-size-prose-sm);
+    font-size: var(--typography-size-page-desc);
     line-height: var(--typography-line-height-relaxed);
     color: var(--colour-text-subtle);
     margin: 0;
@@ -73,7 +73,7 @@
     font-family: var(--font-family-header);
     font-weight: var(--font-weight-semibold);
     font-size: var(--typography-size-article-title);
-    line-height: var(--typography-line-height-title);
+    line-height: var(--typography-line-height-heading-sm);
     letter-spacing: var(--typography-letter-spacing-snug);
     margin: 0;
     max-width: var(--size-measure-content-wide);
@@ -82,7 +82,7 @@
 .articleDesc {
     font-family: var(--font-family-prose);
     font-size: var(--typography-size-prose-sm);
-    line-height: var(--typography-line-height-body);
+    line-height: var(--typography-line-height-desc);
     color: var(--colour-text-subtle);
     margin: 0;
     max-width: var(--size-measure-wide);
@@ -90,7 +90,7 @@
 
 .articleMeta {
     font-family: var(--font-family-body);
-    font-size: var(--typography-size-mono-xs);
+    font-size: var(--typography-size-mono-meta);
     color: var(--colour-text-subtle);
     margin: 0;
     letter-spacing: var(--typography-letter-spacing-wide);

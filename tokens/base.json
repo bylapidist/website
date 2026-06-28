@@ -201,8 +201,12 @@
             "hero": { "value": "clamp(2.25rem, 5.4vw, 3.5rem)" },
             "page-title": { "value": "clamp(2rem, 4.4vw, 3rem)" },
             "page-title-sm": { "value": "clamp(1.75rem, 3.6vw, 2.5rem)" },
+            "writing-title": { "value": "clamp(2rem, 4.4vw, 2.75rem)" },
+            "page-desc": { "value": "1.125rem" },
+            "mono-meta": { "value": "0.78125rem" },
             "section-title": { "value": "clamp(1.5rem, 3vw, 1.75rem)" },
             "article-title": { "value": "clamp(1.25rem, 2.4vw, 1.5rem)" },
+            "article-h2": { "value": "clamp(1.375rem, 2.6vw, 1.625rem)" },
             "hero-intro": { "value": "clamp(1.0625rem, 2vw, 1.25rem)" },
             "now-text": { "value": "clamp(1.0625rem, 1.8vw, 1.25rem)" },
             "mono-base": { "value": "0.875rem" },
@@ -260,6 +264,8 @@
             "prose": { "value": "1.75" },
             "headingLg": { "value": "1.2" },
             "headingSm": { "value": "1.25" },
+            "display": { "value": "1.1" },
+            "blockquote": { "value": "1.45" },
             "code": { "value": "1.6" }
         },
         "tracking": {
