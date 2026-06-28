@@ -98,8 +98,16 @@ export default async function Page() {
                 <div data-reveal className={styles.nowGrid}>
                     <h2 className={styles.nowLabel}>Now</h2>
                     <p className={styles.nowText}>
-                        I&apos;m currently Staff Frontend Engineer at Codat,
-                        leading frontend architecture across a multi-framework
+                        I&apos;m currently Staff Frontend Engineer at{" "}
+                        <a
+                            href="https://codat.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-ext-icon
+                        >
+                            Codat
+                        </a>
+                        , leading frontend architecture across a multi-framework
                         fintech platform. Alongside it I maintain Lapidist, an
                         open-source toolchain for design tokens, and write about
                         the craft of building interfaces that don&apos;t rot.

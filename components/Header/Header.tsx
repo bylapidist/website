@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import Container from "@/components/Container/Container";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 import { useDisclosure, usePrefersReducedMotion } from "@/hooks";
+import { Size } from "@/types";
 import { siteLinks } from "@/utils";
 import styles from "./Header.module.scss";
 import LogoMark from "./LogoMark";
@@ -94,7 +95,12 @@ export default function Header() {
             className={styles.header}
             data-scrolled={scrolled || undefined}
         >
-            <Container className={styles.inner} as="div" cq="page">
+            <Container
+                className={styles.inner}
+                as="div"
+                cq="page"
+                size={Size.LG}
+            >
                 <nav aria-label="Primary" className={styles.nav}>
                     <Link
                         href="/"
