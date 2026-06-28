@@ -48,7 +48,9 @@ export default async function ArticlesPage() {
                                 </p>
                                 <p className={styles.articleMeta}>
                                     {tags.join(", ")}
-                                    {tags.length > 0 && readingTime ? " · " : ""}
+                                    {tags.length > 0 && readingTime
+                                        ? " · "
+                                        : ""}
                                     {readingTime}
                                 </p>
                             </Link>
