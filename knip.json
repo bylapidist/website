@@ -13,6 +13,7 @@
         "prismjs",
         "@types/unist",
         "eslint-config-next",
-        "postcss-import"
+        "postcss-import",
+        "@fontsource-variable/mona-sans"
     ]
 }
