@@ -97,20 +97,21 @@ export default function Header() {
         >
             <Container
                 className={styles.inner}
-                as="div"
+                as="nav"
+                aria-label="Primary"
                 cq="page"
                 size={Size.LG}
             >
-                <nav aria-label="Primary" className={styles.nav}>
-                    <Link
-                        href="/"
-                        className={styles.logo}
-                        aria-label="Brett Dorrans — home"
-                        aria-current={pathname === "/" ? "page" : undefined}
-                    >
-                        <LogoMark />
-                        <span className={styles.logoName}>Brett Dorrans</span>
-                    </Link>
+                <Link
+                    href="/"
+                    className={styles.logo}
+                    aria-label="Brett Dorrans — home"
+                    aria-current={pathname === "/" ? "page" : undefined}
+                >
+                    <LogoMark />
+                    <span className={styles.logoName}>Brett Dorrans</span>
+                </Link>
+                <div className={styles.navGroup}>
                     <ul className={styles.navLinks}>
                         {siteLinks.map(({ href, label }) => (
                             <li key={href}>
@@ -126,8 +127,6 @@ export default function Header() {
                             </li>
                         ))}
                     </ul>
-                </nav>
-                <div className={styles.actions}>
                     <ThemeToggle />
                     <button
                         type="button"

@@ -29,12 +29,6 @@
     border-block-end-color: var(--colour-border);
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    gap: var(--space-responsive-nav-gap);
-}
-
 .logo {
     display: inline-flex;
     align-items: center;
@@ -104,10 +98,10 @@
     }
 }
 
-.actions {
+.navGroup {
     display: flex;
     align-items: center;
-    gap: var(--space-scale-075);
+    gap: var(--space-responsive-nav-gap);
 }
 
 .burger {
@@ -253,7 +247,7 @@
     }
 }
 
-/* Desktop: show inline nav, hide burger */
+/* Desktop: show inline nav links, hide burger */
 @media (width >= 40rem) {
     .navLinks {
         display: flex;
@@ -264,7 +258,7 @@
     }
 }
 
-/* Mobile: hide inline nav, show burger */
+/* Mobile: hide inline nav links, show burger; collapse group gap */
 @media (width < 40rem) {
     .navLinks {
         display: none;
@@ -272,5 +266,9 @@
 
     .burger {
         display: flex;
+    }
+
+    .navGroup {
+        gap: var(--space-scale-075);
     }
 }
