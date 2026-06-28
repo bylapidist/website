@@ -4,11 +4,9 @@
     position: sticky;
     inset-block-start: 0;
     background: transparent;
-    border-block-end: var(--border-width-s) solid transparent;
+    border-block-end: var(--border-width-s) solid var(--colour-border);
     z-index: var(--z-2);
-    transition:
-        background var(--motion-dur-200) var(--motion-ease-standard),
-        border-color var(--motion-dur-200) var(--motion-ease-standard);
+    transition: background var(--motion-dur-200) var(--motion-ease-standard);
     will-change: background;
 }
 
@@ -26,7 +24,6 @@
     );
     backdrop-filter: saturate(var(--filter-backdrop-saturate))
         blur(var(--filter-backdrop-blur));
-    border-block-end-color: var(--colour-border);
 }
 
 .logo {
