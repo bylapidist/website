@@ -41,14 +41,15 @@ export default async function ArticlesPage() {
                                 href={`/articles/${year}/${slug}`}
                                 className={styles.articleLink}
                             >
-                                <p className={styles.articleDate}>
-                                    {formatDate(date)}
-                                </p>
                                 <h2 className={styles.articleTitle}>{title}</h2>
                                 <p className={styles.articleDesc}>
                                     {description}
                                 </p>
                                 <p className={styles.articleMeta}>
+                                    {formatDate(date)}
+                                    {tags.length > 0 || readingTime
+                                        ? " · "
+                                        : ""}
                                     {tags.join(", ")}
                                     {tags.length > 0 && readingTime
                                         ? " · "
