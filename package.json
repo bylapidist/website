@@ -83,7 +83,7 @@
         "eslint-plugin-jsx-a11y": "6.10.2",
         "eslint-plugin-react-compiler": "19.1.0-rc.2",
         "jsdom": "29.1.1",
-        "knip": "6.21.0",
+        "knip": "6.24.0",
         "postcss-import": "16.1.1",
         "postcss-scss": "4.0.9",
         "sass": "1.101.0",
