@@ -38,7 +38,7 @@
         "test:install-browsers": "playwright install --with-deps"
     },
     "dependencies": {
-        "@floating-ui/react": "0.27.19",
+        "@floating-ui/react": "0.27.20",
         "@fontsource-variable/mona-sans": "^5.2.8",
         "@lapidist/cv-generator": "2.8.4",
         "clsx": "2.1.1",
