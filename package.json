@@ -76,7 +76,7 @@
         "@types/react-dom": "19.2.3",
         "@types/unist": "3.0.3",
         "concurrently": "10.0.3",
-        "eslint": "10.6.0",
+        "eslint": "10.7.0",
         "eslint-config-next": "16.2.10",
         "eslint-import-resolver-typescript": "4.4.5",
         "eslint-plugin-import": "2.32.0",
