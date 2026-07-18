@@ -58,7 +58,7 @@
         "remark-reading-time": "2.1.0",
         "server-only": "0.0.1",
         "unist-util-visit": "5.1.0",
-        "wavesurfer.js": "7.12.10"
+        "wavesurfer.js": "7.12.11"
     },
     "devDependencies": {
         "@axe-core/playwright": "4.12.1",
