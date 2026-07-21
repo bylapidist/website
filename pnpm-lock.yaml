@@ -39,8 +39,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(@types/react@19.2.17)(react@19.2.7)(supports-color@10.2.2)
       prettier:
-        specifier: 3.9.5
-        version: 3.9.5
+        specifier: 3.9.6
+        version: 3.9.6
       prismjs:
         specifier: 1.30.0
         version: 1.30.0
@@ -83,7 +83,7 @@ importers:
         version: 10.0.1(eslint@10.7.0(jiti@2.7.0)(supports-color@10.2.2))
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.7.1
-        version: 4.7.1(prettier@3.9.5)(supports-color@10.2.2)
+        version: 4.7.1(prettier@3.9.6)(supports-color@10.2.2)
       '@next/eslint-plugin-next':
         specifier: 16.2.10
         version: 16.2.10
@@ -3622,6 +3622,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -4936,13 +4941,13 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@ianvs/prettier-plugin-sort-imports@4.7.1(prettier@3.9.5)(supports-color@10.2.2)':
+  '@ianvs/prettier-plugin-sort-imports@4.7.1(prettier@3.9.6)(supports-color@10.2.2)':
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4
       '@babel/traverse': 7.28.4(supports-color@10.2.2)
       '@babel/types': 7.28.4
-      prettier: 3.9.5
+      prettier: 3.9.6
       semver: 7.7.4
     transitivePeerDependencies:
       - supports-color
@@ -8313,6 +8318,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@3.9.5: {}
+
+  prettier@3.9.6: {}
 
   pretty-format@27.5.1:
     dependencies:
