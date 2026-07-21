@@ -51,7 +51,7 @@
         "prettier": "3.9.5",
         "prismjs": "1.30.0",
         "react": "19.2.7",
-        "react-dom": "19.2.7",
+        "react-dom": "19.2.8",
         "rehype-prism-plus": "2.0.2",
         "remark": "15.0.1",
         "remark-gfm": "4.0.1",
