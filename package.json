@@ -61,7 +61,7 @@
         "wavesurfer.js": "7.12.11"
     },
     "devDependencies": {
-        "@axe-core/playwright": "4.12.1",
+        "@axe-core/playwright": "4.13.0",
         "@eslint/core": "1.2.1",
         "@eslint/js": "10.0.1",
         "@ianvs/prettier-plugin-sort-imports": "4.7.1",
