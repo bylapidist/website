@@ -84,7 +84,7 @@
         "eslint-plugin-react-compiler": "19.1.0-rc.2",
         "jsdom": "29.1.1",
         "knip": "6.32.2",
-        "postcss-import": "16.2.0",
+        "postcss-import": "17.0.0",
         "postcss-scss": "4.0.9",
         "sass": "1.102.0",
         "style-dictionary": "5.5.1",
