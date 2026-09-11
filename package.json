@@ -86,7 +86,7 @@
         "knip": "6.35.1",
         "postcss-import": "16.2.0",
         "postcss-scss": "4.0.9",
-        "sass": "1.102.0",
+        "sass": "1.104.0",
         "style-dictionary": "5.5.3",
         "stylelint": "17.14.1",
         "stylelint-config-css-modules": "4.6.0",
