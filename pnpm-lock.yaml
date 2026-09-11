@@ -69,8 +69,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0
       wavesurfer.js:
-        specifier: 7.12.11
-        version: 7.12.11
+        specifier: 7.12.12
+        version: 7.12.12
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.13.0
@@ -4396,8 +4396,8 @@ packages:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
 
-  wavesurfer.js@7.12.11:
-    resolution: {integrity: sha512-Sx0yZIz7jRJ9J9p7UL+pl9y0UQBB6UN/XNo+R7Gy4tCR5xZI9jMyA0dnt1R8TMVSQ4LZ10SeB2HJYQ+dV2dPSA==}
+  wavesurfer.js@7.12.12:
+    resolution: {integrity: sha512-fyKNuREQTliCl4b9w7pUzpFXQIkX5tcdYu1o6vBdH+NlUXvTxshvfbG2hj8OxDevzQNZlDTHzZGyAT3FhuutWw==}
 
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
@@ -9304,7 +9304,7 @@ snapshots:
 
   walk-up-path@4.0.0: {}
 
-  wavesurfer.js@7.12.11: {}
+  wavesurfer.js@7.12.12: {}
 
   web-namespaces@2.0.1: {}
 
