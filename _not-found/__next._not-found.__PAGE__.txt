@@ -1,31 +1,56 @@
 1:"$Sreact.fragment"
-2:I[37467,["/_next/static/chunks/13861_4dwtmww.js","/_next/static/chunks/0tfqhpcw7tc03.js"],"default"]
-3:I[94566,["/_next/static/chunks/13861_4dwtmww.js","/_next/static/chunks/0tfqhpcw7tc03.js"],""]
-4:I[12000,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"OutletBoundary"]
-5:"$Sreact.suspense"
-9:I[12000,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"ViewportBoundary"]
-a:I[12000,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"MetadataBoundary"]
-b:I[50686,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"IconMark"]
-d:I[60738,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"default"]
-e:I[1925,["/_next/static/chunks/0wy8cxwmtkh4g.js"],"default"]
-:HL["/_next/static/chunks/37cza-24jwmoq.css","style"]
-:HL["/_next/static/chunks/2jm22jeqq8i_k.css","style"]
-:HL["/_next/static/chunks/1rfi40f_kqy40.css","style"]
-8:X
+2:"/_next/static/chunks/0qc2m05ez2_59.js"
+3:"/_next/static/chunks/3j3xqo6mnzsh6.js"
+4:I[73398,["$2","$3"],"default"]
+5:"/_next/static/chunks/0lx6jv350irfk.js"
+6:I[62561,["$5"],"default"]
+7:"/_next/static/chunks/29i2j5ice7ce2.js"
+8:I[8821,["$2","$3","$7"],"default"]
+9:I[13974,["$5"],"default"]
+a:I[37467,["$2","$3"],"default"]
+b:I[20201,["$2","$3"],""]
+12:I[2878,["$5"],"OutletBoundary"]
+13:"$Sreact.suspense"
+16:"ViewportBoundary"
+17:I[2878,["$5"],"$16"]
+18:"MetadataBoundary"
+19:I[2878,["$5"],"$18"]
+:HL["/_next/static/chunks/2uxwdsv7aypld.css","style"]
+:HL["/_next/static/chunks/21vzhymvwvstw.css","style"]
+:HL["/_next/static/chunks/0_f3-8-_231a1.css","style"]
+:HL["/opengraph-image","image"]
+d:X
 10:X
 10:C
-0:{"buildId":"QJwKdydf1j5m_7wezr8kt","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$L3",null,{"href":"/","children":"Return home"}]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#F8F8F6","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#0C0D10","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}],["$","meta","1",{"name":"description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}],["$","meta","2",{"name":"keywords","content":"Staff Frontend Engineer,Design Systems Specialist,UK Remote"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"name":"googlebot","content":"index, follow, max-image-preview:large, max-snippet:-1"}],["$","link","5",{"rel":"canonical","href":"https://lapidist.net/"}],["$","meta","6",{"property":"og:title","content":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}],["$","meta","7",{"property":"og:description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}],["$","meta","8",{"property":"og:url","content":"https://lapidist.net/"}],["$","meta","9",{"property":"og:site_name","content":"Brett Dorrans"}],["$","meta","10",{"property":"og:locale","content":"en_GB"}],["$","meta","11",{"property":"og:image","content":"https://lapidist.net/opengraph-image?262cf887d38d91f6"}],["$","meta","12",{"property":"og:image:type","content":"image/png"}],["$","meta","13",{"property":"og:image:width","content":"1200"}],["$","meta","14",{"property":"og:image:height","content":"630"}],["$","meta","15",{"property":"og:type","content":"article"}],["$","meta","16",{"property":"article:author","content":"Brett Dorrans"}],["$","meta","17",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","18",{"name":"twitter:title","content":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}],["$","meta","19",{"name":"twitter:description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}],["$","meta","20",{"name":"twitter:image","content":"https://lapidist.net/twitter-image?fe068e59d52e921f"}],["$","meta","21",{"name":"twitter:image:type","content":"image/png"}],["$","meta","22",{"name":"twitter:image:width","content":"1600"}],["$","meta","23",{"name":"twitter:image:height","content":"900"}],["$","link","24",{"rel":"icon","href":"/favicon.ico"}],["$","$Lb","25",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@c","staleTime":"$8","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","template":["$","$Le",null,{}]}]]}],"isPartial":"$@f","staleTime":"$8","varyParams":"$10"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/37cza-24jwmoq.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/2jm22jeqq8i_k.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/chunks/1rfi40f_kqy40.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/13861_4dwtmww.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/0tfqhpcw7tc03.js","async":true}]],["$","html",null,{"lang":"en-GB","className":"hanken_grotesk_632b941d-module__txYtMG__variable newsreader_20acfca3-module__h0sYVG__variable ibm_plex_mono_a5f384b7-module__DAZUjG__variable","data-scroll-behavior":"smooth","suppressHydrationWarning":true,"children":["$L11","$L12"]}]]}],"isPartial":"$@13","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
-16:I[73398,["/_next/static/chunks/13861_4dwtmww.js","/_next/static/chunks/0tfqhpcw7tc03.js"],"default"]
-17:I[8821,["/_next/static/chunks/13861_4dwtmww.js","/_next/static/chunks/0tfqhpcw7tc03.js","/_next/static/chunks/2g9-r7nn-e-71.js"],"default"]
-:HL["/opengraph-image","image"]
-6:null
-11:["$","head",null,{"children":[["$","meta",null,{"name":"apple-mobile-web-app-title","content":"Lapidist"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(() => {\n                            try {\n                                const stored = localStorage.getItem(\"theme\");\n                                const prefersDark = window.matchMedia(\n                                    \"(prefers-color-scheme: dark)\",\n                                ).matches;\n                                const theme =\n                                    stored ?? (prefersDark ? \"dark\" : \"light\");\n                                document.documentElement.classList.remove(\n                                    \"light\",\n                                    \"dark\",\n                                );\n                                document.documentElement.classList.add(theme);\n                            } catch {\n                                /* no-op */\n                            }\n                        })();"}}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","as":"image","href":"/opengraph-image"}],["$","link",null,{"rel":"alternate","type":"application/rss+xml","href":"/rss.xml"}],["$","link",null,{"rel":"mask-icon","href":"/mask-icon.svg","color":"#1F4E8C"}]]}]
-12:["$","body",null,{"suppressHydrationWarning":true,"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"Skip to content"}],["$","$L16",null,{}],["$","main",null,{"id":"main","children":["$","$Ld",null,{"parallelRouterKey":"children","error":"$17","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/_next/static/chunks/2g9-r7nn-e-71.js","async":true}]],"template":["$","$Le",null,{}],"notFound":[["$","$L2",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$L3",null,{"href":"/","children":"Return home"}]}]]}],[]]}]}]]}]
-8:300
-15:true
-8:C
-14:0
-c:"$undefined"
+11:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$Lb",null,{"href":"/","children":"Return home"}]}]]}],null,["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}],"p":"$@15","v":null,"s":"$d"}}]]
+e:[["children",{"s":"/_not-found","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L9",null,{}]}]]}],"p":"$@f","v":"$10","s":"$d"},"c":"$Q11"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2uxwdsv7aypld.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/21vzhymvwvstw.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/chunks/0_f3-8-_231a1.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0qc2m05ez2_59.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3j3xqo6mnzsh6.js","async":true}]],["$","html",null,{"lang":"en-GB","className":"txYtMG_variable h0sYVG_variable DAZUjG_variable","data-scroll-behavior":"smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"apple-mobile-web-app-title","content":"Lapidist"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(() => {\n                            try {\n                                const stored = localStorage.getItem(\"theme\");\n                                const prefersDark = window.matchMedia(\n                                    \"(prefers-color-scheme: dark)\",\n                                ).matches;\n                                const theme =\n                                    stored ?? (prefersDark ? \"dark\" : \"light\");\n                                document.documentElement.classList.remove(\n                                    \"light\",\n                                    \"dark\",\n                                );\n                                document.documentElement.classList.add(theme);\n                            } catch {\n                                /* no-op */\n                            }\n                        })();"}}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","as":"image","href":"/opengraph-image"}],["$","link",null,{"rel":"alternate","type":"application/rss+xml","href":"/rss.xml"}],["$","link",null,{"rel":"mask-icon","href":"/mask-icon.svg","color":"#1F4E8C"}]]}],["$","body",null,{"suppressHydrationWarning":true,"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"Skip to content"}],["$","$L4",null,{}],["$","main",null,{"id":"main","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$8","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/_next/static/chunks/29i2j5ice7ce2.js","async":true}]],"template":["$","$L9",null,{}],"notFound":[["$","$La",null,{"heading":"Page not found","headingLevel":1,"children":[["$","p",null,{"children":"Sorry, we couldn't find the page you're looking for."}],["$","p",null,{"children":["$","$Lb",null,{"href":"/","children":"Return home"}]}]]}],[]]}]}]]}]]}]]}],"p":"$@c","v":null,"s":"$d"},"c":"$Qe"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L17",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#F8F8F6","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#0C0D10","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]}],["$","$L19",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$13",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}],["$","meta","1",{"name":"description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}],["$","meta","2",{"name":"keywords","content":"Staff Frontend Engineer,Design Systems Specialist,UK Remote"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"name":"googlebot","content":"index, follow, max-image-preview:large, max-snippet:-1"}],["$","link","5",{"rel":"canonical","href":"https://lapidist.net/"}],["$","meta","6",{"property":"og:title","content":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}],["$","meta","7",{"property":"og:description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}],"$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b"]}]}],null]}],"$L2c"]}],"p":"$@2d","v":null,"s":"$d"}},"a":"$@2e","u":"$@2f","b":"nBWQ3LmOrJVs3LhaN5kAG"}
+30:I[23199,["$5"],"IconMark"]
+14:null
+1a:["$","meta","8",{"property":"og:url","content":"https://lapidist.net/"}]
+1b:["$","meta","9",{"property":"og:site_name","content":"Brett Dorrans"}]
+1c:["$","meta","10",{"property":"og:locale","content":"en_GB"}]
+1d:["$","meta","11",{"property":"og:image","content":"https://lapidist.net/opengraph-image?262cf887d38d91f6"}]
+1e:["$","meta","12",{"property":"og:image:type","content":"image/png"}]
+1f:["$","meta","13",{"property":"og:image:width","content":"1200"}]
+20:["$","meta","14",{"property":"og:image:height","content":"630"}]
+21:["$","meta","15",{"property":"og:type","content":"article"}]
+22:["$","meta","16",{"property":"article:author","content":"Brett Dorrans"}]
+23:["$","meta","17",{"name":"twitter:card","content":"summary_large_image"}]
+24:["$","meta","18",{"name":"twitter:title","content":"Staff Frontend Engineer & Design Systems Specialist | Remote UK"}]
+25:["$","meta","19",{"name":"twitter:description","content":"I build frontend platforms and the design systems that hold them together. Fifteen years turning sprawling interfaces into systems that stay coherent."}]
+26:["$","meta","20",{"name":"twitter:image","content":"https://lapidist.net/twitter-image?fe068e59d52e921f"}]
+27:["$","meta","21",{"name":"twitter:image:type","content":"image/png"}]
+28:["$","meta","22",{"name":"twitter:image:width","content":"1600"}]
+29:["$","meta","23",{"name":"twitter:image:height","content":"900"}]
+2a:["$","link","24",{"rel":"icon","href":"/favicon.ico"}]
+2b:["$","$L30","25",{}]
+2c:["$","meta",null,{"name":"next-size-adjust","content":""}]
+d:300
+2f:true
+d:C
+2e:0
 f:"$undefined"
-13:"$undefined"
-7:"$undefined"
+c:"$undefined"
+2d:"$undefined"
+15:"$undefined"
