@@ -151,8 +151,8 @@ importers:
         specifier: 1.107.1
         version: 1.107.1
       style-dictionary:
-        specifier: 5.6.1
-        version: 5.6.1
+        specifier: 5.7.1
+        version: 5.7.1
       stylelint:
         specifier: 17.14.1
         version: 17.14.1(supports-color@10.2.2)(typescript@6.0.3)
@@ -4032,8 +4032,8 @@ packages:
     resolution: {integrity: sha512-1tB5mhVo7U+ETBKNf92xT4hrQa3pm0MZ0PQvuDnWgAAGHDsfp4lPSpiS6psrSiet87wyGPh9ft6wmhOMQ0hDiw==}
     engines: {node: '>=14.16'}
 
-  style-dictionary@5.6.1:
-    resolution: {integrity: sha512-aDYbNr38jKIGTWHAJl5yZLWLftEopmR7RNT035Wjenshr3VnPfXO2ns/E1kPdNDi7Akl1h1iXSeQ+o8IN60+ew==}
+  style-dictionary@5.7.1:
+    resolution: {integrity: sha512-qO9WsyR5jZWz8+5JRtehn7HF8YAvm+Jd8UxiYHtvZhYSNwfMfAVOBK1anjdZwbH+njFb7xuQsjqpD+djPXErcw==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -8880,7 +8880,7 @@ snapshots:
 
   strip-json-comments@5.0.3: {}
 
-  style-dictionary@5.6.1:
+  style-dictionary@5.7.1:
     dependencies:
       '@bundled-es-modules/deepmerge': 4.3.2
       '@bundled-es-modules/glob': 13.0.6
